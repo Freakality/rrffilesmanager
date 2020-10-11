@@ -56,3 +56,8 @@ Thumbs.db
 *.wmv
 
 >>>>>>> ff896bb8a61fd3c5c5b4edb64ff1ac2e5b14a34f
+RRFFilesManager.Abstractions/obj/
+RRFFilesManager.DataAccess/bin/
+RRFFilesManager.DataAccess/obj/
+.vs/
+RRFFilesManager.Abstractions/bin/
