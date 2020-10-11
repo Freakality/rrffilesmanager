@@ -1,43 +1,56 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RRFFilesManager
 {
-    public partial class Home
+    public partial class Home : Form
     {
         public Home()
         {
             InitializeComponent();
-            _Button1.Name = "Button1";
-            _Button2.Name = "Button2";
-            _Button12.Name = "Button12";
-            _Button3.Name = "Button3";
         }
+
+        private static Home instance;
+        public static Home Instance => instance ?? (instance = new Home());
 
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RRFFilesManager.My.MyProject.Forms.Form1.Show();
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
+            SplashScreen.Instance.Hide();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            RRFFilesManager.My.MyProject.Forms.Intake.Show();
+            Hide();
+            Intake.Intake.Instance.Show();
         }
 
-        private void Button12_Click(object sender, EventArgs e)
+        private void Button2_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void Button11_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            string Path = @"M:\Task Manager\FilesManager\VBnetProgram\cnsignon.lnk";
-            Process.Start(Path);
+            var path = "M:\\Task Manager\\FilesManager\\VBnetProgram\\cnsignon.lnk";
+            Process.Start(path);
         }
     }
 }
