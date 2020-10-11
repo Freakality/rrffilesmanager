@@ -300,7 +300,7 @@
         internal System.Windows.Forms.Button BackButton;
         internal System.Windows.Forms.Panel Actions;
         internal System.Windows.Forms.Button NextButton;
-        internal System.Windows.Forms.Panel Container;
+        internal new System.Windows.Forms.Panel Container;
         internal ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter CYATemplatesTableAdapter;
         internal ActionLogDBDataSetTableAdapters.IntakesTableAdapter IntakesTableAdapter;
         internal ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter MatterSubTypesTableAdapter;

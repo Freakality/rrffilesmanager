@@ -20,47 +20,47 @@ namespace RRFFilesManager.Intake
         private static PreliminaryInfo instance;
         public static PreliminaryInfo Instance => instance ?? (instance = new PreliminaryInfo());
 
-        public bool Validate()
+        public new bool Validate()
         {
-            if (string.IsNullOrEmpty(this.MatterTypeComboBox.Text) | string.IsNullOrEmpty(this.StaffInterviewerComboBox.Text) | string.IsNullOrEmpty(this.HowHearComboBox.Text) | string.IsNullOrEmpty(this.ResponsibleLawyerComboBox.Text) | string.IsNullOrEmpty(this.LawyerComboBox.Text) | this.DateOfLossDateTimePicker.CustomFormat == " ")
+            if (string.IsNullOrEmpty(MatterTypeComboBox.Text) | string.IsNullOrEmpty(StaffInterviewerComboBox.Text) | string.IsNullOrEmpty(HowHearComboBox.Text) | string.IsNullOrEmpty(ResponsibleLawyerComboBox.Text) | string.IsNullOrEmpty(LawyerComboBox.Text) | DateOfLossDateTimePicker.CustomFormat == " ")
             {
-                if (string.IsNullOrEmpty(this.MatterTypeComboBox.Text))
+                if (string.IsNullOrEmpty(MatterTypeComboBox.Text))
                 {
                     MessageBox.Show("Please select: Matter Type");
                     return false;
                 }
 
-                if (string.IsNullOrEmpty(this.StaffInterviewerComboBox.Text))
+                if (string.IsNullOrEmpty(StaffInterviewerComboBox.Text))
                 {
                     MessageBox.Show("Please select: Staff Interviewer");
                     return false;
                 }
 
-                if (string.IsNullOrEmpty(this.HowHearComboBox.Text))
+                if (string.IsNullOrEmpty(HowHearComboBox.Text))
                 {
                     MessageBox.Show("Please select: How did you hear about us?");
                     return false;
                 }
 
-                if (string.IsNullOrEmpty(this.ResponsibleLawyerComboBox.Text))
+                if (string.IsNullOrEmpty(ResponsibleLawyerComboBox.Text))
                 {
                     MessageBox.Show("Please select: Responsible Lawyer");
                     return false;
                 }
 
-                if (string.IsNullOrEmpty(this.LawyerComboBox.Text))
+                if (string.IsNullOrEmpty(LawyerComboBox.Text))
                 {
                     MessageBox.Show("Please select: File Lawyer");
                     return false;
                 }
 
-                if (this.DateOfLossDateTimePicker.CustomFormat == " ")
+                if (DateOfLossDateTimePicker.CustomFormat == " ")
                 {
                     MessageBox.Show("Please select: Date of Loss");
                     return false;
                 }
             }
-            else if (this.MatterSubTypeComboBox.Items.Count > 0 & string.IsNullOrEmpty(this.MatterSubTypeComboBox.Text))
+            else if (MatterSubTypeComboBox.Items.Count > 0 & string.IsNullOrEmpty(MatterSubTypeComboBox.Text))
             {
                 MessageBox.Show("Please select: Matter Sub Type");
                 return false;
@@ -71,7 +71,7 @@ namespace RRFFilesManager.Intake
 
         public void getNewFileNumber(string lastFileNumber)
         {
-            if (!string.IsNullOrEmpty(this.LawyerComboBox.Text))
+            if (!string.IsNullOrEmpty(LawyerComboBox.Text))
             {
                 DataRow[] dr;
                 // Dim lastFileNumber As String = ActionLogDBDataSet.Tables("Intakes").Rows(0)("FileNumber")
@@ -88,58 +88,58 @@ namespace RRFFilesManager.Intake
                         nextFileString = "0" + nextFileNumber;
                     if (nextFileNumber.ToString().Length == 3)
                         nextFileString = nextFileNumber.ToString();
-                    dr = this.ActionLogDBDataSet.Tables["FileLawyer"].Select("Lawyer='" + this.LawyerComboBox.Text + "'");
+                    dr = ActionLogDBDataSet.Tables["FileLawyer"].Select("Lawyer='" + LawyerComboBox.Text + "'");
                     if (dr.Length > 0)
                     {
                         string nextFile = thisYear + dr[0]["NumberID"].ToString() + nextFileString;
-                        this.FileNumberTextBox.Text = nextFile;
+                        FileNumberTextBox.Text = nextFile;
                     }
                 }
                 else
                 {
-                    dr = this.ActionLogDBDataSet.Tables["FileLawyer"].Select("Lawyer='" + this.LawyerComboBox.Text + "'");
+                    dr = ActionLogDBDataSet.Tables["FileLawyer"].Select("Lawyer='" + LawyerComboBox.Text + "'");
                     if (dr.Length > 0)
                     {
                         string nextFileString = "001";
                         string nextFile = thisYear + dr[0]["NumberID"].ToString() + nextFileString;
-                        this.FileNumberTextBox.Text = nextFile;
+                        FileNumberTextBox.Text = nextFile;
                     }
                 }
             }
             else
             {
-                this.FileNumberTextBox.Clear();
+                FileNumberTextBox.Clear();
             }
         }
 
         private void MatterSubTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var matterSubType = ActionLogDBDataSet.MatterSubTypes.FirstOrDefault(s => (s.MatterSubType ?? "") == (this.MatterSubTypeComboBox.Text ?? ""));
+            var matterSubType = ActionLogDBDataSet.MatterSubTypes.FirstOrDefault(s => (s.MatterSubType ?? "") == (MatterSubTypeComboBox.Text ?? ""));
             if (matterSubType is object & !string.IsNullOrEmpty(matterSubType["StatutoryNotice"].ToString()))
             {
-                this.StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
+                StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
             }
             else
             {
-                this.StatutoryNoticeBox.Text = "";
+                StatutoryNoticeBox.Text = "";
             }
         }
 
         private void DateOfLossDateTimePicker_ValueChanged(object Sender, EventArgs e)
         {
-            this.DateOfLossDateTimePicker.CustomFormat = "MMM-dd-yyyy";
+            DateOfLossDateTimePicker.CustomFormat = "MMM-dd-yyyy";
             DataRow[] dr;
-            dr = this.ActionLogDBDataSet.Tables["MatterSubTypes"].Select("MatterSubType='" + this.MatterSubTypeComboBox.Text + "'");
+            dr = ActionLogDBDataSet.Tables["MatterSubTypes"].Select("MatterSubType='" + MatterSubTypeComboBox.Text + "'");
             if (dr.Length > 0)
             {
                 string statutoryNotice = dr[0]["StatutoryNotice"].ToString();
                 if (!string.IsNullOrEmpty(statutoryNotice))
-                    this.StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
+                    StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
             }
 
-            if (this.DateOfLossDateTimePicker.CustomFormat == "MMM-dd-yyyy")
+            if (DateOfLossDateTimePicker.CustomFormat == "MMM-dd-yyyy")
             {
-                this.LimitationPeriodTextBox.Text = DateOfLossDateTimePicker.Value.AddYears(2).ToString("MMM-dd-yyyy");
+                LimitationPeriodTextBox.Text = DateOfLossDateTimePicker.Value.AddYears(2).ToString("MMM-dd-yyyy");
             }
         }
 
@@ -147,7 +147,7 @@ namespace RRFFilesManager.Intake
         {
 
             var lastFileNumber = ActionLogDBDataSet.Intakes.FirstOrDefault().FileNumber.ToString();
-            this.getNewFileNumber(lastFileNumber);
+            getNewFileNumber(lastFileNumber);
         }
 
         private void PreliminaryInfo_Load(object sender, EventArgs e)
@@ -157,39 +157,40 @@ namespace RRFFilesManager.Intake
 
         private void Initialize()
         {
-            this.HearAboutUsTableAdapter.Fill(this.ActionLogDBDataSet.HearAboutUs);
-            this.StaffInterviewerTableAdapter.Fill(this.ActionLogDBDataSet.StaffInterviewer);
-            this.ResponsibleLawyerTableAdapter.Fill(this.ActionLogDBDataSet.ResponsibleLawyer);
-            this.FileLawyerTableAdapter.Fill(this.ActionLogDBDataSet.FileLawyer);
-            this.IntakesTableAdapter.Fill(this.ActionLogDBDataSet.Intakes);
-            this.MatterTypeTableAdapter.Fill(this.ActionLogDBDataSet.MatterType);
-            this.MatterSubTypesTableAdapter.Fill(this.ActionLogDBDataSet.MatterSubTypes);
-            var obj = this.IntakesBindingSource.AddNew();
-            this.MatterSubTypeComboBox.Items.Clear();
-            foreach (DataRow row in this.ActionLogDBDataSet.MatterSubTypes.Rows)
+            HearAboutUsTableAdapter.Fill(ActionLogDBDataSet.HearAboutUs);
+            StaffInterviewerTableAdapter.Fill(ActionLogDBDataSet.StaffInterviewer);
+            ResponsibleLawyerTableAdapter.Fill(ActionLogDBDataSet.ResponsibleLawyer);
+            FileLawyerTableAdapter.Fill(ActionLogDBDataSet.FileLawyer);
+            IntakesTableAdapter.Fill(ActionLogDBDataSet.Intakes);
+            MatterTypeTableAdapter.Fill(ActionLogDBDataSet.MatterType);
+            MatterSubTypesTableAdapter.Fill(ActionLogDBDataSet.MatterSubTypes);
+            //var obj = IntakesBindingSource.AddNew();
+            MatterSubTypeComboBox.Items.Clear();
+            foreach (DataRow row in ActionLogDBDataSet.MatterSubTypes.Rows)
             {
                 if (row["Matter"].ToString() == "Motor Vehicle Accident")
                 {
-                    this.MatterSubTypeComboBox.Items.Add(row["MatterSubType"].ToString());
+                    MatterSubTypeComboBox.Items.Add(row["MatterSubType"].ToString());
                 }
             }
 
-            this.LawyerComboBox.SelectedIndex = -1;
-            string lastFileNumber = this.ActionLogDBDataSet.Tables["Intakes"].Rows[0]["FileNumber"].ToString();
+            LawyerComboBox.SelectedIndex = -1;
+            string lastFileNumber = ActionLogDBDataSet.Tables["Intakes"].Rows[0]["FileNumber"].ToString();
             getNewFileNumber(lastFileNumber);
-            this.DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
-            this.DateOfLossDateTimePicker.CustomFormat = " ";
-            this.LimitationPeriodTextBox.Text = "";
+            DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
+            DateOfLossDateTimePicker.CustomFormat = " ";
+            LimitationPeriodTextBox.Text = "";
         }
 
         public void OnNext()
         {
             //IntakeForm.IntakesBindingSource.EndEdit();
-            //IntakeForm.IntakesTableAdapter.Update(this.ActionLogDBDataSet.Intakes);
+            //IntakeForm.IntakesTableAdapter.Update(ActionLogDBDataSet.Intakes);
         }
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var Provinces = Program.DataContext.Provinces.ToList();
         }
     }
 }

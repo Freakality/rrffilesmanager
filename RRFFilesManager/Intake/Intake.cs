@@ -42,7 +42,7 @@ namespace RRFFilesManager.Intake
 
                 OutlookMessage.Display();
             }
-            catch (System.Exception ex)
+            catch
             {
                 MessageBox.Show("Mail could not be sent");
             }

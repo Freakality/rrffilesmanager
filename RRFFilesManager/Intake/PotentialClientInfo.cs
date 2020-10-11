@@ -98,7 +98,7 @@ namespace RRFFilesManager.Intake
             yearBirth.Text = "1970";
         }
 
-        public bool Validate()
+        public new bool Validate()
         {
             if (string.IsNullOrEmpty(this.PCISalutation.Text))
             {
