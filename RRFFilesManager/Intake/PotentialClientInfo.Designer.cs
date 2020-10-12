@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ProvincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
             this.MobileCarrierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PCIWorkNumber = new System.Windows.Forms.MaskedTextBox();
@@ -69,6 +68,7 @@
             this.PCISuiteApt = new System.Windows.Forms.TextBox();
             this.PCIEmail = new System.Windows.Forms.TextBox();
             this.PCIProvince = new System.Windows.Forms.ComboBox();
+            this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PCIEmailToText = new System.Windows.Forms.TextBox();
             this.PCIMobileCarrier = new System.Windows.Forms.ComboBox();
             this.Label14 = new System.Windows.Forms.Label();
@@ -77,21 +77,15 @@
             this.Label11 = new System.Windows.Forms.Label();
             this.PCIHomeNumber = new System.Windows.Forms.MaskedTextBox();
             this.TableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.ProvincesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.ProvincesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.ProvincesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MobileCarrierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).BeginInit();
             this.PotentialClientInfoPanel.SuspendLayout();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
             this.TableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ProvincesBindingSource
-            // 
-            this.ProvincesBindingSource.DataMember = "Provinces";
-            this.ProvincesBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
             // ActionLogDBDataSet
             // 
@@ -518,14 +512,20 @@
             // PCIProvince
             // 
             this.PCIProvince.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIProvince", true));
-            this.PCIProvince.DataSource = this.ProvincesBindingSource;
-            this.PCIProvince.DisplayMember = "Province";
+            this.PCIProvince.DataSource = this.provincesBindingSource;
+            this.PCIProvince.DisplayMember = "Description";
             this.PCIProvince.FormattingEnabled = true;
             this.PCIProvince.Location = new System.Drawing.Point(3, 142);
             this.PCIProvince.Name = "PCIProvince";
             this.PCIProvince.Size = new System.Drawing.Size(372, 25);
             this.PCIProvince.TabIndex = 15;
             this.PCIProvince.ValueMember = "Province";
+            this.PCIProvince.SelectedIndexChanged += new System.EventHandler(this.PCIProvince_SelectedIndexChanged);
+            // 
+            // provincesBindingSource
+            // 
+            this.provincesBindingSource.DataMember = "Provinces";
+            this.provincesBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
             // PCIEmailToText
             // 
@@ -612,10 +612,6 @@
             this.TableLayoutPanel9.Size = new System.Drawing.Size(374, 44);
             this.TableLayoutPanel9.TabIndex = 32;
             // 
-            // ProvincesTableAdapter
-            // 
-            this.ProvincesTableAdapter.ClearBeforeFill = true;
-            // 
             // PotentialClientInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -624,7 +620,6 @@
             this.Name = "PotentialClientInfo";
             this.Size = new System.Drawing.Size(1350, 610);
             this.Load += new System.EventHandler(this.PotentialClientInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ProvincesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MobileCarrierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).EndInit();
@@ -634,6 +629,7 @@
             this.TableLayoutPanel4.PerformLayout();
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
             this.TableLayoutPanel9.ResumeLayout(false);
             this.TableLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
@@ -641,8 +637,6 @@
         }
 
         #endregion
-
-        internal System.Windows.Forms.BindingSource ProvincesBindingSource;
         internal ActionLogDBDataSet ActionLogDBDataSet;
         internal System.Windows.Forms.BindingSource MobileCarrierBindingSource;
         internal System.Windows.Forms.MaskedTextBox PCIWorkNumber;
@@ -690,6 +684,6 @@
         internal System.Windows.Forms.Label Label11;
         internal System.Windows.Forms.MaskedTextBox PCIHomeNumber;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel9;
-        internal ActionLogDBDataSetTableAdapters.ProvincesTableAdapter ProvincesTableAdapter;
+        private System.Windows.Forms.BindingSource provincesBindingSource;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.Intake
 {
@@ -190,7 +191,15 @@ namespace RRFFilesManager.Intake
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var Provinces = Program.DataContext.Provinces.ToList();
+
+            using (var context = new DataContext())
+            {
+                var Provinces = context.Provinces.ToList();
+                context.Provinces.Add(new Abstractions.Province { ID = (Provinces.Max(s => Int32.Parse(s.ID)) + 1).ToString(),Description = "Test" });
+                var id = context.SaveChanges();
+                var Provinces2 = context.Provinces.ToList();
+            }
+            
         }
     }
 }

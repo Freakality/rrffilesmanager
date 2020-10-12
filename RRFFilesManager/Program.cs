@@ -16,8 +16,7 @@ namespace RRFFilesManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SplashScreen.Instance.Show();
-            Application.Run(Home.Instance);
+            Application.Run(new Home());
         }
     }
 }

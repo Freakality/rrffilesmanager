@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRFFilesManager.DataAccess;
+using RRFFilesManager.Abstractions;
 
 namespace RRFFilesManager.Intake
 {
@@ -93,7 +95,13 @@ namespace RRFFilesManager.Intake
         private void PotentialClientInfo_Load(object sender, EventArgs e)
         {
             MobileCarrierTableAdapter.Fill(ActionLogDBDataSet.MobileCarrier);
-            ProvincesTableAdapter.Fill(ActionLogDBDataSet.Provinces);
+            //ProvincesTableAdapter.Fill(ActionLogDBDataSet.Provinces);
+            using (var context = new DataContext())
+            {
+                PCIProvince.DataSource = context.Provinces.ToList();
+                PCIProvince.DisplayMember = nameof(Province.Description);
+            }
+            
             IntakesTableAdapter.Fill(ActionLogDBDataSet.Intakes);
             yearBirth.Text = "1970";
         }
@@ -191,6 +199,11 @@ namespace RRFFilesManager.Intake
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PCIProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
