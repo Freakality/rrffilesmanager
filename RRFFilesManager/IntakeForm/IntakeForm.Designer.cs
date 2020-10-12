@@ -127,7 +127,7 @@
             this.NextButton.TabIndex = 141;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = false;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click_1);
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // Container
             // 
@@ -253,7 +253,7 @@
             this.PictureBox1.TabIndex = 145;
             this.PictureBox1.TabStop = false;
             // 
-            // Intake
+            // IntakeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -263,7 +263,7 @@
             this.Controls.Add(this.Button5);
             this.Controls.Add(this.Button4);
             this.Controls.Add(this.PictureBox1);
-            this.Name = "Intake";
+            this.Name = "IntakeForm";
             this.Text = "Intake";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Intake_FormClosing);
             this.Load += new System.EventHandler(this.Intake_Load);

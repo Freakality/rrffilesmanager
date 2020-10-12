@@ -26,12 +26,12 @@ namespace RRFFilesManager.IntakeForm
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(this.monthBirth.Text) | string.IsNullOrWhiteSpace(this.dayBirth.Text) | string.IsNullOrWhiteSpace(this.yearBirth.Text))
+                if (string.IsNullOrWhiteSpace(this.MonthBirth.Text) | string.IsNullOrWhiteSpace(this.DayBirth.Text) | string.IsNullOrWhiteSpace(this.YearBirth.Text))
                 {
                     return default;
                 }
 
-                return DateTime.Parse(this.monthBirth.Text + "-" + this.dayBirth.Text + "-" + this.yearBirth.Text);
+                return DateTime.Parse(this.MonthBirth.Text + "-" + this.DayBirth.Text + "-" + this.YearBirth.Text);
             }
         }
 
@@ -39,14 +39,14 @@ namespace RRFFilesManager.IntakeForm
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(this.monthBirth.Text) | string.IsNullOrWhiteSpace(this.dayBirth.Text) | string.IsNullOrWhiteSpace(this.yearBirth.Text))
+                if (string.IsNullOrWhiteSpace(this.MonthBirth.Text) | string.IsNullOrWhiteSpace(this.DayBirth.Text) | string.IsNullOrWhiteSpace(this.YearBirth.Text))
                 {
                     return default;
                 }
 
-                int newYear = Convert.ToInt32(this.yearBirth.Text);
+                int newYear = Convert.ToInt32(this.YearBirth.Text);
                 newYear = newYear + 20;
-                return DateTime.Parse(this.monthBirth.Text + "-" + this.dayBirth.Text + "-" + newYear.ToString());
+                return DateTime.Parse(this.MonthBirth.Text + "-" + this.DayBirth.Text + "-" + newYear.ToString());
             }
         }
 
@@ -94,16 +94,19 @@ namespace RRFFilesManager.IntakeForm
         // End Sub
         private void PotentialClientInfo_Load(object sender, EventArgs e)
         {
-            MobileCarrierTableAdapter.Fill(ActionLogDBDataSet.MobileCarrier);
+            //MobileCarrierTableAdapter.Fill(ActionLogDBDataSet.MobileCarrier);
             //ProvincesTableAdapter.Fill(ActionLogDBDataSet.Provinces);
             using (var context = new DataContext())
             {
                 PCIProvince.DataSource = context.Provinces.ToList();
                 PCIProvince.DisplayMember = nameof(Province.Description);
+
+                PCIMobileCarrier.DataSource = context.MobileCarriers.ToList();
+                PCIMobileCarrier.DisplayMember = nameof(MobileCarrier.Description);
             }
             
-            IntakesTableAdapter.Fill(ActionLogDBDataSet.Intakes);
-            yearBirth.Text = "1970";
+            //IntakesTableAdapter.Fill(ActionLogDBDataSet.Intakes);
+            YearBirth.Text = "1970";
         }
 
         public new bool Validate()
@@ -168,21 +171,21 @@ namespace RRFFilesManager.IntakeForm
                 return false;
             }
 
-            if (this.yearBirth.MaskCompleted == false | string.IsNullOrEmpty(this.monthBirth.Text) | string.IsNullOrEmpty(this.dayBirth.Text))
+            if (this.YearBirth.MaskCompleted == false | string.IsNullOrEmpty(this.MonthBirth.Text) | string.IsNullOrEmpty(this.DayBirth.Text))
             {
-                if (string.IsNullOrEmpty(this.monthBirth.Text))
+                if (string.IsNullOrEmpty(this.MonthBirth.Text))
                 {
                     MessageBox.Show("Please enter Month of Birth");
                     return false;
                 }
 
-                if (string.IsNullOrEmpty(this.dayBirth.Text))
+                if (string.IsNullOrEmpty(this.DayBirth.Text))
                 {
                     MessageBox.Show("Please enter Day of Birth");
                     return false;
                 }
 
-                if (this.yearBirth.MaskCompleted == false)
+                if (this.YearBirth.MaskCompleted == false)
                 {
                     MessageBox.Show("Please enter Year of Birth");
                     return false;

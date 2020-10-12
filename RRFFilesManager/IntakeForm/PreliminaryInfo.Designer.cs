@@ -199,8 +199,8 @@
             // 
             // AdditionalNotesTextBox
             // 
-            this.AdditionalNotesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.AdditionalNotesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AdditionalNotesTextBox.BackColor = System.Drawing.Color.White;
             this.AdditionalNotesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "AdditionalNotes", true));
@@ -230,6 +230,7 @@
             this.LawyerComboBox.Size = new System.Drawing.Size(489, 25);
             this.LawyerComboBox.TabIndex = 26;
             this.LawyerComboBox.ValueMember = "Lawyer";
+            this.LawyerComboBox.SelectedIndexChanged += new System.EventHandler(this.LawyerComboBox_SelectedIndexChanged);
             // 
             // FileLawyerBindingSource
             // 
@@ -257,8 +258,8 @@
             // 
             // TableLayoutPanel1
             // 
-            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanel1.ColumnCount = 4;
             this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.10952F));
@@ -440,8 +441,8 @@
             // 
             // TableLayoutPanel2
             // 
-            this.TableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.TableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanel2.ColumnCount = 2;
             this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.30043F));
@@ -457,8 +458,8 @@
             // 
             // PreliminayPanel
             // 
-            this.PreliminayPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.PreliminayPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PreliminayPanel.BackColor = System.Drawing.Color.White;
             this.PreliminayPanel.Controls.Add(this.GroupBox6);

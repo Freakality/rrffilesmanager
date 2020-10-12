@@ -72,46 +72,22 @@ namespace RRFFilesManager.IntakeForm
             return true;
         }
 
-        public void getNewFileNumber(string lastFileNumber)
+        public int GetNewFileNumber(Lawyer lawyer)
         {
-            if (!string.IsNullOrEmpty(LawyerComboBox.Text))
+            var lastFileNumber = 999999;
+            if (lawyer == null)
+                return lastFileNumber;
+            using (var context = new DataContext())
             {
-                DataRow[] dr;
-                // Dim lastFileNumber As String = ActionLogDBDataSet.Tables("Intakes").Rows(0)("FileNumber")
-                int lastFileNumberYear = Convert.ToInt32(lastFileNumber.Substring(0, 4));
-                int thisYear = DateTime.Now.Year;
-                if (thisYear == lastFileNumberYear)
-                {
-                    string nextFileString = "000";
-                    string lastFile = lastFileNumber.Substring(6, 3);
-                    int nextFileNumber = (int)(Convert.ToDouble(lastFile) + 1d);
-                    if (nextFileNumber.ToString().Length == 1)
-                        nextFileString = "00" + nextFileNumber;
-                    if (nextFileNumber.ToString().Length == 2)
-                        nextFileString = "0" + nextFileNumber;
-                    if (nextFileNumber.ToString().Length == 3)
-                        nextFileString = nextFileNumber.ToString();
-                    dr = ActionLogDBDataSet.Tables["FileLawyer"].Select("Lawyer='" + LawyerComboBox.Text + "'");
-                    if (dr.Length > 0)
-                    {
-                        string nextFile = thisYear + dr[0]["NumberID"].ToString() + nextFileString;
-                        FileNumberTextBox.Text = nextFile;
-                    }
-                }
-                else
-                {
-                    dr = ActionLogDBDataSet.Tables["FileLawyer"].Select("Lawyer='" + LawyerComboBox.Text + "'");
-                    if (dr.Length > 0)
-                    {
-                        string nextFileString = "001";
-                        string nextFile = thisYear + dr[0]["NumberID"].ToString() + nextFileString;
-                        FileNumberTextBox.Text = nextFile;
-                    }
-                }
+                lastFileNumber = context.Intakes.Where(s => s.FileLawyer.ID == lawyer.ID).Max(s => (int?)s.FileNumber) ?? 999999;
             }
+            var lastfileNumberFirstPart = lastFileNumber.ToString()?.Substring(0, 6);
+            var fileNumberFirstPart = $"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}";
+            if (lastfileNumberFirstPart == fileNumberFirstPart)
+                return lastFileNumber + 1;
             else
             {
-                FileNumberTextBox.Clear();
+                return int.Parse($"{fileNumberFirstPart}000");
             }
         }
 
@@ -151,9 +127,12 @@ namespace RRFFilesManager.IntakeForm
 
         private void LawyerComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            var lastFileNumber = ActionLogDBDataSet.Intakes.FirstOrDefault().FileNumber.ToString();
-            getNewFileNumber(lastFileNumber);
+            using (var context = new DataContext())
+            {
+                var lawyer = context.Lawyers.FirstOrDefault(s => s.Description == LawyerComboBox.Text);
+                var fileNumber = GetNewFileNumber(lawyer);
+                FileNumberTextBox.Text = fileNumber.ToString();
+            }
         }
 
         private void PreliminaryInfo_Load(object sender, EventArgs e)

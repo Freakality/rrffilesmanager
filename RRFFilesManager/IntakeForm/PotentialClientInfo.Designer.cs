@@ -46,8 +46,8 @@
             this.Label9 = new System.Windows.Forms.Label();
             this.Label12 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
-            this.yearBirth = new System.Windows.Forms.MaskedTextBox();
-            this.dayBirth = new System.Windows.Forms.ComboBox();
+            this.YearBirth = new System.Windows.Forms.MaskedTextBox();
+            this.DayBirth = new System.Windows.Forms.ComboBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.Label4 = new System.Windows.Forms.Label();
             this.PCISalutation = new System.Windows.Forms.ComboBox();
             this.MobileCarrierTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MobileCarrierTableAdapter();
-            this.monthBirth = new System.Windows.Forms.ComboBox();
+            this.MonthBirth = new System.Windows.Forms.ComboBox();
             this.PCIFirstName = new System.Windows.Forms.TextBox();
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
             this.Label41 = new System.Windows.Forms.Label();
@@ -225,21 +225,21 @@
             this.Label5.TabIndex = 6;
             this.Label5.Text = "Address";
             // 
-            // yearBirth
+            // YearBirth
             // 
-            this.yearBirth.Location = new System.Drawing.Point(3, 16);
-            this.yearBirth.Mask = "0000";
-            this.yearBirth.Name = "yearBirth";
-            this.yearBirth.Size = new System.Drawing.Size(94, 24);
-            this.yearBirth.TabIndex = 40;
-            this.yearBirth.ValidatingType = typeof(int);
+            this.YearBirth.Location = new System.Drawing.Point(3, 16);
+            this.YearBirth.Mask = "0000";
+            this.YearBirth.Name = "YearBirth";
+            this.YearBirth.Size = new System.Drawing.Size(94, 24);
+            this.YearBirth.TabIndex = 40;
+            this.YearBirth.ValidatingType = typeof(int);
             // 
-            // dayBirth
+            // DayBirth
             // 
-            this.dayBirth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.dayBirth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.dayBirth.FormattingEnabled = true;
-            this.dayBirth.Items.AddRange(new object[] {
+            this.DayBirth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.DayBirth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.DayBirth.FormattingEnabled = true;
+            this.DayBirth.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -271,11 +271,11 @@
             "29",
             "30",
             "31"});
-            this.dayBirth.Location = new System.Drawing.Point(265, 16);
-            this.dayBirth.MaxDropDownItems = 11;
-            this.dayBirth.Name = "dayBirth";
-            this.dayBirth.Size = new System.Drawing.Size(90, 25);
-            this.dayBirth.TabIndex = 41;
+            this.DayBirth.Location = new System.Drawing.Point(265, 16);
+            this.DayBirth.MaxDropDownItems = 11;
+            this.DayBirth.Name = "DayBirth";
+            this.DayBirth.Size = new System.Drawing.Size(90, 25);
+            this.DayBirth.TabIndex = 41;
             // 
             // Label6
             // 
@@ -340,10 +340,10 @@
             // 
             this.MobileCarrierTableAdapter.ClearBeforeFill = true;
             // 
-            // monthBirth
+            // MonthBirth
             // 
-            this.monthBirth.FormattingEnabled = true;
-            this.monthBirth.Items.AddRange(new object[] {
+            this.MonthBirth.FormattingEnabled = true;
+            this.MonthBirth.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -356,10 +356,10 @@
             "October",
             "November",
             "December"});
-            this.monthBirth.Location = new System.Drawing.Point(103, 16);
-            this.monthBirth.Name = "monthBirth";
-            this.monthBirth.Size = new System.Drawing.Size(156, 25);
-            this.monthBirth.TabIndex = 38;
+            this.MonthBirth.Location = new System.Drawing.Point(103, 16);
+            this.MonthBirth.Name = "MonthBirth";
+            this.MonthBirth.Size = new System.Drawing.Size(156, 25);
+            this.MonthBirth.TabIndex = 38;
             // 
             // PCIFirstName
             // 
@@ -600,9 +600,9 @@
             this.TableLayoutPanel9.Controls.Add(this.Label70, 0, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label71, 1, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label72, 2, 0);
-            this.TableLayoutPanel9.Controls.Add(this.monthBirth, 1, 1);
-            this.TableLayoutPanel9.Controls.Add(this.yearBirth, 0, 1);
-            this.TableLayoutPanel9.Controls.Add(this.dayBirth, 2, 1);
+            this.TableLayoutPanel9.Controls.Add(this.MonthBirth, 1, 1);
+            this.TableLayoutPanel9.Controls.Add(this.YearBirth, 0, 1);
+            this.TableLayoutPanel9.Controls.Add(this.DayBirth, 2, 1);
             this.TableLayoutPanel9.Location = new System.Drawing.Point(799, 260);
             this.TableLayoutPanel9.Name = "TableLayoutPanel9";
             this.TableLayoutPanel9.RowCount = 2;
@@ -654,8 +654,8 @@
         internal System.Windows.Forms.Label Label9;
         internal System.Windows.Forms.Label Label12;
         internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.MaskedTextBox yearBirth;
-        internal System.Windows.Forms.ComboBox dayBirth;
+        internal System.Windows.Forms.MaskedTextBox YearBirth;
+        internal System.Windows.Forms.ComboBox DayBirth;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label Label2;
@@ -663,7 +663,7 @@
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.ComboBox PCISalutation;
         internal ActionLogDBDataSetTableAdapters.MobileCarrierTableAdapter MobileCarrierTableAdapter;
-        internal System.Windows.Forms.ComboBox monthBirth;
+        internal System.Windows.Forms.ComboBox MonthBirth;
         internal System.Windows.Forms.TextBox PCIFirstName;
         internal System.Windows.Forms.Panel PotentialClientInfoPanel;
         internal System.Windows.Forms.Label Label41;
