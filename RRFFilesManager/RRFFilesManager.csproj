@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\Client.cs" />
+    <Compile Include="Abstractions\MatterSubType.cs" />
+    <Compile Include="Abstractions\MatterType.cs" />
     <Compile Include="Abstractions\Province.cs" />
     <Compile Include="ActionLogDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -9,10 +9,12 @@ namespace RRFFilesManager.DataAccess
     {
  
         public DataContext() : base("DefaultConnection") {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataContext>());
         }
 
         public DbSet<Client> Clients { get; set; }
-
         public DbSet<Province> Provinces { get; set; }
+        public DbSet<MatterType> MatterTypes { get; set; }
+        public DbSet<MatterSubType> MatterSubTypes { get; set; }
     }
 }

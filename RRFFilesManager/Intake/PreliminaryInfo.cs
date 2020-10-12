@@ -195,7 +195,7 @@ namespace RRFFilesManager.Intake
             using (var context = new DataContext())
             {
                 var Provinces = context.Provinces.ToList();
-                context.Provinces.Add(new Abstractions.Province { ID = (Provinces.Max(s => Int32.Parse(s.ID)) + 1).ToString(),Description = "Test" });
+                context.Provinces.Add(new Abstractions.Province { ID = Provinces.Max(s => s.ID) + 1,Description = "Test" });
                 var id = context.SaveChanges();
                 var Provinces2 = context.Provinces.ToList();
             }
