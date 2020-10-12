@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
+using RRFFilesManager.Abstractions;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -56,42 +57,6 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private void IntakeSheets_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RadioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void DisTypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void DisTemplateName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void Button14_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void LiaWhereAccident_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FlowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Policy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Liability_Enter(object sender, EventArgs e)
         {
 
         }
@@ -175,6 +140,96 @@ namespace RRFFilesManager.IntakeForm
                 DamPreAccidentGroupBox.Text = "Prior to this accident, were you ever involved in a motor vehicle accident, slip and fall accidents, workplace accidents?";
                 DamPreIllnessGroupBox.Text = "Do you suffer from any other illness (unrelated to this motor vehicle accident) such as cancer, heart issues, pre-existing anxiety or depression, etc.?";
             }
+        }
+
+        public void OnNext()
+        {
+            using(var context = new DataContext())
+            {
+                FillIntakeFromForm(IntakeForm.Intake);
+                context.Intakes.Add(IntakeForm.Intake);
+                context.SaveChanges();
+            }
+        }
+
+        public void FillIntakeFromForm(Intake intake)
+        {
+
+            FillIntakeFromLiabilityForm(intake);
+            FillIntakeFromEmploymentForm(intake);
+            FillIntakeFromDamagesForm(intake);
+            FillIntakeFromAccidentBenefitsForm(intake);
+            intake.Notes = Notes.Text;
+        }
+        public void FillIntakeFromLiabilityForm(Intake intake)
+        {
+            intake.LiaDate = LiaDate.Value;
+            intake.LiaMVR = LiaMVR.Checked;
+            intake.LiaReportCollision = LiaReportCollision.Checked;
+            intake.LiaMVCExchange = LiaMVCExchange.Checked;
+            intake.LiaOtherDoc = LiaOtherDoc.Checked;
+            intake.LiaWhereAccident = LiaWhereAccident.Text;
+            intake.LiaExplain = LiaExplain.Text;
+            intake.LiaHavePhotos = LiaHavePhotos.Text;
+            intake.LiaEstimDamage = LiaEstimDamage.Text;
+            intake.LiaYourFault = LiaYourFault.Text;
+            intake.LiaDriverName = LiaDriverName.Text;
+            intake.LiaOwnerName = LiaOwnerName.Text;
+            intake.LiaInsuranceCo = LiaInsuranceCo.Text;
+            intake.LiaHaveCopy = LiaHaveCopy.Text;
+            intake.LiaOwnNegligence = LiaOwnNegligence.Text;
+            intake.LiaFaultPerson = LiaFaultPerson.Text;
+            intake.LiaMunicipality = LiaMunicipality.Text;
+            intake.LiaNotifiedMunicipality = LiaNotifiedMunicipality.Text;
+            intake.LiaNotes = LiaNotes.Text;
+        }
+
+        public void FillIntakeFromEmploymentForm(Intake intake)
+        {
+            intake.EILWereEmployed = EILWereEmployed.Text;
+            intake.EILEmployed4Weeks = EILEmployed4Weeks.Text;
+            intake.EILEmployed52Weeks = EILEmployed52Weeks.Text;
+            intake.EILT4Employee = EILT4Employee.Text;
+            intake.EILT4Company = EILT4Company.Text;
+            intake.EILCollecInsurance = EILCollecInsurance.Text;
+            intake.EILEmployeeGrossEarning = EILEmployeeGrossEarning.Text;
+            intake.EILHowLongEmployee = EILHowLongEmployee.Text;
+            intake.EILJobTitle = EILJobTitle.Text;
+            intake.EILExplainJob = EILExplainJob.Text;
+            intake.EILWereSelfEmployed = EILWereSelfEmployed.Text;
+            intake.EILSelfBusinessName = EILSelfBusinessName.Text;
+            intake.EILSelfGrossEarning = EILSelfGrossEarning.Text;
+            intake.EILHowLongBusiness = EILHowLongBusiness.Text;
+            intake.EILNotes = EILNotes.Text;
+        }
+        public void FillIntakeFromDamagesForm(Intake intake)
+        {
+            intake.DamHitVehicleConcrete = DamHitVehicleConcrete.Text;
+            intake.DamHeadInjuries = DamHeadInjuries.Text;
+            intake.DamHeadInjuries = DamHeadInjuries.Text;
+            intake.DamUpperBodyInjuries = DamUpperBodyInjuries.Text;
+            intake.DamLowerBodyInjuries = DamLowerBodyInjuries.Text;
+            intake.DamPsychologicalEffect = DamPsychologicalEffect.Text;
+            intake.DamPrescribed = DamPrescribed.Text;
+            intake.DamWereSeeingDoctor = DamWereSeeingDoctor.Text;
+            intake.DamPreAccident = DamPreAccident.Text;
+            intake.DamPreIllness = DamPreIllness.Text;
+            intake.DamNotes = DamNotes.Text;
+        }
+        public void FillIntakeFromAccidentBenefitsForm(Intake intake)
+        {
+            intake.AccBenDriverPassenger = AccBenDriverPassenger.Text;
+            intake.AccBenWereRegisOwner = AccBenWereRegisOwner.Text;
+            intake.AccBenRegisOwnerName = AccBenRegisOwnerName.Text;
+            intake.AccBenPolicyNumber = AccBenPolicyNumber.Text;
+            intake.AccBenClaimNumber = AccBenClaimNumber.Text;
+            intake.AccBenInsuranceCompany = AccBenInsuranceCompany.Text;
+            intake.AccBenAdjuster = AccBenAdjuster.Text;
+            intake.AccBenOCF1 = AccBenOCF1.Text;
+            intake.AccBenOCF2 = AccBenOCF2.Text;
+            intake.AccBenOCF3 = AccBenOCF3.Text;
+            intake.AccBenReplacBenef = AccBenReplacBenef.Text;
+            intake.AccBenNotes = AccBenNotes.Text;
         }
     }
 }

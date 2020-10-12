@@ -64,6 +64,7 @@ namespace RRFFilesManager.IntakeForm
             {
                 NextButton.Visible = false;
                 SetContent(NextSteps.Instance);
+                IntakeSheets.Instance.OnNext();
             }
         }
 

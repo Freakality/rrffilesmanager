@@ -568,7 +568,6 @@
             this.Liability.Size = new System.Drawing.Size(1342, 584);
             this.Liability.TabIndex = 6;
             this.Liability.Text = "Liability";
-            this.Liability.Enter += new System.EventHandler(this.Liability_Enter);
             // 
             // Content
             // 
@@ -586,7 +585,6 @@
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(1342, 584);
             this.Content.TabIndex = 16;
-            this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutPanel1_Paint);
             // 
             // IncidentDateTimeGroupBox
             // 
@@ -691,7 +689,6 @@
             this.LiaWhereAccident.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.LiaWhereAccident.Size = new System.Drawing.Size(1154, 76);
             this.LiaWhereAccident.TabIndex = 1;
-            this.LiaWhereAccident.TextChanged += new System.EventHandler(this.LiaWhereAccident_TextChanged);
             // 
             // LiaExplainGroup
             // 
@@ -1063,7 +1060,6 @@
             this.Policy.Size = new System.Drawing.Size(1342, 584);
             this.Policy.TabIndex = 7;
             this.Policy.Text = "Policy";
-            this.Policy.Click += new System.EventHandler(this.Policy_Click);
             // 
             // GroupBox96
             // 

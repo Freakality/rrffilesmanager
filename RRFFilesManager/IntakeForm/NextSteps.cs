@@ -49,11 +49,6 @@ namespace RRFFilesManager.IntakeForm
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            using (var context = new DataContext())
-            {
-                context.Intakes.Add(IntakeForm.Intake);
-
-            }
             PreliminaryInfo.Instance.TextBox1.Text = PreliminaryInfo.Instance.MatterTypeComboBox.Text;
 
             // If Me.MVAInvokeCIP.Checked = True Then 
@@ -220,10 +215,10 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$EmailToText$$$", PotentialClientInfo.Instance.PCIEmailToText.Text);
             Worksheet.Cells.Replace("$$$DateOfBirth$$$", PotentialClientInfo.Instance.PCIDateOfBirth.Value.ToString("MMMM d, yyyy"));
             Worksheet.Cells.Replace("$$$OtherNotes$$$", PotentialClientInfo.Instance.PCIOtherNotes.Text);
-            Worksheet.Cells.Replace("$$$LiabilityDate$$$", IntakeSheets.Instance.LiaDate.Text);
+            Worksheet.Cells.Replace("$$$LiabilityDate$$$", IntakeSheets.Instance.LiaDate.Value.ToString("MMMM d, yyyy"));
             Worksheet.Cells.Replace("$$$LiabilityMVR$$$", IntakeSheets.Instance.LiaMVR.Checked);
             Worksheet.Cells.Replace("$$$LiabilityRC$$$", IntakeSheets.Instance.LiaReportCollision.Checked);
-            Worksheet.Cells.Replace("$$$LiabilityMVC$$$", IntakeSheets.Instance.LiaMVR.Checked);
+            Worksheet.Cells.Replace("$$$LiabilityMVC$$$", IntakeSheets.Instance.LiaMVCExchange.Checked);
             Worksheet.Cells.Replace("$$$LiabilityOtherDocuments$$$", IntakeSheets.Instance.LiaOtherDoc.Checked);
             Worksheet.Cells.Replace("$$$LiabilityWhere$$$", IntakeSheets.Instance.LiaWhereAccident.Text);
             Worksheet.Cells.Replace("$$$LiabilityExplanation$$$", IntakeSheets.Instance.LiaExplain.Text);

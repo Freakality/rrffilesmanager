@@ -151,7 +151,7 @@ namespace RRFFilesManager.IntakeForm
                 MatterTypeComboBox.DataSource = context.MatterTypes.ToList();
                 MatterTypeComboBox.DisplayMember = nameof(MatterType.Description);
 
-                MatterSubTypeComboBox.DataSource = context.MatterSubTypes.ToList();
+                MatterSubTypeComboBox.DataSource = context.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
                 MatterSubTypeComboBox.DisplayMember = nameof(MatterSubType.Description);
 
                 HowHearComboBox.DataSource = context.HearAboutUs.ToList();
@@ -215,8 +215,10 @@ namespace RRFFilesManager.IntakeForm
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            
+            using (var context = new DataContext())
+            {
+                MatterSubTypeComboBox.DataSource = context.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
+            }
         }
     }
 }
