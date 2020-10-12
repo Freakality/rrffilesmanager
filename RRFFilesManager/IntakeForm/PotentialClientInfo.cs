@@ -171,10 +171,10 @@ namespace RRFFilesManager.IntakeForm
 
         public void OnNext()
         {
-            IntakeForm.Intake.Client = NewIntakeClient();
+            FillOrCreateIntakeClient();
         }
 
-        public void FillClientFromForm(Client client)
+        public void FillClient(Client client)
         {
             client.Salutation = PCISalutation.Text;
             client.FirstName = PCIFirstName.Text;
@@ -194,7 +194,7 @@ namespace RRFFilesManager.IntakeForm
             client.OtherNotes = PCIOtherNotes.Text;
         }
 
-        public void FillFormFromClient(Client client)
+        public void FillForm(Client client)
         {
             PCISalutation.Text = client.Salutation;
             PCIFirstName.Text = client.FirstName;
@@ -216,16 +216,24 @@ namespace RRFFilesManager.IntakeForm
             PCIOtherNotes.Text = client.OtherNotes;
         }
 
-        public Client NewIntakeClient()
+        public Client CreateClient()
         {
-            using (var context = new DataContext())
-            {
+            //using (var context = new DataContext())
+            //{
                 var client = new Client();
-                FillClientFromForm(client);
-                context.Clients.Add(client);
-                context.SaveChanges();
+                FillClient(client);
+                //context.Clients.Add(client);
+                //context.SaveChanges();
                 return client;
-            }
+            //}
+        }
+
+        public void FillOrCreateIntakeClient()
+        {
+            if (IntakeForm.Intake.Client == null)
+                IntakeForm.Intake.Client = CreateClient();
+            else
+                FillClient(IntakeForm.Intake.Client);
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)

@@ -31,20 +31,20 @@ namespace RRFFilesManager.IntakeForm
         {
             this.TemplateName.Text = "";
             this.TemplateName.Items.Clear();
-            //using (var context = new DataContext())
-            //{
-            //    var templateNames = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TemplateName).ToArray();
-            //    TemplateName.Items.AddRange(templateNames);
-            //}
+            using (var context = new DataContext())
+            {
+                var templateNames = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TemplateName).ToArray();
+                TemplateName.Items.AddRange(templateNames);
+            }
         }
 
         private void NextSteps_Load(object sender, EventArgs e)
         {
-            //using (var context = new DataContext())
-            //{
-            //    var typesOfTemplates = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
-            //    TypeTemplate.Items.AddRange(typesOfTemplates);
-            //}
+            using (var context = new DataContext())
+            {
+                var typesOfTemplates = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+                TypeTemplate.Items.AddRange(typesOfTemplates);
+            }
         }
 
         private void Submit_Click(object sender, EventArgs e)

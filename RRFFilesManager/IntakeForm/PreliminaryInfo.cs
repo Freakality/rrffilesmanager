@@ -188,10 +188,25 @@ namespace RRFFilesManager.IntakeForm
             LimitationPeriodTextBox.Text = "";
         }
 
+        public void FillIntakeFromForm(Intake intake)
+        {
+            intake.MatterType = (MatterType)MatterTypeComboBox.SelectedItem;
+            intake.DateOfCall = DateOFCallDateTimePicker.Value;
+            intake.StaffInterviewer = (Lawyer)StaffInterviewerComboBox.SelectedItem;
+            intake.HowHear = (HearAboutUs)HowHearComboBox.SelectedItem;
+            intake.FileLawyer = (Lawyer)LawyerComboBox.SelectedItem;
+            intake.ResponsibleLawyer = (Lawyer)ResponsibleLawyerComboBox.SelectedItem;
+            intake.DateOFLoss = DateOfLossDateTimePicker.Value;
+            intake.LimitationPeriod = LimitationPeriodTextBox.Text;
+            intake.MatterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
+            intake.FileNumber = int.Parse(FileNumberTextBox.Text);
+            intake.StatutoryNotice = StatutoryNoticeBox.Text;
+            intake.AdditionalNotes = AdditionalNotesTextBox.Text;
+        }
+
         public void OnNext()
         {
-            //IntakeForm.IntakesBindingSource.EndEdit();
-            //IntakeForm.IntakesTableAdapter.Update(ActionLogDBDataSet.Intakes);
+            FillIntakeFromForm(IntakeForm.Intake);
         }
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)

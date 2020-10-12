@@ -151,6 +151,10 @@
     <Compile Include="Migrations\202010121655404_CYATemplates.Designer.cs">
       <DependentUpon>202010121655404_CYATemplates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010121736015_StatutoryNotice.cs" />
+    <Compile Include="Migrations\202010121736015_StatutoryNotice.Designer.cs">
+      <DependentUpon>202010121736015_StatutoryNotice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
@@ -189,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010121655404_CYATemplates.resx">
       <DependentUpon>202010121655404_CYATemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010121736015_StatutoryNotice.resx">
+      <DependentUpon>202010121736015_StatutoryNotice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>

@@ -20,6 +20,7 @@ namespace RRFFilesManager.Abstractions
         public Lawyer ResponsibleLawyer { get; set; }
         public MatterSubType MatterSubType { get; set; }
         public string LimitationPeriod { get; set; }
+        public string StatutoryNotice { get; set; }
         public string AdditionalNotes { get; set; }
 
     }
