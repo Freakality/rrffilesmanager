@@ -22,7 +22,10 @@ namespace RRFFilesManager.IntakeForm
 
         private static PotentialClientInfo instance;
         public static PotentialClientInfo Instance => instance ?? (instance = new PotentialClientInfo());
-
+        public void SetClient(Client client) {
+            IntakeForm.Intake.Client = client;
+            FillForm(client);
+        }
         public DateTime? PCIDateOfBirth
         {
             get
@@ -178,7 +181,7 @@ namespace RRFFilesManager.IntakeForm
         {
             client.Salutation = PCISalutation.Text;
             client.FirstName = PCIFirstName.Text;
-            client.FirstName = PCILastName.Text;
+            client.LastName = PCILastName.Text;
             client.Address = PCIAddress.Text;
             client.SuiteApt = PCISuiteApt.Text;
             client.Email = PCIEmail.Text;
@@ -198,7 +201,7 @@ namespace RRFFilesManager.IntakeForm
         {
             PCISalutation.Text = client.Salutation;
             PCIFirstName.Text = client.FirstName;
-            PCILastName.Text = client.FirstName;
+            PCILastName.Text = client.LastName;
             PCIAddress.Text = client.Address;
             PCISuiteApt.Text = client.SuiteApt;
             PCIEmail.Text = client.Email;
@@ -218,14 +221,25 @@ namespace RRFFilesManager.IntakeForm
 
         public Client CreateClient()
         {
-            //using (var context = new DataContext())
-            //{
+            using (var context = new DataContext())
+            {
                 var client = new Client();
                 FillClient(client);
-                //context.Clients.Add(client);
-                //context.SaveChanges();
+                context.Clients.Add(client);
+                context.SaveChanges();
                 return client;
-            //}
+            }
+        }
+
+        public Client UpdateClient(int clientId)
+        {
+            using (var context = new DataContext())
+            {
+                var client = context.Clients.FirstOrDefault(s => s.ID == clientId);
+                FillClient(client);
+                context.SaveChanges();
+                return client;
+            }
         }
 
         public void FillOrCreateIntakeClient()
@@ -233,7 +247,7 @@ namespace RRFFilesManager.IntakeForm
             if (IntakeForm.Intake.Client == null)
                 IntakeForm.Intake.Client = CreateClient();
             else
-                FillClient(IntakeForm.Intake.Client);
+                IntakeForm.Intake.Client = UpdateClient(IntakeForm.Intake.Client.ID);
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)
@@ -246,5 +260,9 @@ namespace RRFFilesManager.IntakeForm
 
         }
 
+        private void FindClientButton_Click(object sender, EventArgs e)
+        {
+            FindClient.Instance.Show();
+        }
     }
 }

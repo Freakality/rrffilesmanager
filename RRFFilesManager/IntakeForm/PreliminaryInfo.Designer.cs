@@ -44,7 +44,6 @@
             this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
             this.LawyerComboBox = new System.Windows.Forms.ComboBox();
             this.FileLawyerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.StaffInterviewerTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.StaffInterviewerTableAdapter();
             this.StaffInterviewerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ResponsibleLawyerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.HearAboutUsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -60,13 +59,10 @@
             this.StatutoryNoticeBox = new System.Windows.Forms.TextBox();
             this.DateOFCallDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Label42 = new System.Windows.Forms.Label();
-            this.MatterTypeTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MatterTypeTableAdapter();
             this.MatterSubTypesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter();
             this.IntakesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.IntakesTableAdapter();
-            this.ResponsibleLawyerTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.ResponsibleLawyerTableAdapter();
             this.HearAboutUsTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter();
             this.TextBox1 = new System.Windows.Forms.TextBox();
-            this.FileLawyerTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.FileLawyerTableAdapter();
             this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.PreliminayPanel = new System.Windows.Forms.Panel();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
@@ -237,10 +233,6 @@
             this.FileLawyerBindingSource.DataMember = "FileLawyer";
             this.FileLawyerBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
-            // StaffInterviewerTableAdapter
-            // 
-            this.StaffInterviewerTableAdapter.ClearBeforeFill = true;
-            // 
             // StaffInterviewerBindingSource
             // 
             this.StaffInterviewerBindingSource.DataMember = "StaffInterviewer";
@@ -408,10 +400,6 @@
             this.Label42.TabIndex = 143;
             this.Label42.Text = "Preliminary Info";
             // 
-            // MatterTypeTableAdapter
-            // 
-            this.MatterTypeTableAdapter.ClearBeforeFill = true;
-            // 
             // MatterSubTypesTableAdapter
             // 
             this.MatterSubTypesTableAdapter.ClearBeforeFill = true;
@@ -419,10 +407,6 @@
             // IntakesTableAdapter
             // 
             this.IntakesTableAdapter.ClearBeforeFill = true;
-            // 
-            // ResponsibleLawyerTableAdapter
-            // 
-            this.ResponsibleLawyerTableAdapter.ClearBeforeFill = true;
             // 
             // HearAboutUsTableAdapter
             // 
@@ -434,10 +418,6 @@
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.Size = new System.Drawing.Size(183, 23);
             this.TextBox1.TabIndex = 141;
-            // 
-            // FileLawyerTableAdapter
-            // 
-            this.FileLawyerTableAdapter.ClearBeforeFill = true;
             // 
             // TableLayoutPanel2
             // 
@@ -512,12 +492,6 @@
             this.Name = "PreliminaryInfo";
             this.Size = new System.Drawing.Size(1350, 610);
             this.Load += new System.EventHandler(this.PreliminaryInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FileLawyerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StaffInterviewerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ResponsibleLawyerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HearAboutUsBindingSource)).EndInit();
             this.TableLayoutPanel1.ResumeLayout(false);
             this.TableLayoutPanel1.PerformLayout();
             this.TableLayoutPanel2.ResumeLayout(false);
@@ -537,7 +511,6 @@
         internal ActionLogDBDataSet ActionLogDBDataSet;
         internal System.Windows.Forms.ComboBox LawyerComboBox;
         internal System.Windows.Forms.BindingSource FileLawyerBindingSource;
-        internal ActionLogDBDataSetTableAdapters.StaffInterviewerTableAdapter StaffInterviewerTableAdapter;
         internal System.Windows.Forms.BindingSource StaffInterviewerBindingSource;
         internal System.Windows.Forms.BindingSource ResponsibleLawyerBindingSource;
         internal System.Windows.Forms.BindingSource HearAboutUsBindingSource;
@@ -553,13 +526,10 @@
         internal System.Windows.Forms.TextBox StatutoryNoticeBox;
         internal System.Windows.Forms.DateTimePicker DateOFCallDateTimePicker;
         internal System.Windows.Forms.Label Label42;
-        internal ActionLogDBDataSetTableAdapters.MatterTypeTableAdapter MatterTypeTableAdapter;
         internal ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter MatterSubTypesTableAdapter;
         internal ActionLogDBDataSetTableAdapters.IntakesTableAdapter IntakesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.ResponsibleLawyerTableAdapter ResponsibleLawyerTableAdapter;
         internal ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter HearAboutUsTableAdapter;
         internal System.Windows.Forms.TextBox TextBox1;
-        internal ActionLogDBDataSetTableAdapters.FileLawyerTableAdapter FileLawyerTableAdapter;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel2;
         internal System.Windows.Forms.Panel PreliminayPanel;
         internal System.Windows.Forms.GroupBox GroupBox6;

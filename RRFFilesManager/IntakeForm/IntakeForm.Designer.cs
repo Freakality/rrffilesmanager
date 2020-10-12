@@ -38,16 +38,9 @@
             this.CYATemplatesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter();
             this.IntakesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.IntakesTableAdapter();
             this.MatterSubTypesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter();
-            this.DisabilityInsuranceCompaniesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.DisabilityInsuranceCompaniesTableAdapter();
-            this.InsuranceCompaniesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.InsuranceCompaniesTableAdapter();
-            this.MobileCarrierTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MobileCarrierTableAdapter();
             this.ProvincesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.ProvincesTableAdapter();
             this.HearAboutUsTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter();
-            this.StaffInterviewerTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.StaffInterviewerTableAdapter();
-            this.ResponsibleLawyerTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.ResponsibleLawyerTableAdapter();
             this.TableAdapterManager = new RRFFilesManager.ActionLogDBDataSetTableAdapters.TableAdapterManager();
-            this.FileLawyerTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.FileLawyerTableAdapter();
-            this.MatterTypeTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MatterTypeTableAdapter();
             this.Button5 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
@@ -152,18 +145,6 @@
             // 
             this.MatterSubTypesTableAdapter.ClearBeforeFill = true;
             // 
-            // DisabilityInsuranceCompaniesTableAdapter
-            // 
-            this.DisabilityInsuranceCompaniesTableAdapter.ClearBeforeFill = true;
-            // 
-            // InsuranceCompaniesTableAdapter
-            // 
-            this.InsuranceCompaniesTableAdapter.ClearBeforeFill = true;
-            // 
-            // MobileCarrierTableAdapter
-            // 
-            this.MobileCarrierTableAdapter.ClearBeforeFill = true;
-            // 
             // ProvincesTableAdapter
             // 
             this.ProvincesTableAdapter.ClearBeforeFill = true;
@@ -172,48 +153,20 @@
             // 
             this.HearAboutUsTableAdapter.ClearBeforeFill = true;
             // 
-            // StaffInterviewerTableAdapter
-            // 
-            this.StaffInterviewerTableAdapter.ClearBeforeFill = true;
-            // 
-            // ResponsibleLawyerTableAdapter
-            // 
-            this.ResponsibleLawyerTableAdapter.ClearBeforeFill = true;
-            // 
             // TableAdapterManager
             // 
-            this.TableAdapterManager.ABDenialsTableAdapter = null;
-            this.TableAdapterManager.ActionLogTableAdapter = null;
             this.TableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.TableAdapterManager.ClientNotesTableAdapter = null;
+            this.TableAdapterManager.ClientsTableAdapter = null;
+            this.TableAdapterManager.Connection = null;
             this.TableAdapterManager.CYATemplatesTableAdapter = null;
-            this.TableAdapterManager.DisabilityInsuranceCompaniesTableAdapter = null;
-            this.TableAdapterManager.FileLawyerTableAdapter = this.FileLawyerTableAdapter;
             this.TableAdapterManager.HearAboutUsTableAdapter = null;
-            this.TableAdapterManager.InsuranceCompaniesTableAdapter = null;
             this.TableAdapterManager.IntakesTableAdapter = null;
-            this.TableAdapterManager.InvoicesTableAdapter = null;
-            this.TableAdapterManager.LATTableAdapter = null;
-            this.TableAdapterManager.MainTableAdapter = null;
+            this.TableAdapterManager.LawyersTableAdapter = null;
             this.TableAdapterManager.MatterSubTypesTableAdapter = null;
-            this.TableAdapterManager.MatterTypeTableAdapter = this.MatterTypeTableAdapter;
-            this.TableAdapterManager.MedApptsTableAdapter = null;
-            this.TableAdapterManager.MobileCarrierTableAdapter = null;
-            this.TableAdapterManager.PLReportsTableAdapter = null;
+            this.TableAdapterManager.MatterTypesTableAdapter = null;
+            this.TableAdapterManager.MobileCarriersTableAdapter = null;
             this.TableAdapterManager.ProvincesTableAdapter = null;
-            this.TableAdapterManager.ResponsibleLawyerTableAdapter = this.ResponsibleLawyerTableAdapter;
-            this.TableAdapterManager.SpecialDamagesTableAdapter = null;
-            this.TableAdapterManager.StaffInterviewerTableAdapter = this.StaffInterviewerTableAdapter;
-            this.TableAdapterManager.UndertakingsTableAdapter = null;
             this.TableAdapterManager.UpdateOrder = RRFFilesManager.ActionLogDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // FileLawyerTableAdapter
-            // 
-            this.FileLawyerTableAdapter.ClearBeforeFill = true;
-            // 
-            // MatterTypeTableAdapter
-            // 
-            this.MatterTypeTableAdapter.ClearBeforeFill = true;
             // 
             // Button5
             // 
@@ -246,6 +199,7 @@
             // PictureBox1
             // 
             this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
             this.PictureBox1.Location = new System.Drawing.Point(1096, 2);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(224, 68);
@@ -304,16 +258,9 @@
         internal ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter CYATemplatesTableAdapter;
         internal ActionLogDBDataSetTableAdapters.IntakesTableAdapter IntakesTableAdapter;
         internal ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter MatterSubTypesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.DisabilityInsuranceCompaniesTableAdapter DisabilityInsuranceCompaniesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.InsuranceCompaniesTableAdapter InsuranceCompaniesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.MobileCarrierTableAdapter MobileCarrierTableAdapter;
         internal ActionLogDBDataSetTableAdapters.ProvincesTableAdapter ProvincesTableAdapter;
         internal ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter HearAboutUsTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.StaffInterviewerTableAdapter StaffInterviewerTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.ResponsibleLawyerTableAdapter ResponsibleLawyerTableAdapter;
         internal ActionLogDBDataSetTableAdapters.TableAdapterManager TableAdapterManager;
-        internal ActionLogDBDataSetTableAdapters.FileLawyerTableAdapter FileLawyerTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.MatterTypeTableAdapter MatterTypeTableAdapter;
         internal System.Windows.Forms.Button Button5;
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.BindingSource MatterSubTypesBindingSource;

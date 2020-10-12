@@ -59,27 +59,32 @@ namespace RRFFilesManager.IntakeForm
             // If Me.MVAInvokeCIP.Checked = True Then 
             string attachmentPath = "";
             string attachmentPath2 = "";
-            if (((this.InvokeCIP.Checked) == (true)))
+            if (this.InvokeCIP.Checked)
             {
                 // CreateSendItem("rojascarlos82@hotmail.com",attachmentPath)
                 this.CreateSendItem("DManzano@InjuryLawyerCanada.com", attachmentPath);
                 this.CreateSendItem("RFoisy@InjuryLawyerCanada.com", attachmentPath);
             }
 
-            if (((this.InvokeCYP.Checked) == (true)))
+            if (this.InvokeCYP.Checked)
             {
-                Instance.Hide();
-                PleaseWait.Instance.Show();
-                var CYATemplate = ActionLogDBDataSet.CYATemplates.FirstOrDefault(s => ((((s.MatterType ?? "") == (PreliminaryInfo.Instance.MatterTypeComboBox.Text ?? "")) & ((s.TypeOfTemplate ?? "") == (this.TypeTemplate.Text ?? ""))) & ((s.TemplateName ?? "") == (this.TemplateName.Text ?? ""))));
-                string templateDocumentPath = CYATemplate.TemplatePath.Replace(@"\\FS\FOISY\!", @"C:\");
-                attachmentPath = this.CreateAndFillTemplateDocument(templateDocumentPath);
-                string templateExcelPath = ((@"C:\test\IntakeReportTemplates\" + PreliminaryInfo.Instance.MatterTypeComboBox.Text) + ".xlsx");
-                attachmentPath2 = this.CreateAndFillTemplateWoorkbook(templateExcelPath);
-                string nameSt = ((PotentialClientInfo.Instance.PCILastName.Text + ", ") + PotentialClientInfo.Instance.PCIFirstName.Text);
-                string signa = PreliminaryInfo.Instance.StaffInterviewerComboBox.Text;
-                string receip = "rojascarlos82@hotmail.com";
-                this.CreateSendItemCYA(signa, nameSt, receip, attachmentPath, attachmentPath2);
-                PleaseWait.Instance.Hide();
+                using (var context = new DataContext())
+                {
+                    IntakeForm.Instance.Hide();
+                    PleaseWait.Instance.Show();
+                    var CYATemplate = context.CYATemplates.FirstOrDefault(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID && s.TypeOfTemplate == this.TypeTemplate.Text && s.TemplateName == this.TemplateName.Text);
+                    string templateDocumentPath = CYATemplate.TemplatePath.Replace(@"\\FS\FOISY\!", @"C:\");
+                    attachmentPath = this.CreateAndFillTemplateDocument(templateDocumentPath);
+                    string templateExcelPath = ((@"C:\test\IntakeReportTemplates\" + PreliminaryInfo.Instance.MatterTypeComboBox.Text) + ".xlsx");
+                    attachmentPath2 = this.CreateAndFillTemplateWoorkbook(templateExcelPath);
+                    string nameSt = ((PotentialClientInfo.Instance.PCILastName.Text + ", ") + PotentialClientInfo.Instance.PCIFirstName.Text);
+                    string signa = PreliminaryInfo.Instance.StaffInterviewerComboBox.Text;
+                    string receip = "rojascarlos82@hotmail.com";
+                    this.CreateSendItemCYA(signa, nameSt, receip, attachmentPath, attachmentPath2);
+                    PleaseWait.Instance.Hide();
+                    Home.Instance.Show();
+                }
+                
                 
             }
         }

@@ -110,13 +110,17 @@ namespace RRFFilesManager.IntakeForm
         private void DateOfLossDateTimePicker_ValueChanged(object Sender, EventArgs e)
         {
             DateOfLossDateTimePicker.CustomFormat = "MMM-dd-yyyy";
-            DataRow[] dr;
-            dr = ActionLogDBDataSet.Tables["MatterSubTypes"].Select("MatterSubType='" + MatterSubTypeComboBox.Text + "'");
-            if (dr.Length > 0)
+            using (var context = new DataContext())
             {
-                string statutoryNotice = dr[0]["StatutoryNotice"].ToString();
-                if (!string.IsNullOrEmpty(statutoryNotice))
+                var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
+                if (matterSubType?.StatutoryNotice != null)
+                {
                     StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
+                }
+                else
+                {
+                    StatutoryNoticeBox.Text = "";
+                }
             }
 
             if (DateOfLossDateTimePicker.CustomFormat == "MMM-dd-yyyy")

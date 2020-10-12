@@ -54,7 +54,6 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
             this.PCISalutation = new System.Windows.Forms.ComboBox();
-            this.MobileCarrierTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MobileCarrierTableAdapter();
             this.MonthBirth = new System.Windows.Forms.ComboBox();
             this.PCIFirstName = new System.Windows.Forms.TextBox();
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
@@ -77,6 +76,7 @@
             this.Label11 = new System.Windows.Forms.Label();
             this.PCIHomeNumber = new System.Windows.Forms.MaskedTextBox();
             this.TableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.FindClientButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MobileCarrierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).BeginInit();
@@ -336,10 +336,6 @@
             this.PCISalutation.Size = new System.Drawing.Size(121, 25);
             this.PCISalutation.TabIndex = 3;
             // 
-            // MobileCarrierTableAdapter
-            // 
-            this.MobileCarrierTableAdapter.ClearBeforeFill = true;
-            // 
             // MonthBirth
             // 
             this.MonthBirth.FormattingEnabled = true;
@@ -373,6 +369,7 @@
             // 
             this.PotentialClientInfoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
+            this.PotentialClientInfoPanel.Controls.Add(this.FindClientButton);
             this.PotentialClientInfoPanel.Controls.Add(this.Label41);
             this.PotentialClientInfoPanel.Controls.Add(this.TableLayoutPanel4);
             this.PotentialClientInfoPanel.Controls.Add(this.TableLayoutPanel3);
@@ -613,6 +610,19 @@
             this.TableLayoutPanel9.Size = new System.Drawing.Size(374, 44);
             this.TableLayoutPanel9.TabIndex = 32;
             // 
+            // FindClientButton
+            // 
+            this.FindClientButton.BackColor = System.Drawing.Color.Maroon;
+            this.FindClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindClientButton.ForeColor = System.Drawing.Color.White;
+            this.FindClientButton.Location = new System.Drawing.Point(1124, 4);
+            this.FindClientButton.Name = "FindClientButton";
+            this.FindClientButton.Size = new System.Drawing.Size(97, 36);
+            this.FindClientButton.TabIndex = 3;
+            this.FindClientButton.Text = "Find Client";
+            this.FindClientButton.UseVisualStyleBackColor = false;
+            this.FindClientButton.Click += new System.EventHandler(this.FindClientButton_Click);
+            // 
             // PotentialClientInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -621,9 +631,6 @@
             this.Name = "PotentialClientInfo";
             this.Size = new System.Drawing.Size(1350, 610);
             this.Load += new System.EventHandler(this.PotentialClientInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MobileCarrierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).EndInit();
             this.PotentialClientInfoPanel.ResumeLayout(false);
             this.PotentialClientInfoPanel.PerformLayout();
             this.TableLayoutPanel4.ResumeLayout(false);
@@ -663,7 +670,6 @@
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.ComboBox PCISalutation;
-        internal ActionLogDBDataSetTableAdapters.MobileCarrierTableAdapter MobileCarrierTableAdapter;
         internal System.Windows.Forms.ComboBox MonthBirth;
         internal System.Windows.Forms.TextBox PCIFirstName;
         internal System.Windows.Forms.Panel PotentialClientInfoPanel;
@@ -686,5 +692,6 @@
         internal System.Windows.Forms.MaskedTextBox PCIHomeNumber;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel9;
         private System.Windows.Forms.BindingSource provincesBindingSource;
+        private System.Windows.Forms.Button FindClientButton;
     }
 }
