@@ -51,11 +51,11 @@
             this.LiaFaultPerson = new System.Windows.Forms.TextBox();
             this.GroupBox37 = new System.Windows.Forms.GroupBox();
             this.LiaOwnNegligence = new System.Windows.Forms.TextBox();
-            this.Label22 = new System.Windows.Forms.Label();
+            this.EILT4EmployeeLabel = new System.Windows.Forms.Label();
             this.GroupBox100 = new System.Windows.Forms.GroupBox();
             this.TextBox79 = new System.Windows.Forms.TextBox();
             this.Liability = new System.Windows.Forms.TabPage();
-            this.FlowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Content = new System.Windows.Forms.FlowLayoutPanel();
             this.IncidentDateTimeGroupBox = new System.Windows.Forms.GroupBox();
             this.LiaDate = new System.Windows.Forms.DateTimePicker();
             this.LiaTime = new System.Windows.Forms.DateTimePicker();
@@ -74,11 +74,11 @@
             this.LiaNotes = new System.Windows.Forms.TextBox();
             this.GroupBox13 = new System.Windows.Forms.GroupBox();
             this.EILEmployed52Weeks = new System.Windows.Forms.ComboBox();
-            this.Label19 = new System.Windows.Forms.Label();
+            this.EILEmployed52WeeksLabel = new System.Windows.Forms.Label();
             this.EILEmployed4Weeks = new System.Windows.Forms.ComboBox();
-            this.Label18 = new System.Windows.Forms.Label();
+            this.EILEmployed4WeeksLabel = new System.Windows.Forms.Label();
             this.EILWereEmployed = new System.Windows.Forms.ComboBox();
-            this.Label17 = new System.Windows.Forms.Label();
+            this.EILWereEmployedLabel = new System.Windows.Forms.Label();
             this.TextBox77 = new System.Windows.Forms.TextBox();
             this.GroupBox123 = new System.Windows.Forms.GroupBox();
             this.ComboBox39 = new System.Windows.Forms.ComboBox();
@@ -124,14 +124,14 @@
             this.EILHowLongBusiness = new System.Windows.Forms.TextBox();
             this.Label30 = new System.Windows.Forms.Label();
             this.EILSelfGrossEarning = new System.Windows.Forms.TextBox();
-            this.Label29 = new System.Windows.Forms.Label();
+            this.EILSelfGrossEarningLabel = new System.Windows.Forms.Label();
             this.EILSelfBusinessName = new System.Windows.Forms.TextBox();
             this.Label27 = new System.Windows.Forms.Label();
             this.EILWereSelfEmployed = new System.Windows.Forms.ComboBox();
             this.Label28 = new System.Windows.Forms.Label();
             this.GroupBox16 = new System.Windows.Forms.GroupBox();
             this.EILCollecInsurance = new System.Windows.Forms.ComboBox();
-            this.Label26 = new System.Windows.Forms.Label();
+            this.EILCollecInsuranceLabel = new System.Windows.Forms.Label();
             this.GroupBox15 = new System.Windows.Forms.GroupBox();
             this.TableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.Label25 = new System.Windows.Forms.Label();
@@ -141,33 +141,33 @@
             this.EILHowLongEmployee = new System.Windows.Forms.TextBox();
             this.Label23 = new System.Windows.Forms.Label();
             this.EILEmployeeGrossEarning = new System.Windows.Forms.TextBox();
-            this.Label20 = new System.Windows.Forms.Label();
+            this.EILEmployeeGrossEarningLabel = new System.Windows.Forms.Label();
             this.GroupBox14 = new System.Windows.Forms.GroupBox();
             this.EILT4Company = new System.Windows.Forms.TextBox();
-            this.Label21 = new System.Windows.Forms.Label();
+            this.EILT4CompanyLabel = new System.Windows.Forms.Label();
             this.EILT4Employee = new System.Windows.Forms.ComboBox();
             this.Damages = new System.Windows.Forms.TabPage();
-            this.GroupBox29 = new System.Windows.Forms.GroupBox();
+            this.DamNotesGroupBox = new System.Windows.Forms.GroupBox();
             this.DamNotes = new System.Windows.Forms.TextBox();
-            this.GroupBox28 = new System.Windows.Forms.GroupBox();
+            this.DamPreIllnessGroupBox = new System.Windows.Forms.GroupBox();
             this.DamPreIllness = new System.Windows.Forms.TextBox();
-            this.GroupBox27 = new System.Windows.Forms.GroupBox();
+            this.DamPreAccidentGroupBox = new System.Windows.Forms.GroupBox();
             this.DamPreAccident = new System.Windows.Forms.TextBox();
-            this.GroupBox26 = new System.Windows.Forms.GroupBox();
+            this.DamWereSeeingDoctorGroupBox = new System.Windows.Forms.GroupBox();
             this.DamWereSeeingDoctor = new System.Windows.Forms.TextBox();
-            this.GroupBox25 = new System.Windows.Forms.GroupBox();
+            this.DamPrescribedGroupBox = new System.Windows.Forms.GroupBox();
             this.DamPrescribed = new System.Windows.Forms.TextBox();
-            this.GroupBox24 = new System.Windows.Forms.GroupBox();
+            this.DamPsychologicalEffectGroupBox = new System.Windows.Forms.GroupBox();
             this.DamPsychologicalEffect = new System.Windows.Forms.TextBox();
-            this.GroupBox23 = new System.Windows.Forms.GroupBox();
+            this.DamLowerBodyInjuriesGroupBox = new System.Windows.Forms.GroupBox();
             this.DamLowerBodyInjuries = new System.Windows.Forms.TextBox();
-            this.GroupBox22 = new System.Windows.Forms.GroupBox();
+            this.DamUpperBodyInjuriesGroupBox = new System.Windows.Forms.GroupBox();
             this.DamUpperBodyInjuries = new System.Windows.Forms.TextBox();
-            this.GroupBox21 = new System.Windows.Forms.GroupBox();
+            this.DamHeadInjuriesGroupBox = new System.Windows.Forms.GroupBox();
             this.DamHeadInjuries = new System.Windows.Forms.TextBox();
-            this.GroupBox20 = new System.Windows.Forms.GroupBox();
+            this.DamWentToHospitalGroupBox = new System.Windows.Forms.GroupBox();
             this.DamWentToHospital = new System.Windows.Forms.TextBox();
-            this.GroupBox19 = new System.Windows.Forms.GroupBox();
+            this.DamHitVehicleConcreteGroupBox = new System.Windows.Forms.GroupBox();
             this.DamHitVehicleConcrete = new System.Windows.Forms.TextBox();
             this.AccidentBenefits = new System.Windows.Forms.TabPage();
             this.GroupBox31 = new System.Windows.Forms.GroupBox();
@@ -199,6 +199,11 @@
             this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
             this.CyaTemplatesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter();
             this.CYATemplatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.SocialAssistanceGroup = new System.Windows.Forms.GroupBox();
+            this.EILCollecAssistance = new System.Windows.Forms.ComboBox();
+            this.EILCollecAssistanceLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MVALiabilityGroup.SuspendLayout();
             this.LiaEstimDamageGroup.SuspendLayout();
             this.LiaInsuranceCoGroup.SuspendLayout();
@@ -213,7 +218,7 @@
             this.GroupBox37.SuspendLayout();
             this.GroupBox100.SuspendLayout();
             this.Liability.SuspendLayout();
-            this.FlowLayoutPanel1.SuspendLayout();
+            this.Content.SuspendLayout();
             this.IncidentDateTimeGroupBox.SuspendLayout();
             this.ReceiveCopyGroupBox.SuspendLayout();
             this.LiaWhereAccidentGroup.SuspendLayout();
@@ -246,23 +251,26 @@
             this.TableLayoutPanel5.SuspendLayout();
             this.GroupBox14.SuspendLayout();
             this.Damages.SuspendLayout();
-            this.GroupBox29.SuspendLayout();
-            this.GroupBox28.SuspendLayout();
-            this.GroupBox27.SuspendLayout();
-            this.GroupBox26.SuspendLayout();
-            this.GroupBox25.SuspendLayout();
-            this.GroupBox24.SuspendLayout();
-            this.GroupBox23.SuspendLayout();
-            this.GroupBox22.SuspendLayout();
-            this.GroupBox21.SuspendLayout();
-            this.GroupBox20.SuspendLayout();
-            this.GroupBox19.SuspendLayout();
+            this.DamNotesGroupBox.SuspendLayout();
+            this.DamPreIllnessGroupBox.SuspendLayout();
+            this.DamPreAccidentGroupBox.SuspendLayout();
+            this.DamWereSeeingDoctorGroupBox.SuspendLayout();
+            this.DamPrescribedGroupBox.SuspendLayout();
+            this.DamPsychologicalEffectGroupBox.SuspendLayout();
+            this.DamLowerBodyInjuriesGroupBox.SuspendLayout();
+            this.DamUpperBodyInjuriesGroupBox.SuspendLayout();
+            this.DamHeadInjuriesGroupBox.SuspendLayout();
+            this.DamWentToHospitalGroupBox.SuspendLayout();
+            this.DamHitVehicleConcreteGroupBox.SuspendLayout();
             this.AccidentBenefits.SuspendLayout();
             this.GroupBox31.SuspendLayout();
             this.GroupBox30.SuspendLayout();
             this.OtherNotes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.SocialAssistanceGroup.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MVALiabilityGroup
@@ -517,15 +525,15 @@
             this.LiaOwnNegligence.Size = new System.Drawing.Size(1154, 60);
             this.LiaOwnNegligence.TabIndex = 1;
             // 
-            // Label22
+            // EILT4EmployeeLabel
             // 
-            this.Label22.AutoSize = true;
-            this.Label22.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label22.Location = new System.Drawing.Point(6, 18);
-            this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(159, 17);
-            this.Label22.TabIndex = 13;
-            this.Label22.Text = "Were you a T4 Employee?";
+            this.EILT4EmployeeLabel.AutoSize = true;
+            this.EILT4EmployeeLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILT4EmployeeLabel.Location = new System.Drawing.Point(6, 18);
+            this.EILT4EmployeeLabel.Name = "EILT4EmployeeLabel";
+            this.EILT4EmployeeLabel.Size = new System.Drawing.Size(159, 17);
+            this.EILT4EmployeeLabel.TabIndex = 13;
+            this.EILT4EmployeeLabel.Text = "Were you a T4 Employee?";
             // 
             // GroupBox100
             // 
@@ -554,30 +562,31 @@
             // 
             this.Liability.AutoScroll = true;
             this.Liability.BackColor = System.Drawing.SystemColors.Menu;
-            this.Liability.Controls.Add(this.FlowLayoutPanel1);
+            this.Liability.Controls.Add(this.Content);
             this.Liability.Location = new System.Drawing.Point(4, 22);
             this.Liability.Name = "Liability";
             this.Liability.Size = new System.Drawing.Size(1342, 584);
             this.Liability.TabIndex = 6;
             this.Liability.Text = "Liability";
+            this.Liability.Enter += new System.EventHandler(this.Liability_Enter);
             // 
-            // FlowLayoutPanel1
+            // Content
             // 
-            this.FlowLayoutPanel1.AutoScroll = true;
-            this.FlowLayoutPanel1.Controls.Add(this.IncidentDateTimeGroupBox);
-            this.FlowLayoutPanel1.Controls.Add(this.ReceiveCopyGroupBox);
-            this.FlowLayoutPanel1.Controls.Add(this.LiaWhereAccidentGroup);
-            this.FlowLayoutPanel1.Controls.Add(this.LiaExplainGroup);
-            this.FlowLayoutPanel1.Controls.Add(this.LiaHavePhotosGroup);
-            this.FlowLayoutPanel1.Controls.Add(this.MVALiabilityGroup);
-            this.FlowLayoutPanel1.Controls.Add(this.OthersLiabilityGroup);
-            this.FlowLayoutPanel1.Controls.Add(this.LiaNotesGroup);
-            this.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.FlowLayoutPanel1.Name = "FlowLayoutPanel1";
-            this.FlowLayoutPanel1.Size = new System.Drawing.Size(1342, 584);
-            this.FlowLayoutPanel1.TabIndex = 16;
-            this.FlowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutPanel1_Paint);
+            this.Content.AutoScroll = true;
+            this.Content.Controls.Add(this.IncidentDateTimeGroupBox);
+            this.Content.Controls.Add(this.ReceiveCopyGroupBox);
+            this.Content.Controls.Add(this.LiaWhereAccidentGroup);
+            this.Content.Controls.Add(this.LiaExplainGroup);
+            this.Content.Controls.Add(this.LiaHavePhotosGroup);
+            this.Content.Controls.Add(this.MVALiabilityGroup);
+            this.Content.Controls.Add(this.OthersLiabilityGroup);
+            this.Content.Controls.Add(this.LiaNotesGroup);
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Location = new System.Drawing.Point(0, 0);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(1342, 584);
+            this.Content.TabIndex = 16;
+            this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutPanel1_Paint);
             // 
             // IncidentDateTimeGroupBox
             // 
@@ -752,16 +761,11 @@
             // 
             // GroupBox13
             // 
-            this.GroupBox13.Controls.Add(this.EILEmployed52Weeks);
-            this.GroupBox13.Controls.Add(this.Label19);
-            this.GroupBox13.Controls.Add(this.EILEmployed4Weeks);
-            this.GroupBox13.Controls.Add(this.Label18);
-            this.GroupBox13.Controls.Add(this.EILWereEmployed);
-            this.GroupBox13.Controls.Add(this.Label17);
+            this.GroupBox13.Controls.Add(this.flowLayoutPanel2);
             this.GroupBox13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox13.Location = new System.Drawing.Point(16, 17);
+            this.GroupBox13.Location = new System.Drawing.Point(3, 3);
             this.GroupBox13.Name = "GroupBox13";
-            this.GroupBox13.Size = new System.Drawing.Size(560, 140);
+            this.GroupBox13.Size = new System.Drawing.Size(562, 115);
             this.GroupBox13.TabIndex = 18;
             this.GroupBox13.TabStop = false;
             this.GroupBox13.Text = "Time of Employment";
@@ -773,20 +777,20 @@
             this.EILEmployed52Weeks.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.EILEmployed52Weeks.Location = new System.Drawing.Point(478, 96);
+            this.EILEmployed52Weeks.Location = new System.Drawing.Point(475, 65);
             this.EILEmployed52Weeks.Name = "EILEmployed52Weeks";
             this.EILEmployed52Weeks.Size = new System.Drawing.Size(53, 25);
             this.EILEmployed52Weeks.TabIndex = 16;
             // 
-            // Label19
+            // EILEmployed52WeeksLabel
             // 
-            this.Label19.AutoSize = true;
-            this.Label19.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label19.Location = new System.Drawing.Point(6, 99);
-            this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(466, 17);
-            this.Label19.TabIndex = 17;
-            this.Label19.Text = "Were you employed at least 52 weeks before of this motor vehicle accident?";
+            this.EILEmployed52WeeksLabel.AutoSize = true;
+            this.EILEmployed52WeeksLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILEmployed52WeeksLabel.Location = new System.Drawing.Point(3, 62);
+            this.EILEmployed52WeeksLabel.Name = "EILEmployed52WeeksLabel";
+            this.EILEmployed52WeeksLabel.Size = new System.Drawing.Size(466, 17);
+            this.EILEmployed52WeeksLabel.TabIndex = 17;
+            this.EILEmployed52WeeksLabel.Text = "Were you employed at least 52 weeks before of this motor vehicle accident?";
             // 
             // EILEmployed4Weeks
             // 
@@ -795,20 +799,20 @@
             this.EILEmployed4Weeks.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.EILEmployed4Weeks.Location = new System.Drawing.Point(471, 62);
+            this.EILEmployed4Weeks.Location = new System.Drawing.Point(468, 34);
             this.EILEmployed4Weeks.Name = "EILEmployed4Weeks";
             this.EILEmployed4Weeks.Size = new System.Drawing.Size(53, 25);
             this.EILEmployed4Weeks.TabIndex = 14;
             // 
-            // Label18
+            // EILEmployed4WeeksLabel
             // 
-            this.Label18.AutoSize = true;
-            this.Label18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label18.Location = new System.Drawing.Point(6, 65);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(459, 17);
-            this.Label18.TabIndex = 15;
-            this.Label18.Text = "Were you employed at least 4 weeks before of this motor vehicle accident?";
+            this.EILEmployed4WeeksLabel.AutoSize = true;
+            this.EILEmployed4WeeksLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILEmployed4WeeksLabel.Location = new System.Drawing.Point(3, 31);
+            this.EILEmployed4WeeksLabel.Name = "EILEmployed4WeeksLabel";
+            this.EILEmployed4WeeksLabel.Size = new System.Drawing.Size(459, 17);
+            this.EILEmployed4WeeksLabel.TabIndex = 15;
+            this.EILEmployed4WeeksLabel.Text = "Were you employed at least 4 weeks before of this motor vehicle accident?";
             // 
             // EILWereEmployed
             // 
@@ -817,20 +821,20 @@
             this.EILWereEmployed.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.EILWereEmployed.Location = new System.Drawing.Point(399, 32);
+            this.EILWereEmployed.Location = new System.Drawing.Point(396, 3);
             this.EILWereEmployed.Name = "EILWereEmployed";
             this.EILWereEmployed.Size = new System.Drawing.Size(53, 25);
             this.EILWereEmployed.TabIndex = 1;
             // 
-            // Label17
+            // EILWereEmployedLabel
             // 
-            this.Label17.AutoSize = true;
-            this.Label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label17.Location = new System.Drawing.Point(6, 35);
-            this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(387, 17);
-            this.Label17.TabIndex = 13;
-            this.Label17.Text = "Were you employed at the time of this motor vehicle accident?";
+            this.EILWereEmployedLabel.AutoSize = true;
+            this.EILWereEmployedLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILWereEmployedLabel.Location = new System.Drawing.Point(3, 0);
+            this.EILWereEmployedLabel.Name = "EILWereEmployedLabel";
+            this.EILWereEmployedLabel.Size = new System.Drawing.Size(387, 17);
+            this.EILWereEmployedLabel.TabIndex = 13;
+            this.EILWereEmployedLabel.Text = "Were you employed at the time of this motor vehicle accident?";
             // 
             // TextBox77
             // 
@@ -1059,6 +1063,7 @@
             this.Policy.Size = new System.Drawing.Size(1342, 584);
             this.Policy.TabIndex = 7;
             this.Policy.Text = "Policy";
+            this.Policy.Click += new System.EventHandler(this.Policy_Click);
             // 
             // GroupBox96
             // 
@@ -1254,12 +1259,7 @@
             // 
             this.EmploymentIncomeLoss.AutoScroll = true;
             this.EmploymentIncomeLoss.BackColor = System.Drawing.SystemColors.Menu;
-            this.EmploymentIncomeLoss.Controls.Add(this.GroupBox18);
-            this.EmploymentIncomeLoss.Controls.Add(this.GroupBox17);
-            this.EmploymentIncomeLoss.Controls.Add(this.GroupBox16);
-            this.EmploymentIncomeLoss.Controls.Add(this.GroupBox15);
-            this.EmploymentIncomeLoss.Controls.Add(this.GroupBox14);
-            this.EmploymentIncomeLoss.Controls.Add(this.GroupBox13);
+            this.EmploymentIncomeLoss.Controls.Add(this.flowLayoutPanel1);
             this.EmploymentIncomeLoss.Location = new System.Drawing.Point(4, 22);
             this.EmploymentIncomeLoss.Name = "EmploymentIncomeLoss";
             this.EmploymentIncomeLoss.Padding = new System.Windows.Forms.Padding(3);
@@ -1272,9 +1272,9 @@
             this.GroupBox18.Controls.Add(this.EILNotes);
             this.GroupBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox18.Location = new System.Drawing.Point(16, 513);
+            this.GroupBox18.Location = new System.Drawing.Point(3, 559);
             this.GroupBox18.Name = "GroupBox18";
-            this.GroupBox18.Size = new System.Drawing.Size(1160, 138);
+            this.GroupBox18.Size = new System.Drawing.Size(1172, 138);
             this.GroupBox18.TabIndex = 23;
             this.GroupBox18.TabStop = false;
             this.GroupBox18.Text = "Other relevant Employement / Income Loss notes";
@@ -1282,12 +1282,13 @@
             // EILNotes
             // 
             this.EILNotes.BackColor = System.Drawing.Color.White;
+            this.EILNotes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EILNotes.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILNotes.Location = new System.Drawing.Point(8, 20);
+            this.EILNotes.Location = new System.Drawing.Point(3, 18);
             this.EILNotes.Multiline = true;
             this.EILNotes.Name = "EILNotes";
             this.EILNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.EILNotes.Size = new System.Drawing.Size(1141, 110);
+            this.EILNotes.Size = new System.Drawing.Size(1166, 117);
             this.EILNotes.TabIndex = 1;
             // 
             // GroupBox17
@@ -1295,13 +1296,13 @@
             this.GroupBox17.Controls.Add(this.EILHowLongBusiness);
             this.GroupBox17.Controls.Add(this.Label30);
             this.GroupBox17.Controls.Add(this.EILSelfGrossEarning);
-            this.GroupBox17.Controls.Add(this.Label29);
+            this.GroupBox17.Controls.Add(this.EILSelfGrossEarningLabel);
             this.GroupBox17.Controls.Add(this.EILSelfBusinessName);
             this.GroupBox17.Controls.Add(this.Label27);
             this.GroupBox17.Controls.Add(this.EILWereSelfEmployed);
             this.GroupBox17.Controls.Add(this.Label28);
             this.GroupBox17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox17.Location = new System.Drawing.Point(16, 384);
+            this.GroupBox17.Location = new System.Drawing.Point(3, 430);
             this.GroupBox17.Name = "GroupBox17";
             this.GroupBox17.Size = new System.Drawing.Size(1172, 123);
             this.GroupBox17.TabIndex = 22;
@@ -1334,15 +1335,15 @@
             this.EILSelfGrossEarning.Size = new System.Drawing.Size(762, 22);
             this.EILSelfGrossEarning.TabIndex = 18;
             // 
-            // Label29
+            // EILSelfGrossEarningLabel
             // 
-            this.Label29.AutoSize = true;
-            this.Label29.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label29.Location = new System.Drawing.Point(8, 58);
-            this.Label29.Name = "Label29";
-            this.Label29.Size = new System.Drawing.Size(389, 17);
-            this.Label29.TabIndex = 17;
-            this.Label29.Text = "How much were you earning (gross) at the time of this accident?";
+            this.EILSelfGrossEarningLabel.AutoSize = true;
+            this.EILSelfGrossEarningLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILSelfGrossEarningLabel.Location = new System.Drawing.Point(8, 58);
+            this.EILSelfGrossEarningLabel.Name = "EILSelfGrossEarningLabel";
+            this.EILSelfGrossEarningLabel.Size = new System.Drawing.Size(389, 17);
+            this.EILSelfGrossEarningLabel.TabIndex = 17;
+            this.EILSelfGrossEarningLabel.Text = "How much were you earning (gross) at the time of this accident?";
             // 
             // EILSelfBusinessName
             // 
@@ -1387,11 +1388,11 @@
             // GroupBox16
             // 
             this.GroupBox16.Controls.Add(this.EILCollecInsurance);
-            this.GroupBox16.Controls.Add(this.Label26);
+            this.GroupBox16.Controls.Add(this.EILCollecInsuranceLabel);
             this.GroupBox16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox16.Location = new System.Drawing.Point(582, 102);
+            this.GroupBox16.Location = new System.Drawing.Point(571, 3);
             this.GroupBox16.Name = "GroupBox16";
-            this.GroupBox16.Size = new System.Drawing.Size(606, 55);
+            this.GroupBox16.Size = new System.Drawing.Size(604, 115);
             this.GroupBox16.TabIndex = 21;
             this.GroupBox16.TabStop = false;
             this.GroupBox16.Text = "Employment Insurance";
@@ -1403,20 +1404,20 @@
             this.EILCollecInsurance.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.EILCollecInsurance.Location = new System.Drawing.Point(525, 15);
+            this.EILCollecInsurance.Location = new System.Drawing.Point(525, 46);
             this.EILCollecInsurance.Name = "EILCollecInsurance";
             this.EILCollecInsurance.Size = new System.Drawing.Size(53, 25);
             this.EILCollecInsurance.TabIndex = 7;
             // 
-            // Label26
+            // EILCollecInsuranceLabel
             // 
-            this.Label26.AutoSize = true;
-            this.Label26.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label26.Location = new System.Drawing.Point(6, 18);
-            this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(513, 17);
-            this.Label26.TabIndex = 6;
-            this.Label26.Text = "Were you collecting Employment Insurance in the last 52 weeks before the accident" +
+            this.EILCollecInsuranceLabel.AutoSize = true;
+            this.EILCollecInsuranceLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILCollecInsuranceLabel.Location = new System.Drawing.Point(6, 49);
+            this.EILCollecInsuranceLabel.Name = "EILCollecInsuranceLabel";
+            this.EILCollecInsuranceLabel.Size = new System.Drawing.Size(513, 17);
+            this.EILCollecInsuranceLabel.TabIndex = 6;
+            this.EILCollecInsuranceLabel.Text = "Were you collecting Employment Insurance in the last 52 weeks before the accident" +
     "?";
             // 
             // GroupBox15
@@ -1427,9 +1428,9 @@
             this.GroupBox15.Controls.Add(this.EILHowLongEmployee);
             this.GroupBox15.Controls.Add(this.Label23);
             this.GroupBox15.Controls.Add(this.EILEmployeeGrossEarning);
-            this.GroupBox15.Controls.Add(this.Label20);
+            this.GroupBox15.Controls.Add(this.EILEmployeeGrossEarningLabel);
             this.GroupBox15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox15.Location = new System.Drawing.Point(16, 163);
+            this.GroupBox15.Location = new System.Drawing.Point(3, 209);
             this.GroupBox15.Name = "GroupBox15";
             this.GroupBox15.Size = new System.Drawing.Size(1172, 215);
             this.GroupBox15.TabIndex = 20;
@@ -1462,11 +1463,12 @@
             // 
             // EILExplainJob
             // 
+            this.EILExplainJob.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EILExplainJob.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EILExplainJob.Location = new System.Drawing.Point(252, 3);
             this.EILExplainJob.Multiline = true;
             this.EILExplainJob.Name = "EILExplainJob";
-            this.EILExplainJob.Size = new System.Drawing.Size(854, 56);
+            this.EILExplainJob.Size = new System.Drawing.Size(905, 64);
             this.EILExplainJob.TabIndex = 7;
             // 
             // EILJobTitle
@@ -1513,26 +1515,26 @@
             this.EILEmployeeGrossEarning.Size = new System.Drawing.Size(762, 22);
             this.EILEmployeeGrossEarning.TabIndex = 1;
             // 
-            // Label20
+            // EILEmployeeGrossEarningLabel
             // 
-            this.Label20.AutoSize = true;
-            this.Label20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label20.Location = new System.Drawing.Point(6, 27);
-            this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(389, 17);
-            this.Label20.TabIndex = 0;
-            this.Label20.Text = "How much were you earning (gross) at the time of this accident?";
+            this.EILEmployeeGrossEarningLabel.AutoSize = true;
+            this.EILEmployeeGrossEarningLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILEmployeeGrossEarningLabel.Location = new System.Drawing.Point(6, 27);
+            this.EILEmployeeGrossEarningLabel.Name = "EILEmployeeGrossEarningLabel";
+            this.EILEmployeeGrossEarningLabel.Size = new System.Drawing.Size(389, 17);
+            this.EILEmployeeGrossEarningLabel.TabIndex = 0;
+            this.EILEmployeeGrossEarningLabel.Text = "How much were you earning (gross) at the time of this accident?";
             // 
             // GroupBox14
             // 
             this.GroupBox14.Controls.Add(this.EILT4Company);
-            this.GroupBox14.Controls.Add(this.Label21);
+            this.GroupBox14.Controls.Add(this.EILT4CompanyLabel);
             this.GroupBox14.Controls.Add(this.EILT4Employee);
-            this.GroupBox14.Controls.Add(this.Label22);
+            this.GroupBox14.Controls.Add(this.EILT4EmployeeLabel);
             this.GroupBox14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox14.Location = new System.Drawing.Point(582, 17);
+            this.GroupBox14.Location = new System.Drawing.Point(3, 124);
             this.GroupBox14.Name = "GroupBox14";
-            this.GroupBox14.Size = new System.Drawing.Size(606, 79);
+            this.GroupBox14.Size = new System.Drawing.Size(559, 79);
             this.GroupBox14.TabIndex = 19;
             this.GroupBox14.TabStop = false;
             this.GroupBox14.Text = "T4 Info";
@@ -1542,18 +1544,18 @@
             this.EILT4Company.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EILT4Company.Location = new System.Drawing.Point(171, 46);
             this.EILT4Company.Name = "EILT4Company";
-            this.EILT4Company.Size = new System.Drawing.Size(429, 22);
+            this.EILT4Company.Size = new System.Drawing.Size(382, 22);
             this.EILT4Company.TabIndex = 16;
             // 
-            // Label21
+            // EILT4CompanyLabel
             // 
-            this.Label21.AutoSize = true;
-            this.Label21.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label21.Location = new System.Drawing.Point(6, 46);
-            this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(145, 17);
-            this.Label21.TabIndex = 15;
-            this.Label21.Text = "Name of the Company:";
+            this.EILT4CompanyLabel.AutoSize = true;
+            this.EILT4CompanyLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILT4CompanyLabel.Location = new System.Drawing.Point(6, 46);
+            this.EILT4CompanyLabel.Name = "EILT4CompanyLabel";
+            this.EILT4CompanyLabel.Size = new System.Drawing.Size(145, 17);
+            this.EILT4CompanyLabel.TabIndex = 15;
+            this.EILT4CompanyLabel.Text = "Name of the Company:";
             // 
             // EILT4Employee
             // 
@@ -1571,17 +1573,17 @@
             // 
             this.Damages.AutoScroll = true;
             this.Damages.BackColor = System.Drawing.SystemColors.Menu;
-            this.Damages.Controls.Add(this.GroupBox29);
-            this.Damages.Controls.Add(this.GroupBox28);
-            this.Damages.Controls.Add(this.GroupBox27);
-            this.Damages.Controls.Add(this.GroupBox26);
-            this.Damages.Controls.Add(this.GroupBox25);
-            this.Damages.Controls.Add(this.GroupBox24);
-            this.Damages.Controls.Add(this.GroupBox23);
-            this.Damages.Controls.Add(this.GroupBox22);
-            this.Damages.Controls.Add(this.GroupBox21);
-            this.Damages.Controls.Add(this.GroupBox20);
-            this.Damages.Controls.Add(this.GroupBox19);
+            this.Damages.Controls.Add(this.DamNotesGroupBox);
+            this.Damages.Controls.Add(this.DamPreIllnessGroupBox);
+            this.Damages.Controls.Add(this.DamPreAccidentGroupBox);
+            this.Damages.Controls.Add(this.DamWereSeeingDoctorGroupBox);
+            this.Damages.Controls.Add(this.DamPrescribedGroupBox);
+            this.Damages.Controls.Add(this.DamPsychologicalEffectGroupBox);
+            this.Damages.Controls.Add(this.DamLowerBodyInjuriesGroupBox);
+            this.Damages.Controls.Add(this.DamUpperBodyInjuriesGroupBox);
+            this.Damages.Controls.Add(this.DamHeadInjuriesGroupBox);
+            this.Damages.Controls.Add(this.DamWentToHospitalGroupBox);
+            this.Damages.Controls.Add(this.DamHitVehicleConcreteGroupBox);
             this.Damages.Location = new System.Drawing.Point(4, 22);
             this.Damages.Name = "Damages";
             this.Damages.Padding = new System.Windows.Forms.Padding(3);
@@ -1589,112 +1591,116 @@
             this.Damages.TabIndex = 1;
             this.Damages.Text = "Damages";
             // 
-            // GroupBox29
+            // DamNotesGroupBox
             // 
-            this.GroupBox29.Controls.Add(this.DamNotes);
-            this.GroupBox29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox29.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox29.Location = new System.Drawing.Point(3, 1014);
-            this.GroupBox29.Name = "GroupBox29";
-            this.GroupBox29.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox29.TabIndex = 18;
-            this.GroupBox29.TabStop = false;
-            this.GroupBox29.Text = "Other relevant damages notes";
+            this.DamNotesGroupBox.Controls.Add(this.DamNotes);
+            this.DamNotesGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamNotesGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamNotesGroupBox.Location = new System.Drawing.Point(3, 1014);
+            this.DamNotesGroupBox.Name = "DamNotesGroupBox";
+            this.DamNotesGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamNotesGroupBox.TabIndex = 18;
+            this.DamNotesGroupBox.TabStop = false;
+            this.DamNotesGroupBox.Text = "Other relevant damages notes";
             // 
             // DamNotes
             // 
             this.DamNotes.BackColor = System.Drawing.Color.White;
+            this.DamNotes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamNotes.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamNotes.Location = new System.Drawing.Point(8, 20);
+            this.DamNotes.Location = new System.Drawing.Point(3, 18);
             this.DamNotes.Multiline = true;
             this.DamNotes.Name = "DamNotes";
             this.DamNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamNotes.Size = new System.Drawing.Size(1141, 67);
+            this.DamNotes.Size = new System.Drawing.Size(1154, 74);
             this.DamNotes.TabIndex = 1;
             // 
-            // GroupBox28
+            // DamPreIllnessGroupBox
             // 
-            this.GroupBox28.Controls.Add(this.DamPreIllness);
-            this.GroupBox28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox28.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox28.Location = new System.Drawing.Point(3, 913);
-            this.GroupBox28.Name = "GroupBox28";
-            this.GroupBox28.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox28.TabIndex = 17;
-            this.GroupBox28.TabStop = false;
-            this.GroupBox28.Text = "Do you suffer from any other illness (unrelated to this motor vehicle accident) s" +
+            this.DamPreIllnessGroupBox.Controls.Add(this.DamPreIllness);
+            this.DamPreIllnessGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamPreIllnessGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamPreIllnessGroupBox.Location = new System.Drawing.Point(3, 913);
+            this.DamPreIllnessGroupBox.Name = "DamPreIllnessGroupBox";
+            this.DamPreIllnessGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamPreIllnessGroupBox.TabIndex = 17;
+            this.DamPreIllnessGroupBox.TabStop = false;
+            this.DamPreIllnessGroupBox.Text = "Do you suffer from any other illness (unrelated to this motor vehicle accident) s" +
     "uch as cancer, heart issues, pre-existing anxiety or depression, etc.?";
             // 
             // DamPreIllness
             // 
             this.DamPreIllness.BackColor = System.Drawing.Color.White;
+            this.DamPreIllness.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamPreIllness.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamPreIllness.Location = new System.Drawing.Point(8, 20);
+            this.DamPreIllness.Location = new System.Drawing.Point(3, 18);
             this.DamPreIllness.Multiline = true;
             this.DamPreIllness.Name = "DamPreIllness";
             this.DamPreIllness.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamPreIllness.Size = new System.Drawing.Size(1141, 67);
+            this.DamPreIllness.Size = new System.Drawing.Size(1154, 74);
             this.DamPreIllness.TabIndex = 1;
             // 
-            // GroupBox27
+            // DamPreAccidentGroupBox
             // 
-            this.GroupBox27.Controls.Add(this.DamPreAccident);
-            this.GroupBox27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox27.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox27.Location = new System.Drawing.Point(0, 812);
-            this.GroupBox27.Name = "GroupBox27";
-            this.GroupBox27.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox27.TabIndex = 16;
-            this.GroupBox27.TabStop = false;
-            this.GroupBox27.Text = "Prior to this accident, were you ever involved in a motor vehicle accident, slip " +
+            this.DamPreAccidentGroupBox.Controls.Add(this.DamPreAccident);
+            this.DamPreAccidentGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamPreAccidentGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamPreAccidentGroupBox.Location = new System.Drawing.Point(0, 812);
+            this.DamPreAccidentGroupBox.Name = "DamPreAccidentGroupBox";
+            this.DamPreAccidentGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamPreAccidentGroupBox.TabIndex = 16;
+            this.DamPreAccidentGroupBox.TabStop = false;
+            this.DamPreAccidentGroupBox.Text = "Prior to this accident, were you ever involved in a motor vehicle accident, slip " +
     "and fall accidents, workplace accidents?";
             // 
             // DamPreAccident
             // 
             this.DamPreAccident.BackColor = System.Drawing.Color.White;
+            this.DamPreAccident.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamPreAccident.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamPreAccident.Location = new System.Drawing.Point(8, 20);
+            this.DamPreAccident.Location = new System.Drawing.Point(3, 18);
             this.DamPreAccident.Multiline = true;
             this.DamPreAccident.Name = "DamPreAccident";
             this.DamPreAccident.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamPreAccident.Size = new System.Drawing.Size(1141, 67);
+            this.DamPreAccident.Size = new System.Drawing.Size(1154, 74);
             this.DamPreAccident.TabIndex = 1;
             // 
-            // GroupBox26
+            // DamWereSeeingDoctorGroupBox
             // 
-            this.GroupBox26.Controls.Add(this.DamWereSeeingDoctor);
-            this.GroupBox26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox26.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox26.Location = new System.Drawing.Point(3, 710);
-            this.GroupBox26.Name = "GroupBox26";
-            this.GroupBox26.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox26.TabIndex = 15;
-            this.GroupBox26.TabStop = false;
-            this.GroupBox26.Text = "Were or are you seeing any other health care provider as a result of your injurie" +
+            this.DamWereSeeingDoctorGroupBox.Controls.Add(this.DamWereSeeingDoctor);
+            this.DamWereSeeingDoctorGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamWereSeeingDoctorGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamWereSeeingDoctorGroupBox.Location = new System.Drawing.Point(3, 710);
+            this.DamWereSeeingDoctorGroupBox.Name = "DamWereSeeingDoctorGroupBox";
+            this.DamWereSeeingDoctorGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamWereSeeingDoctorGroupBox.TabIndex = 15;
+            this.DamWereSeeingDoctorGroupBox.TabStop = false;
+            this.DamWereSeeingDoctorGroupBox.Text = "Were or are you seeing any other health care provider as a result of your injurie" +
     "s from this accident (specialist, physioterapist, pychologist, etc.)?";
             // 
             // DamWereSeeingDoctor
             // 
             this.DamWereSeeingDoctor.BackColor = System.Drawing.Color.White;
+            this.DamWereSeeingDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamWereSeeingDoctor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamWereSeeingDoctor.Location = new System.Drawing.Point(8, 20);
+            this.DamWereSeeingDoctor.Location = new System.Drawing.Point(3, 18);
             this.DamWereSeeingDoctor.Multiline = true;
             this.DamWereSeeingDoctor.Name = "DamWereSeeingDoctor";
             this.DamWereSeeingDoctor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamWereSeeingDoctor.Size = new System.Drawing.Size(1141, 67);
+            this.DamWereSeeingDoctor.Size = new System.Drawing.Size(1154, 74);
             this.DamWereSeeingDoctor.TabIndex = 1;
             // 
-            // GroupBox25
+            // DamPrescribedGroupBox
             // 
-            this.GroupBox25.Controls.Add(this.DamPrescribed);
-            this.GroupBox25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox25.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox25.Location = new System.Drawing.Point(3, 609);
-            this.GroupBox25.Name = "GroupBox25";
-            this.GroupBox25.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox25.TabIndex = 14;
-            this.GroupBox25.TabStop = false;
-            this.GroupBox25.Text = "Since the accident, have you been prescribed any medication?";
+            this.DamPrescribedGroupBox.Controls.Add(this.DamPrescribed);
+            this.DamPrescribedGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamPrescribedGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamPrescribedGroupBox.Location = new System.Drawing.Point(3, 609);
+            this.DamPrescribedGroupBox.Name = "DamPrescribedGroupBox";
+            this.DamPrescribedGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamPrescribedGroupBox.TabIndex = 14;
+            this.DamPrescribedGroupBox.TabStop = false;
+            this.DamPrescribedGroupBox.Text = "Since the accident, have you been prescribed any medication?";
             // 
             // DamPrescribed
             // 
@@ -1707,144 +1713,150 @@
             this.DamPrescribed.Size = new System.Drawing.Size(1141, 67);
             this.DamPrescribed.TabIndex = 1;
             // 
-            // GroupBox24
+            // DamPsychologicalEffectGroupBox
             // 
-            this.GroupBox24.Controls.Add(this.DamPsychologicalEffect);
-            this.GroupBox24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox24.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox24.Location = new System.Drawing.Point(3, 511);
-            this.GroupBox24.Name = "GroupBox24";
-            this.GroupBox24.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox24.TabIndex = 13;
-            this.GroupBox24.TabStop = false;
-            this.GroupBox24.Text = "Please indicate psychocological effects as a result of this accident";
+            this.DamPsychologicalEffectGroupBox.Controls.Add(this.DamPsychologicalEffect);
+            this.DamPsychologicalEffectGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamPsychologicalEffectGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamPsychologicalEffectGroupBox.Location = new System.Drawing.Point(3, 511);
+            this.DamPsychologicalEffectGroupBox.Name = "DamPsychologicalEffectGroupBox";
+            this.DamPsychologicalEffectGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamPsychologicalEffectGroupBox.TabIndex = 13;
+            this.DamPsychologicalEffectGroupBox.TabStop = false;
+            this.DamPsychologicalEffectGroupBox.Text = "Please indicate psychocological effects as a result of this accident";
             // 
             // DamPsychologicalEffect
             // 
             this.DamPsychologicalEffect.BackColor = System.Drawing.Color.White;
+            this.DamPsychologicalEffect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamPsychologicalEffect.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamPsychologicalEffect.Location = new System.Drawing.Point(8, 20);
+            this.DamPsychologicalEffect.Location = new System.Drawing.Point(3, 18);
             this.DamPsychologicalEffect.Multiline = true;
             this.DamPsychologicalEffect.Name = "DamPsychologicalEffect";
             this.DamPsychologicalEffect.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamPsychologicalEffect.Size = new System.Drawing.Size(1141, 67);
+            this.DamPsychologicalEffect.Size = new System.Drawing.Size(1154, 74);
             this.DamPsychologicalEffect.TabIndex = 1;
             // 
-            // GroupBox23
+            // DamLowerBodyInjuriesGroupBox
             // 
-            this.GroupBox23.Controls.Add(this.DamLowerBodyInjuries);
-            this.GroupBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox23.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox23.Location = new System.Drawing.Point(6, 410);
-            this.GroupBox23.Name = "GroupBox23";
-            this.GroupBox23.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox23.TabIndex = 12;
-            this.GroupBox23.TabStop = false;
-            this.GroupBox23.Text = "Please indicate LOWER BODY INJURIES in this accident";
+            this.DamLowerBodyInjuriesGroupBox.Controls.Add(this.DamLowerBodyInjuries);
+            this.DamLowerBodyInjuriesGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamLowerBodyInjuriesGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamLowerBodyInjuriesGroupBox.Location = new System.Drawing.Point(6, 410);
+            this.DamLowerBodyInjuriesGroupBox.Name = "DamLowerBodyInjuriesGroupBox";
+            this.DamLowerBodyInjuriesGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamLowerBodyInjuriesGroupBox.TabIndex = 12;
+            this.DamLowerBodyInjuriesGroupBox.TabStop = false;
+            this.DamLowerBodyInjuriesGroupBox.Text = "Please indicate LOWER BODY INJURIES in this accident";
             // 
             // DamLowerBodyInjuries
             // 
             this.DamLowerBodyInjuries.BackColor = System.Drawing.Color.White;
+            this.DamLowerBodyInjuries.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamLowerBodyInjuries.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamLowerBodyInjuries.Location = new System.Drawing.Point(8, 20);
+            this.DamLowerBodyInjuries.Location = new System.Drawing.Point(3, 18);
             this.DamLowerBodyInjuries.Multiline = true;
             this.DamLowerBodyInjuries.Name = "DamLowerBodyInjuries";
             this.DamLowerBodyInjuries.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamLowerBodyInjuries.Size = new System.Drawing.Size(1141, 67);
+            this.DamLowerBodyInjuries.Size = new System.Drawing.Size(1154, 74);
             this.DamLowerBodyInjuries.TabIndex = 1;
             // 
-            // GroupBox22
+            // DamUpperBodyInjuriesGroupBox
             // 
-            this.GroupBox22.Controls.Add(this.DamUpperBodyInjuries);
-            this.GroupBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox22.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox22.Location = new System.Drawing.Point(6, 309);
-            this.GroupBox22.Name = "GroupBox22";
-            this.GroupBox22.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox22.TabIndex = 11;
-            this.GroupBox22.TabStop = false;
-            this.GroupBox22.Text = "Please indicate UPPER BODY INJURIES in this accident";
+            this.DamUpperBodyInjuriesGroupBox.Controls.Add(this.DamUpperBodyInjuries);
+            this.DamUpperBodyInjuriesGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamUpperBodyInjuriesGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamUpperBodyInjuriesGroupBox.Location = new System.Drawing.Point(6, 309);
+            this.DamUpperBodyInjuriesGroupBox.Name = "DamUpperBodyInjuriesGroupBox";
+            this.DamUpperBodyInjuriesGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamUpperBodyInjuriesGroupBox.TabIndex = 11;
+            this.DamUpperBodyInjuriesGroupBox.TabStop = false;
+            this.DamUpperBodyInjuriesGroupBox.Text = "Please indicate UPPER BODY INJURIES in this accident";
             // 
             // DamUpperBodyInjuries
             // 
             this.DamUpperBodyInjuries.BackColor = System.Drawing.Color.White;
+            this.DamUpperBodyInjuries.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamUpperBodyInjuries.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamUpperBodyInjuries.Location = new System.Drawing.Point(8, 20);
+            this.DamUpperBodyInjuries.Location = new System.Drawing.Point(3, 18);
             this.DamUpperBodyInjuries.Multiline = true;
             this.DamUpperBodyInjuries.Name = "DamUpperBodyInjuries";
             this.DamUpperBodyInjuries.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamUpperBodyInjuries.Size = new System.Drawing.Size(1141, 67);
+            this.DamUpperBodyInjuries.Size = new System.Drawing.Size(1154, 74);
             this.DamUpperBodyInjuries.TabIndex = 1;
             // 
-            // GroupBox21
+            // DamHeadInjuriesGroupBox
             // 
-            this.GroupBox21.Controls.Add(this.DamHeadInjuries);
-            this.GroupBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox21.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox21.Location = new System.Drawing.Point(6, 208);
-            this.GroupBox21.Name = "GroupBox21";
-            this.GroupBox21.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox21.TabIndex = 10;
-            this.GroupBox21.TabStop = false;
-            this.GroupBox21.Text = "Please indicate HEAD INJURIES in this accident";
+            this.DamHeadInjuriesGroupBox.Controls.Add(this.DamHeadInjuries);
+            this.DamHeadInjuriesGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamHeadInjuriesGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamHeadInjuriesGroupBox.Location = new System.Drawing.Point(6, 208);
+            this.DamHeadInjuriesGroupBox.Name = "DamHeadInjuriesGroupBox";
+            this.DamHeadInjuriesGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamHeadInjuriesGroupBox.TabIndex = 10;
+            this.DamHeadInjuriesGroupBox.TabStop = false;
+            this.DamHeadInjuriesGroupBox.Text = "Please indicate HEAD INJURIES in this accident";
             // 
             // DamHeadInjuries
             // 
             this.DamHeadInjuries.BackColor = System.Drawing.Color.White;
+            this.DamHeadInjuries.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamHeadInjuries.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamHeadInjuries.Location = new System.Drawing.Point(8, 20);
+            this.DamHeadInjuries.Location = new System.Drawing.Point(3, 18);
             this.DamHeadInjuries.Multiline = true;
             this.DamHeadInjuries.Name = "DamHeadInjuries";
             this.DamHeadInjuries.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamHeadInjuries.Size = new System.Drawing.Size(1141, 67);
+            this.DamHeadInjuries.Size = new System.Drawing.Size(1154, 74);
             this.DamHeadInjuries.TabIndex = 1;
             // 
-            // GroupBox20
+            // DamWentToHospitalGroupBox
             // 
-            this.GroupBox20.Controls.Add(this.DamWentToHospital);
-            this.GroupBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox20.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox20.Location = new System.Drawing.Point(6, 107);
-            this.GroupBox20.Name = "GroupBox20";
-            this.GroupBox20.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox20.TabIndex = 9;
-            this.GroupBox20.TabStop = false;
-            this.GroupBox20.Text = "Were you taken or did you go to a hospital to have your injuries looked at follow" +
+            this.DamWentToHospitalGroupBox.Controls.Add(this.DamWentToHospital);
+            this.DamWentToHospitalGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamWentToHospitalGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamWentToHospitalGroupBox.Location = new System.Drawing.Point(6, 107);
+            this.DamWentToHospitalGroupBox.Name = "DamWentToHospitalGroupBox";
+            this.DamWentToHospitalGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamWentToHospitalGroupBox.TabIndex = 9;
+            this.DamWentToHospitalGroupBox.TabStop = false;
+            this.DamWentToHospitalGroupBox.Text = "Were you taken or did you go to a hospital to have your injuries looked at follow" +
     "ing this accident?";
             // 
             // DamWentToHospital
             // 
             this.DamWentToHospital.BackColor = System.Drawing.Color.White;
+            this.DamWentToHospital.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamWentToHospital.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamWentToHospital.Location = new System.Drawing.Point(8, 20);
+            this.DamWentToHospital.Location = new System.Drawing.Point(3, 18);
             this.DamWentToHospital.Multiline = true;
             this.DamWentToHospital.Name = "DamWentToHospital";
             this.DamWentToHospital.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamWentToHospital.Size = new System.Drawing.Size(1141, 67);
+            this.DamWentToHospital.Size = new System.Drawing.Size(1154, 74);
             this.DamWentToHospital.TabIndex = 1;
             // 
-            // GroupBox19
+            // DamHitVehicleConcreteGroupBox
             // 
-            this.GroupBox19.Controls.Add(this.DamHitVehicleConcrete);
-            this.GroupBox19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox19.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox19.Location = new System.Drawing.Point(6, 6);
-            this.GroupBox19.Name = "GroupBox19";
-            this.GroupBox19.Size = new System.Drawing.Size(1160, 95);
-            this.GroupBox19.TabIndex = 8;
-            this.GroupBox19.TabStop = false;
-            this.GroupBox19.Text = "During this accident did your body hit any part of the inside of the vehicle or y" +
+            this.DamHitVehicleConcreteGroupBox.Controls.Add(this.DamHitVehicleConcrete);
+            this.DamHitVehicleConcreteGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DamHitVehicleConcreteGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamHitVehicleConcreteGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.DamHitVehicleConcreteGroupBox.Name = "DamHitVehicleConcreteGroupBox";
+            this.DamHitVehicleConcreteGroupBox.Size = new System.Drawing.Size(1160, 95);
+            this.DamHitVehicleConcreteGroupBox.TabIndex = 8;
+            this.DamHitVehicleConcreteGroupBox.TabStop = false;
+            this.DamHitVehicleConcreteGroupBox.Text = "During this accident did your body hit any part of the inside of the vehicle or y" +
     "our body part with any other property such as concrete?";
             // 
             // DamHitVehicleConcrete
             // 
             this.DamHitVehicleConcrete.BackColor = System.Drawing.Color.White;
+            this.DamHitVehicleConcrete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DamHitVehicleConcrete.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamHitVehicleConcrete.Location = new System.Drawing.Point(8, 20);
+            this.DamHitVehicleConcrete.Location = new System.Drawing.Point(3, 18);
             this.DamHitVehicleConcrete.Multiline = true;
             this.DamHitVehicleConcrete.Name = "DamHitVehicleConcrete";
             this.DamHitVehicleConcrete.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DamHitVehicleConcrete.Size = new System.Drawing.Size(1141, 67);
+            this.DamHitVehicleConcrete.Size = new System.Drawing.Size(1154, 74);
             this.DamHitVehicleConcrete.TabIndex = 1;
             // 
             // AccidentBenefits
@@ -2172,6 +2184,71 @@
             this.CYATemplatesBindingSource.DataMember = "CYATemplates";
             this.CYATemplatesBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox13);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox16);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox14);
+            this.flowLayoutPanel1.Controls.Add(this.SocialAssistanceGroup);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox15);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox17);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox18);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1336, 578);
+            this.flowLayoutPanel1.TabIndex = 24;
+            // 
+            // SocialAssistanceGroup
+            // 
+            this.SocialAssistanceGroup.Controls.Add(this.EILCollecAssistance);
+            this.SocialAssistanceGroup.Controls.Add(this.EILCollecAssistanceLabel);
+            this.SocialAssistanceGroup.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SocialAssistanceGroup.Location = new System.Drawing.Point(568, 124);
+            this.SocialAssistanceGroup.Name = "SocialAssistanceGroup";
+            this.SocialAssistanceGroup.Size = new System.Drawing.Size(607, 79);
+            this.SocialAssistanceGroup.TabIndex = 24;
+            this.SocialAssistanceGroup.TabStop = false;
+            this.SocialAssistanceGroup.Text = "Social Assistance";
+            // 
+            // EILCollecAssistance
+            // 
+            this.EILCollecAssistance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILCollecAssistance.FormattingEnabled = true;
+            this.EILCollecAssistance.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.EILCollecAssistance.Location = new System.Drawing.Point(524, 31);
+            this.EILCollecAssistance.Name = "EILCollecAssistance";
+            this.EILCollecAssistance.Size = new System.Drawing.Size(53, 25);
+            this.EILCollecAssistance.TabIndex = 7;
+            // 
+            // EILCollecAssistanceLabel
+            // 
+            this.EILCollecAssistanceLabel.AutoSize = true;
+            this.EILCollecAssistanceLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILCollecAssistanceLabel.Location = new System.Drawing.Point(5, 34);
+            this.EILCollecAssistanceLabel.Name = "EILCollecAssistanceLabel";
+            this.EILCollecAssistanceLabel.Size = new System.Drawing.Size(477, 17);
+            this.EILCollecAssistanceLabel.TabIndex = 6;
+            this.EILCollecAssistanceLabel.Text = "Were you collecting Social Assistance in the last 52 weeks before the incident?";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.Controls.Add(this.EILWereEmployedLabel);
+            this.flowLayoutPanel2.Controls.Add(this.EILWereEmployed);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed4WeeksLabel);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed4Weeks);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed52WeeksLabel);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed52Weeks);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 18);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(556, 94);
+            this.flowLayoutPanel2.TabIndex = 18;
+            // 
             // IntakeSheets
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2205,7 +2282,7 @@
             this.GroupBox100.ResumeLayout(false);
             this.GroupBox100.PerformLayout();
             this.Liability.ResumeLayout(false);
-            this.FlowLayoutPanel1.ResumeLayout(false);
+            this.Content.ResumeLayout(false);
             this.IncidentDateTimeGroupBox.ResumeLayout(false);
             this.ReceiveCopyGroupBox.ResumeLayout(false);
             this.ReceiveCopyGroupBox.PerformLayout();
@@ -2265,28 +2342,28 @@
             this.GroupBox14.ResumeLayout(false);
             this.GroupBox14.PerformLayout();
             this.Damages.ResumeLayout(false);
-            this.GroupBox29.ResumeLayout(false);
-            this.GroupBox29.PerformLayout();
-            this.GroupBox28.ResumeLayout(false);
-            this.GroupBox28.PerformLayout();
-            this.GroupBox27.ResumeLayout(false);
-            this.GroupBox27.PerformLayout();
-            this.GroupBox26.ResumeLayout(false);
-            this.GroupBox26.PerformLayout();
-            this.GroupBox25.ResumeLayout(false);
-            this.GroupBox25.PerformLayout();
-            this.GroupBox24.ResumeLayout(false);
-            this.GroupBox24.PerformLayout();
-            this.GroupBox23.ResumeLayout(false);
-            this.GroupBox23.PerformLayout();
-            this.GroupBox22.ResumeLayout(false);
-            this.GroupBox22.PerformLayout();
-            this.GroupBox21.ResumeLayout(false);
-            this.GroupBox21.PerformLayout();
-            this.GroupBox20.ResumeLayout(false);
-            this.GroupBox20.PerformLayout();
-            this.GroupBox19.ResumeLayout(false);
-            this.GroupBox19.PerformLayout();
+            this.DamNotesGroupBox.ResumeLayout(false);
+            this.DamNotesGroupBox.PerformLayout();
+            this.DamPreIllnessGroupBox.ResumeLayout(false);
+            this.DamPreIllnessGroupBox.PerformLayout();
+            this.DamPreAccidentGroupBox.ResumeLayout(false);
+            this.DamPreAccidentGroupBox.PerformLayout();
+            this.DamWereSeeingDoctorGroupBox.ResumeLayout(false);
+            this.DamWereSeeingDoctorGroupBox.PerformLayout();
+            this.DamPrescribedGroupBox.ResumeLayout(false);
+            this.DamPrescribedGroupBox.PerformLayout();
+            this.DamPsychologicalEffectGroupBox.ResumeLayout(false);
+            this.DamPsychologicalEffectGroupBox.PerformLayout();
+            this.DamLowerBodyInjuriesGroupBox.ResumeLayout(false);
+            this.DamLowerBodyInjuriesGroupBox.PerformLayout();
+            this.DamUpperBodyInjuriesGroupBox.ResumeLayout(false);
+            this.DamUpperBodyInjuriesGroupBox.PerformLayout();
+            this.DamHeadInjuriesGroupBox.ResumeLayout(false);
+            this.DamHeadInjuriesGroupBox.PerformLayout();
+            this.DamWentToHospitalGroupBox.ResumeLayout(false);
+            this.DamWentToHospitalGroupBox.PerformLayout();
+            this.DamHitVehicleConcreteGroupBox.ResumeLayout(false);
+            this.DamHitVehicleConcreteGroupBox.PerformLayout();
             this.AccidentBenefits.ResumeLayout(false);
             this.AccidentBenefits.PerformLayout();
             this.GroupBox31.ResumeLayout(false);
@@ -2296,6 +2373,11 @@
             this.OtherNotes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.SocialAssistanceGroup.ResumeLayout(false);
+            this.SocialAssistanceGroup.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2324,11 +2406,11 @@
         internal System.Windows.Forms.TextBox LiaFaultPerson;
         internal System.Windows.Forms.GroupBox GroupBox37;
         internal System.Windows.Forms.TextBox LiaOwnNegligence;
-        internal System.Windows.Forms.Label Label22;
+        internal System.Windows.Forms.Label EILT4EmployeeLabel;
         internal System.Windows.Forms.GroupBox GroupBox100;
         internal System.Windows.Forms.TextBox TextBox79;
         internal System.Windows.Forms.TabPage Liability;
-        internal System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel1;
+        internal System.Windows.Forms.FlowLayoutPanel Content;
         internal System.Windows.Forms.GroupBox IncidentDateTimeGroupBox;
         internal System.Windows.Forms.DateTimePicker LiaDate;
         internal System.Windows.Forms.DateTimePicker LiaTime;
@@ -2347,11 +2429,11 @@
         internal System.Windows.Forms.TextBox LiaNotes;
         internal System.Windows.Forms.GroupBox GroupBox13;
         internal System.Windows.Forms.ComboBox EILEmployed52Weeks;
-        internal System.Windows.Forms.Label Label19;
+        internal System.Windows.Forms.Label EILEmployed52WeeksLabel;
         internal System.Windows.Forms.ComboBox EILEmployed4Weeks;
-        internal System.Windows.Forms.Label Label18;
+        internal System.Windows.Forms.Label EILEmployed4WeeksLabel;
         internal System.Windows.Forms.ComboBox EILWereEmployed;
-        internal System.Windows.Forms.Label Label17;
+        internal System.Windows.Forms.Label EILWereEmployedLabel;
         internal System.Windows.Forms.TextBox TextBox77;
         internal System.Windows.Forms.GroupBox GroupBox123;
         internal System.Windows.Forms.ComboBox ComboBox39;
@@ -2373,7 +2455,6 @@
         internal System.Windows.Forms.TabControl TabControl;
         internal System.Windows.Forms.TabPage Policy;
         internal System.Windows.Forms.GroupBox GroupBox96;
-        internal System.Windows.Forms.TextBox TextBox75;
         internal System.Windows.Forms.GroupBox GroupBox95;
         internal System.Windows.Forms.TextBox TextBox74;
         internal System.Windows.Forms.GroupBox GroupBox94;
@@ -2397,14 +2478,14 @@
         internal System.Windows.Forms.TextBox EILHowLongBusiness;
         internal System.Windows.Forms.Label Label30;
         internal System.Windows.Forms.TextBox EILSelfGrossEarning;
-        internal System.Windows.Forms.Label Label29;
+        internal System.Windows.Forms.Label EILSelfGrossEarningLabel;
         internal System.Windows.Forms.TextBox EILSelfBusinessName;
         internal System.Windows.Forms.Label Label27;
         internal System.Windows.Forms.ComboBox EILWereSelfEmployed;
         internal System.Windows.Forms.Label Label28;
         internal System.Windows.Forms.GroupBox GroupBox16;
         internal System.Windows.Forms.ComboBox EILCollecInsurance;
-        internal System.Windows.Forms.Label Label26;
+        internal System.Windows.Forms.Label EILCollecInsuranceLabel;
         internal System.Windows.Forms.GroupBox GroupBox15;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel5;
         internal System.Windows.Forms.Label Label25;
@@ -2414,33 +2495,33 @@
         internal System.Windows.Forms.TextBox EILHowLongEmployee;
         internal System.Windows.Forms.Label Label23;
         internal System.Windows.Forms.TextBox EILEmployeeGrossEarning;
-        internal System.Windows.Forms.Label Label20;
+        internal System.Windows.Forms.Label EILEmployeeGrossEarningLabel;
         internal System.Windows.Forms.GroupBox GroupBox14;
         internal System.Windows.Forms.TextBox EILT4Company;
-        internal System.Windows.Forms.Label Label21;
+        internal System.Windows.Forms.Label EILT4CompanyLabel;
         internal System.Windows.Forms.ComboBox EILT4Employee;
         internal System.Windows.Forms.TabPage Damages;
-        internal System.Windows.Forms.GroupBox GroupBox29;
+        internal System.Windows.Forms.GroupBox DamNotesGroupBox;
         internal System.Windows.Forms.TextBox DamNotes;
-        internal System.Windows.Forms.GroupBox GroupBox28;
+        internal System.Windows.Forms.GroupBox DamPreIllnessGroupBox;
         internal System.Windows.Forms.TextBox DamPreIllness;
-        internal System.Windows.Forms.GroupBox GroupBox27;
+        internal System.Windows.Forms.GroupBox DamPreAccidentGroupBox;
         internal System.Windows.Forms.TextBox DamPreAccident;
-        internal System.Windows.Forms.GroupBox GroupBox26;
+        internal System.Windows.Forms.GroupBox DamWereSeeingDoctorGroupBox;
         internal System.Windows.Forms.TextBox DamWereSeeingDoctor;
-        internal System.Windows.Forms.GroupBox GroupBox25;
+        internal System.Windows.Forms.GroupBox DamPrescribedGroupBox;
         internal System.Windows.Forms.TextBox DamPrescribed;
-        internal System.Windows.Forms.GroupBox GroupBox24;
+        internal System.Windows.Forms.GroupBox DamPsychologicalEffectGroupBox;
         internal System.Windows.Forms.TextBox DamPsychologicalEffect;
-        internal System.Windows.Forms.GroupBox GroupBox23;
+        internal System.Windows.Forms.GroupBox DamLowerBodyInjuriesGroupBox;
         internal System.Windows.Forms.TextBox DamLowerBodyInjuries;
-        internal System.Windows.Forms.GroupBox GroupBox22;
+        internal System.Windows.Forms.GroupBox DamUpperBodyInjuriesGroupBox;
         internal System.Windows.Forms.TextBox DamUpperBodyInjuries;
-        internal System.Windows.Forms.GroupBox GroupBox21;
+        internal System.Windows.Forms.GroupBox DamHeadInjuriesGroupBox;
         internal System.Windows.Forms.TextBox DamHeadInjuries;
-        internal System.Windows.Forms.GroupBox GroupBox20;
+        internal System.Windows.Forms.GroupBox DamWentToHospitalGroupBox;
         internal System.Windows.Forms.TextBox DamWentToHospital;
-        internal System.Windows.Forms.GroupBox GroupBox19;
+        internal System.Windows.Forms.GroupBox DamHitVehicleConcreteGroupBox;
         internal System.Windows.Forms.TextBox DamHitVehicleConcrete;
         internal System.Windows.Forms.TabPage AccidentBenefits;
         internal System.Windows.Forms.GroupBox GroupBox31;
@@ -2469,8 +2550,14 @@
         internal System.Windows.Forms.Label Label37;
         internal System.Windows.Forms.TabPage OtherNotes;
         internal System.Windows.Forms.RichTextBox Notes;
+        internal System.Windows.Forms.TextBox TextBox75;
         internal ActionLogDBDataSet ActionLogDBDataSet;
         internal ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter CyaTemplatesTableAdapter;
         internal System.Windows.Forms.BindingSource CYATemplatesBindingSource;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        internal System.Windows.Forms.GroupBox SocialAssistanceGroup;
+        internal System.Windows.Forms.ComboBox EILCollecAssistance;
+        internal System.Windows.Forms.Label EILCollecAssistanceLabel;
     }
 }

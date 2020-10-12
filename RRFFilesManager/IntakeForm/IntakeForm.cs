@@ -56,7 +56,7 @@ namespace RRFFilesManager.IntakeForm
             }
             else if (contentType == typeof(PotentialClientInfo) && PotentialClientInfo.Instance.Validate())
             {
-                IntakeSheets.Instance.bringMattertypeForm();
+                IntakeSheets.Instance.BringMattertypeForm();
                 SetContent(IntakeSheets.Instance);
                 PotentialClientInfo.Instance.OnNext();
             }
