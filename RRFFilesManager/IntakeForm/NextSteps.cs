@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Interop.Excel;
+using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -30,19 +31,29 @@ namespace RRFFilesManager.IntakeForm
         {
             this.TemplateName.Text = "";
             this.TemplateName.Items.Clear();
-            var Items = this.ActionLogDBDataSet.CYATemplates.Where(s => s.MatterType == PreliminaryInfo.Instance.MatterTypeComboBox.Text && s.TypeOfTemplate == TypeTemplate.Text).Select(s => s.TemplateName);
-            this.TemplateName.Items.AddRange(Items.ToArray());
+            //using (var context = new DataContext())
+            //{
+            //    var templateNames = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TemplateName).ToArray();
+            //    TemplateName.Items.AddRange(templateNames);
+            //}
         }
 
         private void NextSteps_Load(object sender, EventArgs e)
         {
-            CyaTemplatesTableAdapter.Fill(ActionLogDBDataSet.CYATemplates);
+            //using (var context = new DataContext())
+            //{
+            //    var typesOfTemplates = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            //    TypeTemplate.Items.AddRange(typesOfTemplates);
+            //}
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            this.IntakesBindingSource.EndEdit();
-            this.IntakesTableAdapter.Update(this.ActionLogDBDataSet.Intakes);
+            using (var context = new DataContext())
+            {
+                context.Intakes.Add(IntakeForm.Intake);
+
+            }
             PreliminaryInfo.Instance.TextBox1.Text = PreliminaryInfo.Instance.MatterTypeComboBox.Text;
 
             // If Me.MVAInvokeCIP.Checked = True Then 

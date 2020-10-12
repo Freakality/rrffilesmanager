@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
+using System.Text.RegularExpressions;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -26,27 +27,12 @@ namespace RRFFilesManager.IntakeForm
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(this.MonthBirth.Text) | string.IsNullOrWhiteSpace(this.DayBirth.Text) | string.IsNullOrWhiteSpace(this.YearBirth.Text))
+                if (string.IsNullOrWhiteSpace(MonthBirth.Text) || string.IsNullOrWhiteSpace(DayBirth.Text) || string.IsNullOrWhiteSpace(YearBirth.Text))
                 {
                     return default;
                 }
 
-                return DateTime.Parse(this.MonthBirth.Text + "-" + this.DayBirth.Text + "-" + this.YearBirth.Text);
-            }
-        }
-
-        public DateTime? newLimDate
-        {
-            get
-            {
-                if (string.IsNullOrWhiteSpace(this.MonthBirth.Text) | string.IsNullOrWhiteSpace(this.DayBirth.Text) | string.IsNullOrWhiteSpace(this.YearBirth.Text))
-                {
-                    return default;
-                }
-
-                int newYear = Convert.ToInt32(this.YearBirth.Text);
-                newYear = newYear + 20;
-                return DateTime.Parse(this.MonthBirth.Text + "-" + this.DayBirth.Text + "-" + newYear.ToString());
+                return DateTime.Parse($"{MonthBirth.Text}-{DayBirth.Text}-{YearBirth.Text}");
             }
         }
 
@@ -72,30 +58,19 @@ namespace RRFFilesManager.IntakeForm
 
         private void PCIMobileCarrier_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            PCIMobileNumber_TextChanged(sender, e);
         }
 
-        // Private Sub PCIMobileNumber_TextChanged(sender As Object, e As EventArgs)
-        // Dim newPN As String
-        // If PCIMobileCarrier.Text <> "Other" Then
-        // Dim dr() As System.Data.DataRow
-        // dr = ActionLogDBDataSet.Tables("MobileCarrier").Select("Carrier='" & PCIMobileCarrier.Text & "'")
-        // If dr.Length > 0 Then
-        // Dim gateString As String = dr(0)("Gate").ToString()
-        // newPN = PCIMobileNumber.Text.Replace("(", "")
-        // newPN = newPN.Replace(")", "")
-        // newPN = newPN.Replace(" ", "")
-        // newPN = Trim(newPN.Replace("-", ""))
-        // Me.PCIEmailToText.Text = newPN + "@" + gateString
-        // End If
-        // Else
-        // Me.PCIEmailToText.Text = ""
-        // End If
-        // End Sub
+        private void PCIMobileNumber_TextChanged(object sender, EventArgs e)
+        {
+            var mobileCarrier = (MobileCarrier)PCIMobileCarrier.SelectedItem;
+            if (mobileCarrier != null)
+                PCIEmailToText.Text = $"{Regex.Replace(PCIMobileNumber.Text, "[ ()-]", "")}@{mobileCarrier?.Gate.Trim()}";
+            else
+                PCIEmailToText.Text = "";
+        }
         private void PotentialClientInfo_Load(object sender, EventArgs e)
         {
-            //MobileCarrierTableAdapter.Fill(ActionLogDBDataSet.MobileCarrier);
-            //ProvincesTableAdapter.Fill(ActionLogDBDataSet.Provinces);
             using (var context = new DataContext())
             {
                 PCIProvince.DataSource = context.Provinces.ToList();
@@ -105,7 +80,6 @@ namespace RRFFilesManager.IntakeForm
                 PCIMobileCarrier.DisplayMember = nameof(MobileCarrier.Description);
             }
             
-            //IntakesTableAdapter.Fill(ActionLogDBDataSet.Intakes);
             YearBirth.Text = "1970";
         }
 
@@ -197,8 +171,61 @@ namespace RRFFilesManager.IntakeForm
 
         public void OnNext()
         {
-            // IntakeForm.IntakesBindingSource.EndEdit()
-            // IntakeForm.IntakesTableAdapter.Update(ActionLogDBDataSet.Intakes)
+            IntakeForm.Intake.Client = NewIntakeClient();
+        }
+
+        public void FillClientFromForm(Client client)
+        {
+            client.Salutation = PCISalutation.Text;
+            client.FirstName = PCIFirstName.Text;
+            client.FirstName = PCILastName.Text;
+            client.Address = PCIAddress.Text;
+            client.SuiteApt = PCISuiteApt.Text;
+            client.Email = PCIEmail.Text;
+            client.Province = (Province)PCIProvince.SelectedItem;
+            client.City = PCICity.Text;
+            client.PostalCode = PCIPostalCode.Text;
+            client.HomeNumber = PCIHomeNumber.Text;
+            client.WorkNumber = PCIWorkNumber.Text;
+            client.MobileNumber = PCIMobileNumber.Text;
+            client.MobileCarrier = PCIMobileCarrier.Text;
+            client.EmailToText = PCIEmailToText.Text;
+            client.DateOfBirth = PCIDateOfBirth;
+            client.OtherNotes = PCIOtherNotes.Text;
+        }
+
+        public void FillFormFromClient(Client client)
+        {
+            PCISalutation.Text = client.Salutation;
+            PCIFirstName.Text = client.FirstName;
+            PCILastName.Text = client.FirstName;
+            PCIAddress.Text = client.Address;
+            PCISuiteApt.Text = client.SuiteApt;
+            PCIEmail.Text = client.Email;
+            PCIProvince.SelectedItem = client.Province;
+            PCICity.Text = client.City;
+            PCIPostalCode.Text = client.PostalCode;
+            PCIHomeNumber.Text = client.HomeNumber;
+            PCIWorkNumber.Text = client.WorkNumber;
+            PCIMobileNumber.Text = client.MobileNumber;
+            PCIMobileCarrier.Text = client.MobileCarrier;
+            PCIEmailToText.Text = client.EmailToText;
+            YearBirth.Text = client.DateOfBirth?.Year.ToString();
+            MonthBirth.Text = client.DateOfBirth?.Month.ToString();
+            DayBirth.Text = client.DateOfBirth?.Day.ToString();
+            PCIOtherNotes.Text = client.OtherNotes;
+        }
+
+        public Client NewIntakeClient()
+        {
+            using (var context = new DataContext())
+            {
+                var client = new Client();
+                FillClientFromForm(client);
+                context.Clients.Add(client);
+                context.SaveChanges();
+                return client;
+            }
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)
@@ -210,5 +237,6 @@ namespace RRFFilesManager.IntakeForm
         {
 
         }
+
     }
 }

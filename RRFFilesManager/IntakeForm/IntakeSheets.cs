@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -76,7 +77,6 @@ namespace RRFFilesManager.IntakeForm
 
         private void IntakeSheets_Load(object sender, EventArgs e)
         {
-            this.CyaTemplatesTableAdapter.Fill(this.ActionLogDBDataSet.CYATemplates);
         }
 
         private void RadioButton5_CheckedChanged(object sender, EventArgs e)

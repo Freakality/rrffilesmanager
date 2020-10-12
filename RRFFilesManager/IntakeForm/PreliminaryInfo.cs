@@ -95,7 +95,7 @@ namespace RRFFilesManager.IntakeForm
         {
             using (var context = new DataContext())
             {
-                var matterSubType = context.MatterSubTypes.FirstOrDefault(s => s.Description == MatterSubTypeComboBox.Text);
+                var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
                 if (matterSubType?.StatutoryNotice != null)
                 {
                     StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
@@ -129,7 +129,7 @@ namespace RRFFilesManager.IntakeForm
         {
             using (var context = new DataContext())
             {
-                var lawyer = context.Lawyers.FirstOrDefault(s => s.Description == LawyerComboBox.Text);
+                var lawyer = (Lawyer)LawyerComboBox.SelectedItem;
                 var fileNumber = GetNewFileNumber(lawyer);
                 FileNumberTextBox.Text = fileNumber.ToString();
             }

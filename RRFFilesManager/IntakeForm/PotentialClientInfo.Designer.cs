@@ -157,6 +157,7 @@
             this.PCIMobileNumber.Name = "PCIMobileNumber";
             this.PCIMobileNumber.Size = new System.Drawing.Size(374, 24);
             this.PCIMobileNumber.TabIndex = 31;
+            this.PCIMobileNumber.TextChanged += new System.EventHandler(this.PCIMobileNumber_TextChanged);
             // 
             // Label8
             // 
@@ -334,7 +335,6 @@
             this.PCISalutation.Name = "PCISalutation";
             this.PCISalutation.Size = new System.Drawing.Size(121, 25);
             this.PCISalutation.TabIndex = 3;
-            this.PCISalutation.SelectedIndexChanged += new System.EventHandler(this.PCISalutation_SelectedIndexChanged);
             // 
             // MobileCarrierTableAdapter
             // 
@@ -546,6 +546,7 @@
             this.PCIMobileCarrier.Size = new System.Drawing.Size(372, 25);
             this.PCIMobileCarrier.TabIndex = 28;
             this.PCIMobileCarrier.ValueMember = "Carrier";
+            this.PCIMobileCarrier.SelectedIndexChanged += new System.EventHandler(this.PCIMobileCarrier_SelectedIndexChanged);
             // 
             // Label14
             // 

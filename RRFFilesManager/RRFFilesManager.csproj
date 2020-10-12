@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\Client.cs" />
+    <Compile Include="Abstractions\CYATemplate.cs" />
     <Compile Include="Abstractions\HearAboutUs.cs" />
     <Compile Include="Abstractions\DataAccess\IMatterTypeRepository.cs" />
     <Compile Include="Abstractions\Intake.cs" />
@@ -142,6 +143,14 @@
     <Compile Include="IntakeForm\PreliminaryInfo.Designer.cs">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010121651522_Initial.cs" />
+    <Compile Include="Migrations\202010121651522_Initial.Designer.cs">
+      <DependentUpon>202010121651522_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010121655404_CYATemplates.cs" />
+    <Compile Include="Migrations\202010121655404_CYATemplates.Designer.cs">
+      <DependentUpon>202010121655404_CYATemplates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
@@ -174,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IntakeForm\PreliminaryInfo.resx">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010121651522_Initial.resx">
+      <DependentUpon>202010121651522_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010121655404_CYATemplates.resx">
+      <DependentUpon>202010121655404_CYATemplates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>

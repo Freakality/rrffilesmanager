@@ -4,7 +4,7 @@ namespace RRFFilesManager.Abstractions
 {
     public class Client
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Salutation { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -20,5 +20,7 @@ namespace RRFFilesManager.Abstractions
         public string MobileCarrier { get; set; }
         public string EmailToText { get; set; }
         public string OtherNotes { get; set; }
+
+        public DateTime? DateOfBirth { get; set; }
     }
 }
