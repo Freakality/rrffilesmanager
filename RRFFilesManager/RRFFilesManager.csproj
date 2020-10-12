@@ -42,6 +42,15 @@
     <Reference Include="JetEntityFrameworkProvider, Version=6.0.0.0, Culture=neutral, PublicKeyToken=756cf6beb8fe7b41, processorArchitecture=x86">
       <HintPath>..\packages\JetEntityFrameworkProvider.6.1.4\lib\JetEntityFrameworkProvider.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.8\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.8\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -57,6 +66,12 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,15 +84,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\Client.cs" />
+    <Compile Include="Abstractions\HearAboutUs.cs" />
+    <Compile Include="Abstractions\DataAccess\IMatterTypeRepository.cs" />
+    <Compile Include="Abstractions\Intake.cs" />
     <Compile Include="Abstractions\MatterSubType.cs" />
     <Compile Include="Abstractions\MatterType.cs" />
+    <Compile Include="Abstractions\MobileCarrier.cs" />
     <Compile Include="Abstractions\Province.cs" />
+    <Compile Include="Abstractions\Lawyer.cs" />
     <Compile Include="ActionLogDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ActionLogDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataContext.cs" />
+    <Compile Include="DataAccess\DependencyInjectionExtensions.cs" />
+    <Compile Include="DataAccess\DataContext.cs" />
+    <Compile Include="DataAccess\MatterTypeRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,34 +112,34 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Intake\Intake.cs">
+    <Compile Include="IntakeForm\IntakeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Intake\Intake.Designer.cs">
-      <DependentUpon>Intake.cs</DependentUpon>
+    <Compile Include="IntakeForm\IntakeForm.Designer.cs">
+      <DependentUpon>IntakeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Intake\IntakeSheets.cs">
+    <Compile Include="IntakeForm\IntakeSheets.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Intake\IntakeSheets.Designer.cs">
+    <Compile Include="IntakeForm\IntakeSheets.Designer.cs">
       <DependentUpon>IntakeSheets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Intake\NextSteps.cs">
+    <Compile Include="IntakeForm\NextSteps.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Intake\NextSteps.Designer.cs">
+    <Compile Include="IntakeForm\NextSteps.Designer.cs">
       <DependentUpon>NextSteps.cs</DependentUpon>
     </Compile>
-    <Compile Include="Intake\PotentialClientInfo.cs">
+    <Compile Include="IntakeForm\PotentialClientInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Intake\PotentialClientInfo.Designer.cs">
+    <Compile Include="IntakeForm\PotentialClientInfo.Designer.cs">
       <DependentUpon>PotentialClientInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Intake\PreliminaryInfo.cs">
+    <Compile Include="IntakeForm\PreliminaryInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Intake\PreliminaryInfo.Designer.cs">
+    <Compile Include="IntakeForm\PreliminaryInfo.Designer.cs">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
@@ -138,19 +160,19 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Intake\Intake.resx">
-      <DependentUpon>Intake.cs</DependentUpon>
+    <EmbeddedResource Include="IntakeForm\IntakeForm.resx">
+      <DependentUpon>IntakeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Intake\IntakeSheets.resx">
+    <EmbeddedResource Include="IntakeForm\IntakeSheets.resx">
       <DependentUpon>IntakeSheets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Intake\NextSteps.resx">
+    <EmbeddedResource Include="IntakeForm\NextSteps.resx">
       <DependentUpon>NextSteps.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Intake\PotentialClientInfo.resx">
+    <EmbeddedResource Include="IntakeForm\PotentialClientInfo.resx">
       <DependentUpon>PotentialClientInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Intake\PreliminaryInfo.resx">
+    <EmbeddedResource Include="IntakeForm\PreliminaryInfo.resx">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
@@ -202,5 +224,6 @@
     <Content Include="Resources\RRFLogoSmall.png" />
     <Content Include="Resources\RRFLogoSmall2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

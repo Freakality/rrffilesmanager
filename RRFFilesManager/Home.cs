@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RRFFilesManager.IntakeForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,7 @@ namespace RRFFilesManager
         private void Button1_Click(object sender, EventArgs e)
         {
             Hide();
-            Intake.Intake.Instance.Show();
+            IntakeForm.IntakeForm.Instance.Show();
         }
 
         private void Button2_Click_1(object sender, EventArgs e)

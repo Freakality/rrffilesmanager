@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using RRFFilesManager.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +10,7 @@ namespace RRFFilesManager
 {
     static class Program
     {
+        public static IServiceProvider ServiceProvider { get; set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,6 +20,13 @@ namespace RRFFilesManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home());
+        }
+
+        static void ConfigureServices()
+        {
+            var services = new ServiceCollection();
+            services.RegisterDataAccessServices();
+            ServiceProvider = services.BuildServiceProvider();
         }
     }
 }
