@@ -93,11 +93,6 @@
     <Compile Include="Abstractions\MobileCarrier.cs" />
     <Compile Include="Abstractions\Province.cs" />
     <Compile Include="Abstractions\Lawyer.cs" />
-    <Compile Include="ActionLogDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ActionLogDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataAccess\DependencyInjectionExtensions.cs" />
     <Compile Include="DataAccess\DataContext.cs" />
     <Compile Include="DataAccess\MatterTypeRepository.cs" />
@@ -217,17 +212,6 @@
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ActionLogDBDataSet.xsc">
-      <DependentUpon>ActionLogDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ActionLogDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ActionLogDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ActionLogDBDataSet.xss">
-      <DependentUpon>ActionLogDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
