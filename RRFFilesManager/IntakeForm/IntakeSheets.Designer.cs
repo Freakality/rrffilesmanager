@@ -52,7 +52,7 @@
             this.LiaOwnNegligence = new System.Windows.Forms.TextBox();
             this.EILT4EmployeeLabel = new System.Windows.Forms.Label();
             this.GroupBox100 = new System.Windows.Forms.GroupBox();
-            this.TextBox79 = new System.Windows.Forms.TextBox();
+            this.PolSickBenefits = new System.Windows.Forms.TextBox();
             this.Liability = new System.Windows.Forms.TabPage();
             this.Content = new System.Windows.Forms.FlowLayoutPanel();
             this.IncidentDateTimeGroupBox = new System.Windows.Forms.GroupBox();
@@ -79,41 +79,41 @@
             this.EILEmployed4Weeks = new System.Windows.Forms.ComboBox();
             this.EILEmployed52WeeksLabel = new System.Windows.Forms.Label();
             this.EILEmployed52Weeks = new System.Windows.Forms.ComboBox();
-            this.TextBox77 = new System.Windows.Forms.TextBox();
+            this.PolLTDPrivateOrEmployerGroup = new System.Windows.Forms.TextBox();
             this.GroupBox123 = new System.Windows.Forms.GroupBox();
-            this.ComboBox39 = new System.Windows.Forms.ComboBox();
+            this.PolCompanyDeniedBenefits = new System.Windows.Forms.ComboBox();
             this.Label116 = new System.Windows.Forms.Label();
             this.GroupBox102 = new System.Windows.Forms.GroupBox();
-            this.ComboBox38 = new System.Windows.Forms.ComboBox();
-            this.Label115 = new System.Windows.Forms.Label();
+            this.PolDeniedSTPorLTD = new System.Windows.Forms.ComboBox();
+            this.DeniedSTPorLTDLabel = new System.Windows.Forms.Label();
             this.GroupBox101 = new System.Windows.Forms.GroupBox();
             this.GroupBox98 = new System.Windows.Forms.GroupBox();
-            this.DateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.PolDateLostBenefits = new System.Windows.Forms.DateTimePicker();
             this.Label117 = new System.Windows.Forms.Label();
             this.GroupBox93 = new System.Windows.Forms.GroupBox();
-            this.TextBox72 = new System.Windows.Forms.TextBox();
+            this.PolOtherNotes = new System.Windows.Forms.TextBox();
             this.GroupBox97 = new System.Windows.Forms.GroupBox();
-            this.TextBox76 = new System.Windows.Forms.TextBox();
+            this.PolHowMuchBeingPaid = new System.Windows.Forms.TextBox();
             this.GroupBox99 = new System.Windows.Forms.GroupBox();
-            this.TextBox78 = new System.Windows.Forms.TextBox();
-            this.DateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.PolWhoPaidBenefits = new System.Windows.Forms.TextBox();
+            this.PolDateSubmittedLTD = new System.Windows.Forms.DateTimePicker();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Policy = new System.Windows.Forms.TabPage();
             this.GroupBox96 = new System.Windows.Forms.GroupBox();
-            this.TextBox75 = new System.Windows.Forms.TextBox();
+            this.PolCPPApproved = new System.Windows.Forms.TextBox();
             this.GroupBox95 = new System.Windows.Forms.GroupBox();
-            this.TextBox74 = new System.Windows.Forms.TextBox();
+            this.PolCPPOwnOrCompany = new System.Windows.Forms.TextBox();
             this.GroupBox94 = new System.Windows.Forms.GroupBox();
-            this.TextBox73 = new System.Windows.Forms.TextBox();
+            this.PolApplicationForCPP = new System.Windows.Forms.TextBox();
             this.GroupBox128 = new System.Windows.Forms.GroupBox();
-            this.TextBox107 = new System.Windows.Forms.TextBox();
+            this.PolReasonTerminateLTD = new System.Windows.Forms.TextBox();
             this.GroupBox127 = new System.Windows.Forms.GroupBox();
-            this.DateTimePicker8 = new System.Windows.Forms.DateTimePicker();
+            this.PolDateLastDayLTD = new System.Windows.Forms.DateTimePicker();
             this.Label120 = new System.Windows.Forms.Label();
             this.GroupBox126 = new System.Windows.Forms.GroupBox();
-            this.TextBox80 = new System.Windows.Forms.TextBox();
+            this.PolFirstTimeLTDApproved = new System.Windows.Forms.TextBox();
             this.GroupBox125 = new System.Windows.Forms.GroupBox();
-            this.DateTimePicker7 = new System.Windows.Forms.DateTimePicker();
+            this.PolDateStartedCollLTD = new System.Windows.Forms.DateTimePicker();
             this.Label119 = new System.Windows.Forms.Label();
             this.GroupBox124 = new System.Windows.Forms.GroupBox();
             this.Label118 = new System.Windows.Forms.Label();
@@ -531,7 +531,7 @@
             // 
             // GroupBox100
             // 
-            this.GroupBox100.Controls.Add(this.TextBox79);
+            this.GroupBox100.Controls.Add(this.PolSickBenefits);
             this.GroupBox100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox100.Location = new System.Drawing.Point(18, 14);
             this.GroupBox100.Name = "GroupBox100";
@@ -541,16 +541,16 @@
             this.GroupBox100.Text = "When you went off work on disability did you collect any form of sick benefits or" +
     " short-term disability benefits?";
             // 
-            // TextBox79
+            // PolSickBenefits
             // 
-            this.TextBox79.BackColor = System.Drawing.Color.White;
-            this.TextBox79.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TextBox79.Location = new System.Drawing.Point(3, 16);
-            this.TextBox79.Multiline = true;
-            this.TextBox79.Name = "TextBox79";
-            this.TextBox79.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox79.Size = new System.Drawing.Size(1154, 33);
-            this.TextBox79.TabIndex = 1;
+            this.PolSickBenefits.BackColor = System.Drawing.Color.White;
+            this.PolSickBenefits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolSickBenefits.Location = new System.Drawing.Point(3, 16);
+            this.PolSickBenefits.Multiline = true;
+            this.PolSickBenefits.Name = "PolSickBenefits";
+            this.PolSickBenefits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolSickBenefits.Size = new System.Drawing.Size(1154, 33);
+            this.PolSickBenefits.TabIndex = 1;
             // 
             // Liability
             // 
@@ -844,20 +844,20 @@
             this.EILEmployed52Weeks.Size = new System.Drawing.Size(53, 25);
             this.EILEmployed52Weeks.TabIndex = 16;
             // 
-            // TextBox77
+            // PolLTDPrivateOrEmployerGroup
             // 
-            this.TextBox77.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBox77.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TextBox77.Location = new System.Drawing.Point(3, 16);
-            this.TextBox77.Multiline = true;
-            this.TextBox77.Name = "TextBox77";
-            this.TextBox77.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox77.Size = new System.Drawing.Size(1154, 39);
-            this.TextBox77.TabIndex = 1;
+            this.PolLTDPrivateOrEmployerGroup.BackColor = System.Drawing.SystemColors.Window;
+            this.PolLTDPrivateOrEmployerGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolLTDPrivateOrEmployerGroup.Location = new System.Drawing.Point(3, 16);
+            this.PolLTDPrivateOrEmployerGroup.Multiline = true;
+            this.PolLTDPrivateOrEmployerGroup.Name = "PolLTDPrivateOrEmployerGroup";
+            this.PolLTDPrivateOrEmployerGroup.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolLTDPrivateOrEmployerGroup.Size = new System.Drawing.Size(1154, 39);
+            this.PolLTDPrivateOrEmployerGroup.TabIndex = 1;
             // 
             // GroupBox123
             // 
-            this.GroupBox123.Controls.Add(this.ComboBox39);
+            this.GroupBox123.Controls.Add(this.PolCompanyDeniedBenefits);
             this.GroupBox123.Controls.Add(this.Label116);
             this.GroupBox123.Location = new System.Drawing.Point(16, 236);
             this.GroupBox123.Name = "GroupBox123";
@@ -865,15 +865,15 @@
             this.GroupBox123.TabIndex = 27;
             this.GroupBox123.TabStop = false;
             // 
-            // ComboBox39
+            // PolCompanyDeniedBenefits
             // 
-            this.ComboBox39.DisplayMember = "Company";
-            this.ComboBox39.FormattingEnabled = true;
-            this.ComboBox39.Location = new System.Drawing.Point(342, 11);
-            this.ComboBox39.Name = "ComboBox39";
-            this.ComboBox39.Size = new System.Drawing.Size(341, 21);
-            this.ComboBox39.TabIndex = 20;
-            this.ComboBox39.ValueMember = "Company";
+            this.PolCompanyDeniedBenefits.DisplayMember = "Company";
+            this.PolCompanyDeniedBenefits.FormattingEnabled = true;
+            this.PolCompanyDeniedBenefits.Location = new System.Drawing.Point(342, 11);
+            this.PolCompanyDeniedBenefits.Name = "PolCompanyDeniedBenefits";
+            this.PolCompanyDeniedBenefits.Size = new System.Drawing.Size(341, 21);
+            this.PolCompanyDeniedBenefits.TabIndex = 20;
+            this.PolCompanyDeniedBenefits.ValueMember = "Company";
             // 
             // Label116
             // 
@@ -887,39 +887,39 @@
             // 
             // GroupBox102
             // 
-            this.GroupBox102.Controls.Add(this.ComboBox38);
-            this.GroupBox102.Controls.Add(this.Label115);
+            this.GroupBox102.Controls.Add(this.PolDeniedSTPorLTD);
+            this.GroupBox102.Controls.Add(this.DeniedSTPorLTDLabel);
             this.GroupBox102.Location = new System.Drawing.Point(654, 126);
             this.GroupBox102.Name = "GroupBox102";
             this.GroupBox102.Size = new System.Drawing.Size(520, 42);
             this.GroupBox102.TabIndex = 26;
             this.GroupBox102.TabStop = false;
             // 
-            // ComboBox38
+            // PolDeniedSTPorLTD
             // 
-            this.ComboBox38.FormattingEnabled = true;
-            this.ComboBox38.Items.AddRange(new object[] {
+            this.PolDeniedSTPorLTD.FormattingEnabled = true;
+            this.PolDeniedSTPorLTD.Items.AddRange(new object[] {
             "STD",
             "LTD",
             "STD & LTD"});
-            this.ComboBox38.Location = new System.Drawing.Point(219, 10);
-            this.ComboBox38.Name = "ComboBox38";
-            this.ComboBox38.Size = new System.Drawing.Size(292, 21);
-            this.ComboBox38.TabIndex = 20;
+            this.PolDeniedSTPorLTD.Location = new System.Drawing.Point(219, 10);
+            this.PolDeniedSTPorLTD.Name = "PolDeniedSTPorLTD";
+            this.PolDeniedSTPorLTD.Size = new System.Drawing.Size(292, 21);
+            this.PolDeniedSTPorLTD.TabIndex = 20;
             // 
-            // Label115
+            // DeniedSTPorLTDLabel
             // 
-            this.Label115.AutoSize = true;
-            this.Label115.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label115.Location = new System.Drawing.Point(6, 13);
-            this.Label115.Name = "Label115";
-            this.Label115.Size = new System.Drawing.Size(207, 17);
-            this.Label115.TabIndex = 19;
-            this.Label115.Text = "Were you denied STD and/or LTD?";
+            this.DeniedSTPorLTDLabel.AutoSize = true;
+            this.DeniedSTPorLTDLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeniedSTPorLTDLabel.Location = new System.Drawing.Point(6, 13);
+            this.DeniedSTPorLTDLabel.Name = "DeniedSTPorLTDLabel";
+            this.DeniedSTPorLTDLabel.Size = new System.Drawing.Size(207, 17);
+            this.DeniedSTPorLTDLabel.TabIndex = 19;
+            this.DeniedSTPorLTDLabel.Text = "Were you denied STD and/or LTD?";
             // 
             // GroupBox101
             // 
-            this.GroupBox101.Controls.Add(this.TextBox77);
+            this.GroupBox101.Controls.Add(this.PolLTDPrivateOrEmployerGroup);
             this.GroupBox101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox101.Location = new System.Drawing.Point(16, 284);
             this.GroupBox101.Name = "GroupBox101";
@@ -930,7 +930,7 @@
             // 
             // GroupBox98
             // 
-            this.GroupBox98.Controls.Add(this.DateTimePicker6);
+            this.GroupBox98.Controls.Add(this.PolDateLostBenefits);
             this.GroupBox98.Controls.Add(this.Label117);
             this.GroupBox98.Location = new System.Drawing.Point(16, 126);
             this.GroupBox98.Name = "GroupBox98";
@@ -938,14 +938,14 @@
             this.GroupBox98.TabIndex = 24;
             this.GroupBox98.TabStop = false;
             // 
-            // DateTimePicker6
+            // PolDateLostBenefits
             // 
-            this.DateTimePicker6.CustomFormat = "MMM-dd-yyyy";
-            this.DateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePicker6.Location = new System.Drawing.Point(466, 11);
-            this.DateTimePicker6.Name = "DateTimePicker6";
-            this.DateTimePicker6.Size = new System.Drawing.Size(150, 20);
-            this.DateTimePicker6.TabIndex = 8;
+            this.PolDateLostBenefits.CustomFormat = "MMM-dd-yyyy";
+            this.PolDateLostBenefits.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PolDateLostBenefits.Location = new System.Drawing.Point(466, 11);
+            this.PolDateLostBenefits.Name = "PolDateLostBenefits";
+            this.PolDateLostBenefits.Size = new System.Drawing.Size(150, 20);
+            this.PolDateLostBenefits.TabIndex = 8;
             // 
             // Label117
             // 
@@ -959,7 +959,7 @@
             // 
             // GroupBox93
             // 
-            this.GroupBox93.Controls.Add(this.TextBox72);
+            this.GroupBox93.Controls.Add(this.PolOtherNotes);
             this.GroupBox93.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox93.Location = new System.Drawing.Point(14, 752);
             this.GroupBox93.Name = "GroupBox93";
@@ -968,19 +968,19 @@
             this.GroupBox93.TabStop = false;
             this.GroupBox93.Text = "Other relevant policy notes";
             // 
-            // TextBox72
+            // PolOtherNotes
             // 
-            this.TextBox72.BackColor = System.Drawing.Color.White;
-            this.TextBox72.Location = new System.Drawing.Point(8, 20);
-            this.TextBox72.Multiline = true;
-            this.TextBox72.Name = "TextBox72";
-            this.TextBox72.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox72.Size = new System.Drawing.Size(1141, 110);
-            this.TextBox72.TabIndex = 1;
+            this.PolOtherNotes.BackColor = System.Drawing.Color.White;
+            this.PolOtherNotes.Location = new System.Drawing.Point(8, 20);
+            this.PolOtherNotes.Multiline = true;
+            this.PolOtherNotes.Name = "PolOtherNotes";
+            this.PolOtherNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolOtherNotes.Size = new System.Drawing.Size(1141, 110);
+            this.PolOtherNotes.TabIndex = 1;
             // 
             // GroupBox97
             // 
-            this.GroupBox97.Controls.Add(this.TextBox76);
+            this.GroupBox97.Controls.Add(this.PolHowMuchBeingPaid);
             this.GroupBox97.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox97.Location = new System.Drawing.Point(17, 175);
             this.GroupBox97.Name = "GroupBox97";
@@ -989,20 +989,20 @@
             this.GroupBox97.TabStop = false;
             this.GroupBox97.Text = "How much were you being paid?";
             // 
-            // TextBox76
+            // PolHowMuchBeingPaid
             // 
-            this.TextBox76.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBox76.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TextBox76.Location = new System.Drawing.Point(3, 16);
-            this.TextBox76.Multiline = true;
-            this.TextBox76.Name = "TextBox76";
-            this.TextBox76.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox76.Size = new System.Drawing.Size(1154, 39);
-            this.TextBox76.TabIndex = 1;
+            this.PolHowMuchBeingPaid.BackColor = System.Drawing.SystemColors.Window;
+            this.PolHowMuchBeingPaid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolHowMuchBeingPaid.Location = new System.Drawing.Point(3, 16);
+            this.PolHowMuchBeingPaid.Multiline = true;
+            this.PolHowMuchBeingPaid.Name = "PolHowMuchBeingPaid";
+            this.PolHowMuchBeingPaid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolHowMuchBeingPaid.Size = new System.Drawing.Size(1154, 39);
+            this.PolHowMuchBeingPaid.TabIndex = 1;
             // 
             // GroupBox99
             // 
-            this.GroupBox99.Controls.Add(this.TextBox78);
+            this.GroupBox99.Controls.Add(this.PolWhoPaidBenefits);
             this.GroupBox99.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox99.Location = new System.Drawing.Point(16, 67);
             this.GroupBox99.Name = "GroupBox99";
@@ -1011,25 +1011,25 @@
             this.GroupBox99.TabStop = false;
             this.GroupBox99.Text = "Who paid those benefits to you?";
             // 
-            // TextBox78
+            // PolWhoPaidBenefits
             // 
-            this.TextBox78.BackColor = System.Drawing.Color.White;
-            this.TextBox78.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TextBox78.Location = new System.Drawing.Point(3, 16);
-            this.TextBox78.Multiline = true;
-            this.TextBox78.Name = "TextBox78";
-            this.TextBox78.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox78.Size = new System.Drawing.Size(1154, 37);
-            this.TextBox78.TabIndex = 1;
+            this.PolWhoPaidBenefits.BackColor = System.Drawing.Color.White;
+            this.PolWhoPaidBenefits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolWhoPaidBenefits.Location = new System.Drawing.Point(3, 16);
+            this.PolWhoPaidBenefits.Multiline = true;
+            this.PolWhoPaidBenefits.Name = "PolWhoPaidBenefits";
+            this.PolWhoPaidBenefits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolWhoPaidBenefits.Size = new System.Drawing.Size(1154, 37);
+            this.PolWhoPaidBenefits.TabIndex = 1;
             // 
-            // DateTimePicker5
+            // PolDateSubmittedLTD
             // 
-            this.DateTimePicker5.CustomFormat = "MMM-dd-yyyy";
-            this.DateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePicker5.Location = new System.Drawing.Point(358, 13);
-            this.DateTimePicker5.Name = "DateTimePicker5";
-            this.DateTimePicker5.Size = new System.Drawing.Size(109, 20);
-            this.DateTimePicker5.TabIndex = 8;
+            this.PolDateSubmittedLTD.CustomFormat = "MMM-dd-yyyy";
+            this.PolDateSubmittedLTD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PolDateSubmittedLTD.Location = new System.Drawing.Point(358, 13);
+            this.PolDateSubmittedLTD.Name = "PolDateSubmittedLTD";
+            this.PolDateSubmittedLTD.Size = new System.Drawing.Size(109, 20);
+            this.PolDateSubmittedLTD.TabIndex = 8;
             // 
             // TabControl
             // 
@@ -1071,10 +1071,11 @@
             this.Policy.Size = new System.Drawing.Size(1342, 584);
             this.Policy.TabIndex = 7;
             this.Policy.Text = "Policy";
+            this.Policy.Click += new System.EventHandler(this.Policy_Click);
             // 
             // GroupBox96
             // 
-            this.GroupBox96.Controls.Add(this.TextBox75);
+            this.GroupBox96.Controls.Add(this.PolCPPApproved);
             this.GroupBox96.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox96.Location = new System.Drawing.Point(16, 689);
             this.GroupBox96.Name = "GroupBox96";
@@ -1083,19 +1084,19 @@
             this.GroupBox96.TabStop = false;
             this.GroupBox96.Text = "Was your CPP Disability benefits application ever approved?";
             // 
-            // TextBox75
+            // PolCPPApproved
             // 
-            this.TextBox75.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBox75.Location = new System.Drawing.Point(8, 20);
-            this.TextBox75.Multiline = true;
-            this.TextBox75.Name = "TextBox75";
-            this.TextBox75.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox75.Size = new System.Drawing.Size(1141, 27);
-            this.TextBox75.TabIndex = 1;
+            this.PolCPPApproved.BackColor = System.Drawing.SystemColors.Window;
+            this.PolCPPApproved.Location = new System.Drawing.Point(8, 20);
+            this.PolCPPApproved.Multiline = true;
+            this.PolCPPApproved.Name = "PolCPPApproved";
+            this.PolCPPApproved.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolCPPApproved.Size = new System.Drawing.Size(1141, 27);
+            this.PolCPPApproved.TabIndex = 1;
             // 
             // GroupBox95
             // 
-            this.GroupBox95.Controls.Add(this.TextBox74);
+            this.GroupBox95.Controls.Add(this.PolCPPOwnOrCompany);
             this.GroupBox95.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox95.Location = new System.Drawing.Point(16, 625);
             this.GroupBox95.Name = "GroupBox95";
@@ -1105,19 +1106,19 @@
             this.GroupBox95.Text = "Did you decided to apply for CPP Disability Benefits on you own or were you asked" +
     " to apply for CPP Disability by your insurance company?";
             // 
-            // TextBox74
+            // PolCPPOwnOrCompany
             // 
-            this.TextBox74.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBox74.Location = new System.Drawing.Point(8, 20);
-            this.TextBox74.Multiline = true;
-            this.TextBox74.Name = "TextBox74";
-            this.TextBox74.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox74.Size = new System.Drawing.Size(1141, 27);
-            this.TextBox74.TabIndex = 1;
+            this.PolCPPOwnOrCompany.BackColor = System.Drawing.SystemColors.Window;
+            this.PolCPPOwnOrCompany.Location = new System.Drawing.Point(8, 20);
+            this.PolCPPOwnOrCompany.Multiline = true;
+            this.PolCPPOwnOrCompany.Name = "PolCPPOwnOrCompany";
+            this.PolCPPOwnOrCompany.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolCPPOwnOrCompany.Size = new System.Drawing.Size(1141, 27);
+            this.PolCPPOwnOrCompany.TabIndex = 1;
             // 
             // GroupBox94
             // 
-            this.GroupBox94.Controls.Add(this.TextBox73);
+            this.GroupBox94.Controls.Add(this.PolApplicationForCPP);
             this.GroupBox94.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox94.Location = new System.Drawing.Point(16, 561);
             this.GroupBox94.Name = "GroupBox94";
@@ -1127,19 +1128,19 @@
             this.GroupBox94.Text = "Before being terminated from LTD benefits had you ever made an application for CP" +
     "P disability benefits?";
             // 
-            // TextBox73
+            // PolApplicationForCPP
             // 
-            this.TextBox73.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBox73.Location = new System.Drawing.Point(8, 20);
-            this.TextBox73.Multiline = true;
-            this.TextBox73.Name = "TextBox73";
-            this.TextBox73.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox73.Size = new System.Drawing.Size(1141, 27);
-            this.TextBox73.TabIndex = 1;
+            this.PolApplicationForCPP.BackColor = System.Drawing.SystemColors.Window;
+            this.PolApplicationForCPP.Location = new System.Drawing.Point(8, 20);
+            this.PolApplicationForCPP.Multiline = true;
+            this.PolApplicationForCPP.Name = "PolApplicationForCPP";
+            this.PolApplicationForCPP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolApplicationForCPP.Size = new System.Drawing.Size(1141, 27);
+            this.PolApplicationForCPP.TabIndex = 1;
             // 
             // GroupBox128
             // 
-            this.GroupBox128.Controls.Add(this.TextBox107);
+            this.GroupBox128.Controls.Add(this.PolReasonTerminateLTD);
             this.GroupBox128.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox128.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox128.Location = new System.Drawing.Point(16, 460);
@@ -1150,20 +1151,20 @@
             this.GroupBox128.Text = "Briefly explain the reason the insurance company provided to you when it decided " +
     "to terminate your LTD benefits";
             // 
-            // TextBox107
+            // PolReasonTerminateLTD
             // 
-            this.TextBox107.BackColor = System.Drawing.Color.White;
-            this.TextBox107.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox107.Location = new System.Drawing.Point(8, 20);
-            this.TextBox107.Multiline = true;
-            this.TextBox107.Name = "TextBox107";
-            this.TextBox107.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox107.Size = new System.Drawing.Size(1141, 67);
-            this.TextBox107.TabIndex = 1;
+            this.PolReasonTerminateLTD.BackColor = System.Drawing.Color.White;
+            this.PolReasonTerminateLTD.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PolReasonTerminateLTD.Location = new System.Drawing.Point(8, 20);
+            this.PolReasonTerminateLTD.Multiline = true;
+            this.PolReasonTerminateLTD.Name = "PolReasonTerminateLTD";
+            this.PolReasonTerminateLTD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolReasonTerminateLTD.Size = new System.Drawing.Size(1141, 67);
+            this.PolReasonTerminateLTD.TabIndex = 1;
             // 
             // GroupBox127
             // 
-            this.GroupBox127.Controls.Add(this.DateTimePicker8);
+            this.GroupBox127.Controls.Add(this.PolDateLastDayLTD);
             this.GroupBox127.Controls.Add(this.Label120);
             this.GroupBox127.Location = new System.Drawing.Point(867, 348);
             this.GroupBox127.Name = "GroupBox127";
@@ -1171,14 +1172,15 @@
             this.GroupBox127.TabIndex = 32;
             this.GroupBox127.TabStop = false;
             // 
-            // DateTimePicker8
+            // PolDateLastDayLTD
             // 
-            this.DateTimePicker8.CustomFormat = "MMM-dd-yyyy";
-            this.DateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePicker8.Location = new System.Drawing.Point(222, 14);
-            this.DateTimePicker8.Name = "DateTimePicker8";
-            this.DateTimePicker8.Size = new System.Drawing.Size(95, 20);
-            this.DateTimePicker8.TabIndex = 8;
+            this.PolDateLastDayLTD.CustomFormat = "MMM-dd-yyyy";
+            this.PolDateLastDayLTD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PolDateLastDayLTD.Location = new System.Drawing.Point(222, 14);
+            this.PolDateLastDayLTD.Name = "PolDateLastDayLTD";
+            this.PolDateLastDayLTD.Size = new System.Drawing.Size(95, 20);
+            this.PolDateLastDayLTD.TabIndex = 8;
+            this.PolDateLastDayLTD.ValueChanged += new System.EventHandler(this.PolDateLastDayLTD_ValueChanged);
             // 
             // Label120
             // 
@@ -1192,7 +1194,7 @@
             // 
             // GroupBox126
             // 
-            this.GroupBox126.Controls.Add(this.TextBox80);
+            this.GroupBox126.Controls.Add(this.PolFirstTimeLTDApproved);
             this.GroupBox126.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox126.Location = new System.Drawing.Point(16, 396);
             this.GroupBox126.Name = "GroupBox126";
@@ -1202,20 +1204,20 @@
             this.GroupBox126.Text = "Were your LTD benefits initially approved when you first applied for disability b" +
     "enefits?";
             // 
-            // TextBox80
+            // PolFirstTimeLTDApproved
             // 
-            this.TextBox80.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBox80.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TextBox80.Location = new System.Drawing.Point(3, 16);
-            this.TextBox80.Multiline = true;
-            this.TextBox80.Name = "TextBox80";
-            this.TextBox80.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox80.Size = new System.Drawing.Size(1154, 39);
-            this.TextBox80.TabIndex = 1;
+            this.PolFirstTimeLTDApproved.BackColor = System.Drawing.SystemColors.Window;
+            this.PolFirstTimeLTDApproved.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolFirstTimeLTDApproved.Location = new System.Drawing.Point(3, 16);
+            this.PolFirstTimeLTDApproved.Multiline = true;
+            this.PolFirstTimeLTDApproved.Name = "PolFirstTimeLTDApproved";
+            this.PolFirstTimeLTDApproved.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.PolFirstTimeLTDApproved.Size = new System.Drawing.Size(1154, 39);
+            this.PolFirstTimeLTDApproved.TabIndex = 1;
             // 
             // GroupBox125
             // 
-            this.GroupBox125.Controls.Add(this.DateTimePicker7);
+            this.GroupBox125.Controls.Add(this.PolDateStartedCollLTD);
             this.GroupBox125.Controls.Add(this.Label119);
             this.GroupBox125.Location = new System.Drawing.Point(503, 348);
             this.GroupBox125.Name = "GroupBox125";
@@ -1223,14 +1225,14 @@
             this.GroupBox125.TabIndex = 30;
             this.GroupBox125.TabStop = false;
             // 
-            // DateTimePicker7
+            // PolDateStartedCollLTD
             // 
-            this.DateTimePicker7.CustomFormat = "MMM-dd-yyyy";
-            this.DateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePicker7.Location = new System.Drawing.Point(249, 13);
-            this.DateTimePicker7.Name = "DateTimePicker7";
-            this.DateTimePicker7.Size = new System.Drawing.Size(106, 20);
-            this.DateTimePicker7.TabIndex = 8;
+            this.PolDateStartedCollLTD.CustomFormat = "MMM-dd-yyyy";
+            this.PolDateStartedCollLTD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PolDateStartedCollLTD.Location = new System.Drawing.Point(249, 13);
+            this.PolDateStartedCollLTD.Name = "PolDateStartedCollLTD";
+            this.PolDateStartedCollLTD.Size = new System.Drawing.Size(106, 20);
+            this.PolDateStartedCollLTD.TabIndex = 8;
             // 
             // Label119
             // 
@@ -1244,7 +1246,7 @@
             // 
             // GroupBox124
             // 
-            this.GroupBox124.Controls.Add(this.DateTimePicker5);
+            this.GroupBox124.Controls.Add(this.PolDateSubmittedLTD);
             this.GroupBox124.Controls.Add(this.Label118);
             this.GroupBox124.Location = new System.Drawing.Point(16, 348);
             this.GroupBox124.Name = "GroupBox124";
@@ -2384,7 +2386,7 @@
         internal System.Windows.Forms.TextBox LiaOwnNegligence;
         internal System.Windows.Forms.Label EILT4EmployeeLabel;
         internal System.Windows.Forms.GroupBox GroupBox100;
-        internal System.Windows.Forms.TextBox TextBox79;
+        internal System.Windows.Forms.TextBox PolSickBenefits;
         internal System.Windows.Forms.TabPage Liability;
         internal System.Windows.Forms.FlowLayoutPanel Content;
         internal System.Windows.Forms.GroupBox IncidentDateTimeGroupBox;
@@ -2410,40 +2412,40 @@
         internal System.Windows.Forms.Label EILEmployed4WeeksLabel;
         internal System.Windows.Forms.ComboBox EILWereEmployed;
         internal System.Windows.Forms.Label EILWereEmployedLabel;
-        internal System.Windows.Forms.TextBox TextBox77;
+        internal System.Windows.Forms.TextBox PolLTDPrivateOrEmployerGroup;
         internal System.Windows.Forms.GroupBox GroupBox123;
-        internal System.Windows.Forms.ComboBox ComboBox39;
+        internal System.Windows.Forms.ComboBox PolCompanyDeniedBenefits;
         internal System.Windows.Forms.Label Label116;
         internal System.Windows.Forms.GroupBox GroupBox102;
-        internal System.Windows.Forms.ComboBox ComboBox38;
-        internal System.Windows.Forms.Label Label115;
+        internal System.Windows.Forms.ComboBox PolDeniedSTPorLTD;
+        internal System.Windows.Forms.Label DeniedSTPorLTDLabel;
         internal System.Windows.Forms.GroupBox GroupBox101;
         internal System.Windows.Forms.GroupBox GroupBox98;
-        internal System.Windows.Forms.DateTimePicker DateTimePicker6;
+        internal System.Windows.Forms.DateTimePicker PolDateLostBenefits;
         internal System.Windows.Forms.Label Label117;
         internal System.Windows.Forms.GroupBox GroupBox93;
-        internal System.Windows.Forms.TextBox TextBox72;
+        internal System.Windows.Forms.TextBox PolOtherNotes;
         internal System.Windows.Forms.GroupBox GroupBox97;
-        internal System.Windows.Forms.TextBox TextBox76;
+        internal System.Windows.Forms.TextBox PolHowMuchBeingPaid;
         internal System.Windows.Forms.GroupBox GroupBox99;
-        internal System.Windows.Forms.TextBox TextBox78;
-        internal System.Windows.Forms.DateTimePicker DateTimePicker5;
+        internal System.Windows.Forms.TextBox PolWhoPaidBenefits;
+        internal System.Windows.Forms.DateTimePicker PolDateSubmittedLTD;
         internal System.Windows.Forms.TabControl TabControl;
         internal System.Windows.Forms.TabPage Policy;
         internal System.Windows.Forms.GroupBox GroupBox96;
         internal System.Windows.Forms.GroupBox GroupBox95;
-        internal System.Windows.Forms.TextBox TextBox74;
+        internal System.Windows.Forms.TextBox PolCPPOwnOrCompany;
         internal System.Windows.Forms.GroupBox GroupBox94;
-        internal System.Windows.Forms.TextBox TextBox73;
+        internal System.Windows.Forms.TextBox PolApplicationForCPP;
         internal System.Windows.Forms.GroupBox GroupBox128;
-        internal System.Windows.Forms.TextBox TextBox107;
+        internal System.Windows.Forms.TextBox PolReasonTerminateLTD;
         internal System.Windows.Forms.GroupBox GroupBox127;
-        internal System.Windows.Forms.DateTimePicker DateTimePicker8;
+        internal System.Windows.Forms.DateTimePicker PolDateLastDayLTD;
         internal System.Windows.Forms.Label Label120;
         internal System.Windows.Forms.GroupBox GroupBox126;
-        internal System.Windows.Forms.TextBox TextBox80;
+        internal System.Windows.Forms.TextBox PolFirstTimeLTDApproved;
         internal System.Windows.Forms.GroupBox GroupBox125;
-        internal System.Windows.Forms.DateTimePicker DateTimePicker7;
+        internal System.Windows.Forms.DateTimePicker PolDateStartedCollLTD;
         internal System.Windows.Forms.Label Label119;
         internal System.Windows.Forms.GroupBox GroupBox124;
         internal System.Windows.Forms.Label Label118;
@@ -2526,7 +2528,7 @@
         internal System.Windows.Forms.Label Label37;
         internal System.Windows.Forms.TabPage OtherNotes;
         internal System.Windows.Forms.RichTextBox Notes;
-        internal System.Windows.Forms.TextBox TextBox75;
+        internal System.Windows.Forms.TextBox PolCPPApproved;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         internal System.Windows.Forms.GroupBox SocialAssistanceGroup;

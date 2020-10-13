@@ -195,6 +195,7 @@ namespace RRFFilesManager.IntakeForm
             FillIntakeFromEmploymentForm(intake);
             FillIntakeFromDamagesForm(intake);
             FillIntakeFromAccidentBenefitsForm(intake);
+            FillIntakeFromPolicyForm(intake);
             intake.Notes = Notes.Text;
         }
         public void FillIntakeFromLiabilityForm(Intake intake)
@@ -268,6 +269,26 @@ namespace RRFFilesManager.IntakeForm
             intake.AccBenNotes = AccBenNotes.Text;
         }
 
+        public void FillIntakeFromPolicyForm(Intake intake)
+        {
+            intake.PolSickBenefits = PolSickBenefits.Text;
+            intake.PolWhoPaidBenefits = PolWhoPaidBenefits.Text;
+            intake.PolDateLostBenefits = PolDateLostBenefits.Value;
+            intake.PolDeniedSTPorLTD = PolDeniedSTPorLTD.Text;
+            intake.PolHowMuchBeingPaid = PolHowMuchBeingPaid.Text;
+            intake.PolCompanyDeniedBenefits = PolCompanyDeniedBenefits.Text;
+            intake.PolLTDPrivateOrEmployerGroup = PolLTDPrivateOrEmployerGroup.Text;
+            intake.PolDateSubmittedLTD = PolDateSubmittedLTD.Value;
+            intake.PolDateStartedCollLTD = PolDateStartedCollLTD.Value;
+            intake.PolDateLastDayLTD = PolDateLastDayLTD.Value;
+            intake.PolFirstTimeLTDApproved = PolFirstTimeLTDApproved.Text;
+            intake.PolReasonTerminateLTD = PolReasonTerminateLTD.Text;
+            intake.PolApplicationForCPP = PolApplicationForCPP.Text;
+            intake.PolCPPOwnOrCompany = PolCPPOwnOrCompany.Text;
+            intake.PolCPPApproved = PolCPPApproved.Text;
+            intake.PolOtherNotes = PolOtherNotes.Text;
+        }
+
 
         public void FillForm(Intake intake)
         {
@@ -276,6 +297,7 @@ namespace RRFFilesManager.IntakeForm
             FillEmploymentForm(intake);
             FillDamagesForm(intake);
             FillAccidentBenefitsForm(intake);
+            FillPolicyForm(intake);
             Notes.Text = intake.Notes;
         }
         public void FillLiabilityForm(Intake intake)
@@ -349,7 +371,37 @@ namespace RRFFilesManager.IntakeForm
             AccBenNotes.Text = intake.AccBenNotes;
         }
 
+        public void FillPolicyForm(Intake intake)
+        {
+            PolSickBenefits.Text = intake.PolSickBenefits;
+            PolWhoPaidBenefits.Text = intake.PolWhoPaidBenefits;
+            PolDateLostBenefits.Value = intake.PolDateLostBenefits;
+            PolDeniedSTPorLTD.Text = intake.PolDeniedSTPorLTD;
+            PolHowMuchBeingPaid.Text = intake.PolHowMuchBeingPaid;
+            PolCompanyDeniedBenefits.Text = intake.PolCompanyDeniedBenefits;
+            PolLTDPrivateOrEmployerGroup.Text = intake.PolLTDPrivateOrEmployerGroup;
+            PolDateSubmittedLTD.Value = intake.PolDateSubmittedLTD;
+            PolDateStartedCollLTD.Value = intake.PolDateStartedCollLTD;
+            PolDateLastDayLTD.Value = intake.PolDateLastDayLTD;
+            PolFirstTimeLTDApproved.Text = intake.PolFirstTimeLTDApproved;
+            PolReasonTerminateLTD.Text = intake.PolReasonTerminateLTD;
+            PolApplicationForCPP.Text = intake.PolApplicationForCPP;
+            PolCPPOwnOrCompany.Text = intake.PolCPPOwnOrCompany;
+            PolCPPApproved.Text = intake.PolCPPApproved;
+            PolOtherNotes.Text = intake.PolOtherNotes;
+        }
+
         private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Policy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PolDateLastDayLTD_ValueChanged(object sender, EventArgs e)
         {
 
         }

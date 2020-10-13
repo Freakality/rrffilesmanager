@@ -206,6 +206,7 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$EmailToText$$$", PotentialClientInfo.Instance.PCIEmailToText.Text);
             Worksheet.Cells.Replace("$$$DateOfBirth$$$", PotentialClientInfo.Instance.PCIDateOfBirth.Value.ToString("MMMM d, yyyy"));
             Worksheet.Cells.Replace("$$$OtherNotes$$$", PotentialClientInfo.Instance.PCIOtherNotes.Text);
+
             Worksheet.Cells.Replace("$$$LiabilityDate$$$", IntakeSheets.Instance.LiaDate.Value.ToString("MMMM d, yyyy"));
             Worksheet.Cells.Replace("$$$LiabilityMVR$$$", IntakeSheets.Instance.LiaMVR.Checked);
             Worksheet.Cells.Replace("$$$LiabilityRC$$$", IntakeSheets.Instance.LiaReportCollision.Checked);
@@ -225,6 +226,27 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$LiabilityMunicipalityName$$$", IntakeSheets.Instance.LiaMunicipality.Text);
             Worksheet.Cells.Replace("$$$LiabilityMunicipalityNoticedy$$$", IntakeSheets.Instance.LiaNotifiedMunicipality.Text);
             Worksheet.Cells.Replace("$$$LiabilityNotes$$$", IntakeSheets.Instance.LiaNotes.Text);
+
+            Worksheet.Cells.Replace("$$$LiabilityDate$$$", IntakeSheets.Instance.LiaDate.Value.ToString("MMMM d, yyyy"));
+            Worksheet.Cells.Replace("$$$LiabilityMVR$$$", IntakeSheets.Instance.LiaMVR.Checked);
+            Worksheet.Cells.Replace("$$$LiabilityRC$$$", IntakeSheets.Instance.LiaReportCollision.Checked);
+            Worksheet.Cells.Replace("$$$LiabilityMVC$$$", IntakeSheets.Instance.LiaMVCExchange.Checked);
+            Worksheet.Cells.Replace("$$$LiabilityOtherDocuments$$$", IntakeSheets.Instance.LiaOtherDoc.Checked);
+            Worksheet.Cells.Replace("$$$LiabilityWhere$$$", IntakeSheets.Instance.LiaWhereAccident.Text);
+            Worksheet.Cells.Replace("$$$LiabilityExplanation$$$", IntakeSheets.Instance.LiaExplain.Text);
+            Worksheet.Cells.Replace("$$$LiabilityHavePhotos$$$", IntakeSheets.Instance.LiaHavePhotos.Text);
+            Worksheet.Cells.Replace("$$$LiabilityDamageEstimation$$$", IntakeSheets.Instance.LiaEstimDamage.Text);
+            Worksheet.Cells.Replace("$$$LiabilityYourFault$$$", IntakeSheets.Instance.LiaYourFault.Text);
+            Worksheet.Cells.Replace("$$$LiabilityDriverName$$$", IntakeSheets.Instance.LiaDriverName.Text);
+            Worksheet.Cells.Replace("$$$LiabilityOwnerName$$$", IntakeSheets.Instance.LiaOwnerName.Text);
+            Worksheet.Cells.Replace("$$$LiabilityInsuranceCompany$$$", IntakeSheets.Instance.LiaInsuranceCo.Text);
+            Worksheet.Cells.Replace("$$$LiabilityCopyReport$$$", IntakeSheets.Instance.LiaHaveCopy.Text);
+            Worksheet.Cells.Replace("$$$LiabilityOwnNegligence$$$", IntakeSheets.Instance.LiaOwnNegligence.Text);
+            Worksheet.Cells.Replace("$$$LiabilityFaultPerson$$$", IntakeSheets.Instance.LiaFaultPerson.Text);
+            Worksheet.Cells.Replace("$$$LiabilityMunicipalityName$$$", IntakeSheets.Instance.LiaMunicipality.Text);
+            Worksheet.Cells.Replace("$$$LiabilityMunicipalityNoticedy$$$", IntakeSheets.Instance.LiaNotifiedMunicipality.Text);
+            Worksheet.Cells.Replace("$$$LiabilityNotes$$$", IntakeSheets.Instance.LiaNotes.Text);
+
             Worksheet.Cells.Replace("$$$EmploymentWereEmployed$$$", IntakeSheets.Instance.EILWereEmployed.Text);
             Worksheet.Cells.Replace("$$$EmploymentEmployed4Weeks$$$", IntakeSheets.Instance.EILEmployed4Weeks.Text);
             Worksheet.Cells.Replace("$$$EmploymentEmployed52Weeks$$$", IntakeSheets.Instance.EILEmployed52Weeks.Text);
@@ -240,6 +262,7 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$EmploymentSelfEmployedGrossEarning$$$", IntakeSheets.Instance.EILSelfGrossEarning.Text);
             Worksheet.Cells.Replace("$$$EmploymentSelfEmployedTimeOperating$$$", IntakeSheets.Instance.EILHowLongBusiness.Text);
             Worksheet.Cells.Replace("$$$EmploymentNotes$$$", IntakeSheets.Instance.EILNotes.Text);
+
             Worksheet.Cells.Replace("$$$DamagesHitPartVehicleOrConcrete$$$", IntakeSheets.Instance.DamHitVehicleConcrete.Text);
             Worksheet.Cells.Replace("$$$DamagesWentToHospital$$$", IntakeSheets.Instance.DamHeadInjuries.Text);
             Worksheet.Cells.Replace("$$$DamagesHeadInjuries$$$", IntakeSheets.Instance.DamHeadInjuries.Text);
@@ -251,6 +274,7 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$DamagesPreviousAccident$$$", IntakeSheets.Instance.DamPreAccident.Text);
             Worksheet.Cells.Replace("$$$DamagesAnyOtherIllness$$$", IntakeSheets.Instance.DamPreIllness.Text);
             Worksheet.Cells.Replace("$$$DamagesNotes$$$", IntakeSheets.Instance.DamNotes.Text);
+
             Worksheet.Cells.Replace("$$$ABDriverPassenger$$$", IntakeSheets.Instance.AccBenDriverPassenger.Text);
             Worksheet.Cells.Replace("$$$ABWereRegisteredOwner$$$", IntakeSheets.Instance.AccBenWereRegisOwner.Text);
             Worksheet.Cells.Replace("$$$ABRegisteredOwnerName$$$", IntakeSheets.Instance.AccBenRegisOwnerName.Text);
@@ -263,6 +287,7 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$ABCompletedOCF3$$$", IntakeSheets.Instance.AccBenOCF3.Text);
             Worksheet.Cells.Replace("$$$ABReceivingBenefits$$$", IntakeSheets.Instance.AccBenReplacBenef.Text);
             Worksheet.Cells.Replace("$$$ABNotes$$$", IntakeSheets.Instance.AccBenNotes.Text);
+
             Worksheet.Cells.Replace("$$$OtherNotes$$$", IntakeSheets.Instance.Notes.Text);
 
             // With Worksheet
@@ -335,6 +360,11 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private void TemplateName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox32_Enter(object sender, EventArgs e)
         {
 
         }

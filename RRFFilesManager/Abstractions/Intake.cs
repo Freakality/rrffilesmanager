@@ -85,5 +85,22 @@ namespace RRFFilesManager.Abstractions
 
         public string Notes { get; set; }
 
+        public string PolSickBenefits { get; set; }
+        public string PolWhoPaidBenefits { get; set; }
+        public DateTime PolDateLostBenefits { get; set; }
+        public string PolDeniedSTPorLTD { get; set; }
+        public string PolHowMuchBeingPaid { get; set; }
+        public string PolCompanyDeniedBenefits { get; set; }
+        public string PolLTDPrivateOrEmployerGroup { get; set; }
+        public DateTime PolDateSubmittedLTD { get; set; }
+        public DateTime PolDateStartedCollLTD { get; set; }
+        public DateTime PolDateLastDayLTD { get; set; }
+        public string PolFirstTimeLTDApproved { get; set; }
+        public string PolReasonTerminateLTD { get; set; }
+        public string PolApplicationForCPP { get; set; }
+        public string PolCPPOwnOrCompany { get; set; }
+        public string PolCPPApproved { get; set; }
+        public string PolOtherNotes { get; set; }
+
     }
 }

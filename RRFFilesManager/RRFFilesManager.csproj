@@ -154,6 +154,10 @@
     <Compile Include="Migrations\202010122339554_Initial.Designer.cs">
       <DependentUpon>202010122339554_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010130255511_Policy.cs" />
+    <Compile Include="Migrations\202010130255511_Policy.Designer.cs">
+      <DependentUpon>202010130255511_Policy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
@@ -195,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010122339554_Initial.resx">
       <DependentUpon>202010122339554_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010130255511_Policy.resx">
+      <DependentUpon>202010130255511_Policy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>

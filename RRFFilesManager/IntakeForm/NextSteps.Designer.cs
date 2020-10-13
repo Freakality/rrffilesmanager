@@ -192,6 +192,7 @@
             this.GroupBox32.Size = new System.Drawing.Size(1295, 535);
             this.GroupBox32.TabIndex = 3;
             this.GroupBox32.TabStop = false;
+            this.GroupBox32.Enter += new System.EventHandler(this.GroupBox32_Enter);
             // 
             // NextSteps
             // 
