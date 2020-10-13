@@ -32,6 +32,7 @@ namespace RRFFilesManager
         {
             ClientsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientsGridView.MultiSelect = false;
+            ClientsGridView.ReadOnly = true;
             this.ClientsGridView.DataSource = Program.DBContext.Clients.ToList();
         }
 
@@ -51,6 +52,16 @@ namespace RRFFilesManager
             var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
             PotentialClientInfo.Instance.SetClient(client);
             Hide();
+        }
+
+        private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SearchBox_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

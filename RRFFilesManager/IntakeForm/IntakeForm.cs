@@ -24,7 +24,13 @@ namespace RRFFilesManager.IntakeForm
 
         private static Intake intake;
         public static Intake Intake => intake ?? (intake = new Intake());
-
+        public void SetIntake(Intake intake)
+        {
+            IntakeForm.intake = intake;
+            PreliminaryInfo.Instance.FillForm(intake);
+            PotentialClientInfo.Instance.FillForm(intake);
+            IntakeSheets.Instance.FillForm(intake);
+        }
         private void Intake_Load(object sender, EventArgs e)
         {
             this.SetContent(PreliminaryInfo.Instance);

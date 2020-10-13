@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.MVALiabilityGroup = new System.Windows.Forms.GroupBox();
             this.LiaEstimDamageGroup = new System.Windows.Forms.GroupBox();
             this.LiaEstimDamage = new System.Windows.Forms.TextBox();
@@ -201,9 +200,6 @@
             this.Label37 = new System.Windows.Forms.Label();
             this.OtherNotes = new System.Windows.Forms.TabPage();
             this.Notes = new System.Windows.Forms.RichTextBox();
-            this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
-            this.CyaTemplatesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter();
-            this.CYATemplatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MVALiabilityGroup.SuspendLayout();
             this.LiaEstimDamageGroup.SuspendLayout();
             this.LiaInsuranceCoGroup.SuspendLayout();
@@ -269,8 +265,6 @@
             this.GroupBox31.SuspendLayout();
             this.GroupBox30.SuspendLayout();
             this.OtherNotes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // MVALiabilityGroup
@@ -2232,20 +2226,6 @@
             this.Notes.TabIndex = 0;
             this.Notes.Text = "";
             // 
-            // ActionLogDBDataSet
-            // 
-            this.ActionLogDBDataSet.DataSetName = "ActionLogDBDataSet";
-            this.ActionLogDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // CyaTemplatesTableAdapter
-            // 
-            this.CyaTemplatesTableAdapter.ClearBeforeFill = true;
-            // 
-            // CYATemplatesBindingSource
-            // 
-            this.CYATemplatesBindingSource.DataMember = "CYATemplates";
-            this.CYATemplatesBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
             // IntakeSheets
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2373,8 +2353,6 @@
             this.GroupBox30.ResumeLayout(false);
             this.GroupBox30.PerformLayout();
             this.OtherNotes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2548,9 +2526,6 @@
         internal System.Windows.Forms.TabPage OtherNotes;
         internal System.Windows.Forms.RichTextBox Notes;
         internal System.Windows.Forms.TextBox TextBox75;
-        internal ActionLogDBDataSet ActionLogDBDataSet;
-        internal ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter CyaTemplatesTableAdapter;
-        internal System.Windows.Forms.BindingSource CYATemplatesBindingSource;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         internal System.Windows.Forms.GroupBox SocialAssistanceGroup;

@@ -40,13 +40,7 @@
             System.Windows.Forms.Label DateOFCallLabel;
             System.Windows.Forms.Label AdditionalNotesLabel;
             this.AdditionalNotesTextBox = new System.Windows.Forms.TextBox();
-            this.IntakesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
             this.LawyerComboBox = new System.Windows.Forms.ComboBox();
-            this.FileLawyerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.StaffInterviewerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ResponsibleLawyerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.HearAboutUsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.MatterSubTypeComboBox = new System.Windows.Forms.ComboBox();
             this.FileNumberTextBox = new System.Windows.Forms.TextBox();
@@ -59,15 +53,12 @@
             this.StatutoryNoticeBox = new System.Windows.Forms.TextBox();
             this.DateOFCallDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Label42 = new System.Windows.Forms.Label();
-            this.MatterSubTypesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter();
-            this.IntakesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.IntakesTableAdapter();
-            this.HearAboutUsTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.PreliminayPanel = new System.Windows.Forms.Panel();
+            this.FindIntakeButton = new System.Windows.Forms.Button();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
             this.MatterTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.MatterTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             FileNumberLabel = new System.Windows.Forms.Label();
             StaffInterviewerLabel = new System.Windows.Forms.Label();
             MatterSubTypeLabel = new System.Windows.Forms.Label();
@@ -78,17 +69,10 @@
             DateOfLossLabel = new System.Windows.Forms.Label();
             DateOFCallLabel = new System.Windows.Forms.Label();
             AdditionalNotesLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FileLawyerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StaffInterviewerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ResponsibleLawyerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HearAboutUsBindingSource)).BeginInit();
             this.TableLayoutPanel1.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
             this.PreliminayPanel.SuspendLayout();
             this.GroupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MatterTypeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // FileNumberLabel
@@ -199,26 +183,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AdditionalNotesTextBox.BackColor = System.Drawing.Color.White;
-            this.AdditionalNotesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "AdditionalNotes", true));
             this.AdditionalNotesTextBox.Location = new System.Drawing.Point(129, 3);
             this.AdditionalNotesTextBox.Multiline = true;
             this.AdditionalNotesTextBox.Name = "AdditionalNotesTextBox";
             this.AdditionalNotesTextBox.Size = new System.Drawing.Size(1100, 177);
             this.AdditionalNotesTextBox.TabIndex = 23;
             // 
-            // IntakesBindingSource
-            // 
-            this.IntakesBindingSource.DataMember = "Intakes";
-            this.IntakesBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
-            // ActionLogDBDataSet
-            // 
-            this.ActionLogDBDataSet.DataSetName = "ActionLogDBDataSet";
-            this.ActionLogDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // LawyerComboBox
             // 
-            this.LawyerComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "FileLawyer", true));
             this.LawyerComboBox.DisplayMember = "Lawyer";
             this.LawyerComboBox.FormattingEnabled = true;
             this.LawyerComboBox.Location = new System.Drawing.Point(711, 49);
@@ -227,26 +199,6 @@
             this.LawyerComboBox.TabIndex = 26;
             this.LawyerComboBox.ValueMember = "Lawyer";
             this.LawyerComboBox.SelectedIndexChanged += new System.EventHandler(this.LawyerComboBox_SelectedIndexChanged);
-            // 
-            // FileLawyerBindingSource
-            // 
-            this.FileLawyerBindingSource.DataMember = "FileLawyer";
-            this.FileLawyerBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
-            // StaffInterviewerBindingSource
-            // 
-            this.StaffInterviewerBindingSource.DataMember = "StaffInterviewer";
-            this.StaffInterviewerBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
-            // ResponsibleLawyerBindingSource
-            // 
-            this.ResponsibleLawyerBindingSource.DataMember = "ResponsibleLawyer";
-            this.ResponsibleLawyerBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
-            // HearAboutUsBindingSource
-            // 
-            this.HearAboutUsBindingSource.DataMember = "HearAboutUs";
-            this.HearAboutUsBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
             // TableLayoutPanel1
             // 
@@ -291,7 +243,6 @@
             // 
             // MatterSubTypeComboBox
             // 
-            this.MatterSubTypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "MatterSubType", true));
             this.MatterSubTypeComboBox.FormattingEnabled = true;
             this.MatterSubTypeComboBox.Location = new System.Drawing.Point(711, 141);
             this.MatterSubTypeComboBox.Name = "MatterSubTypeComboBox";
@@ -301,7 +252,6 @@
             // 
             // FileNumberTextBox
             // 
-            this.FileNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "FileNumber", true));
             this.FileNumberTextBox.Enabled = false;
             this.FileNumberTextBox.Location = new System.Drawing.Point(127, 187);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
@@ -310,9 +260,6 @@
             // 
             // StaffInterviewerComboBox
             // 
-            this.StaffInterviewerComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "StaffInterviewer", true));
-            this.StaffInterviewerComboBox.DataSource = this.StaffInterviewerBindingSource;
-            this.StaffInterviewerComboBox.DisplayMember = "Lawyer";
             this.StaffInterviewerComboBox.FormattingEnabled = true;
             this.StaffInterviewerComboBox.Location = new System.Drawing.Point(711, 3);
             this.StaffInterviewerComboBox.Name = "StaffInterviewerComboBox";
@@ -322,9 +269,6 @@
             // 
             // ResponsibleLawyerComboBox
             // 
-            this.ResponsibleLawyerComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "ResponsibleLAwyer", true));
-            this.ResponsibleLawyerComboBox.DataSource = this.ResponsibleLawyerBindingSource;
-            this.ResponsibleLawyerComboBox.DisplayMember = "Lawyer";
             this.ResponsibleLawyerComboBox.FormattingEnabled = true;
             this.ResponsibleLawyerComboBox.Location = new System.Drawing.Point(127, 95);
             this.ResponsibleLawyerComboBox.Name = "ResponsibleLawyerComboBox";
@@ -334,7 +278,6 @@
             // 
             // LimitationPeriodTextBox
             // 
-            this.LimitationPeriodTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "LimitationPeriod", true));
             this.LimitationPeriodTextBox.Location = new System.Drawing.Point(127, 141);
             this.LimitationPeriodTextBox.Name = "LimitationPeriodTextBox";
             this.LimitationPeriodTextBox.Size = new System.Drawing.Size(435, 23);
@@ -342,8 +285,6 @@
             // 
             // HowHearComboBox
             // 
-            this.HowHearComboBox.DataSource = this.HearAboutUsBindingSource;
-            this.HowHearComboBox.DisplayMember = "Option";
             this.HowHearComboBox.FormattingEnabled = true;
             this.HowHearComboBox.Location = new System.Drawing.Point(127, 49);
             this.HowHearComboBox.Name = "HowHearComboBox";
@@ -354,8 +295,6 @@
             // DateOfLossDateTimePicker
             // 
             this.DateOfLossDateTimePicker.CustomFormat = " ";
-            this.DateOfLossDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "DateOFLoss", true));
-            this.DateOfLossDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.IntakesBindingSource, "DateOFLoss", true));
             this.DateOfLossDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateOfLossDateTimePicker.Location = new System.Drawing.Point(711, 95);
             this.DateOfLossDateTimePicker.Name = "DateOfLossDateTimePicker";
@@ -382,8 +321,6 @@
             // DateOFCallDateTimePicker
             // 
             this.DateOFCallDateTimePicker.CustomFormat = "MMM-dd-yyyy";
-            this.DateOFCallDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "DateOFCall", true));
-            this.DateOFCallDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.IntakesBindingSource, "DateOFCall", true));
             this.DateOFCallDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateOFCallDateTimePicker.Location = new System.Drawing.Point(127, 3);
             this.DateOFCallDateTimePicker.Name = "DateOFCallDateTimePicker";
@@ -399,18 +336,6 @@
             this.Label42.Size = new System.Drawing.Size(174, 26);
             this.Label42.TabIndex = 143;
             this.Label42.Text = "Preliminary Info";
-            // 
-            // MatterSubTypesTableAdapter
-            // 
-            this.MatterSubTypesTableAdapter.ClearBeforeFill = true;
-            // 
-            // IntakesTableAdapter
-            // 
-            this.IntakesTableAdapter.ClearBeforeFill = true;
-            // 
-            // HearAboutUsTableAdapter
-            // 
-            this.HearAboutUsTableAdapter.ClearBeforeFill = true;
             // 
             // TextBox1
             // 
@@ -442,6 +367,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PreliminayPanel.BackColor = System.Drawing.Color.White;
+            this.PreliminayPanel.Controls.Add(this.FindIntakeButton);
             this.PreliminayPanel.Controls.Add(this.GroupBox6);
             this.PreliminayPanel.Controls.Add(this.TableLayoutPanel2);
             this.PreliminayPanel.Controls.Add(this.TableLayoutPanel1);
@@ -452,6 +378,19 @@
             this.PreliminayPanel.Name = "PreliminayPanel";
             this.PreliminayPanel.Size = new System.Drawing.Size(1295, 535);
             this.PreliminayPanel.TabIndex = 144;
+            // 
+            // FindIntakeButton
+            // 
+            this.FindIntakeButton.BackColor = System.Drawing.Color.Maroon;
+            this.FindIntakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindIntakeButton.ForeColor = System.Drawing.Color.White;
+            this.FindIntakeButton.Location = new System.Drawing.Point(1157, 20);
+            this.FindIntakeButton.Name = "FindIntakeButton";
+            this.FindIntakeButton.Size = new System.Drawing.Size(97, 36);
+            this.FindIntakeButton.TabIndex = 140;
+            this.FindIntakeButton.Text = "Find Intake";
+            this.FindIntakeButton.UseVisualStyleBackColor = false;
+            this.FindIntakeButton.Click += new System.EventHandler(this.FindIntakeButton_Click);
             // 
             // GroupBox6
             // 
@@ -468,7 +407,6 @@
             // MatterTypeComboBox
             // 
             this.MatterTypeComboBox.BackColor = System.Drawing.Color.White;
-            this.MatterTypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "MatterType", true));
             this.MatterTypeComboBox.DisplayMember = "MatterType";
             this.MatterTypeComboBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MatterTypeComboBox.FormattingEnabled = true;
@@ -478,11 +416,6 @@
             this.MatterTypeComboBox.TabIndex = 139;
             this.MatterTypeComboBox.ValueMember = "MatterType";
             this.MatterTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.MatterTypeComboBox_SelectedIndexChanged);
-            // 
-            // MatterTypeBindingSource
-            // 
-            this.MatterTypeBindingSource.DataMember = "MatterType";
-            this.MatterTypeBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
             // PreliminaryInfo
             // 
@@ -499,7 +432,6 @@
             this.PreliminayPanel.ResumeLayout(false);
             this.PreliminayPanel.PerformLayout();
             this.GroupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MatterTypeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -507,13 +439,7 @@
         #endregion
 
         internal System.Windows.Forms.TextBox AdditionalNotesTextBox;
-        internal System.Windows.Forms.BindingSource IntakesBindingSource;
-        internal ActionLogDBDataSet ActionLogDBDataSet;
         internal System.Windows.Forms.ComboBox LawyerComboBox;
-        internal System.Windows.Forms.BindingSource FileLawyerBindingSource;
-        internal System.Windows.Forms.BindingSource StaffInterviewerBindingSource;
-        internal System.Windows.Forms.BindingSource ResponsibleLawyerBindingSource;
-        internal System.Windows.Forms.BindingSource HearAboutUsBindingSource;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel1;
         internal System.Windows.Forms.ComboBox MatterSubTypeComboBox;
         internal System.Windows.Forms.TextBox FileNumberTextBox;
@@ -526,14 +452,11 @@
         internal System.Windows.Forms.TextBox StatutoryNoticeBox;
         internal System.Windows.Forms.DateTimePicker DateOFCallDateTimePicker;
         internal System.Windows.Forms.Label Label42;
-        internal ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter MatterSubTypesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.IntakesTableAdapter IntakesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter HearAboutUsTableAdapter;
         internal System.Windows.Forms.TextBox TextBox1;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel2;
         internal System.Windows.Forms.Panel PreliminayPanel;
         internal System.Windows.Forms.GroupBox GroupBox6;
         internal System.Windows.Forms.ComboBox MatterTypeComboBox;
-        internal System.Windows.Forms.BindingSource MatterTypeBindingSource;
+        private System.Windows.Forms.Button FindIntakeButton;
     }
 }

@@ -193,6 +193,22 @@ namespace RRFFilesManager.IntakeForm
             intake.AdditionalNotes = AdditionalNotesTextBox.Text;
         }
 
+        public void FillForm(Intake intake)
+        {
+            MatterTypeComboBox.SelectedItem = intake.MatterType;
+            DateOFCallDateTimePicker.Value= intake.DateOfCall;
+            StaffInterviewerComboBox.SelectedItem = intake.StaffInterviewer;
+            HowHearComboBox.SelectedItem = intake.HowHear;
+            LawyerComboBox.SelectedItem = intake.FileLawyer;
+            ResponsibleLawyerComboBox.SelectedItem = intake.ResponsibleLawyer;
+            DateOfLossDateTimePicker.Value = intake.DateOFLoss;
+            LimitationPeriodTextBox.Text = intake.LimitationPeriod;
+            MatterSubTypeComboBox.SelectedItem = intake.MatterSubType;
+            FileNumberTextBox.Text = intake.FileNumber.ToString();
+            StatutoryNoticeBox.Text = intake.StatutoryNotice;
+            AdditionalNotesTextBox.Text = intake.AdditionalNotes;
+        }
+
         public void OnNext()
         {
             FillIntakeFromForm(IntakeForm.Intake);
@@ -201,6 +217,11 @@ namespace RRFFilesManager.IntakeForm
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             MatterSubTypeComboBox.DataSource = Program.DBContext.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
+        }
+
+        private void FindIntakeButton_Click(object sender, EventArgs e)
+        {
+            FindIntake.Instance.Show();
         }
     }
 }

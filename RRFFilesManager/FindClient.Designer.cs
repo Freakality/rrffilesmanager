@@ -47,6 +47,7 @@
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(800, 450);
             this.Content.TabIndex = 0;
+            this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.Content_Paint);
             // 
             // SearchBox
             // 
@@ -57,6 +58,7 @@
             this.SearchBox.TabIndex = 0;
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Search";
+            this.SearchBox.Enter += new System.EventHandler(this.SearchBox_Enter);
             // 
             // SearchTextBox
             // 

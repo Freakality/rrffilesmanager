@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.IntakesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
-            this.CYATemplatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CyaTemplatesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter();
             this.Submit = new System.Windows.Forms.Button();
-            this.IntakesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.IntakesTableAdapter();
             this.Label74 = new System.Windows.Forms.Label();
             this.Label73 = new System.Windows.Forms.Label();
             this.InvokeCYP = new System.Windows.Forms.RadioButton();
@@ -46,32 +40,10 @@
             this.GroupBox90 = new System.Windows.Forms.GroupBox();
             this.MVATemplatesGroupBox = new System.Windows.Forms.GroupBox();
             this.GroupBox32 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).BeginInit();
             this.GroupBox90.SuspendLayout();
             this.MVATemplatesGroupBox.SuspendLayout();
             this.GroupBox32.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // IntakesBindingSource
-            // 
-            this.IntakesBindingSource.DataMember = "Intakes";
-            this.IntakesBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
-            // ActionLogDBDataSet
-            // 
-            this.ActionLogDBDataSet.DataSetName = "ActionLogDBDataSet";
-            this.ActionLogDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // CYATemplatesBindingSource
-            // 
-            this.CYATemplatesBindingSource.DataMember = "CYATemplates";
-            this.CYATemplatesBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
-            // CyaTemplatesTableAdapter
-            // 
-            this.CyaTemplatesTableAdapter.ClearBeforeFill = true;
             // 
             // Submit
             // 
@@ -88,10 +60,6 @@
             this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Visible = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
-            // 
-            // IntakesTableAdapter
-            // 
-            this.IntakesTableAdapter.ClearBeforeFill = true;
             // 
             // Label74
             // 
@@ -132,9 +100,6 @@
             // TypeTemplate
             // 
             this.TypeTemplate.FormattingEnabled = true;
-            this.TypeTemplate.Items.AddRange(new object[] {
-            "Email",
-            "Letter"});
             this.TypeTemplate.Location = new System.Drawing.Point(29, 72);
             this.TypeTemplate.Name = "TypeTemplate";
             this.TypeTemplate.Size = new System.Drawing.Size(106, 24);
@@ -236,9 +201,6 @@
             this.Name = "NextSteps";
             this.Size = new System.Drawing.Size(1350, 610);
             this.Load += new System.EventHandler(this.NextSteps_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).EndInit();
             this.GroupBox90.ResumeLayout(false);
             this.GroupBox90.PerformLayout();
             this.MVATemplatesGroupBox.ResumeLayout(false);
@@ -250,13 +212,7 @@
         }
 
         #endregion
-
-        internal System.Windows.Forms.BindingSource IntakesBindingSource;
-        internal ActionLogDBDataSet ActionLogDBDataSet;
-        internal System.Windows.Forms.BindingSource CYATemplatesBindingSource;
-        internal ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter CyaTemplatesTableAdapter;
         internal System.Windows.Forms.Button Submit;
-        internal ActionLogDBDataSetTableAdapters.IntakesTableAdapter IntakesTableAdapter;
         internal System.Windows.Forms.Label Label74;
         internal System.Windows.Forms.Label Label73;
         internal System.Windows.Forms.RadioButton InvokeCYP;

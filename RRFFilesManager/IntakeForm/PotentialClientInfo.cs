@@ -216,6 +216,11 @@ namespace RRFFilesManager.IntakeForm
             PCIOtherNotes.Text = client.OtherNotes;
         }
 
+        public void FillForm(Intake intake)
+        {
+            FillForm(intake.Client);
+        }
+
         public Client CreateClient()
         {
                 var client = new Client();

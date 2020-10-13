@@ -28,18 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
-            this.MobileCarrierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PCIWorkNumber = new System.Windows.Forms.MaskedTextBox();
-            this.IntakesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Label15 = new System.Windows.Forms.Label();
             this.Label70 = new System.Windows.Forms.Label();
             this.Label71 = new System.Windows.Forms.Label();
             this.Label69 = new System.Windows.Forms.Label();
             this.PCIMobileNumber = new System.Windows.Forms.MaskedTextBox();
             this.Label8 = new System.Windows.Forms.Label();
-            this.IntakesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.IntakesTableAdapter();
             this.Label72 = new System.Windows.Forms.Label();
             this.Label10 = new System.Windows.Forms.Label();
             this.PCICity = new System.Windows.Forms.TextBox();
@@ -57,6 +52,7 @@
             this.MonthBirth = new System.Windows.Forms.ComboBox();
             this.PCIFirstName = new System.Windows.Forms.TextBox();
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
+            this.FindClientButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
             this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.Label16 = new System.Windows.Forms.Label();
@@ -67,7 +63,6 @@
             this.PCISuiteApt = new System.Windows.Forms.TextBox();
             this.PCIEmail = new System.Windows.Forms.TextBox();
             this.PCIProvince = new System.Windows.Forms.ComboBox();
-            this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PCIEmailToText = new System.Windows.Forms.TextBox();
             this.PCIMobileCarrier = new System.Windows.Forms.ComboBox();
             this.Label14 = new System.Windows.Forms.Label();
@@ -76,40 +71,19 @@
             this.Label11 = new System.Windows.Forms.Label();
             this.PCIHomeNumber = new System.Windows.Forms.MaskedTextBox();
             this.TableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.FindClientButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MobileCarrierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).BeginInit();
             this.PotentialClientInfoPanel.SuspendLayout();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
             this.TableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ActionLogDBDataSet
-            // 
-            this.ActionLogDBDataSet.DataSetName = "ActionLogDBDataSet";
-            this.ActionLogDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // MobileCarrierBindingSource
-            // 
-            this.MobileCarrierBindingSource.DataMember = "MobileCarrier";
-            this.MobileCarrierBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
             // PCIWorkNumber
             // 
-            this.PCIWorkNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIWorkNumber", true));
             this.PCIWorkNumber.Location = new System.Drawing.Point(401, 200);
             this.PCIWorkNumber.Mask = "(999) 000-0000";
             this.PCIWorkNumber.Name = "PCIWorkNumber";
             this.PCIWorkNumber.Size = new System.Drawing.Size(372, 24);
             this.PCIWorkNumber.TabIndex = 30;
-            // 
-            // IntakesBindingSource
-            // 
-            this.IntakesBindingSource.DataMember = "Intakes";
-            this.IntakesBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
             // Label15
             // 
@@ -151,7 +125,6 @@
             // 
             // PCIMobileNumber
             // 
-            this.PCIMobileNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIMobileNumber", true));
             this.PCIMobileNumber.Location = new System.Drawing.Point(799, 200);
             this.PCIMobileNumber.Mask = "(999) 000-0000";
             this.PCIMobileNumber.Name = "PCIMobileNumber";
@@ -167,10 +140,6 @@
             this.Label8.Size = new System.Drawing.Size(68, 18);
             this.Label8.TabIndex = 12;
             this.Label8.Text = "Province";
-            // 
-            // IntakesTableAdapter
-            // 
-            this.IntakesTableAdapter.ClearBeforeFill = true;
             // 
             // Label72
             // 
@@ -193,7 +162,6 @@
             // 
             // PCICity
             // 
-            this.PCICity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCICity", true));
             this.PCICity.Location = new System.Drawing.Point(401, 142);
             this.PCICity.Name = "PCICity";
             this.PCICity.Size = new System.Drawing.Size(372, 24);
@@ -325,7 +293,6 @@
             // 
             // PCISalutation
             // 
-            this.PCISalutation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCISalutation", true));
             this.PCISalutation.FormattingEnabled = true;
             this.PCISalutation.Items.AddRange(new object[] {
             "Miss",
@@ -359,7 +326,6 @@
             // 
             // PCIFirstName
             // 
-            this.PCIFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIFirstName", true));
             this.PCIFirstName.Location = new System.Drawing.Point(401, 19);
             this.PCIFirstName.Name = "PCIFirstName";
             this.PCIFirstName.Size = new System.Drawing.Size(372, 24);
@@ -378,6 +344,19 @@
             this.PotentialClientInfoPanel.Name = "PotentialClientInfoPanel";
             this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1250, 554);
             this.PotentialClientInfoPanel.TabIndex = 144;
+            // 
+            // FindClientButton
+            // 
+            this.FindClientButton.BackColor = System.Drawing.Color.Maroon;
+            this.FindClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindClientButton.ForeColor = System.Drawing.Color.White;
+            this.FindClientButton.Location = new System.Drawing.Point(1124, 4);
+            this.FindClientButton.Name = "FindClientButton";
+            this.FindClientButton.Size = new System.Drawing.Size(97, 36);
+            this.FindClientButton.TabIndex = 3;
+            this.FindClientButton.Text = "Find Client";
+            this.FindClientButton.UseVisualStyleBackColor = false;
+            this.FindClientButton.Click += new System.EventHandler(this.FindClientButton_Click);
             // 
             // Label41
             // 
@@ -476,7 +455,6 @@
             // 
             // PCILastName
             // 
-            this.PCILastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCILastName", true));
             this.PCILastName.Location = new System.Drawing.Point(799, 19);
             this.PCILastName.Name = "PCILastName";
             this.PCILastName.Size = new System.Drawing.Size(374, 24);
@@ -484,7 +462,6 @@
             // 
             // PCIAddress
             // 
-            this.PCIAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIAddress", true));
             this.PCIAddress.Location = new System.Drawing.Point(3, 83);
             this.PCIAddress.Name = "PCIAddress";
             this.PCIAddress.Size = new System.Drawing.Size(372, 24);
@@ -492,7 +469,6 @@
             // 
             // PCISuiteApt
             // 
-            this.PCISuiteApt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCISuiteApt", true));
             this.PCISuiteApt.Location = new System.Drawing.Point(401, 83);
             this.PCISuiteApt.Name = "PCISuiteApt";
             this.PCISuiteApt.Size = new System.Drawing.Size(372, 24);
@@ -500,7 +476,6 @@
             // 
             // PCIEmail
             // 
-            this.PCIEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIEmail", true));
             this.PCIEmail.Location = new System.Drawing.Point(799, 83);
             this.PCIEmail.Name = "PCIEmail";
             this.PCIEmail.Size = new System.Drawing.Size(372, 24);
@@ -508,9 +483,6 @@
             // 
             // PCIProvince
             // 
-            this.PCIProvince.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIProvince", true));
-            this.PCIProvince.DataSource = this.provincesBindingSource;
-            this.PCIProvince.DisplayMember = "Description";
             this.PCIProvince.FormattingEnabled = true;
             this.PCIProvince.Location = new System.Drawing.Point(3, 142);
             this.PCIProvince.Name = "PCIProvince";
@@ -519,14 +491,8 @@
             this.PCIProvince.ValueMember = "Province";
             this.PCIProvince.SelectedIndexChanged += new System.EventHandler(this.PCIProvince_SelectedIndexChanged);
             // 
-            // provincesBindingSource
-            // 
-            this.provincesBindingSource.DataMember = "Provinces";
-            this.provincesBindingSource.DataSource = this.ActionLogDBDataSet;
-            // 
             // PCIEmailToText
             // 
-            this.PCIEmailToText.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIEmailToText", true));
             this.PCIEmailToText.Location = new System.Drawing.Point(401, 260);
             this.PCIEmailToText.Name = "PCIEmailToText";
             this.PCIEmailToText.Size = new System.Drawing.Size(372, 24);
@@ -534,9 +500,6 @@
             // 
             // PCIMobileCarrier
             // 
-            this.PCIMobileCarrier.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIMobileCarrier", true));
-            this.PCIMobileCarrier.DataSource = this.MobileCarrierBindingSource;
-            this.PCIMobileCarrier.DisplayMember = "Carrier";
             this.PCIMobileCarrier.FormattingEnabled = true;
             this.PCIMobileCarrier.Location = new System.Drawing.Point(3, 260);
             this.PCIMobileCarrier.Name = "PCIMobileCarrier";
@@ -556,7 +519,6 @@
             // 
             // PCIPostalCode
             // 
-            this.PCIPostalCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIPostalCode", true));
             this.PCIPostalCode.Location = new System.Drawing.Point(799, 142);
             this.PCIPostalCode.Name = "PCIPostalCode";
             this.PCIPostalCode.Size = new System.Drawing.Size(372, 24);
@@ -582,7 +544,6 @@
             // 
             // PCIHomeNumber
             // 
-            this.PCIHomeNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.IntakesBindingSource, "PCIHomeNumber", true));
             this.PCIHomeNumber.Location = new System.Drawing.Point(3, 200);
             this.PCIHomeNumber.Mask = "(999) 000-0000";
             this.PCIHomeNumber.Name = "PCIHomeNumber";
@@ -610,19 +571,6 @@
             this.TableLayoutPanel9.Size = new System.Drawing.Size(374, 44);
             this.TableLayoutPanel9.TabIndex = 32;
             // 
-            // FindClientButton
-            // 
-            this.FindClientButton.BackColor = System.Drawing.Color.Maroon;
-            this.FindClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindClientButton.ForeColor = System.Drawing.Color.White;
-            this.FindClientButton.Location = new System.Drawing.Point(1124, 4);
-            this.FindClientButton.Name = "FindClientButton";
-            this.FindClientButton.Size = new System.Drawing.Size(97, 36);
-            this.FindClientButton.TabIndex = 3;
-            this.FindClientButton.Text = "Find Client";
-            this.FindClientButton.UseVisualStyleBackColor = false;
-            this.FindClientButton.Click += new System.EventHandler(this.FindClientButton_Click);
-            // 
             // PotentialClientInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -637,7 +585,6 @@
             this.TableLayoutPanel4.PerformLayout();
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
             this.TableLayoutPanel9.ResumeLayout(false);
             this.TableLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
@@ -645,17 +592,13 @@
         }
 
         #endregion
-        internal ActionLogDBDataSet ActionLogDBDataSet;
-        internal System.Windows.Forms.BindingSource MobileCarrierBindingSource;
         internal System.Windows.Forms.MaskedTextBox PCIWorkNumber;
-        internal System.Windows.Forms.BindingSource IntakesBindingSource;
         internal System.Windows.Forms.Label Label15;
         internal System.Windows.Forms.Label Label70;
         internal System.Windows.Forms.Label Label71;
         internal System.Windows.Forms.Label Label69;
         internal System.Windows.Forms.MaskedTextBox PCIMobileNumber;
         internal System.Windows.Forms.Label Label8;
-        internal ActionLogDBDataSetTableAdapters.IntakesTableAdapter IntakesTableAdapter;
         internal System.Windows.Forms.Label Label72;
         internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.TextBox PCICity;
@@ -691,7 +634,6 @@
         internal System.Windows.Forms.Label Label11;
         internal System.Windows.Forms.MaskedTextBox PCIHomeNumber;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel9;
-        private System.Windows.Forms.BindingSource provincesBindingSource;
         private System.Windows.Forms.Button FindClientButton;
     }
 }

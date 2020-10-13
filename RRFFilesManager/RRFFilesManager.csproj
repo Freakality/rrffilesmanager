@@ -119,6 +119,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="IntakeForm\FindIntake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntakeForm\FindIntake.Designer.cs">
+      <DependentUpon>FindIntake.cs</DependentUpon>
+    </Compile>
     <Compile Include="IntakeForm\IntakeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntakeForm\FindIntake.resx">
+      <DependentUpon>FindIntake.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IntakeForm\IntakeForm.resx">
       <DependentUpon>IntakeForm.cs</DependentUpon>

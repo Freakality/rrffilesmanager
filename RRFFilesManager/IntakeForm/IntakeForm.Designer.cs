@@ -28,50 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
             this.Content = new System.Windows.Forms.Panel();
             this.BackButton = new System.Windows.Forms.Button();
             this.Actions = new System.Windows.Forms.Panel();
             this.NextButton = new System.Windows.Forms.Button();
             this.Container = new System.Windows.Forms.Panel();
-            this.CYATemplatesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter();
-            this.IntakesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.IntakesTableAdapter();
-            this.MatterSubTypesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter();
-            this.ProvincesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.ProvincesTableAdapter();
-            this.HearAboutUsTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter();
-            this.TableAdapterManager = new RRFFilesManager.ActionLogDBDataSetTableAdapters.TableAdapterManager();
             this.Button5 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CYATemplatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.MatterSubTypes1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.MobileCarrierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ProvincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.HearAboutUsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DisabilityInsuranceCompaniesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.InsuranceCompaniesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.IntakesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.MatterSubTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
             this.Actions.SuspendLayout();
             this.Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MatterSubTypes1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MobileCarrierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProvincesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HearAboutUsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DisabilityInsuranceCompaniesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InsuranceCompaniesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MatterSubTypesBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ActionLogDBDataSet
-            // 
-            this.ActionLogDBDataSet.DataSetName = "ActionLogDBDataSet";
-            this.ActionLogDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Content
             // 
@@ -133,41 +101,6 @@
             this.Container.Size = new System.Drawing.Size(1350, 677);
             this.Container.TabIndex = 148;
             // 
-            // CYATemplatesTableAdapter
-            // 
-            this.CYATemplatesTableAdapter.ClearBeforeFill = true;
-            // 
-            // IntakesTableAdapter
-            // 
-            this.IntakesTableAdapter.ClearBeforeFill = true;
-            // 
-            // MatterSubTypesTableAdapter
-            // 
-            this.MatterSubTypesTableAdapter.ClearBeforeFill = true;
-            // 
-            // ProvincesTableAdapter
-            // 
-            this.ProvincesTableAdapter.ClearBeforeFill = true;
-            // 
-            // HearAboutUsTableAdapter
-            // 
-            this.HearAboutUsTableAdapter.ClearBeforeFill = true;
-            // 
-            // TableAdapterManager
-            // 
-            this.TableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.TableAdapterManager.ClientsTableAdapter = null;
-            this.TableAdapterManager.Connection = null;
-            this.TableAdapterManager.CYATemplatesTableAdapter = null;
-            this.TableAdapterManager.HearAboutUsTableAdapter = null;
-            this.TableAdapterManager.IntakesTableAdapter = null;
-            this.TableAdapterManager.LawyersTableAdapter = null;
-            this.TableAdapterManager.MatterSubTypesTableAdapter = null;
-            this.TableAdapterManager.MatterTypesTableAdapter = null;
-            this.TableAdapterManager.MobileCarriersTableAdapter = null;
-            this.TableAdapterManager.ProvincesTableAdapter = null;
-            this.TableAdapterManager.UpdateOrder = RRFFilesManager.ActionLogDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // Button5
             // 
             this.Button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -221,48 +154,21 @@
             this.Text = "Intake";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Intake_FormClosing);
             this.Load += new System.EventHandler(this.Intake_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
             this.Actions.ResumeLayout(false);
             this.Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MatterSubTypes1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MobileCarrierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProvincesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HearAboutUsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DisabilityInsuranceCompaniesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InsuranceCompaniesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.IntakesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MatterSubTypesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        internal System.Windows.Forms.BindingSource CYATemplatesBindingSource;
-        internal System.Windows.Forms.BindingSource MatterSubTypes1BindingSource;
-        internal System.Windows.Forms.BindingSource MobileCarrierBindingSource;
-        internal System.Windows.Forms.BindingSource ProvincesBindingSource;
-        internal System.Windows.Forms.BindingSource HearAboutUsBindingSource;
-        internal System.Windows.Forms.BindingSource DisabilityInsuranceCompaniesBindingSource;
-        internal System.Windows.Forms.BindingSource InsuranceCompaniesBindingSource;
-        internal System.Windows.Forms.BindingSource IntakesBindingSource;
         internal System.Windows.Forms.PictureBox PictureBox1;
-        internal ActionLogDBDataSet ActionLogDBDataSet;
         internal System.Windows.Forms.Panel Content;
         internal System.Windows.Forms.Button BackButton;
         internal System.Windows.Forms.Panel Actions;
         internal System.Windows.Forms.Button NextButton;
         internal new System.Windows.Forms.Panel Container;
-        internal ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter CYATemplatesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.IntakesTableAdapter IntakesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.MatterSubTypesTableAdapter MatterSubTypesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.ProvincesTableAdapter ProvincesTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.HearAboutUsTableAdapter HearAboutUsTableAdapter;
-        internal ActionLogDBDataSetTableAdapters.TableAdapterManager TableAdapterManager;
         internal System.Windows.Forms.Button Button5;
         internal System.Windows.Forms.Button Button4;
-        internal System.Windows.Forms.BindingSource MatterSubTypesBindingSource;
     }
 }

@@ -144,12 +144,34 @@ namespace RRFFilesManager.IntakeForm
 
         public void OnNext()
         {
-                FillIntakeFromForm(IntakeForm.Intake);
-                Program.DBContext.Intakes.Add(IntakeForm.Intake);
-                Program.DBContext.SaveChanges();
+            FillOrCreateIntakeClient();
         }
 
-        public void FillIntakeFromForm(Intake intake)
+        public Intake CreateIntake(Intake intake)
+        {
+            FillIntake(intake);
+            Program.DBContext.Intakes.Add(intake);
+            Program.DBContext.SaveChanges();
+            return intake;
+        }
+
+        public Intake UpdateIntake(int intakeId)
+        {
+            var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intakeId);
+            FillIntake(intake);
+            Program.DBContext.SaveChanges();
+            return intake;
+        }
+
+        public void FillOrCreateIntakeClient()
+        {
+            if (IntakeForm.Intake.ID == default)
+                CreateIntake(IntakeForm.Intake);
+            else
+                UpdateIntake(IntakeForm.Intake.ID);
+        }
+
+        public void FillIntake(Intake intake)
         {
 
             FillIntakeFromLiabilityForm(intake);
@@ -227,6 +249,87 @@ namespace RRFFilesManager.IntakeForm
             intake.AccBenOCF3 = AccBenOCF3.Text;
             intake.AccBenReplacBenef = AccBenReplacBenef.Text;
             intake.AccBenNotes = AccBenNotes.Text;
+        }
+
+
+        public void FillForm(Intake intake)
+        {
+
+            FillLiabilityForm(intake);
+            FillEmploymentForm(intake);
+            FillDamagesForm(intake);
+            FillAccidentBenefitsForm(intake);
+            Notes.Text = intake.Notes;
+        }
+        public void FillLiabilityForm(Intake intake)
+        {
+            LiaDate.Value = intake.LiaDate;
+            LiaMVR.Checked = intake.LiaMVR;
+            LiaReportCollision.Checked = intake.LiaReportCollision;
+            LiaMVCExchange.Checked = intake.LiaMVCExchange;
+            LiaOtherDoc.Checked = intake.LiaOtherDoc;
+            LiaWhereAccident.Text = intake.LiaWhereAccident;
+            LiaExplain.Text = intake.LiaExplain;
+            LiaHavePhotos.Text = intake.LiaHavePhotos;
+            LiaEstimDamage.Text = intake.LiaEstimDamage;
+            LiaYourFault.Text = intake.LiaYourFault;
+            LiaDriverName.Text = intake.LiaDriverName;
+            LiaOwnerName.Text = intake.LiaOwnerName;
+            LiaInsuranceCo.Text = intake.LiaInsuranceCo;
+            LiaHaveCopy.Text = intake.LiaHaveCopy;
+            LiaOwnNegligence.Text = intake.LiaOwnNegligence;
+            LiaFaultPerson.Text = intake.LiaFaultPerson;
+            LiaMunicipality.Text = intake.LiaMunicipality;
+            LiaNotifiedMunicipality.Text = intake.LiaNotifiedMunicipality;
+            LiaNotes.Text = intake.LiaNotes;
+        }
+
+        public void FillEmploymentForm(Intake intake)
+        {
+            EILWereEmployed.Text = intake.EILWereEmployed;
+            EILEmployed4Weeks.Text = intake.EILEmployed4Weeks;
+            EILEmployed52Weeks.Text = intake.EILEmployed52Weeks;
+            EILT4Employee.Text = intake.EILT4Employee;
+            EILT4Company.Text = intake.EILT4Company;
+            EILCollecInsurance.Text = intake.EILCollecInsurance;
+            EILEmployeeGrossEarning.Text = intake.EILEmployeeGrossEarning;
+            EILHowLongEmployee.Text = intake.EILHowLongEmployee;
+            EILJobTitle.Text = intake.EILJobTitle;
+            EILExplainJob.Text = intake.EILExplainJob;
+            EILWereSelfEmployed.Text = intake.EILWereSelfEmployed;
+            EILSelfBusinessName.Text = intake.EILSelfBusinessName;
+            EILSelfGrossEarning.Text = intake.EILSelfGrossEarning;
+            EILHowLongBusiness.Text = intake.EILHowLongBusiness;
+            EILNotes.Text = intake.EILNotes;
+        }
+        public void FillDamagesForm(Intake intake)
+        {
+            DamHitVehicleConcrete.Text = intake.DamHitVehicleConcrete;
+            DamHeadInjuries.Text = intake.DamHeadInjuries;
+            DamHeadInjuries.Text = intake.DamHeadInjuries;
+            DamUpperBodyInjuries.Text = intake.DamUpperBodyInjuries;
+            DamLowerBodyInjuries.Text = intake.DamLowerBodyInjuries;
+            DamPsychologicalEffect.Text = intake.DamPsychologicalEffect;
+            DamPrescribed.Text = intake.DamPrescribed;
+            DamWereSeeingDoctor.Text = intake.DamWereSeeingDoctor;
+            DamPreAccident.Text = intake.DamPreAccident;
+            DamPreIllness.Text = intake.DamPreIllness;
+            DamNotes.Text = intake.DamNotes;
+        }
+        public void FillAccidentBenefitsForm(Intake intake)
+        {
+            AccBenDriverPassenger.Text = intake.AccBenDriverPassenger;
+            AccBenWereRegisOwner.Text = intake.AccBenWereRegisOwner;
+            AccBenRegisOwnerName.Text = intake.AccBenRegisOwnerName;
+            AccBenPolicyNumber.Text = intake.AccBenPolicyNumber;
+            AccBenClaimNumber.Text = intake.AccBenClaimNumber;
+            AccBenInsuranceCompany.Text = intake.AccBenInsuranceCompany;
+            AccBenAdjuster.Text = intake.AccBenAdjuster;
+            AccBenOCF1.Text = intake.AccBenOCF1;
+            AccBenOCF2.Text = intake.AccBenOCF2;
+            AccBenOCF3.Text = intake.AccBenOCF3;
+            AccBenReplacBenef.Text = intake.AccBenReplacBenef;
+            AccBenNotes.Text = intake.AccBenNotes;
         }
 
         private void Content_Paint(object sender, PaintEventArgs e)
