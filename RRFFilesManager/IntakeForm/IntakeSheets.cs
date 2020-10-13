@@ -33,24 +33,41 @@ namespace RRFFilesManager.IntakeForm
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
                 this.TabControl.TabPages.Add(this.Damages);
                 this.TabControl.TabPages.Add(this.AccidentBenefits);
+                Liability.BackColor = Color.LightYellow;
+                EmploymentIncomeLoss.BackColor = Color.LightYellow;
+                Damages.BackColor = Color.LightYellow;
+                AccidentBenefits.BackColor = Color.LightYellow;
+                OtherNotes.BackColor = Color.LightYellow;
             }
             else if (IntakeForm.Intake.MatterType.Description == "Occupiers Liability")
             {
                 this.TabControl.TabPages.Add(this.Liability);
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
                 this.TabControl.TabPages.Add(this.Damages);
+                Liability.BackColor = Color.LightGreen;
+                EmploymentIncomeLoss.BackColor = Color.LightGreen;
+                Damages.BackColor = Color.LightGreen;
+                OtherNotes.BackColor = Color.LightGreen;
             }
             else if (IntakeForm.Intake.MatterType.Description == "Disability")
             {
                 this.TabControl.TabPages.Add(this.Policy);
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
                 this.TabControl.TabPages.Add(this.Damages);
+                Policy.BackColor = Color.LightBlue;
+                EmploymentIncomeLoss.BackColor = Color.LightBlue;
+                Damages.BackColor = Color.LightBlue;
+                OtherNotes.BackColor = Color.LightBlue;
             }
             else if (IntakeForm.Intake.MatterType.Description == "General Negligence")
             {
                 this.TabControl.TabPages.Add(this.Liability);
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
                 this.TabControl.TabPages.Add(this.Damages);
+                Liability.BackColor = Color.LightSalmon;
+                EmploymentIncomeLoss.BackColor = Color.LightSalmon;
+                Damages.BackColor = Color.LightSalmon;
+                OtherNotes.BackColor = Color.LightSalmon;
             }
 
             this.TabControl.TabPages.Add(this.OtherNotes);

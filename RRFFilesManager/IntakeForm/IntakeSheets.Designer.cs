@@ -555,7 +555,7 @@
             // Liability
             // 
             this.Liability.AutoScroll = true;
-            this.Liability.BackColor = System.Drawing.SystemColors.Menu;
+            this.Liability.BackColor = System.Drawing.Color.Transparent;
             this.Liability.Controls.Add(this.Content);
             this.Liability.Location = new System.Drawing.Point(4, 22);
             this.Liability.Name = "Liability";
@@ -566,6 +566,7 @@
             // Content
             // 
             this.Content.AutoScroll = true;
+            this.Content.BackColor = System.Drawing.Color.Transparent;
             this.Content.Controls.Add(this.IncidentDateTimeGroupBox);
             this.Content.Controls.Add(this.ReceiveCopyGroupBox);
             this.Content.Controls.Add(this.LiaWhereAccidentGroup);
