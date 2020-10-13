@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Interop.Excel;
 using RRFFilesManager.DataAccess;
+using System.Configuration;
+using System.IO;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -60,9 +62,13 @@ namespace RRFFilesManager.IntakeForm
                     IntakeForm.Instance.Hide();
                     PleaseWait.Instance.Show();
                     var CYATemplate = Program.DBContext.CYATemplates.FirstOrDefault(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID && s.TypeOfTemplate == this.TypeTemplate.Text && s.TemplateName == this.TemplateName.Text);
-                    string templateDocumentPath = CYATemplate.TemplatePath.Replace(@"\\FS\FOISY\!", @"C:\");
+                    string templateDocumentPath = CYATemplate.TemplatePath;
+                    string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];
+                    if (!string.IsNullOrWhiteSpace(wordTemplatesPathSetting))
+                        templateDocumentPath = templateDocumentPath.Replace(@"\\FS\FOISY\!", wordTemplatesPathSetting);
+
                     attachmentPath = this.CreateAndFillTemplateDocument(templateDocumentPath);
-                    string templateExcelPath = ((@"C:\test\IntakeReportTemplates\" + PreliminaryInfo.Instance.MatterTypeComboBox.Text) + ".xlsx");
+                    string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{PreliminaryInfo.Instance.MatterTypeComboBox.Text}.xlsx");
                     attachmentPath2 = this.CreateAndFillTemplateWoorkbook(templateExcelPath);
                     string nameSt = ((PotentialClientInfo.Instance.PCILastName.Text + ", ") + PotentialClientInfo.Instance.PCIFirstName.Text);
                     string signa = PreliminaryInfo.Instance.StaffInterviewerComboBox.Text;
