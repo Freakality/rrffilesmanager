@@ -122,12 +122,9 @@ namespace RRFFilesManager.IntakeForm
 
         private void LawyerComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var context = new DataContext())
-            {
-                var lawyer = (Lawyer)LawyerComboBox.SelectedItem;
-                var fileNumber = GetNewFileNumber(lawyer);
-                FileNumberTextBox.Text = fileNumber.ToString();
-            }
+            var lawyer = (Lawyer)LawyerComboBox.SelectedItem;
+            var fileNumber = GetNewFileNumber(lawyer);
+            FileNumberTextBox.Text = fileNumber.ToString();
         }
 
         private void PreliminaryInfo_Load(object sender, EventArgs e)
@@ -203,10 +200,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var context = new DataContext())
-            {
-                MatterSubTypeComboBox.DataSource = context.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
-            }
+            MatterSubTypeComboBox.DataSource = Program.DBContext.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
         }
     }
 }
