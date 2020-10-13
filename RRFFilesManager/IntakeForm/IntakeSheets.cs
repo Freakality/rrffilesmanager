@@ -75,7 +75,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void IntakeSheets_Load(object sender, EventArgs e)
         {
-
+            PolCompanyDeniedBenefits.DataSource = Program.DBContext.DisabilityInsuranceCompanies.ToList();
         }
 
         public void LoadLiabilityTab()
@@ -276,7 +276,7 @@ namespace RRFFilesManager.IntakeForm
             intake.PolDateLostBenefits = PolDateLostBenefits.Value;
             intake.PolDeniedSTPorLTD = PolDeniedSTPorLTD.Text;
             intake.PolHowMuchBeingPaid = PolHowMuchBeingPaid.Text;
-            intake.PolCompanyDeniedBenefits = PolCompanyDeniedBenefits.Text;
+            intake.PolCompanyDeniedBenefits = (DisabilityInsuranceCompany)PolCompanyDeniedBenefits.SelectedItem;
             intake.PolLTDPrivateOrEmployerGroup = PolLTDPrivateOrEmployerGroup.Text;
             intake.PolDateSubmittedLTD = PolDateSubmittedLTD.Value;
             intake.PolDateStartedCollLTD = PolDateStartedCollLTD.Value;
@@ -378,7 +378,7 @@ namespace RRFFilesManager.IntakeForm
             PolDateLostBenefits.Value = intake.PolDateLostBenefits;
             PolDeniedSTPorLTD.Text = intake.PolDeniedSTPorLTD;
             PolHowMuchBeingPaid.Text = intake.PolHowMuchBeingPaid;
-            PolCompanyDeniedBenefits.Text = intake.PolCompanyDeniedBenefits;
+            PolCompanyDeniedBenefits.SelectedItem = intake.PolCompanyDeniedBenefits;
             PolLTDPrivateOrEmployerGroup.Text = intake.PolLTDPrivateOrEmployerGroup;
             PolDateSubmittedLTD.Value = intake.PolDateSubmittedLTD;
             PolDateStartedCollLTD.Value = intake.PolDateStartedCollLTD;

@@ -247,6 +247,24 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$LiabilityMunicipalityNoticedy$$$", IntakeSheets.Instance.LiaNotifiedMunicipality.Text);
             Worksheet.Cells.Replace("$$$LiabilityNotes$$$", IntakeSheets.Instance.LiaNotes.Text);
 
+
+            Worksheet.Cells.Replace("$$$PolicySickBenefits$$$", IntakeSheets.Instance.PolSickBenefits.Text);
+            Worksheet.Cells.Replace("$$$PolicyWhoPaidBenefits$$$", IntakeSheets.Instance.PolWhoPaidBenefits.Text);
+            Worksheet.Cells.Replace("$$$PolicyDateLostBenefits$$$", IntakeSheets.Instance.PolDateLostBenefits.Value.ToString("MMMM d, yyyy"));
+            Worksheet.Cells.Replace("$$$PolicyDeniedSTPorLTD$$$", IntakeSheets.Instance.PolDeniedSTPorLTD.Text);
+            Worksheet.Cells.Replace("$$$PolicyHowMuchBeingPaid$$$", IntakeSheets.Instance.PolHowMuchBeingPaid.Text);
+            Worksheet.Cells.Replace("$$$PolicyCompanyDeniedBenefits$$$", IntakeSheets.Instance.PolCompanyDeniedBenefits.Text);
+            Worksheet.Cells.Replace("$$$PolicyLTDPrivateOrEmployerGroup$$$", IntakeSheets.Instance.PolLTDPrivateOrEmployerGroup.Text);
+            Worksheet.Cells.Replace("$$$PolicyDateSubmittedLTD$$$", IntakeSheets.Instance.PolDateSubmittedLTD.Value.ToString("MMMM d, yyyy"));
+            Worksheet.Cells.Replace("$$$PolicyDateStartedCollLTD$$$", IntakeSheets.Instance.PolDateStartedCollLTD.Value.ToString("MMMM d, yyyy"));
+            Worksheet.Cells.Replace("$$$PolicyDateLastDayLTD$$$", IntakeSheets.Instance.PolDateLastDayLTD.Value.ToString("MMMM d, yyyy"));
+            Worksheet.Cells.Replace("$$$PolicyFirstTimeLTDApproved$$$", IntakeSheets.Instance.PolFirstTimeLTDApproved.Text);
+            Worksheet.Cells.Replace("$$$PolicyReasonTerminateLTD$$$", IntakeSheets.Instance.PolReasonTerminateLTD.Text);
+            Worksheet.Cells.Replace("$$$PolicyApplicationForCPP$$$", IntakeSheets.Instance.PolApplicationForCPP.Text);
+            Worksheet.Cells.Replace("$$$PolicyCPPOwnOrCompany$$$", IntakeSheets.Instance.PolCPPOwnOrCompany.Text);
+            Worksheet.Cells.Replace("$$$PolicyCPPApproved$$$", IntakeSheets.Instance.PolCPPApproved.Text);
+            Worksheet.Cells.Replace("$$$PolicyOtherNote$$$", IntakeSheets.Instance.PolOtherNotes.Text);
+
             Worksheet.Cells.Replace("$$$EmploymentWereEmployed$$$", IntakeSheets.Instance.EILWereEmployed.Text);
             Worksheet.Cells.Replace("$$$EmploymentEmployed4Weeks$$$", IntakeSheets.Instance.EILEmployed4Weeks.Text);
             Worksheet.Cells.Replace("$$$EmploymentEmployed52Weeks$$$", IntakeSheets.Instance.EILEmployed52Weeks.Text);
