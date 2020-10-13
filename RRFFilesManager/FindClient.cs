@@ -15,13 +15,14 @@ namespace RRFFilesManager
 {
     public partial class FindClient : Form
     {
+        private DataContext context { get; set; } = new DataContext();
         public FindClient()
         {
             InitializeComponent();
         }
 
         private static FindClient instance;
-        public static FindClient Instance => instance ?? (instance = new FindClient());
+        public static FindClient Instance => instance == null || instance.IsDisposed ? (instance = new FindClient()) : instance;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -32,33 +33,24 @@ namespace RRFFilesManager
         {
             ClientsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientsGridView.MultiSelect = false;
-            using (var context = new DataContext())
-            {
-                this.ClientsGridView.DataSource = context.Clients.ToList();
-            }
+            this.ClientsGridView.DataSource = context.Clients.ToList();
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            using (var context = new DataContext())
-            {
-                this.ClientsGridView.DataSource = context.Clients.Where(s => 
-                    s.FirstName.Contains(SearchTextBox.Text) ||
-                    s.LastName.Contains(SearchTextBox.Text) ||
-                    s.Email.Contains(SearchTextBox.Text) ||
-                    s.ID.ToString().Contains(SearchTextBox.Text)
-                ).ToList();
-            }
+            this.ClientsGridView.DataSource = context.Clients.Where(s => 
+                s.FirstName.Contains(SearchTextBox.Text) ||
+                s.LastName.Contains(SearchTextBox.Text) ||
+                s.Email.Contains(SearchTextBox.Text) ||
+                s.ID.ToString().Contains(SearchTextBox.Text)
+            ).ToList();
         }
 
         private void ClientsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            using (var context = new DataContext())
-            {
-                var client = context.Clients.FirstOrDefault(s => s.ID == clientId);
-                PotentialClientInfo.Instance.SetClient(client);
-            }
+            var client = context.Clients.FirstOrDefault(s => s.ID == clientId);
+            PotentialClientInfo.Instance.SetClient(client);
             Hide();
         }
     }

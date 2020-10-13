@@ -73,12 +73,13 @@
             this.LiaNotesGroup = new System.Windows.Forms.GroupBox();
             this.LiaNotes = new System.Windows.Forms.TextBox();
             this.GroupBox13 = new System.Windows.Forms.GroupBox();
-            this.EILEmployed52Weeks = new System.Windows.Forms.ComboBox();
-            this.EILEmployed52WeeksLabel = new System.Windows.Forms.Label();
-            this.EILEmployed4Weeks = new System.Windows.Forms.ComboBox();
-            this.EILEmployed4WeeksLabel = new System.Windows.Forms.Label();
-            this.EILWereEmployed = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.EILWereEmployedLabel = new System.Windows.Forms.Label();
+            this.EILWereEmployed = new System.Windows.Forms.ComboBox();
+            this.EILEmployed4WeeksLabel = new System.Windows.Forms.Label();
+            this.EILEmployed4Weeks = new System.Windows.Forms.ComboBox();
+            this.EILEmployed52WeeksLabel = new System.Windows.Forms.Label();
+            this.EILEmployed52Weeks = new System.Windows.Forms.ComboBox();
             this.TextBox77 = new System.Windows.Forms.TextBox();
             this.GroupBox123 = new System.Windows.Forms.GroupBox();
             this.ComboBox39 = new System.Windows.Forms.ComboBox();
@@ -118,20 +119,17 @@
             this.GroupBox124 = new System.Windows.Forms.GroupBox();
             this.Label118 = new System.Windows.Forms.Label();
             this.EmploymentIncomeLoss = new System.Windows.Forms.TabPage();
-            this.GroupBox18 = new System.Windows.Forms.GroupBox();
-            this.EILNotes = new System.Windows.Forms.TextBox();
-            this.GroupBox17 = new System.Windows.Forms.GroupBox();
-            this.EILHowLongBusiness = new System.Windows.Forms.TextBox();
-            this.Label30 = new System.Windows.Forms.Label();
-            this.EILSelfGrossEarning = new System.Windows.Forms.TextBox();
-            this.EILSelfGrossEarningLabel = new System.Windows.Forms.Label();
-            this.EILSelfBusinessName = new System.Windows.Forms.TextBox();
-            this.Label27 = new System.Windows.Forms.Label();
-            this.EILWereSelfEmployed = new System.Windows.Forms.ComboBox();
-            this.Label28 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.GroupBox16 = new System.Windows.Forms.GroupBox();
             this.EILCollecInsurance = new System.Windows.Forms.ComboBox();
             this.EILCollecInsuranceLabel = new System.Windows.Forms.Label();
+            this.GroupBox14 = new System.Windows.Forms.GroupBox();
+            this.EILT4Company = new System.Windows.Forms.TextBox();
+            this.EILT4CompanyLabel = new System.Windows.Forms.Label();
+            this.EILT4Employee = new System.Windows.Forms.ComboBox();
+            this.SocialAssistanceGroup = new System.Windows.Forms.GroupBox();
+            this.EILCollecAssistance = new System.Windows.Forms.ComboBox();
+            this.EILCollecAssistanceLabel = new System.Windows.Forms.Label();
             this.GroupBox15 = new System.Windows.Forms.GroupBox();
             this.TableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.Label25 = new System.Windows.Forms.Label();
@@ -142,10 +140,17 @@
             this.Label23 = new System.Windows.Forms.Label();
             this.EILEmployeeGrossEarning = new System.Windows.Forms.TextBox();
             this.EILEmployeeGrossEarningLabel = new System.Windows.Forms.Label();
-            this.GroupBox14 = new System.Windows.Forms.GroupBox();
-            this.EILT4Company = new System.Windows.Forms.TextBox();
-            this.EILT4CompanyLabel = new System.Windows.Forms.Label();
-            this.EILT4Employee = new System.Windows.Forms.ComboBox();
+            this.GroupBox17 = new System.Windows.Forms.GroupBox();
+            this.EILHowLongBusiness = new System.Windows.Forms.TextBox();
+            this.Label30 = new System.Windows.Forms.Label();
+            this.EILSelfGrossEarning = new System.Windows.Forms.TextBox();
+            this.EILSelfGrossEarningLabel = new System.Windows.Forms.Label();
+            this.EILSelfBusinessName = new System.Windows.Forms.TextBox();
+            this.Label27 = new System.Windows.Forms.Label();
+            this.EILWereSelfEmployed = new System.Windows.Forms.ComboBox();
+            this.Label28 = new System.Windows.Forms.Label();
+            this.GroupBox18 = new System.Windows.Forms.GroupBox();
+            this.EILNotes = new System.Windows.Forms.TextBox();
             this.Damages = new System.Windows.Forms.TabPage();
             this.DamNotesGroupBox = new System.Windows.Forms.GroupBox();
             this.DamNotes = new System.Windows.Forms.TextBox();
@@ -199,11 +204,6 @@
             this.ActionLogDBDataSet = new RRFFilesManager.ActionLogDBDataSet();
             this.CyaTemplatesTableAdapter = new RRFFilesManager.ActionLogDBDataSetTableAdapters.CYATemplatesTableAdapter();
             this.CYATemplatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.SocialAssistanceGroup = new System.Windows.Forms.GroupBox();
-            this.EILCollecAssistance = new System.Windows.Forms.ComboBox();
-            this.EILCollecAssistanceLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MVALiabilityGroup.SuspendLayout();
             this.LiaEstimDamageGroup.SuspendLayout();
             this.LiaInsuranceCoGroup.SuspendLayout();
@@ -226,6 +226,7 @@
             this.LiaHavePhotosGroup.SuspendLayout();
             this.LiaNotesGroup.SuspendLayout();
             this.GroupBox13.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.GroupBox123.SuspendLayout();
             this.GroupBox102.SuspendLayout();
             this.GroupBox101.SuspendLayout();
@@ -244,12 +245,14 @@
             this.GroupBox125.SuspendLayout();
             this.GroupBox124.SuspendLayout();
             this.EmploymentIncomeLoss.SuspendLayout();
-            this.GroupBox18.SuspendLayout();
-            this.GroupBox17.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.GroupBox16.SuspendLayout();
+            this.GroupBox14.SuspendLayout();
+            this.SocialAssistanceGroup.SuspendLayout();
             this.GroupBox15.SuspendLayout();
             this.TableLayoutPanel5.SuspendLayout();
-            this.GroupBox14.SuspendLayout();
+            this.GroupBox17.SuspendLayout();
+            this.GroupBox18.SuspendLayout();
             this.Damages.SuspendLayout();
             this.DamNotesGroupBox.SuspendLayout();
             this.DamPreIllnessGroupBox.SuspendLayout();
@@ -268,9 +271,6 @@
             this.OtherNotes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.SocialAssistanceGroup.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MVALiabilityGroup
@@ -585,6 +585,7 @@
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(1342, 584);
             this.Content.TabIndex = 16;
+            this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.Content_Paint);
             // 
             // IncidentDateTimeGroupBox
             // 
@@ -767,49 +768,30 @@
             this.GroupBox13.TabStop = false;
             this.GroupBox13.Text = "Time of Employment";
             // 
-            // EILEmployed52Weeks
+            // flowLayoutPanel2
             // 
-            this.EILEmployed52Weeks.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILEmployed52Weeks.FormattingEnabled = true;
-            this.EILEmployed52Weeks.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.EILEmployed52Weeks.Location = new System.Drawing.Point(475, 65);
-            this.EILEmployed52Weeks.Name = "EILEmployed52Weeks";
-            this.EILEmployed52Weeks.Size = new System.Drawing.Size(53, 25);
-            this.EILEmployed52Weeks.TabIndex = 16;
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.Controls.Add(this.EILWereEmployedLabel);
+            this.flowLayoutPanel2.Controls.Add(this.EILWereEmployed);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed4WeeksLabel);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed4Weeks);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed52WeeksLabel);
+            this.flowLayoutPanel2.Controls.Add(this.EILEmployed52Weeks);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 18);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(556, 94);
+            this.flowLayoutPanel2.TabIndex = 18;
             // 
-            // EILEmployed52WeeksLabel
+            // EILWereEmployedLabel
             // 
-            this.EILEmployed52WeeksLabel.AutoSize = true;
-            this.EILEmployed52WeeksLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILEmployed52WeeksLabel.Location = new System.Drawing.Point(3, 62);
-            this.EILEmployed52WeeksLabel.Name = "EILEmployed52WeeksLabel";
-            this.EILEmployed52WeeksLabel.Size = new System.Drawing.Size(466, 17);
-            this.EILEmployed52WeeksLabel.TabIndex = 17;
-            this.EILEmployed52WeeksLabel.Text = "Were you employed at least 52 weeks before of this motor vehicle accident?";
-            // 
-            // EILEmployed4Weeks
-            // 
-            this.EILEmployed4Weeks.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILEmployed4Weeks.FormattingEnabled = true;
-            this.EILEmployed4Weeks.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.EILEmployed4Weeks.Location = new System.Drawing.Point(468, 34);
-            this.EILEmployed4Weeks.Name = "EILEmployed4Weeks";
-            this.EILEmployed4Weeks.Size = new System.Drawing.Size(53, 25);
-            this.EILEmployed4Weeks.TabIndex = 14;
-            // 
-            // EILEmployed4WeeksLabel
-            // 
-            this.EILEmployed4WeeksLabel.AutoSize = true;
-            this.EILEmployed4WeeksLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILEmployed4WeeksLabel.Location = new System.Drawing.Point(3, 31);
-            this.EILEmployed4WeeksLabel.Name = "EILEmployed4WeeksLabel";
-            this.EILEmployed4WeeksLabel.Size = new System.Drawing.Size(459, 17);
-            this.EILEmployed4WeeksLabel.TabIndex = 15;
-            this.EILEmployed4WeeksLabel.Text = "Were you employed at least 4 weeks before of this motor vehicle accident?";
+            this.EILWereEmployedLabel.AutoSize = true;
+            this.EILWereEmployedLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILWereEmployedLabel.Location = new System.Drawing.Point(3, 0);
+            this.EILWereEmployedLabel.Name = "EILWereEmployedLabel";
+            this.EILWereEmployedLabel.Size = new System.Drawing.Size(387, 17);
+            this.EILWereEmployedLabel.TabIndex = 13;
+            this.EILWereEmployedLabel.Text = "Were you employed at the time of this motor vehicle accident?";
             // 
             // EILWereEmployed
             // 
@@ -823,15 +805,49 @@
             this.EILWereEmployed.Size = new System.Drawing.Size(53, 25);
             this.EILWereEmployed.TabIndex = 1;
             // 
-            // EILWereEmployedLabel
+            // EILEmployed4WeeksLabel
             // 
-            this.EILWereEmployedLabel.AutoSize = true;
-            this.EILWereEmployedLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILWereEmployedLabel.Location = new System.Drawing.Point(3, 0);
-            this.EILWereEmployedLabel.Name = "EILWereEmployedLabel";
-            this.EILWereEmployedLabel.Size = new System.Drawing.Size(387, 17);
-            this.EILWereEmployedLabel.TabIndex = 13;
-            this.EILWereEmployedLabel.Text = "Were you employed at the time of this motor vehicle accident?";
+            this.EILEmployed4WeeksLabel.AutoSize = true;
+            this.EILEmployed4WeeksLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILEmployed4WeeksLabel.Location = new System.Drawing.Point(3, 31);
+            this.EILEmployed4WeeksLabel.Name = "EILEmployed4WeeksLabel";
+            this.EILEmployed4WeeksLabel.Size = new System.Drawing.Size(459, 17);
+            this.EILEmployed4WeeksLabel.TabIndex = 15;
+            this.EILEmployed4WeeksLabel.Text = "Were you employed at least 4 weeks before of this motor vehicle accident?";
+            // 
+            // EILEmployed4Weeks
+            // 
+            this.EILEmployed4Weeks.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILEmployed4Weeks.FormattingEnabled = true;
+            this.EILEmployed4Weeks.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.EILEmployed4Weeks.Location = new System.Drawing.Point(468, 34);
+            this.EILEmployed4Weeks.Name = "EILEmployed4Weeks";
+            this.EILEmployed4Weeks.Size = new System.Drawing.Size(53, 25);
+            this.EILEmployed4Weeks.TabIndex = 14;
+            // 
+            // EILEmployed52WeeksLabel
+            // 
+            this.EILEmployed52WeeksLabel.AutoSize = true;
+            this.EILEmployed52WeeksLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILEmployed52WeeksLabel.Location = new System.Drawing.Point(3, 62);
+            this.EILEmployed52WeeksLabel.Name = "EILEmployed52WeeksLabel";
+            this.EILEmployed52WeeksLabel.Size = new System.Drawing.Size(466, 17);
+            this.EILEmployed52WeeksLabel.TabIndex = 17;
+            this.EILEmployed52WeeksLabel.Text = "Were you employed at least 52 weeks before of this motor vehicle accident?";
+            // 
+            // EILEmployed52Weeks
+            // 
+            this.EILEmployed52Weeks.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILEmployed52Weeks.FormattingEnabled = true;
+            this.EILEmployed52Weeks.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.EILEmployed52Weeks.Location = new System.Drawing.Point(475, 65);
+            this.EILEmployed52Weeks.Name = "EILEmployed52Weeks";
+            this.EILEmployed52Weeks.Size = new System.Drawing.Size(53, 25);
+            this.EILEmployed52Weeks.TabIndex = 16;
             // 
             // TextBox77
             // 
@@ -1263,123 +1279,21 @@
             this.EmploymentIncomeLoss.TabIndex = 2;
             this.EmploymentIncomeLoss.Text = "Employment/Income Loss";
             // 
-            // GroupBox18
+            // flowLayoutPanel1
             // 
-            this.GroupBox18.Controls.Add(this.EILNotes);
-            this.GroupBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupBox18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox18.Location = new System.Drawing.Point(3, 559);
-            this.GroupBox18.Name = "GroupBox18";
-            this.GroupBox18.Size = new System.Drawing.Size(1172, 138);
-            this.GroupBox18.TabIndex = 23;
-            this.GroupBox18.TabStop = false;
-            this.GroupBox18.Text = "Other relevant Employement / Income Loss notes";
-            // 
-            // EILNotes
-            // 
-            this.EILNotes.BackColor = System.Drawing.Color.White;
-            this.EILNotes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EILNotes.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILNotes.Location = new System.Drawing.Point(3, 18);
-            this.EILNotes.Multiline = true;
-            this.EILNotes.Name = "EILNotes";
-            this.EILNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.EILNotes.Size = new System.Drawing.Size(1166, 117);
-            this.EILNotes.TabIndex = 1;
-            // 
-            // GroupBox17
-            // 
-            this.GroupBox17.Controls.Add(this.EILHowLongBusiness);
-            this.GroupBox17.Controls.Add(this.Label30);
-            this.GroupBox17.Controls.Add(this.EILSelfGrossEarning);
-            this.GroupBox17.Controls.Add(this.EILSelfGrossEarningLabel);
-            this.GroupBox17.Controls.Add(this.EILSelfBusinessName);
-            this.GroupBox17.Controls.Add(this.Label27);
-            this.GroupBox17.Controls.Add(this.EILWereSelfEmployed);
-            this.GroupBox17.Controls.Add(this.Label28);
-            this.GroupBox17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox17.Location = new System.Drawing.Point(3, 430);
-            this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(1172, 123);
-            this.GroupBox17.TabIndex = 22;
-            this.GroupBox17.TabStop = false;
-            this.GroupBox17.Text = "Self-Employed";
-            // 
-            // EILHowLongBusiness
-            // 
-            this.EILHowLongBusiness.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILHowLongBusiness.Location = new System.Drawing.Point(346, 90);
-            this.EILHowLongBusiness.Name = "EILHowLongBusiness";
-            this.EILHowLongBusiness.Size = new System.Drawing.Size(818, 22);
-            this.EILHowLongBusiness.TabIndex = 20;
-            // 
-            // Label30
-            // 
-            this.Label30.AutoSize = true;
-            this.Label30.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label30.Location = new System.Drawing.Point(9, 93);
-            this.Label30.Name = "Label30";
-            this.Label30.Size = new System.Drawing.Size(331, 17);
-            this.Label30.TabIndex = 19;
-            this.Label30.Text = "How long have you been operating your own business?";
-            // 
-            // EILSelfGrossEarning
-            // 
-            this.EILSelfGrossEarning.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILSelfGrossEarning.Location = new System.Drawing.Point(401, 55);
-            this.EILSelfGrossEarning.Name = "EILSelfGrossEarning";
-            this.EILSelfGrossEarning.Size = new System.Drawing.Size(762, 22);
-            this.EILSelfGrossEarning.TabIndex = 18;
-            // 
-            // EILSelfGrossEarningLabel
-            // 
-            this.EILSelfGrossEarningLabel.AutoSize = true;
-            this.EILSelfGrossEarningLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILSelfGrossEarningLabel.Location = new System.Drawing.Point(8, 58);
-            this.EILSelfGrossEarningLabel.Name = "EILSelfGrossEarningLabel";
-            this.EILSelfGrossEarningLabel.Size = new System.Drawing.Size(389, 17);
-            this.EILSelfGrossEarningLabel.TabIndex = 17;
-            this.EILSelfGrossEarningLabel.Text = "How much were you earning (gross) at the time of this accident?";
-            // 
-            // EILSelfBusinessName
-            // 
-            this.EILSelfBusinessName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILSelfBusinessName.Location = new System.Drawing.Point(401, 15);
-            this.EILSelfBusinessName.Name = "EILSelfBusinessName";
-            this.EILSelfBusinessName.Size = new System.Drawing.Size(762, 22);
-            this.EILSelfBusinessName.TabIndex = 16;
-            // 
-            // Label27
-            // 
-            this.Label27.AutoSize = true;
-            this.Label27.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label27.Location = new System.Drawing.Point(258, 18);
-            this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(140, 17);
-            this.Label27.TabIndex = 15;
-            this.Label27.Text = "Name of your Business:";
-            // 
-            // EILWereSelfEmployed
-            // 
-            this.EILWereSelfEmployed.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILWereSelfEmployed.FormattingEnabled = true;
-            this.EILWereSelfEmployed.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.EILWereSelfEmployed.Location = new System.Drawing.Point(171, 15);
-            this.EILWereSelfEmployed.Name = "EILWereSelfEmployed";
-            this.EILWereSelfEmployed.Size = new System.Drawing.Size(53, 25);
-            this.EILWereSelfEmployed.TabIndex = 1;
-            // 
-            // Label28
-            // 
-            this.Label28.AutoSize = true;
-            this.Label28.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label28.Location = new System.Drawing.Point(6, 18);
-            this.Label28.Name = "Label28";
-            this.Label28.Size = new System.Drawing.Size(159, 17);
-            this.Label28.TabIndex = 13;
-            this.Label28.Text = "Were you self-employed?";
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox13);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox16);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox14);
+            this.flowLayoutPanel1.Controls.Add(this.SocialAssistanceGroup);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox15);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox17);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox18);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1336, 578);
+            this.flowLayoutPanel1.TabIndex = 24;
             // 
             // GroupBox16
             // 
@@ -1415,6 +1329,84 @@
             this.EILCollecInsuranceLabel.TabIndex = 6;
             this.EILCollecInsuranceLabel.Text = "Were you collecting Employment Insurance in the last 52 weeks before the accident" +
     "?";
+            // 
+            // GroupBox14
+            // 
+            this.GroupBox14.Controls.Add(this.EILT4Company);
+            this.GroupBox14.Controls.Add(this.EILT4CompanyLabel);
+            this.GroupBox14.Controls.Add(this.EILT4Employee);
+            this.GroupBox14.Controls.Add(this.EILT4EmployeeLabel);
+            this.GroupBox14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox14.Location = new System.Drawing.Point(3, 124);
+            this.GroupBox14.Name = "GroupBox14";
+            this.GroupBox14.Size = new System.Drawing.Size(559, 79);
+            this.GroupBox14.TabIndex = 19;
+            this.GroupBox14.TabStop = false;
+            this.GroupBox14.Text = "T4 Info";
+            // 
+            // EILT4Company
+            // 
+            this.EILT4Company.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILT4Company.Location = new System.Drawing.Point(171, 46);
+            this.EILT4Company.Name = "EILT4Company";
+            this.EILT4Company.Size = new System.Drawing.Size(382, 22);
+            this.EILT4Company.TabIndex = 16;
+            // 
+            // EILT4CompanyLabel
+            // 
+            this.EILT4CompanyLabel.AutoSize = true;
+            this.EILT4CompanyLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILT4CompanyLabel.Location = new System.Drawing.Point(6, 46);
+            this.EILT4CompanyLabel.Name = "EILT4CompanyLabel";
+            this.EILT4CompanyLabel.Size = new System.Drawing.Size(145, 17);
+            this.EILT4CompanyLabel.TabIndex = 15;
+            this.EILT4CompanyLabel.Text = "Name of the Company:";
+            // 
+            // EILT4Employee
+            // 
+            this.EILT4Employee.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILT4Employee.FormattingEnabled = true;
+            this.EILT4Employee.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.EILT4Employee.Location = new System.Drawing.Point(171, 15);
+            this.EILT4Employee.Name = "EILT4Employee";
+            this.EILT4Employee.Size = new System.Drawing.Size(53, 25);
+            this.EILT4Employee.TabIndex = 1;
+            // 
+            // SocialAssistanceGroup
+            // 
+            this.SocialAssistanceGroup.Controls.Add(this.EILCollecAssistance);
+            this.SocialAssistanceGroup.Controls.Add(this.EILCollecAssistanceLabel);
+            this.SocialAssistanceGroup.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SocialAssistanceGroup.Location = new System.Drawing.Point(568, 124);
+            this.SocialAssistanceGroup.Name = "SocialAssistanceGroup";
+            this.SocialAssistanceGroup.Size = new System.Drawing.Size(607, 79);
+            this.SocialAssistanceGroup.TabIndex = 24;
+            this.SocialAssistanceGroup.TabStop = false;
+            this.SocialAssistanceGroup.Text = "Social Assistance";
+            // 
+            // EILCollecAssistance
+            // 
+            this.EILCollecAssistance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILCollecAssistance.FormattingEnabled = true;
+            this.EILCollecAssistance.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.EILCollecAssistance.Location = new System.Drawing.Point(524, 31);
+            this.EILCollecAssistance.Name = "EILCollecAssistance";
+            this.EILCollecAssistance.Size = new System.Drawing.Size(53, 25);
+            this.EILCollecAssistance.TabIndex = 7;
+            // 
+            // EILCollecAssistanceLabel
+            // 
+            this.EILCollecAssistanceLabel.AutoSize = true;
+            this.EILCollecAssistanceLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILCollecAssistanceLabel.Location = new System.Drawing.Point(5, 34);
+            this.EILCollecAssistanceLabel.Name = "EILCollecAssistanceLabel";
+            this.EILCollecAssistanceLabel.Size = new System.Drawing.Size(477, 17);
+            this.EILCollecAssistanceLabel.TabIndex = 6;
+            this.EILCollecAssistanceLabel.Text = "Were you collecting Social Assistance in the last 52 weeks before the incident?";
             // 
             // GroupBox15
             // 
@@ -1521,49 +1513,123 @@
             this.EILEmployeeGrossEarningLabel.TabIndex = 0;
             this.EILEmployeeGrossEarningLabel.Text = "How much were you earning (gross) at the time of this accident?";
             // 
-            // GroupBox14
+            // GroupBox17
             // 
-            this.GroupBox14.Controls.Add(this.EILT4Company);
-            this.GroupBox14.Controls.Add(this.EILT4CompanyLabel);
-            this.GroupBox14.Controls.Add(this.EILT4Employee);
-            this.GroupBox14.Controls.Add(this.EILT4EmployeeLabel);
-            this.GroupBox14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox14.Location = new System.Drawing.Point(3, 124);
-            this.GroupBox14.Name = "GroupBox14";
-            this.GroupBox14.Size = new System.Drawing.Size(559, 79);
-            this.GroupBox14.TabIndex = 19;
-            this.GroupBox14.TabStop = false;
-            this.GroupBox14.Text = "T4 Info";
+            this.GroupBox17.Controls.Add(this.EILHowLongBusiness);
+            this.GroupBox17.Controls.Add(this.Label30);
+            this.GroupBox17.Controls.Add(this.EILSelfGrossEarning);
+            this.GroupBox17.Controls.Add(this.EILSelfGrossEarningLabel);
+            this.GroupBox17.Controls.Add(this.EILSelfBusinessName);
+            this.GroupBox17.Controls.Add(this.Label27);
+            this.GroupBox17.Controls.Add(this.EILWereSelfEmployed);
+            this.GroupBox17.Controls.Add(this.Label28);
+            this.GroupBox17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Location = new System.Drawing.Point(3, 430);
+            this.GroupBox17.Name = "GroupBox17";
+            this.GroupBox17.Size = new System.Drawing.Size(1172, 123);
+            this.GroupBox17.TabIndex = 22;
+            this.GroupBox17.TabStop = false;
+            this.GroupBox17.Text = "Self-Employed";
             // 
-            // EILT4Company
+            // EILHowLongBusiness
             // 
-            this.EILT4Company.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILT4Company.Location = new System.Drawing.Point(171, 46);
-            this.EILT4Company.Name = "EILT4Company";
-            this.EILT4Company.Size = new System.Drawing.Size(382, 22);
-            this.EILT4Company.TabIndex = 16;
+            this.EILHowLongBusiness.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILHowLongBusiness.Location = new System.Drawing.Point(346, 90);
+            this.EILHowLongBusiness.Name = "EILHowLongBusiness";
+            this.EILHowLongBusiness.Size = new System.Drawing.Size(818, 22);
+            this.EILHowLongBusiness.TabIndex = 20;
             // 
-            // EILT4CompanyLabel
+            // Label30
             // 
-            this.EILT4CompanyLabel.AutoSize = true;
-            this.EILT4CompanyLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILT4CompanyLabel.Location = new System.Drawing.Point(6, 46);
-            this.EILT4CompanyLabel.Name = "EILT4CompanyLabel";
-            this.EILT4CompanyLabel.Size = new System.Drawing.Size(145, 17);
-            this.EILT4CompanyLabel.TabIndex = 15;
-            this.EILT4CompanyLabel.Text = "Name of the Company:";
+            this.Label30.AutoSize = true;
+            this.Label30.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label30.Location = new System.Drawing.Point(9, 93);
+            this.Label30.Name = "Label30";
+            this.Label30.Size = new System.Drawing.Size(331, 17);
+            this.Label30.TabIndex = 19;
+            this.Label30.Text = "How long have you been operating your own business?";
             // 
-            // EILT4Employee
+            // EILSelfGrossEarning
             // 
-            this.EILT4Employee.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILT4Employee.FormattingEnabled = true;
-            this.EILT4Employee.Items.AddRange(new object[] {
+            this.EILSelfGrossEarning.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILSelfGrossEarning.Location = new System.Drawing.Point(401, 55);
+            this.EILSelfGrossEarning.Name = "EILSelfGrossEarning";
+            this.EILSelfGrossEarning.Size = new System.Drawing.Size(762, 22);
+            this.EILSelfGrossEarning.TabIndex = 18;
+            // 
+            // EILSelfGrossEarningLabel
+            // 
+            this.EILSelfGrossEarningLabel.AutoSize = true;
+            this.EILSelfGrossEarningLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILSelfGrossEarningLabel.Location = new System.Drawing.Point(8, 58);
+            this.EILSelfGrossEarningLabel.Name = "EILSelfGrossEarningLabel";
+            this.EILSelfGrossEarningLabel.Size = new System.Drawing.Size(389, 17);
+            this.EILSelfGrossEarningLabel.TabIndex = 17;
+            this.EILSelfGrossEarningLabel.Text = "How much were you earning (gross) at the time of this accident?";
+            // 
+            // EILSelfBusinessName
+            // 
+            this.EILSelfBusinessName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILSelfBusinessName.Location = new System.Drawing.Point(401, 15);
+            this.EILSelfBusinessName.Name = "EILSelfBusinessName";
+            this.EILSelfBusinessName.Size = new System.Drawing.Size(762, 22);
+            this.EILSelfBusinessName.TabIndex = 16;
+            // 
+            // Label27
+            // 
+            this.Label27.AutoSize = true;
+            this.Label27.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label27.Location = new System.Drawing.Point(258, 18);
+            this.Label27.Name = "Label27";
+            this.Label27.Size = new System.Drawing.Size(140, 17);
+            this.Label27.TabIndex = 15;
+            this.Label27.Text = "Name of your Business:";
+            // 
+            // EILWereSelfEmployed
+            // 
+            this.EILWereSelfEmployed.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILWereSelfEmployed.FormattingEnabled = true;
+            this.EILWereSelfEmployed.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.EILT4Employee.Location = new System.Drawing.Point(171, 15);
-            this.EILT4Employee.Name = "EILT4Employee";
-            this.EILT4Employee.Size = new System.Drawing.Size(53, 25);
-            this.EILT4Employee.TabIndex = 1;
+            this.EILWereSelfEmployed.Location = new System.Drawing.Point(171, 15);
+            this.EILWereSelfEmployed.Name = "EILWereSelfEmployed";
+            this.EILWereSelfEmployed.Size = new System.Drawing.Size(53, 25);
+            this.EILWereSelfEmployed.TabIndex = 1;
+            // 
+            // Label28
+            // 
+            this.Label28.AutoSize = true;
+            this.Label28.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label28.Location = new System.Drawing.Point(6, 18);
+            this.Label28.Name = "Label28";
+            this.Label28.Size = new System.Drawing.Size(159, 17);
+            this.Label28.TabIndex = 13;
+            this.Label28.Text = "Were you self-employed?";
+            // 
+            // GroupBox18
+            // 
+            this.GroupBox18.Controls.Add(this.EILNotes);
+            this.GroupBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GroupBox18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox18.Location = new System.Drawing.Point(3, 559);
+            this.GroupBox18.Name = "GroupBox18";
+            this.GroupBox18.Size = new System.Drawing.Size(1172, 138);
+            this.GroupBox18.TabIndex = 23;
+            this.GroupBox18.TabStop = false;
+            this.GroupBox18.Text = "Other relevant Employement / Income Loss notes";
+            // 
+            // EILNotes
+            // 
+            this.EILNotes.BackColor = System.Drawing.Color.White;
+            this.EILNotes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EILNotes.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EILNotes.Location = new System.Drawing.Point(3, 18);
+            this.EILNotes.Multiline = true;
+            this.EILNotes.Name = "EILNotes";
+            this.EILNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.EILNotes.Size = new System.Drawing.Size(1166, 117);
+            this.EILNotes.TabIndex = 1;
             // 
             // Damages
             // 
@@ -2180,71 +2246,6 @@
             this.CYATemplatesBindingSource.DataMember = "CYATemplates";
             this.CYATemplatesBindingSource.DataSource = this.ActionLogDBDataSet;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.GroupBox13);
-            this.flowLayoutPanel1.Controls.Add(this.GroupBox16);
-            this.flowLayoutPanel1.Controls.Add(this.GroupBox14);
-            this.flowLayoutPanel1.Controls.Add(this.SocialAssistanceGroup);
-            this.flowLayoutPanel1.Controls.Add(this.GroupBox15);
-            this.flowLayoutPanel1.Controls.Add(this.GroupBox17);
-            this.flowLayoutPanel1.Controls.Add(this.GroupBox18);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1336, 578);
-            this.flowLayoutPanel1.TabIndex = 24;
-            // 
-            // SocialAssistanceGroup
-            // 
-            this.SocialAssistanceGroup.Controls.Add(this.EILCollecAssistance);
-            this.SocialAssistanceGroup.Controls.Add(this.EILCollecAssistanceLabel);
-            this.SocialAssistanceGroup.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SocialAssistanceGroup.Location = new System.Drawing.Point(568, 124);
-            this.SocialAssistanceGroup.Name = "SocialAssistanceGroup";
-            this.SocialAssistanceGroup.Size = new System.Drawing.Size(607, 79);
-            this.SocialAssistanceGroup.TabIndex = 24;
-            this.SocialAssistanceGroup.TabStop = false;
-            this.SocialAssistanceGroup.Text = "Social Assistance";
-            // 
-            // EILCollecAssistance
-            // 
-            this.EILCollecAssistance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILCollecAssistance.FormattingEnabled = true;
-            this.EILCollecAssistance.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.EILCollecAssistance.Location = new System.Drawing.Point(524, 31);
-            this.EILCollecAssistance.Name = "EILCollecAssistance";
-            this.EILCollecAssistance.Size = new System.Drawing.Size(53, 25);
-            this.EILCollecAssistance.TabIndex = 7;
-            // 
-            // EILCollecAssistanceLabel
-            // 
-            this.EILCollecAssistanceLabel.AutoSize = true;
-            this.EILCollecAssistanceLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EILCollecAssistanceLabel.Location = new System.Drawing.Point(5, 34);
-            this.EILCollecAssistanceLabel.Name = "EILCollecAssistanceLabel";
-            this.EILCollecAssistanceLabel.Size = new System.Drawing.Size(477, 17);
-            this.EILCollecAssistanceLabel.TabIndex = 6;
-            this.EILCollecAssistanceLabel.Text = "Were you collecting Social Assistance in the last 52 weeks before the incident?";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.EILWereEmployedLabel);
-            this.flowLayoutPanel2.Controls.Add(this.EILWereEmployed);
-            this.flowLayoutPanel2.Controls.Add(this.EILEmployed4WeeksLabel);
-            this.flowLayoutPanel2.Controls.Add(this.EILEmployed4Weeks);
-            this.flowLayoutPanel2.Controls.Add(this.EILEmployed52WeeksLabel);
-            this.flowLayoutPanel2.Controls.Add(this.EILEmployed52Weeks);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 18);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(556, 94);
-            this.flowLayoutPanel2.TabIndex = 18;
-            // 
             // IntakeSheets
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2292,6 +2293,8 @@
             this.LiaNotesGroup.PerformLayout();
             this.GroupBox13.ResumeLayout(false);
             this.GroupBox13.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.GroupBox123.ResumeLayout(false);
             this.GroupBox123.PerformLayout();
             this.GroupBox102.ResumeLayout(false);
@@ -2325,18 +2328,21 @@
             this.GroupBox124.ResumeLayout(false);
             this.GroupBox124.PerformLayout();
             this.EmploymentIncomeLoss.ResumeLayout(false);
-            this.GroupBox18.ResumeLayout(false);
-            this.GroupBox18.PerformLayout();
-            this.GroupBox17.ResumeLayout(false);
-            this.GroupBox17.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.GroupBox16.ResumeLayout(false);
             this.GroupBox16.PerformLayout();
+            this.GroupBox14.ResumeLayout(false);
+            this.GroupBox14.PerformLayout();
+            this.SocialAssistanceGroup.ResumeLayout(false);
+            this.SocialAssistanceGroup.PerformLayout();
             this.GroupBox15.ResumeLayout(false);
             this.GroupBox15.PerformLayout();
             this.TableLayoutPanel5.ResumeLayout(false);
             this.TableLayoutPanel5.PerformLayout();
-            this.GroupBox14.ResumeLayout(false);
-            this.GroupBox14.PerformLayout();
+            this.GroupBox17.ResumeLayout(false);
+            this.GroupBox17.PerformLayout();
+            this.GroupBox18.ResumeLayout(false);
+            this.GroupBox18.PerformLayout();
             this.Damages.ResumeLayout(false);
             this.DamNotesGroupBox.ResumeLayout(false);
             this.DamNotesGroupBox.PerformLayout();
@@ -2369,11 +2375,6 @@
             this.OtherNotes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActionLogDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CYATemplatesBindingSource)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.SocialAssistanceGroup.ResumeLayout(false);
-            this.SocialAssistanceGroup.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

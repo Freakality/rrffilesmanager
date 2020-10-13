@@ -20,7 +20,7 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private static IntakeForm instance;
-        public static IntakeForm Instance => instance ?? (instance = new IntakeForm());
+        public static IntakeForm Instance => instance == null || instance.IsDisposed ? (instance = new IntakeForm()) : instance ;
 
         private static Intake intake;
         public static Intake Intake => intake ?? (intake = new Intake());

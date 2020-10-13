@@ -231,5 +231,10 @@ namespace RRFFilesManager.IntakeForm
             intake.AccBenReplacBenef = AccBenReplacBenef.Text;
             intake.AccBenNotes = AccBenNotes.Text;
         }
+
+        private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

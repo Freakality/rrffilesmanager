@@ -10,7 +10,7 @@ namespace RRFFilesManager.Abstractions
     {
         public int ID { get; set; }
         public string Description { get; set; }
-        public MatterType MatterType { get; set; }
+        public virtual MatterType MatterType { get; set; }
         public string StatutoryNotice { get; set; }
     }
 }
