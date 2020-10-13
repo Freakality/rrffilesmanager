@@ -74,14 +74,11 @@ namespace RRFFilesManager.IntakeForm
         }
         private void PotentialClientInfo_Load(object sender, EventArgs e)
         {
-            using (var context = new DataContext())
-            {
-                PCIProvince.DataSource = context.Provinces.ToList();
+                PCIProvince.DataSource = Program.DBContext.Provinces.ToList();
                 PCIProvince.DisplayMember = nameof(Province.Description);
 
-                PCIMobileCarrier.DataSource = context.MobileCarriers.ToList();
+                PCIMobileCarrier.DataSource = Program.DBContext.MobileCarriers.ToList();
                 PCIMobileCarrier.DisplayMember = nameof(MobileCarrier.Description);
-            }
             
             YearBirth.Text = "1970";
         }
@@ -221,25 +218,19 @@ namespace RRFFilesManager.IntakeForm
 
         public Client CreateClient()
         {
-            using (var context = new DataContext())
-            {
                 var client = new Client();
                 FillClient(client);
-                context.Clients.Add(client);
-                context.SaveChanges();
+                Program.DBContext.Clients.Add(client);
+                Program.DBContext.SaveChanges();
                 return client;
-            }
         }
 
         public Client UpdateClient(int clientId)
         {
-            using (var context = new DataContext())
-            {
-                var client = context.Clients.FirstOrDefault(s => s.ID == clientId);
+                var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
                 FillClient(client);
-                context.SaveChanges();
+                Program.DBContext.SaveChanges();
                 return client;
-            }
         }
 
         public void FillOrCreateIntakeClient()

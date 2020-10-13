@@ -13,5 +13,10 @@ namespace RRFFilesManager.Abstractions
         public string TypeOfTemplate { get; set; }
         public string TemplateName { get; set; }
         public string TemplatePath { get; set; }
+
+        public override string ToString()
+        {
+            return TemplateName;
+        }
     }
 }

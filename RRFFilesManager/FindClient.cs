@@ -15,7 +15,6 @@ namespace RRFFilesManager
 {
     public partial class FindClient : Form
     {
-        private DataContext context { get; set; } = new DataContext();
         public FindClient()
         {
             InitializeComponent();
@@ -33,12 +32,12 @@ namespace RRFFilesManager
         {
             ClientsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientsGridView.MultiSelect = false;
-            this.ClientsGridView.DataSource = context.Clients.ToList();
+            this.ClientsGridView.DataSource = Program.DBContext.Clients.ToList();
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.ClientsGridView.DataSource = context.Clients.Where(s => 
+            this.ClientsGridView.DataSource = Program.DBContext.Clients.Where(s => 
                 s.FirstName.Contains(SearchTextBox.Text) ||
                 s.LastName.Contains(SearchTextBox.Text) ||
                 s.Email.Contains(SearchTextBox.Text) ||
@@ -49,7 +48,7 @@ namespace RRFFilesManager
         private void ClientsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var client = context.Clients.FirstOrDefault(s => s.ID == clientId);
+            var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
             PotentialClientInfo.Instance.SetClient(client);
             Hide();
         }

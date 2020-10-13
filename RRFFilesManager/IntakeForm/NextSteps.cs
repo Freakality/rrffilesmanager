@@ -31,20 +31,14 @@ namespace RRFFilesManager.IntakeForm
         {
             this.TemplateName.Text = "";
             this.TemplateName.Items.Clear();
-            using (var context = new DataContext())
-            {
-                var templateNames = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TemplateName).ToArray();
-                TemplateName.Items.AddRange(templateNames);
-            }
+            var templateNames = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TemplateName).ToArray();
+            TemplateName.Items.AddRange(templateNames);
         }
 
         private void NextSteps_Load(object sender, EventArgs e)
         {
-            using (var context = new DataContext())
-            {
-                var typesOfTemplates = context.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+                var typesOfTemplates = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
                 TypeTemplate.Items.AddRange(typesOfTemplates);
-            }
         }
 
         private void Submit_Click(object sender, EventArgs e)
@@ -63,11 +57,9 @@ namespace RRFFilesManager.IntakeForm
 
             if (this.InvokeCYP.Checked)
             {
-                using (var context = new DataContext())
-                {
                     IntakeForm.Instance.Hide();
                     PleaseWait.Instance.Show();
-                    var CYATemplate = context.CYATemplates.FirstOrDefault(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID && s.TypeOfTemplate == this.TypeTemplate.Text && s.TemplateName == this.TemplateName.Text);
+                    var CYATemplate = Program.DBContext.CYATemplates.FirstOrDefault(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID && s.TypeOfTemplate == this.TypeTemplate.Text && s.TemplateName == this.TemplateName.Text);
                     string templateDocumentPath = CYATemplate.TemplatePath.Replace(@"\\FS\FOISY\!", @"C:\");
                     attachmentPath = this.CreateAndFillTemplateDocument(templateDocumentPath);
                     string templateExcelPath = ((@"C:\test\IntakeReportTemplates\" + PreliminaryInfo.Instance.MatterTypeComboBox.Text) + ".xlsx");
@@ -78,7 +70,6 @@ namespace RRFFilesManager.IntakeForm
                     this.CreateSendItemCYA(signa, nameSt, receip, attachmentPath, attachmentPath2);
                     PleaseWait.Instance.Hide();
                     Home.Instance.Show();
-                }
                 
                 
             }

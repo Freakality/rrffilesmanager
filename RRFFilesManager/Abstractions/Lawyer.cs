@@ -11,5 +11,9 @@ namespace RRFFilesManager.Abstractions
         public int ID { get; set; }
         public string Description { get; set; }
         public int? NumberID { get; set; }
+        public override string ToString()
+        {
+            return Description;
+        }
     }
 }

@@ -77,10 +77,7 @@ namespace RRFFilesManager.IntakeForm
             var lastFileNumber = 999999;
             if (lawyer == null)
                 return lastFileNumber;
-            using (var context = new DataContext())
-            {
-                lastFileNumber = context.Intakes.Where(s => s.FileLawyer.ID == lawyer.ID).Max(s => (int?)s.FileNumber) ?? 999999;
-            }
+            lastFileNumber = Program.DBContext.Intakes.Where(s => s.FileLawyer.ID == lawyer.ID).Max(s => (int?)s.FileNumber) ?? 999999;
             var lastfileNumberFirstPart = lastFileNumber.ToString()?.Substring(0, 6);
             var fileNumberFirstPart = $"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}";
             if (lastfileNumberFirstPart == fileNumberFirstPart)
@@ -93,34 +90,28 @@ namespace RRFFilesManager.IntakeForm
 
         private void MatterSubTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var context = new DataContext())
+            var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
+            if (matterSubType?.StatutoryNotice != null)
             {
-                var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
-                if (matterSubType?.StatutoryNotice != null)
-                {
-                    StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
-                }
-                else
-                {
-                    StatutoryNoticeBox.Text = "";
-                }
+                StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
+            }
+            else
+            {
+                StatutoryNoticeBox.Text = "";
             }
         }
 
         private void DateOfLossDateTimePicker_ValueChanged(object Sender, EventArgs e)
         {
             DateOfLossDateTimePicker.CustomFormat = "MMM-dd-yyyy";
-            using (var context = new DataContext())
+            var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
+            if (matterSubType?.StatutoryNotice != null)
             {
-                var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
-                if (matterSubType?.StatutoryNotice != null)
-                {
-                    StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
-                }
-                else
-                {
-                    StatutoryNoticeBox.Text = "";
-                }
+                StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
+            }
+            else
+            {
+                StatutoryNoticeBox.Text = "";
             }
 
             if (DateOfLossDateTimePicker.CustomFormat == "MMM-dd-yyyy")
@@ -146,26 +137,23 @@ namespace RRFFilesManager.IntakeForm
 
         private void Initialize()
         {
-            using (var context = new DataContext())
-            {
-                MatterTypeComboBox.DataSource = context.MatterTypes.ToList();
-                MatterTypeComboBox.DisplayMember = nameof(MatterType.Description);
+            MatterTypeComboBox.DataSource = Program.DBContext.MatterTypes.ToList();
+            MatterTypeComboBox.DisplayMember = nameof(MatterType.Description);
 
-                MatterSubTypeComboBox.DataSource = context.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
-                MatterSubTypeComboBox.DisplayMember = nameof(MatterSubType.Description);
+            MatterSubTypeComboBox.DataSource = Program.DBContext.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
+            MatterSubTypeComboBox.DisplayMember = nameof(MatterSubType.Description);
 
-                HowHearComboBox.DataSource = context.HearAboutUs.ToList();
-                HowHearComboBox.DisplayMember = nameof(HearAboutUs.Description);
+            HowHearComboBox.DataSource = Program.DBContext.HearAboutUs.ToList();
+            HowHearComboBox.DisplayMember = nameof(HearAboutUs.Description);
 
-                StaffInterviewerComboBox.DataSource = context.Lawyers.ToList();
-                StaffInterviewerComboBox.DisplayMember = nameof(Lawyer.Description);
+            StaffInterviewerComboBox.DataSource = Program.DBContext.Lawyers.ToList();
+            StaffInterviewerComboBox.DisplayMember = nameof(Lawyer.Description);
 
-                ResponsibleLawyerComboBox.DataSource = context.Lawyers.ToList();
-                ResponsibleLawyerComboBox.DisplayMember = nameof(Lawyer.Description);
+            ResponsibleLawyerComboBox.DataSource = Program.DBContext.Lawyers.ToList();
+            ResponsibleLawyerComboBox.DisplayMember = nameof(Lawyer.Description);
 
-                LawyerComboBox.DataSource = context.Lawyers.ToList();
-                LawyerComboBox.DisplayMember = nameof(Lawyer.Description);
-            }
+            LawyerComboBox.DataSource = Program.DBContext.Lawyers.ToList();
+            LawyerComboBox.DisplayMember = nameof(Lawyer.Description);
             //HearAboutUsTableAdapter.Fill(ActionLogDBDataSet.HearAboutUs);
             //StaffInterviewerTableAdapter.Fill(ActionLogDBDataSet.StaffInterviewer);
             //ResponsibleLawyerTableAdapter.Fill(ActionLogDBDataSet.ResponsibleLawyer);

@@ -144,12 +144,9 @@ namespace RRFFilesManager.IntakeForm
 
         public void OnNext()
         {
-            using(var context = new DataContext())
-            {
                 FillIntakeFromForm(IntakeForm.Intake);
-                context.Intakes.Add(IntakeForm.Intake);
-                context.SaveChanges();
-            }
+                Program.DBContext.Intakes.Add(IntakeForm.Intake);
+                Program.DBContext.SaveChanges();
         }
 
         public void FillIntakeFromForm(Intake intake)
