@@ -101,6 +101,6 @@ namespace RRFFilesManager.Abstractions
         public string PolCPPOwnOrCompany { get; set; }
         public string PolCPPApproved { get; set; }
         public string PolOtherNotes { get; set; }
-
+        public bool Hold { get; set; }
     }
 }

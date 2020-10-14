@@ -213,6 +213,10 @@
     <Compile Include="Migrations\202010130309297_DisabilityInsuranceCompany.Designer.cs">
       <DependentUpon>202010130309297_DisabilityInsuranceCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010140107556_Hold.cs" />
+    <Compile Include="Migrations\202010140107556_Hold.Designer.cs">
+      <DependentUpon>202010140107556_Hold.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
@@ -260,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010130309297_DisabilityInsuranceCompany.resx">
       <DependentUpon>202010130309297_DisabilityInsuranceCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010140107556_Hold.resx">
+      <DependentUpon>202010140107556_Hold.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>
