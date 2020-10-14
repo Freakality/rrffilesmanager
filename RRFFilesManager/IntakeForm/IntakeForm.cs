@@ -44,6 +44,7 @@ namespace RRFFilesManager.IntakeForm
         {
             this.Content.Controls.Clear();
             this.Content.Controls.Add(control);
+            Content.Controls[0].Dock = DockStyle.Fill;
         }
 
         private void Intake_FormClosing(object sender, FormClosingEventArgs e)

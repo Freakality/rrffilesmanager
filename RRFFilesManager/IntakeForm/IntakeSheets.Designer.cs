@@ -269,6 +269,8 @@
             // 
             // MVALiabilityGroup
             // 
+            this.MVALiabilityGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MVALiabilityGroup.Controls.Add(this.LiaEstimDamageGroup);
             this.MVALiabilityGroup.Controls.Add(this.LiaInsuranceCoGroup);
             this.MVALiabilityGroup.Controls.Add(this.LiaOwnerNameGroup);
@@ -283,6 +285,8 @@
             // 
             // LiaEstimDamageGroup
             // 
+            this.LiaEstimDamageGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaEstimDamageGroup.Controls.Add(this.LiaEstimDamage);
             this.LiaEstimDamageGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaEstimDamageGroup.Location = new System.Drawing.Point(3, 19);
@@ -306,6 +310,8 @@
             // 
             // LiaInsuranceCoGroup
             // 
+            this.LiaInsuranceCoGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaInsuranceCoGroup.Controls.Add(this.LiaInsuranceCo);
             this.LiaInsuranceCoGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaInsuranceCoGroup.Location = new System.Drawing.Point(3, 328);
@@ -328,6 +334,8 @@
             // 
             // LiaOwnerNameGroup
             // 
+            this.LiaOwnerNameGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaOwnerNameGroup.Controls.Add(this.LiaOwnerName);
             this.LiaOwnerNameGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaOwnerNameGroup.Location = new System.Drawing.Point(3, 257);
@@ -351,6 +359,8 @@
             // 
             // LiaDriverNameGroup
             // 
+            this.LiaDriverNameGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaDriverNameGroup.Controls.Add(this.LiaDriverName);
             this.LiaDriverNameGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaDriverNameGroup.Location = new System.Drawing.Point(3, 189);
@@ -374,6 +384,8 @@
             // 
             // LiaYourFaultGroup
             // 
+            this.LiaYourFaultGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaYourFaultGroup.Controls.Add(this.LiaYourFault);
             this.LiaYourFaultGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaYourFaultGroup.Location = new System.Drawing.Point(3, 104);
@@ -396,6 +408,8 @@
             // 
             // OthersLiabilityGroup
             // 
+            this.OthersLiabilityGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OthersLiabilityGroup.Controls.Add(this.GroupBox38);
             this.OthersLiabilityGroup.Controls.Add(this.LieNotifiedMunicipalityGroup);
             this.OthersLiabilityGroup.Controls.Add(this.GroupBox35);
@@ -410,6 +424,8 @@
             // 
             // GroupBox38
             // 
+            this.GroupBox38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox38.Controls.Add(this.LiaHaveCopy);
             this.GroupBox38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox38.Location = new System.Drawing.Point(3, 19);
@@ -432,6 +448,8 @@
             // 
             // LieNotifiedMunicipalityGroup
             // 
+            this.LieNotifiedMunicipalityGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LieNotifiedMunicipalityGroup.Controls.Add(this.LiaNotifiedMunicipality);
             this.LieNotifiedMunicipalityGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LieNotifiedMunicipalityGroup.Location = new System.Drawing.Point(3, 328);
@@ -454,6 +472,8 @@
             // 
             // GroupBox35
             // 
+            this.GroupBox35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox35.Controls.Add(this.LiaMunicipality);
             this.GroupBox35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox35.Location = new System.Drawing.Point(3, 257);
@@ -476,6 +496,8 @@
             // 
             // GroupBox36
             // 
+            this.GroupBox36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox36.Controls.Add(this.LiaFaultPerson);
             this.GroupBox36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox36.Location = new System.Drawing.Point(3, 189);
@@ -499,6 +521,8 @@
             // 
             // GroupBox37
             // 
+            this.GroupBox37.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox37.Controls.Add(this.LiaOwnNegligence);
             this.GroupBox37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox37.Location = new System.Drawing.Point(3, 104);
@@ -584,6 +608,8 @@
             // 
             // IncidentDateTimeGroupBox
             // 
+            this.IncidentDateTimeGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IncidentDateTimeGroupBox.Controls.Add(this.LiaDate);
             this.IncidentDateTimeGroupBox.Controls.Add(this.LiaTime);
             this.IncidentDateTimeGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -613,6 +639,8 @@
             // 
             // ReceiveCopyGroupBox
             // 
+            this.ReceiveCopyGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ReceiveCopyGroupBox.Controls.Add(this.LiaOtherDoc);
             this.ReceiveCopyGroupBox.Controls.Add(this.LiaMVCExchange);
             this.ReceiveCopyGroupBox.Controls.Add(this.LiaReportCollision);
@@ -666,6 +694,8 @@
             // 
             // LiaWhereAccidentGroup
             // 
+            this.LiaWhereAccidentGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaWhereAccidentGroup.Controls.Add(this.LiaWhereAccident);
             this.LiaWhereAccidentGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaWhereAccidentGroup.Location = new System.Drawing.Point(3, 65);
@@ -688,6 +718,8 @@
             // 
             // LiaExplainGroup
             // 
+            this.LiaExplainGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaExplainGroup.Controls.Add(this.LiaExplain);
             this.LiaExplainGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaExplainGroup.Location = new System.Drawing.Point(3, 166);
@@ -710,6 +742,8 @@
             // 
             // LiaHavePhotosGroup
             // 
+            this.LiaHavePhotosGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaHavePhotosGroup.Controls.Add(this.LiaHavePhotos);
             this.LiaHavePhotosGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaHavePhotosGroup.Location = new System.Drawing.Point(3, 344);
@@ -732,6 +766,8 @@
             // 
             // LiaNotesGroup
             // 
+            this.LiaNotesGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LiaNotesGroup.Controls.Add(this.LiaNotes);
             this.LiaNotesGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiaNotesGroup.Location = new System.Drawing.Point(3, 1231);
@@ -857,6 +893,8 @@
             // 
             // GroupBox123
             // 
+            this.GroupBox123.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox123.Controls.Add(this.PolCompanyDeniedBenefits);
             this.GroupBox123.Controls.Add(this.Label116);
             this.GroupBox123.Location = new System.Drawing.Point(16, 236);
@@ -887,6 +925,8 @@
             // 
             // GroupBox102
             // 
+            this.GroupBox102.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox102.Controls.Add(this.PolDeniedSTPorLTD);
             this.GroupBox102.Controls.Add(this.DeniedSTPorLTDLabel);
             this.GroupBox102.Location = new System.Drawing.Point(654, 126);
@@ -919,6 +959,8 @@
             // 
             // GroupBox101
             // 
+            this.GroupBox101.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox101.Controls.Add(this.PolLTDPrivateOrEmployerGroup);
             this.GroupBox101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox101.Location = new System.Drawing.Point(16, 284);
@@ -930,6 +972,8 @@
             // 
             // GroupBox98
             // 
+            this.GroupBox98.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox98.Controls.Add(this.PolDateLostBenefits);
             this.GroupBox98.Controls.Add(this.Label117);
             this.GroupBox98.Location = new System.Drawing.Point(16, 126);
@@ -959,6 +1003,8 @@
             // 
             // GroupBox93
             // 
+            this.GroupBox93.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox93.Controls.Add(this.PolOtherNotes);
             this.GroupBox93.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox93.Location = new System.Drawing.Point(14, 752);
@@ -971,15 +1017,18 @@
             // PolOtherNotes
             // 
             this.PolOtherNotes.BackColor = System.Drawing.Color.White;
-            this.PolOtherNotes.Location = new System.Drawing.Point(8, 20);
+            this.PolOtherNotes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolOtherNotes.Location = new System.Drawing.Point(3, 16);
             this.PolOtherNotes.Multiline = true;
             this.PolOtherNotes.Name = "PolOtherNotes";
             this.PolOtherNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolOtherNotes.Size = new System.Drawing.Size(1141, 110);
+            this.PolOtherNotes.Size = new System.Drawing.Size(1154, 119);
             this.PolOtherNotes.TabIndex = 1;
             // 
             // GroupBox97
             // 
+            this.GroupBox97.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox97.Controls.Add(this.PolHowMuchBeingPaid);
             this.GroupBox97.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox97.Location = new System.Drawing.Point(17, 175);
@@ -1002,6 +1051,8 @@
             // 
             // GroupBox99
             // 
+            this.GroupBox99.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox99.Controls.Add(this.PolWhoPaidBenefits);
             this.GroupBox99.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox99.Location = new System.Drawing.Point(16, 67);
@@ -1075,6 +1126,8 @@
             // 
             // GroupBox96
             // 
+            this.GroupBox96.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox96.Controls.Add(this.PolCPPApproved);
             this.GroupBox96.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox96.Location = new System.Drawing.Point(16, 689);
@@ -1087,15 +1140,18 @@
             // PolCPPApproved
             // 
             this.PolCPPApproved.BackColor = System.Drawing.SystemColors.Window;
-            this.PolCPPApproved.Location = new System.Drawing.Point(8, 20);
+            this.PolCPPApproved.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolCPPApproved.Location = new System.Drawing.Point(3, 16);
             this.PolCPPApproved.Multiline = true;
             this.PolCPPApproved.Name = "PolCPPApproved";
             this.PolCPPApproved.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolCPPApproved.Size = new System.Drawing.Size(1141, 27);
+            this.PolCPPApproved.Size = new System.Drawing.Size(1154, 39);
             this.PolCPPApproved.TabIndex = 1;
             // 
             // GroupBox95
             // 
+            this.GroupBox95.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox95.Controls.Add(this.PolCPPOwnOrCompany);
             this.GroupBox95.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox95.Location = new System.Drawing.Point(16, 625);
@@ -1109,15 +1165,18 @@
             // PolCPPOwnOrCompany
             // 
             this.PolCPPOwnOrCompany.BackColor = System.Drawing.SystemColors.Window;
-            this.PolCPPOwnOrCompany.Location = new System.Drawing.Point(8, 20);
+            this.PolCPPOwnOrCompany.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolCPPOwnOrCompany.Location = new System.Drawing.Point(3, 16);
             this.PolCPPOwnOrCompany.Multiline = true;
             this.PolCPPOwnOrCompany.Name = "PolCPPOwnOrCompany";
             this.PolCPPOwnOrCompany.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolCPPOwnOrCompany.Size = new System.Drawing.Size(1141, 27);
+            this.PolCPPOwnOrCompany.Size = new System.Drawing.Size(1154, 39);
             this.PolCPPOwnOrCompany.TabIndex = 1;
             // 
             // GroupBox94
             // 
+            this.GroupBox94.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox94.Controls.Add(this.PolApplicationForCPP);
             this.GroupBox94.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox94.Location = new System.Drawing.Point(16, 561);
@@ -1131,15 +1190,18 @@
             // PolApplicationForCPP
             // 
             this.PolApplicationForCPP.BackColor = System.Drawing.SystemColors.Window;
-            this.PolApplicationForCPP.Location = new System.Drawing.Point(8, 20);
+            this.PolApplicationForCPP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolApplicationForCPP.Location = new System.Drawing.Point(3, 16);
             this.PolApplicationForCPP.Multiline = true;
             this.PolApplicationForCPP.Name = "PolApplicationForCPP";
             this.PolApplicationForCPP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolApplicationForCPP.Size = new System.Drawing.Size(1141, 27);
+            this.PolApplicationForCPP.Size = new System.Drawing.Size(1154, 39);
             this.PolApplicationForCPP.TabIndex = 1;
             // 
             // GroupBox128
             // 
+            this.GroupBox128.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox128.Controls.Add(this.PolReasonTerminateLTD);
             this.GroupBox128.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox128.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1154,16 +1216,19 @@
             // PolReasonTerminateLTD
             // 
             this.PolReasonTerminateLTD.BackColor = System.Drawing.Color.White;
+            this.PolReasonTerminateLTD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PolReasonTerminateLTD.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolReasonTerminateLTD.Location = new System.Drawing.Point(8, 20);
+            this.PolReasonTerminateLTD.Location = new System.Drawing.Point(3, 18);
             this.PolReasonTerminateLTD.Multiline = true;
             this.PolReasonTerminateLTD.Name = "PolReasonTerminateLTD";
             this.PolReasonTerminateLTD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolReasonTerminateLTD.Size = new System.Drawing.Size(1141, 67);
+            this.PolReasonTerminateLTD.Size = new System.Drawing.Size(1154, 74);
             this.PolReasonTerminateLTD.TabIndex = 1;
             // 
             // GroupBox127
             // 
+            this.GroupBox127.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox127.Controls.Add(this.PolDateLastDayLTD);
             this.GroupBox127.Controls.Add(this.Label120);
             this.GroupBox127.Location = new System.Drawing.Point(867, 348);
@@ -1194,6 +1259,8 @@
             // 
             // GroupBox126
             // 
+            this.GroupBox126.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox126.Controls.Add(this.PolFirstTimeLTDApproved);
             this.GroupBox126.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox126.Location = new System.Drawing.Point(16, 396);
@@ -1217,6 +1284,8 @@
             // 
             // GroupBox125
             // 
+            this.GroupBox125.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox125.Controls.Add(this.PolDateStartedCollLTD);
             this.GroupBox125.Controls.Add(this.Label119);
             this.GroupBox125.Location = new System.Drawing.Point(503, 348);
@@ -1246,6 +1315,8 @@
             // 
             // GroupBox124
             // 
+            this.GroupBox124.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox124.Controls.Add(this.PolDateSubmittedLTD);
             this.GroupBox124.Controls.Add(this.Label118);
             this.GroupBox124.Location = new System.Drawing.Point(16, 348);

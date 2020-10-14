@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label FileNumberLabel;
-            System.Windows.Forms.Label StaffInterviewerLabel;
-            System.Windows.Forms.Label MatterSubTypeLabel;
-            System.Windows.Forms.Label LimitationPeriodLabel;
-            System.Windows.Forms.Label ResponsibleLawyerLabel;
-            System.Windows.Forms.Label HowHearLabel;
-            System.Windows.Forms.Label FileLawyerLabel;
-            System.Windows.Forms.Label DateOfLossLabel;
-            System.Windows.Forms.Label DateOFCallLabel;
             System.Windows.Forms.Label AdditionalNotesLabel;
+            System.Windows.Forms.Label DateOFCallLabel;
+            System.Windows.Forms.Label DateOfLossLabel;
+            System.Windows.Forms.Label FileLawyerLabel;
+            System.Windows.Forms.Label HowHearLabel;
+            System.Windows.Forms.Label ResponsibleLawyerLabel;
+            System.Windows.Forms.Label LimitationPeriodLabel;
+            System.Windows.Forms.Label MatterSubTypeLabel;
+            System.Windows.Forms.Label StaffInterviewerLabel;
+            System.Windows.Forms.Label FileNumberLabel;
             this.AdditionalNotesTextBox = new System.Windows.Forms.TextBox();
             this.LawyerComboBox = new System.Windows.Forms.ComboBox();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -49,7 +49,6 @@
             this.LimitationPeriodTextBox = new System.Windows.Forms.TextBox();
             this.HowHearComboBox = new System.Windows.Forms.ComboBox();
             this.DateOfLossDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Label1 = new System.Windows.Forms.Label();
             this.StatutoryNoticeBox = new System.Windows.Forms.TextBox();
             this.DateOFCallDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Label42 = new System.Windows.Forms.Label();
@@ -58,114 +57,22 @@
             this.FindIntakeButton = new System.Windows.Forms.Button();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
             this.MatterTypeComboBox = new System.Windows.Forms.ComboBox();
-            FileNumberLabel = new System.Windows.Forms.Label();
-            StaffInterviewerLabel = new System.Windows.Forms.Label();
-            MatterSubTypeLabel = new System.Windows.Forms.Label();
-            LimitationPeriodLabel = new System.Windows.Forms.Label();
-            ResponsibleLawyerLabel = new System.Windows.Forms.Label();
-            HowHearLabel = new System.Windows.Forms.Label();
-            FileLawyerLabel = new System.Windows.Forms.Label();
-            DateOfLossLabel = new System.Windows.Forms.Label();
-            DateOFCallLabel = new System.Windows.Forms.Label();
+            this.Label1 = new System.Windows.Forms.Label();
             AdditionalNotesLabel = new System.Windows.Forms.Label();
+            DateOFCallLabel = new System.Windows.Forms.Label();
+            DateOfLossLabel = new System.Windows.Forms.Label();
+            FileLawyerLabel = new System.Windows.Forms.Label();
+            HowHearLabel = new System.Windows.Forms.Label();
+            ResponsibleLawyerLabel = new System.Windows.Forms.Label();
+            LimitationPeriodLabel = new System.Windows.Forms.Label();
+            MatterSubTypeLabel = new System.Windows.Forms.Label();
+            StaffInterviewerLabel = new System.Windows.Forms.Label();
+            FileNumberLabel = new System.Windows.Forms.Label();
             this.TableLayoutPanel1.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
             this.PreliminayPanel.SuspendLayout();
             this.GroupBox6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // FileNumberLabel
-            // 
-            FileNumberLabel.AutoSize = true;
-            FileNumberLabel.Location = new System.Drawing.Point(3, 184);
-            FileNumberLabel.Name = "FileNumberLabel";
-            FileNumberLabel.Size = new System.Drawing.Size(88, 17);
-            FileNumberLabel.TabIndex = 2;
-            FileNumberLabel.Text = "File Number:";
-            // 
-            // StaffInterviewerLabel
-            // 
-            StaffInterviewerLabel.AutoSize = true;
-            StaffInterviewerLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            StaffInterviewerLabel.ForeColor = System.Drawing.Color.Black;
-            StaffInterviewerLabel.Location = new System.Drawing.Point(585, 0);
-            StaffInterviewerLabel.Name = "StaffInterviewerLabel";
-            StaffInterviewerLabel.Size = new System.Drawing.Size(115, 17);
-            StaffInterviewerLabel.TabIndex = 10;
-            StaffInterviewerLabel.Text = "Staff Interviewer:";
-            // 
-            // MatterSubTypeLabel
-            // 
-            MatterSubTypeLabel.AutoSize = true;
-            MatterSubTypeLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            MatterSubTypeLabel.ForeColor = System.Drawing.Color.Black;
-            MatterSubTypeLabel.Location = new System.Drawing.Point(585, 138);
-            MatterSubTypeLabel.Name = "MatterSubTypeLabel";
-            MatterSubTypeLabel.Size = new System.Drawing.Size(113, 17);
-            MatterSubTypeLabel.TabIndex = 18;
-            MatterSubTypeLabel.Text = "Matter Sub Type:";
-            // 
-            // LimitationPeriodLabel
-            // 
-            LimitationPeriodLabel.AutoSize = true;
-            LimitationPeriodLabel.Location = new System.Drawing.Point(3, 138);
-            LimitationPeriodLabel.Name = "LimitationPeriodLabel";
-            LimitationPeriodLabel.Size = new System.Drawing.Size(76, 34);
-            LimitationPeriodLabel.TabIndex = 20;
-            LimitationPeriodLabel.Text = "Limitation Period:";
-            // 
-            // ResponsibleLawyerLabel
-            // 
-            ResponsibleLawyerLabel.AutoSize = true;
-            ResponsibleLawyerLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ResponsibleLawyerLabel.ForeColor = System.Drawing.Color.Black;
-            ResponsibleLawyerLabel.Location = new System.Drawing.Point(3, 92);
-            ResponsibleLawyerLabel.Name = "ResponsibleLawyerLabel";
-            ResponsibleLawyerLabel.Size = new System.Drawing.Size(87, 34);
-            ResponsibleLawyerLabel.TabIndex = 16;
-            ResponsibleLawyerLabel.Text = "Responsible Lawyer:";
-            // 
-            // HowHearLabel
-            // 
-            HowHearLabel.AutoSize = true;
-            HowHearLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            HowHearLabel.ForeColor = System.Drawing.Color.Black;
-            HowHearLabel.Location = new System.Drawing.Point(3, 46);
-            HowHearLabel.Name = "HowHearLabel";
-            HowHearLabel.Size = new System.Drawing.Size(106, 34);
-            HowHearLabel.TabIndex = 12;
-            HowHearLabel.Text = "How did you hear about us?";
-            // 
-            // FileLawyerLabel
-            // 
-            FileLawyerLabel.AutoSize = true;
-            FileLawyerLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            FileLawyerLabel.ForeColor = System.Drawing.Color.Black;
-            FileLawyerLabel.Location = new System.Drawing.Point(585, 46);
-            FileLawyerLabel.Name = "FileLawyerLabel";
-            FileLawyerLabel.Size = new System.Drawing.Size(81, 17);
-            FileLawyerLabel.TabIndex = 14;
-            FileLawyerLabel.Text = "File Lawyer:";
-            // 
-            // DateOfLossLabel
-            // 
-            DateOfLossLabel.AutoSize = true;
-            DateOfLossLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DateOfLossLabel.ForeColor = System.Drawing.Color.Black;
-            DateOfLossLabel.Location = new System.Drawing.Point(585, 92);
-            DateOfLossLabel.Name = "DateOfLossLabel";
-            DateOfLossLabel.Size = new System.Drawing.Size(92, 17);
-            DateOfLossLabel.TabIndex = 8;
-            DateOfLossLabel.Text = "Date Of Loss:";
-            // 
-            // DateOFCallLabel
-            // 
-            DateOFCallLabel.AutoSize = true;
-            DateOFCallLabel.Location = new System.Drawing.Point(3, 0);
-            DateOFCallLabel.Name = "DateOFCallLabel";
-            DateOFCallLabel.Size = new System.Drawing.Size(91, 17);
-            DateOFCallLabel.TabIndex = 6;
-            DateOFCallLabel.Text = "Date of Call:";
             // 
             // AdditionalNotesLabel
             // 
@@ -183,26 +90,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AdditionalNotesTextBox.BackColor = System.Drawing.Color.White;
             this.AdditionalNotesTextBox.Location = new System.Drawing.Point(129, 3);
+            this.AdditionalNotesTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.AdditionalNotesTextBox.Multiline = true;
             this.AdditionalNotesTextBox.Name = "AdditionalNotesTextBox";
-            this.AdditionalNotesTextBox.Size = new System.Drawing.Size(1100, 177);
+            this.AdditionalNotesTextBox.Size = new System.Drawing.Size(1093, 177);
             this.AdditionalNotesTextBox.TabIndex = 23;
             // 
             // LawyerComboBox
             // 
+            this.LawyerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LawyerComboBox.DisplayMember = "Lawyer";
             this.LawyerComboBox.FormattingEnabled = true;
             this.LawyerComboBox.Location = new System.Drawing.Point(711, 49);
+            this.LawyerComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.LawyerComboBox.Name = "LawyerComboBox";
-            this.LawyerComboBox.Size = new System.Drawing.Size(489, 25);
+            this.LawyerComboBox.Size = new System.Drawing.Size(511, 25);
             this.LawyerComboBox.TabIndex = 26;
             this.LawyerComboBox.ValueMember = "Lawyer";
             this.LawyerComboBox.SelectedIndexChanged += new System.EventHandler(this.LawyerComboBox_SelectedIndexChanged);
             // 
             // TableLayoutPanel1
             // 
-            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanel1.ColumnCount = 4;
             this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.10952F));
@@ -242,88 +152,106 @@
             // 
             // MatterSubTypeComboBox
             // 
+            this.MatterSubTypeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MatterSubTypeComboBox.FormattingEnabled = true;
             this.MatterSubTypeComboBox.Location = new System.Drawing.Point(711, 141);
+            this.MatterSubTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.MatterSubTypeComboBox.Name = "MatterSubTypeComboBox";
-            this.MatterSubTypeComboBox.Size = new System.Drawing.Size(489, 25);
+            this.MatterSubTypeComboBox.Size = new System.Drawing.Size(511, 25);
             this.MatterSubTypeComboBox.TabIndex = 24;
             this.MatterSubTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.MatterSubTypeComboBox_SelectedIndexChanged);
             // 
             // FileNumberTextBox
             // 
+            this.FileNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FileNumberTextBox.Enabled = false;
             this.FileNumberTextBox.Location = new System.Drawing.Point(127, 187);
+            this.FileNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
-            this.FileNumberTextBox.Size = new System.Drawing.Size(435, 23);
+            this.FileNumberTextBox.Size = new System.Drawing.Size(445, 23);
             this.FileNumberTextBox.TabIndex = 3;
             // 
             // StaffInterviewerComboBox
             // 
+            this.StaffInterviewerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.StaffInterviewerComboBox.FormattingEnabled = true;
             this.StaffInterviewerComboBox.Location = new System.Drawing.Point(711, 3);
+            this.StaffInterviewerComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.StaffInterviewerComboBox.Name = "StaffInterviewerComboBox";
-            this.StaffInterviewerComboBox.Size = new System.Drawing.Size(489, 25);
+            this.StaffInterviewerComboBox.Size = new System.Drawing.Size(511, 25);
             this.StaffInterviewerComboBox.TabIndex = 11;
             this.StaffInterviewerComboBox.ValueMember = "Lawyer";
             // 
             // ResponsibleLawyerComboBox
             // 
+            this.ResponsibleLawyerComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ResponsibleLawyerComboBox.FormattingEnabled = true;
             this.ResponsibleLawyerComboBox.Location = new System.Drawing.Point(127, 95);
+            this.ResponsibleLawyerComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.ResponsibleLawyerComboBox.Name = "ResponsibleLawyerComboBox";
-            this.ResponsibleLawyerComboBox.Size = new System.Drawing.Size(435, 25);
+            this.ResponsibleLawyerComboBox.Size = new System.Drawing.Size(445, 25);
             this.ResponsibleLawyerComboBox.TabIndex = 17;
             this.ResponsibleLawyerComboBox.ValueMember = "Lawyer";
             // 
             // LimitationPeriodTextBox
             // 
+            this.LimitationPeriodTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LimitationPeriodTextBox.Location = new System.Drawing.Point(127, 141);
+            this.LimitationPeriodTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.LimitationPeriodTextBox.Name = "LimitationPeriodTextBox";
-            this.LimitationPeriodTextBox.Size = new System.Drawing.Size(435, 23);
+            this.LimitationPeriodTextBox.Size = new System.Drawing.Size(445, 23);
             this.LimitationPeriodTextBox.TabIndex = 21;
             // 
             // HowHearComboBox
             // 
+            this.HowHearComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.HowHearComboBox.FormattingEnabled = true;
             this.HowHearComboBox.Location = new System.Drawing.Point(127, 49);
+            this.HowHearComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.HowHearComboBox.Name = "HowHearComboBox";
-            this.HowHearComboBox.Size = new System.Drawing.Size(435, 25);
+            this.HowHearComboBox.Size = new System.Drawing.Size(445, 25);
             this.HowHearComboBox.TabIndex = 13;
             this.HowHearComboBox.ValueMember = "Option";
             // 
             // DateOfLossDateTimePicker
             // 
+            this.DateOfLossDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DateOfLossDateTimePicker.CustomFormat = " ";
             this.DateOfLossDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateOfLossDateTimePicker.Location = new System.Drawing.Point(711, 95);
+            this.DateOfLossDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.DateOfLossDateTimePicker.Name = "DateOfLossDateTimePicker";
-            this.DateOfLossDateTimePicker.Size = new System.Drawing.Size(489, 23);
+            this.DateOfLossDateTimePicker.Size = new System.Drawing.Size(511, 23);
             this.DateOfLossDateTimePicker.TabIndex = 9;
             this.DateOfLossDateTimePicker.ValueChanged += new System.EventHandler(this.DateOfLossDateTimePicker_ValueChanged);
             // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(585, 184);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(112, 17);
-            this.Label1.TabIndex = 27;
-            this.Label1.Text = "Statutory Notice";
-            // 
             // StatutoryNoticeBox
             // 
+            this.StatutoryNoticeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.StatutoryNoticeBox.Location = new System.Drawing.Point(711, 187);
+            this.StatutoryNoticeBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.StatutoryNoticeBox.Name = "StatutoryNoticeBox";
-            this.StatutoryNoticeBox.Size = new System.Drawing.Size(489, 23);
+            this.StatutoryNoticeBox.Size = new System.Drawing.Size(511, 23);
             this.StatutoryNoticeBox.TabIndex = 28;
             // 
             // DateOFCallDateTimePicker
             // 
+            this.DateOFCallDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DateOFCallDateTimePicker.CustomFormat = "MMM-dd-yyyy";
             this.DateOFCallDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateOFCallDateTimePicker.Location = new System.Drawing.Point(127, 3);
+            this.DateOFCallDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.DateOFCallDateTimePicker.Name = "DateOFCallDateTimePicker";
-            this.DateOFCallDateTimePicker.Size = new System.Drawing.Size(435, 23);
+            this.DateOFCallDateTimePicker.Size = new System.Drawing.Size(445, 23);
             this.DateOFCallDateTimePicker.TabIndex = 7;
             // 
             // Label42
@@ -372,10 +300,11 @@
             // 
             // FindIntakeButton
             // 
+            this.FindIntakeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindIntakeButton.BackColor = System.Drawing.Color.Maroon;
             this.FindIntakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindIntakeButton.ForeColor = System.Drawing.Color.White;
-            this.FindIntakeButton.Location = new System.Drawing.Point(1157, 20);
+            this.FindIntakeButton.Location = new System.Drawing.Point(1150, 20);
             this.FindIntakeButton.Name = "FindIntakeButton";
             this.FindIntakeButton.Size = new System.Drawing.Size(97, 36);
             this.FindIntakeButton.TabIndex = 140;
@@ -385,6 +314,9 @@
             // 
             // GroupBox6
             // 
+            this.GroupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GroupBox6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GroupBox6.Controls.Add(this.MatterTypeComboBox);
             this.GroupBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox6.ForeColor = System.Drawing.Color.Black;
@@ -397,6 +329,8 @@
             // 
             // MatterTypeComboBox
             // 
+            this.MatterTypeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MatterTypeComboBox.BackColor = System.Drawing.Color.White;
             this.MatterTypeComboBox.DisplayMember = "MatterType";
             this.MatterTypeComboBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -408,9 +342,113 @@
             this.MatterTypeComboBox.ValueMember = "MatterType";
             this.MatterTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.MatterTypeComboBox_SelectedIndexChanged);
             // 
+            // DateOFCallLabel
+            // 
+            DateOFCallLabel.AutoSize = true;
+            DateOFCallLabel.Location = new System.Drawing.Point(3, 0);
+            DateOFCallLabel.Name = "DateOFCallLabel";
+            DateOFCallLabel.Size = new System.Drawing.Size(91, 17);
+            DateOFCallLabel.TabIndex = 6;
+            DateOFCallLabel.Text = "Date of Call:";
+            // 
+            // Label1
+            // 
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(585, 184);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(112, 17);
+            this.Label1.TabIndex = 27;
+            this.Label1.Text = "Statutory Notice";
+            // 
+            // DateOfLossLabel
+            // 
+            DateOfLossLabel.AutoSize = true;
+            DateOfLossLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            DateOfLossLabel.ForeColor = System.Drawing.Color.Black;
+            DateOfLossLabel.Location = new System.Drawing.Point(585, 92);
+            DateOfLossLabel.Name = "DateOfLossLabel";
+            DateOfLossLabel.Size = new System.Drawing.Size(92, 17);
+            DateOfLossLabel.TabIndex = 8;
+            DateOfLossLabel.Text = "Date Of Loss:";
+            // 
+            // FileLawyerLabel
+            // 
+            FileLawyerLabel.AutoSize = true;
+            FileLawyerLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            FileLawyerLabel.ForeColor = System.Drawing.Color.Black;
+            FileLawyerLabel.Location = new System.Drawing.Point(585, 46);
+            FileLawyerLabel.Name = "FileLawyerLabel";
+            FileLawyerLabel.Size = new System.Drawing.Size(81, 17);
+            FileLawyerLabel.TabIndex = 14;
+            FileLawyerLabel.Text = "File Lawyer:";
+            // 
+            // HowHearLabel
+            // 
+            HowHearLabel.AutoSize = true;
+            HowHearLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            HowHearLabel.ForeColor = System.Drawing.Color.Black;
+            HowHearLabel.Location = new System.Drawing.Point(3, 46);
+            HowHearLabel.Name = "HowHearLabel";
+            HowHearLabel.Size = new System.Drawing.Size(106, 34);
+            HowHearLabel.TabIndex = 12;
+            HowHearLabel.Text = "How did you hear about us?";
+            // 
+            // ResponsibleLawyerLabel
+            // 
+            ResponsibleLawyerLabel.AutoSize = true;
+            ResponsibleLawyerLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ResponsibleLawyerLabel.ForeColor = System.Drawing.Color.Black;
+            ResponsibleLawyerLabel.Location = new System.Drawing.Point(3, 92);
+            ResponsibleLawyerLabel.Name = "ResponsibleLawyerLabel";
+            ResponsibleLawyerLabel.Size = new System.Drawing.Size(87, 34);
+            ResponsibleLawyerLabel.TabIndex = 16;
+            ResponsibleLawyerLabel.Text = "Responsible Lawyer:";
+            // 
+            // LimitationPeriodLabel
+            // 
+            LimitationPeriodLabel.AutoSize = true;
+            LimitationPeriodLabel.Location = new System.Drawing.Point(3, 138);
+            LimitationPeriodLabel.Name = "LimitationPeriodLabel";
+            LimitationPeriodLabel.Size = new System.Drawing.Size(76, 34);
+            LimitationPeriodLabel.TabIndex = 20;
+            LimitationPeriodLabel.Text = "Limitation Period:";
+            // 
+            // MatterSubTypeLabel
+            // 
+            MatterSubTypeLabel.AutoSize = true;
+            MatterSubTypeLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            MatterSubTypeLabel.ForeColor = System.Drawing.Color.Black;
+            MatterSubTypeLabel.Location = new System.Drawing.Point(585, 138);
+            MatterSubTypeLabel.Name = "MatterSubTypeLabel";
+            MatterSubTypeLabel.Size = new System.Drawing.Size(113, 17);
+            MatterSubTypeLabel.TabIndex = 18;
+            MatterSubTypeLabel.Text = "Matter Sub Type:";
+            // 
+            // StaffInterviewerLabel
+            // 
+            StaffInterviewerLabel.AutoSize = true;
+            StaffInterviewerLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            StaffInterviewerLabel.ForeColor = System.Drawing.Color.Black;
+            StaffInterviewerLabel.Location = new System.Drawing.Point(585, 0);
+            StaffInterviewerLabel.Name = "StaffInterviewerLabel";
+            StaffInterviewerLabel.Size = new System.Drawing.Size(115, 17);
+            StaffInterviewerLabel.TabIndex = 10;
+            StaffInterviewerLabel.Text = "Staff Interviewer:";
+            // 
+            // FileNumberLabel
+            // 
+            FileNumberLabel.AutoSize = true;
+            FileNumberLabel.Location = new System.Drawing.Point(3, 184);
+            FileNumberLabel.Name = "FileNumberLabel";
+            FileNumberLabel.Size = new System.Drawing.Size(88, 17);
+            FileNumberLabel.TabIndex = 2;
+            FileNumberLabel.Text = "File Number:";
+            // 
             // PreliminaryInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.PreliminayPanel);
             this.Name = "PreliminaryInfo";
@@ -439,7 +477,6 @@
         internal System.Windows.Forms.TextBox LimitationPeriodTextBox;
         internal System.Windows.Forms.ComboBox HowHearComboBox;
         internal System.Windows.Forms.DateTimePicker DateOfLossDateTimePicker;
-        internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox StatutoryNoticeBox;
         internal System.Windows.Forms.DateTimePicker DateOFCallDateTimePicker;
         internal System.Windows.Forms.Label Label42;
@@ -448,5 +485,6 @@
         internal System.Windows.Forms.GroupBox GroupBox6;
         internal System.Windows.Forms.ComboBox MatterTypeComboBox;
         private System.Windows.Forms.Button FindIntakeButton;
+        internal System.Windows.Forms.Label Label1;
     }
 }

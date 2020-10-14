@@ -43,6 +43,9 @@
             // 
             // Content
             // 
+            this.Content.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Content.Location = new System.Drawing.Point(0, 0);
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(1350, 610);
@@ -92,6 +95,9 @@
             // 
             // Container
             // 
+            this.Container.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Container.BackColor = System.Drawing.Color.White;
             this.Container.Controls.Add(this.Actions);
             this.Container.Controls.Add(this.Content);

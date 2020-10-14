@@ -40,9 +40,11 @@
             this.GroupBox90 = new System.Windows.Forms.GroupBox();
             this.MVATemplatesGroupBox = new System.Windows.Forms.GroupBox();
             this.GroupBox32 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.GroupBox90.SuspendLayout();
             this.MVATemplatesGroupBox.SuspendLayout();
             this.GroupBox32.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Submit
@@ -52,7 +54,8 @@
             this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Submit.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Submit.ForeColor = System.Drawing.Color.White;
-            this.Submit.Location = new System.Drawing.Point(300, 367);
+            this.Submit.Location = new System.Drawing.Point(300, 313);
+            this.Submit.Margin = new System.Windows.Forms.Padding(300, 30, 3, 3);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(658, 54);
             this.Submit.TabIndex = 156;
@@ -83,8 +86,7 @@
             // 
             // InvokeCYP
             // 
-            this.InvokeCYP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.InvokeCYP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.InvokeCYP.AutoSize = true;
             this.InvokeCYP.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,8 +119,8 @@
             // 
             // InvokeCIP
             // 
-            this.InvokeCIP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.InvokeCIP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.InvokeCIP.AutoSize = true;
             this.InvokeCIP.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InvokeCIP.Location = new System.Drawing.Point(29, 40);
@@ -131,7 +133,7 @@
             // 
             // PAHProcess
             // 
-            this.PAHProcess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PAHProcess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PAHProcess.AutoSize = true;
             this.PAHProcess.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,7 +150,7 @@
             // 
             this.Label41.AutoSize = true;
             this.Label41.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label41.Location = new System.Drawing.Point(17, 0);
+            this.Label41.Location = new System.Drawing.Point(0, 0);
             this.Label41.Name = "Label41";
             this.Label41.Size = new System.Drawing.Size(124, 26);
             this.Label41.TabIndex = 3;
@@ -156,11 +158,14 @@
             // 
             // GroupBox90
             // 
+            this.GroupBox90.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox90.Controls.Add(this.InvokeCIP);
             this.GroupBox90.Controls.Add(this.PAHProcess);
             this.GroupBox90.Controls.Add(this.InvokeCYP);
             this.GroupBox90.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox90.Location = new System.Drawing.Point(22, 74);
+            this.GroupBox90.Location = new System.Drawing.Point(15, 30);
+            this.GroupBox90.Margin = new System.Windows.Forms.Padding(15, 30, 3, 3);
             this.GroupBox90.Name = "GroupBox90";
             this.GroupBox90.Size = new System.Drawing.Size(1252, 100);
             this.GroupBox90.TabIndex = 161;
@@ -169,12 +174,15 @@
             // 
             // MVATemplatesGroupBox
             // 
+            this.MVATemplatesGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MVATemplatesGroupBox.Controls.Add(this.Label74);
             this.MVATemplatesGroupBox.Controls.Add(this.Label73);
             this.MVATemplatesGroupBox.Controls.Add(this.TypeTemplate);
             this.MVATemplatesGroupBox.Controls.Add(this.TemplateName);
             this.MVATemplatesGroupBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MVATemplatesGroupBox.Location = new System.Drawing.Point(22, 195);
+            this.MVATemplatesGroupBox.Location = new System.Drawing.Point(15, 148);
+            this.MVATemplatesGroupBox.Margin = new System.Windows.Forms.Padding(15, 15, 3, 3);
             this.MVATemplatesGroupBox.Name = "MVATemplatesGroupBox";
             this.MVATemplatesGroupBox.Size = new System.Drawing.Size(1252, 132);
             this.MVATemplatesGroupBox.TabIndex = 159;
@@ -184,16 +192,26 @@
             // 
             // GroupBox32
             // 
+            this.GroupBox32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GroupBox32.Controls.Add(this.Label41);
-            this.GroupBox32.Controls.Add(this.GroupBox90);
-            this.GroupBox32.Controls.Add(this.MVATemplatesGroupBox);
-            this.GroupBox32.Controls.Add(this.Submit);
+            this.GroupBox32.Controls.Add(this.flowLayoutPanel1);
             this.GroupBox32.Location = new System.Drawing.Point(28, 38);
             this.GroupBox32.Name = "GroupBox32";
             this.GroupBox32.Size = new System.Drawing.Size(1295, 535);
             this.GroupBox32.TabIndex = 3;
             this.GroupBox32.TabStop = false;
             this.GroupBox32.Enter += new System.EventHandler(this.GroupBox32_Enter);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox90);
+            this.flowLayoutPanel1.Controls.Add(this.MVATemplatesGroupBox);
+            this.flowLayoutPanel1.Controls.Add(this.Submit);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1289, 516);
+            this.flowLayoutPanel1.TabIndex = 162;
             // 
             // NextSteps
             // 
@@ -209,6 +227,7 @@
             this.MVATemplatesGroupBox.PerformLayout();
             this.GroupBox32.ResumeLayout(false);
             this.GroupBox32.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,5 +245,6 @@
         internal System.Windows.Forms.GroupBox GroupBox90;
         internal System.Windows.Forms.GroupBox MVATemplatesGroupBox;
         internal System.Windows.Forms.GroupBox GroupBox32;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

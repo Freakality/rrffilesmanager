@@ -79,10 +79,13 @@
             // 
             // PCIWorkNumber
             // 
+            this.PCIWorkNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIWorkNumber.Location = new System.Drawing.Point(401, 200);
+            this.PCIWorkNumber.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIWorkNumber.Mask = "(999) 000-0000";
             this.PCIWorkNumber.Name = "PCIWorkNumber";
-            this.PCIWorkNumber.Size = new System.Drawing.Size(372, 24);
+            this.PCIWorkNumber.Size = new System.Drawing.Size(375, 24);
             this.PCIWorkNumber.TabIndex = 30;
             // 
             // Label15
@@ -108,7 +111,7 @@
             // 
             this.Label71.AutoSize = true;
             this.Label71.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label71.Location = new System.Drawing.Point(103, 0);
+            this.Label71.Location = new System.Drawing.Point(104, 0);
             this.Label71.Name = "Label71";
             this.Label71.Size = new System.Drawing.Size(44, 13);
             this.Label71.TabIndex = 35;
@@ -125,10 +128,13 @@
             // 
             // PCIMobileNumber
             // 
+            this.PCIMobileNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIMobileNumber.Location = new System.Drawing.Point(799, 200);
+            this.PCIMobileNumber.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIMobileNumber.Mask = "(999) 000-0000";
             this.PCIMobileNumber.Name = "PCIMobileNumber";
-            this.PCIMobileNumber.Size = new System.Drawing.Size(374, 24);
+            this.PCIMobileNumber.Size = new System.Drawing.Size(377, 24);
             this.PCIMobileNumber.TabIndex = 31;
             this.PCIMobileNumber.TextChanged += new System.EventHandler(this.PCIMobileNumber_TextChanged);
             // 
@@ -145,7 +151,7 @@
             // 
             this.Label72.AutoSize = true;
             this.Label72.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label72.Location = new System.Drawing.Point(265, 0);
+            this.Label72.Location = new System.Drawing.Point(268, 0);
             this.Label72.Name = "Label72";
             this.Label72.Size = new System.Drawing.Size(30, 13);
             this.Label72.TabIndex = 36;
@@ -162,9 +168,12 @@
             // 
             // PCICity
             // 
+            this.PCICity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCICity.Location = new System.Drawing.Point(401, 142);
+            this.PCICity.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCICity.Name = "PCICity";
-            this.PCICity.Size = new System.Drawing.Size(372, 24);
+            this.PCICity.Size = new System.Drawing.Size(375, 24);
             this.PCICity.TabIndex = 17;
             // 
             // Label9
@@ -196,15 +205,19 @@
             // 
             // YearBirth
             // 
+            this.YearBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.YearBirth.Location = new System.Drawing.Point(3, 16);
             this.YearBirth.Mask = "0000";
             this.YearBirth.Name = "YearBirth";
-            this.YearBirth.Size = new System.Drawing.Size(94, 24);
+            this.YearBirth.Size = new System.Drawing.Size(95, 24);
             this.YearBirth.TabIndex = 40;
             this.YearBirth.ValidatingType = typeof(int);
             // 
             // DayBirth
             // 
+            this.DayBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DayBirth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.DayBirth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.DayBirth.FormattingEnabled = true;
@@ -240,10 +253,10 @@
             "29",
             "30",
             "31"});
-            this.DayBirth.Location = new System.Drawing.Point(265, 16);
+            this.DayBirth.Location = new System.Drawing.Point(268, 16);
             this.DayBirth.MaxDropDownItems = 11;
             this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(90, 25);
+            this.DayBirth.Size = new System.Drawing.Size(106, 25);
             this.DayBirth.TabIndex = 41;
             // 
             // Label6
@@ -305,6 +318,8 @@
             // 
             // MonthBirth
             // 
+            this.MonthBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MonthBirth.FormattingEnabled = true;
             this.MonthBirth.Items.AddRange(new object[] {
             "January",
@@ -319,21 +334,26 @@
             "October",
             "November",
             "December"});
-            this.MonthBirth.Location = new System.Drawing.Point(103, 16);
+            this.MonthBirth.Location = new System.Drawing.Point(104, 16);
             this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(156, 25);
+            this.MonthBirth.Size = new System.Drawing.Size(158, 25);
             this.MonthBirth.TabIndex = 38;
             // 
             // PCIFirstName
             // 
+            this.PCIFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIFirstName.Location = new System.Drawing.Point(401, 19);
+            this.PCIFirstName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIFirstName.Name = "PCIFirstName";
-            this.PCIFirstName.Size = new System.Drawing.Size(372, 24);
+            this.PCIFirstName.Size = new System.Drawing.Size(375, 24);
             this.PCIFirstName.TabIndex = 4;
             // 
             // PotentialClientInfoPanel
             // 
-            this.PotentialClientInfoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PotentialClientInfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
             this.PotentialClientInfoPanel.Controls.Add(this.FindClientButton);
             this.PotentialClientInfoPanel.Controls.Add(this.Label41);
@@ -347,10 +367,11 @@
             // 
             // FindClientButton
             // 
+            this.FindClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindClientButton.BackColor = System.Drawing.Color.Maroon;
             this.FindClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindClientButton.ForeColor = System.Drawing.Color.White;
-            this.FindClientButton.Location = new System.Drawing.Point(1124, 4);
+            this.FindClientButton.Location = new System.Drawing.Point(1104, 3);
             this.FindClientButton.Name = "FindClientButton";
             this.FindClientButton.Size = new System.Drawing.Size(97, 36);
             this.FindClientButton.TabIndex = 3;
@@ -370,6 +391,9 @@
             // 
             // TableLayoutPanel4
             // 
+            this.TableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanel4.ColumnCount = 1;
             this.TableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanel4.Controls.Add(this.Label16, 0, 0);
@@ -394,14 +418,18 @@
             // PCIOtherNotes
             // 
             this.PCIOtherNotes.BackColor = System.Drawing.Color.White;
+            this.PCIOtherNotes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PCIOtherNotes.Location = new System.Drawing.Point(3, 27);
+            this.PCIOtherNotes.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIOtherNotes.Multiline = true;
             this.PCIOtherNotes.Name = "PCIOtherNotes";
-            this.PCIOtherNotes.Size = new System.Drawing.Size(1172, 126);
+            this.PCIOtherNotes.Size = new System.Drawing.Size(1173, 126);
             this.PCIOtherNotes.TabIndex = 21;
             // 
             // TableLayoutPanel3
             // 
+            this.TableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanel3.ColumnCount = 3;
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -455,55 +483,76 @@
             // 
             // PCILastName
             // 
+            this.PCILastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCILastName.Location = new System.Drawing.Point(799, 19);
+            this.PCILastName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCILastName.Name = "PCILastName";
-            this.PCILastName.Size = new System.Drawing.Size(374, 24);
+            this.PCILastName.Size = new System.Drawing.Size(377, 24);
             this.PCILastName.TabIndex = 5;
             // 
             // PCIAddress
             // 
+            this.PCIAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIAddress.Location = new System.Drawing.Point(3, 83);
+            this.PCIAddress.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIAddress.Name = "PCIAddress";
-            this.PCIAddress.Size = new System.Drawing.Size(372, 24);
+            this.PCIAddress.Size = new System.Drawing.Size(375, 24);
             this.PCIAddress.TabIndex = 9;
             // 
             // PCISuiteApt
             // 
+            this.PCISuiteApt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCISuiteApt.Location = new System.Drawing.Point(401, 83);
+            this.PCISuiteApt.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCISuiteApt.Name = "PCISuiteApt";
-            this.PCISuiteApt.Size = new System.Drawing.Size(372, 24);
+            this.PCISuiteApt.Size = new System.Drawing.Size(375, 24);
             this.PCISuiteApt.TabIndex = 10;
             // 
             // PCIEmail
             // 
+            this.PCIEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIEmail.Location = new System.Drawing.Point(799, 83);
+            this.PCIEmail.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIEmail.Name = "PCIEmail";
-            this.PCIEmail.Size = new System.Drawing.Size(372, 24);
+            this.PCIEmail.Size = new System.Drawing.Size(377, 24);
             this.PCIEmail.TabIndex = 11;
             // 
             // PCIProvince
             // 
+            this.PCIProvince.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIProvince.FormattingEnabled = true;
             this.PCIProvince.Location = new System.Drawing.Point(3, 142);
+            this.PCIProvince.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIProvince.Name = "PCIProvince";
-            this.PCIProvince.Size = new System.Drawing.Size(372, 25);
+            this.PCIProvince.Size = new System.Drawing.Size(375, 25);
             this.PCIProvince.TabIndex = 15;
             this.PCIProvince.ValueMember = "Province";
             this.PCIProvince.SelectedIndexChanged += new System.EventHandler(this.PCIProvince_SelectedIndexChanged);
             // 
             // PCIEmailToText
             // 
+            this.PCIEmailToText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIEmailToText.Location = new System.Drawing.Point(401, 260);
+            this.PCIEmailToText.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIEmailToText.Name = "PCIEmailToText";
-            this.PCIEmailToText.Size = new System.Drawing.Size(372, 24);
+            this.PCIEmailToText.Size = new System.Drawing.Size(375, 24);
             this.PCIEmailToText.TabIndex = 27;
             // 
             // PCIMobileCarrier
             // 
+            this.PCIMobileCarrier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIMobileCarrier.FormattingEnabled = true;
             this.PCIMobileCarrier.Location = new System.Drawing.Point(3, 260);
+            this.PCIMobileCarrier.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIMobileCarrier.Name = "PCIMobileCarrier";
-            this.PCIMobileCarrier.Size = new System.Drawing.Size(372, 25);
+            this.PCIMobileCarrier.Size = new System.Drawing.Size(375, 25);
             this.PCIMobileCarrier.TabIndex = 28;
             this.PCIMobileCarrier.ValueMember = "Carrier";
             this.PCIMobileCarrier.SelectedIndexChanged += new System.EventHandler(this.PCIMobileCarrier_SelectedIndexChanged);
@@ -519,9 +568,12 @@
             // 
             // PCIPostalCode
             // 
+            this.PCIPostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIPostalCode.Location = new System.Drawing.Point(799, 142);
+            this.PCIPostalCode.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIPostalCode.Name = "PCIPostalCode";
-            this.PCIPostalCode.Size = new System.Drawing.Size(372, 24);
+            this.PCIPostalCode.Size = new System.Drawing.Size(377, 24);
             this.PCIPostalCode.TabIndex = 16;
             // 
             // Label13
@@ -544,14 +596,19 @@
             // 
             // PCIHomeNumber
             // 
+            this.PCIHomeNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PCIHomeNumber.Location = new System.Drawing.Point(3, 200);
+            this.PCIHomeNumber.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIHomeNumber.Mask = "(999) 000-0000";
             this.PCIHomeNumber.Name = "PCIHomeNumber";
-            this.PCIHomeNumber.Size = new System.Drawing.Size(372, 24);
+            this.PCIHomeNumber.Size = new System.Drawing.Size(375, 24);
             this.PCIHomeNumber.TabIndex = 29;
             // 
             // TableLayoutPanel9
             // 
+            this.TableLayoutPanel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanel9.ColumnCount = 3;
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
@@ -563,12 +620,13 @@
             this.TableLayoutPanel9.Controls.Add(this.YearBirth, 0, 1);
             this.TableLayoutPanel9.Controls.Add(this.DayBirth, 2, 1);
             this.TableLayoutPanel9.Location = new System.Drawing.Point(799, 260);
+            this.TableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.TableLayoutPanel9.Name = "TableLayoutPanel9";
             this.TableLayoutPanel9.RowCount = 2;
             this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.62963F));
             this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.37037F));
             this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableLayoutPanel9.Size = new System.Drawing.Size(374, 44);
+            this.TableLayoutPanel9.Size = new System.Drawing.Size(377, 44);
             this.TableLayoutPanel9.TabIndex = 32;
             // 
             // PotentialClientInfo
