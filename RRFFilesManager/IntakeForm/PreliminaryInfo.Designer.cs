@@ -53,7 +53,6 @@
             this.StatutoryNoticeBox = new System.Windows.Forms.TextBox();
             this.DateOFCallDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Label42 = new System.Windows.Forms.Label();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.PreliminayPanel = new System.Windows.Forms.Panel();
             this.FindIntakeButton = new System.Windows.Forms.Button();
@@ -337,13 +336,6 @@
             this.Label42.TabIndex = 143;
             this.Label42.Text = "Preliminary Info";
             // 
-            // TextBox1
-            // 
-            this.TextBox1.Location = new System.Drawing.Point(34, 463);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(183, 23);
-            this.TextBox1.TabIndex = 141;
-            // 
             // TableLayoutPanel2
             // 
             this.TableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -372,7 +364,6 @@
             this.PreliminayPanel.Controls.Add(this.TableLayoutPanel2);
             this.PreliminayPanel.Controls.Add(this.TableLayoutPanel1);
             this.PreliminayPanel.Controls.Add(this.Label42);
-            this.PreliminayPanel.Controls.Add(this.TextBox1);
             this.PreliminayPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PreliminayPanel.Location = new System.Drawing.Point(28, 38);
             this.PreliminayPanel.Name = "PreliminayPanel";
@@ -452,7 +443,6 @@
         internal System.Windows.Forms.TextBox StatutoryNoticeBox;
         internal System.Windows.Forms.DateTimePicker DateOFCallDateTimePicker;
         internal System.Windows.Forms.Label Label42;
-        internal System.Windows.Forms.TextBox TextBox1;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel2;
         internal System.Windows.Forms.Panel PreliminayPanel;
         internal System.Windows.Forms.GroupBox GroupBox6;

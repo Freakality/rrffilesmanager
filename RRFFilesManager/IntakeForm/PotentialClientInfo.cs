@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
 using System.Text.RegularExpressions;
+using RRFFilesManager.Logic;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -74,12 +75,8 @@ namespace RRFFilesManager.IntakeForm
         }
         private void PotentialClientInfo_Load(object sender, EventArgs e)
         {
-                PCIProvince.DataSource = Program.DBContext.Provinces.ToList();
-                PCIProvince.DisplayMember = nameof(Province.Description);
-
-                PCIMobileCarrier.DataSource = Program.DBContext.MobileCarriers.ToList();
-                PCIMobileCarrier.DisplayMember = nameof(MobileCarrier.Description);
-            
+            Utils.SetComboBoxDataSource(PCIProvince, Program.DBContext.Provinces.ToList());
+            Utils.SetComboBoxDataSource(PCIProvince, Program.DBContext.MobileCarriers.ToList());
             YearBirth.Text = "1970";
         }
 

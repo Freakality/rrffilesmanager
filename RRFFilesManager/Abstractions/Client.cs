@@ -22,5 +22,7 @@ namespace RRFFilesManager.Abstractions
         public string OtherNotes { get; set; }
 
         public DateTime? DateOfBirth { get; set; }
+
+        public override string ToString() =>  $"{FirstName} {LastName}";
     }
 }

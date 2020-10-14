@@ -61,3 +61,4 @@ RRFFilesManager.DataAccess/bin/
 RRFFilesManager.DataAccess/obj/
 .vs/
 RRFFilesManager.Abstractions/bin/
+RRFFilesManager/publish/

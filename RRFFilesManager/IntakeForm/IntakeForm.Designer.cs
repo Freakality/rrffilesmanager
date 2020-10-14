@@ -33,8 +33,8 @@
             this.Actions = new System.Windows.Forms.Panel();
             this.NextButton = new System.Windows.Forms.Button();
             this.Container = new System.Windows.Forms.Panel();
-            this.Button5 = new System.Windows.Forms.Button();
-            this.Button4 = new System.Windows.Forms.Button();
+            this.ConflictChecksButton = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Actions.SuspendLayout();
             this.Container.SuspendLayout();
@@ -101,33 +101,35 @@
             this.Container.Size = new System.Drawing.Size(1350, 677);
             this.Container.TabIndex = 148;
             // 
-            // Button5
+            // ConflictChecksButton
             // 
-            this.Button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button5.BackColor = System.Drawing.Color.Maroon;
-            this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button5.ForeColor = System.Drawing.Color.White;
-            this.Button5.Location = new System.Drawing.Point(696, 11);
-            this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(211, 35);
-            this.Button5.TabIndex = 147;
-            this.Button5.Text = "Conflict Checks";
-            this.Button5.UseVisualStyleBackColor = false;
+            this.ConflictChecksButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConflictChecksButton.BackColor = System.Drawing.Color.Maroon;
+            this.ConflictChecksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConflictChecksButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConflictChecksButton.ForeColor = System.Drawing.Color.White;
+            this.ConflictChecksButton.Location = new System.Drawing.Point(696, 11);
+            this.ConflictChecksButton.Name = "ConflictChecksButton";
+            this.ConflictChecksButton.Size = new System.Drawing.Size(211, 35);
+            this.ConflictChecksButton.TabIndex = 147;
+            this.ConflictChecksButton.Text = "Conflict Checks";
+            this.ConflictChecksButton.UseVisualStyleBackColor = false;
+            this.ConflictChecksButton.Click += new System.EventHandler(this.ConflictChecksButton_Click);
             // 
-            // Button4
+            // HomeButton
             // 
-            this.Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button4.BackColor = System.Drawing.Color.Maroon;
-            this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button4.ForeColor = System.Drawing.Color.White;
-            this.Button4.Location = new System.Drawing.Point(942, 11);
-            this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(111, 35);
-            this.Button4.TabIndex = 146;
-            this.Button4.Text = "Home";
-            this.Button4.UseVisualStyleBackColor = false;
+            this.HomeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.HomeButton.BackColor = System.Drawing.Color.Maroon;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.ForeColor = System.Drawing.Color.White;
+            this.HomeButton.Location = new System.Drawing.Point(942, 11);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(111, 35);
+            this.HomeButton.TabIndex = 146;
+            this.HomeButton.Text = "Home";
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // PictureBox1
             // 
@@ -147,8 +149,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.Container);
-            this.Controls.Add(this.Button5);
-            this.Controls.Add(this.Button4);
+            this.Controls.Add(this.ConflictChecksButton);
+            this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.PictureBox1);
             this.Name = "IntakeForm";
             this.Text = "Intake";
@@ -168,7 +170,7 @@
         internal System.Windows.Forms.Panel Actions;
         internal System.Windows.Forms.Button NextButton;
         internal new System.Windows.Forms.Panel Container;
-        internal System.Windows.Forms.Button Button5;
-        internal System.Windows.Forms.Button Button4;
+        internal System.Windows.Forms.Button ConflictChecksButton;
+        internal System.Windows.Forms.Button HomeButton;
     }
 }

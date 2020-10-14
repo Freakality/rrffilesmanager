@@ -12,6 +12,8 @@ using Microsoft.Office.Interop.Excel;
 using RRFFilesManager.DataAccess;
 using System.Configuration;
 using System.IO;
+using Microsoft.Office.Interop.Outlook;
+using RRFFilesManager.Abstractions;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -27,14 +29,20 @@ namespace RRFFilesManager.IntakeForm
         {
             MVATemplatesGroupBox.Visible = this.InvokeCYP.Checked;
             Submit.Visible = this.InvokeCYP.Checked;
+            Submit.Text = "Submit";
+        }
+
+        private void PAHProcess_CheckedChanged(object sender, EventArgs e)
+        {
+            MVATemplatesGroupBox.Visible = this.InvokeCYP.Checked;
+            Submit.Visible = this.PAHProcess.Checked;
+            Submit.Text = "Print and Hold";
         }
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.TemplateName.Text = "";
-            this.TemplateName.Items.Clear();
-            var templateNames = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TemplateName).ToArray();
-            TemplateName.Items.AddRange(templateNames);
+            TemplateName.DataSource = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID && s.TypeOfTemplate == TypeTemplate.Text)?.ToList();
+            TemplateName.DisplayMember = nameof(CYATemplate.TemplateName);
         }
 
         private void NextSteps_Load(object sender, EventArgs e)
@@ -45,57 +53,52 @@ namespace RRFFilesManager.IntakeForm
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            PreliminaryInfo.Instance.TextBox1.Text = PreliminaryInfo.Instance.MatterTypeComboBox.Text;
-
-            // If Me.MVAInvokeCIP.Checked = True Then 
-            string attachmentPath = "";
-            string attachmentPath2 = "";
-            if (this.InvokeCIP.Checked)
+            IntakeForm.Instance.Hide();
+            PleaseWait.Instance.Show();
+            if (InvokeCIP.Checked)
             {
                 // CreateSendItem("rojascarlos82@hotmail.com",attachmentPath)
-                this.CreateSendItem("DManzano@InjuryLawyerCanada.com", attachmentPath);
-                this.CreateSendItem("RFoisy@InjuryLawyerCanada.com", attachmentPath);
+                CreateOutlookNewEmail("DManzano@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
+                CreateOutlookNewEmail("RFoisy@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
             }
-
-            if (this.InvokeCYP.Checked)
+            else if (InvokeCYP.Checked)
             {
-                    IntakeForm.Instance.Hide();
-                    PleaseWait.Instance.Show();
-                    var CYATemplate = Program.DBContext.CYATemplates.FirstOrDefault(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID && s.TypeOfTemplate == this.TypeTemplate.Text && s.TemplateName == this.TemplateName.Text);
-                    string templateDocumentPath = CYATemplate.TemplatePath;
-                    string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];
-                    if (!string.IsNullOrWhiteSpace(wordTemplatesPathSetting))
-                        templateDocumentPath = templateDocumentPath.Replace(@"\\FS\FOISY\!", wordTemplatesPathSetting);
-
-                    attachmentPath = this.CreateAndFillTemplateDocument(templateDocumentPath);
-                    string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{PreliminaryInfo.Instance.MatterTypeComboBox.Text}.xlsx");
-                    attachmentPath2 = this.CreateAndFillTemplateWoorkbook(templateExcelPath);
-                    string nameSt = ((PotentialClientInfo.Instance.PCILastName.Text + ", ") + PotentialClientInfo.Instance.PCIFirstName.Text);
-                    string signa = PreliminaryInfo.Instance.StaffInterviewerComboBox.Text;
-                    string receip = "rojascarlos82@hotmail.com";
-                    this.CreateSendItemCYA(signa, nameSt, receip, attachmentPath, attachmentPath2);
-                    PleaseWait.Instance.Hide();
-                    Home.Instance.Show();
-                
-                
+                CreateSendItemCYA();
             }
+            else if (PAHProcess.Checked)
+            {
+                PrintAndHold();
+            }
+            PleaseWait.Instance.Hide();
+            IntakeForm.Instance.Close();
+            Home.Instance.Show();
         }
-
-        public void CreateSendItem(string receip, string attachmentPath)
+        public void CreateOutlookNewEmail(string recipentsName, string subject, string body, string[] attachmentsPath = null)
         {
-            Microsoft.Office.Interop.Outlook.MailItem OutlookMessage;
+            CreateOutlookNewEmail(new[] { recipentsName }, subject, body, attachmentsPath);
+        }
+        public void CreateOutlookNewEmail(string[] recipentsName, string subject, string body, string[] attachmentsPath = null)
+        {
+            MailItem OutlookMessage;
             var AppOutlook = new Microsoft.Office.Interop.Outlook.Application();
             try
             {
-                OutlookMessage = (Microsoft.Office.Interop.Outlook.MailItem)AppOutlook.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
+                OutlookMessage = (MailItem)AppOutlook.CreateItem(OlItemType.olMailItem);
                 var Recipents = OutlookMessage.Recipients;
-                Recipents.Add(receip);
-                OutlookMessage.Subject = "CIP Process Testing";
-                OutlookMessage.Body = "CIP Process Testing";
-                OutlookMessage.BodyFormat = Microsoft.Office.Interop.Outlook.OlBodyFormat.olFormatHTML;
-                if (!string.IsNullOrEmpty(attachmentPath))
+                foreach(var recipent in recipentsName)
                 {
-                    OutlookMessage.Attachments.Add(attachmentPath);
+                    Recipents.Add(recipent);
+                }
+                
+                OutlookMessage.Subject = subject;
+                OutlookMessage.HTMLBody = body;
+                OutlookMessage.BodyFormat = OlBodyFormat.olFormatHTML;
+                if (attachmentsPath?.Length > 0)
+                {
+                    foreach(var attachmentPath in attachmentsPath)
+                    {
+                        OutlookMessage.Attachments.Add(attachmentPath);
+                    }
                 }
 
                 OutlookMessage.Display();
@@ -111,44 +114,40 @@ namespace RRFFilesManager.IntakeForm
             }
         }
 
-        public void CreateSendItemCYA(string signat, string nameStrg, string receip, string attachmentPath, string attachmentPath2)
+        public void PrintAndHold()
         {
-            Microsoft.Office.Interop.Outlook.MailItem OutlookMessage;
-            var AppOutlook = new Microsoft.Office.Interop.Outlook.Application();
-            // Try
-            OutlookMessage = (Microsoft.Office.Interop.Outlook.MailItem)AppOutlook.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
-            var Recipents = OutlookMessage.Recipients;
-            Recipents.Add(receip);
-            OutlookMessage.Subject = ("New CYA Process Invoked - " + nameStrg);
-            OutlookMessage.HTMLBody = ((@"<p>Hi,</p><br><br>
+            
+        }
 
-                                        <p>Please be advised that the following initial intake has been
-                                        completed. We will not be taking on this client at this time. Please arrange to
-                                        complete the CYA process as indicated by the attached draft CYA correspondence.</p><br><br>
+        public void CreateSendItemCYA()
+        {
+            var CYATemplate = (CYATemplate)TemplateName.SelectedItem;
+            string templateDocumentPath = CYATemplate.TemplatePath;
+            string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];
+            if (!string.IsNullOrWhiteSpace(wordTemplatesPathSetting))
+                templateDocumentPath = templateDocumentPath.Replace(@"\\FS\FOISY\!", wordTemplatesPathSetting);
 
-                                        <p>If you have any questions, please see me.</p><br>
+            var attachmentPath = this.CreateAndFillTemplateDocument(templateDocumentPath);
 
-                                        <p>Regards,</p><br>
+            string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{PreliminaryInfo.Instance.MatterTypeComboBox.Text}.xlsx");
+            var attachmentPath2 = this.CreateAndFillTemplateWoorkbook(templateExcelPath);
+            string nameStr = $"{PotentialClientInfo.Instance.PCILastName.Text}, {PotentialClientInfo.Instance.PCIFirstName.Text}";
+            string signat = PreliminaryInfo.Instance.StaffInterviewerComboBox.Text;
+            string receip = "rojascarlos82@hotmail.com";
 
-                                        <p>" + signat) + "</p>");
-            OutlookMessage.BodyFormat = Microsoft.Office.Interop.Outlook.OlBodyFormat.olFormatHTML;
-            if (!string.IsNullOrEmpty(attachmentPath))
-            {
-                OutlookMessage.Attachments.Add(attachmentPath);
-            }
+            var subject = $"New CYA Process Invoked - {nameStr}";
+            var body = $@"<p>Hi,</p><br><br>
 
-            if (!string.IsNullOrEmpty(attachmentPath2))
-            {
-                OutlookMessage.Attachments.Add(attachmentPath2);
-            }
+                        <p>Please be advised that the following initial intake has been
+                        completed. We will not be taking on this client at this time. Please arrange to
+                        complete the CYA process as indicated by the attached draft CYA correspondence.</p><br><br>
 
-            OutlookMessage.Display();
-            // Catch ex As Exception
-            // MessageBox.Show("Mail could not be sent")
-            // Finally
-            OutlookMessage = null;
-            AppOutlook = null;
-            // End Try
+                        <p>If you have any questions, please see me.</p><br>
+
+                        <p>Regards,</p><br>
+
+                        <p>{signat}</p>";
+            CreateOutlookNewEmail(new[] { receip }, subject, body, new[] { attachmentPath, attachmentPath2 });
         }
 
         private string CreateAndFillTemplateDocument(string templatePath)
@@ -172,7 +171,7 @@ namespace RRFFilesManager.IntakeForm
                 document.Content.Find.Execute(FindText: "  ", ReplaceWith: " ", Replace: WdReplace.wdReplaceAll);
             }
 
-            string filePath = $"C:\\test\\CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc";
+            string filePath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc");
             document.SaveAs(filePath);
             document.Close();
             wordApp.Quit();
@@ -313,54 +312,7 @@ namespace RRFFilesManager.IntakeForm
             Worksheet.Cells.Replace("$$$ABNotes$$$", IntakeSheets.Instance.AccBenNotes.Text);
 
             Worksheet.Cells.Replace("$$$OtherNotes$$$", IntakeSheets.Instance.Notes.Text);
-
-            // With Worksheet
-            // .Range("B4").Value = Me.PreliminaryInfo.Instance.FileNumberTextBox.Text
-            // .Range("B5").Value = Me.PreliminaryInfo.Instance.DateOFCallDateTimePicker.Text
-            // .Range("B6").Value = Me.PreliminaryInfo.Instance.DateOfLossDateTimePicker.Text
-            // .Range("B7").Value = Me.PreliminaryInfo.Instance.StaffInterviewerComboBox.Text
-            // .Range("B8").Value = Me.PreliminaryInfo.Instance.HowHearComboBox.Text
-            // .Range("B9").Value = Me.PreliminaryInfo.Instance.LawyerComboBox.Text
-            // .Range("B10").Value = Me.PreliminaryInfo.Instance.ResponsibleLawyerComboBox.Text
-            // .Range("B11").Value = Me.PreliminaryInfo.Instance.MatterSubTypeComboBox.Text
-            // .Range("B12").Value = Me.PreliminaryInfo.Instance.LimitationPeriodTextBox.Text
-            // .Range("B13").Value = Me.PreliminaryInfo.Instance.StatutoryNoticeBox.Text
-            // .Range("B14").Value = Me.PreliminaryInfo.Instance.AdditionalNotesTextBox.Text
-            // .Range("B16").Value = Me.PotentialClientInfo.Instance.PCISalutation.Text & " " & PotentialClientInfo.Instance.PCIFirstName.Text & " " & PotentialClientInfo.Instance.PCILastName.Text
-            // .Range("B17").Value = Me.PotentialClientInfo.Instance.PCIAddress.Text & " " & PotentialClientInfo.Instance.PCISuiteApt.Text & " " & PotentialClientInfo.Instance.PCICity.Text & " " & PotentialClientInfo.Instance.PCIProvince.Text & " " & PotentialClientInfo.Instance.PCIPostalCode.Text
-            // .Range("B18").Value = Me.PotentialClientInfo.Instance.PCIEmail.Text
-            // .Range("B19").Value = Me.PotentialClientInfo.Instance.PCIHomeNumber.Text
-            // .Range("B20").Value = Me.PotentialClientInfo.Instance.PCIWorkNumber.Text
-            // .Range("B21").Value = Me.PotentialClientInfo.Instance.PCIMobileNumber.Text
-            // .Range("B22").Value = Me.PotentialClientInfo.Instance.PCIMobileCarrier.Text
-            // .Range("B23").Value = Me.PotentialClientInfo.Instance.PCIEmailToText.Text
-            // '.Range("B24").Value = Me.PotentialClientInfo.Instance.PCIDateOfBirth.Text
-            // .Range("B25").Value = Me.PotentialClientInfo.Instance.PCIOtherNotes.Text
-            // .Range("B27").Value = Me.IntakeSheets.Instance.LiaDate.Text
-            // If IntakeSheets.Instance.LiaMVR.CheckState <> 0 Then .Range("B28").Value = "Yes"
-            // If IntakeSheets.Instance.LiaMVR.CheckState <> 0 Then
-            // .Range("D28").Value = "Yes"
-            // Else
-            // .Range("D28").Value = "No"
-            // End If
-            // If IntakeSheets.Instance.LiaReportCollision.CheckState <> 0 Then
-            // .Range("D28").Value = "Yes"
-            // Else
-            // .Range("D28").Value = "No"
-            // End If
-            // If IntakeSheets.Instance.LiaMVCExchange.CheckState <> 0 Then
-            // .Range("F28").Value = "Yes"
-            // Else
-            // .Range("F28").Value = "No"
-            // End If
-            // If IntakeSheets.Instance.LiaOtherDoc.CheckState <> 0 Then
-            // .Range("B29").Value = "Yes"
-            // Else
-            // .Range("B29").Value = "No"
-            // End If
-            // .Range("B30").Value = Me.IntakeSheets.Instance.LiaWhereAccident.Text
-            // End With
-            string filePath = $"C:\\test\\MVAIntakeReport{DateTime.Now:Mdyhhmmss}.xlsx";
+            string filePath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"MVAIntakeReport{DateTime.Now:Mdyhhmmss}.xlsx");
             workbook.SaveAs(Filename: filePath);
             workbook.Close();
             excelApp.Quit();

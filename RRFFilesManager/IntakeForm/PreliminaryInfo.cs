@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions.DataAccess;
 using RRFFilesManager.Abstractions;
+using RRFFilesManager.Logic;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -132,49 +133,17 @@ namespace RRFFilesManager.IntakeForm
             Initialize();
         }
 
+        
+
         private void Initialize()
         {
-            MatterTypeComboBox.DataSource = Program.DBContext.MatterTypes.ToList();
-            MatterTypeComboBox.DisplayMember = nameof(MatterType.Description);
-
-            MatterSubTypeComboBox.DataSource = Program.DBContext.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
-            MatterSubTypeComboBox.DisplayMember = nameof(MatterSubType.Description);
-
-            HowHearComboBox.DataSource = Program.DBContext.HearAboutUs.ToList();
-            HowHearComboBox.DisplayMember = nameof(HearAboutUs.Description);
-
-            StaffInterviewerComboBox.DataSource = Program.DBContext.Lawyers.ToList();
-            StaffInterviewerComboBox.DisplayMember = nameof(Lawyer.Description);
-
-            ResponsibleLawyerComboBox.DataSource = Program.DBContext.Lawyers.ToList();
-            ResponsibleLawyerComboBox.DisplayMember = nameof(Lawyer.Description);
-
-            LawyerComboBox.DataSource = Program.DBContext.Lawyers.ToList();
-            LawyerComboBox.DisplayMember = nameof(Lawyer.Description);
-            //HearAboutUsTableAdapter.Fill(ActionLogDBDataSet.HearAboutUs);
-            //StaffInterviewerTableAdapter.Fill(ActionLogDBDataSet.StaffInterviewer);
-            //ResponsibleLawyerTableAdapter.Fill(ActionLogDBDataSet.ResponsibleLawyer);
-            //FileLawyerTableAdapter.Fill(ActionLogDBDataSet.FileLawyer);
-            //IntakesTableAdapter.Fill(ActionLogDBDataSet.Intakes);
-            //MatterTypeTableAdapter.Fill(ActionLogDBDataSet.MatterType);
-            //var service = Program.ServiceProvider.GetService<IMatterTypeRepository>();
-            //MatterSubTypesTableAdapter.Fill(ActionLogDBDataSet.MatterSubTypes);
-            //var obj = IntakesBindingSource.AddNew();
-            //MatterSubTypeComboBox.Items.Clear();
-            //foreach (DataRow row in ActionLogDBDataSet.MatterSubTypes.Rows)
-            //{
-            //    if (row["Matter"].ToString() == "Motor Vehicle Accident")
-            //    {
-            //        MatterSubTypeComboBox.Items.Add(row["MatterSubType"].ToString());
-            //    }
-            //}
-
-            //LawyerComboBox.SelectedIndex = -1;
-            //string lastFileNumber = ActionLogDBDataSet.Tables["Intakes"].Rows[0]["FileNumber"].ToString();
-            //getNewFileNumber(lastFileNumber);
+            Utils.SetComboBoxDataSource(MatterTypeComboBox, Program.DBContext.MatterTypes.ToList(), nameof(MatterType.Description));
+            Utils.SetComboBoxDataSource(HowHearComboBox, Program.DBContext.HearAboutUs.ToList(), nameof(HearAboutUs.Description));
+            Utils.SetComboBoxDataSource(StaffInterviewerComboBox, Program.DBContext.Lawyers.ToList(), nameof(Lawyer.Description));
+            Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, Program.DBContext.Lawyers.ToList(), nameof(Lawyer.Description));
+            Utils.SetComboBoxDataSource(LawyerComboBox, Program.DBContext.Lawyers.ToList(), nameof(Lawyer.Description));
             DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
             DateOfLossDateTimePicker.CustomFormat = " ";
-            LimitationPeriodTextBox.Text = "";
         }
 
         public void FillIntakeFromForm(Intake intake)
@@ -216,7 +185,13 @@ namespace RRFFilesManager.IntakeForm
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MatterSubTypeComboBox.DataSource = Program.DBContext.MatterSubTypes.Where(s => s.MatterType.ID == ((MatterType)MatterTypeComboBox.SelectedValue).ID).ToList();
+            var matterType = (MatterType)MatterTypeComboBox.SelectedValue;
+            if (matterType == null)
+            {
+                Utils.SetComboBoxDataSource(MatterSubTypeComboBox, null);
+                return;
+            }
+            Utils.SetComboBoxDataSource(MatterSubTypeComboBox, Program.DBContext.MatterSubTypes.Where(s => s.MatterType.ID == matterType.ID).ToList());
         }
 
         private void FindIntakeButton_Click(object sender, EventArgs e)

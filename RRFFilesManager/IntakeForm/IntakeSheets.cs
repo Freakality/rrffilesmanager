@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
+using RRFFilesManager.Logic;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -75,7 +76,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void IntakeSheets_Load(object sender, EventArgs e)
         {
-            PolCompanyDeniedBenefits.DataSource = Program.DBContext.DisabilityInsuranceCompanies.ToList();
+            Utils.SetComboBoxDataSource(PolCompanyDeniedBenefits, Program.DBContext.DisabilityInsuranceCompanies.ToList());
         }
 
         public void LoadLiabilityTab()

@@ -32,7 +32,7 @@ namespace RRFFilesManager.IntakeForm
                 s.Client.FirstName.Contains(SearchTextBox.Text) ||
                 s.Client.LastName.Contains(SearchTextBox.Text) ||
                 s.Client.Email.Contains(SearchTextBox.Text) ||
-                s.MatterType.ToString().Contains(SearchTextBox.Text)
+                s.MatterType.Description.Contains(SearchTextBox.Text)
             ).ToList();
         }
 
@@ -50,6 +50,7 @@ namespace RRFFilesManager.IntakeForm
             IntakesGridView.MultiSelect = false;
             IntakesGridView.ReadOnly = true;
             this.IntakesGridView.DataSource = Program.DBContext.Intakes.ToList();
+            IntakesGridView.Columns["ID"].Visible = false;
         }
     }
 }

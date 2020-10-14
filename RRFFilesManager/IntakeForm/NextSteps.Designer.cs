@@ -35,7 +35,7 @@
             this.TypeTemplate = new System.Windows.Forms.ComboBox();
             this.TemplateName = new System.Windows.Forms.ComboBox();
             this.InvokeCIP = new System.Windows.Forms.RadioButton();
-            this.RadioButton9 = new System.Windows.Forms.RadioButton();
+            this.PAHProcess = new System.Windows.Forms.RadioButton();
             this.Label41 = new System.Windows.Forms.Label();
             this.GroupBox90 = new System.Windows.Forms.GroupBox();
             this.MVATemplatesGroupBox = new System.Windows.Forms.GroupBox();
@@ -129,19 +129,20 @@
             this.InvokeCIP.Text = "Invoke Client Intake Process";
             this.InvokeCIP.UseVisualStyleBackColor = true;
             // 
-            // RadioButton9
+            // PAHProcess
             // 
-            this.RadioButton9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PAHProcess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RadioButton9.AutoSize = true;
-            this.RadioButton9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioButton9.Location = new System.Drawing.Point(1004, 40);
-            this.RadioButton9.Name = "RadioButton9";
-            this.RadioButton9.Size = new System.Drawing.Size(228, 26);
-            this.RadioButton9.TabIndex = 160;
-            this.RadioButton9.TabStop = true;
-            this.RadioButton9.Text = "Print and Hold Process";
-            this.RadioButton9.UseVisualStyleBackColor = true;
+            this.PAHProcess.AutoSize = true;
+            this.PAHProcess.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PAHProcess.Location = new System.Drawing.Point(1004, 40);
+            this.PAHProcess.Name = "PAHProcess";
+            this.PAHProcess.Size = new System.Drawing.Size(228, 26);
+            this.PAHProcess.TabIndex = 160;
+            this.PAHProcess.TabStop = true;
+            this.PAHProcess.Text = "Print and Hold Process";
+            this.PAHProcess.UseVisualStyleBackColor = true;
+            this.PAHProcess.CheckedChanged += new System.EventHandler(this.PAHProcess_CheckedChanged);
             // 
             // Label41
             // 
@@ -156,7 +157,7 @@
             // GroupBox90
             // 
             this.GroupBox90.Controls.Add(this.InvokeCIP);
-            this.GroupBox90.Controls.Add(this.RadioButton9);
+            this.GroupBox90.Controls.Add(this.PAHProcess);
             this.GroupBox90.Controls.Add(this.InvokeCYP);
             this.GroupBox90.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox90.Location = new System.Drawing.Point(22, 74);
@@ -220,7 +221,7 @@
         internal System.Windows.Forms.ComboBox TypeTemplate;
         internal System.Windows.Forms.ComboBox TemplateName;
         internal System.Windows.Forms.RadioButton InvokeCIP;
-        internal System.Windows.Forms.RadioButton RadioButton9;
+        internal System.Windows.Forms.RadioButton PAHProcess;
         internal System.Windows.Forms.Label Label41;
         internal System.Windows.Forms.GroupBox GroupBox90;
         internal System.Windows.Forms.GroupBox MVATemplatesGroupBox;

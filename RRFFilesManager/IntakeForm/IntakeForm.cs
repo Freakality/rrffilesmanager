@@ -1,9 +1,12 @@
 ﻿using Microsoft.Office.Interop.Outlook;
 using RRFFilesManager.Abstractions;
+using RRFFilesManager.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -92,6 +95,17 @@ namespace RRFFilesManager.IntakeForm
                 NextButton.Visible = true;
                 SetContent(IntakeSheets.Instance);
             }
+        }
+
+        private void ConflictChecksButton_Click(object sender, EventArgs e)
+        {
+            CNSignOn.StartProcess();
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Close();
+            Home.Instance.Show();
         }
     }
 }

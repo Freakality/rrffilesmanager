@@ -1,7 +1,9 @@
 ﻿using RRFFilesManager.IntakeForm;
+using RRFFilesManager.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -50,8 +52,7 @@ namespace RRFFilesManager
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            var path = "M:\\Task Manager\\FilesManager\\VBnetProgram\\cnsignon.lnk";
-            Process.Start(path);
+            CNSignOn.StartProcess();
         }
     }
 }
