@@ -22,7 +22,7 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private static PotentialClientInfo instance;
-        public static PotentialClientInfo Instance => instance ?? (instance = new PotentialClientInfo());
+        public static PotentialClientInfo Instance => instance == null || instance.IsDisposed ? (instance = new PotentialClientInfo()) : instance;
         public void SetClient(Client client) {
             IntakeForm.Intake.Client = client;
             FillForm(client);

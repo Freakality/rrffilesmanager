@@ -25,7 +25,7 @@ namespace RRFFilesManager.IntakeForm
             InitializeComponent();
         }
         private static NextSteps instance;
-        public static NextSteps Instance => instance ?? (instance = new NextSteps());
+        public static NextSteps Instance => instance == null || instance.IsDisposed ? (instance = new NextSteps()) : instance;
         private void InvokeCYP_CheckedChanged(object sender, EventArgs e)
         {
             MVATemplatesGroupBox.Visible = this.InvokeCYP.Checked;

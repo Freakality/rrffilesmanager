@@ -21,7 +21,7 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private static IntakeSheets instance;
-        public static IntakeSheets Instance => instance ?? (instance = new IntakeSheets());
+        public static IntakeSheets Instance => instance == null || instance.IsDisposed ? (instance = new IntakeSheets()) : instance;
         public void BringMattertypeForm()
         {
             LoadLiabilityTab();

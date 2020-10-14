@@ -22,7 +22,7 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private static PreliminaryInfo instance;
-        public static PreliminaryInfo Instance => instance ?? (instance = new PreliminaryInfo());
+        public static PreliminaryInfo Instance => instance == null || instance.IsDisposed ? (instance = new PreliminaryInfo()) : instance;
 
         public new bool Validate()
         {
