@@ -14,6 +14,7 @@ using System.Configuration;
 using System.IO;
 using Microsoft.Office.Interop.Outlook;
 using RRFFilesManager.Abstractions;
+using RRFFilesManager.Logic;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -57,12 +58,14 @@ namespace RRFFilesManager.IntakeForm
             PleaseWait.Instance.Show();
             if (InvokeCIP.Checked)
             {
+                SetHoldIntake(false);
                 // CreateSendItem("rojascarlos82@hotmail.com",attachmentPath)
-                CreateOutlookNewEmail("DManzano@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
-                CreateOutlookNewEmail("RFoisy@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
+                Outlook.NewEmail("DManzano@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
+                Outlook.NewEmail("RFoisy@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
             }
             else if (InvokeCYP.Checked)
             {
+                SetHoldIntake(false);
                 CreateSendItemCYA();
             }
             else if (PAHProcess.Checked)
@@ -73,64 +76,33 @@ namespace RRFFilesManager.IntakeForm
             IntakeForm.Instance.Close();
             Home.Instance.Show();
         }
-        public void CreateOutlookNewEmail(string recipentsName, string subject, string body, string[] attachmentsPath = null)
-        {
-            CreateOutlookNewEmail(new[] { recipentsName }, subject, body, attachmentsPath);
-        }
-        public void CreateOutlookNewEmail(string[] recipentsName, string subject, string body, string[] attachmentsPath = null)
-        {
-            MailItem OutlookMessage;
-            var AppOutlook = new Microsoft.Office.Interop.Outlook.Application();
-            try
-            {
-                OutlookMessage = (MailItem)AppOutlook.CreateItem(OlItemType.olMailItem);
-                var Recipents = OutlookMessage.Recipients;
-                foreach(var recipent in recipentsName)
-                {
-                    Recipents.Add(recipent);
-                }
-                
-                OutlookMessage.Subject = subject;
-                OutlookMessage.HTMLBody = body;
-                OutlookMessage.BodyFormat = OlBodyFormat.olFormatHTML;
-                if (attachmentsPath?.Length > 0)
-                {
-                    foreach(var attachmentPath in attachmentsPath)
-                    {
-                        OutlookMessage.Attachments.Add(attachmentPath);
-                    }
-                }
-
-                OutlookMessage.Display();
-            }
-            catch
-            {
-                MessageBox.Show("Mail could not be sent");
-            }
-            finally
-            {
-                OutlookMessage = null;
-                AppOutlook = null;
-            }
-        }
+        
 
         public void PrintAndHold()
         {
-            
-        }
+            SetHoldIntake(true);
+            CreateSendItemPAH();
 
+        }
+        public void SetHoldIntake(bool hold)
+        {
+            var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == IntakeForm.Intake.ID);
+            intake.Hold = hold;
+            Program.DBContext.SaveChanges();
+        }
+        public void CreateSendItemPAH()
+        {
+            var attachmentPath = CreateIntakeWorkbook();
+            string clientFullName = $"{IntakeForm.Intake.Client.LastName}, {IntakeForm.Intake.Client.FirstName}";
+            string receip = "rojascarlos82@hotmail.com";
+            var subject = $"Print and Hold Process - {clientFullName}";
+            var body = "";
+            Outlook.NewEmail(receip, subject, body, new[] { attachmentPath });
+        }
         public void CreateSendItemCYA()
         {
-            var CYATemplate = (CYATemplate)TemplateName.SelectedItem;
-            string templateDocumentPath = CYATemplate.TemplatePath;
-            string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];
-            if (!string.IsNullOrWhiteSpace(wordTemplatesPathSetting))
-                templateDocumentPath = templateDocumentPath.Replace(@"\\FS\FOISY\!", wordTemplatesPathSetting);
-
-            var attachmentPath = this.CreateAndFillTemplateDocument(templateDocumentPath);
-
-            string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{PreliminaryInfo.Instance.MatterTypeComboBox.Text}.xlsx");
-            var attachmentPath2 = this.CreateAndFillTemplateWoorkbook(templateExcelPath);
+            var attachmentPath = CreateCYADocument();
+            var attachmentPath2 = CreateIntakeWorkbook();
             string nameStr = $"{PotentialClientInfo.Instance.PCILastName.Text}, {PotentialClientInfo.Instance.PCIFirstName.Text}";
             string signat = PreliminaryInfo.Instance.StaffInterviewerComboBox.Text;
             string receip = "rojascarlos82@hotmail.com";
@@ -147,7 +119,23 @@ namespace RRFFilesManager.IntakeForm
                         <p>Regards,</p><br>
 
                         <p>{signat}</p>";
-            CreateOutlookNewEmail(new[] { receip }, subject, body, new[] { attachmentPath, attachmentPath2 });
+            Outlook.NewEmail(new[] { receip }, subject, body, new[] { attachmentPath, attachmentPath2 });
+        }
+        private string CreateIntakeWorkbook()
+        {
+            string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{PreliminaryInfo.Instance.MatterTypeComboBox.Text}.xlsx");
+            return this.CreateAndFillTemplateWoorkbook(templateExcelPath);
+        }
+        private string CreateCYADocument()
+        {
+            var CYATemplate = (CYATemplate)TemplateName.SelectedItem;
+            string templateDocumentPath = CYATemplate.TemplatePath;
+            string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];
+
+            if (!string.IsNullOrWhiteSpace(wordTemplatesPathSetting))
+                templateDocumentPath = templateDocumentPath.Replace(@"\\FS\FOISY\!", wordTemplatesPathSetting);
+
+            return this.CreateAndFillTemplateDocument(templateDocumentPath); ;
         }
 
         private string CreateAndFillTemplateDocument(string templatePath)

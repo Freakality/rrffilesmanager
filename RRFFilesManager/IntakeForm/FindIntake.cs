@@ -49,7 +49,7 @@ namespace RRFFilesManager.IntakeForm
             IntakesGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             IntakesGridView.MultiSelect = false;
             IntakesGridView.ReadOnly = true;
-            this.IntakesGridView.DataSource = Program.DBContext.Intakes.ToList();
+            this.IntakesGridView.DataSource = Program.DBContext.Intakes.Where(s => s.Hold).ToList();
             IntakesGridView.Columns["ID"].Visible = false;
         }
     }
