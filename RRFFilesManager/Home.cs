@@ -37,7 +37,9 @@ namespace RRFFilesManager
         private void Button1_Click(object sender, EventArgs e)
         {
             Hide();
+            PleaseWait.Instance.Show();
             IntakeForm.IntakeForm.Instance.Show();
+            PleaseWait.Instance.Hide();
         }
 
         private void Button2_Click_1(object sender, EventArgs e)

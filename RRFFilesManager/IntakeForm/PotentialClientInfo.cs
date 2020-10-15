@@ -19,6 +19,9 @@ namespace RRFFilesManager.IntakeForm
         public PotentialClientInfo()
         {
             InitializeComponent();
+            Utils.SetComboBoxDataSource(PCIProvince, Program.DBContext.Provinces.ToList());
+            Utils.SetComboBoxDataSource(PCIMobileCarrier, Program.DBContext.MobileCarriers.ToList());
+            YearBirth.Text = "1970";
         }
 
         private static PotentialClientInfo instance;
@@ -75,9 +78,7 @@ namespace RRFFilesManager.IntakeForm
         }
         private void PotentialClientInfo_Load(object sender, EventArgs e)
         {
-            Utils.SetComboBoxDataSource(PCIProvince, Program.DBContext.Provinces.ToList());
-            Utils.SetComboBoxDataSource(PCIProvince, Program.DBContext.MobileCarriers.ToList());
-            YearBirth.Text = "1970";
+            
         }
 
         public new bool Validate()

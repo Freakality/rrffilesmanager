@@ -23,6 +23,8 @@ namespace RRFFilesManager.IntakeForm
         public NextSteps()
         {
             InitializeComponent();
+            var typesOfTemplates = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            TypeTemplate.Items.AddRange(typesOfTemplates);
         }
         private static NextSteps instance;
         public static NextSteps Instance => instance == null || instance.IsDisposed ? (instance = new NextSteps()) : instance;
@@ -48,14 +50,13 @@ namespace RRFFilesManager.IntakeForm
 
         private void NextSteps_Load(object sender, EventArgs e)
         {
-                var typesOfTemplates = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
-                TypeTemplate.Items.AddRange(typesOfTemplates);
+                
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
             IntakeForm.Instance.Hide();
-            PleaseWait.Instance.Show();
+            Submitting.Instance.Show();
             if (InvokeCIP.Checked)
             {
                 SetHoldIntake(false);
@@ -72,7 +73,7 @@ namespace RRFFilesManager.IntakeForm
             {
                 PrintAndHold();
             }
-            PleaseWait.Instance.Hide();
+            Submitting.Instance.Hide();
             IntakeForm.Instance.Close();
             Home.Instance.Show();
         }

@@ -19,6 +19,7 @@ namespace RRFFilesManager.IntakeForm
         public PreliminaryInfo()
         {
             InitializeComponent();
+            Initialize();
         }
 
         private static PreliminaryInfo instance;
@@ -75,18 +76,12 @@ namespace RRFFilesManager.IntakeForm
 
         public int GetNewFileNumber(Lawyer lawyer)
         {
-            var lastFileNumber = 999999;
             if (lawyer == null)
-                return lastFileNumber;
-            lastFileNumber = Program.DBContext.Intakes.Where(s => s.FileLawyer.ID == lawyer.ID).Max(s => (int?)s.FileNumber) ?? 999999;
-            var lastfileNumberFirstPart = lastFileNumber.ToString()?.Substring(0, 6);
-            var fileNumberFirstPart = $"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}";
-            if (lastfileNumberFirstPart == fileNumberFirstPart)
-                return lastFileNumber + 1;
-            else
-            {
-                return int.Parse($"{fileNumberFirstPart}000");
-            }
+                return 999999999;
+            var lastFileNumber = Program.DBContext.Intakes.OrderByDescending(s => s.ID).FirstOrDefault()?.FileNumber ?? 000001;
+            var lastNumber = int.Parse(lastFileNumber.ToString()?.Substring(6, 3));
+            var newNumber = (lastNumber + 1).ToString().PadLeft(3, '0');
+            return int.Parse($"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}{newNumber}");
         }
 
         private void MatterSubTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,7 +125,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void PreliminaryInfo_Load(object sender, EventArgs e)
         {
-            Initialize();
+            
         }
 
         

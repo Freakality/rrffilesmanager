@@ -168,6 +168,7 @@ namespace RRFFilesManager.IntakeForm
         public Intake CreateIntake(Intake intake)
         {
             FillIntake(intake);
+            intake.FileNumber = PreliminaryInfo.Instance.GetNewFileNumber(intake.FileLawyer);
             Program.DBContext.Intakes.Add(intake);
             Program.DBContext.SaveChanges();
             return intake;
