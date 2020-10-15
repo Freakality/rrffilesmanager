@@ -17,10 +17,19 @@ namespace RRFFilesManager
             InitializeComponent();
         }
         private static PleaseWait instance;
-        public static PleaseWait Instance => instance ?? (instance = new PleaseWait());
+        public static PleaseWait Instance => instance == null || instance.IsDisposed ? (instance = new PleaseWait()) : instance;
         private void PleaseWait_Load(object sender, EventArgs e)
         {
 
+        }
+        static public void ShowForm()
+        {
+            instance = new PleaseWait();
+            Application.Run(instance);
+        }
+        static public void CloseForm()
+        {
+            instance.Close();
         }
     }
 }

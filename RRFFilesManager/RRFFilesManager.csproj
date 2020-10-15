@@ -233,6 +233,12 @@
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Submitting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submitting.Designer.cs">
+      <DependentUpon>Submitting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FindClient.resx">
       <DependentUpon>FindClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +290,9 @@
     </Compile>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submitting.resx">
+      <DependentUpon>Submitting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
