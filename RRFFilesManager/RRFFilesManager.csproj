@@ -200,6 +200,7 @@
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\CNSignOn.cs" />
+    <Compile Include="Logic\Excel.cs" />
     <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />
     <Compile Include="Logic\Utils.cs" />
