@@ -24,6 +24,7 @@ namespace RRFFilesManager
         private static Home instance;
         public static Home Instance => instance ?? (instance = new Home());
 
+        public static IntakeForm.IntakeForm IntakeForm { get; set; }
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -34,25 +35,16 @@ namespace RRFFilesManager
             SplashScreen.Instance.Hide();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void IntakeButton_Click(object sender, EventArgs e)
         {
             Hide();
             PleaseWait.Instance.Show();
-            IntakeForm.IntakeForm.Instance.Show();
+            IntakeForm = new IntakeForm.IntakeForm();
+            IntakeForm.Show();
             PleaseWait.Instance.Hide();
         }
 
-        private void Button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
+        private void ConflictChecks_Click(object sender, EventArgs e)
         {
             CNSignOn.StartProcess();
         }

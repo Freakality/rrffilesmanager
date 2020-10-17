@@ -59,7 +59,7 @@
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Button2 = new System.Windows.Forms.Button();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Button1 = new System.Windows.Forms.Button();
+            this.IntakeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.TableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -364,7 +364,6 @@
             this.Button11.TabIndex = 4;
             this.Button11.Text = "CLIENT NOTES";
             this.Button11.UseVisualStyleBackColor = false;
-            this.Button11.Click += new System.EventHandler(this.Button11_Click);
             // 
             // Button10
             // 
@@ -485,7 +484,7 @@
             this.Button3.TabIndex = 3;
             this.Button3.Text = "CONFLICT CHECKS";
             this.Button3.UseVisualStyleBackColor = false;
-            this.Button3.Click += new System.EventHandler(this.Button3_Click);
+            this.Button3.Click += new System.EventHandler(this.ConflictChecks_Click);
             // 
             // PictureBox1
             // 
@@ -512,7 +511,6 @@
             this.Button2.TabIndex = 2;
             this.Button2.Text = "FILE MANAGER";
             this.Button2.UseVisualStyleBackColor = false;
-            this.Button2.Click += new System.EventHandler(this.Button2_Click_1);
             // 
             // TableLayoutPanel1
             // 
@@ -553,7 +551,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button5, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button6, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button3, 0, 0);
-            this.TableLayoutPanel1.Controls.Add(this.Button1, 0, 1);
+            this.TableLayoutPanel1.Controls.Add(this.IntakeButton, 0, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button2, 0, 2);
             this.TableLayoutPanel1.Location = new System.Drawing.Point(12, 222);
             this.TableLayoutPanel1.Name = "TableLayoutPanel1";
@@ -568,21 +566,21 @@
             this.TableLayoutPanel1.Size = new System.Drawing.Size(946, 537);
             this.TableLayoutPanel1.TabIndex = 5;
             // 
-            // Button1
+            // IntakeButton
             // 
-            this.Button1.BackColor = System.Drawing.Color.Maroon;
-            this.Button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.ForeColor = System.Drawing.Color.White;
-            this.Button1.Location = new System.Drawing.Point(10, 99);
-            this.Button1.Margin = new System.Windows.Forms.Padding(10);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(169, 69);
-            this.Button1.TabIndex = 1;
-            this.Button1.Text = "INITIAL INTAKES";
-            this.Button1.UseVisualStyleBackColor = false;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.IntakeButton.BackColor = System.Drawing.Color.Maroon;
+            this.IntakeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IntakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IntakeButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntakeButton.ForeColor = System.Drawing.Color.White;
+            this.IntakeButton.Location = new System.Drawing.Point(10, 99);
+            this.IntakeButton.Margin = new System.Windows.Forms.Padding(10);
+            this.IntakeButton.Name = "IntakeButton";
+            this.IntakeButton.Size = new System.Drawing.Size(169, 69);
+            this.IntakeButton.TabIndex = 1;
+            this.IntakeButton.Text = "INITIAL INTAKES";
+            this.IntakeButton.UseVisualStyleBackColor = false;
+            this.IntakeButton.Click += new System.EventHandler(this.IntakeButton_Click);
             // 
             // Home
             // 
@@ -634,6 +632,6 @@
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Button Button2;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel1;
-        internal System.Windows.Forms.Button Button1;
+        internal System.Windows.Forms.Button IntakeButton;
     }
 }

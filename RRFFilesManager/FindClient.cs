@@ -23,11 +23,6 @@ namespace RRFFilesManager
         private static FindClient instance;
         public static FindClient Instance => instance == null || instance.IsDisposed ? (instance = new FindClient()) : instance;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FindClient_Load(object sender, EventArgs e)
         {
             ClientsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -48,10 +43,7 @@ namespace RRFFilesManager
 
         private void ClientsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
-            PotentialClientInfo.Instance.SetClient(client);
-            Hide();
+            
         }
 
         private void Content_Paint(object sender, PaintEventArgs e)
@@ -62,6 +54,19 @@ namespace RRFFilesManager
         private void SearchBox_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void ClientsGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ClientsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
+            var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
+            Home.IntakeForm.PotentialClientInfo.SetClient(client);
+            Hide();
         }
     }
 }

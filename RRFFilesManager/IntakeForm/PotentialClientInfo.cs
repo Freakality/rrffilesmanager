@@ -24,8 +24,6 @@ namespace RRFFilesManager.IntakeForm
             YearBirth.Text = "1970";
         }
 
-        private static PotentialClientInfo instance;
-        public static PotentialClientInfo Instance => instance == null || instance.IsDisposed ? (instance = new PotentialClientInfo()) : instance;
         public void SetClient(Client client) {
             IntakeForm.Intake.Client = client;
             FillForm(client);
@@ -44,21 +42,6 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private void PCIMobileNumber_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthBirth_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dayBirth_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void yearBirth_TextChanged(object sender, EventArgs e)
         {
 
         }

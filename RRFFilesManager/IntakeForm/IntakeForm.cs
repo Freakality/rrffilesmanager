@@ -17,26 +17,35 @@ namespace RRFFilesManager.IntakeForm
 {
     public partial class IntakeForm : Form
     {
+        private PreliminaryInfo preliminaryInfo;
+        public PreliminaryInfo PreliminaryInfo => preliminaryInfo ?? (preliminaryInfo = new PreliminaryInfo());
+
+        private PotentialClientInfo potentialClientInfo;
+        public PotentialClientInfo PotentialClientInfo => potentialClientInfo ?? (potentialClientInfo = new PotentialClientInfo());
+
+        private IntakeSheets intakeSheets;
+        public IntakeSheets IntakeSheets => intakeSheets ?? (intakeSheets = new IntakeSheets());
+
+        private NextSteps nextSteps;
+        public NextSteps NextSteps => nextSteps ?? (nextSteps = new NextSteps());
+
         public IntakeForm()
         {
             InitializeComponent();
         }
-
-        private static IntakeForm instance;
-        public static IntakeForm Instance => instance == null || instance.IsDisposed ? (instance = new IntakeForm()) : instance ;
 
         private static Intake intake;
         public static Intake Intake => intake ?? (intake = new Intake());
         public void SetIntake(Intake intake)
         {
             IntakeForm.intake = intake;
-            PreliminaryInfo.Instance.FillForm(intake);
-            PotentialClientInfo.Instance.FillForm(intake);
-            IntakeSheets.Instance.FillForm(intake);
+            PreliminaryInfo.FillForm(intake);
+            PotentialClientInfo.FillForm(intake);
+            IntakeSheets.FillForm(intake);
         }
         private void Intake_Load(object sender, EventArgs e)
         {
-            this.SetContent(PreliminaryInfo.Instance);
+            this.SetContent(PreliminaryInfo);
             this.BackButton.Visible = false;
         }
 
@@ -58,23 +67,23 @@ namespace RRFFilesManager.IntakeForm
         {
             var contentType = Content.Controls[0].GetType();
 
-            if (contentType == typeof(PreliminaryInfo) && PreliminaryInfo.Instance.Validate())
+            if (contentType == typeof(PreliminaryInfo) && PreliminaryInfo.Validate())
             {
                 BackButton.Visible = true;
-                SetContent(PotentialClientInfo.Instance);
-                PreliminaryInfo.Instance.OnNext();
+                SetContent(PotentialClientInfo);
+                PreliminaryInfo.OnNext();
             }
-            else if (contentType == typeof(PotentialClientInfo) && PotentialClientInfo.Instance.Validate())
+            else if (contentType == typeof(PotentialClientInfo) && PotentialClientInfo.Validate())
             {
-                IntakeSheets.Instance.BringMattertypeForm();
-                SetContent(IntakeSheets.Instance);
-                PotentialClientInfo.Instance.OnNext();
+                IntakeSheets.BringMattertypeForm();
+                SetContent(IntakeSheets);
+                PotentialClientInfo.OnNext();
             }
-            else if (contentType == typeof(IntakeSheets) && IntakeSheets.Instance.Validate())
+            else if (contentType == typeof(IntakeSheets) && IntakeSheets.Validate())
             {
                 NextButton.Visible = false;
-                SetContent(NextSteps.Instance);
-                IntakeSheets.Instance.OnNext();
+                SetContent(NextSteps);
+                IntakeSheets.OnNext();
             }
         }
 
@@ -85,16 +94,16 @@ namespace RRFFilesManager.IntakeForm
             if (contentType == typeof(PotentialClientInfo))
             {
                 BackButton.Visible = false;
-                SetContent(PreliminaryInfo.Instance);
+                SetContent(PreliminaryInfo);
             }
             else if (contentType == typeof(IntakeSheets))
             {
-                SetContent(PotentialClientInfo.Instance);
+                SetContent(PotentialClientInfo);
             }
             else if (contentType == typeof(NextSteps))
             {
                 NextButton.Visible = true;
-                SetContent(IntakeSheets.Instance);
+                SetContent(IntakeSheets);
             }
         }
 

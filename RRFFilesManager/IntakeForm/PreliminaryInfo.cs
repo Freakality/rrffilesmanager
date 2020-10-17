@@ -22,9 +22,6 @@ namespace RRFFilesManager.IntakeForm
             Initialize();
         }
 
-        private static PreliminaryInfo instance;
-        public static PreliminaryInfo Instance => instance == null || instance.IsDisposed ? (instance = new PreliminaryInfo()) : instance;
-
         public new bool Validate()
         {
             if (string.IsNullOrEmpty(MatterTypeComboBox.Text) | string.IsNullOrEmpty(StaffInterviewerComboBox.Text) | string.IsNullOrEmpty(HowHearComboBox.Text) | string.IsNullOrEmpty(ResponsibleLawyerComboBox.Text) | string.IsNullOrEmpty(LawyerComboBox.Text) | DateOfLossDateTimePicker.CustomFormat == " ")
@@ -74,15 +71,7 @@ namespace RRFFilesManager.IntakeForm
             return true;
         }
 
-        public int GetNewFileNumber(Lawyer lawyer)
-        {
-            if (lawyer == null)
-                return 999999999;
-            var lastFileNumber = Program.DBContext.Intakes.OrderByDescending(s => s.ID).FirstOrDefault()?.FileNumber ?? 000001;
-            var lastNumber = int.Parse(lastFileNumber.ToString()?.Substring(6, 3));
-            var newNumber = (lastNumber + 1).ToString().PadLeft(3, '0');
-            return int.Parse($"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}{newNumber}");
-        }
+        
 
         private void MatterSubTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -119,7 +108,7 @@ namespace RRFFilesManager.IntakeForm
         private void LawyerComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var lawyer = (Lawyer)LawyerComboBox.SelectedItem;
-            var fileNumber = GetNewFileNumber(lawyer);
+            var fileNumber = IntakeManager.GetNewFileNumber(lawyer);
             FileNumberTextBox.Text = fileNumber.ToString();
         }
 

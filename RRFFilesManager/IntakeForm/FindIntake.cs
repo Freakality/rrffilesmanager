@@ -38,10 +38,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void IntakesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var intakeId = int.Parse(IntakesGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intakeId);
-            IntakeForm.Instance.SetIntake(intake);
-            Hide();
+            
         }
 
         private void FindIntake_Load(object sender, EventArgs e)
@@ -51,6 +48,14 @@ namespace RRFFilesManager.IntakeForm
             IntakesGridView.ReadOnly = true;
             this.IntakesGridView.DataSource = Program.DBContext.Intakes.Where(s => s.Hold).ToList();
             IntakesGridView.Columns["ID"].Visible = false;
+        }
+
+        private void IntakesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var intakeId = int.Parse(IntakesGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
+            var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intakeId);
+            Home.IntakeForm.SetIntake(intake);
+            Hide();
         }
     }
 }

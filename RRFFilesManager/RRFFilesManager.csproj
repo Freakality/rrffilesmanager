@@ -200,8 +200,10 @@
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\CNSignOn.cs" />
+    <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />
     <Compile Include="Logic\Utils.cs" />
+    <Compile Include="Logic\Word.cs" />
     <Compile Include="Migrations\202010122339554_Initial.cs" />
     <Compile Include="Migrations\202010122339554_Initial.Designer.cs">
       <DependentUpon>202010122339554_Initial.cs</DependentUpon>

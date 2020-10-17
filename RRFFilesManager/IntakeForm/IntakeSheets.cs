@@ -20,8 +20,6 @@ namespace RRFFilesManager.IntakeForm
             InitializeComponent();
         }
 
-        private static IntakeSheets instance;
-        public static IntakeSheets Instance => instance == null || instance.IsDisposed ? (instance = new IntakeSheets()) : instance;
         public void BringMattertypeForm()
         {
             LoadLiabilityTab();
@@ -168,7 +166,7 @@ namespace RRFFilesManager.IntakeForm
         public Intake CreateIntake(Intake intake)
         {
             FillIntake(intake);
-            intake.FileNumber = PreliminaryInfo.Instance.GetNewFileNumber(intake.FileLawyer);
+            intake.FileNumber = IntakeManager.GetNewFileNumber(intake.FileLawyer);
             Program.DBContext.Intakes.Add(intake);
             Program.DBContext.SaveChanges();
             return intake;
