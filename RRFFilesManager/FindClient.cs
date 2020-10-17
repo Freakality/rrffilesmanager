@@ -66,7 +66,7 @@ namespace RRFFilesManager
             var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
             var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
             Home.IntakeForm.PotentialClientInfo.SetClient(client);
-            Hide();
+            Close();
         }
     }
 }

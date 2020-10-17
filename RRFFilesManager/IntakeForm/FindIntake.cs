@@ -55,7 +55,7 @@ namespace RRFFilesManager.IntakeForm
             var intakeId = int.Parse(IntakesGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
             var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intakeId);
             Home.IntakeForm.SetIntake(intake);
-            Hide();
+            Close();
         }
     }
 }

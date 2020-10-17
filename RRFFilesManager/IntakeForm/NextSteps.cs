@@ -92,7 +92,7 @@ namespace RRFFilesManager.IntakeForm
         public void CreateSendItemPAH()
         {
             var attachmentPath = CreateIntakeWorkbook();
-            string clientFullName = $"{IntakeForm.Intake.Client.LastName}, {IntakeForm.Intake.Client.FirstName}";
+            string clientFullName = $"{IntakeForm.Intake.Client?.LastName}, {IntakeForm.Intake.Client?.FirstName}";
             string receip = "rojascarlos82@hotmail.com";
             var subject = $"Print and Hold Process - {clientFullName}";
             var body = "";
@@ -102,7 +102,7 @@ namespace RRFFilesManager.IntakeForm
         {
             var attachmentPath = CreateCYADocument();
             var attachmentPath2 = CreateIntakeWorkbook();
-            string nameStr = $"{IntakeForm.Intake.Client.LastName}, {IntakeForm.Intake.Client.FirstName}";
+            string nameStr = $"{IntakeForm.Intake.Client?.LastName}, {IntakeForm.Intake.Client?.FirstName}";
             string signat = IntakeForm.Intake.StaffInterviewer.Description;
             string receip = "rojascarlos82@hotmail.com";
 
@@ -137,28 +137,30 @@ namespace RRFFilesManager.IntakeForm
             return this.CreateAndFillTemplateDocument(templateDocumentPath); ;
         }
 
+
         private string CreateAndFillTemplateDocument(string templatePath)
         {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             var document = wordApp?.Documents.Open(templatePath);
-
+            var filePath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc");
+            wordApp.Visible = true;
             Word.ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
-            Word.ReplaceAll(document, "$$$FirstName$$$", IntakeForm.Intake.Client.FirstName);
-            Word.ReplaceAll(document, "$$$LastName$$$", IntakeForm.Intake.Client.LastName);
-            Word.ReplaceAll(document, "$$$Address1$$$", IntakeForm.Intake.Client.Address);
+            Word.ReplaceAll(document, "$$$FirstName$$$", IntakeForm.Intake.Client?.FirstName);
+            Word.ReplaceAll(document, "$$$LastName$$$", IntakeForm.Intake.Client?.LastName);
+            Word.ReplaceAll(document, "$$$Address1$$$", IntakeForm.Intake.Client?.Address);
             Word.ReplaceAll(document, "$$$Address2$$$", "");
-            Word.ReplaceAll(document, "$$$City$$$", IntakeForm.Intake.Client.City);
-            Word.ReplaceAll(document, "$$$Province$$$", IntakeForm.Intake.Client.Province?.Description);
-            Word.ReplaceAll(document, "$$$PostalCode$$$", IntakeForm.Intake.Client.PostalCode);
-            Word.ReplaceAll(document, "$$$Salutation$$$", IntakeForm.Intake.Client.PostalCode);
-            Word.ReplaceAll(document, "$$$E-mail$$$", IntakeForm.Intake.Client.Email);
+            Word.ReplaceAll(document, "$$$City$$$", IntakeForm.Intake.Client?.City);
+            Word.ReplaceAll(document, "$$$Province$$$", IntakeForm.Intake.Client?.Province?.Description);
+            Word.ReplaceAll(document, "$$$PostalCode$$$", IntakeForm.Intake.Client?.PostalCode);
+            Word.ReplaceAll(document, "$$$Salutation$$$", IntakeForm.Intake.Client?.Salutation);
+            Word.ReplaceAll(document, "$$$E-mail$$$", IntakeForm.Intake.Client?.Email);
             Word.ReplaceAll(document, "$$$DateOfLoss$$$", IntakeForm.Intake.DateOFLoss.ToString("MMMM d, yyyy"));
             while (document.Content.Find.Execute(FindText: "  ", Wrap: WdFindWrap.wdFindContinue))
             {
                 Word.ReplaceAll(document, "  ", " ");
             }
 
-            string filePath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc");
+            
             document.SaveAs(filePath);
             document.Close();
             wordApp.Quit();
@@ -173,31 +175,31 @@ namespace RRFFilesManager.IntakeForm
             Excel.ReplaceAll(worksheet, "$$$FileNumber$$$", IntakeForm.Intake.FileNumber);
             Excel.ReplaceAll(worksheet, "$$$DateOfCall$$$", IntakeForm.Intake.DateOfCall);
             Excel.ReplaceAll(worksheet, "$$$DateOfLoss$$$", IntakeForm.Intake.DateOFLoss);
-            Excel.ReplaceAll(worksheet, "$$$StaffInterviewer$$$", IntakeForm.Intake.StaffInterviewer.Description);
-            Excel.ReplaceAll(worksheet, "$$$HearAboutUs$$$", IntakeForm.Intake.HowHear.Description);
+            Excel.ReplaceAll(worksheet, "$$$StaffInterviewer$$$", IntakeForm.Intake.StaffInterviewer?.Description);
+            Excel.ReplaceAll(worksheet, "$$$HearAboutUs$$$", IntakeForm.Intake.HowHear?.Description);
             Excel.ReplaceAll(worksheet, "$$$FileLawyer$$$", IntakeForm.Intake.FileLawyer?.Description);
-            Excel.ReplaceAll(worksheet, "$$$ResponsibleLawyer$$$", IntakeForm.Intake.ResponsibleLawyer.Description);
-            Excel.ReplaceAll(worksheet, "$$$MatterSubType$$$", IntakeForm.Intake.MatterSubType.Description);
+            Excel.ReplaceAll(worksheet, "$$$ResponsibleLawyer$$$", IntakeForm.Intake.ResponsibleLawyer?.Description);
+            Excel.ReplaceAll(worksheet, "$$$MatterSubType$$$", IntakeForm.Intake.MatterSubType?.Description);
             Excel.ReplaceAll(worksheet, "$$$LimitationPeriod$$$", IntakeForm.Intake.LimitationPeriod);
             Excel.ReplaceAll(worksheet, "$$$StatutoryNotice$$$", IntakeForm.Intake.StatutoryNotice);
             Excel.ReplaceAll(worksheet, "$$$AdditionalNotes$$$", IntakeForm.Intake.AdditionalNotes);
             Excel.ReplaceAll(worksheet, "$$$TodaysDate$$$", DateTime.Now);
-            Excel.ReplaceAll(worksheet, "$$$FirstName$$$", IntakeForm.Intake.Client.FirstName);
-            Excel.ReplaceAll(worksheet, "$$$LastName$$$", IntakeForm.Intake.Client.LastName);
-            Excel.ReplaceAll(worksheet, "$$$Address1$$$", IntakeForm.Intake.Client.Address);
+            Excel.ReplaceAll(worksheet, "$$$FirstName$$$", IntakeForm.Intake.Client?.FirstName);
+            Excel.ReplaceAll(worksheet, "$$$LastName$$$", IntakeForm.Intake.Client?.LastName);
+            Excel.ReplaceAll(worksheet, "$$$Address1$$$", IntakeForm.Intake.Client?.Address);
             Excel.ReplaceAll(worksheet, "$$$Address2$$$", "");
-            Excel.ReplaceAll(worksheet, "$$$City$$$", IntakeForm.Intake.Client.City);
-            Excel.ReplaceAll(worksheet, "$$$Province$$$", IntakeForm.Intake.Client.Province.Description);
-            Excel.ReplaceAll(worksheet, "$$$PostalCode$$$", IntakeForm.Intake.Client.PostalCode);
-            Excel.ReplaceAll(worksheet, "$$$Salutation$$$", IntakeForm.Intake.Client.Salutation);
-            Excel.ReplaceAll(worksheet, "$$$E-mail$$$", IntakeForm.Intake.Client.Email);
-            Excel.ReplaceAll(worksheet, "$$$HomeNumber$$$", IntakeForm.Intake.Client.HomeNumber);
-            Excel.ReplaceAll(worksheet, "$$$WorkNumber$$$", IntakeForm.Intake.Client.WorkNumber);
-            Excel.ReplaceAll(worksheet, "$$$MobileNumber$$$", IntakeForm.Intake.Client.MobileNumber);
-            Excel.ReplaceAll(worksheet, "$$$MobileCarrier$$$", IntakeForm.Intake.Client.MobileCarrier);
-            Excel.ReplaceAll(worksheet, "$$$EmailToText$$$", IntakeForm.Intake.Client.EmailToText);
-            Excel.ReplaceAll(worksheet, "$$$DateOfBirth$$$", IntakeForm.Intake.Client.DateOfBirth);
-            Excel.ReplaceAll(worksheet, "$$$OtherNotes$$$", IntakeForm.Intake.Client.OtherNotes);
+            Excel.ReplaceAll(worksheet, "$$$City$$$", IntakeForm.Intake.Client?.City);
+            Excel.ReplaceAll(worksheet, "$$$Province$$$", IntakeForm.Intake.Client?.Province?.Description);
+            Excel.ReplaceAll(worksheet, "$$$PostalCode$$$", IntakeForm.Intake.Client?.PostalCode);
+            Excel.ReplaceAll(worksheet, "$$$Salutation$$$", IntakeForm.Intake.Client?.Salutation);
+            Excel.ReplaceAll(worksheet, "$$$E-mail$$$", IntakeForm.Intake.Client?.Email);
+            Excel.ReplaceAll(worksheet, "$$$HomeNumber$$$", IntakeForm.Intake.Client?.HomeNumber);
+            Excel.ReplaceAll(worksheet, "$$$WorkNumber$$$", IntakeForm.Intake.Client?.WorkNumber);
+            Excel.ReplaceAll(worksheet, "$$$MobileNumber$$$", IntakeForm.Intake.Client?.MobileNumber);
+            Excel.ReplaceAll(worksheet, "$$$MobileCarrier$$$", IntakeForm.Intake.Client?.MobileCarrier);
+            Excel.ReplaceAll(worksheet, "$$$EmailToText$$$", IntakeForm.Intake.Client?.EmailToText);
+            Excel.ReplaceAll(worksheet, "$$$DateOfBirth$$$", IntakeForm.Intake.Client?.DateOfBirth);
+            Excel.ReplaceAll(worksheet, "$$$OtherNotes$$$", IntakeForm.Intake.Client?.OtherNotes);
 
             Excel.ReplaceAll(worksheet, "$$$LiabilityDate$$$", IntakeForm.Intake.LiaDate);
             Excel.ReplaceAll(worksheet, "$$$LiabilityMVR$$$", IntakeForm.Intake.LiaMVR);
@@ -245,7 +247,7 @@ namespace RRFFilesManager.IntakeForm
             Excel.ReplaceAll(worksheet, "$$$PolicyDateLostBenefits$$$", IntakeForm.Intake.PolDateLostBenefits.ToString("MMMM d, yyyy"));
             Excel.ReplaceAll(worksheet, "$$$PolicyDeniedSTPorLTD$$$", IntakeForm.Intake.PolDeniedSTPorLTD);
             Excel.ReplaceAll(worksheet, "$$$PolicyHowMuchBeingPaid$$$", IntakeForm.Intake.PolHowMuchBeingPaid);
-            Excel.ReplaceAll(worksheet, "$$$PolicyCompanyDeniedBenefits$$$", IntakeForm.Intake.PolCompanyDeniedBenefits.Description);
+            Excel.ReplaceAll(worksheet, "$$$PolicyCompanyDeniedBenefits$$$", IntakeForm.Intake.PolCompanyDeniedBenefits?.Description);
             Excel.ReplaceAll(worksheet, "$$$PolicyLTDPrivateOrEmployerGroup$$$", IntakeForm.Intake.PolLTDPrivateOrEmployerGroup);
             Excel.ReplaceAll(worksheet, "$$$PolicyDateSubmittedLTD$$$", IntakeForm.Intake.PolDateSubmittedLTD.ToString("MMMM d, yyyy"));
             Excel.ReplaceAll(worksheet, "$$$PolicyDateStartedCollLTD$$$", IntakeForm.Intake.PolDateStartedCollLTD.ToString("MMMM d, yyyy"));
