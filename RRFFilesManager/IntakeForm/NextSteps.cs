@@ -54,7 +54,7 @@ namespace RRFFilesManager.IntakeForm
         private void Submit_Click(object sender, EventArgs e)
         {
             Home.IntakeForm.Hide();
-            Submitting.Instance.Show();
+            
             if (InvokeCIP.Checked)
             {
                 SetHoldIntake(false);
@@ -69,11 +69,12 @@ namespace RRFFilesManager.IntakeForm
             }
             else if (PAHProcess.Checked)
             {
+                Submitting.Instance.Show();
                 PrintAndHold();
+                Submitting.Instance.Hide();
+                Home.IntakeForm.Close();
+                Home.Instance.Show();
             }
-            Submitting.Instance.Hide();
-            Home.IntakeForm.Close();
-            Home.Instance.Show();
         }
         
 
@@ -101,13 +102,24 @@ namespace RRFFilesManager.IntakeForm
         public void CreateSendItemCYA()
         {
             var attachmentPath = CreateCYADocument();
-            var attachmentPath2 = CreateIntakeWorkbook();
-            string nameStr = $"{IntakeForm.Intake.Client?.LastName}, {IntakeForm.Intake.Client?.FirstName}";
-            string signat = IntakeForm.Intake.StaffInterviewer.Description;
-            string receip = "rojascarlos82@hotmail.com";
+            var wordApp = new Microsoft.Office.Interop.Word.Application();
+            var document = wordApp?.Documents.Open(attachmentPath);
+            wordApp.Visible = true;
+            wordApp.DocumentBeforeClose += delegate (Document Doc, ref bool Cancel)
+            {
+                Invoke(new System.Action(() =>
+                {
+                    document.Save();
+                    document.Close();
+                    wordApp.Quit();
+                    Submitting.Instance.Show();
+                    var attachmentPath2 = CreateIntakeWorkbook();
+                    string nameStr = $"{IntakeForm.Intake.Client?.LastName}, {IntakeForm.Intake.Client?.FirstName}";
+                    string signat = IntakeForm.Intake.StaffInterviewer.Description;
+                    string receip = "rojascarlos82@hotmail.com";
 
-            var subject = $"New CYA Process Invoked - {nameStr}";
-            var body = $@"<p>Hi,</p><br><br>
+                    var subject = $"New CYA Process Invoked - {nameStr}";
+                    var body = $@"<p>Hi,</p><br><br>
 
                         <p>Please be advised that the following initial intake has been
                         completed. We will not be taking on this client at this time. Please arrange to
@@ -118,7 +130,14 @@ namespace RRFFilesManager.IntakeForm
                         <p>Regards,</p><br>
 
                         <p>{signat}</p>";
-            Outlook.NewEmail(new[] { receip }, subject, body, new[] { attachmentPath, attachmentPath2 });
+                    Outlook.NewEmail(new[] { receip }, subject, body, new[] { attachmentPath, attachmentPath2 });
+                    Submitting.Instance.Hide();
+                    Home.IntakeForm.Close();
+                    Home.Instance.Show();
+                }));
+                
+            };
+            
         }
         private string CreateIntakeWorkbook()
         {
@@ -143,7 +162,7 @@ namespace RRFFilesManager.IntakeForm
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             var document = wordApp?.Documents.Open(templatePath);
             var filePath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc");
-            wordApp.Visible = true;
+            
             Word.ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
             Word.ReplaceAll(document, "$$$FirstName$$$", IntakeForm.Intake.Client?.FirstName);
             Word.ReplaceAll(document, "$$$LastName$$$", IntakeForm.Intake.Client?.LastName);
@@ -159,10 +178,8 @@ namespace RRFFilesManager.IntakeForm
             {
                 Word.ReplaceAll(document, "  ", " ");
             }
-
             
             document.SaveAs(filePath);
-            document.Close();
             wordApp.Quit();
             return filePath;
         }
