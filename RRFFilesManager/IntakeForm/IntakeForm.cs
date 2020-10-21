@@ -117,5 +117,10 @@ namespace RRFFilesManager.IntakeForm
             Close();
             Home.Instance.Show();
         }
+
+        private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

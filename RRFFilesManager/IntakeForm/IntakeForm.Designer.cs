@@ -50,6 +50,7 @@
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(1350, 610);
             this.Content.TabIndex = 143;
+            this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.Content_Paint);
             // 
             // BackButton
             // 

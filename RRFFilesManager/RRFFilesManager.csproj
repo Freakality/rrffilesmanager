@@ -211,7 +211,7 @@
     <Compile Include="Logic\Excel.cs" />
     <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />
-    <Compile Include="Logic\PreviewHandler.cs">
+    <Compile Include="Logic\PreviewHandlerHost.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Logic\Utils.cs" />
@@ -231,6 +231,10 @@
     <Compile Include="Migrations\202010140107556_Hold.cs" />
     <Compile Include="Migrations\202010140107556_Hold.Designer.cs">
       <DependentUpon>202010140107556_Hold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010210048255_IntakeFiles.cs" />
+    <Compile Include="Migrations\202010210048255_IntakeFiles.Designer.cs">
+      <DependentUpon>202010210048255_IntakeFiles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
@@ -288,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010140107556_Hold.resx">
       <DependentUpon>202010140107556_Hold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010210048255_IntakeFiles.resx">
+      <DependentUpon>202010210048255_IntakeFiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>

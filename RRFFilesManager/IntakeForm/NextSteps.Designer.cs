@@ -41,6 +41,7 @@
             this.MVATemplatesGroupBox = new System.Windows.Forms.GroupBox();
             this.GroupBox32 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DocumentPreview = new System.Windows.Forms.Button();
             this.GroupBox90.SuspendLayout();
             this.MVATemplatesGroupBox.SuspendLayout();
             this.GroupBox32.SuspendLayout();
@@ -55,7 +56,7 @@
             this.Submit.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Submit.ForeColor = System.Drawing.Color.White;
             this.Submit.Location = new System.Drawing.Point(300, 313);
-            this.Submit.Margin = new System.Windows.Forms.Padding(300, 30, 3, 3);
+            this.Submit.Margin = new System.Windows.Forms.Padding(300, 30, 30, 3);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(658, 54);
             this.Submit.TabIndex = 156;
@@ -189,6 +190,7 @@
             this.MVATemplatesGroupBox.TabStop = false;
             this.MVATemplatesGroupBox.Text = "Templates";
             this.MVATemplatesGroupBox.Visible = false;
+            this.MVATemplatesGroupBox.Enter += new System.EventHandler(this.MVATemplatesGroupBox_Enter);
             // 
             // GroupBox32
             // 
@@ -207,11 +209,28 @@
             this.flowLayoutPanel1.Controls.Add(this.GroupBox90);
             this.flowLayoutPanel1.Controls.Add(this.MVATemplatesGroupBox);
             this.flowLayoutPanel1.Controls.Add(this.Submit);
+            this.flowLayoutPanel1.Controls.Add(this.DocumentPreview);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1289, 516);
             this.flowLayoutPanel1.TabIndex = 162;
+            // 
+            // DocumentPreview
+            // 
+            this.DocumentPreview.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.DocumentPreview.BackColor = System.Drawing.Color.DarkBlue;
+            this.DocumentPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DocumentPreview.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentPreview.ForeColor = System.Drawing.Color.White;
+            this.DocumentPreview.Location = new System.Drawing.Point(520, 440);
+            this.DocumentPreview.Margin = new System.Windows.Forms.Padding(520, 70, 3, 3);
+            this.DocumentPreview.Name = "DocumentPreview";
+            this.DocumentPreview.Size = new System.Drawing.Size(220, 54);
+            this.DocumentPreview.TabIndex = 162;
+            this.DocumentPreview.Text = "Document Preview";
+            this.DocumentPreview.UseVisualStyleBackColor = false;
+            this.DocumentPreview.Click += new System.EventHandler(this.DocumentPreview_Click);
             // 
             // NextSteps
             // 
@@ -246,5 +265,6 @@
         internal System.Windows.Forms.GroupBox MVATemplatesGroupBox;
         internal System.Windows.Forms.GroupBox GroupBox32;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button DocumentPreview;
     }
 }

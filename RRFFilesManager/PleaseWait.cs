@@ -22,14 +22,5 @@ namespace RRFFilesManager
         {
 
         }
-        static public void ShowForm()
-        {
-            instance = new PleaseWait();
-            Application.Run(instance);
-        }
-        static public void CloseForm()
-        {
-            instance.Close();
-        }
     }
 }

@@ -102,5 +102,7 @@ namespace RRFFilesManager.Abstractions
         public string PolCPPApproved { get; set; }
         public string PolOtherNotes { get; set; }
         public bool Hold { get; set; }
+        public string ExcelFile { get; set; }
+        public string WordFile { get; set; }
     }
 }
