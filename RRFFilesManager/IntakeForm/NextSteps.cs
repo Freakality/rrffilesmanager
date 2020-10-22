@@ -20,6 +20,7 @@ namespace RRFFilesManager.IntakeForm
 {
     public partial class NextSteps : UserControl
     {
+        public bool RefillCYADocument { get; set; }
         public NextSteps()
         {
             InitializeComponent();
@@ -56,26 +57,35 @@ namespace RRFFilesManager.IntakeForm
         {
             Home.IntakeForm.Hide();
             Submitting.Instance.Show();
-            if (InvokeCIP.Checked)
+            try
             {
-                SetHoldIntake(false);
-                // CreateSendItem("rojascarlos82@hotmail.com",attachmentPath)
-                Outlook.NewEmail("DManzano@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
-                Outlook.NewEmail("RFoisy@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
+                if (InvokeCIP.Checked)
+                {
+                    // CreateSendItem("rojascarlos82@hotmail.com",attachmentPath)
+                    Outlook.NewEmail("DManzano@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
+                    Outlook.NewEmail("RFoisy@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
+                    SetHoldIntake(false);
+                }
+                else if (InvokeCYP.Checked)
+                {
+                    CreateSendItemCYA();
+                    SetHoldIntake(false);
+                }
+                else if (PAHProcess.Checked)
+                {
+
+                    PrintAndHold();
+                }
+                Submitting.Instance.Hide();
+                Home.IntakeForm.Close();
+                Home.Instance.Show();
             }
-            else if (InvokeCYP.Checked)
+            catch(System.Exception exception)
             {
-                SetHoldIntake(false);
-                CreateSendItemCYA();
+                MessageBox.Show(exception.Message);
+                Submitting.Instance.Hide();
+                Home.IntakeForm.Show();
             }
-            else if (PAHProcess.Checked)
-            {
-                
-                PrintAndHold();
-            }
-            Submitting.Instance.Hide();
-            Home.IntakeForm.Close();
-            Home.Instance.Show();
         }
         
 
@@ -93,7 +103,7 @@ namespace RRFFilesManager.IntakeForm
         }
         public void CreateSendItemPAH()
         {
-            var attachmentPath = IntakeManager.CreateIntakeWorkbook(IntakeForm.Intake);
+            var attachmentPath = IntakeManager.CreateOrRefillIntakeWorkBook(IntakeForm.Intake, true);
             string clientFullName = $"{IntakeForm.Intake.Client?.LastName}, {IntakeForm.Intake.Client?.FirstName}";
             string receip = "rojascarlos82@hotmail.com";
             var subject = $"Print and Hold Process - {clientFullName}";
@@ -102,8 +112,9 @@ namespace RRFFilesManager.IntakeForm
         }
         public void CreateSendItemCYA()
         {
-            var attachmentPath = IntakeManager.CreateOrUpdateIntakeDocument(IntakeForm.Intake, (CYATemplate)TemplateName.SelectedItem);
-            var attachmentPath2 = IntakeManager.CreateIntakeWorkbook(IntakeForm.Intake);
+            var attachmentPath = IntakeManager.CreateOrRefillIntakeDocument(IntakeForm.Intake, ((CYATemplate)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
+            RefillCYADocument = false;
+            var attachmentPath2 = IntakeManager.CreateOrRefillIntakeWorkBook(IntakeForm.Intake, true);
             string nameStr = $"{IntakeForm.Intake.Client?.LastName}, {IntakeForm.Intake.Client?.FirstName}";
             string signat = IntakeForm.Intake.StaffInterviewer.Description;
             string receip = "rojascarlos82@hotmail.com";
@@ -145,6 +156,7 @@ namespace RRFFilesManager.IntakeForm
         private void TemplateName_SelectedIndexChanged(object sender, EventArgs e)
         {
             DocumentPreview.Visible = TemplateName.SelectedItem != null;
+            RefillCYADocument = true;
         }
 
         private void GroupBox32_Enter(object sender, EventArgs e)
@@ -155,7 +167,8 @@ namespace RRFFilesManager.IntakeForm
         private void DocumentPreview_Click(object sender, EventArgs e)
         {
             PleaseWait.Instance.Show();
-            var filePath = IntakeManager.CreateOrUpdateIntakeDocument(IntakeForm.Intake, (CYATemplate)TemplateName.SelectedItem);
+            var filePath = IntakeManager.CreateOrRefillIntakeDocument(IntakeForm.Intake, ((CYATemplate)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
+            RefillCYADocument = false;
             PleaseWait.Instance.Hide();
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             var document = wordApp?.Documents.Open(filePath);

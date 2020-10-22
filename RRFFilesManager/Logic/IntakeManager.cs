@@ -24,12 +24,17 @@ namespace RRFFilesManager.Logic
             var newNumber = (lastNumber + 1).ToString().PadLeft(3, '0');
             return int.Parse($"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}{newNumber}");
         }
-
+        public static string GetFilePath(string fileName)
+        {
+            if (fileName == null)
+                return null;
+            return Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], fileName);
+        }
         private static string CreateAndFillTemplateDocument(string templatePath, Intake intake, string fileName = null)
         {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             var document = wordApp?.Documents.Open(templatePath);
-            var filePath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], fileName ?? $"CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc");
+            var filePath = GetFilePath(fileName ?? $"CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc");
             wordApp.Visible = false;
             Word.ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
             Word.ReplaceAll(document, "$$$FirstName$$$", intake.Client?.FirstName);
@@ -54,7 +59,7 @@ namespace RRFFilesManager.Logic
         }
 
 
-        private static string CreateAndFillTemplateWoorkbook(string templatePath, Intake intake, string fileName = null)
+        private static string CreateAndFillTemplateWorkbook(string templatePath, Intake intake, string fileName = null)
         {
             var excelApp = new Microsoft.Office.Interop.Excel.Application();
             var workbook = excelApp?.Workbooks?.Open(templatePath);
@@ -188,7 +193,7 @@ namespace RRFFilesManager.Logic
             Excel.ReplaceAll(worksheet, "$$$ABNotes$$$", intake.AccBenNotes);
 
             Excel.ReplaceAll(worksheet, "$$$OtherNotes$$$", intake.Notes);
-            string filePath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], fileName ?? $"MVAIntakeReport{DateTime.Now:Mdyhhmmss}.xlsx");
+            string filePath = GetFilePath(fileName ?? $"MVAIntakeReport{DateTime.Now:Mdyhhmmss}.xlsx");
             workbook.SaveAs(Filename: filePath);
             workbook.Close();
             excelApp.Quit();
@@ -198,11 +203,10 @@ namespace RRFFilesManager.Logic
         public static string CreateIntakeWorkbook(Intake intake, string fileName = null)
         {
             string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{intake.MatterType.Description}.xlsx");
-            return CreateAndFillTemplateWoorkbook(templateExcelPath, intake, !string.IsNullOrWhiteSpace(fileName)? fileName : null);
+            return CreateAndFillTemplateWorkbook(templateExcelPath, intake, !string.IsNullOrWhiteSpace(fileName)? fileName : null);
         }
-        public static string CreateCYADocument(CYATemplate CYATemplate, Intake intake, string fileName = null)
+        public static string CreateCYADocument(string templateDocumentPath, Intake intake, string fileName = null)
         {
-            string templateDocumentPath = CYATemplate.TemplatePath;
             string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];
 
             if (!string.IsNullOrWhiteSpace(wordTemplatesPathSetting))
@@ -210,20 +214,49 @@ namespace RRFFilesManager.Logic
 
             return CreateAndFillTemplateDocument(templateDocumentPath, intake, !string.IsNullOrWhiteSpace(fileName) ? fileName : null);
         }
-
-        public static string CreateOrUpdateIntakeDocument(Intake intake)
+        public static void SaveIntakeDocumentFileName(Intake intake, string wordFileName)
         {
-            string filePath;
-            if (string.IsNullOrWhiteSpace(intake.WordFile))
+            var trxIntake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intake.ID);
+            trxIntake.WordFile = wordFileName;
+            Program.DBContext.SaveChanges();
+        }
+
+        public static void SaveIntakeWorkBookFileName(Intake intake, string excelFileName)
+        {
+            var trxIntake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intake.ID);
+            trxIntake.ExcelFile = excelFileName;
+            Program.DBContext.SaveChanges();
+        }
+
+        public static string CreateOrRefillIntakeDocument(Intake intake, string templateDocumentPath, bool? refillDocument = null)
+        {
+            string filePath = GetFilePath(intake.WordFile);
+            
+            if (string.IsNullOrWhiteSpace(filePath))
             {
-                filePath = IntakeManager.CreateCYADocument((CYATemplate)TemplateName.SelectedItem, IntakeForm.Intake);
-                var trxIntake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == IntakeForm.Intake.ID);
-                trxIntake.WordFile = filePath;
-                Program.DBContext.SaveChanges();
+                filePath = CreateCYADocument(templateDocumentPath, intake);
+                SaveIntakeDocumentFileName(intake, Path.GetFileName(filePath));
             }
-            else
+            else if (refillDocument.Value)
             {
-                filePath = IntakeManager.CreateCYADocument((CYATemplate)TemplateName.SelectedItem, IntakeForm.Intake, IntakeForm.Intake.WordFile);
+                filePath = CreateCYADocument(templateDocumentPath, intake, Path.GetFileName(filePath));
+            }
+            return filePath;
+        }
+
+        public static string CreateOrRefillIntakeWorkBook(Intake intake, bool? refillDocument = null)
+        {
+            string filePath = GetFilePath(intake.ExcelFile);
+            
+            if (string.IsNullOrWhiteSpace(filePath))
+            {
+                filePath = CreateIntakeWorkbook(intake);
+                SaveIntakeWorkBookFileName(intake, Path.GetFileName(filePath));
+            }
+            else if (refillDocument.Value)
+            {
+                var fileName = Path.GetFileName(filePath);
+                filePath = CreateIntakeWorkbook(intake, fileName);
             }
             return filePath;
         }
