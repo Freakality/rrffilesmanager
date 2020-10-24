@@ -30,6 +30,7 @@ namespace RRFFilesManager.IntakeForm
         }
         private void InvokeCYP_CheckedChanged(object sender, EventArgs e)
         {
+            Home.IntakeForm.NextButton.Visible = false;
             MVATemplatesGroupBox.Visible = this.InvokeCYP.Checked;
             Submit.Visible = this.InvokeCYP.Checked;
             Submit.Text = "Submit";
@@ -37,6 +38,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void PAHProcess_CheckedChanged(object sender, EventArgs e)
         {
+            Home.IntakeForm.NextButton.Visible = false;
             MVATemplatesGroupBox.Visible = this.InvokeCYP.Checked;
             Submit.Visible = this.PAHProcess.Checked;
             Submit.Text = "Print and Hold";
@@ -64,16 +66,16 @@ namespace RRFFilesManager.IntakeForm
                     // CreateSendItem("rojascarlos82@hotmail.com",attachmentPath)
                     Outlook.NewEmail("DManzano@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
                     Outlook.NewEmail("RFoisy@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
-                    SetHoldIntake(false);
+                    IntakeManager.SetHoldIntake(IntakeForm.Intake, false);
                 }
                 else if (InvokeCYP.Checked)
                 {
                     CreateSendItemCYA();
-                    SetHoldIntake(false);
+                    IntakeManager.SetHoldIntake(IntakeForm.Intake, false);
                 }
                 else if (PAHProcess.Checked)
                 {
-
+                    IntakeManager.SetHoldIntake(IntakeForm.Intake, true);
                     PrintAndHold();
                 }
                 Submitting.Instance.Hide();
@@ -91,16 +93,10 @@ namespace RRFFilesManager.IntakeForm
 
         public void PrintAndHold()
         {
-            SetHoldIntake(true);
             CreateSendItemPAH();
 
         }
-        public void SetHoldIntake(bool hold)
-        {
-            var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == IntakeForm.Intake.ID);
-            intake.Hold = hold;
-            Program.DBContext.SaveChanges();
-        }
+        
         public void CreateSendItemPAH()
         {
             var attachmentPath = IntakeManager.CreateOrRefillIntakeWorkBook(IntakeForm.Intake, true);
@@ -180,6 +176,15 @@ namespace RRFFilesManager.IntakeForm
         private void MVATemplatesGroupBox_Enter(object sender, EventArgs e)
         {
 
+        }
+        public void OnNext()
+        {
+
+        }
+
+        private void InvokeCIP_CheckedChanged(object sender, EventArgs e)
+        {
+            Home.IntakeForm.NextButton.Visible = true;
         }
     }
 }

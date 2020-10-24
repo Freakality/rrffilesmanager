@@ -29,6 +29,8 @@ namespace RRFFilesManager.IntakeForm
         private NextSteps nextSteps;
         public NextSteps NextSteps => nextSteps ?? (nextSteps = new NextSteps());
 
+        private ClientIntakeProcess clientIntakeProcess;
+        public ClientIntakeProcess ClientIntakeProcess => clientIntakeProcess ?? (clientIntakeProcess = new ClientIntakeProcess());
         public IntakeForm()
         {
             InitializeComponent();
@@ -85,6 +87,12 @@ namespace RRFFilesManager.IntakeForm
                 SetContent(NextSteps);
                 IntakeSheets.OnNext();
             }
+            else if (contentType == typeof(NextSteps) && NextSteps.Validate())
+            {
+                NextButton.Visible = false;
+                SetContent(ClientIntakeProcess);
+                NextSteps.OnNext();
+            }
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -104,6 +112,11 @@ namespace RRFFilesManager.IntakeForm
             {
                 NextButton.Visible = true;
                 SetContent(IntakeSheets);
+            }
+            else if (contentType == typeof(ClientIntakeProcess))
+            {
+                NextButton.Visible = true;
+                SetContent(NextSteps);
             }
         }
 

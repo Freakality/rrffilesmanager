@@ -260,5 +260,12 @@ namespace RRFFilesManager.Logic
             }
             return filePath;
         }
+
+        public static void SetHoldIntake(Intake intake, bool hold)
+        {
+            var trxIntake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intake.ID);
+            trxIntake.Hold = hold;
+            Program.DBContext.SaveChanges();
+        }
     }
 }

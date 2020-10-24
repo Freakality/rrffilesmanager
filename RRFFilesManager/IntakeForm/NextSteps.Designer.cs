@@ -131,6 +131,7 @@
             this.InvokeCIP.TabStop = true;
             this.InvokeCIP.Text = "Invoke Client Intake Process";
             this.InvokeCIP.UseVisualStyleBackColor = true;
+            this.InvokeCIP.CheckedChanged += new System.EventHandler(this.InvokeCIP_CheckedChanged);
             // 
             // PAHProcess
             // 
