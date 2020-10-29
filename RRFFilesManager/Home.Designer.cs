@@ -57,7 +57,7 @@
             this.Button6 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Button2 = new System.Windows.Forms.Button();
+            this.FileManagerButton = new System.Windows.Forms.Button();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.IntakeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -497,20 +497,21 @@
             this.PictureBox1.TabIndex = 4;
             this.PictureBox1.TabStop = false;
             // 
-            // Button2
+            // FileManagerButton
             // 
-            this.Button2.BackColor = System.Drawing.Color.Maroon;
-            this.Button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button2.ForeColor = System.Drawing.Color.White;
-            this.Button2.Location = new System.Drawing.Point(10, 188);
-            this.Button2.Margin = new System.Windows.Forms.Padding(10);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(169, 69);
-            this.Button2.TabIndex = 2;
-            this.Button2.Text = "FILE MANAGER";
-            this.Button2.UseVisualStyleBackColor = false;
+            this.FileManagerButton.BackColor = System.Drawing.Color.Maroon;
+            this.FileManagerButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileManagerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FileManagerButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileManagerButton.ForeColor = System.Drawing.Color.White;
+            this.FileManagerButton.Location = new System.Drawing.Point(10, 188);
+            this.FileManagerButton.Margin = new System.Windows.Forms.Padding(10);
+            this.FileManagerButton.Name = "FileManagerButton";
+            this.FileManagerButton.Size = new System.Drawing.Size(169, 69);
+            this.FileManagerButton.TabIndex = 2;
+            this.FileManagerButton.Text = "FILE MANAGER";
+            this.FileManagerButton.UseVisualStyleBackColor = false;
+            this.FileManagerButton.Click += new System.EventHandler(this.FileManagerButton_Click);
             // 
             // TableLayoutPanel1
             // 
@@ -552,7 +553,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button6, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button3, 0, 0);
             this.TableLayoutPanel1.Controls.Add(this.IntakeButton, 0, 1);
-            this.TableLayoutPanel1.Controls.Add(this.Button2, 0, 2);
+            this.TableLayoutPanel1.Controls.Add(this.FileManagerButton, 0, 2);
             this.TableLayoutPanel1.Location = new System.Drawing.Point(12, 222);
             this.TableLayoutPanel1.Name = "TableLayoutPanel1";
             this.TableLayoutPanel1.RowCount = 6;
@@ -630,7 +631,7 @@
         internal System.Windows.Forms.Button Button6;
         internal System.Windows.Forms.Button Button3;
         internal System.Windows.Forms.PictureBox PictureBox1;
-        internal System.Windows.Forms.Button Button2;
+        internal System.Windows.Forms.Button FileManagerButton;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel1;
         internal System.Windows.Forms.Button IntakeButton;
     }

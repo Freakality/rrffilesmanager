@@ -165,11 +165,11 @@
     <Compile Include="FindClient.Designer.cs">
       <DependentUpon>FindClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FileManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FileManager.Designer.cs">
+      <DependentUpon>FileManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -269,6 +269,9 @@
     <Compile Include="Submitting.Designer.cs">
       <DependentUpon>Submitting.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FileManager.resx">
+      <DependentUpon>FileManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindClient.resx">
       <DependentUpon>FindClient.cs</DependentUpon>
     </EmbeddedResource>

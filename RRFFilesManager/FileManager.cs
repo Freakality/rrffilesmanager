@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace RRFFilesManager
 {
-    public partial class Form1 : Form
+    public partial class FileManager : Form
     {
-        public Form1()
+        public FileManager()
         {
             InitializeComponent();
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Close();
+            Home.Instance.Show();
         }
     }
 }
