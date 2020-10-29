@@ -45,7 +45,7 @@ namespace RRFFilesManager.IntakeForm
                     MessageBox.Show("Please enter Appt Type");
                     return false;
                 }
-                if (string.IsNullOrEmpty(this.TimeOfAppt.Text))
+                if (ApptType.Text == "In Office" && string.IsNullOrEmpty(this.TimeOfAppt.Text))
                 {
                     MessageBox.Show("Please enter Time Frame");
                     return false;
@@ -138,6 +138,16 @@ namespace RRFFilesManager.IntakeForm
             });
             string receip = "rojascarlos82@hotmail.com";
             Outlook.NewEmail(receip, subject, body);
+        }
+
+        private void NeedOnlineQues_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ApptType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimeFrame.Enabled = ApptType.Text == "In Office";
         }
     }
 }

@@ -195,6 +195,7 @@
             this.ApptType.Size = new System.Drawing.Size(956, 25);
             this.ApptType.TabIndex = 25;
             this.ApptType.ValueMember = "Option";
+            this.ApptType.SelectedIndexChanged += new System.EventHandler(this.ApptType_SelectedIndexChanged);
             // 
             // TimeOfAppt
             // 
@@ -204,6 +205,7 @@
             this.TimeOfAppt.Location = new System.Drawing.Point(266, 95);
             this.TimeOfAppt.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.TimeOfAppt.Name = "TimeOfAppt";
+            this.TimeOfAppt.ShowUpDown = true;
             this.TimeOfAppt.Size = new System.Drawing.Size(956, 23);
             this.TimeOfAppt.TabIndex = 24;
             // 
@@ -222,6 +224,7 @@
             this.NeedOnlineQues.Size = new System.Drawing.Size(956, 25);
             this.NeedOnlineQues.TabIndex = 22;
             this.NeedOnlineQues.ValueMember = "Option";
+            this.NeedOnlineQues.SelectedIndexChanged += new System.EventHandler(this.NeedOnlineQues_SelectedIndexChanged);
             // 
             // DateApptScheduled
             // 
