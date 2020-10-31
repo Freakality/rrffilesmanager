@@ -27,7 +27,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.IntakesGridView.DataSource = Program.DBContext.Intakes.Where(s =>
+            this.IntakesGridView.DataSource = Program.DBContext.Intakes.Where(s => s.Hold).Where(s =>
                 s.FileNumber.ToString().Contains(SearchTextBox.Text) ||
                 s.Client.FirstName.Contains(SearchTextBox.Text) ||
                 s.Client.LastName.Contains(SearchTextBox.Text) ||

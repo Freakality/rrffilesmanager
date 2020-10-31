@@ -715,6 +715,7 @@
             this.LiaWhereAccident.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.LiaWhereAccident.Size = new System.Drawing.Size(1154, 76);
             this.LiaWhereAccident.TabIndex = 1;
+            this.LiaWhereAccident.TextChanged += new System.EventHandler(this.LiaWhereAccident_TextChanged);
             // 
             // LiaExplainGroup
             // 
@@ -888,7 +889,7 @@
             this.PolLTDPrivateOrEmployerGroup.Multiline = true;
             this.PolLTDPrivateOrEmployerGroup.Name = "PolLTDPrivateOrEmployerGroup";
             this.PolLTDPrivateOrEmployerGroup.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolLTDPrivateOrEmployerGroup.Size = new System.Drawing.Size(1154, 39);
+            this.PolLTDPrivateOrEmployerGroup.Size = new System.Drawing.Size(1137, 39);
             this.PolLTDPrivateOrEmployerGroup.TabIndex = 1;
             // 
             // GroupBox123
@@ -899,7 +900,7 @@
             this.GroupBox123.Controls.Add(this.Label116);
             this.GroupBox123.Location = new System.Drawing.Point(16, 236);
             this.GroupBox123.Name = "GroupBox123";
-            this.GroupBox123.Size = new System.Drawing.Size(689, 42);
+            this.GroupBox123.Size = new System.Drawing.Size(672, 42);
             this.GroupBox123.TabIndex = 27;
             this.GroupBox123.TabStop = false;
             // 
@@ -931,7 +932,7 @@
             this.GroupBox102.Controls.Add(this.DeniedSTPorLTDLabel);
             this.GroupBox102.Location = new System.Drawing.Point(654, 126);
             this.GroupBox102.Name = "GroupBox102";
-            this.GroupBox102.Size = new System.Drawing.Size(520, 42);
+            this.GroupBox102.Size = new System.Drawing.Size(503, 42);
             this.GroupBox102.TabIndex = 26;
             this.GroupBox102.TabStop = false;
             // 
@@ -965,7 +966,7 @@
             this.GroupBox101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox101.Location = new System.Drawing.Point(16, 284);
             this.GroupBox101.Name = "GroupBox101";
-            this.GroupBox101.Size = new System.Drawing.Size(1160, 58);
+            this.GroupBox101.Size = new System.Drawing.Size(1143, 58);
             this.GroupBox101.TabIndex = 28;
             this.GroupBox101.TabStop = false;
             this.GroupBox101.Text = "Is your LTD policy a private policy or an employer group policy?";
@@ -978,7 +979,7 @@
             this.GroupBox98.Controls.Add(this.Label117);
             this.GroupBox98.Location = new System.Drawing.Point(16, 126);
             this.GroupBox98.Name = "GroupBox98";
-            this.GroupBox98.Size = new System.Drawing.Size(632, 42);
+            this.GroupBox98.Size = new System.Drawing.Size(615, 42);
             this.GroupBox98.TabIndex = 24;
             this.GroupBox98.TabStop = false;
             // 
@@ -1009,7 +1010,7 @@
             this.GroupBox93.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox93.Location = new System.Drawing.Point(14, 752);
             this.GroupBox93.Name = "GroupBox93";
-            this.GroupBox93.Size = new System.Drawing.Size(1160, 138);
+            this.GroupBox93.Size = new System.Drawing.Size(1143, 138);
             this.GroupBox93.TabIndex = 14;
             this.GroupBox93.TabStop = false;
             this.GroupBox93.Text = "Other relevant policy notes";
@@ -1022,7 +1023,7 @@
             this.PolOtherNotes.Multiline = true;
             this.PolOtherNotes.Name = "PolOtherNotes";
             this.PolOtherNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolOtherNotes.Size = new System.Drawing.Size(1154, 119);
+            this.PolOtherNotes.Size = new System.Drawing.Size(1137, 119);
             this.PolOtherNotes.TabIndex = 1;
             // 
             // GroupBox97
@@ -1033,7 +1034,7 @@
             this.GroupBox97.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox97.Location = new System.Drawing.Point(17, 175);
             this.GroupBox97.Name = "GroupBox97";
-            this.GroupBox97.Size = new System.Drawing.Size(1160, 58);
+            this.GroupBox97.Size = new System.Drawing.Size(1143, 58);
             this.GroupBox97.TabIndex = 10;
             this.GroupBox97.TabStop = false;
             this.GroupBox97.Text = "How much were you being paid?";
@@ -1046,7 +1047,7 @@
             this.PolHowMuchBeingPaid.Multiline = true;
             this.PolHowMuchBeingPaid.Name = "PolHowMuchBeingPaid";
             this.PolHowMuchBeingPaid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolHowMuchBeingPaid.Size = new System.Drawing.Size(1154, 39);
+            this.PolHowMuchBeingPaid.Size = new System.Drawing.Size(1137, 39);
             this.PolHowMuchBeingPaid.TabIndex = 1;
             // 
             // GroupBox99
@@ -1057,7 +1058,7 @@
             this.GroupBox99.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox99.Location = new System.Drawing.Point(16, 67);
             this.GroupBox99.Name = "GroupBox99";
-            this.GroupBox99.Size = new System.Drawing.Size(1160, 56);
+            this.GroupBox99.Size = new System.Drawing.Size(1143, 56);
             this.GroupBox99.TabIndex = 8;
             this.GroupBox99.TabStop = false;
             this.GroupBox99.Text = "Who paid those benefits to you?";
@@ -1070,7 +1071,7 @@
             this.PolWhoPaidBenefits.Multiline = true;
             this.PolWhoPaidBenefits.Name = "PolWhoPaidBenefits";
             this.PolWhoPaidBenefits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolWhoPaidBenefits.Size = new System.Drawing.Size(1154, 37);
+            this.PolWhoPaidBenefits.Size = new System.Drawing.Size(1137, 37);
             this.PolWhoPaidBenefits.TabIndex = 1;
             // 
             // PolDateSubmittedLTD
@@ -1132,7 +1133,7 @@
             this.GroupBox96.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox96.Location = new System.Drawing.Point(16, 689);
             this.GroupBox96.Name = "GroupBox96";
-            this.GroupBox96.Size = new System.Drawing.Size(1160, 58);
+            this.GroupBox96.Size = new System.Drawing.Size(1143, 58);
             this.GroupBox96.TabIndex = 36;
             this.GroupBox96.TabStop = false;
             this.GroupBox96.Text = "Was your CPP Disability benefits application ever approved?";
@@ -1145,7 +1146,7 @@
             this.PolCPPApproved.Multiline = true;
             this.PolCPPApproved.Name = "PolCPPApproved";
             this.PolCPPApproved.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolCPPApproved.Size = new System.Drawing.Size(1154, 39);
+            this.PolCPPApproved.Size = new System.Drawing.Size(1137, 39);
             this.PolCPPApproved.TabIndex = 1;
             // 
             // GroupBox95
@@ -1156,7 +1157,7 @@
             this.GroupBox95.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox95.Location = new System.Drawing.Point(16, 625);
             this.GroupBox95.Name = "GroupBox95";
-            this.GroupBox95.Size = new System.Drawing.Size(1160, 58);
+            this.GroupBox95.Size = new System.Drawing.Size(1143, 58);
             this.GroupBox95.TabIndex = 35;
             this.GroupBox95.TabStop = false;
             this.GroupBox95.Text = "Did you decided to apply for CPP Disability Benefits on you own or were you asked" +
@@ -1170,7 +1171,7 @@
             this.PolCPPOwnOrCompany.Multiline = true;
             this.PolCPPOwnOrCompany.Name = "PolCPPOwnOrCompany";
             this.PolCPPOwnOrCompany.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolCPPOwnOrCompany.Size = new System.Drawing.Size(1154, 39);
+            this.PolCPPOwnOrCompany.Size = new System.Drawing.Size(1137, 39);
             this.PolCPPOwnOrCompany.TabIndex = 1;
             // 
             // GroupBox94
@@ -1181,7 +1182,7 @@
             this.GroupBox94.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox94.Location = new System.Drawing.Point(16, 561);
             this.GroupBox94.Name = "GroupBox94";
-            this.GroupBox94.Size = new System.Drawing.Size(1160, 58);
+            this.GroupBox94.Size = new System.Drawing.Size(1143, 58);
             this.GroupBox94.TabIndex = 34;
             this.GroupBox94.TabStop = false;
             this.GroupBox94.Text = "Before being terminated from LTD benefits had you ever made an application for CP" +
@@ -1195,7 +1196,7 @@
             this.PolApplicationForCPP.Multiline = true;
             this.PolApplicationForCPP.Name = "PolApplicationForCPP";
             this.PolApplicationForCPP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolApplicationForCPP.Size = new System.Drawing.Size(1154, 39);
+            this.PolApplicationForCPP.Size = new System.Drawing.Size(1137, 39);
             this.PolApplicationForCPP.TabIndex = 1;
             // 
             // GroupBox128
@@ -1207,7 +1208,7 @@
             this.GroupBox128.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox128.Location = new System.Drawing.Point(16, 460);
             this.GroupBox128.Name = "GroupBox128";
-            this.GroupBox128.Size = new System.Drawing.Size(1160, 95);
+            this.GroupBox128.Size = new System.Drawing.Size(1143, 95);
             this.GroupBox128.TabIndex = 33;
             this.GroupBox128.TabStop = false;
             this.GroupBox128.Text = "Briefly explain the reason the insurance company provided to you when it decided " +
@@ -1222,7 +1223,7 @@
             this.PolReasonTerminateLTD.Multiline = true;
             this.PolReasonTerminateLTD.Name = "PolReasonTerminateLTD";
             this.PolReasonTerminateLTD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolReasonTerminateLTD.Size = new System.Drawing.Size(1154, 74);
+            this.PolReasonTerminateLTD.Size = new System.Drawing.Size(1137, 74);
             this.PolReasonTerminateLTD.TabIndex = 1;
             // 
             // GroupBox127
@@ -1233,7 +1234,7 @@
             this.GroupBox127.Controls.Add(this.Label120);
             this.GroupBox127.Location = new System.Drawing.Point(867, 348);
             this.GroupBox127.Name = "GroupBox127";
-            this.GroupBox127.Size = new System.Drawing.Size(323, 42);
+            this.GroupBox127.Size = new System.Drawing.Size(306, 42);
             this.GroupBox127.TabIndex = 32;
             this.GroupBox127.TabStop = false;
             // 
@@ -1265,7 +1266,7 @@
             this.GroupBox126.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox126.Location = new System.Drawing.Point(16, 396);
             this.GroupBox126.Name = "GroupBox126";
-            this.GroupBox126.Size = new System.Drawing.Size(1160, 58);
+            this.GroupBox126.Size = new System.Drawing.Size(1143, 58);
             this.GroupBox126.TabIndex = 31;
             this.GroupBox126.TabStop = false;
             this.GroupBox126.Text = "Were your LTD benefits initially approved when you first applied for disability b" +
@@ -1279,7 +1280,7 @@
             this.PolFirstTimeLTDApproved.Multiline = true;
             this.PolFirstTimeLTDApproved.Name = "PolFirstTimeLTDApproved";
             this.PolFirstTimeLTDApproved.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolFirstTimeLTDApproved.Size = new System.Drawing.Size(1154, 39);
+            this.PolFirstTimeLTDApproved.Size = new System.Drawing.Size(1137, 39);
             this.PolFirstTimeLTDApproved.TabIndex = 1;
             // 
             // GroupBox125
@@ -1290,7 +1291,7 @@
             this.GroupBox125.Controls.Add(this.Label119);
             this.GroupBox125.Location = new System.Drawing.Point(503, 348);
             this.GroupBox125.Name = "GroupBox125";
-            this.GroupBox125.Size = new System.Drawing.Size(361, 42);
+            this.GroupBox125.Size = new System.Drawing.Size(344, 42);
             this.GroupBox125.TabIndex = 30;
             this.GroupBox125.TabStop = false;
             // 
@@ -1321,7 +1322,7 @@
             this.GroupBox124.Controls.Add(this.Label118);
             this.GroupBox124.Location = new System.Drawing.Point(16, 348);
             this.GroupBox124.Name = "GroupBox124";
-            this.GroupBox124.Size = new System.Drawing.Size(484, 42);
+            this.GroupBox124.Size = new System.Drawing.Size(467, 42);
             this.GroupBox124.TabIndex = 29;
             this.GroupBox124.TabStop = false;
             // 

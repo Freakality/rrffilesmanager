@@ -164,7 +164,7 @@ namespace RRFFilesManager.IntakeForm
 
         public void OnNext()
         {
-            FillIntakeFromForm(IntakeForm.Intake);
+            FillIntakeFromForm(Home.IntakeForm.Intake);
         }
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)

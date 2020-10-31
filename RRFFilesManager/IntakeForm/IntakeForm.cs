@@ -36,11 +36,11 @@ namespace RRFFilesManager.IntakeForm
             InitializeComponent();
         }
 
-        private static Intake intake;
-        public static Intake Intake => intake ?? (intake = new Intake());
+        private Intake intake;
+        public Intake Intake => intake ?? (intake = new Intake());
         public void SetIntake(Intake intake)
         {
-            IntakeForm.intake = intake;
+            Home.IntakeForm.intake = intake;
             PreliminaryInfo.FillForm(intake);
             PotentialClientInfo.FillForm(intake);
             IntakeSheets.FillForm(intake);

@@ -25,7 +25,7 @@ namespace RRFFilesManager.IntakeForm
         }
 
         public void SetClient(Client client) {
-            IntakeForm.Intake.Client = client;
+            Home.IntakeForm.Intake.Client = client;
             FillForm(client);
         }
         public DateTime? PCIDateOfBirth
@@ -221,10 +221,10 @@ namespace RRFFilesManager.IntakeForm
 
         public void FillOrCreateIntakeClient()
         {
-            if (IntakeForm.Intake.Client == null)
-                IntakeForm.Intake.Client = CreateClient();
+            if (Home.IntakeForm.Intake.Client == null)
+                Home.IntakeForm.Intake.Client = CreateClient();
             else
-                IntakeForm.Intake.Client = UpdateClient(IntakeForm.Intake.Client.ID);
+                Home.IntakeForm.Intake.Client = UpdateClient(Home.IntakeForm.Intake.Client.ID);
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)

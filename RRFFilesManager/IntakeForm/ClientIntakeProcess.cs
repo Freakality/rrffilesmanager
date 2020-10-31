@@ -64,7 +64,7 @@ namespace RRFFilesManager.IntakeForm
             {
                 SendCIPEmail();
                 SendTemplateEmail();
-                IntakeManager.SetHoldIntake(IntakeForm.Intake, false);
+                IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, false);
                 Submitting.Instance.Hide();
                 Home.IntakeForm.Close();
                 Home.Instance.Show();
@@ -79,8 +79,8 @@ namespace RRFFilesManager.IntakeForm
 
         private void SendCIPEmail()
         {
-            var attachmentPath = IntakeManager.CreateOrRefillIntakeWorkBook(IntakeForm.Intake, true);
-            string clientFullName = $"{IntakeForm.Intake.Client?.LastName}, {IntakeForm.Intake.Client?.FirstName}";
+            var attachmentPath = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
+            string clientFullName = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
             string receip = "rojascarlos82@hotmail.com";
             var subject = $"Client Intake Process Invoked - {clientFullName}";
             var body = "";
@@ -131,7 +131,7 @@ namespace RRFFilesManager.IntakeForm
             host.TemplatePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\Templates";
             host.Start();
             var body = host.RenderTemplate(template, new {
-                Intake = IntakeForm.Intake,
+                Intake = Home.IntakeForm.Intake,
                 DateApptScheduled = DateApptScheduled.Value,
                 DateApptScheduledNextBusinessDay = DateApptScheduled.Value.AddDays(-1),
                 TimeOfAppt = TimeOfAppt.Value,

@@ -26,7 +26,7 @@ namespace RRFFilesManager.IntakeForm
             LoadEmploymentIncomeLossTab();
             LoadDamagesTab();
             this.TabControl.TabPages.Clear();
-            if (IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident")
+            if (Home.IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident")
             {
                 this.TabControl.TabPages.Add(this.Liability);
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
@@ -38,7 +38,7 @@ namespace RRFFilesManager.IntakeForm
                 AccidentBenefits.BackColor = Color.LightYellow;
                 OtherNotes.BackColor = Color.LightYellow;
             }
-            else if (IntakeForm.Intake.MatterType.Description == "Occupiers Liability")
+            else if (Home.IntakeForm.Intake.MatterType.Description == "Occupiers Liability")
             {
                 this.TabControl.TabPages.Add(this.Liability);
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
@@ -48,7 +48,7 @@ namespace RRFFilesManager.IntakeForm
                 Damages.BackColor = Color.LightGreen;
                 OtherNotes.BackColor = Color.LightGreen;
             }
-            else if (IntakeForm.Intake.MatterType.Description == "Disability")
+            else if (Home.IntakeForm.Intake.MatterType.Description == "Disability")
             {
                 this.TabControl.TabPages.Add(this.Policy);
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
@@ -58,7 +58,7 @@ namespace RRFFilesManager.IntakeForm
                 Damages.BackColor = Color.LightBlue;
                 OtherNotes.BackColor = Color.LightBlue;
             }
-            else if (IntakeForm.Intake.MatterType.Description == "General Negligence")
+            else if (Home.IntakeForm.Intake.MatterType.Description == "General Negligence")
             {
                 this.TabControl.TabPages.Add(this.Liability);
                 this.TabControl.TabPages.Add(this.EmploymentIncomeLoss);
@@ -85,7 +85,7 @@ namespace RRFFilesManager.IntakeForm
             this.LiaHavePhotosGroup.Text = "Do you have any photos of the incident?";
             this.OthersLiabilityGroup.Visible = true;
             this.MVALiabilityGroup.Visible = false;
-            if (IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident")
+            if (Home.IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident")
             {
                 this.ReceiveCopyGroupBox.Visible = true;
                 this.LiaWhereAccidentGroup.Text = "Where did the accident occur (place/address)?";
@@ -112,7 +112,7 @@ namespace RRFFilesManager.IntakeForm
 
             EILSelfGrossEarningLabel.Text = "How much were you earning (gross) at the time of this incident?";
 
-            if (IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident" || IntakeForm.Intake.MatterType.Description == "Disability")
+            if (Home.IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident" || Home.IntakeForm.Intake.MatterType.Description == "Disability")
             {
                 this.EILWereEmployedLabel.Text = "Were you employed at the time of this motor vehicle accident?";
                 EILEmployed4WeeksLabel.Visible = true;
@@ -143,7 +143,7 @@ namespace RRFFilesManager.IntakeForm
             DamPreAccidentGroupBox.Text = "Prior to this incident, were you ever involved in a motor vehicle accident, slip and fall accidents, workplace accidents?";
             DamPreIllnessGroupBox.Text = "Do you suffer from any other illness (unrelated to this incident) such as cancer, heart issues, pre-existing anxiety or depression, etc.?";
 
-            if (IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident" || IntakeForm.Intake.MatterType.Description == "Disability")
+            if (Home.IntakeForm.Intake.MatterType.Description == "Motor Vehicle Accident" || Home.IntakeForm.Intake.MatterType.Description == "Disability")
             {
                 DamHitVehicleConcreteGroupBox.Text = "During this accident did your body hit any part of the inside of the vehicle or your body part with any other property such as concrete?";
                 DamWentToHospitalGroupBox.Text = "Were you taken or did you go to a hospital to have your injuries looked at following this accident?";
@@ -182,10 +182,10 @@ namespace RRFFilesManager.IntakeForm
 
         public void FillOrCreateIntakeClient()
         {
-            if (IntakeForm.Intake.ID == default)
-                CreateIntake(IntakeForm.Intake);
+            if (Home.IntakeForm.Intake.ID == default)
+                CreateIntake(Home.IntakeForm.Intake);
             else
-                UpdateIntake(IntakeForm.Intake.ID);
+                UpdateIntake(Home.IntakeForm.Intake.ID);
         }
 
         public void FillIntake(Intake intake)
@@ -402,6 +402,11 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private void PolDateLastDayLTD_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LiaWhereAccident_TextChanged(object sender, EventArgs e)
         {
 
         }

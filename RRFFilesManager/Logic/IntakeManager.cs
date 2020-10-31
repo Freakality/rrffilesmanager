@@ -33,8 +33,8 @@ namespace RRFFilesManager.Logic
         private static string CreateAndFillTemplateDocument(string templatePath, Intake intake, string fileName = null)
         {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
-            var document = wordApp?.Documents.Open(templatePath);
-            var filePath = GetFilePath(fileName ?? $"CYACorrespondence{DateTime.Now:Mdyhhmmss}.doc");
+            var document = wordApp?.Documents.Open(FileName: templatePath, ReadOnly: true);
+            var filePath = GetFilePath(fileName ?? $"{DateTime.Now:yyyyMMddhhmmss}_CYACorrespondence.doc");
             wordApp.Visible = false;
             Word.ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
             Word.ReplaceAll(document, "$$$FirstName$$$", intake.Client?.FirstName);
@@ -193,17 +193,22 @@ namespace RRFFilesManager.Logic
             Excel.ReplaceAll(worksheet, "$$$ABNotes$$$", intake.AccBenNotes);
 
             Excel.ReplaceAll(worksheet, "$$$OtherNotes$$$", intake.Notes);
-            string filePath = GetFilePath(fileName ?? $"MVAIntakeReport{DateTime.Now:Mdyhhmmss}.xlsx");
+            string filePath = GetFilePath(fileName ?? $"{DateTime.Now:yyyyMMddhhmmss}_MVAIntakeReport.xlsx");
             workbook.SaveAs(Filename: filePath);
             workbook.Close();
             excelApp.Quit();
             return filePath;
         }
 
-        public static string CreateIntakeWorkbook(Intake intake, string fileName = null)
+        public static string UpdateIntakeWorkbook(Intake intake, string fileName)
         {
             string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{intake.MatterType.Description}.xlsx");
-            return CreateAndFillTemplateWorkbook(templateExcelPath, intake, !string.IsNullOrWhiteSpace(fileName)? fileName : null);
+            return CreateAndFillTemplateWorkbook(templateExcelPath, intake, fileName);
+        }
+        public static string CreateIntakeWorkbook(Intake intake)
+        {
+            string templateExcelPath = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], $"{intake.MatterType.Description}.xlsx");
+            return CreateAndFillTemplateWorkbook(templateExcelPath, intake);
         }
         public static string CreateCYADocument(string templateDocumentPath, Intake intake, string fileName = null)
         {
@@ -244,7 +249,19 @@ namespace RRFFilesManager.Logic
             return filePath;
         }
 
-        public static string CreateOrRefillIntakeWorkBook(Intake intake, bool? refillDocument = null)
+        public static string GetOrCreateIntakeWorkBook(Intake intake)
+        {
+            string filePath = GetFilePath(intake.ExcelFile);
+
+            if (string.IsNullOrWhiteSpace(filePath))
+            {
+                filePath = CreateIntakeWorkbook(intake);
+                SaveIntakeWorkBookFileName(intake, Path.GetFileName(filePath));
+            }
+            return filePath;
+        }
+
+        public static string CreateOrUpdateIntakeWorkBook(Intake intake)
         {
             string filePath = GetFilePath(intake.ExcelFile);
             
@@ -253,10 +270,10 @@ namespace RRFFilesManager.Logic
                 filePath = CreateIntakeWorkbook(intake);
                 SaveIntakeWorkBookFileName(intake, Path.GetFileName(filePath));
             }
-            else if (refillDocument.Value)
+            else
             {
                 var fileName = Path.GetFileName(filePath);
-                filePath = CreateIntakeWorkbook(intake, fileName);
+                filePath = UpdateIntakeWorkbook(intake, fileName);
             }
             return filePath;
         }
