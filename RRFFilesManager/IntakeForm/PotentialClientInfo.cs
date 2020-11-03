@@ -28,16 +28,40 @@ namespace RRFFilesManager.IntakeForm
             Home.IntakeForm.Intake.Client = client;
             FillForm(client);
         }
+
+        public string[] Months => new string[]
+        {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        };
+
         public DateTime? PCIDateOfBirth
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(MonthBirth.Text) || string.IsNullOrWhiteSpace(DayBirth.Text) || string.IsNullOrWhiteSpace(YearBirth.Text))
+                try
                 {
-                    return default;
+                    if (string.IsNullOrWhiteSpace(MonthBirth.Text) || string.IsNullOrWhiteSpace(DayBirth.Text) || string.IsNullOrWhiteSpace(YearBirth.Text))
+                    {
+                        return default;
+                    }
+                
+                    return DateTime.Parse($"{MonthBirth.Text}-{DayBirth.Text}-{YearBirth.Text}");
                 }
-
-                return DateTime.Parse($"{MonthBirth.Text}-{DayBirth.Text}-{YearBirth.Text}");
+                catch
+                {
+                    return null;
+                }
             }
         }
 
@@ -192,7 +216,7 @@ namespace RRFFilesManager.IntakeForm
             PCIMobileCarrier.Text = client.MobileCarrier;
             PCIEmailToText.Text = client.EmailToText;
             YearBirth.Text = client.DateOfBirth?.Year.ToString();
-            MonthBirth.Text = client.DateOfBirth?.Month.ToString();
+            MonthBirth.Text = client.DateOfBirth != null ? Months[client.DateOfBirth.Value.Month - 1] : null;
             DayBirth.Text = client.DateOfBirth?.Day.ToString();
             PCIOtherNotes.Text = client.OtherNotes;
         }

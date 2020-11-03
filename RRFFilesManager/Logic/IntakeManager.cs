@@ -33,6 +33,7 @@ namespace RRFFilesManager.Logic
         private static string CreateAndFillTemplateDocument(string templatePath, Intake intake, string fileName = null)
         {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
+            wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
             var document = wordApp?.Documents.Open(FileName: templatePath, ReadOnly: true);
             var filePath = GetFilePath(fileName ?? $"{DateTime.Now:yyyyMMddhhmmss}_CYACorrespondence.doc");
             wordApp.Visible = false;
@@ -62,6 +63,7 @@ namespace RRFFilesManager.Logic
         private static string CreateAndFillTemplateWorkbook(string templatePath, Intake intake, string fileName = null)
         {
             var excelApp = new Microsoft.Office.Interop.Excel.Application();
+            excelApp.DisplayAlerts = false;
             var workbook = excelApp?.Workbooks?.Open(templatePath);
             Worksheet worksheet = (Worksheet)workbook.Sheets[1];
             Excel.ReplaceAll(worksheet, "$$$FileNumber$$$", intake.FileNumber);
