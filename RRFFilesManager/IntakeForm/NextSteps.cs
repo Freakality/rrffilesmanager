@@ -103,10 +103,10 @@ namespace RRFFilesManager.IntakeForm
         {
             var attachmentPath = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
             string clientFullName = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
-            string receip = "rojascarlos82@hotmail.com";
+            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
             var subject = $"Print and Hold Process - {clientFullName}";
             var body = "";
-            Outlook.NewEmail(receip, subject, body, new[] { attachmentPath });
+            Outlook.NewEmail(to, subject, body, new[] { attachmentPath });
         }
         public void CreateSendItemCYA()
         {
@@ -115,7 +115,7 @@ namespace RRFFilesManager.IntakeForm
             var attachmentPath2 = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
             string nameStr = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
             string signat = Home.IntakeForm.Intake.StaffInterviewer.Description;
-            string receip = "rojascarlos82@hotmail.com";
+            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
 
             var subject = $"New CYA Process Invoked - {nameStr}";
             var body = $@"<p>Hi,</p><br><br>
@@ -129,7 +129,7 @@ namespace RRFFilesManager.IntakeForm
                         <p>Regards,</p><br>
 
                         <p>{signat}</p>";
-            Outlook.NewEmail(new[] { receip }, subject, body, new[] { attachmentPath, attachmentPath2 });
+            Outlook.NewEmail(to, subject, body, new[] { attachmentPath, attachmentPath2 });
 
         }
 
