@@ -81,10 +81,10 @@ namespace RRFFilesManager.IntakeForm
         {
             var attachmentPath = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
             string clientFullName = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
-            string receip = "rojascarlos82@hotmail.com";
+            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com"};
             var subject = $"Client Intake Process Invoked - {clientFullName}";
             var body = "";
-            Outlook.NewEmail(receip, subject, body, new[] { attachmentPath });
+            Outlook.NewEmail(to, subject, body, new[] { attachmentPath });
         }
 
         private void SendTemplateEmail()
