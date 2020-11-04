@@ -48,7 +48,7 @@
             this.Button13 = new System.Windows.Forms.Button();
             this.Button12 = new System.Windows.Forms.Button();
             this.Button11 = new System.Windows.Forms.Button();
-            this.Button10 = new System.Windows.Forms.Button();
+            this.ClientInfoButton = new System.Windows.Forms.Button();
             this.Button9 = new System.Windows.Forms.Button();
             this.Button8 = new System.Windows.Forms.Button();
             this.Button7 = new System.Windows.Forms.Button();
@@ -56,12 +56,12 @@
             this.Button5 = new System.Windows.Forms.Button();
             this.Button6 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.FileManagerButton = new System.Windows.Forms.Button();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.IntakeButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.TableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Button30
@@ -365,20 +365,21 @@
             this.Button11.Text = "CLIENT NOTES";
             this.Button11.UseVisualStyleBackColor = false;
             // 
-            // Button10
+            // ClientInfoButton
             // 
-            this.Button10.BackColor = System.Drawing.Color.Black;
-            this.Button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button10.ForeColor = System.Drawing.Color.White;
-            this.Button10.Location = new System.Drawing.Point(199, 99);
-            this.Button10.Margin = new System.Windows.Forms.Padding(10);
-            this.Button10.Name = "Button10";
-            this.Button10.Size = new System.Drawing.Size(169, 69);
-            this.Button10.TabIndex = 4;
-            this.Button10.Text = "CLIENT INFO";
-            this.Button10.UseVisualStyleBackColor = false;
+            this.ClientInfoButton.BackColor = System.Drawing.Color.Black;
+            this.ClientInfoButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClientInfoButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientInfoButton.ForeColor = System.Drawing.Color.White;
+            this.ClientInfoButton.Location = new System.Drawing.Point(199, 99);
+            this.ClientInfoButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ClientInfoButton.Name = "ClientInfoButton";
+            this.ClientInfoButton.Size = new System.Drawing.Size(169, 69);
+            this.ClientInfoButton.TabIndex = 4;
+            this.ClientInfoButton.Text = "CLIENT INFO";
+            this.ClientInfoButton.UseVisualStyleBackColor = false;
+            this.ClientInfoButton.Click += new System.EventHandler(this.ClientInfoButton_Click);
             // 
             // Button9
             // 
@@ -486,17 +487,6 @@
             this.Button3.UseVisualStyleBackColor = false;
             this.Button3.Click += new System.EventHandler(this.ConflictChecks_Click);
             // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
-            this.PictureBox1.Location = new System.Drawing.Point(71, 5);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(776, 214);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 4;
-            this.PictureBox1.TabStop = false;
-            // 
             // FileManagerButton
             // 
             this.FileManagerButton.BackColor = System.Drawing.Color.Maroon;
@@ -544,7 +534,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button13, 1, 3);
             this.TableLayoutPanel1.Controls.Add(this.Button12, 1, 2);
             this.TableLayoutPanel1.Controls.Add(this.Button11, 0, 3);
-            this.TableLayoutPanel1.Controls.Add(this.Button10, 1, 1);
+            this.TableLayoutPanel1.Controls.Add(this.ClientInfoButton, 1, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button9, 1, 0);
             this.TableLayoutPanel1.Controls.Add(this.Button8, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button7, 0, 5);
@@ -583,6 +573,17 @@
             this.IntakeButton.UseVisualStyleBackColor = false;
             this.IntakeButton.Click += new System.EventHandler(this.IntakeButton_Click);
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
+            this.PictureBox1.Location = new System.Drawing.Point(71, 5);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(776, 214);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 4;
+            this.PictureBox1.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,8 +595,8 @@
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.TableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -622,7 +623,7 @@
         internal System.Windows.Forms.Button Button13;
         internal System.Windows.Forms.Button Button12;
         internal System.Windows.Forms.Button Button11;
-        internal System.Windows.Forms.Button Button10;
+        internal System.Windows.Forms.Button ClientInfoButton;
         internal System.Windows.Forms.Button Button9;
         internal System.Windows.Forms.Button Button8;
         internal System.Windows.Forms.Button Button7;

@@ -156,13 +156,19 @@
     <Compile Include="Abstractions\MobileCarrier.cs" />
     <Compile Include="Abstractions\Province.cs" />
     <Compile Include="Abstractions\Lawyer.cs" />
+    <Compile Include="ClientForm\ClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm\ClientInfo.Designer.cs">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\DependencyInjectionExtensions.cs" />
     <Compile Include="DataAccess\DataContext.cs" />
     <Compile Include="DataAccess\MatterTypeRepository.cs" />
-    <Compile Include="FindClient.cs">
+    <Compile Include="ClientForm\FindClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindClient.Designer.cs">
+    <Compile Include="ClientForm\FindClient.Designer.cs">
       <DependentUpon>FindClient.cs</DependentUpon>
     </Compile>
     <Compile Include="FileManager.cs">
@@ -269,10 +275,13 @@
     <Compile Include="Submitting.Designer.cs">
       <DependentUpon>Submitting.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClientForm\ClientInfo.resx">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FileManager.resx">
       <DependentUpon>FileManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindClient.resx">
+    <EmbeddedResource Include="ClientForm\FindClient.resx">
       <DependentUpon>FindClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">

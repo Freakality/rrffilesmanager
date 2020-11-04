@@ -22,6 +22,7 @@ namespace RRFFilesManager
 
         private static FindClient instance;
         public static FindClient Instance => instance == null || instance.IsDisposed ? (instance = new FindClient()) : instance;
+        public Client SelectedClient { get; set; }
 
         private void FindClient_Load(object sender, EventArgs e)
         {
@@ -65,7 +66,7 @@ namespace RRFFilesManager
         {
             var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
             var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
-            Home.IntakeForm.PotentialClientInfo.SetClient(client);
+            this.SelectedClient = client;
             Close();
         }
     }

@@ -201,6 +201,8 @@ namespace RRFFilesManager.IntakeForm
 
         public void FillForm(Client client)
         {
+            if (client == null)
+                return;
             PCISalutation.Text = client.Salutation;
             PCIFirstName.Text = client.FirstName;
             PCILastName.Text = client.LastName;
@@ -264,6 +266,12 @@ namespace RRFFilesManager.IntakeForm
         private void FindClientButton_Click(object sender, EventArgs e)
         {
             FindClient.Instance.Show();
+            FindClient.Instance.FormClosing += new FormClosingEventHandler(this.FindClient_FormClosing);
+        }
+        private void FindClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var findClientForm = sender as FindClient;
+            SetClient(findClientForm.SelectedClient);
         }
     }
 }

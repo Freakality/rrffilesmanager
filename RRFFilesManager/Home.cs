@@ -1,4 +1,5 @@
-﻿using RRFFilesManager.IntakeForm;
+﻿using RRFFilesManager.ClientForm;
+using RRFFilesManager.IntakeForm;
 using RRFFilesManager.Logic;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace RRFFilesManager
         public static IntakeForm.IntakeForm IntakeForm { get; set; }
         public static FileManager FileManager { get; set; }
 
+        public static ClientInfo ClientInfo { get; set; }
+
         private void Home_Load(object sender, EventArgs e)
         {
             SplashScreen.Instance.Hide();
@@ -52,6 +55,15 @@ namespace RRFFilesManager
             PleaseWait.Instance.Show();
             FileManager = new FileManager();
             FileManager.Show();
+            PleaseWait.Instance.Hide();
+        }
+
+        private void ClientInfoButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            PleaseWait.Instance.Show();
+            ClientInfo = new ClientInfo();
+            ClientInfo.Show();
             PleaseWait.Instance.Hide();
         }
     }
