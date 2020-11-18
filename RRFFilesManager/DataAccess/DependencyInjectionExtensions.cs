@@ -13,7 +13,10 @@ namespace RRFFilesManager.DataAccess
     {
         public static IServiceCollection RegisterDataAccessServices(this IServiceCollection services)
         {
+            services.AddScoped<DataContext>();
+
             services.AddTransient<IMatterTypeRepository, MatterTypeRepository>();
+            services.AddTransient<IIntakeRepository, IntakeRepository>();
             return services;
         }
     }

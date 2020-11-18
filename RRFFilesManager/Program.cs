@@ -20,6 +20,7 @@ namespace RRFFilesManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ConfigureServices();
             Application.Run(Home.Instance);
         }
 
