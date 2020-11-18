@@ -14,5 +14,6 @@ namespace RRFFilesManager.Abstractions.DataAccess
         Task<Intake> GetByIdAsync(int intakeId);
         Task<IEnumerable<Intake>> ListAsync();
         Task<IEnumerable<Intake>> SearchAsync(string searchText);
+        Task<Intake> GetLastIntakeAsync(int? clientId = null);
     }
 }

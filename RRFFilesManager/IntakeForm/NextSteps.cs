@@ -15,16 +15,19 @@ using System.IO;
 using Microsoft.Office.Interop.Outlook;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
+using RRFFilesManager.Abstractions.DataAccess;
 
 namespace RRFFilesManager.IntakeForm
 {
     public partial class NextSteps : UserControl
     {
         public bool RefillCYADocument { get; set; }
+        private readonly ITemplateRepository _templateRepository;
         public NextSteps()
         {
+            _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
             InitializeComponent();
-            var typesOfTemplates = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == Home.IntakeForm.Intake.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            var typesOfTemplates = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID)?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
             DocumentPreview.Visible = false;
         }
@@ -48,7 +51,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = Program.DBContext.CYATemplates.Where(s => s.MatterType.ID == Home.IntakeForm.Intake.MatterType.ID && s.TypeOfTemplate == TypeTemplate.Text)?.ToList();
+            TemplateName.DataSource = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID, TypeTemplate.Text)?.Result;
             TemplateName.DisplayMember = nameof(CYATemplate.TemplateName);
         }
 

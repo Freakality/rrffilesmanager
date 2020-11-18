@@ -17,6 +17,14 @@ namespace RRFFilesManager.DataAccess
 
             services.AddTransient<IMatterTypeRepository, MatterTypeRepository>();
             services.AddTransient<IIntakeRepository, IntakeRepository>();
+            services.AddTransient<IHearAboutUsRepository, HearAboutUsRepository>();
+            services.AddTransient<ILawyerRepository, LawyerRepository>();
+            services.AddTransient<IMatterSubTypeRepository, MatterSubTypeRepository>();
+            services.AddTransient<IClientRepository, ClientRepository>();
+            services.AddTransient<IDisabilityInsuranceCompanyRepository, DisabilityInsuranceCompanyRepository>();
+            services.AddTransient<IMobileCarrierRepository, MobileCarrierRepository>();
+            services.AddTransient<IProvinceRepository, ProvinceRepository>();
+            services.AddTransient<ITemplateRepository, TemplateRepository>();
             return services;
         }
     }

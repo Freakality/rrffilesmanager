@@ -11,16 +11,23 @@ using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
 using System.Text.RegularExpressions;
 using RRFFilesManager.Logic;
+using RRFFilesManager.Abstractions.DataAccess;
 
 namespace RRFFilesManager.IntakeForm
 {
     public partial class PotentialClientInfo : UserControl
     {
+        private readonly IProvinceRepository _provinceRepository;
+        private readonly IMobileCarrierRepository _mobileCarrierRepository;
+        private readonly IClientRepository _clientRepository;
         public PotentialClientInfo()
         {
+            _provinceRepository = (IProvinceRepository)Program.ServiceProvider.GetService(typeof(IProvinceRepository));
+            _mobileCarrierRepository = (IMobileCarrierRepository)Program.ServiceProvider.GetService(typeof(IMobileCarrierRepository));
+            _clientRepository = (IClientRepository)Program.ServiceProvider.GetService(typeof(IClientRepository));
             InitializeComponent();
-            Utils.SetComboBoxDataSource(PCIProvince, Program.DBContext.Provinces.ToList());
-            Utils.SetComboBoxDataSource(PCIMobileCarrier, Program.DBContext.MobileCarriers.ToList());
+            Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.ListAsync()?.Result);
+            Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.ListAsync()?.Result);
             YearBirth.Text = "1970";
         }
 
@@ -63,6 +70,18 @@ namespace RRFFilesManager.IntakeForm
                     return null;
                 }
             }
+        }
+
+        public void UpsertClient()
+        {
+            if (Home.IntakeForm.Intake.Client == null)
+                Home.IntakeForm.Intake.Client = new Client();
+            var client = Home.IntakeForm.Intake.Client;
+            FillClient(client);
+            if (client.ID == default)
+                _clientRepository.InsertAsync(client);
+            else
+                _clientRepository.UpdateAsync(client);
         }
 
         private void PCIMobileNumber_TextChanged_1(object sender, EventArgs e)
@@ -176,7 +195,7 @@ namespace RRFFilesManager.IntakeForm
 
         public void OnNext()
         {
-            FillOrCreateIntakeClient();
+            UpsertClient();
         }
 
         public void FillClient(Client client)
@@ -226,31 +245,6 @@ namespace RRFFilesManager.IntakeForm
         public void FillForm(Intake intake)
         {
             FillForm(intake.Client);
-        }
-
-        public Client CreateClient()
-        {
-                var client = new Client();
-                FillClient(client);
-                Program.DBContext.Clients.Add(client);
-                Program.DBContext.SaveChanges();
-                return client;
-        }
-
-        public Client UpdateClient(int clientId)
-        {
-                var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
-                FillClient(client);
-                Program.DBContext.SaveChanges();
-                return client;
-        }
-
-        public void FillOrCreateIntakeClient()
-        {
-            if (Home.IntakeForm.Intake.Client == null)
-                Home.IntakeForm.Intake.Client = CreateClient();
-            else
-                Home.IntakeForm.Intake.Client = UpdateClient(Home.IntakeForm.Intake.Client.ID);
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Interop.Word;
 using RRFFilesManager.Abstractions;
+using RRFFilesManager.Abstractions.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,11 +14,17 @@ namespace RRFFilesManager.Logic
 {
     public class IntakeManager
     {
+        private static readonly IIntakeRepository _intakeRepository;
+        static IntakeManager()
+        {
+            _intakeRepository = (IIntakeRepository)Program.ServiceProvider.GetService(typeof(IIntakeRepository));
+        }
+
         public static int GetNewFileNumber(Lawyer lawyer)
         {
             if (lawyer == null)
                 return 999999999;
-            var lastFileNumber = Program.DBContext.Intakes.OrderByDescending(s => s.ID).FirstOrDefault()?.FileNumber;
+            var lastFileNumber = _intakeRepository.GetLastIntakeAsync()?.Result?.FileNumber;
             if(lastFileNumber == null)
                 return int.Parse($"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}001");
             var lastNumber = int.Parse(lastFileNumber.ToString()?.Substring(6, 3));
@@ -223,16 +230,14 @@ namespace RRFFilesManager.Logic
         }
         public static void SaveIntakeDocumentFileName(Intake intake, string wordFileName)
         {
-            var trxIntake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intake.ID);
-            trxIntake.WordFile = wordFileName;
-            Program.DBContext.SaveChanges();
+            intake.WordFile = wordFileName;
+            _intakeRepository.UpdateAsync(intake);
         }
 
         public static void SaveIntakeWorkBookFileName(Intake intake, string excelFileName)
         {
-            var trxIntake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intake.ID);
-            trxIntake.ExcelFile = excelFileName;
-            Program.DBContext.SaveChanges();
+            intake.ExcelFile = excelFileName;
+            _intakeRepository.UpdateAsync(intake);
         }
 
         public static string CreateOrRefillIntakeDocument(Intake intake, string templateDocumentPath, bool? refillDocument = null)
@@ -242,7 +247,8 @@ namespace RRFFilesManager.Logic
             if (string.IsNullOrWhiteSpace(filePath))
             {
                 filePath = CreateCYADocument(templateDocumentPath, intake);
-                SaveIntakeDocumentFileName(intake, Path.GetFileName(filePath));
+                intake.WordFile = Path.GetFileName(filePath);
+                _intakeRepository.UpdateAsync(intake);
             }
             else if (refillDocument.Value)
             {
@@ -282,9 +288,8 @@ namespace RRFFilesManager.Logic
 
         public static void SetHoldIntake(Intake intake, bool hold)
         {
-            var trxIntake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intake.ID);
-            trxIntake.Hold = hold;
-            Program.DBContext.SaveChanges();
+            intake.Hold = hold;
+            _intakeRepository.UpdateAsync(intake);
         }
     }
 }

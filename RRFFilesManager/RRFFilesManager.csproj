@@ -147,7 +147,15 @@
   <ItemGroup>
     <Compile Include="Abstractions\Client.cs" />
     <Compile Include="Abstractions\CYATemplate.cs" />
+    <Compile Include="Abstractions\DataAccess\IClientRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IIntakeRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\IHearAboutUsRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\ILawyerRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\IMatterSubTypeRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\IDisabilityInsuranceCompanyRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\ITemplateRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\IMobileCarrierRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\IProvinceRepository.cs" />
     <Compile Include="Abstractions\DisabilityInsuranceCompany.cs" />
     <Compile Include="Abstractions\HearAboutUs.cs" />
     <Compile Include="Abstractions\DataAccess\IMatterTypeRepository.cs" />
@@ -165,7 +173,15 @@
     </Compile>
     <Compile Include="DataAccess\DependencyInjectionExtensions.cs" />
     <Compile Include="DataAccess\DataContext.cs" />
+    <Compile Include="DataAccess\ClientRepository.cs" />
     <Compile Include="DataAccess\IntakeRepository.cs" />
+    <Compile Include="DataAccess\HearAboutUsRepository.cs" />
+    <Compile Include="DataAccess\LawyerRepository.cs" />
+    <Compile Include="DataAccess\MatterSubTypesRepository.cs" />
+    <Compile Include="DataAccess\DisabilityInsuranceCompanyRepository.cs" />
+    <Compile Include="DataAccess\TemplateRepository.cs" />
+    <Compile Include="DataAccess\MobileCarrierRepository.cs" />
+    <Compile Include="DataAccess\ProvinceRepository.cs" />
     <Compile Include="DataAccess\MatterTypeRepository.cs" />
     <Compile Include="ClientForm\FindClient.cs">
       <SubType>Form</SubType>

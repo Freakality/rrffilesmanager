@@ -16,8 +16,16 @@ namespace RRFFilesManager.IntakeForm
 {
     public partial class PreliminaryInfo : UserControl
     {
+        private readonly IMatterTypeRepository _matterTypeRepository;
+        private readonly IMatterSubTypeRepository _matterSubTypeRepository;
+        private readonly IHearAboutUsRepository _hearAboutUsRepository;
+        private readonly ILawyerRepository _lawyerRepository;
         public PreliminaryInfo()
         {
+            _matterTypeRepository = (IMatterTypeRepository)Program.ServiceProvider.GetService(typeof(IMatterTypeRepository));
+            _matterSubTypeRepository = (IMatterSubTypeRepository)Program.ServiceProvider.GetService(typeof(IMatterSubTypeRepository));
+            _hearAboutUsRepository = (IHearAboutUsRepository)Program.ServiceProvider.GetService(typeof(IHearAboutUsRepository));
+            _lawyerRepository = (ILawyerRepository)Program.ServiceProvider.GetService(typeof(ILawyerRepository));
             InitializeComponent();
             Initialize();
         }
@@ -121,11 +129,11 @@ namespace RRFFilesManager.IntakeForm
 
         private void Initialize()
         {
-            Utils.SetComboBoxDataSource(MatterTypeComboBox, Program.DBContext.MatterTypes.ToList(), nameof(MatterType.Description));
-            Utils.SetComboBoxDataSource(HowHearComboBox, Program.DBContext.HearAboutUs.ToList(), nameof(HearAboutUs.Description));
-            Utils.SetComboBoxDataSource(StaffInterviewerComboBox, Program.DBContext.Lawyers.ToList(), nameof(Lawyer.Description));
-            Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, Program.DBContext.Lawyers.ToList(), nameof(Lawyer.Description));
-            Utils.SetComboBoxDataSource(LawyerComboBox, Program.DBContext.Lawyers.Where(s => s.NumberID != null).ToList(), nameof(Lawyer.Description));
+            Utils.SetComboBoxDataSource(MatterTypeComboBox, _matterTypeRepository.ListAsync()?.Result, nameof(MatterType.Description));
+            Utils.SetComboBoxDataSource(HowHearComboBox, _hearAboutUsRepository.ListAsync()?.Result, nameof(HearAboutUs.Description));
+            Utils.SetComboBoxDataSource(StaffInterviewerComboBox, _lawyerRepository.ListAsync()?.Result, nameof(Lawyer.Description));
+            Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, _lawyerRepository.ListAsync()?.Result, nameof(Lawyer.Description));
+            Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.ListAsync()?.Result?.Where(s => s.NumberID != null).ToList(), nameof(Lawyer.Description));
             DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
             DateOfLossDateTimePicker.CustomFormat = " ";
         }
@@ -175,7 +183,7 @@ namespace RRFFilesManager.IntakeForm
                 Utils.SetComboBoxDataSource(MatterSubTypeComboBox, null);
                 return;
             }
-            Utils.SetComboBoxDataSource(MatterSubTypeComboBox, Program.DBContext.MatterSubTypes.Where(s => s.MatterType.ID == matterType.ID).ToList());
+            Utils.SetComboBoxDataSource(MatterSubTypeComboBox, _matterSubTypeRepository.ListAsync()?.Result.Where(s => s.MatterType.ID == matterType.ID).ToList());
         }
 
         private void FindIntakeButton_Click(object sender, EventArgs e)

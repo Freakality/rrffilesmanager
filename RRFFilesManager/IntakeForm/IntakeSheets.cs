@@ -10,13 +10,18 @@ using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
+using RRFFilesManager.Abstractions.DataAccess;
 
 namespace RRFFilesManager.IntakeForm
 {
     public partial class IntakeSheets : UserControl
     {
+        private readonly IIntakeRepository _intakeRepository;
+        private readonly IDisabilityInsuranceCompanyRepository _disabilityInsuranceCompanyRepository;
         public IntakeSheets()
         {
+            _intakeRepository = (IIntakeRepository)Program.ServiceProvider.GetService(typeof(IIntakeRepository));
+            _disabilityInsuranceCompanyRepository = (IDisabilityInsuranceCompanyRepository)Program.ServiceProvider.GetService(typeof(IDisabilityInsuranceCompanyRepository));
             InitializeComponent();
         }
 
@@ -74,7 +79,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void IntakeSheets_Load(object sender, EventArgs e)
         {
-            Utils.SetComboBoxDataSource(PolCompanyDeniedBenefits, Program.DBContext.DisabilityInsuranceCompanies.ToList());
+            Utils.SetComboBoxDataSource(PolCompanyDeniedBenefits, _disabilityInsuranceCompanyRepository.ListAsync()?.Result);
         }
 
         public void LoadLiabilityTab()
@@ -163,29 +168,14 @@ namespace RRFFilesManager.IntakeForm
             FillOrCreateIntakeClient();
         }
 
-        public Intake CreateIntake(Intake intake)
-        {
-            FillIntake(intake);
-            intake.FileNumber = IntakeManager.GetNewFileNumber(intake.FileLawyer);
-            Program.DBContext.Intakes.Add(intake);
-            Program.DBContext.SaveChanges();
-            return intake;
-        }
-
-        public Intake UpdateIntake(int intakeId)
-        {
-            var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intakeId);
-            FillIntake(intake);
-            Program.DBContext.SaveChanges();
-            return intake;
-        }
-
         public void FillOrCreateIntakeClient()
         {
-            if (Home.IntakeForm.Intake.ID == default)
-                CreateIntake(Home.IntakeForm.Intake);
+            var intake = Home.IntakeForm.Intake;
+            FillIntake(intake);
+            if (intake.ID == default)
+                _intakeRepository.InsertAsync(intake);
             else
-                UpdateIntake(Home.IntakeForm.Intake.ID);
+                _intakeRepository.UpdateAsync(intake);
         }
 
         public void FillIntake(Intake intake)

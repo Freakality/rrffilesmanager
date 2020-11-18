@@ -10,8 +10,8 @@ namespace RRFFilesManager.Abstractions.DataAccess
     {
         Task InsertAsync(MatterType matterType);
         Task UpdateAsync(MatterType matterType);
-        Task SoftDelteAsync(int matterType);
-        Task<MatterType> GetByIdAsync(int matterType);
+        Task SoftDelteAsync(int matterTypeId);
+        Task<MatterType> GetByIdAsync(int matterTypeId);
         Task<IEnumerable<MatterType>> ListAsync();
     }
 }

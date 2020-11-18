@@ -42,20 +42,30 @@ namespace RRFFilesManager.DataAccess
 
         public async Task UpdateAsync(Intake intake)
         {
-            var trxMatterType = this.GetByIdAsync(intake.ID);
-            _context.Entry(trxMatterType).CurrentValues.SetValues(intake);
+            var trxIntake = await GetByIdAsync(intake.ID);
+            _context.Entry(trxIntake).CurrentValues.SetValues(intake);
             await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Intake>> SearchAsync(string searchText)
         {
-            return _context.Intakes.Where(s => s.Hold).Where(s =>
+            return await _context.Intakes.Where(s => s.Hold).Where(s =>
                 s.FileNumber.ToString().Contains(searchText) ||
                 s.Client.FirstName.Contains(searchText) ||
                 s.Client.LastName.Contains(searchText) ||
                 s.Client.Email.Contains(searchText) ||
                 s.MatterType.Description.Contains(searchText)
-            );
+            ).ToListAsync();
         }
+
+        public async Task<Intake> GetLastIntakeAsync(int? clientId = null)
+        {
+            var query = _context.Intakes.OrderByDescending(s => s.ID);
+            if (clientId != null)
+                query = (IOrderedQueryable<Intake>)query.Where(s => s.Client != null && s.Client.ID == clientId.Value);
+            return await query.FirstOrDefaultAsync();
+        }
+
+        
     }
 }

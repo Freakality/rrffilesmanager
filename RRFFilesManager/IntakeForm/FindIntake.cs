@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RRFFilesManager.Abstractions.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace RRFFilesManager.IntakeForm
 {
     public partial class FindIntake : Form
     {
+        private readonly IIntakeRepository _intakeRepository;
         public FindIntake()
         {
+            _intakeRepository = (IIntakeRepository)Program.ServiceProvider.GetService(typeof(IIntakeRepository));
             InitializeComponent();
         }
 
@@ -27,13 +30,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.IntakesGridView.DataSource = Program.DBContext.Intakes.Where(s => s.Hold).Where(s =>
-                s.FileNumber.ToString().Contains(SearchTextBox.Text) ||
-                s.Client.FirstName.Contains(SearchTextBox.Text) ||
-                s.Client.LastName.Contains(SearchTextBox.Text) ||
-                s.Client.Email.Contains(SearchTextBox.Text) ||
-                s.MatterType.Description.Contains(SearchTextBox.Text)
-            ).ToList();
+            this.IntakesGridView.DataSource = _intakeRepository.SearchAsync(SearchTextBox.Text)?.Result;
         }
 
         private void IntakesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -46,14 +43,14 @@ namespace RRFFilesManager.IntakeForm
             IntakesGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             IntakesGridView.MultiSelect = false;
             IntakesGridView.ReadOnly = true;
-            this.IntakesGridView.DataSource = Program.DBContext.Intakes.Where(s => s.Hold).ToList();
+            this.IntakesGridView.DataSource = _intakeRepository.SearchAsync(SearchTextBox.Text)?.Result;
             IntakesGridView.Columns["ID"].Visible = false;
         }
 
         private void IntakesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var intakeId = int.Parse(IntakesGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var intake = Program.DBContext.Intakes.FirstOrDefault(s => s.ID == intakeId);
+            var intake = _intakeRepository.GetByIdAsync(intakeId)?.Result;
             Home.IntakeForm.SetIntake(intake);
             Close();
         }

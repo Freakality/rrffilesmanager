@@ -1,4 +1,5 @@
 ﻿using RRFFilesManager.Abstractions;
+using RRFFilesManager.Abstractions.DataAccess;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.IntakeForm;
 using System;
@@ -15,8 +16,10 @@ namespace RRFFilesManager
 {
     public partial class FindClient : Form
     {
+        private readonly IClientRepository _clientRepository;
         public FindClient()
         {
+            _clientRepository = (IClientRepository)Program.ServiceProvider.GetService(typeof(IClientRepository));
             InitializeComponent();
         }
 
@@ -29,17 +32,12 @@ namespace RRFFilesManager
             ClientsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientsGridView.MultiSelect = false;
             ClientsGridView.ReadOnly = true;
-            this.ClientsGridView.DataSource = Program.DBContext.Clients.ToList();
+            this.ClientsGridView.DataSource = _clientRepository.SearchAsync(SearchTextBox.Text)?.Result;
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.ClientsGridView.DataSource = Program.DBContext.Clients.Where(s => 
-                s.FirstName.Contains(SearchTextBox.Text) ||
-                s.LastName.Contains(SearchTextBox.Text) ||
-                s.Email.Contains(SearchTextBox.Text) ||
-                s.ID.ToString().Contains(SearchTextBox.Text)
-            ).ToList();
+            this.ClientsGridView.DataSource = _clientRepository.SearchAsync(SearchTextBox.Text)?.Result;
         }
 
         private void ClientsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -65,7 +63,7 @@ namespace RRFFilesManager
         private void ClientsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var client = Program.DBContext.Clients.FirstOrDefault(s => s.ID == clientId);
+            var client = _clientRepository.GetByIdAsync(clientId)?.Result;
             this.SelectedClient = client;
             Close();
         }

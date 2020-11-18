@@ -50,7 +50,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task UpdateAsync(MatterType matterType)
         {
-            var trxMatterType = this.GetByIdAsync(matterType.ID);
+            var trxMatterType = await GetByIdAsync(matterType.ID);
             _context.Entry(trxMatterType).CurrentValues.SetValues(matterType);
             await _context.SaveChangesAsync();
 

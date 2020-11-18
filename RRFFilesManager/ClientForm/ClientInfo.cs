@@ -1,4 +1,5 @@
 ﻿using RRFFilesManager.Abstractions;
+using RRFFilesManager.Abstractions.DataAccess;
 using RRFFilesManager.Logic;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,19 @@ namespace RRFFilesManager.ClientForm
 {
     public partial class ClientInfo : Form
     {
+        private readonly IProvinceRepository _provinceRepository;
+        private readonly IMobileCarrierRepository _mobileCarrierRepository;
+        private readonly IClientRepository _clientRepository;
+        private readonly IIntakeRepository _intakeRepository;
         public ClientInfo()
         {
+            _provinceRepository = (IProvinceRepository)Program.ServiceProvider.GetService(typeof(IProvinceRepository));
+            _mobileCarrierRepository = (IMobileCarrierRepository)Program.ServiceProvider.GetService(typeof(IMobileCarrierRepository));
+            _clientRepository = (IClientRepository)Program.ServiceProvider.GetService(typeof(IClientRepository));
+            _intakeRepository = (IIntakeRepository)Program.ServiceProvider.GetService(typeof(IIntakeRepository));
             InitializeComponent();
-            Utils.SetComboBoxDataSource(PCIProvince, Program.DBContext.Provinces.ToList());
-            Utils.SetComboBoxDataSource(PCIMobileCarrier, Program.DBContext.MobileCarriers.ToList());
+            Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.ListAsync()?.Result);
+            Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.ListAsync()?.Result);
             YearBirth.Text = "1970";
         }
 
@@ -71,9 +80,10 @@ namespace RRFFilesManager.ClientForm
             if (Client == null)
                 Client = new Client();
             FillClient(Client);
-            if(Client.ID == default)
-                Program.DBContext.Clients.Add(Client);
-            Program.DBContext.SaveChanges();
+            if (Client.ID == default)
+                _clientRepository.InsertAsync(Client);
+            else
+                _clientRepository.UpdateAsync(Client);
         }
 
         private void FindClient_FormClosing(object sender, FormClosingEventArgs e)
@@ -241,7 +251,7 @@ namespace RRFFilesManager.ClientForm
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var lastIntake = Program.DBContext.Intakes.OrderByDescending(s => s.DateOfCall).FirstOrDefault();
+            var lastIntake = _intakeRepository.GetLastIntakeAsync().Result;
             var filePath = IntakeManager.GetOrCreateIntakeWorkBook(lastIntake);
             var excelApp = new Microsoft.Office.Interop.Excel.Application();
             var woorkbook = excelApp.Workbooks.Open(filePath);

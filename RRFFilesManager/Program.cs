@@ -10,7 +10,6 @@ namespace RRFFilesManager
 {
     static class Program
     {
-        public static DataContext DBContext { get; set; } = new DataContext();
         public static IServiceProvider ServiceProvider { get; set; }
         /// <summary>
         /// The main entry point for the application.
