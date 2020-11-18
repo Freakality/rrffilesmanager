@@ -272,6 +272,10 @@
     <Compile Include="Migrations\202010210048255_IntakeFiles.Designer.cs">
       <DependentUpon>202010210048255_IntakeFiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011180328144_ClientPhoto.cs" />
+    <Compile Include="Migrations\202011180328144_ClientPhoto.Designer.cs">
+      <DependentUpon>202011180328144_ClientPhoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
@@ -340,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010210048255_IntakeFiles.resx">
       <DependentUpon>202010210048255_IntakeFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011180328144_ClientPhoto.resx">
+      <DependentUpon>202011180328144_ClientPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>

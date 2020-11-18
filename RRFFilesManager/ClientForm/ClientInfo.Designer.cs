@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientInfo));
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
-            this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
+            this.CompletedQuestionnaireLink = new System.Windows.Forms.LinkLabel();
             this.FindClientButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
             this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,13 +75,13 @@
             this.MonthBirth = new System.Windows.Forms.ComboBox();
             this.YearBirth = new System.Windows.Forms.MaskedTextBox();
             this.DayBirth = new System.Windows.Forms.ComboBox();
-            this.Save = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
+            this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.PotentialClientInfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
             this.TableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // PotentialClientInfoPanel
@@ -91,8 +92,8 @@
             this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
             this.PotentialClientInfoPanel.Controls.Add(this.Cancel);
             this.PotentialClientInfoPanel.Controls.Add(this.Save);
-            this.PotentialClientInfoPanel.Controls.Add(this.LinkLabel1);
-            this.PotentialClientInfoPanel.Controls.Add(this.PictureBox2);
+            this.PotentialClientInfoPanel.Controls.Add(this.CompletedQuestionnaireLink);
+            this.PotentialClientInfoPanel.Controls.Add(this.PhotoPictureBox);
             this.PotentialClientInfoPanel.Controls.Add(this.FindClientButton);
             this.PotentialClientInfoPanel.Controls.Add(this.Label41);
             this.PotentialClientInfoPanel.Controls.Add(this.TableLayoutPanel4);
@@ -100,28 +101,49 @@
             this.PotentialClientInfoPanel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PotentialClientInfoPanel.Location = new System.Drawing.Point(42, 8);
             this.PotentialClientInfoPanel.Name = "PotentialClientInfoPanel";
-            this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1250, 554);
+            this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1266, 712);
             this.PotentialClientInfoPanel.TabIndex = 145;
             // 
-            // LinkLabel1
+            // Cancel
             // 
-            this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Location = new System.Drawing.Point(1023, 288);
-            this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(188, 19);
-            this.LinkLabel1.TabIndex = 7;
-            this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "Completed Questionnaire";
-            this.LinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
+            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Cancel.BackColor = System.Drawing.Color.Maroon;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.ForeColor = System.Drawing.Color.White;
+            this.Cancel.Location = new System.Drawing.Point(25, 666);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(97, 36);
+            this.Cancel.TabIndex = 9;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // PictureBox2
+            // Save
             // 
-            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1017, 46);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(204, 203);
-            this.PictureBox2.TabIndex = 6;
-            this.PictureBox2.TabStop = false;
+            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save.BackColor = System.Drawing.Color.Maroon;
+            this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.ForeColor = System.Drawing.Color.White;
+            this.Save.Location = new System.Drawing.Point(1140, 666);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(97, 36);
+            this.Save.TabIndex = 8;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // CompletedQuestionnaireLink
+            // 
+            this.CompletedQuestionnaireLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CompletedQuestionnaireLink.AutoSize = true;
+            this.CompletedQuestionnaireLink.Location = new System.Drawing.Point(1021, 325);
+            this.CompletedQuestionnaireLink.Name = "CompletedQuestionnaireLink";
+            this.CompletedQuestionnaireLink.Size = new System.Drawing.Size(188, 19);
+            this.CompletedQuestionnaireLink.TabIndex = 7;
+            this.CompletedQuestionnaireLink.TabStop = true;
+            this.CompletedQuestionnaireLink.Text = "Completed Questionnaire";
+            this.CompletedQuestionnaireLink.Visible = false;
+            this.CompletedQuestionnaireLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CompletedQuestionnaireLink_LinkClicked);
             // 
             // FindClientButton
             // 
@@ -129,7 +151,7 @@
             this.FindClientButton.BackColor = System.Drawing.Color.Maroon;
             this.FindClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindClientButton.ForeColor = System.Drawing.Color.White;
-            this.FindClientButton.Location = new System.Drawing.Point(1124, 4);
+            this.FindClientButton.Location = new System.Drawing.Point(1140, 4);
             this.FindClientButton.Name = "FindClientButton";
             this.FindClientButton.Size = new System.Drawing.Size(97, 36);
             this.FindClientButton.TabIndex = 3;
@@ -153,15 +175,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanel4.ColumnCount = 1;
-            this.TableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableLayoutPanel4.Controls.Add(this.Label16, 0, 0);
             this.TableLayoutPanel4.Controls.Add(this.PCIOtherNotes, 0, 1);
             this.TableLayoutPanel4.Location = new System.Drawing.Point(25, 379);
             this.TableLayoutPanel4.Name = "TableLayoutPanel4";
             this.TableLayoutPanel4.RowCount = 2;
-            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84F));
-            this.TableLayoutPanel4.Size = new System.Drawing.Size(1196, 123);
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel4.Size = new System.Drawing.Size(1212, 267);
             this.TableLayoutPanel4.TabIndex = 1;
             // 
             // Label16
@@ -177,11 +199,10 @@
             // 
             this.PCIOtherNotes.BackColor = System.Drawing.Color.White;
             this.PCIOtherNotes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PCIOtherNotes.Location = new System.Drawing.Point(3, 22);
-            this.PCIOtherNotes.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.PCIOtherNotes.Location = new System.Drawing.Point(3, 23);
             this.PCIOtherNotes.Multiline = true;
             this.PCIOtherNotes.Name = "PCIOtherNotes";
-            this.PCIOtherNotes.Size = new System.Drawing.Size(1173, 98);
+            this.PCIOtherNotes.Size = new System.Drawing.Size(1206, 241);
             this.PCIOtherNotes.TabIndex = 21;
             // 
             // TableLayoutPanel3
@@ -236,13 +257,13 @@
             this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableLayoutPanel3.Size = new System.Drawing.Size(967, 307);
+            this.TableLayoutPanel3.Size = new System.Drawing.Size(956, 307);
             this.TableLayoutPanel3.TabIndex = 0;
             // 
             // Label69
             // 
             this.Label69.AutoSize = true;
-            this.Label69.Location = new System.Drawing.Point(647, 242);
+            this.Label69.Location = new System.Drawing.Point(639, 242);
             this.Label69.Name = "Label69";
             this.Label69.Size = new System.Drawing.Size(93, 15);
             this.Label69.TabIndex = 33;
@@ -252,22 +273,22 @@
             // 
             this.PCIMobileNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCIMobileNumber.Location = new System.Drawing.Point(647, 200);
+            this.PCIMobileNumber.Location = new System.Drawing.Point(639, 200);
             this.PCIMobileNumber.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIMobileNumber.Mask = "(999) 000-0000";
             this.PCIMobileNumber.Name = "PCIMobileNumber";
-            this.PCIMobileNumber.Size = new System.Drawing.Size(300, 24);
+            this.PCIMobileNumber.Size = new System.Drawing.Size(297, 24);
             this.PCIMobileNumber.TabIndex = 31;
             // 
             // PCIWorkNumber
             // 
             this.PCIWorkNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCIWorkNumber.Location = new System.Drawing.Point(325, 200);
+            this.PCIWorkNumber.Location = new System.Drawing.Point(321, 200);
             this.PCIWorkNumber.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIWorkNumber.Mask = "(999) 000-0000";
             this.PCIWorkNumber.Name = "PCIWorkNumber";
-            this.PCIWorkNumber.Size = new System.Drawing.Size(299, 24);
+            this.PCIWorkNumber.Size = new System.Drawing.Size(295, 24);
             this.PCIWorkNumber.TabIndex = 30;
             // 
             // Label15
@@ -291,7 +312,7 @@
             // Label10
             // 
             this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(647, 121);
+            this.Label10.Location = new System.Drawing.Point(639, 121);
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(92, 18);
             this.Label10.TabIndex = 14;
@@ -301,16 +322,16 @@
             // 
             this.PCICity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCICity.Location = new System.Drawing.Point(325, 142);
+            this.PCICity.Location = new System.Drawing.Point(321, 142);
             this.PCICity.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCICity.Name = "PCICity";
-            this.PCICity.Size = new System.Drawing.Size(299, 24);
+            this.PCICity.Size = new System.Drawing.Size(295, 24);
             this.PCICity.TabIndex = 17;
             // 
             // Label9
             // 
             this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(325, 121);
+            this.Label9.Location = new System.Drawing.Point(321, 121);
             this.Label9.Name = "Label9";
             this.Label9.Size = new System.Drawing.Size(36, 18);
             this.Label9.TabIndex = 13;
@@ -337,7 +358,7 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(325, 62);
+            this.Label6.Location = new System.Drawing.Point(321, 62);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(76, 18);
             this.Label6.TabIndex = 7;
@@ -346,7 +367,7 @@
             // Label7
             // 
             this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(647, 62);
+            this.Label7.Location = new System.Drawing.Point(639, 62);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(46, 18);
             this.Label7.TabIndex = 8;
@@ -364,7 +385,7 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(325, 0);
+            this.Label3.Location = new System.Drawing.Point(321, 0);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(79, 16);
             this.Label3.TabIndex = 1;
@@ -373,7 +394,7 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(647, 0);
+            this.Label4.Location = new System.Drawing.Point(639, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(81, 16);
             this.Label4.TabIndex = 2;
@@ -395,20 +416,20 @@
             // 
             this.PCIFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCIFirstName.Location = new System.Drawing.Point(325, 19);
+            this.PCIFirstName.Location = new System.Drawing.Point(321, 19);
             this.PCIFirstName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIFirstName.Name = "PCIFirstName";
-            this.PCIFirstName.Size = new System.Drawing.Size(299, 24);
+            this.PCIFirstName.Size = new System.Drawing.Size(295, 24);
             this.PCIFirstName.TabIndex = 4;
             // 
             // PCILastName
             // 
             this.PCILastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCILastName.Location = new System.Drawing.Point(647, 19);
+            this.PCILastName.Location = new System.Drawing.Point(639, 19);
             this.PCILastName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCILastName.Name = "PCILastName";
-            this.PCILastName.Size = new System.Drawing.Size(300, 24);
+            this.PCILastName.Size = new System.Drawing.Size(297, 24);
             this.PCILastName.TabIndex = 5;
             // 
             // PCIAddress
@@ -418,27 +439,27 @@
             this.PCIAddress.Location = new System.Drawing.Point(3, 83);
             this.PCIAddress.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIAddress.Name = "PCIAddress";
-            this.PCIAddress.Size = new System.Drawing.Size(299, 24);
+            this.PCIAddress.Size = new System.Drawing.Size(295, 24);
             this.PCIAddress.TabIndex = 9;
             // 
             // PCISuiteApt
             // 
             this.PCISuiteApt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCISuiteApt.Location = new System.Drawing.Point(325, 83);
+            this.PCISuiteApt.Location = new System.Drawing.Point(321, 83);
             this.PCISuiteApt.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCISuiteApt.Name = "PCISuiteApt";
-            this.PCISuiteApt.Size = new System.Drawing.Size(299, 24);
+            this.PCISuiteApt.Size = new System.Drawing.Size(295, 24);
             this.PCISuiteApt.TabIndex = 10;
             // 
             // PCIEmail
             // 
             this.PCIEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCIEmail.Location = new System.Drawing.Point(647, 83);
+            this.PCIEmail.Location = new System.Drawing.Point(639, 83);
             this.PCIEmail.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIEmail.Name = "PCIEmail";
-            this.PCIEmail.Size = new System.Drawing.Size(300, 24);
+            this.PCIEmail.Size = new System.Drawing.Size(297, 24);
             this.PCIEmail.TabIndex = 11;
             // 
             // PCIProvince
@@ -450,7 +471,7 @@
             this.PCIProvince.Location = new System.Drawing.Point(3, 142);
             this.PCIProvince.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIProvince.Name = "PCIProvince";
-            this.PCIProvince.Size = new System.Drawing.Size(299, 25);
+            this.PCIProvince.Size = new System.Drawing.Size(295, 25);
             this.PCIProvince.TabIndex = 15;
             this.PCIProvince.ValueMember = "Province";
             // 
@@ -458,10 +479,10 @@
             // 
             this.PCIEmailToText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCIEmailToText.Location = new System.Drawing.Point(325, 260);
+            this.PCIEmailToText.Location = new System.Drawing.Point(321, 260);
             this.PCIEmailToText.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIEmailToText.Name = "PCIEmailToText";
-            this.PCIEmailToText.Size = new System.Drawing.Size(299, 24);
+            this.PCIEmailToText.Size = new System.Drawing.Size(295, 24);
             this.PCIEmailToText.TabIndex = 27;
             // 
             // PCIMobileCarrier
@@ -473,14 +494,14 @@
             this.PCIMobileCarrier.Location = new System.Drawing.Point(3, 260);
             this.PCIMobileCarrier.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIMobileCarrier.Name = "PCIMobileCarrier";
-            this.PCIMobileCarrier.Size = new System.Drawing.Size(299, 25);
+            this.PCIMobileCarrier.Size = new System.Drawing.Size(295, 25);
             this.PCIMobileCarrier.TabIndex = 28;
             this.PCIMobileCarrier.ValueMember = "Carrier";
             // 
             // Label14
             // 
             this.Label14.AutoSize = true;
-            this.Label14.Location = new System.Drawing.Point(325, 242);
+            this.Label14.Location = new System.Drawing.Point(321, 242);
             this.Label14.Name = "Label14";
             this.Label14.Size = new System.Drawing.Size(96, 15);
             this.Label14.TabIndex = 24;
@@ -490,16 +511,16 @@
             // 
             this.PCIPostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCIPostalCode.Location = new System.Drawing.Point(647, 142);
+            this.PCIPostalCode.Location = new System.Drawing.Point(639, 142);
             this.PCIPostalCode.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIPostalCode.Name = "PCIPostalCode";
-            this.PCIPostalCode.Size = new System.Drawing.Size(300, 24);
+            this.PCIPostalCode.Size = new System.Drawing.Size(297, 24);
             this.PCIPostalCode.TabIndex = 16;
             // 
             // Label13
             // 
             this.Label13.AutoSize = true;
-            this.Label13.Location = new System.Drawing.Point(325, 182);
+            this.Label13.Location = new System.Drawing.Point(321, 182);
             this.Label13.Name = "Label13";
             this.Label13.Size = new System.Drawing.Size(103, 15);
             this.Label13.TabIndex = 20;
@@ -508,7 +529,7 @@
             // Label11
             // 
             this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(647, 182);
+            this.Label11.Location = new System.Drawing.Point(639, 182);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(115, 15);
             this.Label11.TabIndex = 18;
@@ -522,7 +543,7 @@
             this.PCIHomeNumber.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PCIHomeNumber.Mask = "(999) 000-0000";
             this.PCIHomeNumber.Name = "PCIHomeNumber";
-            this.PCIHomeNumber.Size = new System.Drawing.Size(299, 24);
+            this.PCIHomeNumber.Size = new System.Drawing.Size(295, 24);
             this.PCIHomeNumber.TabIndex = 29;
             // 
             // TableLayoutPanel9
@@ -532,21 +553,21 @@
             this.TableLayoutPanel9.ColumnCount = 3;
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
-            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.TableLayoutPanel9.Controls.Add(this.Label70, 0, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label71, 1, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label72, 2, 0);
             this.TableLayoutPanel9.Controls.Add(this.MonthBirth, 1, 1);
             this.TableLayoutPanel9.Controls.Add(this.YearBirth, 0, 1);
             this.TableLayoutPanel9.Controls.Add(this.DayBirth, 2, 1);
-            this.TableLayoutPanel9.Location = new System.Drawing.Point(647, 260);
+            this.TableLayoutPanel9.Location = new System.Drawing.Point(639, 260);
             this.TableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.TableLayoutPanel9.Name = "TableLayoutPanel9";
             this.TableLayoutPanel9.RowCount = 2;
             this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.62963F));
             this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.37037F));
             this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableLayoutPanel9.Size = new System.Drawing.Size(300, 44);
+            this.TableLayoutPanel9.Size = new System.Drawing.Size(297, 44);
             this.TableLayoutPanel9.TabIndex = 32;
             // 
             // Label70
@@ -563,7 +584,7 @@
             // 
             this.Label71.AutoSize = true;
             this.Label71.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label71.Location = new System.Drawing.Point(74, 0);
+            this.Label71.Location = new System.Drawing.Point(72, 0);
             this.Label71.Name = "Label71";
             this.Label71.Size = new System.Drawing.Size(44, 13);
             this.Label71.TabIndex = 35;
@@ -573,7 +594,7 @@
             // 
             this.Label72.AutoSize = true;
             this.Label72.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label72.Location = new System.Drawing.Point(190, 0);
+            this.Label72.Location = new System.Drawing.Point(184, 0);
             this.Label72.Name = "Label72";
             this.Label72.Size = new System.Drawing.Size(30, 13);
             this.Label72.TabIndex = 36;
@@ -597,9 +618,9 @@
             "October",
             "November",
             "December"});
-            this.MonthBirth.Location = new System.Drawing.Point(74, 16);
+            this.MonthBirth.Location = new System.Drawing.Point(72, 16);
             this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(110, 25);
+            this.MonthBirth.Size = new System.Drawing.Size(106, 25);
             this.MonthBirth.TabIndex = 38;
             // 
             // YearBirth
@@ -609,7 +630,7 @@
             this.YearBirth.Location = new System.Drawing.Point(3, 16);
             this.YearBirth.Mask = "0000";
             this.YearBirth.Name = "YearBirth";
-            this.YearBirth.Size = new System.Drawing.Size(65, 24);
+            this.YearBirth.Size = new System.Drawing.Size(63, 24);
             this.YearBirth.TabIndex = 40;
             this.YearBirth.ValidatingType = typeof(int);
             // 
@@ -652,59 +673,44 @@
             "29",
             "30",
             "31"});
-            this.DayBirth.Location = new System.Drawing.Point(190, 16);
+            this.DayBirth.Location = new System.Drawing.Point(184, 16);
             this.DayBirth.MaxDropDownItems = 11;
             this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(107, 25);
+            this.DayBirth.Size = new System.Drawing.Size(110, 25);
             this.DayBirth.TabIndex = 41;
             // 
-            // Save
+            // PhotoPictureBox
             // 
-            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Save.BackColor = System.Drawing.Color.Maroon;
-            this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Save.ForeColor = System.Drawing.Color.White;
-            this.Save.Location = new System.Drawing.Point(1124, 508);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(97, 36);
-            this.Save.TabIndex = 8;
-            this.Save.Text = "Save";
-            this.Save.UseVisualStyleBackColor = false;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
-            // 
-            // Cancel
-            // 
-            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cancel.BackColor = System.Drawing.Color.Maroon;
-            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancel.ForeColor = System.Drawing.Color.White;
-            this.Cancel.Location = new System.Drawing.Point(25, 508);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(97, 36);
-            this.Cancel.TabIndex = 9;
-            this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = false;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.Location = new System.Drawing.Point(987, 65);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(250, 250);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 6;
+            this.PhotoPictureBox.TabStop = false;
+            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // ClientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1334, 571);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.PotentialClientInfoPanel);
             this.Name = "ClientInfo";
             this.Text = "Client Detail";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientInfo_FormClosing);
             this.PotentialClientInfoPanel.ResumeLayout(false);
             this.PotentialClientInfoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.TableLayoutPanel4.ResumeLayout(false);
             this.TableLayoutPanel4.PerformLayout();
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
             this.TableLayoutPanel9.ResumeLayout(false);
             this.TableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -754,9 +760,10 @@
         internal System.Windows.Forms.ComboBox MonthBirth;
         internal System.Windows.Forms.MaskedTextBox YearBirth;
         internal System.Windows.Forms.ComboBox DayBirth;
-        internal System.Windows.Forms.LinkLabel LinkLabel1;
-        internal System.Windows.Forms.PictureBox PictureBox2;
+        internal System.Windows.Forms.LinkLabel CompletedQuestionnaireLink;
+        internal System.Windows.Forms.PictureBox PhotoPictureBox;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.OpenFileDialog openPhotoDialog;
     }
 }

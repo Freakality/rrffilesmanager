@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,6 +92,7 @@ namespace RRFFilesManager.ClientForm
             var findClientForm = sender as FindClient;
             Client = findClientForm.SelectedClient;
             FillForm(Client);
+            CompletedQuestionnaireLink.Visible = true;
         }
 
         private void ClientInfo_FormClosing(object sender, FormClosingEventArgs e)
@@ -117,6 +119,8 @@ namespace RRFFilesManager.ClientForm
             client.EmailToText = PCIEmailToText.Text;
             client.DateOfBirth = PCIDateOfBirth;
             client.OtherNotes = PCIOtherNotes.Text;
+            if (PhotoPictureBox.Image != null)
+                client.Photo = Utils.ImageToByteArray(PhotoPictureBox.Image);
         }
 
         public void FillForm(Client client)
@@ -141,6 +145,8 @@ namespace RRFFilesManager.ClientForm
             MonthBirth.Text = client.DateOfBirth != null ? Months[client.DateOfBirth.Value.Month - 1] : null;
             DayBirth.Text = client.DateOfBirth?.Day.ToString();
             PCIOtherNotes.Text = client.OtherNotes;
+            if(Client.Photo != null)
+                PhotoPictureBox.Image = Utils.ByteArrayToImage(Client.Photo);
         }
 
         private void NotesTextBox_TextChanged(object sender, EventArgs e)
@@ -249,13 +255,38 @@ namespace RRFFilesManager.ClientForm
             return true;
         }
 
-        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void CompletedQuestionnaireLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var lastIntake = _intakeRepository.GetLastIntakeAsync().Result;
+            var lastIntake = _intakeRepository.GetLastIntakeAsync(Client.ID).Result;
             var filePath = IntakeManager.GetOrCreateIntakeWorkBook(lastIntake);
             var excelApp = new Microsoft.Office.Interop.Excel.Application();
             var woorkbook = excelApp.Workbooks.Open(filePath);
             excelApp.Visible = true;
+        }
+
+        private void PhotoPictureBox_Click(object sender, EventArgs e)
+        {
+            openPhotoDialog.Filter = "Image Only(*.jpg;*.jpeg;*.gif;*.bmp;*.png)|*.jpg;*.jpeg;*.gif;*.bmp;*.png";
+            try
+            {
+                if (openPhotoDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (openPhotoDialog.CheckFileExists)
+                    {
+                        string path = Path.GetFullPath(openPhotoDialog.FileName);
+                        PhotoPictureBox.Image = new Bitmap(openPhotoDialog.FileName);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please Upload image.");
+                }
+            }
+            catch (Exception ex)
+            {
+                //it will give if file is already exits..
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

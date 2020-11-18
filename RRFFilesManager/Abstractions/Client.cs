@@ -20,8 +20,8 @@ namespace RRFFilesManager.Abstractions
         public string MobileCarrier { get; set; }
         public string EmailToText { get; set; }
         public string OtherNotes { get; set; }
-
         public DateTime? DateOfBirth { get; set; }
+        public byte[] Photo { get; set; }
 
         public override string ToString() =>  $"{FirstName} {LastName}";
     }
