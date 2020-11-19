@@ -145,14 +145,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\Contact.cs" />
     <Compile Include="Abstractions\Client.cs" />
     <Compile Include="Abstractions\CYATemplate.cs" />
+    <Compile Include="Abstractions\DataAccess\IContactRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IClientRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IIntakeRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IHearAboutUsRepository.cs" />
     <Compile Include="Abstractions\DataAccess\ILawyerRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IMatterSubTypeRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IDisabilityInsuranceCompanyRepository.cs" />
+    <Compile Include="Abstractions\DataAccess\ICompanyRepository.cs" />
     <Compile Include="Abstractions\DataAccess\ITemplateRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IMobileCarrierRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IProvinceRepository.cs" />
@@ -161,6 +164,7 @@
     <Compile Include="Abstractions\DataAccess\IMatterTypeRepository.cs" />
     <Compile Include="Abstractions\Intake.cs" />
     <Compile Include="Abstractions\MatterSubType.cs" />
+    <Compile Include="Abstractions\Company.cs" />
     <Compile Include="Abstractions\MatterType.cs" />
     <Compile Include="Abstractions\MobileCarrier.cs" />
     <Compile Include="Abstractions\Province.cs" />
@@ -171,6 +175,19 @@
     <Compile Include="ClientForm\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContactForm\ContactInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactForm\ContactInfo.Designer.cs">
+      <DependentUpon>ContactInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactForm\FindContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactForm\FindContact.Designer.cs">
+      <DependentUpon>FindContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ContactRepository.cs" />
     <Compile Include="DataAccess\DependencyInjectionExtensions.cs" />
     <Compile Include="DataAccess\DataContext.cs" />
     <Compile Include="DataAccess\ClientRepository.cs" />
@@ -179,6 +196,7 @@
     <Compile Include="DataAccess\LawyerRepository.cs" />
     <Compile Include="DataAccess\MatterSubTypesRepository.cs" />
     <Compile Include="DataAccess\DisabilityInsuranceCompanyRepository.cs" />
+    <Compile Include="DataAccess\CompanyRepository.cs" />
     <Compile Include="DataAccess\TemplateRepository.cs" />
     <Compile Include="DataAccess\MobileCarrierRepository.cs" />
     <Compile Include="DataAccess\ProvinceRepository.cs" />
@@ -276,6 +294,14 @@
     <Compile Include="Migrations\202011180328144_ClientPhoto.Designer.cs">
       <DependentUpon>202011180328144_ClientPhoto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011190348504_Contacts.cs" />
+    <Compile Include="Migrations\202011190348504_Contacts.Designer.cs">
+      <DependentUpon>202011190348504_Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011190354544_Company.cs" />
+    <Compile Include="Migrations\202011190354544_Company.Designer.cs">
+      <DependentUpon>202011190354544_Company.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
@@ -299,6 +325,12 @@
     </Compile>
     <EmbeddedResource Include="ClientForm\ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactForm\ContactInfo.resx">
+      <DependentUpon>ContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactForm\FindContact.resx">
+      <DependentUpon>FindContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileManager.resx">
       <DependentUpon>FileManager.cs</DependentUpon>
@@ -347,6 +379,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011180328144_ClientPhoto.resx">
       <DependentUpon>202011180328144_ClientPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011190348504_Contacts.resx">
+      <DependentUpon>202011190348504_Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011190354544_Company.resx">
+      <DependentUpon>202011190354544_Company.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>

@@ -25,6 +25,8 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IMobileCarrierRepository, MobileCarrierRepository>();
             services.AddTransient<IProvinceRepository, ProvinceRepository>();
             services.AddTransient<ITemplateRepository, TemplateRepository>();
+            services.AddTransient<IContactRepository, ContactRepository>();
+            services.AddTransient<ICompanyRepository, CompanyRepository>();
             return services;
         }
     }

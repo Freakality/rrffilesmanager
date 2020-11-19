@@ -1,4 +1,5 @@
 ﻿using RRFFilesManager.ClientForm;
+using RRFFilesManager.ContactForm;
 using RRFFilesManager.IntakeForm;
 using RRFFilesManager.Logic;
 using System;
@@ -26,9 +27,10 @@ namespace RRFFilesManager
         public static Home Instance => instance ?? (instance = new Home());
 
         public static IntakeForm.IntakeForm IntakeForm { get; set; }
-        public static FileManager FileManager { get; set; }
 
+        public static FileManager FileManager { get; set; }
         public static ClientInfo ClientInfo { get; set; }
+        public static ContactInfo ContactInfo { get; set; }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -64,6 +66,15 @@ namespace RRFFilesManager
             PleaseWait.Instance.Show();
             ClientInfo = new ClientInfo();
             ClientInfo.Show();
+            PleaseWait.Instance.Hide();
+        }
+
+        private void Contacts_Click(object sender, EventArgs e)
+        {
+            Hide();
+            PleaseWait.Instance.Show();
+            ContactInfo = new ContactInfo();
+            ContactInfo.Show();
             PleaseWait.Instance.Hide();
         }
     }

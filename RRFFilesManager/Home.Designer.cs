@@ -46,7 +46,7 @@
             this.Button15 = new System.Windows.Forms.Button();
             this.Button14 = new System.Windows.Forms.Button();
             this.Button13 = new System.Windows.Forms.Button();
-            this.Button12 = new System.Windows.Forms.Button();
+            this.Contacts = new System.Windows.Forms.Button();
             this.Button11 = new System.Windows.Forms.Button();
             this.ClientInfoButton = new System.Windows.Forms.Button();
             this.Button9 = new System.Windows.Forms.Button();
@@ -334,21 +334,22 @@
             this.Button13.Text = "DISBURSEMENTS";
             this.Button13.UseVisualStyleBackColor = false;
             // 
-            // Button12
+            // Contacts
             // 
-            this.Button12.BackColor = System.Drawing.Color.Black;
-            this.Button12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button12.ForeColor = System.Drawing.Color.White;
-            this.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button12.Location = new System.Drawing.Point(199, 188);
-            this.Button12.Margin = new System.Windows.Forms.Padding(10);
-            this.Button12.Name = "Button12";
-            this.Button12.Size = new System.Drawing.Size(169, 69);
-            this.Button12.TabIndex = 4;
-            this.Button12.Text = "CONTACTS";
-            this.Button12.UseVisualStyleBackColor = false;
+            this.Contacts.BackColor = System.Drawing.Color.Black;
+            this.Contacts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Contacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Contacts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contacts.ForeColor = System.Drawing.Color.White;
+            this.Contacts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Contacts.Location = new System.Drawing.Point(199, 188);
+            this.Contacts.Margin = new System.Windows.Forms.Padding(10);
+            this.Contacts.Name = "Contacts";
+            this.Contacts.Size = new System.Drawing.Size(169, 69);
+            this.Contacts.TabIndex = 4;
+            this.Contacts.Text = "CONTACTS";
+            this.Contacts.UseVisualStyleBackColor = false;
+            this.Contacts.Click += new System.EventHandler(this.Contacts_Click);
             // 
             // Button11
             // 
@@ -532,7 +533,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button15, 1, 4);
             this.TableLayoutPanel1.Controls.Add(this.Button14, 0, 4);
             this.TableLayoutPanel1.Controls.Add(this.Button13, 1, 3);
-            this.TableLayoutPanel1.Controls.Add(this.Button12, 1, 2);
+            this.TableLayoutPanel1.Controls.Add(this.Contacts, 1, 2);
             this.TableLayoutPanel1.Controls.Add(this.Button11, 0, 3);
             this.TableLayoutPanel1.Controls.Add(this.ClientInfoButton, 1, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button9, 1, 0);
@@ -621,7 +622,7 @@
         internal System.Windows.Forms.Button Button15;
         internal System.Windows.Forms.Button Button14;
         internal System.Windows.Forms.Button Button13;
-        internal System.Windows.Forms.Button Button12;
+        internal System.Windows.Forms.Button Contacts;
         internal System.Windows.Forms.Button Button11;
         internal System.Windows.Forms.Button ClientInfoButton;
         internal System.Windows.Forms.Button Button9;
