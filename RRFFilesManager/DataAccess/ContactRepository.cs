@@ -19,24 +19,24 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<Contact> GetByIdAsync(int contactId)
         {
-            var account = await _context.Contacts.FirstOrDefaultAsync(x => x.ID == contactId);
+            var account = await _context.Contacts.FirstOrDefaultAsync(x => x.ID == contactId).ConfigureAwait(false);
             return account;
         }
 
         public async Task InsertAsync(Contact contact)
         {
             _context.Contacts.Add(contact);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
         }
 
         public async Task<IEnumerable<Contact>> ListAsync()
         {
-            return await _context.Contacts.ToListAsync();
+            return await _context.Contacts.ToListAsync().ConfigureAwait(false); ;
         }
 
         public async Task SoftDelteAsync(int contactId)
         {
-            var accountToDelete = await _context.Contacts.FindAsync(contactId);
+            var accountToDelete = await GetByIdAsync(contactId);
             await _context.SaveChangesAsync();
         }
 
@@ -44,7 +44,7 @@ namespace RRFFilesManager.DataAccess
         {
             var trxContact = await GetByIdAsync(contact.ID);
             _context.Entry(trxContact).CurrentValues.SetValues(contact);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
         }
 
         public async Task<IEnumerable<Contact>> SearchAsync(string searchText, int? take = null)
@@ -59,7 +59,7 @@ namespace RRFFilesManager.DataAccess
             {
                 query = query.Take(take.Value);
             }
-            return await query.ToListAsync();
+            return await query.ToListAsync().ConfigureAwait(false);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<MatterSubType> GetByIdAsync(int matterSubTypeId)
         {
-            var account = await _context.MatterSubTypes.FirstOrDefaultAsync(x => x.ID == matterSubTypeId);
+            var account = await _context.MatterSubTypes.FirstOrDefaultAsync(x => x.ID == matterSubTypeId).ConfigureAwait(false);
 
             return account;
 
@@ -36,7 +36,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<MatterSubType>> ListAsync()
         {
-            return await _context.MatterSubTypes.ToListAsync();
+            return await _context.MatterSubTypes.ToListAsync().ConfigureAwait(false); ;
         }
 
 

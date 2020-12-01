@@ -8,10 +8,10 @@ namespace RRFFilesManager.Abstractions.DataAccess
 {
     public interface ITemplateRepository
     {
-        Task InsertAsync(CYATemplate template);
-        Task UpdateAsync(CYATemplate template);
+        Task InsertAsync(Template template);
+        Task UpdateAsync(Template template);
         Task SoftDelteAsync(int templateId);
-        Task<CYATemplate> GetByIdAsync(int templateId);
-        Task<IEnumerable<CYATemplate>> ListAsync(int? matterTypeId = null, string typeOfTemplate = null);
+        Task<Template> GetByIdAsync(int templateId);
+        Task<IEnumerable<Template>> ListAsync(int? matterTypeId = null, string category = null, string typeOfTemplate = null);
     }
 }

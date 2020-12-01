@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<HearAboutUs> GetByIdAsync(int hearAboutUsId)
         {
-            var account = await _context.HearAboutUs.FirstOrDefaultAsync(x => x.ID == hearAboutUsId);
+            var account = await _context.HearAboutUs.FirstOrDefaultAsync(x => x.ID == hearAboutUsId).ConfigureAwait(false);
 
             return account;
 
@@ -36,7 +36,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<HearAboutUs>> ListAsync()
         {
-            return await _context.HearAboutUs.ToListAsync();
+            return await _context.HearAboutUs.ToListAsync().ConfigureAwait(false); ;
         }
 
 

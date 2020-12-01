@@ -16,6 +16,7 @@ using Microsoft.Office.Interop.Outlook;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
 using RRFFilesManager.Abstractions.DataAccess;
+using Template = RRFFilesManager.Abstractions.Template;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -27,7 +28,7 @@ namespace RRFFilesManager.IntakeForm
         {
             _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
             InitializeComponent();
-            var typesOfTemplates = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID)?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            var typesOfTemplates = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID, "CYA")?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
             DocumentPreview.Visible = false;
         }
@@ -51,8 +52,8 @@ namespace RRFFilesManager.IntakeForm
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID, TypeTemplate.Text)?.Result;
-            TemplateName.DisplayMember = nameof(CYATemplate.TemplateName);
+            TemplateName.DataSource = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID, "CYA", TypeTemplate.Text)?.Result;
+            TemplateName.DisplayMember = nameof(Template.TemplateName);
         }
 
         private void NextSteps_Load(object sender, EventArgs e)
@@ -113,7 +114,7 @@ namespace RRFFilesManager.IntakeForm
         }
         public void CreateSendItemCYA()
         {
-            var attachmentPath = IntakeManager.CreateOrRefillIntakeDocument(Home.IntakeForm.Intake, ((CYATemplate)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
+            var attachmentPath = IntakeManager.CreateOrRefillIntakeDocument(Home.IntakeForm.Intake, ((Abstractions.Template)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
             RefillCYADocument = false;
             var attachmentPath2 = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
             string nameStr = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
@@ -150,7 +151,7 @@ namespace RRFFilesManager.IntakeForm
         private void DocumentPreview_Click(object sender, EventArgs e)
         {
             PleaseWait.Instance.Show();
-            var filePath = IntakeManager.CreateOrRefillIntakeDocument(Home.IntakeForm.Intake, ((CYATemplate)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
+            var filePath = IntakeManager.CreateOrRefillIntakeDocument(Home.IntakeForm.Intake, ((Abstractions.Template)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
             RefillCYADocument = false;
             PleaseWait.Instance.Hide();
             var wordApp = new Microsoft.Office.Interop.Word.Application();

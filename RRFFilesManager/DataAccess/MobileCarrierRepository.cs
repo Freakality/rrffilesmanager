@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<MobileCarrier> GetByIdAsync(int mobileCarrierId)
         {
-            var account = await _context.MobileCarriers.FirstOrDefaultAsync(x => x.ID == mobileCarrierId);
+            var account = await _context.MobileCarriers.FirstOrDefaultAsync(x => x.ID == mobileCarrierId).ConfigureAwait(false);
 
             return account;
 
@@ -36,7 +36,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<MobileCarrier>> ListAsync()
         {
-            return await _context.MobileCarriers.ToListAsync();
+            return await _context.MobileCarriers.ToListAsync().ConfigureAwait(false); ;
         }
 
 

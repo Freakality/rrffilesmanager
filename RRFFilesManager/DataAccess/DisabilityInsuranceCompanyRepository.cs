@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<DisabilityInsuranceCompany> GetByIdAsync(int disabilityInsuranceCompanyId)
         {
-            var account = await _context.DisabilityInsuranceCompanies.FirstOrDefaultAsync(x => x.ID == disabilityInsuranceCompanyId);
+            var account = await _context.DisabilityInsuranceCompanies.FirstOrDefaultAsync(x => x.ID == disabilityInsuranceCompanyId).ConfigureAwait(false);
 
             return account;
 
@@ -36,7 +36,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<DisabilityInsuranceCompany>> ListAsync()
         {
-            return await _context.DisabilityInsuranceCompanies.ToListAsync();
+            return await _context.DisabilityInsuranceCompanies.ToListAsync().ConfigureAwait(false);
         }
 
 

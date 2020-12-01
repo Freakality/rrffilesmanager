@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<Intake> GetByIdAsync(int intakeId)
         {
-            var account = await _context.Intakes.FirstOrDefaultAsync(x => x.ID == intakeId);
+            var account = await _context.Intakes.FirstOrDefaultAsync(x => x.ID == intakeId).ConfigureAwait(false);
             return account;
         }
 
@@ -31,12 +31,12 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<Intake>> ListAsync()
         {
-            return await _context.Intakes.ToListAsync();
+            return await _context.Intakes.ToListAsync().ConfigureAwait(false); ;
         }
 
         public async Task SoftDelteAsync(int intakeId)
         {
-            var accountToDelete = await _context.Intakes.FindAsync(intakeId);
+            var accountToDelete = await GetByIdAsync(intakeId);
             await _context.SaveChangesAsync();
         }
 
@@ -47,15 +47,21 @@ namespace RRFFilesManager.DataAccess
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Intake>> SearchAsync(string searchText)
+        public async Task<IEnumerable<Intake>> SearchAsync(string searchText, int? take = null)
         {
-            return await _context.Intakes.Where(s => s.Hold).Where(s =>
+            var query = _context.Intakes.Where(s => s.Hold).Where(s =>
                 s.FileNumber.ToString().Contains(searchText) ||
                 s.Client.FirstName.Contains(searchText) ||
                 s.Client.LastName.Contains(searchText) ||
                 s.Client.Email.Contains(searchText) ||
                 s.MatterType.Description.Contains(searchText)
-            ).ToListAsync();
+            );
+
+            if (take != null)
+            {
+                query = query.Take(take.Value);
+            }
+            return await query.ToListAsync().ConfigureAwait(false);
         }
 
         public async Task<Intake> GetLastIntakeAsync(int? clientId = null)
@@ -63,7 +69,7 @@ namespace RRFFilesManager.DataAccess
             var query = _context.Intakes.OrderByDescending(s => s.ID);
             if (clientId != null)
                 query = (IOrderedQueryable<Intake>)query.Where(s => s.Client != null && s.Client.ID == clientId.Value);
-            return await query.FirstOrDefaultAsync();
+            return await query.FirstOrDefaultAsync().ConfigureAwait(false);
         }
 
         

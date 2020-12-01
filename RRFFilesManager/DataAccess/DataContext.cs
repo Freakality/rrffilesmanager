@@ -20,7 +20,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<HearAboutUs> HearAboutUs { get; set; }
         public DbSet<MobileCarrier> MobileCarriers { get; set; }
         public DbSet<Intake> Intakes { get; set; }
-        public DbSet<CYATemplate> CYATemplates { get; set; }
+        public DbSet<Template> Templates { get; set; }
         public DbSet<DisabilityInsuranceCompany> DisabilityInsuranceCompanies { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Company> Companies { get; set; }

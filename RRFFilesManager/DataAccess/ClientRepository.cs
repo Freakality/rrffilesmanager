@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<Client> GetByIdAsync(int clientId)
         {
-            var account = await _context.Clients.FirstOrDefaultAsync(x => x.ID == clientId);
+            var account = await _context.Clients.FirstOrDefaultAsync(x => x.ID == clientId).ConfigureAwait(false);
             return account;
         }
 
@@ -31,12 +31,12 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<Client>> ListAsync()
         {
-            return await _context.Clients.ToListAsync();
+            return await _context.Clients.ToListAsync().ConfigureAwait(false); ;
         }
 
         public async Task SoftDelteAsync(int clientId)
         {
-            var accountToDelete = await _context.Clients.FindAsync(clientId);
+            var accountToDelete = await GetByIdAsync(clientId);
             await _context.SaveChangesAsync();
         }
 
@@ -54,7 +54,7 @@ namespace RRFFilesManager.DataAccess
                 s.LastName.Contains(searchText) ||
                 s.Email.Contains(searchText) ||
                 s.ID.ToString().Contains(searchText)
-            ).ToListAsync();
+            ).ToListAsync().ConfigureAwait(false);
         }
     }
 }

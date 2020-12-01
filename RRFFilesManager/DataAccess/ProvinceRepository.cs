@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<Province> GetByIdAsync(int provinceId)
         {
-            var account = await _context.Provinces.FirstOrDefaultAsync(x => x.ID == provinceId);
+            var account = await _context.Provinces.FirstOrDefaultAsync(x => x.ID == provinceId).ConfigureAwait(false);
 
             return account;
 
@@ -36,7 +36,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<Province>> ListAsync()
         {
-            return await _context.Provinces.ToListAsync();
+            return await _context.Provinces.ToListAsync().ConfigureAwait(false); ;
         }
 
 

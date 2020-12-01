@@ -17,47 +17,49 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<CYATemplate> GetByIdAsync(int templateId)
+        public async Task<Template> GetByIdAsync(int templateId)
         {
-            var account = await _context.CYATemplates.FirstOrDefaultAsync(x => x.ID == templateId);
+            var template = await _context.Templates.FirstOrDefaultAsync(x => x.ID == templateId).ConfigureAwait(false);
 
-            return account;
+            return template;
 
         }
 
-        public async Task InsertAsync(CYATemplate template)
+        public async Task InsertAsync(Template template)
         {
-            _context.CYATemplates.Add(template);
+            _context.Templates.Add(template);
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
         }
 
 
 
-        public async Task<IEnumerable<CYATemplate>> ListAsync(int? matterTypeId = null, string typeOfTemplate = null)
+        public async Task<IEnumerable<Template>> ListAsync(int? matterTypeId = null, string category = null, string typeOfTemplate = null)
         {
-            IQueryable<CYATemplate> query = _context.CYATemplates;
+            IQueryable<Template> query = _context.Templates;
             if (matterTypeId != null)
                 query = query.Where(s => s.MatterType.ID == matterTypeId.Value);
             if (typeOfTemplate != null)
                 query = query.Where(s => s.TypeOfTemplate == typeOfTemplate);
-            return await query.ToListAsync();
+            if (category != null)
+                query = query.Where(s => s.Category == category);
+            return await query.ToListAsync().ConfigureAwait(false);
         }
 
 
         public async Task SoftDelteAsync(int templateId)
         {
-            var accountToDelete = await _context.CYATemplates.FindAsync(templateId);
+            var templateToDelete = await GetByIdAsync(templateId);
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
 
         }
 
-        public async Task UpdateAsync(CYATemplate template)
+        public async Task UpdateAsync(Template template)
         {
             var trxCYATemplate = await GetByIdAsync(template.ID);
             _context.Entry(trxCYATemplate).CurrentValues.SetValues(template);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
 
         }
     }

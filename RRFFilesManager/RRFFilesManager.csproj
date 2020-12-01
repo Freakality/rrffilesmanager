@@ -147,7 +147,7 @@
   <ItemGroup>
     <Compile Include="Abstractions\Contact.cs" />
     <Compile Include="Abstractions\Client.cs" />
-    <Compile Include="Abstractions\CYATemplate.cs" />
+    <Compile Include="Abstractions\Template.cs" />
     <Compile Include="Abstractions\DataAccess\IContactRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IClientRepository.cs" />
     <Compile Include="Abstractions\DataAccess\IIntakeRepository.cs" />
@@ -302,6 +302,10 @@
     <Compile Include="Migrations\202011190354544_Company.Designer.cs">
       <DependentUpon>202011190354544_Company.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012010212180_Templates.cs" />
+    <Compile Include="Migrations\202012010212180_Templates.Designer.cs">
+      <DependentUpon>202012010212180_Templates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PleaseWait.cs">
       <SubType>Form</SubType>
@@ -385,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011190354544_Company.resx">
       <DependentUpon>202011190354544_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012010212180_Templates.resx">
+      <DependentUpon>202012010212180_Templates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>

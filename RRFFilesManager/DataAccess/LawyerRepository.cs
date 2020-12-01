@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<Lawyer> GetByIdAsync(int lawyerId)
         {
-            var account = await _context.Lawyers.FirstOrDefaultAsync(x => x.ID == lawyerId);
+            var account = await _context.Lawyers.FirstOrDefaultAsync(x => x.ID == lawyerId).ConfigureAwait(false);
 
             return account;
 
@@ -36,7 +36,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<IEnumerable<Lawyer>> ListAsync()
         {
-            return await _context.Lawyers.ToListAsync();
+            return await _context.Lawyers.ToListAsync().ConfigureAwait(false); ;
         }
 
 

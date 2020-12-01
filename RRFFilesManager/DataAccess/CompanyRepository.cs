@@ -19,7 +19,7 @@ namespace RRFFilesManager.DataAccess
 
         public async Task<Company> GetByIdAsync(int companyId)
         {
-            var account = await _context.Companies.FirstOrDefaultAsync(x => x.ID == companyId);
+            var account = await _context.Companies.FirstOrDefaultAsync(x => x.ID == companyId).ConfigureAwait(false);
 
             return account;
 
@@ -29,22 +29,22 @@ namespace RRFFilesManager.DataAccess
         {
             _context.Companies.Add(company);
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
         }
 
 
 
         public async Task<IEnumerable<Company>> ListAsync()
         {
-            return await _context.Companies.ToListAsync();
+            return await _context.Companies.ToListAsync().ConfigureAwait(false);
         }
 
 
         public async Task SoftDelteAsync(int companyId)
         {
-            var accountToDelete = await _context.Companies.FindAsync(companyId);
+            var accountToDelete = await GetByIdAsync(companyId);
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
 
         }
 
@@ -52,7 +52,7 @@ namespace RRFFilesManager.DataAccess
         {
             var trxCompany = await GetByIdAsync(company.ID);
             _context.Entry(trxCompany).CurrentValues.SetValues(company);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
 
         }
     }
