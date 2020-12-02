@@ -47,20 +47,21 @@ namespace RRFFilesManager.DataAccess
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Intake>> SearchAsync(string searchText, int? take = null)
+        public async Task<IEnumerable<Intake>> SearchAsync(string searchText, bool? hold = null, int? take = null)
         {
-            var query = _context.Intakes.Where(s => s.Hold).Where(s =>
+            var query = _context.Intakes.Where(s =>
                 s.FileNumber.ToString().Contains(searchText) ||
                 s.Client.FirstName.Contains(searchText) ||
                 s.Client.LastName.Contains(searchText) ||
                 s.Client.Email.Contains(searchText) ||
                 s.MatterType.Description.Contains(searchText)
             );
+            if (hold != null)
+                query = query.Where(s => s.Hold == hold);
 
             if (take != null)
-            {
                 query = query.Take(take.Value);
-            }
+
             return await query.ToListAsync().ConfigureAwait(false);
         }
 

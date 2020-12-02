@@ -188,7 +188,15 @@ namespace RRFFilesManager.IntakeForm
 
         private void FindIntakeButton_Click(object sender, EventArgs e)
         {
+            FindIntake.Instance.SetOnlyHoldIntakes(true);
             FindIntake.Instance.Show();
+            FindIntake.Instance.FormClosing += new FormClosingEventHandler(FindIntake_FormClosing);
+        }
+
+        private void FindIntake_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var findIntakeForm = sender as FindIntake;
+            Home.IntakeForm.SetIntake(findIntakeForm.SelectedIntake);
         }
     }
 }

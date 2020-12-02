@@ -13,7 +13,7 @@ namespace RRFFilesManager.Abstractions.DataAccess
         Task SoftDelteAsync(int intakeId);
         Task<Intake> GetByIdAsync(int intakeId);
         Task<IEnumerable<Intake>> ListAsync();
-        Task<IEnumerable<Intake>> SearchAsync(string searchText, int? take = null);
+        Task<IEnumerable<Intake>> SearchAsync(string searchText, bool? hold = null, int? take = null);
         Task<Intake> GetLastIntakeAsync(int? clientId = null);
     }
 }

@@ -40,7 +40,9 @@ namespace RRFFilesManager.IntakeForm
         public Intake Intake => intake ?? (intake = new Intake());
         public void SetIntake(Intake intake)
         {
-            Home.IntakeForm.intake = intake;
+            this.intake = intake;
+            if (intake == null)
+                return;
             PreliminaryInfo.FillForm(intake);
             PotentialClientInfo.FillForm(intake);
             IntakeSheets.FillForm(intake);
