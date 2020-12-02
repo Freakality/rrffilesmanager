@@ -31,6 +31,7 @@ namespace RRFFilesManager
         public static FileManager FileManager { get; set; }
         public static ClientInfo ClientInfo { get; set; }
         public static ContactInfo ContactInfo { get; set; }
+        public static CreateDocument CreateDocument { get; set; }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -75,6 +76,15 @@ namespace RRFFilesManager
             PleaseWait.Instance.Show();
             ContactInfo = new ContactInfo();
             ContactInfo.Show();
+            PleaseWait.Instance.Hide();
+        }
+
+        private void CreateDocumentsButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            PleaseWait.Instance.Show();
+            CreateDocument = new CreateDocument();
+            CreateDocument.Show();
             PleaseWait.Instance.Hide();
         }
     }

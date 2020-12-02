@@ -50,7 +50,7 @@
             this.Button11 = new System.Windows.Forms.Button();
             this.ClientInfoButton = new System.Windows.Forms.Button();
             this.Button9 = new System.Windows.Forms.Button();
-            this.Button8 = new System.Windows.Forms.Button();
+            this.CreateDocumentsButton = new System.Windows.Forms.Button();
             this.Button7 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.Button5 = new System.Windows.Forms.Button();
@@ -397,20 +397,21 @@
             this.Button9.Text = "CALENDAR/ UPCOMING EVENTS";
             this.Button9.UseVisualStyleBackColor = false;
             // 
-            // Button8
+            // CreateDocumentsButton
             // 
-            this.Button8.BackColor = System.Drawing.Color.Maroon;
-            this.Button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button8.ForeColor = System.Drawing.Color.White;
-            this.Button8.Location = new System.Drawing.Point(10, 455);
-            this.Button8.Margin = new System.Windows.Forms.Padding(10);
-            this.Button8.Name = "Button8";
-            this.Button8.Size = new System.Drawing.Size(169, 72);
-            this.Button8.TabIndex = 8;
-            this.Button8.Text = "CREATE DOCUMENTS";
-            this.Button8.UseVisualStyleBackColor = false;
+            this.CreateDocumentsButton.BackColor = System.Drawing.Color.Maroon;
+            this.CreateDocumentsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CreateDocumentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateDocumentsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateDocumentsButton.ForeColor = System.Drawing.Color.White;
+            this.CreateDocumentsButton.Location = new System.Drawing.Point(10, 455);
+            this.CreateDocumentsButton.Margin = new System.Windows.Forms.Padding(10);
+            this.CreateDocumentsButton.Name = "CreateDocumentsButton";
+            this.CreateDocumentsButton.Size = new System.Drawing.Size(169, 72);
+            this.CreateDocumentsButton.TabIndex = 8;
+            this.CreateDocumentsButton.Text = "CREATE DOCUMENTS";
+            this.CreateDocumentsButton.UseVisualStyleBackColor = false;
+            this.CreateDocumentsButton.Click += new System.EventHandler(this.CreateDocumentsButton_Click);
             // 
             // Button7
             // 
@@ -537,7 +538,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button11, 0, 3);
             this.TableLayoutPanel1.Controls.Add(this.ClientInfoButton, 1, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button9, 1, 0);
-            this.TableLayoutPanel1.Controls.Add(this.Button8, 0, 5);
+            this.TableLayoutPanel1.Controls.Add(this.CreateDocumentsButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button7, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button4, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button5, 0, 5);
@@ -626,7 +627,7 @@
         internal System.Windows.Forms.Button Button11;
         internal System.Windows.Forms.Button ClientInfoButton;
         internal System.Windows.Forms.Button Button9;
-        internal System.Windows.Forms.Button Button8;
+        internal System.Windows.Forms.Button CreateDocumentsButton;
         internal System.Windows.Forms.Button Button7;
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.Button Button5;
