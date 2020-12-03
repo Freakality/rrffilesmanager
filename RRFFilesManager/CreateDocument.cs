@@ -39,6 +39,8 @@ namespace RRFFilesManager
         private void SetIntake(Intake intake)
         {
             Intake = intake;
+            if (intake == null)
+                return;
             MatterTypeTextBox.Text = intake.MatterType.ToString();
             FileNumberTextBox.Text = intake.FileNumber.ToString();
 
@@ -106,6 +108,12 @@ namespace RRFFilesManager
                         <p>{signat}</p>";
             Outlook.NewEmail(to, subject, body, new[] { attachmentPath, attachmentPath2 });
 
+        }
+
+        private void CreateDocument_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            Home.Instance.Show();
         }
     }
 }
