@@ -38,13 +38,14 @@ namespace RRFFilesManager.IntakeForm
 
         private Intake intake;
         public Intake Intake => intake ?? (intake = new Intake());
+
         public void SetIntake(Intake intake)
         {
             this.intake = intake;
             if (intake == null)
                 return;
-            PreliminaryInfo.FillForm(intake);
-            PotentialClientInfo.FillForm(intake);
+            PreliminaryInfo.FillForm(intake.File);
+            PotentialClientInfo.FillForm(intake.File.Client);
             IntakeSheets.FillForm(intake);
         }
         private void Intake_Load(object sender, EventArgs e)

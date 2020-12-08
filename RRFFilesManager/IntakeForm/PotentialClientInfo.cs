@@ -11,7 +11,7 @@ using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
 using System.Text.RegularExpressions;
 using RRFFilesManager.Logic;
-using RRFFilesManager.Abstractions.DataAccess;
+using RRFFilesManager.DataAccess.Abstractions;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -32,7 +32,7 @@ namespace RRFFilesManager.IntakeForm
         }
 
         public void SetClient(Client client) {
-            Home.IntakeForm.Intake.Client = client;
+            Home.IntakeForm.Intake.File.Client = client;
             FillForm(client);
         }
 
@@ -74,9 +74,9 @@ namespace RRFFilesManager.IntakeForm
 
         public void UpsertClient()
         {
-            if (Home.IntakeForm.Intake.Client == null)
-                Home.IntakeForm.Intake.Client = new Client();
-            var client = Home.IntakeForm.Intake.Client;
+            if (Home.IntakeForm.Intake.File.Client == null)
+                Home.IntakeForm.Intake.File.Client = new Client();
+            var client = Home.IntakeForm.Intake.File.Client;
             FillClient(client);
             if (client.ID == default)
                 _clientRepository.InsertAsync(client);
@@ -240,11 +240,6 @@ namespace RRFFilesManager.IntakeForm
             MonthBirth.Text = client.DateOfBirth != null ? Months[client.DateOfBirth.Value.Month - 1] : null;
             DayBirth.Text = client.DateOfBirth?.Day.ToString();
             PCIOtherNotes.Text = client.OtherNotes;
-        }
-
-        public void FillForm(Intake intake)
-        {
-            FillForm(intake.Client);
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)

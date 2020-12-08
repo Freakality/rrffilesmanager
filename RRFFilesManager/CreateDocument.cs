@@ -1,5 +1,5 @@
 ﻿using RRFFilesManager.Abstractions;
-using RRFFilesManager.Abstractions.DataAccess;
+using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.IntakeForm;
 using RRFFilesManager.Logic;
 using System;
@@ -41,10 +41,10 @@ namespace RRFFilesManager
             Intake = intake;
             if (intake == null)
                 return;
-            MatterTypeTextBox.Text = intake.MatterType.ToString();
-            FileNumberTextBox.Text = intake.FileNumber.ToString();
+            MatterTypeTextBox.Text = intake.File.MatterType.ToString();
+            FileNumberTextBox.Text = intake.File.FileNumber.ToString();
 
-            var typesOfTemplates = _templateRepository.ListAsync(Intake.MatterType.ID)?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            var typesOfTemplates = _templateRepository.ListAsync(Intake.File.MatterType.ID)?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
 
             TemplatesGroupBox.Visible = true;
@@ -52,7 +52,7 @@ namespace RRFFilesManager
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = _templateRepository.ListAsync(Intake.MatterType.ID, null, TypeTemplate.Text)?.Result;
+            TemplateName.DataSource = _templateRepository.ListAsync(Intake.File.MatterType.ID, null, TypeTemplate.Text)?.Result;
             TemplateName.DisplayMember = nameof(Template.TemplateName);
         }
 
@@ -92,8 +92,8 @@ namespace RRFFilesManager
             var template = (Template)TemplateName.SelectedItem;
             var attachmentPath = IntakeManager.CreateCYADocument(template.TemplatePath, Intake);
             var attachmentPath2 = IntakeManager.CreateIntakeWorkbook(Intake);
-            string nameStr = $"{Intake.Client?.LastName}, {Intake.Client?.FirstName}";
-            string signat = Intake.StaffInterviewer.Description;
+            string nameStr = $"{Intake.File.Client?.LastName}, {Intake.File.Client?.FirstName}";
+            string signat = Intake.File.StaffInterviewer.Description;
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
 
             var subject = $"New Process Invoked - {nameStr}";

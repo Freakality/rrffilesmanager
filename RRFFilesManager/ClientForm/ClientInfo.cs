@@ -1,5 +1,5 @@
 ﻿using RRFFilesManager.Abstractions;
-using RRFFilesManager.Abstractions.DataAccess;
+using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Logic;
 using System;
 using System.Collections.Generic;
@@ -20,12 +20,14 @@ namespace RRFFilesManager.ClientForm
         private readonly IMobileCarrierRepository _mobileCarrierRepository;
         private readonly IClientRepository _clientRepository;
         private readonly IIntakeRepository _intakeRepository;
+        private readonly IFileRepository _fileRepository;
         public ClientInfo()
         {
-            _provinceRepository = (IProvinceRepository)Program.ServiceProvider.GetService(typeof(IProvinceRepository));
-            _mobileCarrierRepository = (IMobileCarrierRepository)Program.ServiceProvider.GetService(typeof(IMobileCarrierRepository));
-            _clientRepository = (IClientRepository)Program.ServiceProvider.GetService(typeof(IClientRepository));
-            _intakeRepository = (IIntakeRepository)Program.ServiceProvider.GetService(typeof(IIntakeRepository));
+            _provinceRepository = Program.GetService<IProvinceRepository>();
+            _mobileCarrierRepository = Program.GetService<IMobileCarrierRepository>();
+            _clientRepository = Program.GetService<IClientRepository>();
+            _intakeRepository = Program.GetService<IIntakeRepository>();
+            _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
             Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.ListAsync()?.Result);
             Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.ListAsync()?.Result);
@@ -257,11 +259,11 @@ namespace RRFFilesManager.ClientForm
 
         private void CompletedQuestionnaireLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var lastIntake = _intakeRepository.GetLastIntakeAsync(Client.ID).Result;
-            var filePath = IntakeManager.GetOrCreateIntakeWorkBook(lastIntake);
-            var excelApp = new Microsoft.Office.Interop.Excel.Application();
-            var woorkbook = excelApp.Workbooks.Open(filePath);
-            excelApp.Visible = true;
+            //var lastIntake = _fileRepository.GetLastFileAsync(Client.ID).Result.Intake;
+            //var filePath = IntakeManager.GetOrCreateIntakeWorkBook(lastIntake);
+            //var excelApp = new Microsoft.Office.Interop.Excel.Application();
+            //var woorkbook = excelApp.Workbooks.Open(filePath);
+            //excelApp.Visible = true;
         }
 
         private void PhotoPictureBox_Click(object sender, EventArgs e)

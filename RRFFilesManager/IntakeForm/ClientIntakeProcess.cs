@@ -80,7 +80,7 @@ namespace RRFFilesManager.IntakeForm
         private void SendCIPEmail()
         {
             var attachmentPath = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
-            string clientFullName = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
+            string clientFullName = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com"};
             var subject = $"Client Intake Process Invoked - {clientFullName}";
             var body = "";

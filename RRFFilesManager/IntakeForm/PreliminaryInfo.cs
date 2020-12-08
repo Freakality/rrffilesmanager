@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
-using RRFFilesManager.Abstractions.DataAccess;
+using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
 
@@ -20,12 +20,14 @@ namespace RRFFilesManager.IntakeForm
         private readonly IMatterSubTypeRepository _matterSubTypeRepository;
         private readonly IHearAboutUsRepository _hearAboutUsRepository;
         private readonly ILawyerRepository _lawyerRepository;
+        private readonly IFileRepository _fileRepository;
         public PreliminaryInfo()
         {
-            _matterTypeRepository = (IMatterTypeRepository)Program.ServiceProvider.GetService(typeof(IMatterTypeRepository));
-            _matterSubTypeRepository = (IMatterSubTypeRepository)Program.ServiceProvider.GetService(typeof(IMatterSubTypeRepository));
-            _hearAboutUsRepository = (IHearAboutUsRepository)Program.ServiceProvider.GetService(typeof(IHearAboutUsRepository));
-            _lawyerRepository = (ILawyerRepository)Program.ServiceProvider.GetService(typeof(ILawyerRepository));
+            _matterTypeRepository = Program.GetService<IMatterTypeRepository>();
+            _matterSubTypeRepository = Program.GetService<IMatterSubTypeRepository>();
+            _hearAboutUsRepository = Program.GetService<IHearAboutUsRepository>();
+            _lawyerRepository = Program.GetService<ILawyerRepository>();
+            _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
             Initialize();
         }
@@ -138,41 +140,52 @@ namespace RRFFilesManager.IntakeForm
             DateOfLossDateTimePicker.CustomFormat = " ";
         }
 
-        public void FillIntakeFromForm(Intake intake)
+        public void FillFile(File file)
         {
-            intake.MatterType = (MatterType)MatterTypeComboBox.SelectedItem;
-            intake.DateOfCall = DateOFCallDateTimePicker.Value;
-            intake.StaffInterviewer = (Lawyer)StaffInterviewerComboBox.SelectedItem;
-            intake.HowHear = (HearAboutUs)HowHearComboBox.SelectedItem;
-            intake.FileLawyer = (Lawyer)LawyerComboBox.SelectedItem;
-            intake.ResponsibleLawyer = (Lawyer)ResponsibleLawyerComboBox.SelectedItem;
-            intake.DateOFLoss = DateOfLossDateTimePicker.Value;
-            intake.LimitationPeriod = LimitationPeriodTextBox.Text;
-            intake.MatterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
-            intake.FileNumber = int.Parse(FileNumberTextBox.Text);
-            intake.StatutoryNotice = StatutoryNoticeBox.Text;
-            intake.AdditionalNotes = AdditionalNotesTextBox.Text;
+            file.MatterType = (MatterType)MatterTypeComboBox.SelectedItem;
+            file.DateOfCall = DateOFCallDateTimePicker.Value;
+            file.StaffInterviewer = (Lawyer)StaffInterviewerComboBox.SelectedItem;
+            file.HowHear = (HearAboutUs)HowHearComboBox.SelectedItem;
+            file.FileLawyer = (Lawyer)LawyerComboBox.SelectedItem;
+            file.ResponsibleLawyer = (Lawyer)ResponsibleLawyerComboBox.SelectedItem;
+            file.DateOFLoss = DateOfLossDateTimePicker.Value;
+            file.LimitationPeriod = LimitationPeriodTextBox.Text;
+            file.MatterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
+            file.FileNumber = int.Parse(FileNumberTextBox.Text);
+            file.StatutoryNotice = StatutoryNoticeBox.Text;
+            file.AdditionalNotes = AdditionalNotesTextBox.Text;
         }
 
-        public void FillForm(Intake intake)
+        public void FillForm(File file)
         {
-            MatterTypeComboBox.SelectedItem = intake.MatterType;
-            DateOFCallDateTimePicker.Value= intake.DateOfCall;
-            StaffInterviewerComboBox.SelectedItem = intake.StaffInterviewer;
-            HowHearComboBox.SelectedItem = intake.HowHear;
-            LawyerComboBox.SelectedItem = intake.FileLawyer;
-            ResponsibleLawyerComboBox.SelectedItem = intake.ResponsibleLawyer;
-            DateOfLossDateTimePicker.Value = intake.DateOFLoss;
-            LimitationPeriodTextBox.Text = intake.LimitationPeriod;
-            MatterSubTypeComboBox.SelectedItem = intake.MatterSubType;
-            FileNumberTextBox.Text = intake.FileNumber.ToString();
-            StatutoryNoticeBox.Text = intake.StatutoryNotice;
-            AdditionalNotesTextBox.Text = intake.AdditionalNotes;
+            MatterTypeComboBox.SelectedItem = file.MatterType;
+            DateOFCallDateTimePicker.Value= file.DateOfCall;
+            StaffInterviewerComboBox.SelectedItem = file.StaffInterviewer;
+            HowHearComboBox.SelectedItem = file.HowHear;
+            LawyerComboBox.SelectedItem = file.FileLawyer;
+            ResponsibleLawyerComboBox.SelectedItem = file.ResponsibleLawyer;
+            DateOfLossDateTimePicker.Value = file.DateOFLoss;
+            LimitationPeriodTextBox.Text = file.LimitationPeriod;
+            MatterSubTypeComboBox.SelectedItem = file.MatterSubType;
+            FileNumberTextBox.Text = file.FileNumber.ToString();
+            StatutoryNoticeBox.Text = file.StatutoryNotice;
+            AdditionalNotesTextBox.Text = file.AdditionalNotes;
         }
 
         public void OnNext()
         {
-            FillIntakeFromForm(Home.IntakeForm.Intake);
+            UpserFile();
+        }
+
+        public void UpserFile()
+        {
+            if (Home.IntakeForm.Intake.File == null)
+                Home.IntakeForm.Intake.File = new File();
+            FillFile(Home.IntakeForm.Intake.File);
+            if (Home.IntakeForm.Intake.File.ID == default)
+                _fileRepository.InsertAsync(Home.IntakeForm.Intake.File);
+            else
+                _fileRepository.UpdateAsync(Home.IntakeForm.Intake.File);
         }
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)

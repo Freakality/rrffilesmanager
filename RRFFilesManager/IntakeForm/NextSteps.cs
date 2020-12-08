@@ -15,7 +15,7 @@ using System.IO;
 using Microsoft.Office.Interop.Outlook;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
-using RRFFilesManager.Abstractions.DataAccess;
+using RRFFilesManager.DataAccess.Abstractions;
 using Template = RRFFilesManager.Abstractions.Template;
 
 namespace RRFFilesManager.IntakeForm
@@ -28,7 +28,7 @@ namespace RRFFilesManager.IntakeForm
         {
             _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
             InitializeComponent();
-            var typesOfTemplates = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID, "CYA")?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            var typesOfTemplates = _templateRepository.ListAsync(Home.IntakeForm.Intake.File.MatterType.ID, "CYA")?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
             DocumentPreview.Visible = false;
         }
@@ -52,7 +52,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = _templateRepository.ListAsync(Home.IntakeForm.Intake.MatterType.ID, "CYA", TypeTemplate.Text)?.Result;
+            TemplateName.DataSource = _templateRepository.ListAsync(Home.IntakeForm.Intake.File.MatterType.ID, "CYA", TypeTemplate.Text)?.Result;
             TemplateName.DisplayMember = nameof(Template.TemplateName);
         }
 
@@ -106,7 +106,7 @@ namespace RRFFilesManager.IntakeForm
         public void CreateSendItemPAH()
         {
             var attachmentPath = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
-            string clientFullName = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
+            string clientFullName = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
             var subject = $"Print and Hold Process - {clientFullName}";
             var body = "";
@@ -117,8 +117,8 @@ namespace RRFFilesManager.IntakeForm
             var attachmentPath = IntakeManager.CreateOrRefillIntakeDocument(Home.IntakeForm.Intake, ((Abstractions.Template)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
             RefillCYADocument = false;
             var attachmentPath2 = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
-            string nameStr = $"{Home.IntakeForm.Intake.Client?.LastName}, {Home.IntakeForm.Intake.Client?.FirstName}";
-            string signat = Home.IntakeForm.Intake.StaffInterviewer.Description;
+            string nameStr = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
+            string signat = Home.IntakeForm.Intake.File.StaffInterviewer.Description;
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
 
             var subject = $"New CYA Process Invoked - {nameStr}";
