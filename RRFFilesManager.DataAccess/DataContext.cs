@@ -9,7 +9,7 @@ namespace RRFFilesManager.DataAccess
     public class DataContext : DbContext
     {
  
-        public DataContext()  { }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<Province> Provinces { get; set; }
@@ -24,11 +24,6 @@ namespace RRFFilesManager.DataAccess
         public DbSet<DisabilityInsuranceCompany> DisabilityInsuranceCompanies { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Company> Companies { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-        }
 
         //Add-Migration Initial_EFCore -Context DataContext -Project RRFFilesManager.DataAccess
         //Update-Database -Context DataContext -Project RRFFilesManager.DataAccess

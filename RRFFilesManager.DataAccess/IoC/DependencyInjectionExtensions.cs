@@ -1,8 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 
@@ -13,8 +15,12 @@ namespace RRFFilesManager.DataAccess
     {
         public static IServiceCollection RegisterDataAccessServices(this IServiceCollection services)
         {
-            services.AddScoped<DataContext>();
-
+            services.AddDbContext<DataContext>(options =>
+            {
+                options.UseLazyLoadingProxies();
+                options.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+            });
+            
             services.AddTransient<IMatterTypeRepository, MatterTypeRepository>();
             services.AddTransient<IFileRepository, FileRepository>();
             services.AddTransient<IIntakeRepository, IntakeRepository>();

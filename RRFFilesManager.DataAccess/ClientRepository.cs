@@ -49,12 +49,14 @@ namespace RRFFilesManager.DataAccess
 
         public  IEnumerable<Client> Search(string searchText)
         {
-            return _context.Clients.Where(s =>
+            var clients = _context.Clients.Where(s =>
                 s.FirstName.Contains(searchText) ||
                 s.LastName.Contains(searchText) ||
                 s.Email.Contains(searchText) ||
                 s.ID.ToString().Contains(searchText)
             ).ToList();
+
+            return clients;
         }
     }
 }

@@ -13,3 +13,4 @@ C:\Users\felix\source\repos\RRFFilesManager\RRFilesManager.Abstractions\obj\Debu
 C:\Users\felix\source\repos\RRFFilesManager\RRFilesManager.Abstractions\obj\Debug\netstandard2.0\RRFilesManager.Abstractions.csproj.CopyComplete
 C:\Users\felix\source\repos\RRFFilesManager\RRFilesManager.Abstractions\obj\Debug\netstandard2.0\RRFilesManager.Abstractions.dll
 C:\Users\felix\source\repos\RRFFilesManager\RRFilesManager.Abstractions\obj\Debug\netstandard2.0\RRFilesManager.Abstractions.pdb
+C:\Users\felix\source\repos\RRFFilesManager\RRFilesManager.Abstractions\obj\Debug\netstandard2.0\RRFilesManager.Abstractions.csprojAssemblyReference.cache

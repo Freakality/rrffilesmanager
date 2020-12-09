@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.Label DateOFCallLabel;
             System.Windows.Forms.Label label1;
-            this.FindIntakeButton = new System.Windows.Forms.Button();
+            this.FindFileButton = new System.Windows.Forms.Button();
             this.GroupBox32 = new System.Windows.Forms.GroupBox();
             this.Label41 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -53,20 +53,38 @@
             this.TemplatesGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // FindIntakeButton
+            // DateOFCallLabel
             // 
-            this.FindIntakeButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            DateOFCallLabel.AutoSize = true;
+            DateOFCallLabel.Location = new System.Drawing.Point(3, 0);
+            DateOFCallLabel.Name = "DateOFCallLabel";
+            DateOFCallLabel.Size = new System.Drawing.Size(90, 17);
+            DateOFCallLabel.TabIndex = 144;
+            DateOFCallLabel.Text = "Matter Type:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(553, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(94, 17);
+            label1.TabIndex = 145;
+            label1.Text = "File Number:";
+            // 
+            // FindFileButton
+            // 
+            this.FindFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindIntakeButton.BackColor = System.Drawing.Color.Maroon;
-            this.FindIntakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindIntakeButton.ForeColor = System.Drawing.Color.White;
-            this.FindIntakeButton.Location = new System.Drawing.Point(29, 31);
-            this.FindIntakeButton.Name = "FindIntakeButton";
-            this.FindIntakeButton.Size = new System.Drawing.Size(97, 36);
-            this.FindIntakeButton.TabIndex = 141;
-            this.FindIntakeButton.Text = "Find Intake";
-            this.FindIntakeButton.UseVisualStyleBackColor = false;
-            this.FindIntakeButton.Click += new System.EventHandler(this.FindIntakeButton_Click);
+            this.FindFileButton.BackColor = System.Drawing.Color.Maroon;
+            this.FindFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindFileButton.ForeColor = System.Drawing.Color.White;
+            this.FindFileButton.Location = new System.Drawing.Point(29, 31);
+            this.FindFileButton.Name = "FindFileButton";
+            this.FindFileButton.Size = new System.Drawing.Size(97, 36);
+            this.FindFileButton.TabIndex = 141;
+            this.FindFileButton.Text = "Find File";
+            this.FindFileButton.UseVisualStyleBackColor = false;
+            this.FindFileButton.Click += new System.EventHandler(this.FindFileButton_Click);
             // 
             // GroupBox32
             // 
@@ -105,7 +123,7 @@
             this.GroupBox90.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBox90.Controls.Add(this.IntakeInfo);
-            this.GroupBox90.Controls.Add(this.FindIntakeButton);
+            this.GroupBox90.Controls.Add(this.FindFileButton);
             this.GroupBox90.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox90.Location = new System.Drawing.Point(15, 30);
             this.GroupBox90.Margin = new System.Windows.Forms.Padding(15, 30, 3, 3);
@@ -227,24 +245,6 @@
             this.Submit.Visible = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
-            // DateOFCallLabel
-            // 
-            DateOFCallLabel.AutoSize = true;
-            DateOFCallLabel.Location = new System.Drawing.Point(3, 0);
-            DateOFCallLabel.Name = "DateOFCallLabel";
-            DateOFCallLabel.Size = new System.Drawing.Size(90, 17);
-            DateOFCallLabel.TabIndex = 144;
-            DateOFCallLabel.Text = "Matter Type:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(553, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(94, 17);
-            label1.TabIndex = 145;
-            label1.Text = "File Number:";
-            // 
             // CreateDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +269,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button FindIntakeButton;
+        private System.Windows.Forms.Button FindFileButton;
         internal System.Windows.Forms.GroupBox GroupBox32;
         internal System.Windows.Forms.Label Label41;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

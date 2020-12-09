@@ -1,5 +1,6 @@
 ﻿using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
+using RRFFilesManager.FileControls;
 using RRFFilesManager.IntakeForm;
 using RRFFilesManager.Logic;
 using System;
@@ -17,34 +18,33 @@ namespace RRFFilesManager
     public partial class CreateDocument : Form
     {
         private readonly ITemplateRepository _templateRepository;
-        private Intake Intake { get; set; }
+        private File File { get; set; }
         public CreateDocument()
         {
             _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
             InitializeComponent();
         }
-
-        private void FindIntakeButton_Click(object sender, EventArgs e)
+        private void FindFileButton_Click(object sender, EventArgs e)
         {
-            FindIntake.Instance.Show();
-            FindIntake.Instance.FormClosing += new FormClosingEventHandler(FindIntake_FormClosing);
+            FindFile.Instance.Show();
+            FindFile.Instance.FormClosing += new FormClosingEventHandler(FindFile_FormClosing);
         }
 
-        private void FindIntake_FormClosing(object sender, FormClosingEventArgs e)
+        private void FindFile_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var findIntakeForm = sender as FindIntake;
-            SetIntake(findIntakeForm.SelectedIntake);
+            var findFileForm = sender as FindFile;
+            SetForm(findFileForm.SelectedFile);
         }
 
-        private void SetIntake(Intake intake)
+        private void SetForm(File file)
         {
-            Intake = intake;
-            if (intake == null)
+            File = file;
+            if (file == null)
                 return;
-            MatterTypeTextBox.Text = intake.File.MatterType.ToString();
-            FileNumberTextBox.Text = intake.File.FileNumber.ToString();
+            MatterTypeTextBox.Text = File.MatterType.ToString();
+            FileNumberTextBox.Text = File.FileNumber.ToString();
 
-            var typesOfTemplates = _templateRepository.List(Intake.File.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            var typesOfTemplates = _templateRepository.List(File.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
 
             TemplatesGroupBox.Visible = true;
@@ -52,7 +52,7 @@ namespace RRFFilesManager
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = _templateRepository.List(Intake.File.MatterType.ID, null, TypeTemplate.Text);
+            TemplateName.DataSource = _templateRepository.List(File.MatterType.ID, null, TypeTemplate.Text);
             TemplateName.DisplayMember = nameof(Template.TemplateName);
         }
 
@@ -89,24 +89,24 @@ namespace RRFFilesManager
 
         public void CreateAndSendDocument()
         {
-            var template = (Template)TemplateName.SelectedItem;
-            var attachmentPath = IntakeManager.CreateCYADocument(template.TemplatePath, Intake);
-            var attachmentPath2 = IntakeManager.CreateIntakeWorkbook(Intake);
-            string nameStr = $"{Intake.File.Client?.LastName}, {Intake.File.Client?.FirstName}";
-            string signat = Intake.File.StaffInterviewer.Description;
-            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
+            //var template = (Template)TemplateName.SelectedItem;
+            //var attachmentPath = IntakeManager.CreateCYADocument(template.TemplatePath, Intake);
+            //var attachmentPath2 = IntakeManager.CreateIntakeWorkbook(Intake);
+            //string nameStr = $"{Intake.File.Client?.LastName}, {Intake.File.Client?.FirstName}";
+            //string signat = Intake.File.StaffInterviewer.Description;
+            //string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
 
-            var subject = $"New Process Invoked - {nameStr}";
-            var body = $@"<p>Hi,</p><br><br>
+            //var subject = $"New Process Invoked - {nameStr}";
+            //var body = $@"<p>Hi,</p><br><br>
 
-                        <p>...</p><br><br>
+            //            <p>...</p><br><br>
 
-                        <p>If you have any questions, please see me.</p><br>
+            //            <p>If you have any questions, please see me.</p><br>
 
-                        <p>Regards,</p><br>
+            //            <p>Regards,</p><br>
 
-                        <p>{signat}</p>";
-            Outlook.NewEmail(to, subject, body, new[] { attachmentPath, attachmentPath2 });
+            //            <p>{signat}</p>";
+            //Outlook.NewEmail(to, subject, body, new[] { attachmentPath, attachmentPath2 });
 
         }
 
@@ -115,5 +115,6 @@ namespace RRFFilesManager
             this.Hide();
             Home.Instance.Show();
         }
+
     }
 }

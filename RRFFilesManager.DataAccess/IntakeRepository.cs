@@ -62,7 +62,6 @@ namespace RRFFilesManager.DataAccess
 
             if (take != null)
                 query = query.Take(take.Value);
-
             return query.ToList();
         }
     }
