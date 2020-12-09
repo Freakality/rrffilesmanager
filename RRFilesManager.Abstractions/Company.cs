@@ -15,7 +15,7 @@ namespace RRFFilesManager.Abstractions
         public string Email { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
-        public virtual Province Province { get; set; }
+        public Province Province { get; set; }
         public string PostalCode { get; set; }
         public override string ToString() => Description;
     }

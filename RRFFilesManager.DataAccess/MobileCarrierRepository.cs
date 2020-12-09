@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public  MobileCarrier GetById(int mobileCarrierId)
+        public MobileCarrier GetById(int mobileCarrierId)
         {
             var account = _context.MobileCarriers.FirstOrDefault(x => x.ID == mobileCarrierId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public  IEnumerable<MobileCarrier> List()
+        public IEnumerable<MobileCarrier> List()
         {
             return _context.MobileCarriers.ToList(); ;
         }

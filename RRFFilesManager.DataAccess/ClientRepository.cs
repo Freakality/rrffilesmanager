@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public  Client GetById(int clientId)
+        public Client GetById(int clientId)
         {
             var account = _context.Clients.FirstOrDefault(x => x.ID == clientId);
             return account;
@@ -29,7 +29,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public  IEnumerable<Client> List()
+        public IEnumerable<Client> List()
         {
             return _context.Clients.ToList(); ;
         }
@@ -47,7 +47,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public  IEnumerable<Client> Search(string searchText)
+        public IEnumerable<Client> Search(string searchText)
         {
             return _context.Clients.Where(s =>
                 s.FirstName.Contains(searchText) ||

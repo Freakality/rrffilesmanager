@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public  Template GetById(int templateId)
+        public Template GetById(int templateId)
         {
             var template = _context.Templates.FirstOrDefault(x => x.ID == templateId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public  IEnumerable<Template> List(int? matterTypeId = null, string category = null, string typeOfTemplate = null)
+        public IEnumerable<Template> List(int? matterTypeId = null, string category = null, string typeOfTemplate = null)
         {
             IQueryable<Template> query = _context.Templates;
             if (matterTypeId != null)

@@ -10,7 +10,7 @@ namespace RRFFilesManager.Abstractions
     public class Intake
     {
         public int ID { get; set; }
-        public virtual File File { get; set; }
+        public File File { get; set; }
 
         public DateTime LiaDate { get; set; }
         public bool LiaMVR { get; set; }
@@ -79,7 +79,7 @@ namespace RRFFilesManager.Abstractions
         public DateTime PolDateLostBenefits { get; set; }
         public string PolDeniedSTPorLTD { get; set; }
         public string PolHowMuchBeingPaid { get; set; }
-        public virtual DisabilityInsuranceCompany PolCompanyDeniedBenefits { get; set; }
+        public DisabilityInsuranceCompany PolCompanyDeniedBenefits { get; set; }
         public string PolLTDPrivateOrEmployerGroup { get; set; }
         public DateTime PolDateSubmittedLTD { get; set; }
         public DateTime PolDateStartedCollLTD { get; set; }

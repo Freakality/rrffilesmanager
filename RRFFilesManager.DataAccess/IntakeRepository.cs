@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public  Intake GetById(int intakeId)
+        public Intake GetById(int intakeId)
         {
             var account = _context.Intakes.FirstOrDefault(x => x.ID == intakeId);
             return account;
@@ -30,7 +30,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public  IEnumerable<Intake> List()
+        public IEnumerable<Intake> List()
         {
             return _context.Intakes.ToList(); ;
         }
@@ -48,7 +48,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public  IEnumerable<Intake> Search(string searchText, bool? hold = null, int? take = null)
+        public IEnumerable<Intake> Search(string searchText, bool? hold = null, int? take = null)
         {
             var query = _context.Intakes.Where(s =>
                 s.File.FileNumber.ToString().Contains(searchText) ||

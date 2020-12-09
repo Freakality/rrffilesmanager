@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public  MatterType GetById(int matterTypeId)
+        public MatterType GetById(int matterTypeId)
         {
             var matterType = _context.MatterTypes.FirstOrDefault(x => x.ID == matterTypeId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public  IEnumerable<MatterType> List()
+        public IEnumerable<MatterType> List()
         {
             var matterTypes = _context.MatterTypes.ToList();
             return matterTypes;

@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public  Province GetById(int provinceId)
+        public Province GetById(int provinceId)
         {
             var account = _context.Provinces.FirstOrDefault(x => x.ID == provinceId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public  IEnumerable<Province> List()
+        public IEnumerable<Province> List()
         {
             return _context.Provinces.ToList(); ;
         }
