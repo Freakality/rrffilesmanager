@@ -17,7 +17,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly IIntakeRepository _intakeRepository;
         public FindIntake()
         {
-            _intakeRepository = (IIntakeRepository)Program.ServiceProvider.GetService(typeof(IIntakeRepository));
+            _intakeRepository = Program.GetService<IIntakeRepository>();
             InitializeComponent();
         }
 
@@ -58,6 +58,7 @@ namespace RRFFilesManager.IntakeForm
             IntakesGridView.ReadOnly = true;
             RefreshIntakeGridViewDataSource();
             IntakesGridView.Columns["ID"].Visible = false;
+            IntakesGridView.Columns["FileId"].Visible = false;
         }
 
         private void IntakesGridView_CellClick(object sender, DataGridViewCellEventArgs e)

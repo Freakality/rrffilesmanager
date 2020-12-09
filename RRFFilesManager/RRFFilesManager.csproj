@@ -326,6 +326,7 @@
     <Compile Include="IntakeForm\PreliminaryInfo.Designer.cs">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\ArchiveManager.cs" />
     <Compile Include="Logic\CNSignOn.cs" />
     <Compile Include="Logic\Excel.cs" />
     <Compile Include="Logic\IntakeManager.cs" />
@@ -333,6 +334,7 @@
     <Compile Include="Logic\PreviewHandlerHost.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Logic\TemplateManager.cs" />
     <Compile Include="Logic\Utils.cs" />
     <Compile Include="Logic\Word.cs" />
     <Compile Include="PleaseWait.cs">

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201209033335_Archives")]
+    partial class Archives
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,9 +28,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("FileId")
                         .HasColumnType("int");
 
@@ -38,14 +37,9 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TemplateId")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
                     b.HasIndex("FileId");
-
-                    b.HasIndex("TemplateId");
 
                     b.ToTable("Archives");
                 });
@@ -680,12 +674,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.File", "File")
                         .WithMany("Archives")
                         .HasForeignKey("FileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("RRFFilesManager.Abstractions.Template", "Template")
-                        .WithMany()
-                        .HasForeignKey("TemplateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

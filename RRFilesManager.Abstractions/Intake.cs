@@ -10,6 +10,7 @@ namespace RRFFilesManager.Abstractions
     public class Intake
     {
         public int ID { get; set; }
+        public int FileId { get; set; }
         public virtual File File { get; set; }
 
         public DateTime LiaDate { get; set; }
@@ -93,5 +94,7 @@ namespace RRFFilesManager.Abstractions
         public bool Hold { get; set; }
         public string ExcelFile { get; set; }
         public string WordFile { get; set; }
+
+        public override string ToString() => $"{File.DateOfCall}";
     }
 }

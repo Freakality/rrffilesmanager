@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 
@@ -23,8 +24,10 @@ namespace RRFFilesManager.Abstractions
         public string AdditionalNotes { get; set; }
 
         public virtual Client Client { get; set; }
-        //public virtual Intake Intake { get; set; }
+        public virtual Intake Intake { get; set; }
 
-        public override string ToString() => $"{FileNumber} - {Client.FirstName} {Client.LastName}";
+        public virtual ICollection<Archive> Archives { get; set; }
+
+        public override string ToString() => $"{FileNumber} - {Client?.FirstName} {Client?.LastName}";
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
+using RRFFilesManager.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -15,11 +16,7 @@ namespace RRFFilesManager.DataAccess
     {
         public static IServiceCollection RegisterDataAccessServices(this IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(options =>
-            {
-                options.UseLazyLoadingProxies();
-                options.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-            });
+            services.AddDbContext<DataContext>();
             
             services.AddTransient<IMatterTypeRepository, MatterTypeRepository>();
             services.AddTransient<IFileRepository, FileRepository>();
@@ -34,6 +31,7 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<ITemplateRepository, TemplateRepository>();
             services.AddTransient<IContactRepository, ContactRepository>();
             services.AddTransient<ICompanyRepository, CompanyRepository>();
+            services.AddTransient<IArchiveRepository, ArchiveRepository>();
             return services;
         }
     }

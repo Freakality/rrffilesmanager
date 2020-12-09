@@ -18,10 +18,14 @@ namespace RRFFilesManager
     public partial class CreateDocument : Form
     {
         private readonly ITemplateRepository _templateRepository;
+        private readonly ArchiveManager _archiveManager;
         private File File { get; set; }
+
+        private Template Template => (Template)TemplateName.SelectedItem;
         public CreateDocument()
         {
             _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
+            _archiveManager = new ArchiveManager();
             InitializeComponent();
         }
         private void FindFileButton_Click(object sender, EventArgs e)
@@ -60,6 +64,7 @@ namespace RRFFilesManager
         {
             var isItemSelected = TemplateName.SelectedItem != null;
             Submit.Visible = isItemSelected;
+            SaveButton.Visible = isItemSelected;
         }
 
         private void DocumentPreview_Click(object sender, EventArgs e)
@@ -69,52 +74,53 @@ namespace RRFFilesManager
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Hide();
-            Submitting.Instance.Show();
-            try
-            {
 
-                CreateAndSendDocument();
-                Submitting.Instance.Hide();
-                Close();
-                Home.Instance.Show();
-            }
-            catch (System.Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-                Submitting.Instance.Hide();
-                Home.IntakeForm.Show();
-            }
         }
 
-        public void CreateAndSendDocument()
+        public void SendDocument(Archive archive)
         {
-            //var template = (Template)TemplateName.SelectedItem;
-            //var attachmentPath = IntakeManager.CreateCYADocument(template.TemplatePath, Intake);
-            //var attachmentPath2 = IntakeManager.CreateIntakeWorkbook(Intake);
-            //string nameStr = $"{Intake.File.Client?.LastName}, {Intake.File.Client?.FirstName}";
-            //string signat = Intake.File.StaffInterviewer.Description;
-            //string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
+            var attachmentPath = archive.Path;
+            string nameStr = $"{File.Client?.LastName}, {File.Client?.FirstName}";
+            string signat = File.StaffInterviewer.Description;
+            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
 
-            //var subject = $"New Process Invoked - {nameStr}";
-            //var body = $@"<p>Hi,</p><br><br>
+            var subject = $"New Process Invoked - {nameStr}";
+            var body = $@"<p>Hi,</p><br><br>
 
-            //            <p>...</p><br><br>
+                        <p>...</p><br><br>
 
-            //            <p>If you have any questions, please see me.</p><br>
+                        <p>If you have any questions, please see me.</p><br>
 
-            //            <p>Regards,</p><br>
+                        <p>Regards,</p><br>
 
-            //            <p>{signat}</p>";
-            //Outlook.NewEmail(to, subject, body, new[] { attachmentPath, attachmentPath2 });
+                        <p>{signat}</p>";
+            Outlook.NewEmail(to, subject, body, new[] { attachmentPath });
 
         }
 
         private void CreateDocument_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
+            Hide();
             Home.Instance.Show();
         }
 
+        private void SaveAndSend_Click(object sender, EventArgs e)
+        {
+            Submitting.Instance.Show();
+            var archive = _archiveManager.CreateAndAddArchive(File, Template);
+            SendDocument(archive);
+            Submitting.Instance.Hide();
+            Hide();
+            Home.Instance.Show();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            Submitting.Instance.Show();
+            _archiveManager.CreateAndAddArchive(File, Template);
+            Submitting.Instance.Hide();
+            Close();
+            Home.Instance.Show();
+        }
     }
 }
