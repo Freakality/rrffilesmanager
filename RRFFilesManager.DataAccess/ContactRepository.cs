@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,37 +17,37 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<Contact> GetByIdAsync(int contactId)
+        public  Contact GetById(int contactId)
         {
-            var account = await _context.Contacts.FirstOrDefaultAsync(x => x.ID == contactId).ConfigureAwait(false);
+            var account = _context.Contacts.FirstOrDefault(x => x.ID == contactId);
             return account;
         }
 
-        public async Task InsertAsync(Contact contact)
+        public void Insert(Contact contact)
         {
             _context.Contacts.Add(contact);
-            await _context.SaveChangesAsync().ConfigureAwait(false);
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<Contact>> ListAsync()
+        public  IEnumerable<Contact> List()
         {
-            return await _context.Contacts.ToListAsync().ConfigureAwait(false); ;
+            return _context.Contacts.ToList(); ;
         }
 
-        public async Task SoftDelteAsync(int contactId)
+        public void SoftDelete(int contactId)
         {
-            var accountToDelete = await GetByIdAsync(contactId);
-            await _context.SaveChangesAsync();
+            var accountToDelete = GetById(contactId);
+            _context.SaveChanges();
         }
 
-        public async Task UpdateAsync(Contact contact)
+        public void Update(Contact contact)
         {
-            var trxContact = await GetByIdAsync(contact.ID);
+            var trxContact = GetById(contact.ID);
             _context.Entry(trxContact).CurrentValues.SetValues(contact);
-            await _context.SaveChangesAsync().ConfigureAwait(false);
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<Contact>> SearchAsync(string searchText, int? take = null)
+        public  IEnumerable<Contact> Search(string searchText, int? take = null)
         {
             var query = _context.Contacts.Where(s =>
                 s.FirstName.Contains(searchText) ||
@@ -59,7 +59,7 @@ namespace RRFFilesManager.DataAccess
             {
                 query = query.Take(take.Value);
             }
-            return await query.ToListAsync().ConfigureAwait(false);
+            return query.ToList();
         }
     }
 }

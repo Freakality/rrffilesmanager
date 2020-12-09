@@ -9,7 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace RRFFilesManager.ClientForm
@@ -29,8 +29,8 @@ namespace RRFFilesManager.ClientForm
             _intakeRepository = Program.GetService<IIntakeRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.ListAsync()?.Result);
-            Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.ListAsync()?.Result);
+            Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.List());
+            Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.List());
             YearBirth.Text = "1970";
         }
 
@@ -84,9 +84,9 @@ namespace RRFFilesManager.ClientForm
                 Client = new Client();
             FillClient(Client);
             if (Client.ID == default)
-                _clientRepository.InsertAsync(Client);
+                _clientRepository.Insert(Client);
             else
-                _clientRepository.UpdateAsync(Client);
+                _clientRepository.Update(Client);
         }
 
         private void FindClient_FormClosing(object sender, FormClosingEventArgs e)
@@ -259,7 +259,7 @@ namespace RRFFilesManager.ClientForm
 
         private void CompletedQuestionnaireLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //var lastIntake = _fileRepository.GetLastFileAsync(Client.ID).Result.Intake;
+            //var lastIntake = _fileRepository.GetLastFile(Client.ID).Result.Intake;
             //var filePath = IntakeManager.GetOrCreateIntakeWorkBook(lastIntake);
             //var excelApp = new Microsoft.Office.Interop.Excel.Application();
             //var woorkbook = excelApp.Workbooks.Open(filePath);

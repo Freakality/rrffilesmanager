@@ -3,16 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess.Abstractions
 {
     public interface IMatterTypeRepository
     {
-        Task InsertAsync(MatterType matterType);
-        Task UpdateAsync(MatterType matterType);
-        Task SoftDelteAsync(int matterTypeId);
-        Task<MatterType> GetByIdAsync(int matterTypeId);
-        Task<IEnumerable<MatterType>> ListAsync();
+        void Insert(MatterType matterType);
+        void Update(MatterType matterType);
+        void SoftDelete(int matterTypeId);
+        MatterType GetById(int matterTypeId);
+        IEnumerable<MatterType> List();
     }
 }

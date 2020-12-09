@@ -3,16 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace RRFFilesManager.DataAccess.Abstractions
 {
     public interface IDisabilityInsuranceCompanyRepository
     {
-        Task InsertAsync(DisabilityInsuranceCompany disabilityInsuranceCompany);
-        Task UpdateAsync(DisabilityInsuranceCompany disabilityInsuranceCompany);
-        Task SoftDelteAsync(int disabilityInsuranceCompanyId);
-        Task<DisabilityInsuranceCompany> GetByIdAsync(int disabilityInsuranceCompanyId);
-        Task<IEnumerable<DisabilityInsuranceCompany>> ListAsync();
+        void Insert(DisabilityInsuranceCompany disabilityInsuranceCompany);
+        void Update(DisabilityInsuranceCompany disabilityInsuranceCompany);
+        void SoftDelete(int disabilityInsuranceCompanyId);
+        DisabilityInsuranceCompany GetById(int disabilityInsuranceCompanyId);
+        IEnumerable<DisabilityInsuranceCompany> List();
     }
 }

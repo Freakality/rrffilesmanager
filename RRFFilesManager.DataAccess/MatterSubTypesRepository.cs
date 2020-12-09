@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,42 +17,42 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<MatterSubType> GetByIdAsync(int matterSubTypeId)
+        public  MatterSubType GetById(int matterSubTypeId)
         {
-            var account = await _context.MatterSubTypes.FirstOrDefaultAsync(x => x.ID == matterSubTypeId).ConfigureAwait(false);
+            var account = _context.MatterSubTypes.FirstOrDefault(x => x.ID == matterSubTypeId);
 
             return account;
 
         }
 
-        public async Task InsertAsync(MatterSubType matterSubType)
+        public void Insert(MatterSubType matterSubType)
         {
             _context.MatterSubTypes.Add(matterSubType);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
 
 
-        public async Task<IEnumerable<MatterSubType>> ListAsync()
+        public  IEnumerable<MatterSubType> List()
         {
-            return await _context.MatterSubTypes.ToListAsync().ConfigureAwait(false); ;
+            return _context.MatterSubTypes.ToList(); ;
         }
 
 
-        public async Task SoftDelteAsync(int matterSubTypeId)
+        public void SoftDelete(int matterSubTypeId)
         {
-            var accountToDelete = await _context.MatterSubTypes.FindAsync(matterSubTypeId);
+            var accountToDelete = _context.MatterSubTypes.Find(matterSubTypeId);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
 
-        public async Task UpdateAsync(MatterSubType matterSubType)
+        public void Update(MatterSubType matterSubType)
         {
-            var trxMatterSubType = await GetByIdAsync(matterSubType.ID);
+            var trxMatterSubType = GetById(matterSubType.ID);
             _context.Entry(trxMatterSubType).CurrentValues.SetValues(matterSubType);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
     }

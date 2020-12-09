@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,37 +17,37 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<File> GetByIdAsync(int fileId)
+        public  File GetById(int fileId)
         {
-            var account = await _context.Files.FirstOrDefaultAsync(x => x.ID == fileId).ConfigureAwait(false);
+            var account = _context.Files.FirstOrDefault(x => x.ID == fileId);
             return account;
         }
 
-        public async Task InsertAsync(File file)
+        public void Insert(File file)
         {
             _context.Files.Add(file);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<File>> ListAsync()
+        public  IEnumerable<File> List()
         {
-            return await _context.Files.ToListAsync().ConfigureAwait(false); ;
+            return _context.Files.ToList(); ;
         }
 
-        public async Task SoftDelteAsync(int fileId)
+        public void SoftDelete(int fileId)
         {
-            var accountToDelete = await GetByIdAsync(fileId);
-            await _context.SaveChangesAsync();
+            var accountToDelete = GetById(fileId);
+            _context.SaveChanges();
         }
 
-        public async Task UpdateAsync(File file)
+        public void Update(File file)
         {
-            var trxFile = await GetByIdAsync(file.ID);
+            var trxFile = GetById(file.ID);
             _context.Entry(trxFile).CurrentValues.SetValues(file);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<File>> SearchAsync(string searchText, bool? hold = null, int? take = null)
+        public  IEnumerable<File> Search(string searchText, bool? hold = null, int? take = null)
         {
             var query = _context.Files.Where(s =>
                 s.FileNumber.ToString().Contains(searchText) ||
@@ -60,15 +60,15 @@ namespace RRFFilesManager.DataAccess
             if (take != null)
                 query = query.Take(take.Value);
 
-            return await query.ToListAsync().ConfigureAwait(false);
+            return query.ToList();
         }
 
-        public async Task<File> GetLastFileAsync(int? clientId = null)
+        public  File GetLastFile(int? clientId = null)
         {
             var query = _context.Files.OrderByDescending(s => s.ID);
             if (clientId != null)
                 query = (IOrderedQueryable<File>)query.Where(s => s.Client != null && s.Client.ID == clientId.Value);
-            return await query.FirstOrDefaultAsync().ConfigureAwait(false);
+            return query.FirstOrDefault();
         }
 
         

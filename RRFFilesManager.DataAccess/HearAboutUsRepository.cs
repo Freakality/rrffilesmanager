@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,42 +17,42 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<HearAboutUs> GetByIdAsync(int hearAboutUsId)
+        public  HearAboutUs GetById(int hearAboutUsId)
         {
-            var account = await _context.HearAboutUs.FirstOrDefaultAsync(x => x.ID == hearAboutUsId).ConfigureAwait(false);
+            var account = _context.HearAboutUs.FirstOrDefault(x => x.ID == hearAboutUsId);
 
             return account;
 
         }
 
-        public async Task InsertAsync(HearAboutUs hearAboutUs)
+        public void Insert(HearAboutUs hearAboutUs)
         {
             _context.HearAboutUs.Add(hearAboutUs);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
 
 
-        public async Task<IEnumerable<HearAboutUs>> ListAsync()
+        public  IEnumerable<HearAboutUs> List()
         {
-            return await _context.HearAboutUs.ToListAsync().ConfigureAwait(false); ;
+            return _context.HearAboutUs.ToList(); ;
         }
 
 
-        public async Task SoftDelteAsync(int hearAboutUsId)
+        public void SoftDelete(int hearAboutUsId)
         {
-            var accountToDelete = await _context.HearAboutUs.FindAsync(hearAboutUsId);
+            var accountToDelete = _context.HearAboutUs.Find(hearAboutUsId);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
 
-        public async Task UpdateAsync(HearAboutUs hearAboutUs)
+        public void Update(HearAboutUs hearAboutUs)
         {
-            var trxHearAboutUs = await GetByIdAsync(hearAboutUs.ID);
+            var trxHearAboutUs = GetById(hearAboutUs.ID);
             _context.Entry(trxHearAboutUs).CurrentValues.SetValues(hearAboutUs);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
     }

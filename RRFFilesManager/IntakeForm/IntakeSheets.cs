@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
@@ -79,7 +79,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void IntakeSheets_Load(object sender, EventArgs e)
         {
-            Utils.SetComboBoxDataSource(PolCompanyDeniedBenefits, _disabilityInsuranceCompanyRepository.ListAsync()?.Result);
+            Utils.SetComboBoxDataSource(PolCompanyDeniedBenefits, _disabilityInsuranceCompanyRepository.List());
         }
 
         public void LoadLiabilityTab()
@@ -173,9 +173,9 @@ namespace RRFFilesManager.IntakeForm
             var intake = Home.IntakeForm.Intake;
             FillIntake(intake);
             if (intake.ID == default)
-                _intakeRepository.InsertAsync(intake, intake.File);
+                _intakeRepository.Insert(intake, intake.File);
             else
-                _intakeRepository.UpdateAsync(intake);
+                _intakeRepository.Update(intake);
         }
 
         public void FillIntake(Intake intake)

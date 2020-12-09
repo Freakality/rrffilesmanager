@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,42 +17,42 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<Province> GetByIdAsync(int provinceId)
+        public  Province GetById(int provinceId)
         {
-            var account = await _context.Provinces.FirstOrDefaultAsync(x => x.ID == provinceId).ConfigureAwait(false);
+            var account = _context.Provinces.FirstOrDefault(x => x.ID == provinceId);
 
             return account;
 
         }
 
-        public async Task InsertAsync(Province province)
+        public void Insert(Province province)
         {
             _context.Provinces.Add(province);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
 
 
-        public async Task<IEnumerable<Province>> ListAsync()
+        public  IEnumerable<Province> List()
         {
-            return await _context.Provinces.ToListAsync().ConfigureAwait(false); ;
+            return _context.Provinces.ToList(); ;
         }
 
 
-        public async Task SoftDelteAsync(int provinceId)
+        public void SoftDelete(int provinceId)
         {
-            var accountToDelete = await _context.Provinces.FindAsync(provinceId);
+            var accountToDelete = _context.Provinces.Find(provinceId);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
 
-        public async Task UpdateAsync(Province province)
+        public void Update(Province province)
         {
-            var trxProvince = await GetByIdAsync(province.ID);
+            var trxProvince = GetById(province.ID);
             _context.Entry(trxProvince).CurrentValues.SetValues(province);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
     }

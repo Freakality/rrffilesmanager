@@ -9,7 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace RRFFilesManager
@@ -32,12 +32,12 @@ namespace RRFFilesManager
             ClientsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientsGridView.MultiSelect = false;
             ClientsGridView.ReadOnly = true;
-            this.ClientsGridView.DataSource = _clientRepository.SearchAsync(SearchTextBox.Text)?.Result;
+            this.ClientsGridView.DataSource = _clientRepository.Search(SearchTextBox.Text);
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.ClientsGridView.DataSource = _clientRepository.SearchAsync(SearchTextBox.Text)?.Result;
+            this.ClientsGridView.DataSource = _clientRepository.Search(SearchTextBox.Text);
         }
 
         private void ClientsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +63,7 @@ namespace RRFFilesManager
         private void ClientsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var client = _clientRepository.GetByIdAsync(clientId)?.Result;
+            var client = _clientRepository.GetById(clientId);
             this.SelectedClient = client;
             Close();
         }

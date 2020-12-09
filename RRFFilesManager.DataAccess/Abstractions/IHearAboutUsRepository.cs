@@ -3,16 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess.Abstractions
 {
     public interface IHearAboutUsRepository
     {
-        Task InsertAsync(HearAboutUs hearAboutUs);
-        Task UpdateAsync(HearAboutUs hearAboutUs);
-        Task SoftDelteAsync(int hearAboutUsId);
-        Task<HearAboutUs> GetByIdAsync(int hearAboutUsId);
-        Task<IEnumerable<HearAboutUs>> ListAsync();
+        void Insert(HearAboutUs hearAboutUs);
+        void Update(HearAboutUs hearAboutUs);
+        void SoftDelete(int hearAboutUsId);
+        HearAboutUs GetById(int hearAboutUsId);
+        IEnumerable<HearAboutUs> List();
     }
 }

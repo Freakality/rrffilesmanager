@@ -1,11 +1,11 @@
-﻿using RRFFilesManager.Abstractions;
+﻿using Microsoft.EntityFrameworkCore;
+using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,42 +17,42 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<Company> GetByIdAsync(int companyId)
+        public  Company GetById(int companyId)
         {
-            var account = await _context.Companies.FirstOrDefaultAsync(x => x.ID == companyId).ConfigureAwait(false);
+            var account = _context.Companies.FirstOrDefault(x => x.ID == companyId);
 
             return account;
 
         }
 
-        public async Task InsertAsync(Company company)
+        public void Insert(Company company)
         {
             _context.Companies.Add(company);
 
-            await _context.SaveChangesAsync().ConfigureAwait(false);
+            _context.SaveChanges();
         }
 
 
 
-        public async Task<IEnumerable<Company>> ListAsync()
+        public  IEnumerable<Company> List()
         {
-            return await _context.Companies.ToListAsync().ConfigureAwait(false);
+            return _context.Companies.ToList();
         }
 
 
-        public async Task SoftDelteAsync(int companyId)
+        public void SoftDelete(int companyId)
         {
-            var accountToDelete = await GetByIdAsync(companyId);
+            var accountToDelete = GetById(companyId);
 
-            await _context.SaveChangesAsync().ConfigureAwait(false);
+            _context.SaveChanges();
 
         }
 
-        public async Task UpdateAsync(Company company)
+        public void Update(Company company)
         {
-            var trxCompany = await GetByIdAsync(company.ID);
+            var trxCompany = GetById(company.ID);
             _context.Entry(trxCompany).CurrentValues.SetValues(company);
-            await _context.SaveChangesAsync().ConfigureAwait(false);
+            _context.SaveChanges();
 
         }
     }

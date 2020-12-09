@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,38 +17,38 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<Intake> GetByIdAsync(int intakeId)
+        public  Intake GetById(int intakeId)
         {
-            var account = await _context.Intakes.FirstOrDefaultAsync(x => x.ID == intakeId).ConfigureAwait(false);
+            var account = _context.Intakes.FirstOrDefault(x => x.ID == intakeId);
             return account;
         }
 
-        public async Task InsertAsync(Intake intake, File file)
+        public void Insert(Intake intake, File file)
         {
             intake.File = file;
             _context.Intakes.Add(intake);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<Intake>> ListAsync()
+        public  IEnumerable<Intake> List()
         {
-            return await _context.Intakes.ToListAsync().ConfigureAwait(false); ;
+            return _context.Intakes.ToList(); ;
         }
 
-        public async Task SoftDelteAsync(int intakeId)
+        public void SoftDelete(int intakeId)
         {
-            var accountToDelete = await GetByIdAsync(intakeId);
-            await _context.SaveChangesAsync();
+            var accountToDelete = GetById(intakeId);
+            _context.SaveChanges();
         }
 
-        public async Task UpdateAsync(Intake intake)
+        public void Update(Intake intake)
         {
-            var trxIntake = await GetByIdAsync(intake.ID);
+            var trxIntake = GetById(intake.ID);
             _context.Entry(trxIntake).CurrentValues.SetValues(intake);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<Intake>> SearchAsync(string searchText, bool? hold = null, int? take = null)
+        public  IEnumerable<Intake> Search(string searchText, bool? hold = null, int? take = null)
         {
             var query = _context.Intakes.Where(s =>
                 s.File.FileNumber.ToString().Contains(searchText) ||
@@ -63,7 +63,7 @@ namespace RRFFilesManager.DataAccess
             if (take != null)
                 query = query.Take(take.Value);
 
-            return await query.ToListAsync().ConfigureAwait(false);
+            return query.ToList();
         }
     }
 }

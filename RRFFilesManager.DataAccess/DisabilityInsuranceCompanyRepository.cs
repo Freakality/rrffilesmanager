@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,42 +17,42 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<DisabilityInsuranceCompany> GetByIdAsync(int disabilityInsuranceCompanyId)
+        public  DisabilityInsuranceCompany GetById(int disabilityInsuranceCompanyId)
         {
-            var account = await _context.DisabilityInsuranceCompanies.FirstOrDefaultAsync(x => x.ID == disabilityInsuranceCompanyId).ConfigureAwait(false);
+            var account = _context.DisabilityInsuranceCompanies.FirstOrDefault(x => x.ID == disabilityInsuranceCompanyId);
 
             return account;
 
         }
 
-        public async Task InsertAsync(DisabilityInsuranceCompany disabilityInsuranceCompany)
+        public void Insert(DisabilityInsuranceCompany disabilityInsuranceCompany)
         {
             _context.DisabilityInsuranceCompanies.Add(disabilityInsuranceCompany);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
 
 
-        public async Task<IEnumerable<DisabilityInsuranceCompany>> ListAsync()
+        public  IEnumerable<DisabilityInsuranceCompany> List()
         {
-            return await _context.DisabilityInsuranceCompanies.ToListAsync().ConfigureAwait(false);
+            return _context.DisabilityInsuranceCompanies.ToList();
         }
 
 
-        public async Task SoftDelteAsync(int disabilityInsuranceCompanyId)
+        public void SoftDelete(int disabilityInsuranceCompanyId)
         {
-            var accountToDelete = await _context.DisabilityInsuranceCompanies.FindAsync(disabilityInsuranceCompanyId);
+            var accountToDelete = _context.DisabilityInsuranceCompanies.Find(disabilityInsuranceCompanyId);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
 
-        public async Task UpdateAsync(DisabilityInsuranceCompany disabilityInsuranceCompany)
+        public void Update(DisabilityInsuranceCompany disabilityInsuranceCompany)
         {
-            var trxDisabilityInsuranceCompany = await GetByIdAsync(disabilityInsuranceCompany.ID);
+            var trxDisabilityInsuranceCompany = GetById(disabilityInsuranceCompany.ID);
             _context.Entry(trxDisabilityInsuranceCompany).CurrentValues.SetValues(disabilityInsuranceCompany);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
     }

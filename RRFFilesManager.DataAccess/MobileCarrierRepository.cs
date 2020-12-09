@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,42 +17,42 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<MobileCarrier> GetByIdAsync(int mobileCarrierId)
+        public  MobileCarrier GetById(int mobileCarrierId)
         {
-            var account = await _context.MobileCarriers.FirstOrDefaultAsync(x => x.ID == mobileCarrierId).ConfigureAwait(false);
+            var account = _context.MobileCarriers.FirstOrDefault(x => x.ID == mobileCarrierId);
 
             return account;
 
         }
 
-        public async Task InsertAsync(MobileCarrier mobileCarrier)
+        public void Insert(MobileCarrier mobileCarrier)
         {
             _context.MobileCarriers.Add(mobileCarrier);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
 
 
-        public async Task<IEnumerable<MobileCarrier>> ListAsync()
+        public  IEnumerable<MobileCarrier> List()
         {
-            return await _context.MobileCarriers.ToListAsync().ConfigureAwait(false); ;
+            return _context.MobileCarriers.ToList(); ;
         }
 
 
-        public async Task SoftDelteAsync(int mobileCarrierId)
+        public void SoftDelete(int mobileCarrierId)
         {
-            var accountToDelete = await _context.MobileCarriers.FindAsync(mobileCarrierId);
+            var accountToDelete = _context.MobileCarriers.Find(mobileCarrierId);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
 
-        public async Task UpdateAsync(MobileCarrier mobileCarrier)
+        public void Update(MobileCarrier mobileCarrier)
         {
-            var trxMobileCarrier = await GetByIdAsync(mobileCarrier.ID);
+            var trxMobileCarrier = GetById(mobileCarrier.ID);
             _context.Entry(trxMobileCarrier).CurrentValues.SetValues(mobileCarrier);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
     }

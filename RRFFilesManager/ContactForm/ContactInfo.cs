@@ -8,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace RRFFilesManager.ContactForm
@@ -24,8 +24,8 @@ namespace RRFFilesManager.ContactForm
             _provinceRepository = (IProvinceRepository)Program.ServiceProvider.GetService(typeof(IProvinceRepository));
             _companyRepository = (ICompanyRepository)Program.ServiceProvider.GetService(typeof(ICompanyRepository));
             InitializeComponent();
-            Utils.SetComboBoxDataSource(Province, _provinceRepository.ListAsync()?.Result);
-            //Utils.SetComboBoxDataSource(Company, _companyRepository.ListAsync()?.Result.Take(10));
+            Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
+            //Utils.SetComboBoxDataSource(Company, _companyRepository.List().Take(10));
         }
         public Contact Contact { get; set; }
         private void FindContactButton_Click(object sender, EventArgs e)
@@ -86,9 +86,9 @@ namespace RRFFilesManager.ContactForm
                 Contact = new Contact();
             FillContact(Contact);
             if (Contact.ID == default)
-                _contactRepository.InsertAsync(Contact);
+                _contactRepository.Insert(Contact);
             else
-                _contactRepository.UpdateAsync(Contact);
+                _contactRepository.Update(Contact);
         }
 
         private void Save_Click(object sender, EventArgs e)

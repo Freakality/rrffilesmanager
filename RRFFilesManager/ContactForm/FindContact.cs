@@ -7,7 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace RRFFilesManager.ContactForm
@@ -23,7 +23,7 @@ namespace RRFFilesManager.ContactForm
             ContactsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ContactsGridView.MultiSelect = false;
             ContactsGridView.ReadOnly = true;
-            ContactsGridView.DataSource = _contactRepository.SearchAsync(SearchTextBox.Text, 50)?.Result;
+            ContactsGridView.DataSource = _contactRepository.Search(SearchTextBox.Text, 50);
         }
 
         private static FindContact instance;
@@ -33,13 +33,13 @@ namespace RRFFilesManager.ContactForm
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            ContactsGridView.DataSource = _contactRepository.SearchAsync(SearchTextBox.Text, 50)?.Result;
+            ContactsGridView.DataSource = _contactRepository.Search(SearchTextBox.Text, 50);
         }
 
         private void ContactsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var contactId = int.Parse(ContactsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            Selected = _contactRepository.GetByIdAsync(contactId)?.Result;
+            Selected = _contactRepository.GetById(contactId);
             Close();
         }
     }

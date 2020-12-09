@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.Abstractions;
@@ -26,8 +26,8 @@ namespace RRFFilesManager.IntakeForm
             _mobileCarrierRepository = (IMobileCarrierRepository)Program.ServiceProvider.GetService(typeof(IMobileCarrierRepository));
             _clientRepository = (IClientRepository)Program.ServiceProvider.GetService(typeof(IClientRepository));
             InitializeComponent();
-            Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.ListAsync()?.Result);
-            Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.ListAsync()?.Result);
+            Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.List());
+            Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.List());
             YearBirth.Text = "1970";
         }
 
@@ -79,9 +79,9 @@ namespace RRFFilesManager.IntakeForm
             var client = Home.IntakeForm.Intake.File.Client;
             FillClient(client);
             if (client.ID == default)
-                _clientRepository.InsertAsync(client);
+                _clientRepository.Insert(client);
             else
-                _clientRepository.UpdateAsync(client);
+                _clientRepository.Update(client);
         }
 
         private void PCIMobileNumber_TextChanged_1(object sender, EventArgs e)

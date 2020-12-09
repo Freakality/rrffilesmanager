@@ -9,7 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace RRFFilesManager
@@ -44,7 +44,7 @@ namespace RRFFilesManager
             MatterTypeTextBox.Text = intake.File.MatterType.ToString();
             FileNumberTextBox.Text = intake.File.FileNumber.ToString();
 
-            var typesOfTemplates = _templateRepository.ListAsync(Intake.File.MatterType.ID)?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            var typesOfTemplates = _templateRepository.List(Intake.File.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
 
             TemplatesGroupBox.Visible = true;
@@ -52,7 +52,7 @@ namespace RRFFilesManager
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = _templateRepository.ListAsync(Intake.File.MatterType.ID, null, TypeTemplate.Text)?.Result;
+            TemplateName.DataSource = _templateRepository.List(Intake.File.MatterType.ID, null, TypeTemplate.Text);
             TemplateName.DisplayMember = nameof(Template.TemplateName);
         }
 

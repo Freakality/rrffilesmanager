@@ -8,7 +8,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.Logic
 {
@@ -26,7 +26,7 @@ namespace RRFFilesManager.Logic
         {
             if (lawyer == null)
                 return 999999999;
-            var lastFileNumber = _fileRepository.GetLastFileAsync()?.Result?.FileNumber;
+            var lastFileNumber = _fileRepository.GetLastFile()?.FileNumber;
             if(lastFileNumber == null)
                 return int.Parse($"{DateTime.Now.Year}{lawyer.NumberID?.ToString() ?? ""}001");
             var lastNumber = int.Parse(lastFileNumber.ToString()?.Substring(6, 3));
@@ -233,13 +233,13 @@ namespace RRFFilesManager.Logic
         public static void SaveIntakeDocumentFileName(Intake intake, string wordFileName)
         {
             intake.WordFile = wordFileName;
-            _intakeRepository.UpdateAsync(intake);
+            _intakeRepository.Update(intake);
         }
 
         public static void SaveIntakeWorkBookFileName(Intake intake, string excelFileName)
         {
             intake.ExcelFile = excelFileName;
-            _intakeRepository.UpdateAsync(intake);
+            _intakeRepository.Update(intake);
         }
 
         public static string CreateOrRefillIntakeDocument(Intake intake, string templateDocumentPath, bool? refillDocument = null)
@@ -250,7 +250,7 @@ namespace RRFFilesManager.Logic
             {
                 filePath = CreateCYADocument(templateDocumentPath, intake);
                 intake.WordFile = Path.GetFileName(filePath);
-                _intakeRepository.UpdateAsync(intake);
+                _intakeRepository.Update(intake);
             }
             else if (refillDocument.Value)
             {
@@ -291,7 +291,7 @@ namespace RRFFilesManager.Logic
         public static void SetHoldIntake(Intake intake, bool hold)
         {
             intake.Hold = hold;
-            _intakeRepository.UpdateAsync(intake);
+            _intakeRepository.Update(intake);
         }
     }
 }

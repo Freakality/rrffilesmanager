@@ -1,11 +1,11 @@
-﻿using RRFFilesManager.Abstractions;
+﻿using Microsoft.EntityFrameworkCore;
+using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,44 +17,44 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<Client> GetByIdAsync(int clientId)
+        public  Client GetById(int clientId)
         {
-            var account = await _context.Clients.FirstOrDefaultAsync(x => x.ID == clientId).ConfigureAwait(false);
+            var account = _context.Clients.FirstOrDefault(x => x.ID == clientId);
             return account;
         }
 
-        public async Task InsertAsync(Client client)
+        public void Insert(Client client)
         {
             _context.Clients.Add(client);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<Client>> ListAsync()
+        public  IEnumerable<Client> List()
         {
-            return await _context.Clients.ToListAsync().ConfigureAwait(false); ;
+            return _context.Clients.ToList(); ;
         }
 
-        public async Task SoftDelteAsync(int clientId)
+        public void SoftDelete(int clientId)
         {
-            var accountToDelete = await GetByIdAsync(clientId);
-            await _context.SaveChangesAsync();
+            var accountToDelete = GetById(clientId);
+            _context.SaveChanges();
         }
 
-        public async Task UpdateAsync(Client client)
+        public void Update(Client client)
         {
-            var trxClient = await GetByIdAsync(client.ID);
+            var trxClient = GetById(client.ID);
             _context.Entry(trxClient).CurrentValues.SetValues(client);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<Client>> SearchAsync(string searchText)
+        public  IEnumerable<Client> Search(string searchText)
         {
-            return await _context.Clients.Where(s =>
+            return _context.Clients.Where(s =>
                 s.FirstName.Contains(searchText) ||
                 s.LastName.Contains(searchText) ||
                 s.Email.Contains(searchText) ||
                 s.ID.ToString().Contains(searchText)
-            ).ToListAsync().ConfigureAwait(false);
+            ).ToList();
         }
     }
 }

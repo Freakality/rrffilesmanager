@@ -3,16 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess.Abstractions
 {
     public interface ILawyerRepository
     {
-        Task InsertAsync(Lawyer lawyer);
-        Task UpdateAsync(Lawyer lawyer);
-        Task SoftDelteAsync(int lawyerId);
-        Task<Lawyer> GetByIdAsync(int lawyerId);
-        Task<IEnumerable<Lawyer>> ListAsync();
+        void Insert(Lawyer lawyer);
+        void Update(Lawyer lawyer);
+        void SoftDelete(int lawyerId);
+        Lawyer GetById(int lawyerId);
+        IEnumerable<Lawyer> List();
     }
 }

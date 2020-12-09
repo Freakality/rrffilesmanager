@@ -37,7 +37,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void RefreshIntakeGridViewDataSource()
         {
-            IntakesGridView.DataSource = _intakeRepository.SearchAsync(SearchTextBox.Text, OnlyHoldIntakes, 10)?.Result;
+            IntakesGridView.DataSource = _intakeRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 10);
         }
         
         public void SetOnlyHoldIntakes(bool value)
@@ -63,7 +63,7 @@ namespace RRFFilesManager.IntakeForm
         private void IntakesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var intakeId = int.Parse(IntakesGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var intake = _intakeRepository.GetByIdAsync(intakeId)?.Result;
+            var intake = _intakeRepository.GetById(intakeId);
             SelectedIntake = intake;
             Close();
         }

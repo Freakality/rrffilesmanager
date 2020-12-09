@@ -2,10 +2,10 @@
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace RRFFilesManager.DataAccess
 {
@@ -17,42 +17,42 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public async Task<Lawyer> GetByIdAsync(int lawyerId)
+        public  Lawyer GetById(int lawyerId)
         {
-            var account = await _context.Lawyers.FirstOrDefaultAsync(x => x.ID == lawyerId).ConfigureAwait(false);
+            var account = _context.Lawyers.FirstOrDefault(x => x.ID == lawyerId);
 
             return account;
 
         }
 
-        public async Task InsertAsync(Lawyer lawyer)
+        public void Insert(Lawyer lawyer)
         {
             _context.Lawyers.Add(lawyer);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
 
 
-        public async Task<IEnumerable<Lawyer>> ListAsync()
+        public  IEnumerable<Lawyer> List()
         {
-            return await _context.Lawyers.ToListAsync().ConfigureAwait(false); ;
+            return _context.Lawyers.ToList(); ;
         }
 
 
-        public async Task SoftDelteAsync(int lawyerId)
+        public void SoftDelete(int lawyerId)
         {
-            var accountToDelete = await _context.Lawyers.FindAsync(lawyerId);
+            var accountToDelete = _context.Lawyers.Find(lawyerId);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
 
-        public async Task UpdateAsync(Lawyer lawyer)
+        public void Update(Lawyer lawyer)
         {
-            var trxLawyer = await GetByIdAsync(lawyer.ID);
+            var trxLawyer = GetById(lawyer.ID);
             _context.Entry(trxLawyer).CurrentValues.SetValues(lawyer);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
         }
     }

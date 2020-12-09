@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Interop.Excel;
@@ -28,7 +28,7 @@ namespace RRFFilesManager.IntakeForm
         {
             _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
             InitializeComponent();
-            var typesOfTemplates = _templateRepository.ListAsync(Home.IntakeForm.Intake.File.MatterType.ID, "CYA")?.Result?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            var typesOfTemplates = _templateRepository.List(Home.IntakeForm.Intake.File.MatterType.ID, "CYA")?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
             DocumentPreview.Visible = false;
         }
@@ -52,7 +52,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = _templateRepository.ListAsync(Home.IntakeForm.Intake.File.MatterType.ID, "CYA", TypeTemplate.Text)?.Result;
+            TemplateName.DataSource = _templateRepository.List(Home.IntakeForm.Intake.File.MatterType.ID, "CYA", TypeTemplate.Text);
             TemplateName.DisplayMember = nameof(Template.TemplateName);
         }
 
