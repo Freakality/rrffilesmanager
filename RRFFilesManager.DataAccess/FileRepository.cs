@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public File GetById(int fileId)
+        public  File GetById(int fileId)
         {
             var account = _context.Files.FirstOrDefault(x => x.ID == fileId);
             return account;
@@ -29,7 +29,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public IEnumerable<File> List()
+        public  IEnumerable<File> List()
         {
             return _context.Files.ToList(); ;
         }
@@ -47,7 +47,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public IEnumerable<File> Search(string searchText, bool? hold = null, int? take = null)
+        public  IEnumerable<File> Search(string searchText, bool? hold = null, int? take = null)
         {
             var query = _context.Files.Where(s =>
                 s.FileNumber.ToString().Contains(searchText) ||
@@ -63,7 +63,7 @@ namespace RRFFilesManager.DataAccess
             return query.ToList();
         }
 
-        public File GetLastFile(int? clientId = null)
+        public  File GetLastFile(int? clientId = null)
         {
             var query = _context.Files.OrderByDescending(s => s.ID);
             if (clientId != null)

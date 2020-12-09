@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public Company GetById(int companyId)
+        public  Company GetById(int companyId)
         {
             var account = _context.Companies.FirstOrDefault(x => x.ID == companyId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public IEnumerable<Company> List()
+        public  IEnumerable<Company> List()
         {
             return _context.Companies.ToList();
         }

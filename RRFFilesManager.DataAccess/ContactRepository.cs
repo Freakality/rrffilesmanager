@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public Contact GetById(int contactId)
+        public  Contact GetById(int contactId)
         {
             var account = _context.Contacts.FirstOrDefault(x => x.ID == contactId);
             return account;
@@ -29,7 +29,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public IEnumerable<Contact> List()
+        public  IEnumerable<Contact> List()
         {
             return _context.Contacts.ToList(); ;
         }
@@ -47,7 +47,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public IEnumerable<Contact> Search(string searchText, int? take = null)
+        public  IEnumerable<Contact> Search(string searchText, int? take = null)
         {
             var query = _context.Contacts.Where(s =>
                 s.FirstName.Contains(searchText) ||

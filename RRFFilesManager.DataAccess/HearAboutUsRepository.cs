@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public HearAboutUs GetById(int hearAboutUsId)
+        public  HearAboutUs GetById(int hearAboutUsId)
         {
             var account = _context.HearAboutUs.FirstOrDefault(x => x.ID == hearAboutUsId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public IEnumerable<HearAboutUs> List()
+        public  IEnumerable<HearAboutUs> List()
         {
             return _context.HearAboutUs.ToList(); ;
         }

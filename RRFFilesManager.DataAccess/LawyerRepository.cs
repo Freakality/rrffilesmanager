@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public Lawyer GetById(int lawyerId)
+        public  Lawyer GetById(int lawyerId)
         {
             var account = _context.Lawyers.FirstOrDefault(x => x.ID == lawyerId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public IEnumerable<Lawyer> List()
+        public  IEnumerable<Lawyer> List()
         {
             return _context.Lawyers.ToList(); ;
         }

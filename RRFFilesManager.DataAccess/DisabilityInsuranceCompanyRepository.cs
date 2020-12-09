@@ -17,7 +17,7 @@ namespace RRFFilesManager.DataAccess
             _context = context;
         }
 
-        public DisabilityInsuranceCompany GetById(int disabilityInsuranceCompanyId)
+        public  DisabilityInsuranceCompany GetById(int disabilityInsuranceCompanyId)
         {
             var account = _context.DisabilityInsuranceCompanies.FirstOrDefault(x => x.ID == disabilityInsuranceCompanyId);
 
@@ -34,7 +34,7 @@ namespace RRFFilesManager.DataAccess
 
 
 
-        public IEnumerable<DisabilityInsuranceCompany> List()
+        public  IEnumerable<DisabilityInsuranceCompany> List()
         {
             return _context.DisabilityInsuranceCompanies.ToList();
         }
