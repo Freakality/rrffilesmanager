@@ -122,5 +122,10 @@ namespace RRFFilesManager
             Close();
             Home.Instance.Show();
         }
+
+        private void CreateDocument_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

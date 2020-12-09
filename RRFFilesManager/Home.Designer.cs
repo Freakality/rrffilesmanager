@@ -52,7 +52,7 @@
             this.Button9 = new System.Windows.Forms.Button();
             this.CreateDocumentsButton = new System.Windows.Forms.Button();
             this.Button7 = new System.Windows.Forms.Button();
-            this.Button4 = new System.Windows.Forms.Button();
+            this.DocumentTemplate = new System.Windows.Forms.Button();
             this.Button5 = new System.Windows.Forms.Button();
             this.Button6 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
@@ -428,20 +428,21 @@
             this.Button7.Text = "PRIVATE FOOTPRINT";
             this.Button7.UseVisualStyleBackColor = false;
             // 
-            // Button4
+            // DocumentTemplate
             // 
-            this.Button4.BackColor = System.Drawing.Color.Black;
-            this.Button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button4.ForeColor = System.Drawing.Color.White;
-            this.Button4.Location = new System.Drawing.Point(199, 455);
-            this.Button4.Margin = new System.Windows.Forms.Padding(10);
-            this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(169, 72);
-            this.Button4.TabIndex = 6;
-            this.Button4.Text = "DOCUMENT TEMPLATES";
-            this.Button4.UseVisualStyleBackColor = false;
+            this.DocumentTemplate.BackColor = System.Drawing.Color.Black;
+            this.DocumentTemplate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DocumentTemplate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentTemplate.ForeColor = System.Drawing.Color.White;
+            this.DocumentTemplate.Location = new System.Drawing.Point(199, 455);
+            this.DocumentTemplate.Margin = new System.Windows.Forms.Padding(10);
+            this.DocumentTemplate.Name = "DocumentTemplate";
+            this.DocumentTemplate.Size = new System.Drawing.Size(169, 72);
+            this.DocumentTemplate.TabIndex = 6;
+            this.DocumentTemplate.Text = "DOCUMENT TEMPLATES";
+            this.DocumentTemplate.UseVisualStyleBackColor = false;
+            this.DocumentTemplate.Click += new System.EventHandler(this.CreateTemplates_Click);
             // 
             // Button5
             // 
@@ -540,7 +541,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button9, 1, 0);
             this.TableLayoutPanel1.Controls.Add(this.CreateDocumentsButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button7, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.Button4, 0, 5);
+            this.TableLayoutPanel1.Controls.Add(this.DocumentTemplate, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button5, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button6, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button3, 0, 0);
@@ -629,7 +630,7 @@
         internal System.Windows.Forms.Button Button9;
         internal System.Windows.Forms.Button CreateDocumentsButton;
         internal System.Windows.Forms.Button Button7;
-        internal System.Windows.Forms.Button Button4;
+        internal System.Windows.Forms.Button DocumentTemplate;
         internal System.Windows.Forms.Button Button5;
         internal System.Windows.Forms.Button Button6;
         internal System.Windows.Forms.Button Button3;

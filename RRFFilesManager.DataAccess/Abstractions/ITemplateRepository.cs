@@ -13,6 +13,8 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void Update(Template template);
         void SoftDelete(int templateId);
         Template GetById(int templateId);
+        ICollection<string> GetCategories();
+        ICollection<string> GetTypesOfTemplate();
         IEnumerable<Template> List(int? matterTypeId = null, string category = null, string typeOfTemplate = null);
     }
 }

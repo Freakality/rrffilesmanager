@@ -274,6 +274,7 @@
             this.Name = "CreateDocument";
             this.Text = "CreateDocument";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateDocument_FormClosing);
+            this.Load += new System.EventHandler(this.CreateDocument_Load);
             this.GroupBox32.ResumeLayout(false);
             this.GroupBox32.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

@@ -45,7 +45,7 @@ namespace RRFFilesManager.Logic
                Path = filePath,
                Template = template
             };
-        }
+        } 
         public string GetDocumentTemplatePath(string templateDocumentPath)
         {
             string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];

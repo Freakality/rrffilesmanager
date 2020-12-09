@@ -46,6 +46,18 @@ namespace RRFFilesManager.DataAccess
             return query.ToList();
         }
 
+        public ICollection<string> GetCategories()
+        {
+            var categories = _context.Templates.Select(s => s.Category).Distinct();
+            return categories.ToList();
+        }
+
+        public ICollection<string> GetTypesOfTemplate()
+        {
+            var typesOfTemplate = _context.Templates.Select(s => s.TypeOfTemplate).Distinct();
+            return typesOfTemplate.ToList();
+        }
+
 
         public void SoftDelete(int templateId)
         {
