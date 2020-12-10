@@ -69,6 +69,7 @@
             this.SearchBox.TabIndex = 2;
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Search";
+            this.SearchBox.Enter += new System.EventHandler(this.SearchBox_Enter_1);
             // 
             // FindFile
             // 

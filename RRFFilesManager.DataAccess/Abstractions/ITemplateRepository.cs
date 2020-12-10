@@ -16,5 +16,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         ICollection<string> GetCategories();
         ICollection<string> GetTypesOfTemplate();
         IEnumerable<Template> List(int? matterTypeId = null, string category = null, string typeOfTemplate = null);
+        IEnumerable<Template> Search(string searchText, MatterType matterType = null, string category = null, string typeOfTemplate = null, int? take = null);
     }
 }

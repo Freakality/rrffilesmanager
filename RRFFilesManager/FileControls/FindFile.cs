@@ -71,5 +71,10 @@ namespace RRFFilesManager.FileControls
             SelectedFile = file;
             Close();
         }
+
+        private void SearchBox_Enter_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

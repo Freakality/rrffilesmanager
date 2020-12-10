@@ -35,6 +35,9 @@
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
             this.GroupBox90 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.SelectTemplateButton = new System.Windows.Forms.Button();
+            this.CopyFromTextBox = new System.Windows.Forms.TextBox();
             this.SelectFolderButton = new System.Windows.Forms.Button();
             this.FolderTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,16 +45,13 @@
             this.CategoryCombobox = new System.Windows.Forms.ComboBox();
             this.TypeOfTemplateComboBox = new System.Windows.Forms.ComboBox();
             this.TemplateNameTextBox = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.CopyFromTextBox = new System.Windows.Forms.TextBox();
-            this.SelectTemplateButton = new System.Windows.Forms.Button();
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.SaveAndEdit = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.FindTemplateButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.SaveAndEdit = new System.Windows.Forms.Button();
-            this.EditButton = new System.Windows.Forms.Button();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -59,8 +59,8 @@
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             this.GroupBox90.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.PotentialClientInfoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,15 @@
             label4.TabIndex = 162;
             label4.Text = "Folder:";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(3, 50);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(86, 34);
+            label5.TabIndex = 164;
+            label5.Text = "Copy From Template:";
+            // 
             // GroupBox90
             // 
             this.GroupBox90.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -123,6 +132,48 @@
             this.GroupBox90.TabIndex = 161;
             this.GroupBox90.TabStop = false;
             this.GroupBox90.Text = "Template";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.Controls.Add(this.SelectTemplateButton, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.CopyFromTextBox, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(label5, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.SelectFolderButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(label4, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.FolderTextBox, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 156);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1223, 100);
+            this.tableLayoutPanel2.TabIndex = 164;
+            // 
+            // SelectTemplateButton
+            // 
+            this.SelectTemplateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectTemplateButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
+            this.SelectTemplateButton.Location = new System.Drawing.Point(1103, 53);
+            this.SelectTemplateButton.Name = "SelectTemplateButton";
+            this.SelectTemplateButton.Size = new System.Drawing.Size(117, 24);
+            this.SelectTemplateButton.TabIndex = 166;
+            this.SelectTemplateButton.Text = "Select Template";
+            this.SelectTemplateButton.UseVisualStyleBackColor = true;
+            this.SelectTemplateButton.Click += new System.EventHandler(this.SelectTemplateButton_Click);
+            // 
+            // CopyFromTextBox
+            // 
+            this.CopyFromTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CopyFromTextBox.Location = new System.Drawing.Point(125, 53);
+            this.CopyFromTextBox.Name = "CopyFromTextBox";
+            this.CopyFromTextBox.Size = new System.Drawing.Size(972, 24);
+            this.CopyFromTextBox.TabIndex = 165;
             // 
             // SelectFolderButton
             // 
@@ -215,57 +266,7 @@
             this.TemplateNameTextBox.Name = "TemplateNameTextBox";
             this.TemplateNameTextBox.Size = new System.Drawing.Size(484, 24);
             this.TemplateNameTextBox.TabIndex = 161;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Controls.Add(this.SelectTemplateButton, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.CopyFromTextBox, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(label5, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.SelectFolderButton, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(label4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.FolderTextBox, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 156);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1223, 100);
-            this.tableLayoutPanel2.TabIndex = 164;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(3, 50);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(86, 34);
-            label5.TabIndex = 164;
-            label5.Text = "Copy From Template:";
-            // 
-            // CopyFromTextBox
-            // 
-            this.CopyFromTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CopyFromTextBox.Location = new System.Drawing.Point(125, 53);
-            this.CopyFromTextBox.Name = "CopyFromTextBox";
-            this.CopyFromTextBox.Size = new System.Drawing.Size(972, 24);
-            this.CopyFromTextBox.TabIndex = 165;
-            // 
-            // SelectTemplateButton
-            // 
-            this.SelectTemplateButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SelectTemplateButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold);
-            this.SelectTemplateButton.Location = new System.Drawing.Point(1103, 53);
-            this.SelectTemplateButton.Name = "SelectTemplateButton";
-            this.SelectTemplateButton.Size = new System.Drawing.Size(117, 24);
-            this.SelectTemplateButton.TabIndex = 166;
-            this.SelectTemplateButton.Text = "Select Template";
-            this.SelectTemplateButton.UseVisualStyleBackColor = true;
-            this.SelectTemplateButton.Click += new System.EventHandler(this.SelectTemplateButton_Click);
+            this.TemplateNameTextBox.TextChanged += new System.EventHandler(this.TemplateNameTextBox_TextChanged);
             // 
             // PotentialClientInfoPanel
             // 
@@ -285,6 +286,35 @@
             this.PotentialClientInfoPanel.Name = "PotentialClientInfoPanel";
             this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1266, 547);
             this.PotentialClientInfoPanel.TabIndex = 163;
+            // 
+            // EditButton
+            // 
+            this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditButton.BackColor = System.Drawing.Color.Maroon;
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.ForeColor = System.Drawing.Color.White;
+            this.EditButton.Location = new System.Drawing.Point(906, 501);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(97, 36);
+            this.EditButton.TabIndex = 163;
+            this.EditButton.Text = "Only Edit";
+            this.EditButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // SaveAndEdit
+            // 
+            this.SaveAndEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveAndEdit.BackColor = System.Drawing.Color.Maroon;
+            this.SaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveAndEdit.ForeColor = System.Drawing.Color.White;
+            this.SaveAndEdit.Location = new System.Drawing.Point(1112, 501);
+            this.SaveAndEdit.Name = "SaveAndEdit";
+            this.SaveAndEdit.Size = new System.Drawing.Size(129, 36);
+            this.SaveAndEdit.TabIndex = 162;
+            this.SaveAndEdit.Text = "Save and Edit";
+            this.SaveAndEdit.UseVisualStyleBackColor = false;
+            this.SaveAndEdit.Click += new System.EventHandler(this.SaveAndEdit_Click);
             // 
             // Cancel
             // 
@@ -325,6 +355,7 @@
             this.FindTemplateButton.TabIndex = 3;
             this.FindTemplateButton.Text = "Find Template";
             this.FindTemplateButton.UseVisualStyleBackColor = false;
+            this.FindTemplateButton.Click += new System.EventHandler(this.FindTemplateButton_Click);
             // 
             // label6
             // 
@@ -335,35 +366,6 @@
             this.label6.Size = new System.Drawing.Size(229, 26);
             this.label6.TabIndex = 2;
             this.label6.Text = "Document Template";
-            // 
-            // SaveAndEdit
-            // 
-            this.SaveAndEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveAndEdit.BackColor = System.Drawing.Color.Maroon;
-            this.SaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveAndEdit.ForeColor = System.Drawing.Color.White;
-            this.SaveAndEdit.Location = new System.Drawing.Point(1112, 501);
-            this.SaveAndEdit.Name = "SaveAndEdit";
-            this.SaveAndEdit.Size = new System.Drawing.Size(129, 36);
-            this.SaveAndEdit.TabIndex = 162;
-            this.SaveAndEdit.Text = "Save and Edit";
-            this.SaveAndEdit.UseVisualStyleBackColor = false;
-            this.SaveAndEdit.Click += new System.EventHandler(this.SaveAndEdit_Click);
-            // 
-            // EditButton
-            // 
-            this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditButton.BackColor = System.Drawing.Color.Maroon;
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.ForeColor = System.Drawing.Color.White;
-            this.EditButton.Location = new System.Drawing.Point(906, 501);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(97, 36);
-            this.EditButton.TabIndex = 163;
-            this.EditButton.Text = "Only Edit";
-            this.EditButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EditButton.UseVisualStyleBackColor = false;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // CreateTemplate
             // 
@@ -377,10 +379,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateTemplate_FormClosing);
             this.Load += new System.EventHandler(this.CreateTemplate_Load);
             this.GroupBox90.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.PotentialClientInfoPanel.ResumeLayout(false);
             this.PotentialClientInfoPanel.PerformLayout();
             this.ResumeLayout(false);

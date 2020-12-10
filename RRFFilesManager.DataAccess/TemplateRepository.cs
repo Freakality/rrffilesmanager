@@ -74,5 +74,26 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
 
         }
+
+        public IEnumerable<Template> Search(string searchText, MatterType matterType = null, string category = null, string typeOfTemplate = null, int? take = null)
+        {
+            var query = _context.Templates.Where(s =>
+                s.TemplateName.Contains(searchText)
+            );
+
+            if (matterType != null)
+                query = query.Where(s => s.MatterType == matterType);
+
+            if (category != null)
+                query = query.Where(s => s.Category == category);
+
+            if (typeOfTemplate != null)
+                query = query.Where(s => s.TypeOfTemplate == typeOfTemplate);
+
+            if (take != null)
+                query = query.Take(take.Value);
+
+            return query.ToList();
+        }
     }
 }
