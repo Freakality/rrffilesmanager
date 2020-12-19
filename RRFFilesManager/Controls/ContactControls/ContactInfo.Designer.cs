@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.TableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.Company = new System.Windows.Forms.ComboBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.Label10 = new System.Windows.Forms.Label();
             this.City = new System.Windows.Forms.TextBox();
@@ -47,26 +48,23 @@
             this.FirstName = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.Initials = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Salutation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Prefix = new System.Windows.Forms.ComboBox();
             this.Suffix = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.OtherNotes = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.Company = new System.Windows.Forms.ComboBox();
             this.ContactInfoPanel = new System.Windows.Forms.Panel();
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.FindContactButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
-            this.Salutation = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.Initials = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TableLayoutPanel4.SuspendLayout();
@@ -118,6 +116,24 @@
             this.TableLayoutPanel3.Size = new System.Drawing.Size(1205, 236);
             this.TableLayoutPanel3.TabIndex = 1;
             // 
+            // Company
+            // 
+            this.Company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Company.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.Company.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.Company.FormattingEnabled = true;
+            this.Company.Items.AddRange(new object[] {
+            "Miss",
+            "Ms.",
+            "Mr."});
+            this.Company.Location = new System.Drawing.Point(404, 83);
+            this.Company.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Company.MaxDropDownItems = 100;
+            this.Company.Name = "Company";
+            this.Company.Size = new System.Drawing.Size(378, 25);
+            this.Company.TabIndex = 8;
+            // 
             // Label8
             // 
             this.Label8.AutoSize = true;
@@ -144,7 +160,7 @@
             this.City.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.City.Name = "City";
             this.City.Size = new System.Drawing.Size(378, 24);
-            this.City.TabIndex = 17;
+            this.City.TabIndex = 11;
             // 
             // Label9
             // 
@@ -199,7 +215,8 @@
             this.MiddleName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.MiddleName.Name = "MiddleName";
             this.MiddleName.Size = new System.Drawing.Size(378, 24);
-            this.MiddleName.TabIndex = 4;
+            this.MiddleName.TabIndex = 5;
+            this.MiddleName.TextChanged += new System.EventHandler(this.MiddleName_TextChanged);
             // 
             // LastName
             // 
@@ -209,7 +226,8 @@
             this.LastName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(380, 24);
-            this.LastName.TabIndex = 5;
+            this.LastName.TabIndex = 6;
+            this.LastName.TextChanged += new System.EventHandler(this.LastName_TextChanged);
             // 
             // Email
             // 
@@ -219,7 +237,7 @@
             this.Email.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(378, 24);
-            this.Email.TabIndex = 9;
+            this.Email.TabIndex = 7;
             // 
             // Street
             // 
@@ -228,7 +246,7 @@
             this.Street.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Street.Name = "Street";
             this.Street.Size = new System.Drawing.Size(380, 24);
-            this.Street.TabIndex = 11;
+            this.Street.TabIndex = 9;
             // 
             // Province
             // 
@@ -240,7 +258,7 @@
             this.Province.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Province.Name = "Province";
             this.Province.Size = new System.Drawing.Size(378, 25);
-            this.Province.TabIndex = 15;
+            this.Province.TabIndex = 10;
             this.Province.ValueMember = "Province";
             // 
             // PostalCode
@@ -251,7 +269,7 @@
             this.PostalCode.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PostalCode.Name = "PostalCode";
             this.PostalCode.Size = new System.Drawing.Size(380, 24);
-            this.PostalCode.TabIndex = 16;
+            this.PostalCode.TabIndex = 12;
             // 
             // PhoneNumber
             // 
@@ -262,7 +280,7 @@
             this.PhoneNumber.Mask = "(999) 000-0000";
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.Size = new System.Drawing.Size(378, 24);
-            this.PhoneNumber.TabIndex = 29;
+            this.PhoneNumber.TabIndex = 13;
             // 
             // FirstName
             // 
@@ -272,7 +290,8 @@
             this.FirstName.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(378, 24);
-            this.FirstName.TabIndex = 34;
+            this.FirstName.TabIndex = 4;
+            this.FirstName.TextChanged += new System.EventHandler(this.FirstName_TextChanged);
             // 
             // Label6
             // 
@@ -292,6 +311,15 @@
             this.Label7.TabIndex = 8;
             this.Label7.Text = "Email";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(805, 62);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(48, 18);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Street";
+            // 
             // Label5
             // 
             this.Label5.AutoSize = true;
@@ -305,7 +333,7 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -313,37 +341,50 @@
             this.tableLayoutPanel1.Controls.Add(this.Initials, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.Salutation, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label17, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Prefix, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Suffix, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label17, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 42);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(587, 46);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(453, 46);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // label17
+            // Initials
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(288, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 16);
-            this.label17.TabIndex = 39;
-            this.label17.Text = "Suffix";
+            this.Initials.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Initials.Location = new System.Drawing.Point(288, 19);
+            this.Initials.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Initials.Name = "Initials";
+            this.Initials.Size = new System.Drawing.Size(152, 24);
+            this.Initials.TabIndex = 3;
             // 
-            // label16
+            // label11
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(144, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 16);
-            this.label16.TabIndex = 38;
-            this.label16.Text = "Prefix";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(288, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 16);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Initials";
+            // 
+            // Salutation
+            // 
+            this.Salutation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Salutation.FormattingEnabled = true;
+            this.Salutation.Items.AddRange(new object[] {
+            "Dr.",
+            "Mrs.",
+            "Mr.",
+            "Ms.",
+            "Mr. & Mrs."});
+            this.Salutation.Location = new System.Drawing.Point(3, 19);
+            this.Salutation.Name = "Salutation";
+            this.Salutation.Size = new System.Drawing.Size(135, 25);
+            this.Salutation.TabIndex = 1;
             // 
             // label1
             // 
@@ -354,31 +395,26 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Salutation";
             // 
-            // Prefix
-            // 
-            this.Prefix.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Prefix.FormattingEnabled = true;
-            this.Prefix.Items.AddRange(new object[] {
-            "Dr.",
-            "Mrs.",
-            "Mr.",
-            "Ms.",
-            "Mr. & Mrs."});
-            this.Prefix.Location = new System.Drawing.Point(144, 19);
-            this.Prefix.Name = "Prefix";
-            this.Prefix.Size = new System.Drawing.Size(138, 25);
-            this.Prefix.TabIndex = 34;
-            // 
             // Suffix
             // 
             this.Suffix.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Suffix.FormattingEnabled = true;
             this.Suffix.Items.AddRange(new object[] {
-            "Q.C."});
-            this.Suffix.Location = new System.Drawing.Point(288, 19);
+            "Jr.",
+            "Sr."});
+            this.Suffix.Location = new System.Drawing.Point(144, 19);
             this.Suffix.Name = "Suffix";
             this.Suffix.Size = new System.Drawing.Size(138, 25);
-            this.Suffix.TabIndex = 35;
+            this.Suffix.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(144, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 16);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Suffix";
             // 
             // OtherNotes
             // 
@@ -388,7 +424,7 @@
             this.OtherNotes.Multiline = true;
             this.OtherNotes.Name = "OtherNotes";
             this.OtherNotes.Size = new System.Drawing.Size(1199, 233);
-            this.OtherNotes.TabIndex = 21;
+            this.OtherNotes.TabIndex = 14;
             // 
             // TableLayoutPanel4
             // 
@@ -416,33 +452,6 @@
             this.label18.Size = new System.Drawing.Size(90, 19);
             this.label18.TabIndex = 20;
             this.label18.Text = "Other Notes";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(805, 62);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 18);
-            this.label19.TabIndex = 35;
-            this.label19.Text = "Street";
-            // 
-            // Company
-            // 
-            this.Company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Company.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.Company.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.Company.FormattingEnabled = true;
-            this.Company.Items.AddRange(new object[] {
-            "Miss",
-            "Ms.",
-            "Mr."});
-            this.Company.Location = new System.Drawing.Point(404, 83);
-            this.Company.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Company.MaxDropDownItems = 100;
-            this.Company.Name = "Company";
-            this.Company.Size = new System.Drawing.Size(378, 25);
-            this.Company.TabIndex = 40;
             // 
             // ContactInfoPanel
             // 
@@ -472,7 +481,7 @@
             this.Cancel.Location = new System.Drawing.Point(25, 666);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(97, 36);
-            this.Cancel.TabIndex = 9;
+            this.Cancel.TabIndex = 16;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = false;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -486,7 +495,7 @@
             this.Save.Location = new System.Drawing.Point(1140, 666);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(97, 36);
-            this.Save.TabIndex = 8;
+            this.Save.TabIndex = 15;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
@@ -514,37 +523,6 @@
             this.Label41.Size = new System.Drawing.Size(144, 26);
             this.Label41.TabIndex = 2;
             this.Label41.Text = "Contact Info";
-            // 
-            // Salutation
-            // 
-            this.Salutation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Salutation.FormattingEnabled = true;
-            this.Salutation.Items.AddRange(new object[] {
-            "Miss",
-            "Ms.",
-            "Mr."});
-            this.Salutation.Location = new System.Drawing.Point(3, 19);
-            this.Salutation.Name = "Salutation";
-            this.Salutation.Size = new System.Drawing.Size(135, 25);
-            this.Salutation.TabIndex = 40;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(432, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 16);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "Initials";
-            // 
-            // Initials
-            // 
-            this.Initials.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Initials.Location = new System.Drawing.Point(432, 19);
-            this.Initials.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Initials.Name = "Initials";
-            this.Initials.Size = new System.Drawing.Size(155, 24);
-            this.Initials.TabIndex = 42;
             // 
             // ContactInfo
             // 
@@ -588,11 +566,9 @@
         internal System.Windows.Forms.ComboBox Province;
         internal System.Windows.Forms.TextBox PostalCode;
         internal System.Windows.Forms.MaskedTextBox PhoneNumber;
-        internal System.Windows.Forms.ComboBox Prefix;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         internal System.Windows.Forms.ComboBox Suffix;
         internal System.Windows.Forms.Label label17;
-        internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.TextBox FirstName;
         internal System.Windows.Forms.Label Label6;

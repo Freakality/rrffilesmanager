@@ -44,7 +44,6 @@ namespace RRFFilesManager.ContactForm
         public void FillContact(Contact contact)
         {
             contact.Salutation = Salutation.Text;
-            contact.Prefix = Prefix.Text;
             contact.Suffix = Suffix.Text;
             contact.Initials = Initials.Text;
             contact.FirstName = FirstName.Text;
@@ -65,7 +64,6 @@ namespace RRFFilesManager.ContactForm
             if (contact == null)
                 return;
             Salutation.Text = contact.Salutation;
-            Prefix.Text = contact.Prefix;
             Suffix.Text = contact.Suffix;
             Initials.Text = contact.Initials;
             FirstName.Text = contact.FirstName;
@@ -169,6 +167,36 @@ namespace RRFFilesManager.ContactForm
         {
             this.Hide();
             Home.Instance.Show();
+        }
+
+        private void FirstName_TextChanged(object sender, EventArgs e)
+        {
+            SetInitials();
+        }
+
+        private void MiddleName_TextChanged(object sender, EventArgs e)
+        {
+            SetInitials();
+        }
+
+        private void LastName_TextChanged(object sender, EventArgs e)
+        {
+            SetInitials();
+        }
+
+        private void SetInitials()
+        {
+            
+            Initials.Text = $"{GetInitials(FirstName.Text)} {GetInitials(MiddleName.Text)} {GetInitials(LastName.Text)}";
+        }
+
+        private string GetInitials(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return "";
+            var values = value.Split(' ').Where(s => !string.IsNullOrWhiteSpace(s));
+            var initials = values.Select(s => s?[0]);
+            return string.Join(" ", initials);
         }
     }
 }
