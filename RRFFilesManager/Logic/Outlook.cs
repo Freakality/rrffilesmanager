@@ -15,12 +15,12 @@ namespace RRFFilesManager.Logic
             NewEmail(new[] { recipentsName }, subject, body, attachmentsPath);
         }
 
-        public static void NewEmail(string[] recipentsName, string subject, string body, string[] attachmentsPath = null)
+        public static bool NewEmail(string[] recipentsName, string subject, string body, string[] attachmentsPath = null)
         {
-            MailItem OutlookMessage;
-            var AppOutlook = new Microsoft.Office.Interop.Outlook.Application();
             try
             {
+                MailItem OutlookMessage;
+                var AppOutlook = new Microsoft.Office.Interop.Outlook.Application();
                 OutlookMessage = (MailItem)AppOutlook.CreateItem(OlItemType.olMailItem);
                 var Recipents = OutlookMessage.Recipients;
                 foreach (var recipent in recipentsName)
@@ -41,15 +41,12 @@ namespace RRFFilesManager.Logic
 
                 OutlookMessage.Display();
             }
-            catch
+            catch(System.Exception e)
             {
                 MessageBox.Show("Mail could not be sent");
+                return false;
             }
-            finally
-            {
-                OutlookMessage = null;
-                AppOutlook = null;
-            }
+            return true;
         }
     }
 }

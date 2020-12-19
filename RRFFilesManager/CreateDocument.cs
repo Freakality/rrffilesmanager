@@ -1,4 +1,5 @@
-﻿using RRFFilesManager.Abstractions;
+﻿using Microsoft.Office.Interop.Word;
+using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.FileControls;
 using RRFFilesManager.IntakeForm;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -19,9 +21,11 @@ namespace RRFFilesManager
     {
         private readonly ITemplateRepository _templateRepository;
         private readonly ArchiveManager _archiveManager;
-        private File File { get; set; }
+        private Abstractions.File File { get; set; }
 
-        private Template Template => (Template)TemplateName.SelectedItem;
+        private Archive Archive { get; set; }
+
+        private Abstractions.Template Template => (Abstractions.Template)TemplateName.SelectedItem;
         public CreateDocument()
         {
             _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
@@ -38,9 +42,10 @@ namespace RRFFilesManager
         {
             var findFileForm = sender as FindFile;
             SetForm(findFileForm.SelectedFile);
+            Archive = null;
         }
 
-        private void SetForm(File file)
+        private void SetForm(Abstractions.File file)
         {
             File = file;
             if (file == null)
@@ -48,38 +53,49 @@ namespace RRFFilesManager
             MatterTypeTextBox.Text = File.MatterType.ToString();
             FileNumberTextBox.Text = File.FileNumber.ToString();
 
-            var typesOfTemplates = _templateRepository.List(File.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
-            TypeTemplate.Items.AddRange(typesOfTemplates);
+            FillTypeOfTemplatesComboBox();
+
+            FillCategoryComboBox();
 
             TemplatesGroupBox.Visible = true;
+        }
+        private void FillTypeOfTemplatesComboBox()
+        {
+            var typesOfTemplates = _templateRepository.List(File.MatterType.ID)?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
+            TypeTemplate.Items.Clear();
+            TypeTemplate.Items.AddRange(typesOfTemplates);
+        }
+
+        private void FillCategoryComboBox()
+        {
+            TemplateName.ResetText();
+            Category.ResetText();
+            var categories = _templateRepository.List(File.MatterType.ID, null, TypeTemplate.Text)?.Select(s => s.Category).Distinct().ToArray();
+            Category.Items.Clear();
+            Category.Items.AddRange(categories);
+        }
+
+        private void FillTemplateNameComboBox()
+        {
+            TemplateName.DataSource = _templateRepository.List(File.MatterType.ID, Category.Text, TypeTemplate.Text);
+            TemplateName.DisplayMember = nameof(Template.TemplateName);
         }
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TemplateName.DataSource = _templateRepository.List(File.MatterType.ID, null, TypeTemplate.Text);
-            TemplateName.DisplayMember = nameof(Template.TemplateName);
+            FillCategoryComboBox();
         }
 
         private void TemplateName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var isItemSelected = TemplateName.SelectedItem != null;
-            Submit.Visible = isItemSelected;
-            SaveButton.Visible = isItemSelected;
+            var isItemSelected = TemplateName.SelectedItem != null && Archive == null;
+            CreateAndEditButton.Visible = isItemSelected;
         }
 
-        private void DocumentPreview_Click(object sender, EventArgs e)
+
+        public void SendDocument(string filePath)
         {
-
-        }
-
-        private void Submit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void SendDocument(Archive archive)
-        {
-            var attachmentPath = archive.Path;
+            var attachmentPath = filePath;
             string nameStr = $"{File.Client?.LastName}, {File.Client?.FirstName}";
             string signat = File.StaffInterviewer.Description;
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
@@ -104,28 +120,65 @@ namespace RRFFilesManager
             Home.Instance.Show();
         }
 
-        private void SaveAndSend_Click(object sender, EventArgs e)
+        private void CreateDocument_Load(object sender, EventArgs e)
         {
-            Submitting.Instance.Show();
-            var archive = _archiveManager.CreateAndAddArchive(File, Template);
-            SendDocument(archive);
-            Submitting.Instance.Hide();
-            Hide();
-            Home.Instance.Show();
+
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+        private void Category_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillTemplateNameComboBox();
+        }
+
+        private void Label74_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void CreateAndEditButton_Click(object sender, EventArgs e)
         {
             Submitting.Instance.Show();
-            _archiveManager.CreateAndAddArchive(File, Template);
+            Archive = _archiveManager.CreateAndAddArchive(File, Template);
+            Submitting.Instance.Hide();
+            var wordApp = new Microsoft.Office.Interop.Word.Application();
+            wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+            var document = wordApp?.Documents.Open(FileName: Archive.Path);
+            wordApp.Visible = true;
+            wordApp.DocumentBeforeClose += WordApp_DocumentBeforeClose;
+            wordApp.Quit();
+        }
+
+        private void WordApp_DocumentBeforeClose(Document Doc, ref bool Cancel)
+        {
+            this.Invoke(new MethodInvoker(delegate
+            {
+                SendWordButton.Visible = true;
+                SendPDFButton.Visible = true;
+                CreateAndEditButton.Visible = false;
+                Doc.Save();
+                var filename = $"{Path.GetFileNameWithoutExtension(Doc.Name)}.pdf";
+                var filepath = Path.Combine(Doc.Path, filename);
+                Doc.SaveAs2(FileName: filepath, FileFormat: WdSaveFormat.wdFormatPDF);
+            }));
+        }
+
+        private void SendPDFButton_Click(object sender, EventArgs e)
+        {
+            var filename = $"{Path.GetFileNameWithoutExtension(Archive.Path)}.pdf";
+            var filepath = Path.Combine(Path.GetDirectoryName(Archive.Path), filename);
+            SendDocument(filepath);
             Submitting.Instance.Hide();
             Close();
             Home.Instance.Show();
         }
 
-        private void CreateDocument_Load(object sender, EventArgs e)
+        private void SendWordButton_Click(object sender, EventArgs e)
         {
-
+            SendDocument(Archive.Path);
+            Submitting.Instance.Hide();
+            Close();
+            Home.Instance.Show();
         }
     }
 }

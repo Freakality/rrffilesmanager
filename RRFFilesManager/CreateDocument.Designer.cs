@@ -31,9 +31,6 @@
             System.Windows.Forms.Label DateOFCallLabel;
             System.Windows.Forms.Label label1;
             this.FindFileButton = new System.Windows.Forms.Button();
-            this.GroupBox32 = new System.Windows.Forms.GroupBox();
-            this.Label41 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.GroupBox90 = new System.Windows.Forms.GroupBox();
             this.IntakeInfo = new System.Windows.Forms.TableLayoutPanel();
             this.FileNumberTextBox = new System.Windows.Forms.TextBox();
@@ -43,15 +40,21 @@
             this.Label73 = new System.Windows.Forms.Label();
             this.TypeTemplate = new System.Windows.Forms.ComboBox();
             this.TemplateName = new System.Windows.Forms.ComboBox();
-            this.Submit = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
+            this.CreateAndEditButton = new System.Windows.Forms.Button();
+            this.Category = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.SendPDFButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.SendWordButton = new System.Windows.Forms.Button();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            this.GroupBox32.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.GroupBox90.SuspendLayout();
             this.IntakeInfo.SuspendLayout();
             this.TemplatesGroupBox.SuspendLayout();
+            this.PotentialClientInfoPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DateOFCallLabel
@@ -66,7 +69,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(553, 0);
+            label1.Location = new System.Drawing.Point(516, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(94, 17);
             label1.TabIndex = 145;
@@ -81,44 +84,11 @@
             this.FindFileButton.ForeColor = System.Drawing.Color.White;
             this.FindFileButton.Location = new System.Drawing.Point(29, 31);
             this.FindFileButton.Name = "FindFileButton";
-            this.FindFileButton.Size = new System.Drawing.Size(149, 36);
+            this.FindFileButton.Size = new System.Drawing.Size(77, 36);
             this.FindFileButton.TabIndex = 141;
             this.FindFileButton.Text = "Find File";
             this.FindFileButton.UseVisualStyleBackColor = false;
             this.FindFileButton.Click += new System.EventHandler(this.FindFileButton_Click);
-            // 
-            // GroupBox32
-            // 
-            this.GroupBox32.Controls.Add(this.Label41);
-            this.GroupBox32.Controls.Add(this.flowLayoutPanel1);
-            this.GroupBox32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GroupBox32.Location = new System.Drawing.Point(0, 0);
-            this.GroupBox32.Name = "GroupBox32";
-            this.GroupBox32.Size = new System.Drawing.Size(1334, 571);
-            this.GroupBox32.TabIndex = 142;
-            this.GroupBox32.TabStop = false;
-            // 
-            // Label41
-            // 
-            this.Label41.AutoSize = true;
-            this.Label41.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label41.Location = new System.Drawing.Point(0, 0);
-            this.Label41.Name = "Label41";
-            this.Label41.Size = new System.Drawing.Size(203, 26);
-            this.Label41.TabIndex = 3;
-            this.Label41.Text = "Create Document";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.GroupBox90);
-            this.flowLayoutPanel1.Controls.Add(this.TemplatesGroupBox);
-            this.flowLayoutPanel1.Controls.Add(this.Submit);
-            this.flowLayoutPanel1.Controls.Add(this.SaveButton);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1328, 552);
-            this.flowLayoutPanel1.TabIndex = 162;
             // 
             // GroupBox90
             // 
@@ -127,13 +97,13 @@
             this.GroupBox90.Controls.Add(this.IntakeInfo);
             this.GroupBox90.Controls.Add(this.FindFileButton);
             this.GroupBox90.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox90.Location = new System.Drawing.Point(15, 30);
+            this.GroupBox90.Location = new System.Drawing.Point(15, 49);
             this.GroupBox90.Margin = new System.Windows.Forms.Padding(15, 30, 3, 3);
             this.GroupBox90.Name = "GroupBox90";
-            this.GroupBox90.Size = new System.Drawing.Size(1304, 85);
+            this.GroupBox90.Size = new System.Drawing.Size(1232, 85);
             this.GroupBox90.TabIndex = 161;
             this.GroupBox90.TabStop = false;
-            this.GroupBox90.Text = "Intake";
+            this.GroupBox90.Text = "File";
             // 
             // IntakeInfo
             // 
@@ -152,41 +122,44 @@
             this.IntakeInfo.Name = "IntakeInfo";
             this.IntakeInfo.RowCount = 1;
             this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.IntakeInfo.Size = new System.Drawing.Size(1100, 35);
+            this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.IntakeInfo.Size = new System.Drawing.Size(1028, 35);
             this.IntakeInfo.TabIndex = 144;
             // 
             // FileNumberTextBox
             // 
             this.FileNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(718, 3);
+            this.FileNumberTextBox.Location = new System.Drawing.Point(670, 3);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
             this.FileNumberTextBox.ReadOnly = true;
-            this.FileNumberTextBox.Size = new System.Drawing.Size(379, 24);
+            this.FileNumberTextBox.Size = new System.Drawing.Size(355, 24);
             this.FileNumberTextBox.TabIndex = 143;
             // 
             // MatterTypeTextBox
             // 
             this.MatterTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(168, 3);
+            this.MatterTypeTextBox.Location = new System.Drawing.Point(157, 3);
             this.MatterTypeTextBox.Name = "MatterTypeTextBox";
             this.MatterTypeTextBox.ReadOnly = true;
-            this.MatterTypeTextBox.Size = new System.Drawing.Size(379, 24);
+            this.MatterTypeTextBox.Size = new System.Drawing.Size(353, 24);
             this.MatterTypeTextBox.TabIndex = 142;
             // 
             // TemplatesGroupBox
             // 
             this.TemplatesGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TemplatesGroupBox.Controls.Add(this.label2);
+            this.TemplatesGroupBox.Controls.Add(this.Category);
             this.TemplatesGroupBox.Controls.Add(this.Label74);
             this.TemplatesGroupBox.Controls.Add(this.Label73);
             this.TemplatesGroupBox.Controls.Add(this.TypeTemplate);
             this.TemplatesGroupBox.Controls.Add(this.TemplateName);
             this.TemplatesGroupBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TemplatesGroupBox.Location = new System.Drawing.Point(15, 133);
+            this.TemplatesGroupBox.Location = new System.Drawing.Point(15, 152);
             this.TemplatesGroupBox.Margin = new System.Windows.Forms.Padding(15, 15, 3, 3);
             this.TemplatesGroupBox.Name = "TemplatesGroupBox";
-            this.TemplatesGroupBox.Size = new System.Drawing.Size(1304, 132);
+            this.TemplatesGroupBox.Size = new System.Drawing.Size(1232, 132);
             this.TemplatesGroupBox.TabIndex = 159;
             this.TemplatesGroupBox.TabStop = false;
             this.TemplatesGroupBox.Text = "Templates";
@@ -196,11 +169,12 @@
             // 
             this.Label74.AutoSize = true;
             this.Label74.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label74.Location = new System.Drawing.Point(172, 52);
+            this.Label74.Location = new System.Drawing.Point(405, 53);
             this.Label74.Name = "Label74";
             this.Label74.Size = new System.Drawing.Size(102, 16);
             this.Label74.TabIndex = 160;
             this.Label74.Text = "Template Name";
+            this.Label74.Click += new System.EventHandler(this.Label74_Click);
             // 
             // Label73
             // 
@@ -224,45 +198,115 @@
             // TemplateName
             // 
             this.TemplateName.FormattingEnabled = true;
-            this.TemplateName.Location = new System.Drawing.Point(175, 72);
+            this.TemplateName.Location = new System.Drawing.Point(408, 72);
             this.TemplateName.Name = "TemplateName";
-            this.TemplateName.Size = new System.Drawing.Size(1057, 24);
+            this.TemplateName.Size = new System.Drawing.Size(824, 24);
             this.TemplateName.TabIndex = 158;
             this.TemplateName.SelectedIndexChanged += new System.EventHandler(this.TemplateName_SelectedIndexChanged);
             // 
-            // Submit
+            // CreateAndEditButton
             // 
-            this.Submit.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.Submit.BackColor = System.Drawing.Color.Maroon;
-            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Submit.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit.ForeColor = System.Drawing.Color.White;
-            this.Submit.Location = new System.Drawing.Point(30, 298);
-            this.Submit.Margin = new System.Windows.Forms.Padding(30, 30, 30, 3);
-            this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(274, 54);
-            this.Submit.TabIndex = 156;
-            this.Submit.Text = "Save and Send";
-            this.Submit.UseVisualStyleBackColor = false;
-            this.Submit.Visible = false;
-            this.Submit.Click += new System.EventHandler(this.SaveAndSend_Click);
+            this.CreateAndEditButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CreateAndEditButton.BackColor = System.Drawing.Color.Maroon;
+            this.CreateAndEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateAndEditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.CreateAndEditButton.ForeColor = System.Drawing.Color.White;
+            this.CreateAndEditButton.Location = new System.Drawing.Point(309, 3);
+            this.CreateAndEditButton.Name = "CreateAndEditButton";
+            this.CreateAndEditButton.Size = new System.Drawing.Size(146, 36);
+            this.CreateAndEditButton.TabIndex = 162;
+            this.CreateAndEditButton.Text = "Create and Edit";
+            this.CreateAndEditButton.UseVisualStyleBackColor = false;
+            this.CreateAndEditButton.Visible = false;
+            this.CreateAndEditButton.Click += new System.EventHandler(this.CreateAndEditButton_Click);
             // 
-            // SaveButton
+            // Category
             // 
-            this.SaveButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.SaveButton.BackColor = System.Drawing.Color.Maroon;
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.Location = new System.Drawing.Point(364, 298);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(30, 30, 30, 3);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(274, 54);
-            this.SaveButton.TabIndex = 162;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = false;
-            this.SaveButton.Visible = false;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.Category.FormattingEnabled = true;
+            this.Category.Location = new System.Drawing.Point(141, 72);
+            this.Category.Name = "Category";
+            this.Category.Size = new System.Drawing.Size(261, 24);
+            this.Category.TabIndex = 161;
+            this.Category.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(141, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.TabIndex = 162;
+            this.label2.Text = "Category";
+            // 
+            // PotentialClientInfoPanel
+            // 
+            this.PotentialClientInfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
+            this.PotentialClientInfoPanel.Controls.Add(this.flowLayoutPanel1);
+            this.PotentialClientInfoPanel.Controls.Add(this.label9);
+            this.PotentialClientInfoPanel.Controls.Add(this.GroupBox90);
+            this.PotentialClientInfoPanel.Controls.Add(this.TemplatesGroupBox);
+            this.PotentialClientInfoPanel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PotentialClientInfoPanel.Location = new System.Drawing.Point(34, 12);
+            this.PotentialClientInfoPanel.Name = "PotentialClientInfoPanel";
+            this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1266, 547);
+            this.PotentialClientInfoPanel.TabIndex = 164;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(203, 26);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Create Document";
+            // 
+            // SendPDFButton
+            // 
+            this.SendPDFButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.SendPDFButton.BackColor = System.Drawing.Color.Red;
+            this.SendPDFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SendPDFButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SendPDFButton.ForeColor = System.Drawing.Color.White;
+            this.SendPDFButton.Location = new System.Drawing.Point(157, 3);
+            this.SendPDFButton.Name = "SendPDFButton";
+            this.SendPDFButton.Size = new System.Drawing.Size(146, 36);
+            this.SendPDFButton.TabIndex = 163;
+            this.SendPDFButton.Text = "Send PDF";
+            this.SendPDFButton.UseVisualStyleBackColor = false;
+            this.SendPDFButton.Visible = false;
+            this.SendPDFButton.Click += new System.EventHandler(this.SendPDFButton_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.CreateAndEditButton);
+            this.flowLayoutPanel1.Controls.Add(this.SendPDFButton);
+            this.flowLayoutPanel1.Controls.Add(this.SendWordButton);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(789, 487);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(458, 43);
+            this.flowLayoutPanel1.TabIndex = 164;
+            // 
+            // SendWordButton
+            // 
+            this.SendWordButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.SendWordButton.BackColor = System.Drawing.Color.Navy;
+            this.SendWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SendWordButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SendWordButton.ForeColor = System.Drawing.Color.White;
+            this.SendWordButton.Location = new System.Drawing.Point(5, 3);
+            this.SendWordButton.Name = "SendWordButton";
+            this.SendWordButton.Size = new System.Drawing.Size(146, 36);
+            this.SendWordButton.TabIndex = 164;
+            this.SendWordButton.Text = "Send Word";
+            this.SendWordButton.UseVisualStyleBackColor = false;
+            this.SendWordButton.Visible = false;
+            this.SendWordButton.Click += new System.EventHandler(this.SendWordButton_Click);
             // 
             // CreateDocument
             // 
@@ -270,19 +314,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1334, 571);
-            this.Controls.Add(this.GroupBox32);
+            this.Controls.Add(this.PotentialClientInfoPanel);
             this.Name = "CreateDocument";
             this.Text = "CreateDocument";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateDocument_FormClosing);
             this.Load += new System.EventHandler(this.CreateDocument_Load);
-            this.GroupBox32.ResumeLayout(false);
-            this.GroupBox32.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.GroupBox90.ResumeLayout(false);
             this.IntakeInfo.ResumeLayout(false);
             this.IntakeInfo.PerformLayout();
             this.TemplatesGroupBox.ResumeLayout(false);
             this.TemplatesGroupBox.PerformLayout();
+            this.PotentialClientInfoPanel.ResumeLayout(false);
+            this.PotentialClientInfoPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -290,9 +334,6 @@
         #endregion
 
         private System.Windows.Forms.Button FindFileButton;
-        internal System.Windows.Forms.GroupBox GroupBox32;
-        internal System.Windows.Forms.Label Label41;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         internal System.Windows.Forms.GroupBox GroupBox90;
         private System.Windows.Forms.TableLayoutPanel IntakeInfo;
         private System.Windows.Forms.TextBox FileNumberTextBox;
@@ -302,7 +343,13 @@
         internal System.Windows.Forms.Label Label73;
         internal System.Windows.Forms.ComboBox TypeTemplate;
         internal System.Windows.Forms.ComboBox TemplateName;
-        internal System.Windows.Forms.Button Submit;
-        internal System.Windows.Forms.Button SaveButton;
+        internal System.Windows.Forms.Button CreateAndEditButton;
+        internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.ComboBox Category;
+        internal System.Windows.Forms.Panel PotentialClientInfoPanel;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.Button SendPDFButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        internal System.Windows.Forms.Button SendWordButton;
     }
 }
