@@ -49,10 +49,10 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchTextBox.Location = new System.Drawing.Point(9, 16);
+            this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchTextBox.Location = new System.Drawing.Point(3, 16);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(782, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(791, 20);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 

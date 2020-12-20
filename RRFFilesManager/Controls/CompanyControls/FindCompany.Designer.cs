@@ -30,9 +30,12 @@ namespace RRFFilesManager.Controls.CompanyControls
         private void InitializeComponent()
         {
             this.SearchBox = new System.Windows.Forms.GroupBox();
+            this.TableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.CreateCompanyButton = new System.Windows.Forms.Button();
             this.GridView = new System.Windows.Forms.DataGridView();
             this.SearchBox.SuspendLayout();
+            this.TableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +43,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.Controls.Add(this.SearchTextBox);
+            this.SearchBox.Controls.Add(this.TableLayoutPanel);
             this.SearchBox.Location = new System.Drawing.Point(0, 0);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(797, 45);
@@ -48,14 +51,42 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Search";
             // 
+            // TableLayoutPanel
+            // 
+            this.TableLayoutPanel.ColumnCount = 2;
+            this.TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.TableLayoutPanel.Controls.Add(this.SearchTextBox, 0, 0);
+            this.TableLayoutPanel.Controls.Add(this.CreateCompanyButton, 1, 0);
+            this.TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TableLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.TableLayoutPanel.Name = "TableLayoutPanel";
+            this.TableLayoutPanel.RowCount = 1;
+            this.TableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel.Size = new System.Drawing.Size(791, 26);
+            this.TableLayoutPanel.TabIndex = 1;
+            // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchTextBox.Location = new System.Drawing.Point(9, 16);
+            this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchTextBox.Location = new System.Drawing.Point(3, 3);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(782, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(685, 20);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
+            // 
+            // CreateCompanyButton
+            // 
+            this.CreateCompanyButton.BackColor = System.Drawing.SystemColors.Control;
+            this.CreateCompanyButton.ForeColor = System.Drawing.Color.Black;
+            this.CreateCompanyButton.Location = new System.Drawing.Point(694, 3);
+            this.CreateCompanyButton.Name = "CreateCompanyButton";
+            this.CreateCompanyButton.Size = new System.Drawing.Size(94, 20);
+            this.CreateCompanyButton.TabIndex = 1;
+            this.CreateCompanyButton.Text = "Create or Edit";
+            this.CreateCompanyButton.UseVisualStyleBackColor = false;
+            this.CreateCompanyButton.Visible = false;
+            this.CreateCompanyButton.Click += new System.EventHandler(this.CreateCompanyButton_Click);
             // 
             // GridView
             // 
@@ -69,6 +100,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.GridView.Size = new System.Drawing.Size(800, 406);
             this.GridView.TabIndex = 5;
             this.GridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellClick);
+            this.GridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellContentClick);
             // 
             // FindCompany
             // 
@@ -80,7 +112,8 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Name = "FindCompany";
             this.Text = "FindCompany";
             this.SearchBox.ResumeLayout(false);
-            this.SearchBox.PerformLayout();
+            this.TableLayoutPanel.ResumeLayout(false);
+            this.TableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -89,7 +122,9 @@ namespace RRFFilesManager.Controls.CompanyControls
         #endregion
 
         private System.Windows.Forms.GroupBox SearchBox;
-        private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.DataGridView GridView;
+        private System.Windows.Forms.TableLayoutPanel TableLayoutPanel;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Button CreateCompanyButton;
     }
 }

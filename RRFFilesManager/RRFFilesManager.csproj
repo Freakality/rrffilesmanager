@@ -245,6 +245,12 @@
     <Compile Include="Controls\ClientControls\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CompanyControls\CompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CompanyControls\CompanyInfo.Designer.cs">
+      <DependentUpon>CompanyInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CompanyControls\FindCompany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,6 +386,9 @@
     </Compile>
     <EmbeddedResource Include="Controls\ClientControls\ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CompanyControls\CompanyInfo.resx">
+      <DependentUpon>CompanyInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CompanyControls\FindCompany.resx">
       <DependentUpon>FindCompany.cs</DependentUpon>

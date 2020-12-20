@@ -25,8 +25,11 @@ namespace RRFFilesManager.Controls.CompanyControls
             GridView.DataSource = _companyRepository.Search(SearchTextBox.Text, 50);
         }
 
-        private static FindCompany instance;
-        public static FindCompany Instance => instance == null || instance.IsDisposed ? (instance = new FindCompany()) : instance;
+        public FindCompany(bool onlyFind) : this()
+        {
+            CreateCompanyButton.Visible = !onlyFind;
+        }
+
         public Company Selected { get; set; }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
@@ -43,6 +46,16 @@ namespace RRFFilesManager.Controls.CompanyControls
                 Selected = _companyRepository.GetById(id);
             }
             Close();
+        }
+
+        private void CreateCompanyButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

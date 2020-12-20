@@ -333,12 +333,12 @@
             // 
             this.FindCompanyButton.BackColor = System.Drawing.Color.Maroon;
             this.FindCompanyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindCompanyButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.FindCompanyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FindCompanyButton.ForeColor = System.Drawing.Color.White;
             this.FindCompanyButton.Location = new System.Drawing.Point(319, 3);
             this.FindCompanyButton.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.FindCompanyButton.Name = "FindCompanyButton";
-            this.FindCompanyButton.Size = new System.Drawing.Size(56, 29);
+            this.FindCompanyButton.Size = new System.Drawing.Size(56, 24);
             this.FindCompanyButton.TabIndex = 9;
             this.FindCompanyButton.Text = "Find";
             this.FindCompanyButton.UseVisualStyleBackColor = false;
