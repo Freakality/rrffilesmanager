@@ -245,6 +245,12 @@
     <Compile Include="Controls\ClientControls\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CompanyControls\FindCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CompanyControls\FindCompany.Designer.cs">
+      <DependentUpon>FindCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ContactControls\ContactInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,10 +263,10 @@
     <Compile Include="Controls\ContactControls\FindContact.Designer.cs">
       <DependentUpon>FindContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CreateDocument.cs">
+    <Compile Include="Controls\DocumentControls\CreateDocument.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\CreateDocument.Designer.cs">
+    <Compile Include="Controls\DocumentControls\CreateDocument.Designer.cs">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\TemplateControls\CreateTemplate.cs">
@@ -275,10 +281,10 @@
     <Compile Include="Controls\ClientControls\FindClient.Designer.cs">
       <DependentUpon>FindClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FileManager.cs">
+    <Compile Include="Controls\FileControls\FileManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\FileManager.Designer.cs">
+    <Compile Include="Controls\FileControls\FileManager.Designer.cs">
       <DependentUpon>FileManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileControls\FindFile.cs">
@@ -346,24 +352,24 @@
     <Compile Include="Logic\TemplateManager.cs" />
     <Compile Include="Logic\Utils.cs" />
     <Compile Include="Logic\Word.cs" />
-    <Compile Include="Controls\PleaseWait.cs">
+    <Compile Include="Controls\SharedControls\PleaseWait.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\PleaseWait.Designer.cs">
+    <Compile Include="Controls\SharedControls\PleaseWait.Designer.cs">
       <DependentUpon>PleaseWait.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controls\SplashScreen.cs">
+    <Compile Include="Controls\SharedControls\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\SplashScreen.Designer.cs">
+    <Compile Include="Controls\SharedControls\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Submitting.cs">
+    <Compile Include="Controls\SharedControls\Submitting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\Submitting.Designer.cs">
+    <Compile Include="Controls\SharedControls\Submitting.Designer.cs">
       <DependentUpon>Submitting.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\TemplateControls\FindTemplate.cs">
@@ -375,19 +381,22 @@
     <EmbeddedResource Include="Controls\ClientControls\ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CompanyControls\FindCompany.resx">
+      <DependentUpon>FindCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ContactControls\ContactInfo.resx">
       <DependentUpon>ContactInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ContactControls\FindContact.resx">
       <DependentUpon>FindContact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\CreateDocument.resx">
+    <EmbeddedResource Include="Controls\DocumentControls\CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TemplateControls\CreateTemplate.resx">
       <DependentUpon>CreateTemplate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FileManager.resx">
+    <EmbeddedResource Include="Controls\FileControls\FileManager.resx">
       <DependentUpon>FileManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ClientControls\FindClient.resx">
@@ -420,7 +429,7 @@
     <EmbeddedResource Include="Controls\IntakeControls\PreliminaryInfo.resx">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\PleaseWait.resx">
+    <EmbeddedResource Include="Controls\SharedControls\PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -433,10 +442,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Controls\SplashScreen.resx">
+    <EmbeddedResource Include="Controls\SharedControls\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Submitting.resx">
+    <EmbeddedResource Include="Controls\SharedControls\Submitting.resx">
       <DependentUpon>Submitting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TemplateControls\FindTemplate.resx">

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.TableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Company = new System.Windows.Forms.ComboBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.Label10 = new System.Windows.Forms.Label();
             this.City = new System.Windows.Forms.TextBox();
@@ -49,6 +48,9 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.CompanyTextBox = new System.Windows.Forms.TextBox();
+            this.FindCompanyButton = new System.Windows.Forms.Button();
             this.Label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Initials = new System.Windows.Forms.TextBox();
@@ -66,6 +68,7 @@
             this.FindContactButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
             this.TableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TableLayoutPanel4.SuspendLayout();
             this.ContactInfoPanel.SuspendLayout();
@@ -79,7 +82,6 @@
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.TableLayoutPanel3.Controls.Add(this.Company, 1, 3);
             this.TableLayoutPanel3.Controls.Add(this.Label8, 0, 4);
             this.TableLayoutPanel3.Controls.Add(this.Label10, 2, 4);
             this.TableLayoutPanel3.Controls.Add(this.City, 1, 5);
@@ -99,6 +101,7 @@
             this.TableLayoutPanel3.Controls.Add(this.Label6, 1, 2);
             this.TableLayoutPanel3.Controls.Add(this.Label7, 0, 2);
             this.TableLayoutPanel3.Controls.Add(this.label19, 2, 2);
+            this.TableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 1, 3);
             this.TableLayoutPanel3.Location = new System.Drawing.Point(32, 107);
             this.TableLayoutPanel3.Name = "TableLayoutPanel3";
             this.TableLayoutPanel3.RowCount = 8;
@@ -115,24 +118,6 @@
             this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.TableLayoutPanel3.Size = new System.Drawing.Size(1205, 236);
             this.TableLayoutPanel3.TabIndex = 1;
-            // 
-            // Company
-            // 
-            this.Company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Company.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.Company.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.Company.FormattingEnabled = true;
-            this.Company.Items.AddRange(new object[] {
-            "Miss",
-            "Ms.",
-            "Mr."});
-            this.Company.Location = new System.Drawing.Point(404, 83);
-            this.Company.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Company.MaxDropDownItems = 100;
-            this.Company.Name = "Company";
-            this.Company.Size = new System.Drawing.Size(378, 25);
-            this.Company.TabIndex = 8;
             // 
             // Label8
             // 
@@ -160,7 +145,7 @@
             this.City.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.City.Name = "City";
             this.City.Size = new System.Drawing.Size(378, 24);
-            this.City.TabIndex = 11;
+            this.City.TabIndex = 12;
             // 
             // Label9
             // 
@@ -246,7 +231,7 @@
             this.Street.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Street.Name = "Street";
             this.Street.Size = new System.Drawing.Size(380, 24);
-            this.Street.TabIndex = 9;
+            this.Street.TabIndex = 10;
             // 
             // Province
             // 
@@ -258,7 +243,7 @@
             this.Province.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Province.Name = "Province";
             this.Province.Size = new System.Drawing.Size(378, 25);
-            this.Province.TabIndex = 10;
+            this.Province.TabIndex = 11;
             this.Province.ValueMember = "Province";
             // 
             // PostalCode
@@ -269,7 +254,7 @@
             this.PostalCode.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PostalCode.Name = "PostalCode";
             this.PostalCode.Size = new System.Drawing.Size(380, 24);
-            this.PostalCode.TabIndex = 12;
+            this.PostalCode.TabIndex = 13;
             // 
             // PhoneNumber
             // 
@@ -280,7 +265,7 @@
             this.PhoneNumber.Mask = "(999) 000-0000";
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.Size = new System.Drawing.Size(378, 24);
-            this.PhoneNumber.TabIndex = 13;
+            this.PhoneNumber.TabIndex = 14;
             // 
             // FirstName
             // 
@@ -319,6 +304,45 @@
             this.label19.Size = new System.Drawing.Size(48, 18);
             this.label19.TabIndex = 35;
             this.label19.Text = "Street";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.CompanyTextBox, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.FindCompanyButton, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(404, 83);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(395, 35);
+            this.tableLayoutPanel2.TabIndex = 36;
+            // 
+            // CompanyTextBox
+            // 
+            this.CompanyTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CompanyTextBox.Enabled = false;
+            this.CompanyTextBox.Location = new System.Drawing.Point(3, 3);
+            this.CompanyTextBox.Name = "CompanyTextBox";
+            this.CompanyTextBox.Size = new System.Drawing.Size(310, 24);
+            this.CompanyTextBox.TabIndex = 8;
+            // 
+            // FindCompanyButton
+            // 
+            this.FindCompanyButton.BackColor = System.Drawing.Color.Maroon;
+            this.FindCompanyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindCompanyButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.FindCompanyButton.ForeColor = System.Drawing.Color.White;
+            this.FindCompanyButton.Location = new System.Drawing.Point(319, 3);
+            this.FindCompanyButton.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.FindCompanyButton.Name = "FindCompanyButton";
+            this.FindCompanyButton.Size = new System.Drawing.Size(56, 29);
+            this.FindCompanyButton.TabIndex = 9;
+            this.FindCompanyButton.Text = "Find";
+            this.FindCompanyButton.UseVisualStyleBackColor = false;
+            this.FindCompanyButton.Click += new System.EventHandler(this.FindCompanyButton_Click);
             // 
             // Label5
             // 
@@ -424,7 +448,7 @@
             this.OtherNotes.Multiline = true;
             this.OtherNotes.Name = "OtherNotes";
             this.OtherNotes.Size = new System.Drawing.Size(1199, 233);
-            this.OtherNotes.TabIndex = 14;
+            this.OtherNotes.TabIndex = 15;
             // 
             // TableLayoutPanel4
             // 
@@ -536,6 +560,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactInfo_FormClosing);
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.TableLayoutPanel4.ResumeLayout(false);
@@ -575,7 +601,6 @@
         internal System.Windows.Forms.TextBox OtherNotes;
         internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel4;
         internal System.Windows.Forms.Label label18;
-        internal System.Windows.Forms.ComboBox Company;
         internal System.Windows.Forms.Label label19;
         internal System.Windows.Forms.Panel ContactInfoPanel;
         private System.Windows.Forms.Button Cancel;
@@ -585,5 +610,8 @@
         internal System.Windows.Forms.TextBox Initials;
         internal System.Windows.Forms.Label label11;
         internal System.Windows.Forms.ComboBox Salutation;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox CompanyTextBox;
+        private System.Windows.Forms.Button FindCompanyButton;
     }
 }

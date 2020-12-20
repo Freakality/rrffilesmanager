@@ -38,8 +38,12 @@ namespace RRFFilesManager.ContactForm
 
         private void ContactsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var contactId = int.Parse(ContactsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            Selected = _contactRepository.GetById(contactId);
+            var selectedRows = ContactsGridView?.SelectedRows;
+            if (selectedRows?.Count > 0)
+            {
+                var contactId = int.Parse(ContactsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
+                Selected = _contactRepository.GetById(contactId);
+            }
             Close();
         }
     }

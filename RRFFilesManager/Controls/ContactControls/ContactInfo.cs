@@ -1,4 +1,5 @@
 ﻿using RRFFilesManager.Abstractions;
+using RRFFilesManager.Controls.CompanyControls;
 using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Logic;
 using System;
@@ -28,6 +29,7 @@ namespace RRFFilesManager.ContactForm
             //Utils.SetComboBoxDataSource(Company, _companyRepository.List().Take(10));
         }
         public Contact Contact { get; set; }
+        public Company Company { get; set; }
         private void FindContactButton_Click(object sender, EventArgs e)
         {
             FindContact.Instance.Show();
@@ -50,7 +52,7 @@ namespace RRFFilesManager.ContactForm
             contact.MiddleName = MiddleName.Text;
             contact.LastName = LastName.Text;
             contact.Email = Email.Text;
-            contact.Company = (Company)Company.SelectedItem;
+            contact.Company = Company;
             contact.Province = (Province)Province.SelectedItem;
             contact.Street = Street.Text;
             contact.City = City.Text;
@@ -70,7 +72,7 @@ namespace RRFFilesManager.ContactForm
             MiddleName.Text = contact.MiddleName;
             LastName.Text = contact.LastName;
             Email.Text = contact.Email;
-            Company.SelectedItem = contact.Company;
+            Company = contact.Company;
             Province.SelectedItem = contact.Province;
             Street.Text = contact.Street;
             City.Text = contact.City;
@@ -198,5 +200,18 @@ namespace RRFFilesManager.ContactForm
             var initials = values.Select(s => s?[0]);
             return string.Join(" ", initials);
         }
+
+        private void FindCompanyButton_Click(object sender, EventArgs e)
+        {
+            FindCompany.Instance.Show();
+            FindCompany.Instance.FormClosing += new FormClosingEventHandler(this.FindCompany_FormClosing);
+        }
+
+        private void FindCompany_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var findCompanyForm = sender as FindCompany;
+            Company = findCompanyForm.Selected;
+        }
+
     }
 }

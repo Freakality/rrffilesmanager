@@ -55,5 +55,19 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
 
         }
+
+        public IEnumerable<Company> Search(string searchText, int? take = null)
+        {
+            var query = _context.Companies.Where(s =>
+                s.Description.Contains(searchText) ||
+                s.Email.Contains(searchText) ||
+                s.ID.ToString().Contains(searchText)
+            );
+            if (take != null)
+            {
+                query = query.Take(take.Value);
+            }
+            return query.ToList();
+        }
     }
 }

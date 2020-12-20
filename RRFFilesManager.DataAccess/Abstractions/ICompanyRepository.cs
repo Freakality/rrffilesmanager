@@ -14,5 +14,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void SoftDelete(int companyId);
         Company GetById(int companyId);
         IEnumerable<Company> List();
+        IEnumerable<Company> Search(string searchText, int? take = null);
     }
 }

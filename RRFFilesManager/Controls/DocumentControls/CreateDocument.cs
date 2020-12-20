@@ -146,7 +146,6 @@ namespace RRFFilesManager
             var document = wordApp?.Documents.Open(FileName: Archive.Path);
             wordApp.Visible = true;
             wordApp.DocumentBeforeClose += WordApp_DocumentBeforeClose;
-            wordApp.Quit();
         }
 
         private void WordApp_DocumentBeforeClose(Document Doc, ref bool Cancel)
@@ -160,6 +159,7 @@ namespace RRFFilesManager
                 var filename = $"{Path.GetFileNameWithoutExtension(Doc.Name)}.pdf";
                 var filepath = Path.Combine(Doc.Path, filename);
                 Doc.SaveAs2(FileName: filepath, FileFormat: WdSaveFormat.wdFormatPDF);
+                Doc.Application.Quit();
             }));
         }
 
@@ -177,6 +177,12 @@ namespace RRFFilesManager
         {
             SendDocument(Archive.Path);
             Submitting.Instance.Hide();
+            Close();
+            Home.Instance.Show();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
             Close();
             Home.Instance.Show();
         }

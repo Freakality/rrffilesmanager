@@ -36,18 +36,19 @@
             this.FileNumberTextBox = new System.Windows.Forms.TextBox();
             this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
             this.TemplatesGroupBox = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Category = new System.Windows.Forms.ComboBox();
             this.Label74 = new System.Windows.Forms.Label();
             this.Label73 = new System.Windows.Forms.Label();
             this.TypeTemplate = new System.Windows.Forms.ComboBox();
             this.TemplateName = new System.Windows.Forms.ComboBox();
             this.CreateAndEditButton = new System.Windows.Forms.Button();
-            this.Category = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.SendPDFButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.SendPDFButton = new System.Windows.Forms.Button();
             this.SendWordButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Cancel = new System.Windows.Forms.Button();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             this.GroupBox90.SuspendLayout();
@@ -122,7 +123,7 @@
             this.IntakeInfo.Name = "IntakeInfo";
             this.IntakeInfo.RowCount = 1;
             this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.IntakeInfo.Size = new System.Drawing.Size(1028, 35);
             this.IntakeInfo.TabIndex = 144;
             // 
@@ -165,6 +166,25 @@
             this.TemplatesGroupBox.Text = "Templates";
             this.TemplatesGroupBox.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(141, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.TabIndex = 162;
+            this.label2.Text = "Category";
+            // 
+            // Category
+            // 
+            this.Category.FormattingEnabled = true;
+            this.Category.Location = new System.Drawing.Point(141, 72);
+            this.Category.Name = "Category";
+            this.Category.Size = new System.Drawing.Size(261, 24);
+            this.Category.TabIndex = 161;
+            this.Category.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
+            // 
             // Label74
             // 
             this.Label74.AutoSize = true;
@@ -200,7 +220,7 @@
             this.TemplateName.FormattingEnabled = true;
             this.TemplateName.Location = new System.Drawing.Point(408, 72);
             this.TemplateName.Name = "TemplateName";
-            this.TemplateName.Size = new System.Drawing.Size(824, 24);
+            this.TemplateName.Size = new System.Drawing.Size(804, 24);
             this.TemplateName.TabIndex = 158;
             this.TemplateName.SelectedIndexChanged += new System.EventHandler(this.TemplateName_SelectedIndexChanged);
             // 
@@ -220,31 +240,13 @@
             this.CreateAndEditButton.Visible = false;
             this.CreateAndEditButton.Click += new System.EventHandler(this.CreateAndEditButton_Click);
             // 
-            // Category
-            // 
-            this.Category.FormattingEnabled = true;
-            this.Category.Location = new System.Drawing.Point(141, 72);
-            this.Category.Name = "Category";
-            this.Category.Size = new System.Drawing.Size(261, 24);
-            this.Category.TabIndex = 161;
-            this.Category.SelectedIndexChanged += new System.EventHandler(this.Category_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(141, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
-            this.label2.TabIndex = 162;
-            this.label2.Text = "Category";
-            // 
             // PotentialClientInfoPanel
             // 
             this.PotentialClientInfoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
+            this.PotentialClientInfoPanel.Controls.Add(this.Cancel);
             this.PotentialClientInfoPanel.Controls.Add(this.flowLayoutPanel1);
             this.PotentialClientInfoPanel.Controls.Add(this.label9);
             this.PotentialClientInfoPanel.Controls.Add(this.GroupBox90);
@@ -255,15 +257,16 @@
             this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1266, 547);
             this.PotentialClientInfoPanel.TabIndex = 164;
             // 
-            // label9
+            // flowLayoutPanel1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(203, 26);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Create Document";
+            this.flowLayoutPanel1.Controls.Add(this.CreateAndEditButton);
+            this.flowLayoutPanel1.Controls.Add(this.SendPDFButton);
+            this.flowLayoutPanel1.Controls.Add(this.SendWordButton);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(789, 498);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(458, 42);
+            this.flowLayoutPanel1.TabIndex = 164;
             // 
             // SendPDFButton
             // 
@@ -281,17 +284,6 @@
             this.SendPDFButton.Visible = false;
             this.SendPDFButton.Click += new System.EventHandler(this.SendPDFButton_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.CreateAndEditButton);
-            this.flowLayoutPanel1.Controls.Add(this.SendPDFButton);
-            this.flowLayoutPanel1.Controls.Add(this.SendWordButton);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(789, 487);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(458, 43);
-            this.flowLayoutPanel1.TabIndex = 164;
-            // 
             // SendWordButton
             // 
             this.SendWordButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -307,6 +299,30 @@
             this.SendWordButton.UseVisualStyleBackColor = false;
             this.SendWordButton.Visible = false;
             this.SendWordButton.Click += new System.EventHandler(this.SendWordButton_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(203, 26);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Create Document";
+            // 
+            // Cancel
+            // 
+            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Cancel.BackColor = System.Drawing.Color.Maroon;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.ForeColor = System.Drawing.Color.White;
+            this.Cancel.Location = new System.Drawing.Point(25, 501);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(97, 36);
+            this.Cancel.TabIndex = 165;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // CreateDocument
             // 
@@ -351,5 +367,6 @@
         internal System.Windows.Forms.Button SendPDFButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         internal System.Windows.Forms.Button SendWordButton;
+        private System.Windows.Forms.Button Cancel;
     }
 }

@@ -66,9 +66,13 @@ namespace RRFFilesManager.FileControls
 
         private void GridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var fileId = int.Parse(GridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var file = _fileRepository.GetById(fileId);
-            SelectedFile = file;
+            var selectedRows = GridView?.SelectedRows;
+            if (selectedRows?.Count > 0)
+            {
+                var fileId = int.Parse(GridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
+                var file = _fileRepository.GetById(fileId);
+                SelectedFile = file;
+            }
             Close();
         }
 

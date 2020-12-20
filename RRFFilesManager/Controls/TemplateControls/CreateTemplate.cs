@@ -254,5 +254,11 @@ namespace RRFFilesManager
             else
                 _templateRepository.Update(Template);
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
+            Home.Instance.Show();
+        }
     }
 }
