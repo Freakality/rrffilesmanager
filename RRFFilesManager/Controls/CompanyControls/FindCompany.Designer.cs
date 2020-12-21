@@ -83,7 +83,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.CreateCompanyButton.Name = "CreateCompanyButton";
             this.CreateCompanyButton.Size = new System.Drawing.Size(94, 20);
             this.CreateCompanyButton.TabIndex = 1;
-            this.CreateCompanyButton.Text = "Create or Edit";
+            this.CreateCompanyButton.Text = "Create";
             this.CreateCompanyButton.UseVisualStyleBackColor = false;
             this.CreateCompanyButton.Visible = false;
             this.CreateCompanyButton.Click += new System.EventHandler(this.CreateCompanyButton_Click);

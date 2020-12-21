@@ -553,7 +553,7 @@
             this.TableLayoutPanel9.ColumnCount = 3;
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
-            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.TableLayoutPanel9.Controls.Add(this.Label70, 0, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label71, 1, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label72, 2, 0);
@@ -584,7 +584,7 @@
             // 
             this.Label71.AutoSize = true;
             this.Label71.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label71.Location = new System.Drawing.Point(72, 0);
+            this.Label71.Location = new System.Drawing.Point(71, 0);
             this.Label71.Name = "Label71";
             this.Label71.Size = new System.Drawing.Size(44, 13);
             this.Label71.TabIndex = 35;
@@ -594,7 +594,7 @@
             // 
             this.Label72.AutoSize = true;
             this.Label72.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label72.Location = new System.Drawing.Point(184, 0);
+            this.Label72.Location = new System.Drawing.Point(182, 0);
             this.Label72.Name = "Label72";
             this.Label72.Size = new System.Drawing.Size(30, 13);
             this.Label72.TabIndex = 36;
@@ -618,9 +618,9 @@
             "October",
             "November",
             "December"});
-            this.MonthBirth.Location = new System.Drawing.Point(72, 16);
+            this.MonthBirth.Location = new System.Drawing.Point(71, 16);
             this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(106, 25);
+            this.MonthBirth.Size = new System.Drawing.Size(105, 25);
             this.MonthBirth.TabIndex = 38;
             // 
             // YearBirth
@@ -630,7 +630,7 @@
             this.YearBirth.Location = new System.Drawing.Point(3, 16);
             this.YearBirth.Mask = "0000";
             this.YearBirth.Name = "YearBirth";
-            this.YearBirth.Size = new System.Drawing.Size(63, 24);
+            this.YearBirth.Size = new System.Drawing.Size(62, 24);
             this.YearBirth.TabIndex = 40;
             this.YearBirth.ValidatingType = typeof(int);
             // 
@@ -673,10 +673,10 @@
             "29",
             "30",
             "31"});
-            this.DayBirth.Location = new System.Drawing.Point(184, 16);
+            this.DayBirth.Location = new System.Drawing.Point(182, 16);
             this.DayBirth.MaxDropDownItems = 11;
             this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(110, 25);
+            this.DayBirth.Size = new System.Drawing.Size(112, 25);
             this.DayBirth.TabIndex = 41;
             // 
             // PhotoPictureBox

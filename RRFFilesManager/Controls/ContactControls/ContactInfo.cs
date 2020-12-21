@@ -203,14 +203,18 @@ namespace RRFFilesManager.ContactForm
 
         private void FindCompanyButton_Click(object sender, EventArgs e)
         {
-            FindCompany.Instance.Show();
-            FindCompany.Instance.FormClosing += new FormClosingEventHandler(this.FindCompany_FormClosing);
+            var findCompany = new FindCompany(true);
+            findCompany.Show();
+            findCompany.FormClosing += new FormClosingEventHandler(this.FindCompany_FormClosing);
         }
 
         private void FindCompany_FormClosing(object sender, FormClosingEventArgs e)
         {
             var findCompanyForm = sender as FindCompany;
             Company = findCompanyForm.Selected;
+            if (Company == null)
+                return;
+            CompanyTextBox.Text = Company.Description;
         }
 
     }
