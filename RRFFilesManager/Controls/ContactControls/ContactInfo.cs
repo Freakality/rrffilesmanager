@@ -54,7 +54,8 @@ namespace RRFFilesManager.ContactForm
             contact.Email = Email.Text;
             contact.Company = Company;
             contact.Province = (Province)Province.SelectedItem;
-            contact.Street = Street.Text;
+            contact.AddressLine1 = AddressLine1.Text;
+            contact.AddressLine2 = AddressLine2.Text;
             contact.City = City.Text;
             contact.PostalCode = PostalCode.Text;
             contact.Phone = PhoneNumber.Text;
@@ -74,7 +75,8 @@ namespace RRFFilesManager.ContactForm
             Email.Text = contact.Email;
             Company = contact.Company;
             Province.SelectedItem = contact.Province;
-            Street.Text = contact.Street;
+            AddressLine1.Text = contact.AddressLine1;
+            AddressLine2.Text = contact.AddressLine2;
             City.Text = contact.City;
             PostalCode.Text = contact.PostalCode;
             PhoneNumber.Text = contact.Phone;

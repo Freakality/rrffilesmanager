@@ -226,6 +226,10 @@
     <Compile Include="Migrations\20201209042345_Archives2.designer.cs">
       <DependentUpon>20201209042345_Archives2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20201222002407_Contacts_Address.cs" />
+    <Compile Include="Migrations\20201222002407_Contacts_Address.designer.cs">
+      <DependentUpon>20201222002407_Contacts_Address.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="MobileCarrierRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
