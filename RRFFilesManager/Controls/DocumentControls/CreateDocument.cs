@@ -141,6 +141,11 @@ namespace RRFFilesManager
             Submitting.Instance.Show();
             Archive = _archiveManager.CreateAndAddArchive(File, Template);
             Submitting.Instance.Hide();
+            EditArchiveDocument();
+        }
+
+        private void EditArchiveDocument()
+        {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
             var document = wordApp?.Documents.Open(FileName: Archive.Path);
@@ -152,9 +157,10 @@ namespace RRFFilesManager
         {
             this.Invoke(new MethodInvoker(delegate
             {
-                SendWordButton.Visible = true;
-                SendPDFButton.Visible = true;
-                CreateAndEditButton.Visible = false;
+                SendWordButton.Show();
+                SendPDFButton.Show();
+                EditButton.Show();
+                CreateAndEditButton.Hide();
                 Doc.Save();
                 var filename = $"{Path.GetFileNameWithoutExtension(Doc.Name)}.pdf";
                 var filepath = Path.Combine(Doc.Path, filename);
@@ -185,6 +191,11 @@ namespace RRFFilesManager
         {
             Close();
             Home.Instance.Show();
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            EditArchiveDocument();
         }
     }
 }
