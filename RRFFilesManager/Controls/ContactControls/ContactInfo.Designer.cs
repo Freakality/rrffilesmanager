@@ -226,7 +226,7 @@
             this.Email.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(378, 24);
-            this.Email.TabIndex = 7;
+            this.Email.TabIndex = 15;
             // 
             // Province
             // 
@@ -322,7 +322,7 @@
             this.CompanyTextBox.Location = new System.Drawing.Point(3, 3);
             this.CompanyTextBox.Name = "CompanyTextBox";
             this.CompanyTextBox.Size = new System.Drawing.Size(310, 24);
-            this.CompanyTextBox.TabIndex = 8;
+            this.CompanyTextBox.TabIndex = 7;
             // 
             // FindCompanyButton
             // 
@@ -334,7 +334,7 @@
             this.FindCompanyButton.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.FindCompanyButton.Name = "FindCompanyButton";
             this.FindCompanyButton.Size = new System.Drawing.Size(56, 24);
-            this.FindCompanyButton.TabIndex = 9;
+            this.FindCompanyButton.TabIndex = 8;
             this.FindCompanyButton.Text = "Find";
             this.FindCompanyButton.UseVisualStyleBackColor = false;
             this.FindCompanyButton.Click += new System.EventHandler(this.FindCompanyButton_Click);
@@ -443,7 +443,7 @@
             this.OtherNotes.Multiline = true;
             this.OtherNotes.Name = "OtherNotes";
             this.OtherNotes.Size = new System.Drawing.Size(1199, 233);
-            this.OtherNotes.TabIndex = 15;
+            this.OtherNotes.TabIndex = 16;
             // 
             // TableLayoutPanel4
             // 
@@ -500,7 +500,7 @@
             this.Cancel.Location = new System.Drawing.Point(25, 666);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(97, 36);
-            this.Cancel.TabIndex = 16;
+            this.Cancel.TabIndex = 17;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = false;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -514,7 +514,7 @@
             this.Save.Location = new System.Drawing.Point(1140, 666);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(97, 36);
-            this.Save.TabIndex = 15;
+            this.Save.TabIndex = 18;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
@@ -559,7 +559,7 @@
             this.AddressLine1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.AddressLine1.Name = "AddressLine1";
             this.AddressLine1.Size = new System.Drawing.Size(378, 24);
-            this.AddressLine1.TabIndex = 10;
+            this.AddressLine1.TabIndex = 9;
             // 
             // AddressLine2
             // 
@@ -568,7 +568,7 @@
             this.AddressLine2.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.AddressLine2.Name = "AddressLine2";
             this.AddressLine2.Size = new System.Drawing.Size(380, 24);
-            this.AddressLine2.TabIndex = 38;
+            this.AddressLine2.TabIndex = 10;
             // 
             // ContactInfo
             // 
