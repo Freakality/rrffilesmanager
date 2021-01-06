@@ -68,6 +68,8 @@ namespace RRFFilesManager.Controls.CompanyControls
                 return;
             company.Description = Description.Text;
             company.Phone = PhoneNumber.Text;
+            company.Fax = Fax.Text;
+            company.Extension = Extension.Text;
             company.Email = Email.Text;
             company.Province = (Province)Province.SelectedItem;
             company.City = City.Text;
@@ -83,6 +85,8 @@ namespace RRFFilesManager.Controls.CompanyControls
                 return;
             Description.Text = company.Description;
             PhoneNumber.Text = company.Phone;
+            Fax.Text = company.Fax;
+            Extension.Text = company.Extension;
             Email.Text = company.Email;
             Province.SelectedItem = company.Province;
             City.Text = company.City;

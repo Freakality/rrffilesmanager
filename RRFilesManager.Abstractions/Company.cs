@@ -12,6 +12,8 @@ namespace RRFFilesManager.Abstractions
         public string Description { get; set; }
         public string Memo { get; set; }
         public string Phone { get; set; }
+        public string Extension { get; set; }
+        public string Fax { get; set; }
         public string Email { get; set; }
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }

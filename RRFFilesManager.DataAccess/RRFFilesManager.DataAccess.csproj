@@ -230,6 +230,14 @@
     <Compile Include="Migrations\20201222002407_Contacts_Address.designer.cs">
       <DependentUpon>20201222002407_Contacts_Address.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210106005000_CompanyAddresses_ContactsFax.cs" />
+    <Compile Include="Migrations\20210106005000_CompanyAddresses_ContactsFax.designer.cs">
+      <DependentUpon>20210106005000_CompanyAddresses_ContactsFax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210106122154_CompanyFax.cs" />
+    <Compile Include="Migrations\20210106122154_CompanyFax.designer.cs">
+      <DependentUpon>20210106122154_CompanyFax.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="MobileCarrierRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
