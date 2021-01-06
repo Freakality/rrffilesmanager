@@ -9,7 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace RRFFilesManager.ContactForm
@@ -29,7 +29,15 @@ namespace RRFFilesManager.ContactForm
             //Utils.SetComboBoxDataSource(Company, _companyRepository.List().Take(10));
         }
         public Contact Contact { get; set; }
-        public Company Company { get; set; }
+        private Company company;
+        public Company Company 
+        { 
+            get => company; 
+            set {
+                company = value;
+                FillForm(company);
+            }
+        }
         private void FindContactButton_Click(object sender, EventArgs e)
         {
             FindContact.Instance.Show();
@@ -59,6 +67,8 @@ namespace RRFFilesManager.ContactForm
             contact.City = City.Text;
             contact.PostalCode = PostalCode.Text;
             contact.Phone = PhoneNumber.Text;
+            contact.Extension = Extension.Text;
+            contact.Fax = Fax.Text;
             contact.Memo = OtherNotes.Text;
         }
 
@@ -80,8 +90,23 @@ namespace RRFFilesManager.ContactForm
             City.Text = contact.City;
             PostalCode.Text = contact.PostalCode;
             PhoneNumber.Text = contact.Phone;
+            Extension.Text = contact.Extension;
+            Fax.Text = contact.Fax;
             OtherNotes.Text = contact.Memo;
         }
+
+        public void FillForm(Company company)
+        {
+            if (company == null)
+                return;
+            Province.SelectedItem = company.Province;
+            AddressLine1.Text = company.AddressLine1;
+            AddressLine2.Text = company.AddressLine2;
+            City.Text = company.City;
+            PostalCode.Text = company.PostalCode;
+        }
+
+
         public void UpsertContact()
         {
             if (Contact == null)
@@ -190,8 +215,10 @@ namespace RRFFilesManager.ContactForm
 
         private void SetInitials()
         {
-            
-            Initials.Text = $"{GetInitials(FirstName.Text)} {GetInitials(MiddleName.Text)} {GetInitials(LastName.Text)}";
+            var initials = $"{GetInitials(FirstName.Text)} {GetInitials(MiddleName.Text)} {GetInitials(LastName.Text)}";
+            RegexOptions options = RegexOptions.None;
+            Regex regex = new Regex("[ ]{2,}", options);
+            Initials.Text = regex.Replace(initials, " ");
         }
 
         private string GetInitials(string value)

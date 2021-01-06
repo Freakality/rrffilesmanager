@@ -35,24 +35,26 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Memo = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Label2 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Street = new System.Windows.Forms.TextBox();
             this.Description = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Email = new System.Windows.Forms.TextBox();
-            this.Label4 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             this.Province = new System.Windows.Forms.ComboBox();
             this.City = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.AddressLine1 = new System.Windows.Forms.TextBox();
+            this.Label4 = new System.Windows.Forms.Label();
             this.PostalCode = new System.Windows.Forms.TextBox();
+            this.Label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.PhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.TextBox();
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.FindCompany = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
+            this.AddressLine2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.PotentialClientInfoPanel.SuspendLayout();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
@@ -121,21 +123,23 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.TableLayoutPanel3.Controls.Add(this.label3, 2, 0);
+            this.TableLayoutPanel3.Controls.Add(this.AddressLine2, 2, 1);
             this.TableLayoutPanel3.Controls.Add(this.Label2, 0, 0);
-            this.TableLayoutPanel3.Controls.Add(this.Label3, 1, 0);
-            this.TableLayoutPanel3.Controls.Add(this.Street, 2, 3);
             this.TableLayoutPanel3.Controls.Add(this.Description, 0, 1);
-            this.TableLayoutPanel3.Controls.Add(this.label19, 2, 2);
-            this.TableLayoutPanel3.Controls.Add(this.Label7, 2, 0);
-            this.TableLayoutPanel3.Controls.Add(this.Email, 2, 1);
-            this.TableLayoutPanel3.Controls.Add(this.Label4, 1, 4);
             this.TableLayoutPanel3.Controls.Add(this.Label8, 0, 2);
             this.TableLayoutPanel3.Controls.Add(this.Province, 0, 3);
             this.TableLayoutPanel3.Controls.Add(this.City, 1, 3);
             this.TableLayoutPanel3.Controls.Add(this.label1, 1, 2);
-            this.TableLayoutPanel3.Controls.Add(this.Label10, 0, 4);
-            this.TableLayoutPanel3.Controls.Add(this.PostalCode, 0, 5);
-            this.TableLayoutPanel3.Controls.Add(this.PhoneNumber, 1, 1);
+            this.TableLayoutPanel3.Controls.Add(this.label19, 1, 0);
+            this.TableLayoutPanel3.Controls.Add(this.AddressLine1, 1, 1);
+            this.TableLayoutPanel3.Controls.Add(this.Label4, 2, 5);
+            this.TableLayoutPanel3.Controls.Add(this.PostalCode, 2, 3);
+            this.TableLayoutPanel3.Controls.Add(this.Label10, 2, 2);
+            this.TableLayoutPanel3.Controls.Add(this.label5, 0, 4);
+            this.TableLayoutPanel3.Controls.Add(this.PhoneNumber, 0, 5);
+            this.TableLayoutPanel3.Controls.Add(this.Label7, 1, 4);
+            this.TableLayoutPanel3.Controls.Add(this.Email, 1, 5);
             this.TableLayoutPanel3.Location = new System.Drawing.Point(32, 46);
             this.TableLayoutPanel3.Name = "TableLayoutPanel3";
             this.TableLayoutPanel3.RowCount = 6;
@@ -162,69 +166,14 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Label2.TabIndex = 0;
             this.Label2.Text = "Description";
             // 
-            // Label3
-            // 
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(327, 0);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(112, 16);
-            this.Label3.TabIndex = 1;
-            this.Label3.Text = "Phone Number";
-            // 
-            // Street
-            // 
-            this.Street.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Street.Location = new System.Drawing.Point(651, 83);
-            this.Street.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Street.Name = "Street";
-            this.Street.Size = new System.Drawing.Size(302, 24);
-            this.Street.TabIndex = 10;
-            // 
             // Description
             // 
-            this.Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Description.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Description.Location = new System.Drawing.Point(3, 19);
             this.Description.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(301, 24);
             this.Description.TabIndex = 4;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(651, 62);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 18);
-            this.label19.TabIndex = 35;
-            this.label19.Text = "Street";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(651, 0);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 16);
-            this.Label7.TabIndex = 8;
-            this.Label7.Text = "Email";
-            // 
-            // Email
-            // 
-            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Email.Location = new System.Drawing.Point(651, 19);
-            this.Email.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(302, 24);
-            this.Email.TabIndex = 7;
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(327, 121);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(0, 18);
-            this.Label4.TabIndex = 2;
             // 
             // Label8
             // 
@@ -237,9 +186,8 @@ namespace RRFFilesManager.Controls.CompanyControls
             // 
             // Province
             // 
-            this.Province.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Province.DisplayMember = "Province";
+            this.Province.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Province.FormattingEnabled = true;
             this.Province.Location = new System.Drawing.Point(3, 83);
             this.Province.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
@@ -250,8 +198,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             // 
             // City
             // 
-            this.City.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.City.Dock = System.Windows.Forms.DockStyle.Fill;
             this.City.Location = new System.Drawing.Point(327, 83);
             this.City.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.City.Name = "City";
@@ -267,35 +214,89 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.label1.TabIndex = 36;
             this.label1.Text = "City";
             // 
-            // Label10
+            // label19
             // 
-            this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(3, 121);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(92, 18);
-            this.Label10.TabIndex = 14;
-            this.Label10.Text = "Postal Code";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(327, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(104, 16);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Address Line 1";
+            // 
+            // AddressLine1
+            // 
+            this.AddressLine1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddressLine1.Location = new System.Drawing.Point(327, 19);
+            this.AddressLine1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.AddressLine1.Name = "AddressLine1";
+            this.AddressLine1.Size = new System.Drawing.Size(301, 24);
+            this.AddressLine1.TabIndex = 10;
+            // 
+            // Label4
+            // 
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(651, 139);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(0, 19);
+            this.Label4.TabIndex = 2;
             // 
             // PostalCode
             // 
             this.PostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PostalCode.Location = new System.Drawing.Point(3, 142);
+            this.PostalCode.Location = new System.Drawing.Point(651, 83);
             this.PostalCode.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PostalCode.Name = "PostalCode";
-            this.PostalCode.Size = new System.Drawing.Size(301, 24);
+            this.PostalCode.Size = new System.Drawing.Size(302, 24);
             this.PostalCode.TabIndex = 13;
+            // 
+            // Label10
+            // 
+            this.Label10.AutoSize = true;
+            this.Label10.Location = new System.Drawing.Point(651, 62);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(92, 18);
+            this.Label10.TabIndex = 14;
+            this.Label10.Text = "Postal Code";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 18);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Phone Number";
             // 
             // PhoneNumber
             // 
             this.PhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhoneNumber.Location = new System.Drawing.Point(327, 19);
+            this.PhoneNumber.Location = new System.Drawing.Point(3, 142);
             this.PhoneNumber.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.PhoneNumber.Mask = "(999) 000-0000";
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.Size = new System.Drawing.Size(301, 24);
-            this.PhoneNumber.TabIndex = 14;
+            this.PhoneNumber.TabIndex = 38;
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Location = new System.Drawing.Point(327, 121);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(46, 18);
+            this.Label7.TabIndex = 8;
+            this.Label7.Text = "Email";
+            // 
+            // Email
+            // 
+            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email.Location = new System.Drawing.Point(327, 142);
+            this.Email.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(301, 24);
+            this.Email.TabIndex = 7;
             // 
             // Cancel
             // 
@@ -350,6 +351,24 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Label41.TabIndex = 2;
             this.Label41.Text = "Company Info";
             // 
+            // AddressLine2
+            // 
+            this.AddressLine2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddressLine2.Location = new System.Drawing.Point(651, 19);
+            this.AddressLine2.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.AddressLine2.Name = "AddressLine2";
+            this.AddressLine2.Size = new System.Drawing.Size(302, 24);
+            this.AddressLine2.TabIndex = 39;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(651, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 16);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Address Line 2";
+            // 
             // CompanyInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,16 +403,18 @@ namespace RRFFilesManager.Controls.CompanyControls
         internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.TextBox City;
         internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.TextBox Email;
-        internal System.Windows.Forms.TextBox Street;
+        internal System.Windows.Forms.TextBox AddressLine1;
         internal System.Windows.Forms.ComboBox Province;
         internal System.Windows.Forms.TextBox PostalCode;
-        internal System.Windows.Forms.MaskedTextBox PhoneNumber;
         internal System.Windows.Forms.TextBox Description;
         internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label label19;
         internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.Label label19;
+        internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.MaskedTextBox PhoneNumber;
+        internal System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.TextBox AddressLine2;
     }
 }

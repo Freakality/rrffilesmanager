@@ -71,7 +71,8 @@ namespace RRFFilesManager.Controls.CompanyControls
             company.Email = Email.Text;
             company.Province = (Province)Province.SelectedItem;
             company.City = City.Text;
-            company.Street = Street.Text;
+            company.AddressLine1 = AddressLine1.Text;
+            company.AddressLine2 = AddressLine2.Text;
             company.PostalCode = PostalCode.Text;
             company.Memo = Memo.Text;
         }
@@ -85,7 +86,8 @@ namespace RRFFilesManager.Controls.CompanyControls
             Email.Text = company.Email;
             Province.SelectedItem = company.Province;
             City.Text = company.City;
-            Street.Text = company.Street;
+            AddressLine1.Text = company.AddressLine1;
+            AddressLine2.Text = company.AddressLine2;
             PostalCode.Text = company.PostalCode;
             Memo.Text = company.Memo;
         }
