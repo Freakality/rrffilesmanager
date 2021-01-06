@@ -48,8 +48,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SendPDFButton = new System.Windows.Forms.Button();
             this.SendWordButton = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.EditButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.SaveAndCloseButton = new System.Windows.Forms.Button();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             this.GroupBox90.SuspendLayout();
@@ -232,7 +233,7 @@
             this.CreateAndEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateAndEditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.CreateAndEditButton.ForeColor = System.Drawing.Color.White;
-            this.CreateAndEditButton.Location = new System.Drawing.Point(461, 3);
+            this.CreateAndEditButton.Location = new System.Drawing.Point(615, 3);
             this.CreateAndEditButton.Name = "CreateAndEditButton";
             this.CreateAndEditButton.Size = new System.Drawing.Size(146, 36);
             this.CreateAndEditButton.TabIndex = 162;
@@ -278,10 +279,11 @@
             this.flowLayoutPanel1.Controls.Add(this.SendPDFButton);
             this.flowLayoutPanel1.Controls.Add(this.SendWordButton);
             this.flowLayoutPanel1.Controls.Add(this.EditButton);
+            this.flowLayoutPanel1.Controls.Add(this.SaveAndCloseButton);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(637, 498);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(483, 498);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(610, 42);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(764, 42);
             this.flowLayoutPanel1.TabIndex = 164;
             // 
             // SendPDFButton
@@ -291,7 +293,7 @@
             this.SendPDFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SendPDFButton.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.SendPDFButton.ForeColor = System.Drawing.Color.White;
-            this.SendPDFButton.Location = new System.Drawing.Point(309, 3);
+            this.SendPDFButton.Location = new System.Drawing.Point(463, 3);
             this.SendPDFButton.Name = "SendPDFButton";
             this.SendPDFButton.Size = new System.Drawing.Size(146, 36);
             this.SendPDFButton.TabIndex = 163;
@@ -307,7 +309,7 @@
             this.SendWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SendWordButton.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.SendWordButton.ForeColor = System.Drawing.Color.White;
-            this.SendWordButton.Location = new System.Drawing.Point(157, 3);
+            this.SendWordButton.Location = new System.Drawing.Point(311, 3);
             this.SendWordButton.Name = "SendWordButton";
             this.SendWordButton.Size = new System.Drawing.Size(146, 36);
             this.SendWordButton.TabIndex = 164;
@@ -315,6 +317,22 @@
             this.SendWordButton.UseVisualStyleBackColor = false;
             this.SendWordButton.Visible = false;
             this.SendWordButton.Click += new System.EventHandler(this.SendWordButton_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.EditButton.BackColor = System.Drawing.Color.Maroon;
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.EditButton.ForeColor = System.Drawing.Color.White;
+            this.EditButton.Location = new System.Drawing.Point(159, 3);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(146, 36);
+            this.EditButton.TabIndex = 166;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Visible = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // label9
             // 
@@ -326,21 +344,21 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Create Document";
             // 
-            // EditButton
+            // SaveAndCloseButton
             // 
-            this.EditButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.EditButton.BackColor = System.Drawing.Color.Maroon;
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.EditButton.ForeColor = System.Drawing.Color.White;
-            this.EditButton.Location = new System.Drawing.Point(5, 3);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(146, 36);
-            this.EditButton.TabIndex = 166;
-            this.EditButton.Text = "Edit";
-            this.EditButton.UseVisualStyleBackColor = false;
-            this.EditButton.Visible = false;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            this.SaveAndCloseButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.SaveAndCloseButton.BackColor = System.Drawing.Color.Maroon;
+            this.SaveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveAndCloseButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SaveAndCloseButton.ForeColor = System.Drawing.Color.White;
+            this.SaveAndCloseButton.Location = new System.Drawing.Point(7, 3);
+            this.SaveAndCloseButton.Name = "SaveAndCloseButton";
+            this.SaveAndCloseButton.Size = new System.Drawing.Size(146, 36);
+            this.SaveAndCloseButton.TabIndex = 167;
+            this.SaveAndCloseButton.Text = "Save and Close";
+            this.SaveAndCloseButton.UseVisualStyleBackColor = false;
+            this.SaveAndCloseButton.Visible = false;
+            this.SaveAndCloseButton.Click += new System.EventHandler(this.SaveAndCloseButton_Click);
             // 
             // CreateDocument
             // 
@@ -387,5 +405,6 @@
         internal System.Windows.Forms.Button SendWordButton;
         private System.Windows.Forms.Button Cancel;
         internal System.Windows.Forms.Button EditButton;
+        internal System.Windows.Forms.Button SaveAndCloseButton;
     }
 }

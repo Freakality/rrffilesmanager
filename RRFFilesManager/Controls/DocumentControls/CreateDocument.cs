@@ -160,6 +160,7 @@ namespace RRFFilesManager
                 SendWordButton.Show();
                 SendPDFButton.Show();
                 EditButton.Show();
+                SaveAndCloseButton.Show();
                 CreateAndEditButton.Hide();
                 Doc.Save();
                 var filename = $"{Path.GetFileNameWithoutExtension(Doc.Name)}.pdf";
@@ -196,6 +197,14 @@ namespace RRFFilesManager
         private void EditButton_Click(object sender, EventArgs e)
         {
             EditArchiveDocument();
+        }
+
+        private void SaveAndCloseButton_Click(object sender, EventArgs e)
+        {
+            Submitting.Instance.Show();
+            Archive = _archiveManager.CreateAndAddArchive(File, Template);
+            Submitting.Instance.Hide();
+            Close();
         }
     }
 }
