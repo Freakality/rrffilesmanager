@@ -31,6 +31,7 @@ namespace RRFFilesManager.Logic
             Word.ReplaceAll(document, "$$$Salutation$$$", file.Client?.Salutation);
             Word.ReplaceAll(document, "$$$E-mail$$$", file.Client?.Email);
             Word.ReplaceAll(document, "$$$DateOfLoss$$$", file.DateOFLoss.ToString("MMMM d, yyyy"));
+            Word.ReplaceAll(document, "$$$FileNumber$$$", file.FileNumber.ToString());
             while (document.Content.Find.Execute(FindText: "  ", Wrap: WdFindWrap.wdFindContinue))
             {
                 Word.ReplaceAll(document, "  ", " ");
