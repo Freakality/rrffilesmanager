@@ -49,8 +49,8 @@
             this.SendPDFButton = new System.Windows.Forms.Button();
             this.SendWordButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.SaveAndCloseButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             this.GroupBox90.SuspendLayout();
@@ -334,16 +334,6 @@
             this.EditButton.Visible = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(203, 26);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Create Document";
-            // 
             // SaveAndCloseButton
             // 
             this.SaveAndCloseButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -359,6 +349,16 @@
             this.SaveAndCloseButton.UseVisualStyleBackColor = false;
             this.SaveAndCloseButton.Visible = false;
             this.SaveAndCloseButton.Click += new System.EventHandler(this.SaveAndCloseButton_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(203, 26);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Create Document";
             // 
             // CreateDocument
             // 

@@ -215,10 +215,8 @@ namespace RRFFilesManager.ContactForm
 
         private void SetInitials()
         {
-            var initials = $"{GetInitials(FirstName.Text)} {GetInitials(MiddleName.Text)} {GetInitials(LastName.Text)}";
-            RegexOptions options = RegexOptions.None;
-            Regex regex = new Regex("[ ]{2,}", options);
-            Initials.Text = regex.Replace(initials, " ");
+            var initials = $"{GetInitials(FirstName.Text)}{GetInitials(MiddleName.Text)}{GetInitials(LastName.Text)}";
+            Initials.Text = initials.Replace(" ", "");
         }
 
         private string GetInitials(string value)

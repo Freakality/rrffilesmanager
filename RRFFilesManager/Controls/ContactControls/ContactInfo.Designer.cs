@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.TableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             this.Label10 = new System.Windows.Forms.Label();
             this.City = new System.Windows.Forms.TextBox();
@@ -43,16 +46,19 @@
             this.PostalCode = new System.Windows.Forms.TextBox();
             this.PhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.FirstName = new System.Windows.Forms.TextBox();
-            this.Email = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CompanyTextBox = new System.Windows.Forms.TextBox();
             this.FindCompanyButton = new System.Windows.Forms.Button();
-            this.Label7 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.AddressLine1 = new System.Windows.Forms.TextBox();
             this.AddressLine2 = new System.Windows.Forms.TextBox();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.Fax = new System.Windows.Forms.TextBox();
+            this.Extension = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Initials = new System.Windows.Forms.TextBox();
@@ -69,19 +75,13 @@
             this.Save = new System.Windows.Forms.Button();
             this.FindContactButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Extension = new System.Windows.Forms.TextBox();
-            this.Fax = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TableLayoutPanel4.SuspendLayout();
             this.ContactInfoPanel.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // TableLayoutPanel3
@@ -132,6 +132,40 @@
             this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.TableLayoutPanel3.Size = new System.Drawing.Size(1205, 236);
             this.TableLayoutPanel3.TabIndex = 1;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(401, 182);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(401, 15);
+            this.tableLayoutPanel6.TabIndex = 39;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(123, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(33, 15);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Fax";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 15);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Extension";
             // 
             // Label8
             // 
@@ -273,16 +307,6 @@
             this.FirstName.TabIndex = 4;
             this.FirstName.TextChanged += new System.EventHandler(this.FirstName_TextChanged);
             // 
-            // Email
-            // 
-            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Email.Location = new System.Drawing.Point(805, 200);
-            this.Email.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(380, 24);
-            this.Email.TabIndex = 15;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -321,15 +345,6 @@
             this.FindCompanyButton.Text = "Find";
             this.FindCompanyButton.UseVisualStyleBackColor = false;
             this.FindCompanyButton.Click += new System.EventHandler(this.FindCompanyButton_Click);
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(805, 182);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 15);
-            this.Label7.TabIndex = 8;
-            this.Label7.Text = "Email";
             // 
             // Label6
             // 
@@ -375,6 +390,59 @@
             this.AddressLine2.Name = "AddressLine2";
             this.AddressLine2.Size = new System.Drawing.Size(380, 24);
             this.AddressLine2.TabIndex = 10;
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Location = new System.Drawing.Point(805, 182);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(46, 15);
+            this.Label7.TabIndex = 8;
+            this.Label7.Text = "Email";
+            // 
+            // Email
+            // 
+            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email.Location = new System.Drawing.Point(805, 200);
+            this.Email.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(380, 24);
+            this.Email.TabIndex = 15;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel5.Controls.Add(this.Fax, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.Extension, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(401, 197);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(401, 45);
+            this.tableLayoutPanel5.TabIndex = 38;
+            // 
+            // Fax
+            // 
+            this.Fax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Fax.Location = new System.Drawing.Point(123, 3);
+            this.Fax.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Fax.Name = "Fax";
+            this.Fax.Size = new System.Drawing.Size(258, 24);
+            this.Fax.TabIndex = 11;
+            // 
+            // Extension
+            // 
+            this.Extension.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Extension.Location = new System.Drawing.Point(3, 3);
+            this.Extension.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Extension.Name = "Extension";
+            this.Extension.Size = new System.Drawing.Size(97, 24);
+            this.Extension.TabIndex = 10;
             // 
             // Label5
             // 
@@ -580,74 +648,6 @@
             this.Label41.TabIndex = 2;
             this.Label41.Text = "Contact Info";
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel5.Controls.Add(this.Fax, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.Extension, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(401, 197);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(401, 45);
-            this.tableLayoutPanel5.TabIndex = 38;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(401, 182);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(401, 15);
-            this.tableLayoutPanel6.TabIndex = 39;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 15);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Extension";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(123, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(33, 15);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Fax";
-            // 
-            // Extension
-            // 
-            this.Extension.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Extension.Location = new System.Drawing.Point(3, 3);
-            this.Extension.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Extension.Name = "Extension";
-            this.Extension.Size = new System.Drawing.Size(97, 24);
-            this.Extension.TabIndex = 10;
-            // 
-            // Fax
-            // 
-            this.Fax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Fax.Location = new System.Drawing.Point(123, 3);
-            this.Fax.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Fax.Name = "Fax";
-            this.Fax.Size = new System.Drawing.Size(258, 24);
-            this.Fax.TabIndex = 11;
-            // 
             // ContactInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,18 +660,18 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactInfo_FormClosing);
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.TableLayoutPanel4.ResumeLayout(false);
             this.TableLayoutPanel4.PerformLayout();
             this.ContactInfoPanel.ResumeLayout(false);
             this.ContactInfoPanel.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }

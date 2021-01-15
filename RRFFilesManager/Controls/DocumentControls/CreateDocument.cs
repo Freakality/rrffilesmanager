@@ -47,9 +47,9 @@ namespace RRFFilesManager
 
         private void SetForm(Abstractions.File file)
         {
-            File = file;
             if (file == null)
                 return;
+            File = file;
             MatterTypeTextBox.Text = File.MatterType.ToString();
             FileNumberTextBox.Text = File.FileNumber.ToString();
 
@@ -138,14 +138,28 @@ namespace RRFFilesManager
 
         private void CreateAndEditButton_Click(object sender, EventArgs e)
         {
-            Submitting.Instance.Show();
-            Archive = _archiveManager.CreateAndAddArchive(File, Template);
-            Submitting.Instance.Hide();
+            SaveArchiveDocument();
             EditArchiveDocument();
+        }
+
+        public void SaveArchiveDocument()
+        {
+            Submitting.Instance.Show();
+            try
+            {
+                Archive = _archiveManager.CreateAndAddArchive(File, Template);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            Submitting.Instance.Hide();
         }
 
         private void EditArchiveDocument()
         {
+            if (Archive == null)
+                return;
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
             var document = wordApp?.Documents.Open(FileName: Archive.Path);
@@ -201,9 +215,7 @@ namespace RRFFilesManager
 
         private void SaveAndCloseButton_Click(object sender, EventArgs e)
         {
-            Submitting.Instance.Show();
-            Archive = _archiveManager.CreateAndAddArchive(File, Template);
-            Submitting.Instance.Hide();
+            SaveArchiveDocument();
             Close();
         }
     }

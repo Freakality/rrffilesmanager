@@ -16,9 +16,13 @@ namespace RRFFilesManager.Logic
         {
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
-            var document = wordApp?.Documents.Open(FileName: GetDocumentTemplatePath(template.TemplatePath), ReadOnly: true);
+            var docuemntTemplatePath = GetDocumentTemplatePath(template.TemplatePath);
+            if (!System.IO.File.Exists(docuemntTemplatePath))
+                throw new Exception("File not found.");
+            var document = wordApp?.Documents.Open(FileName: docuemntTemplatePath, ReadOnly: true);
             var fileName = $"{DateTime.Now:yyyyMMddhhmmss}_{template.TemplateName}.doc";
             var filePath = GetFilePath(file.FileNumber, fileName);
+
             wordApp.Visible = false;
             Word.ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
             Word.ReplaceAll(document, "$$$FirstName$$$", file.Client?.FirstName);
@@ -49,6 +53,8 @@ namespace RRFFilesManager.Logic
         } 
         public string GetDocumentTemplatePath(string templateDocumentPath)
         {
+            if (string.IsNullOrWhiteSpace(templateDocumentPath))
+                throw new Exception("File path not found.");
             string wordTemplatesPathSetting = ConfigurationManager.AppSettings["WordTemplatesPath"];
 
             if (!string.IsNullOrWhiteSpace(wordTemplatesPathSetting))
