@@ -199,6 +199,7 @@
     <Compile Include="Abstractions\IMatterSubTypeRepository.cs" />
     <Compile Include="Abstractions\IMatterTypeRepository.cs" />
     <Compile Include="Abstractions\IMobileCarrierRepository.cs" />
+    <Compile Include="Abstractions\IGroupRepository.cs" />
     <Compile Include="Abstractions\IProvinceRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
     <Compile Include="ClientRepository.cs" />
@@ -238,9 +239,14 @@
     <Compile Include="Migrations\20210106122154_CompanyFax.designer.cs">
       <DependentUpon>20210106122154_CompanyFax.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210119022044_Clients_Contacts.cs" />
+    <Compile Include="Migrations\20210119022044_Clients_Contacts.designer.cs">
+      <DependentUpon>20210119022044_Clients_Contacts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="MobileCarrierRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GroupRepository.cs" />
     <Compile Include="ProvinceRepository.cs" />
     <Compile Include="TemplateRepository.cs" />
   </ItemGroup>

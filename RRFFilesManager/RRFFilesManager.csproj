@@ -257,6 +257,18 @@
     <Compile Include="Controls\CompanyControls\FindCompany.Designer.cs">
       <DependentUpon>FindCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ContactControls\OtherGroupsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactControls\OtherGroupsControl.Designer.cs">
+      <DependentUpon>OtherGroupsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ContactControls\ClientGroupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactControls\ClientGroupControl.Designer.cs">
+      <DependentUpon>ClientGroupControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ContactControls\ContactInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +405,12 @@
     <EmbeddedResource Include="Controls\CompanyControls\FindCompany.resx">
       <DependentUpon>FindCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContactControls\OtherGroupsControl.resx">
+      <DependentUpon>OtherGroupsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContactControls\ClientGroupControl.resx">
+      <DependentUpon>ClientGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ContactControls\ContactInfo.resx">
       <DependentUpon>ContactInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -479,6 +497,7 @@
     <Content Include="Resources\RRFLogo.png" />
     <Content Include="Resources\RRFLogoSmall.png" />
     <Content Include="Resources\RRFLogoSmall2.png" />
+    <None Include="Resources\Screenshot_1.png" />
     <Content Include="Templates\Template 6 - Must Complete Questionnaire Before Booking Appointment.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

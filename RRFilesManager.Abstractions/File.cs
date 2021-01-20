@@ -23,7 +23,7 @@ namespace RRFFilesManager.Abstractions
         public string StatutoryNotice { get; set; }
         public string AdditionalNotes { get; set; }
 
-        public virtual Client Client { get; set; }
+        public virtual Contact Client { get; set; }
         public virtual Intake Intake { get; set; }
 
         public virtual ICollection<Archive> Archives { get; set; }

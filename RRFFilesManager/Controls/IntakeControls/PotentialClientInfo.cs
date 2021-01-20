@@ -19,19 +19,19 @@ namespace RRFFilesManager.IntakeForm
     {
         private readonly IProvinceRepository _provinceRepository;
         private readonly IMobileCarrierRepository _mobileCarrierRepository;
-        private readonly IClientRepository _clientRepository;
+        private readonly IContactRepository _contactRepository;
         public PotentialClientInfo()
         {
             _provinceRepository = (IProvinceRepository)Program.ServiceProvider.GetService(typeof(IProvinceRepository));
             _mobileCarrierRepository = (IMobileCarrierRepository)Program.ServiceProvider.GetService(typeof(IMobileCarrierRepository));
-            _clientRepository = (IClientRepository)Program.ServiceProvider.GetService(typeof(IClientRepository));
+            _contactRepository = (IContactRepository)Program.ServiceProvider.GetService(typeof(IContactRepository));
             InitializeComponent();
             Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.List());
             Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.List());
             YearBirth.Text = "1970";
         }
 
-        public void SetClient(Client client) {
+        public void SetClient(Contact client) {
             Home.IntakeForm.Intake.File.Client = client;
             FillForm(client);
         }
@@ -75,13 +75,13 @@ namespace RRFFilesManager.IntakeForm
         public void UpsertClient()
         {
             if (Home.IntakeForm.Intake.File.Client == null)
-                Home.IntakeForm.Intake.File.Client = new Client();
+                Home.IntakeForm.Intake.File.Client = new Contact();
             var client = Home.IntakeForm.Intake.File.Client;
             FillClient(client);
             if (client.ID == default)
-                _clientRepository.Insert(client);
+                _contactRepository.Insert(client);
             else
-                _clientRepository.Update(client);
+                _contactRepository.Update(client);
         }
 
         private void PCIMobileNumber_TextChanged_1(object sender, EventArgs e)
@@ -198,13 +198,13 @@ namespace RRFFilesManager.IntakeForm
             UpsertClient();
         }
 
-        public void FillClient(Client client)
+        public void FillClient(Contact client)
         {
             client.Salutation = PCISalutation.Text;
             client.FirstName = PCIFirstName.Text;
             client.LastName = PCILastName.Text;
-            client.Address = PCIAddress.Text;
-            client.SuiteApt = PCISuiteApt.Text;
+            client.AddressLine1 = PCIAddress.Text;
+            client.AddressLine2 = PCISuiteApt.Text;
             client.Email = PCIEmail.Text;
             client.Province = (Province)PCIProvince.SelectedItem;
             client.City = PCICity.Text;
@@ -215,18 +215,18 @@ namespace RRFFilesManager.IntakeForm
             client.MobileCarrier = PCIMobileCarrier.Text;
             client.EmailToText = PCIEmailToText.Text;
             client.DateOfBirth = PCIDateOfBirth;
-            client.OtherNotes = PCIOtherNotes.Text;
+            //client.OtherNotes = PCIOtherNotes.Text;
         }
 
-        public void FillForm(Client client)
+        public void FillForm(Contact client)
         {
             if (client == null)
                 return;
             PCISalutation.Text = client.Salutation;
             PCIFirstName.Text = client.FirstName;
             PCILastName.Text = client.LastName;
-            PCIAddress.Text = client.Address;
-            PCISuiteApt.Text = client.SuiteApt;
+            PCIAddress.Text = client.AddressLine1;
+            PCISuiteApt.Text = client.AddressLine2;
             PCIEmail.Text = client.Email;
             PCIProvince.SelectedItem = client.Province;
             PCICity.Text = client.City;
@@ -239,7 +239,7 @@ namespace RRFFilesManager.IntakeForm
             YearBirth.Text = client.DateOfBirth?.Year.ToString();
             MonthBirth.Text = client.DateOfBirth != null ? Months[client.DateOfBirth.Value.Month - 1] : null;
             DayBirth.Text = client.DateOfBirth?.Day.ToString();
-            PCIOtherNotes.Text = client.OtherNotes;
+            PCIOtherNotes.Text = client.Notes;
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)
@@ -261,6 +261,11 @@ namespace RRFFilesManager.IntakeForm
         {
             var findClientForm = sender as FindClient;
             SetClient(findClientForm.SelectedClient);
+        }
+
+        private void PCIEmailToText_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

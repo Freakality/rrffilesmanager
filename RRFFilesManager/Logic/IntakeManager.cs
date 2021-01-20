@@ -49,8 +49,8 @@ namespace RRFFilesManager.Logic
             Word.ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
             Word.ReplaceAll(document, "$$$FirstName$$$", intake.File.Client?.FirstName);
             Word.ReplaceAll(document, "$$$LastName$$$", intake.File.Client?.LastName);
-            Word.ReplaceAll(document, "$$$Address1$$$", intake.File.Client?.Address);
-            Word.ReplaceAll(document, "$$$Address2$$$", "");
+            Word.ReplaceAll(document, "$$$Address1$$$", intake.File.Client?.AddressLine1);
+            Word.ReplaceAll(document, "$$$Address2$$$", intake.File.Client?.AddressLine2);
             Word.ReplaceAll(document, "$$$City$$$", intake.File.Client?.City);
             Word.ReplaceAll(document, "$$$Province$$$", intake.File.Client?.Province?.Description);
             Word.ReplaceAll(document, "$$$PostalCode$$$", intake.File.Client?.PostalCode);
@@ -89,8 +89,8 @@ namespace RRFFilesManager.Logic
             Excel.ReplaceAll(worksheet, "$$$TodaysDate$$$", DateTime.Now);
             Excel.ReplaceAll(worksheet, "$$$FirstName$$$", intake.File.Client?.FirstName);
             Excel.ReplaceAll(worksheet, "$$$LastName$$$", intake.File.Client?.LastName);
-            Excel.ReplaceAll(worksheet, "$$$Address1$$$", intake.File.Client?.Address);
-            Excel.ReplaceAll(worksheet, "$$$Address2$$$", "");
+            Excel.ReplaceAll(worksheet, "$$$Address1$$$", intake.File.Client?.AddressLine1);
+            Excel.ReplaceAll(worksheet, "$$$Address2$$$", intake.File.Client?.AddressLine2);
             Excel.ReplaceAll(worksheet, "$$$City$$$", intake.File.Client?.City);
             Excel.ReplaceAll(worksheet, "$$$Province$$$", intake.File.Client?.Province?.Description);
             Excel.ReplaceAll(worksheet, "$$$PostalCode$$$", intake.File.Client?.PostalCode);
@@ -102,7 +102,7 @@ namespace RRFFilesManager.Logic
             Excel.ReplaceAll(worksheet, "$$$MobileCarrier$$$", intake.File.Client?.MobileCarrier);
             Excel.ReplaceAll(worksheet, "$$$EmailToText$$$", intake.File.Client?.EmailToText);
             Excel.ReplaceAll(worksheet, "$$$DateOfBirth$$$", intake.File.Client?.DateOfBirth);
-            Excel.ReplaceAll(worksheet, "$$$OtherNotes$$$", intake.File.Client?.OtherNotes);
+            Excel.ReplaceAll(worksheet, "$$$OtherNotes$$$", intake.File.Client?.Notes);
 
             Excel.ReplaceAll(worksheet, "$$$LiabilityDate$$$", intake.LiaDate);
             Excel.ReplaceAll(worksheet, "$$$LiabilityMVR$$$", intake.LiaMVR);

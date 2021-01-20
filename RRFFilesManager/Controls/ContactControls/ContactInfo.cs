@@ -1,5 +1,6 @@
 ﻿using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.CompanyControls;
+using RRFFilesManager.Controls.ContactControls;
 using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Logic;
 using System;
@@ -19,14 +20,15 @@ namespace RRFFilesManager.ContactForm
         private readonly IContactRepository _contactRepository;
         private readonly IProvinceRepository _provinceRepository;
         private readonly ICompanyRepository _companyRepository;
+        private readonly IGroupRepository _groupRepository;
         public ContactInfo()
         {
-            _contactRepository = (IContactRepository)Program.ServiceProvider.GetService(typeof(IContactRepository));
-            _provinceRepository = (IProvinceRepository)Program.ServiceProvider.GetService(typeof(IProvinceRepository));
-            _companyRepository = (ICompanyRepository)Program.ServiceProvider.GetService(typeof(ICompanyRepository));
+            _contactRepository = Program.GetService<IContactRepository>();
+            _provinceRepository = Program.GetService<IProvinceRepository>();
+            _companyRepository = Program.GetService<ICompanyRepository>();
+            _groupRepository = Program.GetService<IGroupRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
-            //Utils.SetComboBoxDataSource(Company, _companyRepository.List().Take(10));
+            Utils.SetComboBoxDataSource(Group, _groupRepository.List());
         }
         public Contact Contact { get; set; }
         private Company company;
@@ -53,57 +55,21 @@ namespace RRFFilesManager.ContactForm
 
         public void FillContact(Contact contact)
         {
-            contact.Salutation = Salutation.Text;
-            contact.Suffix = Suffix.Text;
-            contact.Initials = Initials.Text;
-            contact.FirstName = FirstName.Text;
-            contact.MiddleName = MiddleName.Text;
-            contact.LastName = LastName.Text;
-            contact.Email = Email.Text;
-            contact.Company = Company;
-            contact.Province = (Province)Province.SelectedItem;
-            contact.AddressLine1 = AddressLine1.Text;
-            contact.AddressLine2 = AddressLine2.Text;
-            contact.City = City.Text;
-            contact.PostalCode = PostalCode.Text;
-            contact.Phone = PhoneNumber.Text;
-            contact.Extension = Extension.Text;
-            contact.Fax = Fax.Text;
-            contact.Memo = OtherNotes.Text;
+           
         }
 
         public void FillForm(Contact contact)
         {
             if (contact == null)
                 return;
-            Salutation.Text = contact.Salutation;
-            Suffix.Text = contact.Suffix;
-            Initials.Text = contact.Initials;
-            FirstName.Text = contact.FirstName;
-            MiddleName.Text = contact.MiddleName;
-            LastName.Text = contact.LastName;
-            Email.Text = contact.Email;
-            Company = contact.Company;
-            Province.SelectedItem = contact.Province;
-            AddressLine1.Text = contact.AddressLine1;
-            AddressLine2.Text = contact.AddressLine2;
-            City.Text = contact.City;
-            PostalCode.Text = contact.PostalCode;
-            PhoneNumber.Text = contact.Phone;
-            Extension.Text = contact.Extension;
-            Fax.Text = contact.Fax;
-            OtherNotes.Text = contact.Memo;
+   
         }
 
         public void FillForm(Company company)
         {
             if (company == null)
                 return;
-            Province.SelectedItem = company.Province;
-            AddressLine1.Text = company.AddressLine1;
-            AddressLine2.Text = company.AddressLine2;
-            City.Text = company.City;
-            PostalCode.Text = company.PostalCode;
+     
         }
 
 
@@ -133,64 +99,7 @@ namespace RRFFilesManager.ContactForm
             Home.Instance.Show();
         }
 
-        public new bool Validate()
-        {
-            if (string.IsNullOrEmpty(Salutation.Text))
-            {
-                MessageBox.Show("Please enter Salutation");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(FirstName.Text))
-            {
-                MessageBox.Show("Please enter First Name");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(MiddleName.Text))
-            {
-                MessageBox.Show("Please enter Middle Name");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(LastName.Text))
-            {
-                MessageBox.Show("Please enter Last Name");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(Email.Text))
-            {
-                MessageBox.Show("Please enter Email or Address");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(this.City.Text))
-            {
-                MessageBox.Show("Please enter City");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(this.Province.Text))
-            {
-                MessageBox.Show("Please enter Province");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(this.PostalCode.Text))
-            {
-                MessageBox.Show("Please enter Postal Code");
-                return false;
-            }
-
-            if (this.PhoneNumber.MaskCompleted == false)
-            {
-                MessageBox.Show("Please enter a Phone Number");
-                return false;
-            }
-
-            return true;
-        }
+       
 
         private void ContactInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -198,26 +107,6 @@ namespace RRFFilesManager.ContactForm
             Home.Instance.Show();
         }
 
-        private void FirstName_TextChanged(object sender, EventArgs e)
-        {
-            SetInitials();
-        }
-
-        private void MiddleName_TextChanged(object sender, EventArgs e)
-        {
-            SetInitials();
-        }
-
-        private void LastName_TextChanged(object sender, EventArgs e)
-        {
-            SetInitials();
-        }
-
-        private void SetInitials()
-        {
-            var initials = $"{GetInitials(FirstName.Text)}{GetInitials(MiddleName.Text)}{GetInitials(LastName.Text)}";
-            Initials.Text = initials.Replace(" ", "");
-        }
 
         private string GetInitials(string value)
         {
@@ -228,21 +117,19 @@ namespace RRFFilesManager.ContactForm
             return string.Join(" ", initials);
         }
 
-        private void FindCompanyButton_Click(object sender, EventArgs e)
+        private void ContactInfoPanel_Paint(object sender, PaintEventArgs e)
         {
-            var findCompany = new FindCompany(true);
-            findCompany.Show();
-            findCompany.FormClosing += new FormClosingEventHandler(this.FindCompany_FormClosing);
+
         }
 
-        private void FindCompany_FormClosing(object sender, FormClosingEventArgs e)
+        private void Group_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var findCompanyForm = sender as FindCompany;
-            Company = findCompanyForm.Selected;
-            if (Company == null)
+            if (string.IsNullOrWhiteSpace(Group.Text))
                 return;
-            CompanyTextBox.Text = Company.Description;
+            if (Group.Text == "Client")
+                Utils.SetContent(Content, new ClientGroupControl());
+            else
+                Utils.SetContent(Content, new OtherGroupsControl());
         }
-
     }
 }

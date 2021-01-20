@@ -27,8 +27,8 @@ namespace RRFFilesManager.Logic
             Word.ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
             Word.ReplaceAll(document, "$$$FirstName$$$", file.Client?.FirstName);
             Word.ReplaceAll(document, "$$$LastName$$$", file.Client?.LastName);
-            Word.ReplaceAll(document, "$$$Address1$$$", file.Client?.Address);
-            Word.ReplaceAll(document, "$$$Address2$$$", "");
+            Word.ReplaceAll(document, "$$$Address1$$$", file.Client?.AddressLine1);
+            Word.ReplaceAll(document, "$$$Address2$$$", file.Client?.AddressLine2);
             Word.ReplaceAll(document, "$$$City$$$", file.Client?.City);
             Word.ReplaceAll(document, "$$$Province$$$", file.Client?.Province?.Description);
             Word.ReplaceAll(document, "$$$PostalCode$$$", file.Client?.PostalCode);

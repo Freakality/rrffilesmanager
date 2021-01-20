@@ -32,6 +32,7 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IContactRepository, ContactRepository>();
             services.AddTransient<ICompanyRepository, CompanyRepository>();
             services.AddTransient<IArchiveRepository, ArchiveRepository>();
+            services.AddTransient<IGroupRepository, GroupRepository>();
             return services;
         }
     }

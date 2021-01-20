@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientInfo));
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.CompletedQuestionnaireLink = new System.Windows.Forms.LinkLabel();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.FindClientButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
             this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,12 +78,16 @@
             this.YearBirth = new System.Windows.Forms.MaskedTextBox();
             this.DayBirth = new System.Windows.Forms.ComboBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.TextToEmail = new System.Windows.Forms.TextBox();
+            this.MobileCarrier = new System.Windows.Forms.ComboBox();
             this.PotentialClientInfoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
             this.TableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
+            this.tableLayoutPanel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // PotentialClientInfoPanel
@@ -90,6 +96,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
+            this.PotentialClientInfoPanel.Controls.Add(this.tableLayoutPanel13);
+            this.PotentialClientInfoPanel.Controls.Add(this.dateTimePicker1);
             this.PotentialClientInfoPanel.Controls.Add(this.Cancel);
             this.PotentialClientInfoPanel.Controls.Add(this.Save);
             this.PotentialClientInfoPanel.Controls.Add(this.CompletedQuestionnaireLink);
@@ -103,6 +111,13 @@
             this.PotentialClientInfoPanel.Name = "PotentialClientInfoPanel";
             this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1266, 712);
             this.PotentialClientInfoPanel.TabIndex = 145;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(1054, 132);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker1.TabIndex = 10;
             // 
             // Cancel
             // 
@@ -144,6 +159,19 @@
             this.CompletedQuestionnaireLink.Text = "Completed Questionnaire";
             this.CompletedQuestionnaireLink.Visible = false;
             this.CompletedQuestionnaireLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CompletedQuestionnaireLink_LinkClicked);
+            // 
+            // PhotoPictureBox
+            // 
+            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.Location = new System.Drawing.Point(987, 65);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(250, 250);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 6;
+            this.PhotoPictureBox.TabStop = false;
+            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // FindClientButton
             // 
@@ -553,7 +581,7 @@
             this.TableLayoutPanel9.ColumnCount = 3;
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
-            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.TableLayoutPanel9.Controls.Add(this.Label70, 0, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label71, 1, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label72, 2, 0);
@@ -584,7 +612,7 @@
             // 
             this.Label71.AutoSize = true;
             this.Label71.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label71.Location = new System.Drawing.Point(71, 0);
+            this.Label71.Location = new System.Drawing.Point(70, 0);
             this.Label71.Name = "Label71";
             this.Label71.Size = new System.Drawing.Size(44, 13);
             this.Label71.TabIndex = 35;
@@ -594,7 +622,7 @@
             // 
             this.Label72.AutoSize = true;
             this.Label72.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label72.Location = new System.Drawing.Point(182, 0);
+            this.Label72.Location = new System.Drawing.Point(180, 0);
             this.Label72.Name = "Label72";
             this.Label72.Size = new System.Drawing.Size(30, 13);
             this.Label72.TabIndex = 36;
@@ -618,9 +646,9 @@
             "October",
             "November",
             "December"});
-            this.MonthBirth.Location = new System.Drawing.Point(71, 16);
+            this.MonthBirth.Location = new System.Drawing.Point(70, 16);
             this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(105, 25);
+            this.MonthBirth.Size = new System.Drawing.Size(104, 25);
             this.MonthBirth.TabIndex = 38;
             // 
             // YearBirth
@@ -630,7 +658,7 @@
             this.YearBirth.Location = new System.Drawing.Point(3, 16);
             this.YearBirth.Mask = "0000";
             this.YearBirth.Name = "YearBirth";
-            this.YearBirth.Size = new System.Drawing.Size(62, 24);
+            this.YearBirth.Size = new System.Drawing.Size(61, 24);
             this.YearBirth.TabIndex = 40;
             this.YearBirth.ValidatingType = typeof(int);
             // 
@@ -673,24 +701,63 @@
             "29",
             "30",
             "31"});
-            this.DayBirth.Location = new System.Drawing.Point(182, 16);
+            this.DayBirth.Location = new System.Drawing.Point(180, 16);
             this.DayBirth.MaxDropDownItems = 11;
             this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(112, 25);
+            this.DayBirth.Size = new System.Drawing.Size(114, 25);
             this.DayBirth.TabIndex = 41;
             // 
-            // PhotoPictureBox
+            // tableLayoutPanel13
             // 
-            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
-            this.PhotoPictureBox.Location = new System.Drawing.Point(987, 65);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(250, 250);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 6;
-            this.PhotoPictureBox.TabStop = false;
-            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
+            this.tableLayoutPanel13.ColumnCount = 3;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanel13.Controls.Add(this.label20, 1, 0);
+            this.tableLayoutPanel13.Controls.Add(this.TextToEmail, 2, 0);
+            this.tableLayoutPanel13.Controls.Add(this.MobileCarrier, 0, 0);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(162, 4);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(515, 34);
+            this.tableLayoutPanel13.TabIndex = 155;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label20.Location = new System.Drawing.Point(182, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(104, 34);
+            this.label20.TabIndex = 153;
+            this.label20.Text = "Text to Email";
+            // 
+            // TextToEmail
+            // 
+            this.TextToEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextToEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextToEmail.Location = new System.Drawing.Point(292, 3);
+            this.TextToEmail.Name = "TextToEmail";
+            this.TextToEmail.Size = new System.Drawing.Size(220, 24);
+            this.TextToEmail.TabIndex = 15;
+            // 
+            // MobileCarrier
+            // 
+            this.MobileCarrier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MobileCarrier.FormattingEnabled = true;
+            this.MobileCarrier.Location = new System.Drawing.Point(3, 3);
+            this.MobileCarrier.Name = "MobileCarrier";
+            this.MobileCarrier.Size = new System.Drawing.Size(173, 25);
+            this.MobileCarrier.TabIndex = 155;
             // 
             // ClientInfo
             // 
@@ -704,13 +771,15 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientInfo_FormClosing);
             this.PotentialClientInfoPanel.ResumeLayout(false);
             this.PotentialClientInfoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.TableLayoutPanel4.ResumeLayout(false);
             this.TableLayoutPanel4.PerformLayout();
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
             this.TableLayoutPanel9.ResumeLayout(false);
             this.TableLayoutPanel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -765,5 +834,10 @@
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.OpenFileDialog openPhotoDialog;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Label label20;
+        internal System.Windows.Forms.TextBox TextToEmail;
+        internal System.Windows.Forms.ComboBox MobileCarrier;
     }
 }

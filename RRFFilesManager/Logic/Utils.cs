@@ -41,5 +41,12 @@ namespace RRFFilesManager.Logic
                 return returnImage;
             }
         }
+
+        public static void SetContent(Control Content, Control control)
+        {
+            Content.Controls.Clear();
+            Content.Controls.Add(control);
+            Content.Controls[0].Dock = DockStyle.Fill;
+        }
     }
 }

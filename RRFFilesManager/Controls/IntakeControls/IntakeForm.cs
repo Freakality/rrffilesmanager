@@ -50,15 +50,8 @@ namespace RRFFilesManager.IntakeForm
         }
         private void Intake_Load(object sender, EventArgs e)
         {
-            this.SetContent(PreliminaryInfo);
+            Utils.SetContent(Content, PreliminaryInfo);
             this.BackButton.Visible = false;
-        }
-
-        private void SetContent(Control control)
-        {
-            this.Content.Controls.Clear();
-            this.Content.Controls.Add(control);
-            Content.Controls[0].Dock = DockStyle.Fill;
         }
 
         private void Intake_FormClosing(object sender, FormClosingEventArgs e)
@@ -75,25 +68,25 @@ namespace RRFFilesManager.IntakeForm
             if (contentType == typeof(PreliminaryInfo) && PreliminaryInfo.Validate())
             {
                 BackButton.Visible = true;
-                SetContent(PotentialClientInfo);
+                Utils.SetContent(Content, PotentialClientInfo);
                 PreliminaryInfo.OnNext();
             }
             else if (contentType == typeof(PotentialClientInfo) && PotentialClientInfo.Validate())
             {
                 IntakeSheets.BringMattertypeForm();
-                SetContent(IntakeSheets);
+                Utils.SetContent(Content, IntakeSheets);
                 PotentialClientInfo.OnNext();
             }
             else if (contentType == typeof(IntakeSheets) && IntakeSheets.Validate())
             {
                 NextButton.Visible = false;
-                SetContent(NextSteps);
+                Utils.SetContent(Content, NextSteps);
                 IntakeSheets.OnNext();
             }
             else if (contentType == typeof(NextSteps) && NextSteps.Validate())
             {
                 NextButton.Visible = false;
-                SetContent(ClientIntakeProcess);
+                Utils.SetContent(Content, ClientIntakeProcess);
                 NextSteps.OnNext();
             }
         }
@@ -105,21 +98,21 @@ namespace RRFFilesManager.IntakeForm
             if (contentType == typeof(PotentialClientInfo))
             {
                 BackButton.Visible = false;
-                SetContent(PreliminaryInfo);
+                Utils.SetContent(Content, PreliminaryInfo);
             }
             else if (contentType == typeof(IntakeSheets))
             {
-                SetContent(PotentialClientInfo);
+                Utils.SetContent(Content, PotentialClientInfo);
             }
             else if (contentType == typeof(NextSteps))
             {
                 NextButton.Visible = true;
-                SetContent(IntakeSheets);
+                Utils.SetContent(Content, IntakeSheets);
             }
             else if (contentType == typeof(ClientIntakeProcess))
             {
                 NextButton.Visible = true;
-                SetContent(NextSteps);
+                Utils.SetContent(Content, NextSteps);
             }
         }
 

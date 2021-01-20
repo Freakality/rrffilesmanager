@@ -16,28 +16,28 @@ namespace RRFFilesManager
 {
     public partial class FindClient : Form
     {
-        private readonly IClientRepository _clientRepository;
+        private readonly IContactRepository _contactRepository;
         public FindClient()
         {
-            _clientRepository = (IClientRepository)Program.ServiceProvider.GetService(typeof(IClientRepository));
+            _contactRepository = (IContactRepository)Program.ServiceProvider.GetService(typeof(IContactRepository));
             InitializeComponent();
         }
 
         private static FindClient instance;
         public static FindClient Instance => instance == null || instance.IsDisposed ? (instance = new FindClient()) : instance;
-        public Client SelectedClient { get; set; }
+        public Contact SelectedClient { get; set; }
 
         private void FindClient_Load(object sender, EventArgs e)
         {
             ClientsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ClientsGridView.MultiSelect = false;
             ClientsGridView.ReadOnly = true;
-            this.ClientsGridView.DataSource = _clientRepository.Search(SearchTextBox.Text);
+            this.ClientsGridView.DataSource = _contactRepository.Search(SearchTextBox.Text);
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.ClientsGridView.DataSource = _clientRepository.Search(SearchTextBox.Text);
+            this.ClientsGridView.DataSource = _contactRepository.Search(SearchTextBox.Text);
         }
 
         private void ClientsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +63,7 @@ namespace RRFFilesManager
         private void ClientsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var clientId = int.Parse(ClientsGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString());
-            var client = _clientRepository.GetById(clientId);
+            var client = _contactRepository.GetById(clientId);
             this.SelectedClient = client;
             Close();
         }

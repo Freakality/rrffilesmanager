@@ -18,14 +18,14 @@ namespace RRFFilesManager.ClientForm
     {
         private readonly IProvinceRepository _provinceRepository;
         private readonly IMobileCarrierRepository _mobileCarrierRepository;
-        private readonly IClientRepository _clientRepository;
+        private readonly IContactRepository _contactRepository;
         private readonly IIntakeRepository _intakeRepository;
         private readonly IFileRepository _fileRepository;
         public ClientInfo()
         {
             _provinceRepository = Program.GetService<IProvinceRepository>();
             _mobileCarrierRepository = Program.GetService<IMobileCarrierRepository>();
-            _clientRepository = Program.GetService<IClientRepository>();
+            _contactRepository = Program.GetService<IContactRepository>();
             _intakeRepository = Program.GetService<IIntakeRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace RRFFilesManager.ClientForm
             YearBirth.Text = "1970";
         }
 
-        public Client Client { get; set; }
+        public Contact Client { get; set; }
 
         public DateTime? PCIDateOfBirth
         {
@@ -81,12 +81,12 @@ namespace RRFFilesManager.ClientForm
         public void UpsertClient()
         {
             if (Client == null)
-                Client = new Client();
+                Client = new Contact();
             FillClient(Client);
             if (Client.ID == default)
-                _clientRepository.Insert(Client);
+                _contactRepository.Insert(Client);
             else
-                _clientRepository.Update(Client);
+                _contactRepository.Update(Client);
         }
 
         private void FindClient_FormClosing(object sender, FormClosingEventArgs e)
@@ -103,13 +103,13 @@ namespace RRFFilesManager.ClientForm
             Home.Instance.Show();
         }
 
-        public void FillClient(Client client)
+        public void FillClient(Contact client)
         {
             client.Salutation = PCISalutation.Text;
             client.FirstName = PCIFirstName.Text;
             client.LastName = PCILastName.Text;
-            client.Address = PCIAddress.Text;
-            client.SuiteApt = PCISuiteApt.Text;
+            client.AddressLine1 = PCIAddress.Text;
+            client.AddressLine2 = PCISuiteApt.Text;
             client.Email = PCIEmail.Text;
             client.Province = (Province)PCIProvince.SelectedItem;
             client.City = PCICity.Text;
@@ -120,20 +120,20 @@ namespace RRFFilesManager.ClientForm
             client.MobileCarrier = PCIMobileCarrier.Text;
             client.EmailToText = PCIEmailToText.Text;
             client.DateOfBirth = PCIDateOfBirth;
-            client.OtherNotes = PCIOtherNotes.Text;
+            client.Notes = PCIOtherNotes.Text;
             if (PhotoPictureBox.Image != null)
                 client.Photo = Utils.ImageToByteArray(PhotoPictureBox.Image);
         }
 
-        public void FillForm(Client client)
+        public void FillForm(Contact client)
         {
             if (client == null)
                 return;
             PCISalutation.Text = client.Salutation;
             PCIFirstName.Text = client.FirstName;
             PCILastName.Text = client.LastName;
-            PCIAddress.Text = client.Address;
-            PCISuiteApt.Text = client.SuiteApt;
+            PCIAddress.Text = client.AddressLine1;
+            PCISuiteApt.Text = client.AddressLine2;
             PCIEmail.Text = client.Email;
             PCIProvince.SelectedItem = client.Province;
             PCICity.Text = client.City;
@@ -146,7 +146,7 @@ namespace RRFFilesManager.ClientForm
             YearBirth.Text = client.DateOfBirth?.Year.ToString();
             MonthBirth.Text = client.DateOfBirth != null ? Months[client.DateOfBirth.Value.Month - 1] : null;
             DayBirth.Text = client.DateOfBirth?.Day.ToString();
-            PCIOtherNotes.Text = client.OtherNotes;
+            PCIOtherNotes.Text = client.Notes;
             if(Client.Photo != null)
                 PhotoPictureBox.Image = Utils.ByteArrayToImage(Client.Photo);
         }
