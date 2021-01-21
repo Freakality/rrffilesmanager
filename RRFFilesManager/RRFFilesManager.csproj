@@ -257,6 +257,7 @@
     <Compile Include="Controls\CompanyControls\FindCompany.Designer.cs">
       <DependentUpon>FindCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ContactControls\IGroupControl.cs" />
     <Compile Include="Controls\ContactControls\OtherGroupsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

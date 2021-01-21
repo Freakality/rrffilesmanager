@@ -30,11 +30,13 @@
         {
             this.Label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
             this.Group = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.FindContactButton = new System.Windows.Forms.Button();
             this.Content = new System.Windows.Forms.Panel();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
             this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +64,18 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(453, 35);
             this.tableLayoutPanel8.TabIndex = 148;
+            this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
+            // 
+            // Group
+            // 
+            this.Group.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Group.FormattingEnabled = true;
+            this.Group.Location = new System.Drawing.Point(93, 3);
+            this.Group.Name = "Group";
+            this.Group.Size = new System.Drawing.Size(265, 21);
+            this.Group.TabIndex = 40;
+            this.Group.SelectedIndexChanged += new System.EventHandler(this.Group_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -74,17 +88,6 @@
             this.label16.TabIndex = 40;
             this.label16.Text = "Group";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Group
-            // 
-            this.Group.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Group.FormattingEnabled = true;
-            this.Group.Location = new System.Drawing.Point(93, 3);
-            this.Group.Name = "Group";
-            this.Group.Size = new System.Drawing.Size(265, 21);
-            this.Group.TabIndex = 40;
-            this.Group.SelectedIndexChanged += new System.EventHandler(this.Group_SelectedIndexChanged);
             // 
             // linkLabel1
             // 
@@ -128,12 +131,42 @@
             this.Content.TabIndex = 146;
             this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.ContactInfoPanel_Paint);
             // 
+            // Cancel
+            // 
+            this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Cancel.BackColor = System.Drawing.Color.Maroon;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.ForeColor = System.Drawing.Color.White;
+            this.Cancel.Location = new System.Drawing.Point(20, 681);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(97, 36);
+            this.Cancel.TabIndex = 150;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // Save
+            // 
+            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save.BackColor = System.Drawing.Color.Maroon;
+            this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.ForeColor = System.Drawing.Color.White;
+            this.Save.Location = new System.Drawing.Point(1241, 681);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(97, 36);
+            this.Save.TabIndex = 149;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
             // ContactInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.tableLayoutPanel8);
             this.Controls.Add(this.FindContactButton);
             this.Controls.Add(this.Content);
@@ -154,5 +187,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button FindContactButton;
         internal System.Windows.Forms.Panel Content;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button Save;
     }
 }

@@ -30,16 +30,16 @@ namespace RRFFilesManager.ContactForm
             InitializeComponent();
             Utils.SetComboBoxDataSource(Group, _groupRepository.List());
         }
+        //private OtherGroupsControl otherGroupsControl;
+        //public OtherGroupsControl OtherGroupsControl => otherGroupsControl ?? (otherGroupsControl = new OtherGroupsControl());
+
+        //private ClientGroupControl clientGroupControl;
+        //public ClientGroupControl ClientGroupControl => clientGroupControl ?? (clientGroupControl = new ClientGroupControl());
+
+        public IGroupControl GroupControl => (IGroupControl)Content.Controls?[0];
+
         public Contact Contact { get; set; }
-        private Company company;
-        public Company Company 
-        { 
-            get => company; 
-            set {
-                company = value;
-                FillForm(company);
-            }
-        }
+        
         private void FindContactButton_Click(object sender, EventArgs e)
         {
             FindContact.Instance.Show();
@@ -53,23 +53,19 @@ namespace RRFFilesManager.ContactForm
             FillForm(Contact);
         }
 
-        public void FillContact(Contact contact)
+        public void FillContact(Contact client)
         {
-           
+            client.Group = (Abstractions.Group)Group.SelectedItem;
+            GroupControl.FillContact(client);
         }
 
-        public void FillForm(Contact contact)
+        public void FillForm(Contact client)
         {
-            if (contact == null)
+            if (client == null)
                 return;
-   
-        }
-
-        public void FillForm(Company company)
-        {
-            if (company == null)
-                return;
-     
+            Group.SelectedItem = client.Group;
+            SetContent();
+            GroupControl.FillForm(client);
         }
 
 
@@ -124,12 +120,26 @@ namespace RRFFilesManager.ContactForm
 
         private void Group_SelectedIndexChanged(object sender, EventArgs e)
         {
+            SetContent();
+        }
+
+        private void SetContent()
+        {
             if (string.IsNullOrWhiteSpace(Group.Text))
+            {
+                Content.Controls.Clear();
                 return;
+            }
+
             if (Group.Text == "Client")
                 Utils.SetContent(Content, new ClientGroupControl());
             else
                 Utils.SetContent(Content, new OtherGroupsControl());
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

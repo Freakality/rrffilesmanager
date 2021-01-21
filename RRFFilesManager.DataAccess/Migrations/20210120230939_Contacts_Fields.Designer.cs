@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210120230939_Contacts_Fields")]
+    partial class Contacts_Fields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -208,9 +210,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("GroupID")
-                        .HasColumnType("int");
-
                     b.Property<string>("HealthCard")
                         .HasColumnType("nvarchar(max)");
 
@@ -268,8 +267,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasKey("ID");
 
                     b.HasIndex("CompanyID");
-
-                    b.HasIndex("GroupID");
 
                     b.HasIndex("ProvinceID");
 
@@ -786,10 +783,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.Company", "Company")
                         .WithMany()
                         .HasForeignKey("CompanyID");
-
-                    b.HasOne("RRFFilesManager.Abstractions.Group", "Group")
-                        .WithMany()
-                        .HasForeignKey("GroupID");
 
                     b.HasOne("RRFFilesManager.Abstractions.Province", "Province")
                         .WithMany()

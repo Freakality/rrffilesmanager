@@ -16,6 +16,7 @@ namespace RRFFilesManager.Logic
             comboBox.DataSource = dataSource;
             comboBox.DisplayMember = displayMember;
             comboBox.SelectedItem = null;
+            comboBox.ResetText();
         }
 
         public static byte[] ImageToByteArray(Image imageIn)

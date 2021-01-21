@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientInfo));
             this.PotentialClientInfoPanel = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.CompletedQuestionnaireLink = new System.Windows.Forms.LinkLabel();
@@ -78,16 +77,11 @@
             this.YearBirth = new System.Windows.Forms.MaskedTextBox();
             this.DayBirth = new System.Windows.Forms.ComboBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
-            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.TextToEmail = new System.Windows.Forms.TextBox();
-            this.MobileCarrier = new System.Windows.Forms.ComboBox();
             this.PotentialClientInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
             this.TableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // PotentialClientInfoPanel
@@ -96,8 +90,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
-            this.PotentialClientInfoPanel.Controls.Add(this.tableLayoutPanel13);
-            this.PotentialClientInfoPanel.Controls.Add(this.dateTimePicker1);
             this.PotentialClientInfoPanel.Controls.Add(this.Cancel);
             this.PotentialClientInfoPanel.Controls.Add(this.Save);
             this.PotentialClientInfoPanel.Controls.Add(this.CompletedQuestionnaireLink);
@@ -111,13 +103,6 @@
             this.PotentialClientInfoPanel.Name = "PotentialClientInfoPanel";
             this.PotentialClientInfoPanel.Size = new System.Drawing.Size(1266, 712);
             this.PotentialClientInfoPanel.TabIndex = 145;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1054, 132);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
-            this.dateTimePicker1.TabIndex = 10;
             // 
             // Cancel
             // 
@@ -707,58 +692,6 @@
             this.DayBirth.Size = new System.Drawing.Size(114, 25);
             this.DayBirth.TabIndex = 41;
             // 
-            // tableLayoutPanel13
-            // 
-            this.tableLayoutPanel13.ColumnCount = 3;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
-            this.tableLayoutPanel13.Controls.Add(this.label20, 1, 0);
-            this.tableLayoutPanel13.Controls.Add(this.TextToEmail, 2, 0);
-            this.tableLayoutPanel13.Controls.Add(this.MobileCarrier, 0, 0);
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(162, 4);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
-            this.tableLayoutPanel13.RowCount = 1;
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(515, 34);
-            this.tableLayoutPanel13.TabIndex = 155;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(182, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(104, 34);
-            this.label20.TabIndex = 153;
-            this.label20.Text = "Text to Email";
-            // 
-            // TextToEmail
-            // 
-            this.TextToEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextToEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextToEmail.Location = new System.Drawing.Point(292, 3);
-            this.TextToEmail.Name = "TextToEmail";
-            this.TextToEmail.Size = new System.Drawing.Size(220, 24);
-            this.TextToEmail.TabIndex = 15;
-            // 
-            // MobileCarrier
-            // 
-            this.MobileCarrier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MobileCarrier.FormattingEnabled = true;
-            this.MobileCarrier.Location = new System.Drawing.Point(3, 3);
-            this.MobileCarrier.Name = "MobileCarrier";
-            this.MobileCarrier.Size = new System.Drawing.Size(173, 25);
-            this.MobileCarrier.TabIndex = 155;
-            // 
             // ClientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -778,8 +711,6 @@
             this.TableLayoutPanel3.PerformLayout();
             this.TableLayoutPanel9.ResumeLayout(false);
             this.TableLayoutPanel9.PerformLayout();
-            this.tableLayoutPanel13.ResumeLayout(false);
-            this.tableLayoutPanel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -834,10 +765,5 @@
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.OpenFileDialog openPhotoDialog;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.Label label20;
-        internal System.Windows.Forms.TextBox TextToEmail;
-        internal System.Windows.Forms.ComboBox MobileCarrier;
     }
 }

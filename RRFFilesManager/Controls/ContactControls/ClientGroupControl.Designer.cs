@@ -43,7 +43,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Label7 = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Phone = new System.Windows.Forms.MaskedTextBox();
+            this.Fax = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,10 +53,17 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.MobileNumber = new System.Windows.Forms.MaskedTextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.MobileCarrierComboBox = new System.Windows.Forms.ComboBox();
+            this.TextToEmail = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,6 +75,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label13 = new System.Windows.Forms.Label();
             this.City = new System.Windows.Forms.TextBox();
             this.PostalCode = new System.Windows.Forms.TextBox();
+            this.Province = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -83,6 +91,10 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Relationship = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.MonthBirth = new System.Windows.Forms.ComboBox();
+            this.YearBirth = new System.Windows.Forms.MaskedTextBox();
+            this.DayBirth = new System.Windows.Forms.ComboBox();
             this.FirstLenguage = new System.Windows.Forms.TextBox();
             this.SIN = new System.Windows.Forms.TextBox();
             this.HealthCard = new System.Windows.Forms.TextBox();
@@ -93,22 +105,17 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TextBox();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.MonthBirth = new System.Windows.Forms.ComboBox();
-            this.YearBirth = new System.Windows.Forms.MaskedTextBox();
-            this.DayBirth = new System.Windows.Forms.ComboBox();
-            this.Province = new System.Windows.Forms.ComboBox();
-            this.TextToEmail = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -116,10 +123,9 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel11.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -134,7 +140,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox1.TabIndex = 148;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contact Information";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tableLayoutPanel7
             // 
@@ -189,6 +194,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Salutation.Name = "Salutation";
             this.Salutation.Size = new System.Drawing.Size(104, 26);
             this.Salutation.TabIndex = 1;
+            this.Salutation.SelectedIndexChanged += new System.EventHandler(this.Salutation_SelectedIndexChanged);
             // 
             // Suffix
             // 
@@ -281,7 +287,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.Phone, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Fax, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 3);
@@ -298,19 +304,18 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 136);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(347, 136);
             this.tableLayoutPanel1.TabIndex = 150;
             // 
-            // Phone
+            // Fax
             // 
-            this.Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone.Location = new System.Drawing.Point(123, 105);
-            this.Phone.Mask = "(999) 000-0000";
-            this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(292, 24);
-            this.Phone.TabIndex = 18;
+            this.Fax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Fax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fax.Location = new System.Drawing.Point(123, 105);
+            this.Fax.Mask = "(999) 000-0000";
+            this.Fax.Name = "Fax";
+            this.Fax.Size = new System.Drawing.Size(221, 24);
+            this.Fax.TabIndex = 18;
             // 
             // label8
             // 
@@ -355,7 +360,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 34);
             this.label11.TabIndex = 5;
-            this.label11.Text = "Phone";
+            this.label11.Text = "Fax";
             // 
             // Cell
             // 
@@ -365,18 +370,17 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Cell.Location = new System.Drawing.Point(123, 71);
             this.Cell.Mask = "(999) 000-0000";
             this.Cell.Name = "Cell";
-            this.Cell.Size = new System.Drawing.Size(292, 24);
+            this.Cell.Size = new System.Drawing.Size(221, 24);
             this.Cell.TabIndex = 17;
             // 
             // HomeNumber
             // 
-            this.HomeNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.HomeNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeNumber.Location = new System.Drawing.Point(123, 3);
             this.HomeNumber.Mask = "(999) 000-0000";
             this.HomeNumber.Name = "HomeNumber";
-            this.HomeNumber.Size = new System.Drawing.Size(292, 24);
+            this.HomeNumber.Size = new System.Drawing.Size(221, 24);
             this.HomeNumber.TabIndex = 15;
             // 
             // WorkNumber
@@ -387,9 +391,8 @@ namespace RRFFilesManager.Controls.ContactControls
             this.WorkNumber.Location = new System.Drawing.Point(123, 37);
             this.WorkNumber.Mask = "(999) 000-0000";
             this.WorkNumber.Name = "WorkNumber";
-            this.WorkNumber.Size = new System.Drawing.Size(292, 24);
+            this.WorkNumber.Size = new System.Drawing.Size(221, 24);
             this.WorkNumber.TabIndex = 16;
-            this.WorkNumber.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // label10
             // 
@@ -435,12 +438,26 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1307, 167);
             this.tableLayoutPanel3.TabIndex = 152;
             // 
+            // PhotoPictureBox
+            // 
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.InitialImage = null;
+            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
+            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 7;
+            this.PhotoPictureBox.TabStop = false;
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
             this.tableLayoutPanel4.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.groupBox3, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -459,7 +476,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(424, 161);
+            this.groupBox2.Size = new System.Drawing.Size(353, 161);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phone Numbers";
@@ -469,26 +486,25 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox3.Controls.Add(this.tableLayoutPanel5);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(463, 3);
+            this.groupBox3.Location = new System.Drawing.Point(392, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(641, 161);
+            this.groupBox3.Size = new System.Drawing.Size(712, 161);
             this.groupBox3.TabIndex = 151;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Address";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel13, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.label12, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.Street1, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.Street2, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.TextToEmail, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 2);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 22);
@@ -500,8 +516,91 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(635, 136);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(706, 136);
             this.tableLayoutPanel5.TabIndex = 150;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 5;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel13.Controls.Add(this.MobileNumber, 2, 0);
+            this.tableLayoutPanel13.Controls.Add(this.label16, 1, 0);
+            this.tableLayoutPanel13.Controls.Add(this.MobileCarrierComboBox, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.TextToEmail, 4, 0);
+            this.tableLayoutPanel13.Controls.Add(this.label20, 3, 0);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(120, 102);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(586, 34);
+            this.tableLayoutPanel13.TabIndex = 156;
+            // 
+            // MobileNumber
+            // 
+            this.MobileNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MobileNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobileNumber.Location = new System.Drawing.Point(211, 3);
+            this.MobileNumber.Mask = "(999) 000-0000";
+            this.MobileNumber.Name = "MobileNumber";
+            this.MobileNumber.Size = new System.Drawing.Size(132, 24);
+            this.MobileNumber.TabIndex = 154;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label16.Location = new System.Drawing.Point(141, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(64, 34);
+            this.label16.TabIndex = 154;
+            this.label16.Text = "Mobile Number";
+            // 
+            // MobileCarrierComboBox
+            // 
+            this.MobileCarrierComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MobileCarrierComboBox.FormattingEnabled = true;
+            this.MobileCarrierComboBox.Location = new System.Drawing.Point(3, 3);
+            this.MobileCarrierComboBox.Name = "MobileCarrierComboBox";
+            this.MobileCarrierComboBox.Size = new System.Drawing.Size(132, 26);
+            this.MobileCarrierComboBox.TabIndex = 155;
+            this.MobileCarrierComboBox.SelectedIndexChanged += new System.EventHandler(this.MobileCarrierComboBox_SelectedIndexChanged);
+            // 
+            // TextToEmail
+            // 
+            this.TextToEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextToEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextToEmail.Location = new System.Drawing.Point(449, 3);
+            this.TextToEmail.Name = "TextToEmail";
+            this.TextToEmail.Size = new System.Drawing.Size(134, 24);
+            this.TextToEmail.TabIndex = 15;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label20.Location = new System.Drawing.Point(349, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(94, 34);
+            this.label20.TabIndex = 153;
+            this.label20.Text = "Text to Email";
             // 
             // label3
             // 
@@ -555,13 +654,13 @@ namespace RRFFilesManager.Controls.ContactControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label12.Location = new System.Drawing.Point(3, 102);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(114, 34);
             this.label12.TabIndex = 5;
-            this.label12.Text = "Text to Email";
+            this.label12.Text = "Mobile Carrier";
             // 
             // Street1
             // 
@@ -570,7 +669,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Street1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Street1.Location = new System.Drawing.Point(123, 3);
             this.Street1.Name = "Street1";
-            this.Street1.Size = new System.Drawing.Size(509, 24);
+            this.Street1.Size = new System.Drawing.Size(580, 24);
             this.Street1.TabIndex = 13;
             // 
             // Street2
@@ -580,14 +679,14 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Street2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Street2.Location = new System.Drawing.Point(123, 37);
             this.Street2.Name = "Street2";
-            this.Street2.Size = new System.Drawing.Size(509, 24);
+            this.Street2.Size = new System.Drawing.Size(580, 24);
             this.Street2.TabIndex = 14;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 5;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -602,7 +701,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(515, 34);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(586, 34);
             this.tableLayoutPanel6.TabIndex = 17;
             // 
             // label14
@@ -614,7 +713,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(295, 0);
+            this.label14.Location = new System.Drawing.Point(349, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 34);
             this.label14.TabIndex = 153;
@@ -629,9 +728,9 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(124, 0);
+            this.label13.Location = new System.Drawing.Point(141, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 34);
+            this.label13.Size = new System.Drawing.Size(64, 34);
             this.label13.TabIndex = 153;
             this.label13.Text = "Prov";
             // 
@@ -642,7 +741,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.City.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.City.Location = new System.Drawing.Point(3, 3);
             this.City.Name = "City";
-            this.City.Size = new System.Drawing.Size(115, 24);
+            this.City.Size = new System.Drawing.Size(132, 24);
             this.City.TabIndex = 15;
             // 
             // PostalCode
@@ -650,10 +749,22 @@ namespace RRFFilesManager.Controls.ContactControls
             this.PostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PostalCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostalCode.Location = new System.Drawing.Point(395, 3);
+            this.PostalCode.Location = new System.Drawing.Point(449, 3);
             this.PostalCode.Name = "PostalCode";
-            this.PostalCode.Size = new System.Drawing.Size(117, 24);
+            this.PostalCode.Size = new System.Drawing.Size(134, 24);
             this.PostalCode.TabIndex = 16;
+            // 
+            // Province
+            // 
+            this.Province.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Province.DisplayMember = "Province";
+            this.Province.FormattingEnabled = true;
+            this.Province.Location = new System.Drawing.Point(211, 3);
+            this.Province.Name = "Province";
+            this.Province.Size = new System.Drawing.Size(132, 26);
+            this.Province.TabIndex = 155;
+            this.Province.ValueMember = "Province";
             // 
             // tableLayoutPanel9
             // 
@@ -672,7 +783,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(1307, 173);
             this.tableLayoutPanel9.TabIndex = 0;
-            this.tableLayoutPanel9.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel9_Paint);
             // 
             // groupBox4
             // 
@@ -885,6 +995,104 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.Size = new System.Drawing.Size(498, 142);
             this.tableLayoutPanel12.TabIndex = 150;
             // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 3;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel15.Controls.Add(this.MonthBirth, 1, 0);
+            this.tableLayoutPanel15.Controls.Add(this.YearBirth, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.DayBirth, 2, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(120, 0);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(378, 35);
+            this.tableLayoutPanel15.TabIndex = 156;
+            // 
+            // MonthBirth
+            // 
+            this.MonthBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MonthBirth.FormattingEnabled = true;
+            this.MonthBirth.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.MonthBirth.Location = new System.Drawing.Point(104, 3);
+            this.MonthBirth.Name = "MonthBirth";
+            this.MonthBirth.Size = new System.Drawing.Size(159, 26);
+            this.MonthBirth.TabIndex = 38;
+            // 
+            // YearBirth
+            // 
+            this.YearBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.YearBirth.Location = new System.Drawing.Point(3, 3);
+            this.YearBirth.Mask = "0000";
+            this.YearBirth.Name = "YearBirth";
+            this.YearBirth.Size = new System.Drawing.Size(95, 26);
+            this.YearBirth.TabIndex = 40;
+            this.YearBirth.ValidatingType = typeof(int);
+            // 
+            // DayBirth
+            // 
+            this.DayBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DayBirth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.DayBirth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.DayBirth.FormattingEnabled = true;
+            this.DayBirth.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.DayBirth.Location = new System.Drawing.Point(269, 3);
+            this.DayBirth.MaxDropDownItems = 11;
+            this.DayBirth.Name = "DayBirth";
+            this.DayBirth.Size = new System.Drawing.Size(106, 26);
+            this.DayBirth.TabIndex = 41;
+            // 
             // FirstLenguage
             // 
             this.FirstLenguage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1011,21 +1219,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Notes.Size = new System.Drawing.Size(1301, 83);
             this.Notes.TabIndex = 21;
             // 
-            // PhotoPictureBox
-            // 
-            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
-            this.PhotoPictureBox.InitialImage = null;
-            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
-            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 7;
-            this.PhotoPictureBox.TabStop = false;
-            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RRFFilesManager.Properties.Resources.Screenshot_1;
@@ -1034,127 +1227,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.pictureBox1.Size = new System.Drawing.Size(177, 87);
             this.pictureBox1.TabIndex = 149;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // tableLayoutPanel15
-            // 
-            this.tableLayoutPanel15.ColumnCount = 3;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
-            this.tableLayoutPanel15.Controls.Add(this.MonthBirth, 1, 0);
-            this.tableLayoutPanel15.Controls.Add(this.YearBirth, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.DayBirth, 2, 0);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(120, 0);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 1;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(378, 35);
-            this.tableLayoutPanel15.TabIndex = 156;
-            // 
-            // MonthBirth
-            // 
-            this.MonthBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MonthBirth.FormattingEnabled = true;
-            this.MonthBirth.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.MonthBirth.Location = new System.Drawing.Point(104, 3);
-            this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(159, 26);
-            this.MonthBirth.TabIndex = 38;
-            // 
-            // YearBirth
-            // 
-            this.YearBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.YearBirth.Location = new System.Drawing.Point(3, 3);
-            this.YearBirth.Mask = "0000";
-            this.YearBirth.Name = "YearBirth";
-            this.YearBirth.Size = new System.Drawing.Size(95, 26);
-            this.YearBirth.TabIndex = 40;
-            this.YearBirth.ValidatingType = typeof(int);
-            // 
-            // DayBirth
-            // 
-            this.DayBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DayBirth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.DayBirth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.DayBirth.FormattingEnabled = true;
-            this.DayBirth.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.DayBirth.Location = new System.Drawing.Point(269, 3);
-            this.DayBirth.MaxDropDownItems = 11;
-            this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(106, 26);
-            this.DayBirth.TabIndex = 41;
-            // 
-            // Province
-            // 
-            this.Province.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Province.DisplayMember = "Province";
-            this.Province.FormattingEnabled = true;
-            this.Province.Location = new System.Drawing.Point(174, 3);
-            this.Province.Name = "Province";
-            this.Province.Size = new System.Drawing.Size(115, 26);
-            this.Province.TabIndex = 155;
-            this.Province.ValueMember = "Province";
-            // 
-            // TextToEmail
-            // 
-            this.TextToEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextToEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextToEmail.Location = new System.Drawing.Point(123, 105);
-            this.TextToEmail.Name = "TextToEmail";
-            this.TextToEmail.Size = new System.Drawing.Size(509, 24);
-            this.TextToEmail.TabIndex = 16;
             // 
             // ClientGroupControl
             // 
@@ -1168,18 +1240,20 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "ClientGroupControl";
             this.Size = new System.Drawing.Size(1350, 610);
-            this.Load += new System.EventHandler(this.ClientGroupControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel13.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
@@ -1191,12 +1265,11 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1231,7 +1304,7 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
-        internal System.Windows.Forms.MaskedTextBox Phone;
+        internal System.Windows.Forms.MaskedTextBox Fax;
         internal System.Windows.Forms.MaskedTextBox Cell;
         internal System.Windows.Forms.MaskedTextBox WorkNumber;
         internal System.Windows.Forms.MaskedTextBox HomeNumber;
@@ -1273,6 +1346,11 @@ namespace RRFFilesManager.Controls.ContactControls
         internal System.Windows.Forms.MaskedTextBox YearBirth;
         internal System.Windows.Forms.ComboBox DayBirth;
         internal System.Windows.Forms.ComboBox Province;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Label label16;
+        internal System.Windows.Forms.ComboBox MobileCarrierComboBox;
         internal System.Windows.Forms.TextBox TextToEmail;
+        private System.Windows.Forms.Label label20;
+        internal System.Windows.Forms.MaskedTextBox MobileNumber;
     }
 }

@@ -31,14 +31,16 @@ namespace RRFFilesManager.Controls.ContactControls
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OtherGroupsControl));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.PhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.OfficeExtension = new System.Windows.Forms.TextBox();
+            this.OfficeNumber = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.CellNumber = new System.Windows.Forms.MaskedTextBox();
-            this.HomeNumber = new System.Windows.Forms.MaskedTextBox();
-            this.WorkNumber = new System.Windows.Forms.MaskedTextBox();
+            this.Fax = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.DirectExtension = new System.Windows.Forms.TextBox();
+            this.DirectNumber = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
@@ -52,12 +54,13 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label12 = new System.Windows.Forms.Label();
             this.Street1 = new System.Windows.Forms.TextBox();
             this.Street2 = new System.Windows.Forms.TextBox();
-            this.TextToEmail = new System.Windows.Forms.TextBox();
+            this.Website = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.City = new System.Windows.Forms.TextBox();
             this.PostalCode = new System.Windows.Forms.TextBox();
+            this.Province = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,17 +72,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label19 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.Relationship = new System.Windows.Forms.ComboBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.FirstLenguage = new System.Windows.Forms.TextBox();
-            this.SIN = new System.Windows.Forms.TextBox();
-            this.HealthCard = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.TeamMember = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TextBox();
@@ -104,12 +97,28 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label16 = new System.Windows.Forms.Label();
             this.CompanyLink = new System.Windows.Forms.LinkLabel();
             this.CompanyTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.MonthBirth = new System.Windows.Forms.ComboBox();
-            this.YearBirth = new System.Windows.Forms.MaskedTextBox();
-            this.DayBirth = new System.Windows.Forms.ComboBox();
-            this.Province = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.Phone = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
@@ -121,14 +130,16 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -136,14 +147,14 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.PhoneNumber, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel17, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Phone, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.CellNumber, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.HomeNumber, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.WorkNumber, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Fax, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel16, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -156,16 +167,42 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 136);
             this.tableLayoutPanel1.TabIndex = 150;
             // 
-            // PhoneNumber
+            // tableLayoutPanel17
             // 
-            this.PhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel17.ColumnCount = 2;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
+            this.tableLayoutPanel17.Controls.Add(this.OfficeExtension, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.OfficeNumber, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(120, 34);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 1;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(298, 34);
+            this.tableLayoutPanel17.TabIndex = 20;
+            // 
+            // OfficeExtension
+            // 
+            this.OfficeExtension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber.Location = new System.Drawing.Point(123, 105);
-            this.PhoneNumber.Mask = "(999) 000-0000";
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.Size = new System.Drawing.Size(292, 24);
-            this.PhoneNumber.TabIndex = 18;
+            this.OfficeExtension.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OfficeExtension.Location = new System.Drawing.Point(186, 3);
+            this.OfficeExtension.Name = "OfficeExtension";
+            this.OfficeExtension.Size = new System.Drawing.Size(109, 24);
+            this.OfficeExtension.TabIndex = 155;
+            // 
+            // OfficeNumber
+            // 
+            this.OfficeNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OfficeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OfficeNumber.Location = new System.Drawing.Point(3, 3);
+            this.OfficeNumber.Mask = "(999) 000-0000";
+            this.OfficeNumber.Name = "OfficeNumber";
+            this.OfficeNumber.Size = new System.Drawing.Size(177, 24);
+            this.OfficeNumber.TabIndex = 15;
             // 
             // label8
             // 
@@ -180,7 +217,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 34);
             this.label8.TabIndex = 2;
-            this.label8.Text = "Home";
+            this.label8.Text = "Direct";
             // 
             // label9
             // 
@@ -195,56 +232,18 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 34);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Work";
+            this.label9.Text = "Office";
             // 
-            // label11
+            // Fax
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Fax.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(3, 102);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 34);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Phone";
-            // 
-            // CellNumber
-            // 
-            this.CellNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CellNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CellNumber.Location = new System.Drawing.Point(123, 71);
-            this.CellNumber.Mask = "(999) 000-0000";
-            this.CellNumber.Name = "CellNumber";
-            this.CellNumber.Size = new System.Drawing.Size(292, 24);
-            this.CellNumber.TabIndex = 17;
-            // 
-            // HomeNumber
-            // 
-            this.HomeNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.HomeNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeNumber.Location = new System.Drawing.Point(123, 3);
-            this.HomeNumber.Mask = "(999) 000-0000";
-            this.HomeNumber.Name = "HomeNumber";
-            this.HomeNumber.Size = new System.Drawing.Size(292, 24);
-            this.HomeNumber.TabIndex = 15;
-            // 
-            // WorkNumber
-            // 
-            this.WorkNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.WorkNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkNumber.Location = new System.Drawing.Point(123, 37);
-            this.WorkNumber.Mask = "(999) 000-0000";
-            this.WorkNumber.Name = "WorkNumber";
-            this.WorkNumber.Size = new System.Drawing.Size(292, 24);
-            this.WorkNumber.TabIndex = 16;
-            this.WorkNumber.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.Fax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fax.Location = new System.Drawing.Point(123, 71);
+            this.Fax.Mask = "(999) 000-0000";
+            this.Fax.Name = "Fax";
+            this.Fax.Size = new System.Drawing.Size(292, 24);
+            this.Fax.TabIndex = 17;
             // 
             // label10
             // 
@@ -259,7 +258,44 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(114, 34);
             this.label10.TabIndex = 4;
-            this.label10.Text = "Cell";
+            this.label10.Text = "Fax";
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 2;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
+            this.tableLayoutPanel16.Controls.Add(this.DirectExtension, 1, 0);
+            this.tableLayoutPanel16.Controls.Add(this.DirectNumber, 0, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(120, 0);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(298, 34);
+            this.tableLayoutPanel16.TabIndex = 19;
+            // 
+            // DirectExtension
+            // 
+            this.DirectExtension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DirectExtension.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DirectExtension.Location = new System.Drawing.Point(186, 3);
+            this.DirectExtension.Name = "DirectExtension";
+            this.DirectExtension.Size = new System.Drawing.Size(109, 24);
+            this.DirectExtension.TabIndex = 155;
+            // 
+            // DirectNumber
+            // 
+            this.DirectNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DirectNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DirectNumber.Location = new System.Drawing.Point(3, 3);
+            this.DirectNumber.Mask = "(999) 000-0000";
+            this.DirectNumber.Name = "DirectNumber";
+            this.DirectNumber.Size = new System.Drawing.Size(177, 24);
+            this.DirectNumber.TabIndex = 15;
             // 
             // tableLayoutPanel2
             // 
@@ -346,7 +382,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox3.TabIndex = 151;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Address";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // tableLayoutPanel5
             // 
@@ -359,7 +394,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel5.Controls.Add(this.label12, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.Street1, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.Street2, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.TextToEmail, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.Website, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 2);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 22);
@@ -432,7 +467,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(114, 34);
             this.label12.TabIndex = 5;
-            this.label12.Text = "Text to Email";
+            this.label12.Text = "Website";
             // 
             // Street1
             // 
@@ -454,15 +489,15 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Street2.Size = new System.Drawing.Size(509, 24);
             this.Street2.TabIndex = 14;
             // 
-            // TextToEmail
+            // Website
             // 
-            this.TextToEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Website.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextToEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextToEmail.Location = new System.Drawing.Point(123, 105);
-            this.TextToEmail.Name = "TextToEmail";
-            this.TextToEmail.Size = new System.Drawing.Size(509, 24);
-            this.TextToEmail.TabIndex = 16;
+            this.Website.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Website.Location = new System.Drawing.Point(123, 105);
+            this.Website.Name = "Website";
+            this.Website.Size = new System.Drawing.Size(509, 24);
+            this.Website.TabIndex = 16;
             // 
             // tableLayoutPanel6
             // 
@@ -536,16 +571,28 @@ namespace RRFFilesManager.Controls.ContactControls
             this.PostalCode.Size = new System.Drawing.Size(117, 24);
             this.PostalCode.TabIndex = 16;
             // 
+            // Province
+            // 
+            this.Province.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Province.DisplayMember = "Province";
+            this.Province.FormattingEnabled = true;
+            this.Province.Location = new System.Drawing.Point(174, 3);
+            this.Province.Name = "Province";
+            this.Province.Size = new System.Drawing.Size(115, 26);
+            this.Province.TabIndex = 154;
+            this.Province.ValueMember = "Province";
+            // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel9.ColumnCount = 3;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel9.Controls.Add(this.groupBox4, 2, 0);
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
             this.tableLayoutPanel9.Controls.Add(this.groupBox5, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.groupBox4, 2, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(20, 357);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -553,16 +600,14 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(1307, 161);
             this.tableLayoutPanel9.TabIndex = 0;
-            this.tableLayoutPanel9.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel9_Paint);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel10);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.Location = new System.Drawing.Point(543, 3);
+            this.groupBox4.Location = new System.Drawing.Point(613, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(761, 155);
+            this.groupBox4.Size = new System.Drawing.Size(691, 155);
             this.groupBox4.TabIndex = 151;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Other Contact Information";
@@ -572,14 +617,14 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel10.ColumnCount = 2;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel19, 1, 2);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 1, 1);
             this.tableLayoutPanel10.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.label18, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.label19, 0, 3);
             this.tableLayoutPanel10.Controls.Add(this.textBox5, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.textBox7, 1, 3);
-            this.tableLayoutPanel10.Controls.Add(this.textBox6, 1, 2);
-            this.tableLayoutPanel10.Controls.Add(this.Relationship, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.TeamMember, 0, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
@@ -590,7 +635,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(755, 130);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(685, 130);
             this.tableLayoutPanel10.TabIndex = 150;
             // 
             // tableLayoutPanel11
@@ -606,7 +651,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(635, 32);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(565, 32);
             this.tableLayoutPanel11.TabIndex = 18;
             // 
             // textBox8
@@ -616,7 +661,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(3, 3);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(579, 24);
+            this.textBox8.Size = new System.Drawing.Size(509, 24);
             this.textBox8.TabIndex = 18;
             // 
             // linkLabel1
@@ -627,7 +672,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(588, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(518, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(44, 32);
             this.linkLabel1.TabIndex = 19;
@@ -687,7 +732,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(123, 3);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(629, 24);
+            this.textBox5.Size = new System.Drawing.Size(559, 24);
             this.textBox5.TabIndex = 13;
             // 
             // textBox7
@@ -697,164 +742,27 @@ namespace RRFFilesManager.Controls.ContactControls
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(123, 99);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(629, 24);
+            this.textBox7.Size = new System.Drawing.Size(559, 24);
             this.textBox7.TabIndex = 16;
             // 
-            // textBox6
+            // TeamMember
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(123, 67);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(629, 24);
-            this.textBox6.TabIndex = 14;
-            // 
-            // Relationship
-            // 
-            this.Relationship.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Relationship.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Relationship.FormattingEnabled = true;
-            this.Relationship.Items.AddRange(new object[] {
-            "Partner",
-            "Parent",
-            "Sibling",
-            "Friend",
-            "Executor/Executrix",
-            "Other"});
-            this.Relationship.Location = new System.Drawing.Point(3, 35);
-            this.Relationship.Name = "Relationship";
-            this.Relationship.Size = new System.Drawing.Size(114, 24);
-            this.Relationship.TabIndex = 17;
-            this.Relationship.Text = "Relationship";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.tableLayoutPanel12);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox5.Location = new System.Drawing.Point(3, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(504, 155);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Additional Client Information";
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 2;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.FirstLenguage, 1, 3);
-            this.tableLayoutPanel12.Controls.Add(this.SIN, 1, 2);
-            this.tableLayoutPanel12.Controls.Add(this.HealthCard, 1, 1);
-            this.tableLayoutPanel12.Controls.Add(this.label22, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.label24, 0, 2);
-            this.tableLayoutPanel12.Controls.Add(this.label25, 0, 3);
-            this.tableLayoutPanel12.Controls.Add(this.label23, 0, 1);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 22);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 4;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(498, 130);
-            this.tableLayoutPanel12.TabIndex = 150;
-            // 
-            // FirstLenguage
-            // 
-            this.FirstLenguage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstLenguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstLenguage.Location = new System.Drawing.Point(123, 99);
-            this.FirstLenguage.Name = "FirstLenguage";
-            this.FirstLenguage.Size = new System.Drawing.Size(372, 24);
-            this.FirstLenguage.TabIndex = 156;
-            // 
-            // SIN
-            // 
-            this.SIN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SIN.Location = new System.Drawing.Point(123, 67);
-            this.SIN.Name = "SIN";
-            this.SIN.Size = new System.Drawing.Size(372, 24);
-            this.SIN.TabIndex = 155;
-            // 
-            // HealthCard
-            // 
-            this.HealthCard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.HealthCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthCard.Location = new System.Drawing.Point(123, 35);
-            this.HealthCard.Name = "HealthCard";
-            this.HealthCard.Size = new System.Drawing.Size(372, 24);
-            this.HealthCard.TabIndex = 154;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(3, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(114, 32);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Date of Birth";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(3, 64);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(114, 32);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "S.I.N.";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label25.Location = new System.Drawing.Point(3, 96);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(114, 34);
-            this.label25.TabIndex = 5;
-            this.label25.Text = "FirstLenguage";
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label23.Location = new System.Drawing.Point(3, 32);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(114, 32);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "Health Card #";
+            this.TeamMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamMember.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TeamMember.FormattingEnabled = true;
+            this.TeamMember.Items.AddRange(new object[] {
+            "Assistant",
+            "Supervisor",
+            "Manager",
+            "Associate Lawyer",
+            "Managing Partner",
+            "Law Clerk",
+            "Accounting"});
+            this.TeamMember.Location = new System.Drawing.Point(3, 35);
+            this.TeamMember.Name = "TeamMember";
+            this.TeamMember.Size = new System.Drawing.Size(114, 24);
+            this.TeamMember.TabIndex = 17;
+            this.TeamMember.Text = "Team Member";
             // 
             // tableLayoutPanel8
             // 
@@ -1149,126 +1057,281 @@ namespace RRFFilesManager.Controls.ContactControls
             this.CompanyLink.TabIndex = 39;
             this.CompanyLink.TabStop = true;
             this.CompanyLink.Text = "Browse All";
+            this.CompanyLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CompanyLink_LinkClicked);
             // 
             // CompanyTextBox
             // 
             this.CompanyTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CompanyTextBox.Enabled = false;
             this.CompanyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CompanyTextBox.Location = new System.Drawing.Point(3, 19);
             this.CompanyTextBox.Name = "CompanyTextBox";
             this.CompanyTextBox.Size = new System.Drawing.Size(493, 24);
             this.CompanyTextBox.TabIndex = 40;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.tableLayoutPanel12);
+            this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox5.Location = new System.Drawing.Point(3, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(574, 155);
+            this.groupBox5.TabIndex = 152;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Other Contact Information";
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel18, 1, 2);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 1, 1);
+            this.tableLayoutPanel12.Controls.Add(this.label22, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.label23, 0, 2);
+            this.tableLayoutPanel12.Controls.Add(this.label24, 0, 3);
+            this.tableLayoutPanel12.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.textBox3, 1, 3);
+            this.tableLayoutPanel12.Controls.Add(this.comboBox1, 0, 1);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 4;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(568, 130);
+            this.tableLayoutPanel12.TabIndex = 150;
+            // 
             // tableLayoutPanel15
             // 
-            this.tableLayoutPanel15.ColumnCount = 3;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
-            this.tableLayoutPanel15.Controls.Add(this.MonthBirth, 1, 0);
-            this.tableLayoutPanel15.Controls.Add(this.YearBirth, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.DayBirth, 2, 0);
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel15.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.linkLabel2, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(120, 0);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(120, 32);
             this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(378, 32);
-            this.tableLayoutPanel15.TabIndex = 155;
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(448, 32);
+            this.tableLayoutPanel15.TabIndex = 18;
             // 
-            // MonthBirth
+            // textBox1
             // 
-            this.MonthBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MonthBirth.FormattingEnabled = true;
-            this.MonthBirth.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.MonthBirth.Location = new System.Drawing.Point(104, 3);
-            this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(159, 26);
-            this.MonthBirth.TabIndex = 38;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(392, 24);
+            this.textBox1.TabIndex = 18;
             // 
-            // YearBirth
+            // linkLabel2
             // 
-            this.YearBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.YearBirth.Location = new System.Drawing.Point(3, 3);
-            this.YearBirth.Mask = "0000";
-            this.YearBirth.Name = "YearBirth";
-            this.YearBirth.Size = new System.Drawing.Size(95, 26);
-            this.YearBirth.TabIndex = 40;
-            this.YearBirth.ValidatingType = typeof(int);
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.linkLabel2.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel2.Location = new System.Drawing.Point(401, 0);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(44, 32);
+            this.linkLabel2.TabIndex = 19;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Add";
+            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // DayBirth
+            // label22
             // 
-            this.DayBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DayBirth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.DayBirth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.DayBirth.FormattingEnabled = true;
-            this.DayBirth.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.DayBirth.Location = new System.Drawing.Point(269, 3);
-            this.DayBirth.MaxDropDownItems = 11;
-            this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(106, 26);
-            this.DayBirth.TabIndex = 41;
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label22.Location = new System.Drawing.Point(3, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(114, 32);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Name";
             // 
-            // Province
+            // label23
             // 
-            this.Province.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Province.DisplayMember = "Province";
-            this.Province.FormattingEnabled = true;
-            this.Province.Location = new System.Drawing.Point(174, 3);
-            this.Province.Name = "Province";
-            this.Province.Size = new System.Drawing.Size(115, 26);
-            this.Province.TabIndex = 154;
-            this.Province.ValueMember = "Province";
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label23.Location = new System.Drawing.Point(3, 64);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(114, 32);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "Phone";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label24.Location = new System.Drawing.Point(3, 96);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(114, 34);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "Email";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(123, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(442, 24);
+            this.textBox2.TabIndex = 13;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(123, 99);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(442, 24);
+            this.textBox3.TabIndex = 16;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Assistant",
+            "Supervisor",
+            "Manager",
+            "Associate Lawyer",
+            "Managing Partner",
+            "Law Clerk",
+            "Accounting"});
+            this.comboBox1.Location = new System.Drawing.Point(3, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(114, 24);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.Text = "Team Member";
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 2;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
+            this.tableLayoutPanel18.Controls.Add(this.textBox4, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.maskedTextBox1, 0, 0);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(120, 64);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(448, 32);
+            this.tableLayoutPanel18.TabIndex = 155;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(278, 3);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(167, 24);
+            this.textBox4.TabIndex = 155;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.maskedTextBox1.Mask = "(999) 000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(269, 24);
+            this.maskedTextBox1.TabIndex = 15;
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.ColumnCount = 2;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
+            this.tableLayoutPanel19.Controls.Add(this.textBox9, 1, 0);
+            this.tableLayoutPanel19.Controls.Add(this.maskedTextBox2, 0, 0);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(120, 64);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 1;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(565, 32);
+            this.tableLayoutPanel19.TabIndex = 155;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(350, 3);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(212, 24);
+            this.textBox9.TabIndex = 155;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox2.Location = new System.Drawing.Point(3, 3);
+            this.maskedTextBox2.Mask = "(999) 000-0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(341, 24);
+            this.maskedTextBox2.TabIndex = 15;
+            // 
+            // Phone
+            // 
+            this.Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phone.Location = new System.Drawing.Point(123, 105);
+            this.Phone.Mask = "(999) 000-0000";
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(292, 24);
+            this.Phone.TabIndex = 18;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(3, 102);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 34);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Phone";
             // 
             // OtherGroupsControl
             // 
@@ -1281,9 +1344,12 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "OtherGroupsControl";
             this.Size = new System.Drawing.Size(1350, 610);
-            this.Load += new System.EventHandler(this.ClientControl_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel17.PerformLayout();
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1299,9 +1365,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1311,8 +1374,15 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
+            this.tableLayoutPanel19.ResumeLayout(false);
+            this.tableLayoutPanel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1324,7 +1394,6 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
@@ -1333,42 +1402,30 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
-        internal System.Windows.Forms.MaskedTextBox PhoneNumber;
-        internal System.Windows.Forms.MaskedTextBox CellNumber;
-        internal System.Windows.Forms.MaskedTextBox WorkNumber;
-        internal System.Windows.Forms.MaskedTextBox HomeNumber;
+        internal System.Windows.Forms.MaskedTextBox Fax;
+        internal System.Windows.Forms.MaskedTextBox DirectNumber;
         internal System.Windows.Forms.TextBox Street1;
         internal System.Windows.Forms.TextBox Street2;
         internal System.Windows.Forms.TextBox City;
-        internal System.Windows.Forms.TextBox TextToEmail;
+        internal System.Windows.Forms.TextBox Website;
         internal System.Windows.Forms.PictureBox PhotoPictureBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         internal System.Windows.Forms.TextBox PostalCode;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         internal System.Windows.Forms.TextBox textBox5;
-        internal System.Windows.Forms.TextBox textBox6;
         internal System.Windows.Forms.TextBox textBox7;
-        internal System.Windows.Forms.TextBox FirstLenguage;
-        internal System.Windows.Forms.TextBox SIN;
-        internal System.Windows.Forms.TextBox HealthCard;
         internal System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         internal System.Windows.Forms.Label label26;
         internal System.Windows.Forms.TextBox Notes;
         internal System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox Relationship;
+        private System.Windows.Forms.ComboBox TeamMember;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1392,10 +1449,30 @@ namespace RRFFilesManager.Controls.ContactControls
         internal System.Windows.Forms.TextBox Date;
         internal System.Windows.Forms.Label label17;
         internal System.Windows.Forms.Label label20;
-        internal System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        internal System.Windows.Forms.ComboBox MonthBirth;
-        internal System.Windows.Forms.MaskedTextBox YearBirth;
-        internal System.Windows.Forms.ComboBox DayBirth;
         internal System.Windows.Forms.ComboBox Province;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        internal System.Windows.Forms.TextBox OfficeExtension;
+        internal System.Windows.Forms.MaskedTextBox OfficeNumber;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        internal System.Windows.Forms.TextBox DirectExtension;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        internal System.Windows.Forms.TextBox textBox4;
+        internal System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        internal System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        internal System.Windows.Forms.TextBox textBox2;
+        internal System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
+        internal System.Windows.Forms.TextBox textBox9;
+        internal System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        internal System.Windows.Forms.MaskedTextBox Phone;
+        private System.Windows.Forms.Label label11;
     }
 }
