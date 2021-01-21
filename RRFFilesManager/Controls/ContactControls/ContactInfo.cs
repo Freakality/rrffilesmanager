@@ -141,5 +141,10 @@ namespace RRFFilesManager.ContactForm
         {
 
         }
+
+        private void AddGroup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

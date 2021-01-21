@@ -32,7 +32,7 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.Group = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.AddGroup = new System.Windows.Forms.LinkLabel();
             this.FindContactButton = new System.Windows.Forms.Button();
             this.Content = new System.Windows.Forms.Panel();
             this.Cancel = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.Controls.Add(this.Group, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.linkLabel1, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.AddGroup, 2, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(20, 20);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
@@ -89,20 +89,21 @@
             this.label16.Text = "Group";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // linkLabel1
+            // AddGroup
             // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AddGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(371, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(79, 35);
-            this.linkLabel1.TabIndex = 41;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add Group";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddGroup.AutoSize = true;
+            this.AddGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddGroup.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.AddGroup.Location = new System.Drawing.Point(371, 0);
+            this.AddGroup.Name = "AddGroup";
+            this.AddGroup.Size = new System.Drawing.Size(79, 35);
+            this.AddGroup.TabIndex = 41;
+            this.AddGroup.TabStop = true;
+            this.AddGroup.Text = "Add Group";
+            this.AddGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddGroup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddGroup_LinkClicked);
             // 
             // FindContactButton
             // 
@@ -184,7 +185,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         internal System.Windows.Forms.ComboBox Group;
         internal System.Windows.Forms.Label label16;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel AddGroup;
         private System.Windows.Forms.Button FindContactButton;
         internal System.Windows.Forms.Panel Content;
         private System.Windows.Forms.Button Cancel;

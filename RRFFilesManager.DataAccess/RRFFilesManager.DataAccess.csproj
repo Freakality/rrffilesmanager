@@ -251,6 +251,18 @@
     <Compile Include="Migrations\20210120235119_Contacts_Fields1.designer.cs">
       <DependentUpon>20210120235119_Contacts_Fields1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210121035816_Contacts_OCI.cs" />
+    <Compile Include="Migrations\20210121035816_Contacts_OCI.designer.cs">
+      <DependentUpon>20210121035816_Contacts_OCI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210121040556_Contacts_TeamMember.cs" />
+    <Compile Include="Migrations\20210121040556_Contacts_TeamMember.designer.cs">
+      <DependentUpon>20210121040556_Contacts_TeamMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210121041513_Contacts_OCI2.cs" />
+    <Compile Include="Migrations\20210121041513_Contacts_OCI2.designer.cs">
+      <DependentUpon>20210121041513_Contacts_OCI2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="MobileCarrierRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

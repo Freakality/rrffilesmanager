@@ -66,8 +66,8 @@ namespace RRFFilesManager
         {
             Hide();
             PleaseWait.Instance.Show();
-            ClientInfo = new ClientInfo();
-            ClientInfo.Show();
+            ContactInfo = new ContactInfo();
+            ContactInfo.Show();
             PleaseWait.Instance.Hide();
         }
 

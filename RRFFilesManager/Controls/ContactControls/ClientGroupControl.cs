@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -93,6 +94,26 @@ namespace RRFFilesManager.Controls.ContactControls
             client.FirstLenguage = FirstLenguage.Text;
 
             client.Notes = Notes.Text;
+
+            if (PhotoPictureBox.Image != null)
+                client.Photo = Utils.ImageToByteArray(PhotoPictureBox.Image);
+
+            if (!string.IsNullOrWhiteSpace(OCIName1.Text))
+            {
+                if(client.Contact1 == null)
+                    client.Contact1 = new Contact();
+
+                client.Contact1.FirstName = OCIName1.Text;
+                client.Contact1.Relationship = OCIRelationship1.Text;
+                client.Contact1.DirectNumber = OCIPhone1.Text;
+                client.Contact1.Email = OCIEmail1.Text;
+
+                if (client.Contact1.ID == default)
+                    _contactRepository.Insert(client.Contact1);
+                else
+                    _contactRepository.Update(client.Contact1);
+            }
+                
         }
 
         public void FillForm(Contact client)
@@ -127,6 +148,14 @@ namespace RRFFilesManager.Controls.ContactControls
             FirstLenguage.Text = client.FirstLenguage;
 
             Notes.Text = client.Notes;
+
+            if (client.Photo != null)
+                PhotoPictureBox.Image = Utils.ByteArrayToImage(client.Photo);
+
+            OCIName1.Text = client.Contact1?.FirstName;
+            OCIRelationship1.Text = client.Contact1?.Relationship;
+            OCIPhone1.Text = client.Contact1?.DirectNumber;
+            OCIEmail1.Text = client.Contact1?.Email;
         }
         private void MobileCarrier_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -150,6 +179,31 @@ namespace RRFFilesManager.Controls.ContactControls
         private void Salutation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void PhotoPictureBox_Click(object sender, EventArgs e)
+        {
+            openPhotoDialog.Filter = "Image Only(*.jpg;*.jpeg;*.gif;*.bmp;*.png)|*.jpg;*.jpeg;*.gif;*.bmp;*.png";
+            try
+            {
+                if (openPhotoDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (openPhotoDialog.CheckFileExists)
+                    {
+                        string path = Path.GetFullPath(openPhotoDialog.FileName);
+                        PhotoPictureBox.Image = new Bitmap(openPhotoDialog.FileName);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please Upload image.");
+                }
+            }
+            catch (Exception ex)
+            {
+                //it will give if file is already exits..
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

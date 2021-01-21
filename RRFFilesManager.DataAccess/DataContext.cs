@@ -34,6 +34,7 @@ namespace RRFFilesManager.DataAccess
             }
         }
 
+
         //Add-Migration Initial_EFCore -Context DataContext -Project RRFFilesManager.DataAccess
         //Update-Database -Context DataContext -Project RRFFilesManager.DataAccess
     }

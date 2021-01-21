@@ -1,9 +1,13 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RRFFilesManager.Abstractions
 {
     public class Contact
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         public virtual Group Group { get; set; }
@@ -43,13 +47,15 @@ namespace RRFFilesManager.Abstractions
 
         public string Notes { get; set; }
 
-
-
-
-
-
         public string Website { get; set; }
         public string Relationship { get; set; }
+        public string TeamMember { get; set; }
+        [ForeignKey("Contact1")]
+        public int? Contact1Id { get; set; }
+        public virtual Contact Contact1 { get; set; }
+        [ForeignKey("Contact2")]
+        public int? Contact2Id { get; set; }
+        public virtual Contact Contact2 { get; set; }
 
         public override string ToString() =>  $"{FirstName} {LastName}";
     }

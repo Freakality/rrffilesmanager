@@ -64,15 +64,11 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.TeamMember = new System.Windows.Forms.ComboBox();
+            this.OCIName2 = new System.Windows.Forms.TextBox();
+            this.OCIEmail2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TextBox();
@@ -99,23 +95,24 @@ namespace RRFFilesManager.Controls.ContactControls
             this.CompanyTextBox = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.OCIName1 = new System.Windows.Forms.TextBox();
+            this.OCIEmail1 = new System.Windows.Forms.TextBox();
+            this.OCITeamMember1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.OCIPhoneExtension1 = new System.Windows.Forms.TextBox();
+            this.OCIPhone1 = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.Phone = new System.Windows.Forms.MaskedTextBox();
+            this.OCIPhoneExtension2 = new System.Windows.Forms.TextBox();
+            this.OCIPhone2 = new System.Windows.Forms.MaskedTextBox();
+            this.Cell = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.OCITeamMember2 = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
@@ -129,7 +126,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel9.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
@@ -137,7 +133,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel13.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
             this.SuspendLayout();
@@ -148,7 +143,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel17, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Phone, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Cell, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 3);
@@ -617,14 +612,14 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel10.ColumnCount = 2;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.label27, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel19, 1, 2);
-            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 1, 1);
             this.tableLayoutPanel10.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.label18, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.label19, 0, 3);
-            this.tableLayoutPanel10.Controls.Add(this.textBox5, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.textBox7, 1, 3);
-            this.tableLayoutPanel10.Controls.Add(this.TeamMember, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.OCIName2, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.OCIEmail2, 1, 3);
+            this.tableLayoutPanel10.Controls.Add(this.OCITeamMember2, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
@@ -637,48 +632,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(685, 130);
             this.tableLayoutPanel10.TabIndex = 150;
-            // 
-            // tableLayoutPanel11
-            // 
-            this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel11.Controls.Add(this.textBox8, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.linkLabel1, 1, 0);
-            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(120, 32);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(565, 32);
-            this.tableLayoutPanel11.TabIndex = 18;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(3, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(509, 24);
-            this.textBox8.TabIndex = 18;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(518, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(44, 32);
-            this.linkLabel1.TabIndex = 19;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
             // 
@@ -725,44 +678,25 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label19.TabIndex = 5;
             this.label19.Text = "Email";
             // 
-            // textBox5
+            // OCIName2
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIName2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(123, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(559, 24);
-            this.textBox5.TabIndex = 13;
+            this.OCIName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIName2.Location = new System.Drawing.Point(123, 3);
+            this.OCIName2.Name = "OCIName2";
+            this.OCIName2.Size = new System.Drawing.Size(559, 24);
+            this.OCIName2.TabIndex = 13;
             // 
-            // textBox7
+            // OCIEmail2
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIEmail2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(123, 99);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(559, 24);
-            this.textBox7.TabIndex = 16;
-            // 
-            // TeamMember
-            // 
-            this.TeamMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeamMember.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TeamMember.FormattingEnabled = true;
-            this.TeamMember.Items.AddRange(new object[] {
-            "Assistant",
-            "Supervisor",
-            "Manager",
-            "Associate Lawyer",
-            "Managing Partner",
-            "Law Clerk",
-            "Accounting"});
-            this.TeamMember.Location = new System.Drawing.Point(3, 35);
-            this.TeamMember.Name = "TeamMember";
-            this.TeamMember.Size = new System.Drawing.Size(114, 24);
-            this.TeamMember.TabIndex = 17;
-            this.TeamMember.Text = "Team Member";
+            this.OCIEmail2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIEmail2.Location = new System.Drawing.Point(123, 99);
+            this.OCIEmail2.Name = "OCIEmail2";
+            this.OCIEmail2.Size = new System.Drawing.Size(559, 24);
+            this.OCIEmail2.TabIndex = 16;
             // 
             // tableLayoutPanel8
             // 
@@ -1086,14 +1020,14 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.ColumnCount = 2;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.label25, 0, 1);
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel18, 1, 2);
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 1, 1);
             this.tableLayoutPanel12.Controls.Add(this.label22, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.label23, 0, 2);
             this.tableLayoutPanel12.Controls.Add(this.label24, 0, 3);
-            this.tableLayoutPanel12.Controls.Add(this.textBox2, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.textBox3, 1, 3);
-            this.tableLayoutPanel12.Controls.Add(this.comboBox1, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.OCIName1, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.OCIEmail1, 1, 3);
+            this.tableLayoutPanel12.Controls.Add(this.OCITeamMember1, 1, 1);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
@@ -1106,48 +1040,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(568, 130);
             this.tableLayoutPanel12.TabIndex = 150;
-            // 
-            // tableLayoutPanel15
-            // 
-            this.tableLayoutPanel15.ColumnCount = 2;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel15.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.linkLabel2, 1, 0);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(120, 32);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 1;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(448, 32);
-            this.tableLayoutPanel15.TabIndex = 18;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(392, 24);
-            this.textBox1.TabIndex = 18;
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.linkLabel2.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabel2.Location = new System.Drawing.Point(401, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(44, 32);
-            this.linkLabel2.TabIndex = 19;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Add";
-            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label22
             // 
@@ -1194,32 +1086,32 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label24.TabIndex = 5;
             this.label24.Text = "Email";
             // 
-            // textBox2
+            // OCIName1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIName1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(123, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(442, 24);
-            this.textBox2.TabIndex = 13;
+            this.OCIName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIName1.Location = new System.Drawing.Point(123, 3);
+            this.OCIName1.Name = "OCIName1";
+            this.OCIName1.Size = new System.Drawing.Size(442, 24);
+            this.OCIName1.TabIndex = 13;
             // 
-            // textBox3
+            // OCIEmail1
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIEmail1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(123, 99);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(442, 24);
-            this.textBox3.TabIndex = 16;
+            this.OCIEmail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIEmail1.Location = new System.Drawing.Point(123, 99);
+            this.OCIEmail1.Name = "OCIEmail1";
+            this.OCIEmail1.Size = new System.Drawing.Size(442, 24);
+            this.OCIEmail1.TabIndex = 16;
             // 
-            // comboBox1
+            // OCITeamMember1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.OCITeamMember1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCITeamMember1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OCITeamMember1.FormattingEnabled = true;
+            this.OCITeamMember1.Items.AddRange(new object[] {
             "Assistant",
             "Supervisor",
             "Manager",
@@ -1227,19 +1119,18 @@ namespace RRFFilesManager.Controls.ContactControls
             "Managing Partner",
             "Law Clerk",
             "Accounting"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 24);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.Text = "Team Member";
+            this.OCITeamMember1.Location = new System.Drawing.Point(123, 35);
+            this.OCITeamMember1.Name = "OCITeamMember1";
+            this.OCITeamMember1.Size = new System.Drawing.Size(442, 24);
+            this.OCITeamMember1.TabIndex = 17;
             // 
             // tableLayoutPanel18
             // 
             this.tableLayoutPanel18.ColumnCount = 2;
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
-            this.tableLayoutPanel18.Controls.Add(this.textBox4, 1, 0);
-            this.tableLayoutPanel18.Controls.Add(this.maskedTextBox1, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.OCIPhoneExtension1, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.OCIPhone1, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(120, 64);
             this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(0);
@@ -1249,34 +1140,34 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel18.Size = new System.Drawing.Size(448, 32);
             this.tableLayoutPanel18.TabIndex = 155;
             // 
-            // textBox4
+            // OCIPhoneExtension1
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIPhoneExtension1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(278, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 24);
-            this.textBox4.TabIndex = 155;
+            this.OCIPhoneExtension1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhoneExtension1.Location = new System.Drawing.Point(278, 3);
+            this.OCIPhoneExtension1.Name = "OCIPhoneExtension1";
+            this.OCIPhoneExtension1.Size = new System.Drawing.Size(167, 24);
+            this.OCIPhoneExtension1.TabIndex = 155;
             // 
-            // maskedTextBox1
+            // OCIPhone1
             // 
-            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIPhone1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(269, 24);
-            this.maskedTextBox1.TabIndex = 15;
+            this.OCIPhone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhone1.Location = new System.Drawing.Point(3, 3);
+            this.OCIPhone1.Mask = "(999) 000-0000";
+            this.OCIPhone1.Name = "OCIPhone1";
+            this.OCIPhone1.Size = new System.Drawing.Size(269, 24);
+            this.OCIPhone1.TabIndex = 15;
             // 
             // tableLayoutPanel19
             // 
             this.tableLayoutPanel19.ColumnCount = 2;
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
-            this.tableLayoutPanel19.Controls.Add(this.textBox9, 1, 0);
-            this.tableLayoutPanel19.Controls.Add(this.maskedTextBox2, 0, 0);
+            this.tableLayoutPanel19.Controls.Add(this.OCIPhoneExtension2, 1, 0);
+            this.tableLayoutPanel19.Controls.Add(this.OCIPhone2, 0, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(120, 64);
             this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
@@ -1286,37 +1177,37 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel19.Size = new System.Drawing.Size(565, 32);
             this.tableLayoutPanel19.TabIndex = 155;
             // 
-            // textBox9
+            // OCIPhoneExtension2
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIPhoneExtension2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(350, 3);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(212, 24);
-            this.textBox9.TabIndex = 155;
+            this.OCIPhoneExtension2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhoneExtension2.Location = new System.Drawing.Point(350, 3);
+            this.OCIPhoneExtension2.Name = "OCIPhoneExtension2";
+            this.OCIPhoneExtension2.Size = new System.Drawing.Size(212, 24);
+            this.OCIPhoneExtension2.TabIndex = 155;
             // 
-            // maskedTextBox2
+            // OCIPhone2
             // 
-            this.maskedTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OCIPhone2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(3, 3);
-            this.maskedTextBox2.Mask = "(999) 000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(341, 24);
-            this.maskedTextBox2.TabIndex = 15;
+            this.OCIPhone2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhone2.Location = new System.Drawing.Point(3, 3);
+            this.OCIPhone2.Mask = "(999) 000-0000";
+            this.OCIPhone2.Name = "OCIPhone2";
+            this.OCIPhone2.Size = new System.Drawing.Size(341, 24);
+            this.OCIPhone2.TabIndex = 15;
             // 
-            // Phone
+            // Cell
             // 
-            this.Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Cell.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone.Location = new System.Drawing.Point(123, 105);
-            this.Phone.Mask = "(999) 000-0000";
-            this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(292, 24);
-            this.Phone.TabIndex = 18;
+            this.Cell.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cell.Location = new System.Drawing.Point(123, 105);
+            this.Cell.Mask = "(999) 000-0000";
+            this.Cell.Name = "Cell";
+            this.Cell.Size = new System.Drawing.Size(292, 24);
+            this.Cell.TabIndex = 18;
             // 
             // label11
             // 
@@ -1331,7 +1222,55 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 34);
             this.label11.TabIndex = 5;
-            this.label11.Text = "Phone";
+            this.label11.Text = "Cell";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label25.Location = new System.Drawing.Point(3, 32);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(114, 32);
+            this.label25.TabIndex = 156;
+            this.label25.Text = "Team Member";
+            // 
+            // OCITeamMember2
+            // 
+            this.OCITeamMember2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCITeamMember2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OCITeamMember2.FormattingEnabled = true;
+            this.OCITeamMember2.Items.AddRange(new object[] {
+            "Assistant",
+            "Supervisor",
+            "Manager",
+            "Associate Lawyer",
+            "Managing Partner",
+            "Law Clerk",
+            "Accounting"});
+            this.OCITeamMember2.Location = new System.Drawing.Point(123, 35);
+            this.OCITeamMember2.Name = "OCITeamMember2";
+            this.OCITeamMember2.Size = new System.Drawing.Size(559, 24);
+            this.OCITeamMember2.TabIndex = 20;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label27.Location = new System.Drawing.Point(3, 32);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(114, 32);
+            this.label27.TabIndex = 157;
+            this.label27.Text = "Team Member";
             // 
             // OtherGroupsControl
             // 
@@ -1363,8 +1302,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1377,8 +1314,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
-            this.tableLayoutPanel15.ResumeLayout(false);
-            this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
             this.tableLayoutPanel19.ResumeLayout(false);
@@ -1419,15 +1354,11 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        internal System.Windows.Forms.TextBox textBox5;
-        internal System.Windows.Forms.TextBox textBox7;
+        internal System.Windows.Forms.TextBox OCIName2;
+        internal System.Windows.Forms.TextBox OCIEmail2;
         internal System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         internal System.Windows.Forms.Label label26;
         internal System.Windows.Forms.TextBox Notes;
-        internal System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox TeamMember;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         internal System.Windows.Forms.Label label1;
@@ -1458,21 +1389,22 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        internal System.Windows.Forms.TextBox textBox4;
-        internal System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        internal System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        internal System.Windows.Forms.TextBox OCIPhoneExtension1;
+        internal System.Windows.Forms.MaskedTextBox OCIPhone1;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        internal System.Windows.Forms.TextBox textBox2;
-        internal System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        internal System.Windows.Forms.TextBox OCIName1;
+        internal System.Windows.Forms.TextBox OCIEmail1;
+        private System.Windows.Forms.ComboBox OCITeamMember1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        internal System.Windows.Forms.TextBox textBox9;
-        internal System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        internal System.Windows.Forms.MaskedTextBox Phone;
+        internal System.Windows.Forms.TextBox OCIPhoneExtension2;
+        internal System.Windows.Forms.MaskedTextBox OCIPhone2;
+        internal System.Windows.Forms.MaskedTextBox Cell;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox OCITeamMember2;
+        private System.Windows.Forms.OpenFileDialog openPhotoDialog;
     }
 }

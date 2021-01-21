@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210121040556_Contacts_TeamMember")]
+    partial class Contacts_TeamMember
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,10 +186,10 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<int?>("CompanyID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Contact1Id")
+                    b.Property<int>("Contact1Id")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Contact2Id")
+                    b.Property<int>("Contact2Id")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("DateOfBirth")
@@ -802,11 +804,15 @@ namespace RRFFilesManager.DataAccess.Migrations
 
                     b.HasOne("RRFFilesManager.Abstractions.Contact", "Contact1")
                         .WithMany()
-                        .HasForeignKey("Contact1Id");
+                        .HasForeignKey("Contact1Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("RRFFilesManager.Abstractions.Contact", "Contact2")
                         .WithMany()
-                        .HasForeignKey("Contact2Id");
+                        .HasForeignKey("Contact2Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("RRFFilesManager.Abstractions.Group", "Group")
                         .WithMany()
