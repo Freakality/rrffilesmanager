@@ -19,6 +19,9 @@ namespace RRFFilesManager.Abstractions
         public string Suffix { get; set; }
         public string Email { get; set; }
         public virtual Company Company { get; set; }
+        public string JobTitle { get; set; }
+        public string LicenseNumber { get; set; }
+        public string Date { get; set; }
 
         public string HomeNumber { get; set; }
         public string WorkNumber { get; set; }

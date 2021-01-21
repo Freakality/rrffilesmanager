@@ -62,6 +62,10 @@ namespace RRFFilesManager.Controls.ContactControls
             client.FirstName = FirstName.Text;
             client.LastName = LastName.Text;
             client.Email = Email.Text;
+            client.Company = Company;
+            client.JobTitle = JobTitle.Text;
+            client.LicenseNumber = LicenseNumber.Text;
+            client.Date = Date.Text;
 
             client.DirectNumber = DirectNumber.Text;
             client.DirectExtension = DirectExtension.Text;
@@ -126,6 +130,10 @@ namespace RRFFilesManager.Controls.ContactControls
             FirstName.Text = client.FirstName;
             LastName.Text = client.LastName;
             Email.Text = client.Email;
+            CompanyTextBox.Text = client.Company?.Description;
+            JobTitle.Text = client.JobTitle;
+            LicenseNumber.Text = client.LicenseNumber;
+            Date.Text = client.Date;
 
             DirectNumber.Text = client.DirectNumber;
             DirectExtension.Text = client.DirectExtension;

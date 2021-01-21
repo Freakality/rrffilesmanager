@@ -263,6 +263,10 @@
     <Compile Include="Migrations\20210121041513_Contacts_OCI2.designer.cs">
       <DependentUpon>20210121041513_Contacts_OCI2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210121050805_Contacts_JobTitle.cs" />
+    <Compile Include="Migrations\20210121050805_Contacts_JobTitle.designer.cs">
+      <DependentUpon>20210121050805_Contacts_JobTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="MobileCarrierRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
