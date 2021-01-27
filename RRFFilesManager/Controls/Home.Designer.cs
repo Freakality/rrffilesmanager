@@ -49,7 +49,7 @@
             this.Contacts = new System.Windows.Forms.Button();
             this.Button11 = new System.Windows.Forms.Button();
             this.ClientInfoButton = new System.Windows.Forms.Button();
-            this.Button9 = new System.Windows.Forms.Button();
+            this.CalendarButton = new System.Windows.Forms.Button();
             this.CreateDocumentsButton = new System.Windows.Forms.Button();
             this.Button7 = new System.Windows.Forms.Button();
             this.DocumentTemplate = new System.Windows.Forms.Button();
@@ -382,20 +382,21 @@
             this.ClientInfoButton.UseVisualStyleBackColor = false;
             this.ClientInfoButton.Click += new System.EventHandler(this.ClientInfoButton_Click);
             // 
-            // Button9
+            // CalendarButton
             // 
-            this.Button9.BackColor = System.Drawing.Color.Black;
-            this.Button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button9.ForeColor = System.Drawing.Color.White;
-            this.Button9.Location = new System.Drawing.Point(199, 10);
-            this.Button9.Margin = new System.Windows.Forms.Padding(10);
-            this.Button9.Name = "Button9";
-            this.Button9.Size = new System.Drawing.Size(169, 69);
-            this.Button9.TabIndex = 4;
-            this.Button9.Text = "CALENDAR/ UPCOMING EVENTS";
-            this.Button9.UseVisualStyleBackColor = false;
+            this.CalendarButton.BackColor = System.Drawing.Color.Black;
+            this.CalendarButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalendarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalendarButton.ForeColor = System.Drawing.Color.White;
+            this.CalendarButton.Location = new System.Drawing.Point(199, 10);
+            this.CalendarButton.Margin = new System.Windows.Forms.Padding(10);
+            this.CalendarButton.Name = "CalendarButton";
+            this.CalendarButton.Size = new System.Drawing.Size(169, 69);
+            this.CalendarButton.TabIndex = 4;
+            this.CalendarButton.Text = "CALENDAR/ UPCOMING EVENTS";
+            this.CalendarButton.UseVisualStyleBackColor = false;
+            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
             // 
             // CreateDocumentsButton
             // 
@@ -538,7 +539,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Contacts, 1, 2);
             this.TableLayoutPanel1.Controls.Add(this.Button11, 0, 3);
             this.TableLayoutPanel1.Controls.Add(this.ClientInfoButton, 1, 1);
-            this.TableLayoutPanel1.Controls.Add(this.Button9, 1, 0);
+            this.TableLayoutPanel1.Controls.Add(this.CalendarButton, 1, 0);
             this.TableLayoutPanel1.Controls.Add(this.CreateDocumentsButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button7, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.DocumentTemplate, 0, 5);
@@ -627,7 +628,7 @@
         internal System.Windows.Forms.Button Contacts;
         internal System.Windows.Forms.Button Button11;
         internal System.Windows.Forms.Button ClientInfoButton;
-        internal System.Windows.Forms.Button Button9;
+        internal System.Windows.Forms.Button CalendarButton;
         internal System.Windows.Forms.Button CreateDocumentsButton;
         internal System.Windows.Forms.Button Button7;
         internal System.Windows.Forms.Button DocumentTemplate;

@@ -40,8 +40,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Label4 = new System.Windows.Forms.Label();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Email = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Fax = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -79,6 +77,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.label21 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -104,7 +103,11 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Notes = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
-            this.label21 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Email2 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -124,24 +127,28 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.tableLayoutPanel11);
             this.groupBox1.Controls.Add(this.tableLayoutPanel7);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(22, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1113, 74);
+            this.groupBox1.Size = new System.Drawing.Size(865, 125);
             this.groupBox1.TabIndex = 148;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contact Information";
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 5;
+            this.tableLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel7.ColumnCount = 4;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -155,16 +162,13 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel7.Controls.Add(this.Label4, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.FirstName, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.LastName, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.Label7, 4, 0);
-            this.tableLayoutPanel7.Controls.Add(this.Email, 4, 1);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1107, 49);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(858, 49);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // label1
@@ -180,6 +184,7 @@ namespace RRFFilesManager.Controls.ContactControls
             // 
             // Salutation
             // 
+            this.Salutation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Salutation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salutation.FormattingEnabled = true;
             this.Salutation.Items.AddRange(new object[] {
@@ -190,20 +195,21 @@ namespace RRFFilesManager.Controls.ContactControls
             "Mr. & Mrs."});
             this.Salutation.Location = new System.Drawing.Point(3, 19);
             this.Salutation.Name = "Salutation";
-            this.Salutation.Size = new System.Drawing.Size(104, 26);
+            this.Salutation.Size = new System.Drawing.Size(116, 26);
             this.Salutation.TabIndex = 1;
             this.Salutation.SelectedIndexChanged += new System.EventHandler(this.Salutation_SelectedIndexChanged);
             // 
             // Suffix
             // 
+            this.Suffix.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Suffix.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Suffix.FormattingEnabled = true;
             this.Suffix.Items.AddRange(new object[] {
             "Jr.",
             "Sr."});
-            this.Suffix.Location = new System.Drawing.Point(665, 19);
+            this.Suffix.Location = new System.Drawing.Point(737, 19);
             this.Suffix.Name = "Suffix";
-            this.Suffix.Size = new System.Drawing.Size(104, 26);
+            this.Suffix.Size = new System.Drawing.Size(118, 26);
             this.Suffix.TabIndex = 2;
             // 
             // label17
@@ -211,7 +217,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(665, 0);
+            this.label17.Location = new System.Drawing.Point(737, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(45, 16);
             this.label17.TabIndex = 39;
@@ -222,7 +228,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Label2.Location = new System.Drawing.Point(113, 0);
+            this.Label2.Location = new System.Drawing.Point(125, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(83, 16);
             this.Label2.TabIndex = 0;
@@ -233,7 +239,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Label4.Location = new System.Drawing.Point(389, 0);
+            this.Label4.Location = new System.Drawing.Point(431, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(84, 16);
             this.Label4.TabIndex = 2;
@@ -244,9 +250,9 @@ namespace RRFFilesManager.Controls.ContactControls
             this.FirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstName.Location = new System.Drawing.Point(113, 19);
+            this.FirstName.Location = new System.Drawing.Point(125, 19);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(270, 24);
+            this.FirstName.Size = new System.Drawing.Size(300, 24);
             this.FirstName.TabIndex = 4;
             // 
             // LastName
@@ -254,31 +260,10 @@ namespace RRFFilesManager.Controls.ContactControls
             this.LastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastName.Location = new System.Drawing.Point(389, 19);
+            this.LastName.Location = new System.Drawing.Point(431, 19);
             this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(270, 24);
+            this.LastName.Size = new System.Drawing.Size(300, 24);
             this.LastName.TabIndex = 6;
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Label7.Location = new System.Drawing.Point(775, 0);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(116, 16);
-            this.Label7.TabIndex = 8;
-            this.Label7.Text = "E-mail Address";
-            // 
-            // Email
-            // 
-            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(775, 19);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(329, 24);
-            this.Email.TabIndex = 15;
             // 
             // tableLayoutPanel1
             // 
@@ -429,7 +414,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel3.Controls.Add(this.PhotoPictureBox, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(25, 155);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(25, 141);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -821,6 +806,21 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel10.Size = new System.Drawing.Size(755, 142);
             this.tableLayoutPanel10.TabIndex = 150;
             // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label21.Location = new System.Drawing.Point(3, 35);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(114, 35);
+            this.label21.TabIndex = 154;
+            this.label21.Text = "Relationship";
+            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1123,7 +1123,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(114, 37);
             this.label25.TabIndex = 5;
-            this.label25.Text = "FirstLenguage";
+            this.label25.Text = "First Lenguage";
             // 
             // label23
             // 
@@ -1178,27 +1178,77 @@ namespace RRFFilesManager.Controls.ContactControls
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::RRFFilesManager.Properties.Resources.Screenshot_1;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(892, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(237, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 149;
             this.pictureBox1.TabStop = false;
             // 
-            // label21
+            // tableLayoutPanel11
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(3, 35);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(114, 35);
-            this.label21.TabIndex = 154;
-            this.label21.Text = "Relationship";
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.Email, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.Email2, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label27, 1, 0);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(128, 71);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(733, 49);
+            this.tableLayoutPanel11.TabIndex = 154;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label31.Location = new System.Drawing.Point(3, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(187, 16);
+            this.label31.TabIndex = 8;
+            this.label31.Text = "E-mail Address (Primary)";
+            // 
+            // Email2
+            // 
+            this.Email2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email2.Location = new System.Drawing.Point(369, 19);
+            this.Email2.Name = "Email2";
+            this.Email2.Size = new System.Drawing.Size(361, 24);
+            this.Email2.TabIndex = 15;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label27.Location = new System.Drawing.Point(369, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(213, 16);
+            this.label27.TabIndex = 16;
+            this.label27.Text = "E-mail Address (Secondary)";
+            // 
+            // Email
+            // 
+            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(0, 19);
+            this.Email.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(363, 24);
+            this.Email.TabIndex = 17;
             // 
             // ClientGroupControl
             // 
@@ -1240,6 +1290,8 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1256,8 +1308,6 @@ namespace RRFFilesManager.Controls.ContactControls
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.TextBox FirstName;
         internal System.Windows.Forms.TextBox LastName;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -1321,5 +1371,10 @@ namespace RRFFilesManager.Controls.ContactControls
         internal System.Windows.Forms.MaskedTextBox MobileNumber;
         private System.Windows.Forms.OpenFileDialog openPhotoDialog;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        internal System.Windows.Forms.TextBox Email;
+        internal System.Windows.Forms.Label label31;
+        internal System.Windows.Forms.TextBox Email2;
+        internal System.Windows.Forms.Label label27;
     }
 }

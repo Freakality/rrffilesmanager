@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210126234622_Client_Email2")]
+    partial class Client_Email2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -733,26 +735,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.ToTable("MobileCarriers");
                 });
 
-            modelBuilder.Entity("RRFFilesManager.Abstractions.Position", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("GroupID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("GroupID");
-
-                    b.ToTable("Positions");
-                });
-
             modelBuilder.Entity("RRFFilesManager.Abstractions.Province", b =>
                 {
                     b.Property<int>("ID")
@@ -898,13 +880,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.MatterType", "MatterType")
                         .WithMany()
                         .HasForeignKey("MatterTypeID");
-                });
-
-            modelBuilder.Entity("RRFFilesManager.Abstractions.Position", b =>
-                {
-                    b.HasOne("RRFFilesManager.Abstractions.Group", "Group")
-                        .WithMany()
-                        .HasForeignKey("GroupID");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Template", b =>

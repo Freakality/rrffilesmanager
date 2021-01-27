@@ -1,4 +1,5 @@
-﻿using RRFFilesManager.ClientForm;
+﻿using Microsoft.Office.Interop.Outlook;
+using RRFFilesManager.ClientForm;
 using RRFFilesManager.ContactForm;
 using RRFFilesManager.IntakeForm;
 using RRFFilesManager.Logic;
@@ -13,6 +14,7 @@ using System.Linq;
 using System.Text;
 
 using System.Windows.Forms;
+using System.IO;
 
 namespace RRFFilesManager
 {
@@ -96,6 +98,26 @@ namespace RRFFilesManager
             CreateTemplate = new CreateTemplate();
             CreateTemplate.Show();
             PleaseWait.Instance.Hide();
+        }
+
+        private void CalendarButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var oApp = new Microsoft.Office.Interop.Outlook.Application();
+                var ns = oApp.GetNamespace("MAPI");
+                ns.Logon();
+                var inbox = ns.GetDefaultFolder(OlDefaultFolders.olFolderCalendar);
+                if (oApp.Explorers.Count > 0)
+                {
+                    Explorer expl = oApp.Explorers[1];
+                    expl.CurrentFolder = inbox;
+                }
+
+                inbox.Display();
+            }
+            catch { }
+            
         }
     }
 }

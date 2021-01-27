@@ -192,6 +192,7 @@
     <Compile Include="Abstractions\IContactRepository.cs" />
     <Compile Include="Abstractions\IDisabilityInsuranceCompanyRepository.cs" />
     <Compile Include="Abstractions\IArchiveRepository.cs" />
+    <Compile Include="Abstractions\IPositionRepository.cs" />
     <Compile Include="Abstractions\IHearAboutUsRepository.cs" />
     <Compile Include="Abstractions\IFileRepository.cs" />
     <Compile Include="Abstractions\IIntakeRepository.cs" />
@@ -208,6 +209,11 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="ArchiveRepository.cs" />
     <Compile Include="FileRepository.cs" />
+    <Compile Include="Migrations\20210127003412_Position.cs" />
+    <Compile Include="Migrations\20210127003412_Position.designer.cs">
+      <DependentUpon>20210127003412_Position.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />
     <Compile Include="HearAboutUsRepository.cs" />
@@ -266,6 +272,10 @@
     <Compile Include="Migrations\20210121050805_Contacts_JobTitle.cs" />
     <Compile Include="Migrations\20210121050805_Contacts_JobTitle.designer.cs">
       <DependentUpon>20210121050805_Contacts_JobTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210126234622_Client_Email2.cs" />
+    <Compile Include="Migrations\20210126234622_Client_Email2.designer.cs">
+      <DependentUpon>20210126234622_Client_Email2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="MobileCarrierRepository.cs" />

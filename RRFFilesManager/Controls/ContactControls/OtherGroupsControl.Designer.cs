@@ -34,8 +34,10 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.OfficeExtension = new System.Windows.Forms.TextBox();
             this.OfficeNumber = new System.Windows.Forms.MaskedTextBox();
+            this.Cell = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.Fax = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
@@ -62,19 +64,35 @@ namespace RRFFilesManager.Controls.ContactControls
             this.PostalCode = new System.Windows.Forms.TextBox();
             this.Province = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.OCIPhoneExtension1 = new System.Windows.Forms.TextBox();
+            this.OCIPhone1 = new System.Windows.Forms.MaskedTextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.OCIName1 = new System.Windows.Forms.TextBox();
+            this.OCIEmail1 = new System.Windows.Forms.TextBox();
+            this.OCITeamMember1 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.OCIPhoneExtension2 = new System.Windows.Forms.TextBox();
+            this.OCIPhone2 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.OCIName2 = new System.Windows.Forms.TextBox();
             this.OCIEmail2 = new System.Windows.Forms.TextBox();
+            this.OCITeamMember2 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.JobTitle = new System.Windows.Forms.TextBox();
             this.LicenseNumber = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.TextBox();
@@ -93,26 +111,8 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label16 = new System.Windows.Forms.Label();
             this.CompanyLink = new System.Windows.Forms.LinkLabel();
             this.CompanyTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.OCIName1 = new System.Windows.Forms.TextBox();
-            this.OCIEmail1 = new System.Windows.Forms.TextBox();
-            this.OCITeamMember1 = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.OCIPhoneExtension1 = new System.Windows.Forms.TextBox();
-            this.OCIPhone1 = new System.Windows.Forms.MaskedTextBox();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.OCIPhoneExtension2 = new System.Windows.Forms.TextBox();
-            this.OCIPhone2 = new System.Windows.Forms.MaskedTextBox();
-            this.Cell = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.OCITeamMember2 = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
+            this.JobTitle = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
@@ -124,17 +124,17 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
-            this.tableLayoutPanel18.SuspendLayout();
-            this.tableLayoutPanel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -199,6 +199,17 @@ namespace RRFFilesManager.Controls.ContactControls
             this.OfficeNumber.Size = new System.Drawing.Size(177, 24);
             this.OfficeNumber.TabIndex = 15;
             // 
+            // Cell
+            // 
+            this.Cell.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cell.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cell.Location = new System.Drawing.Point(123, 105);
+            this.Cell.Mask = "(999) 000-0000";
+            this.Cell.Name = "Cell";
+            this.Cell.Size = new System.Drawing.Size(292, 24);
+            this.Cell.TabIndex = 18;
+            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -228,6 +239,21 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label9.Size = new System.Drawing.Size(114, 34);
             this.label9.TabIndex = 3;
             this.label9.Text = "Office";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(3, 102);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 34);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Cell";
             // 
             // Fax
             // 
@@ -596,6 +622,179 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel9.Size = new System.Drawing.Size(1307, 161);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.tableLayoutPanel12);
+            this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox5.Location = new System.Drawing.Point(3, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(574, 155);
+            this.groupBox5.TabIndex = 152;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Other Contact Information";
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.label25, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel18, 1, 2);
+            this.tableLayoutPanel12.Controls.Add(this.label22, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.label23, 0, 2);
+            this.tableLayoutPanel12.Controls.Add(this.label24, 0, 3);
+            this.tableLayoutPanel12.Controls.Add(this.OCIName1, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.OCIEmail1, 1, 3);
+            this.tableLayoutPanel12.Controls.Add(this.OCITeamMember1, 1, 1);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 4;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(568, 130);
+            this.tableLayoutPanel12.TabIndex = 150;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label25.Location = new System.Drawing.Point(3, 32);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(114, 32);
+            this.label25.TabIndex = 156;
+            this.label25.Text = "Team Member";
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 2;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
+            this.tableLayoutPanel18.Controls.Add(this.OCIPhoneExtension1, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.OCIPhone1, 0, 0);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(120, 64);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(448, 32);
+            this.tableLayoutPanel18.TabIndex = 155;
+            // 
+            // OCIPhoneExtension1
+            // 
+            this.OCIPhoneExtension1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OCIPhoneExtension1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhoneExtension1.Location = new System.Drawing.Point(278, 3);
+            this.OCIPhoneExtension1.Name = "OCIPhoneExtension1";
+            this.OCIPhoneExtension1.Size = new System.Drawing.Size(167, 24);
+            this.OCIPhoneExtension1.TabIndex = 155;
+            // 
+            // OCIPhone1
+            // 
+            this.OCIPhone1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OCIPhone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhone1.Location = new System.Drawing.Point(3, 3);
+            this.OCIPhone1.Mask = "(999) 000-0000";
+            this.OCIPhone1.Name = "OCIPhone1";
+            this.OCIPhone1.Size = new System.Drawing.Size(269, 24);
+            this.OCIPhone1.TabIndex = 15;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label22.Location = new System.Drawing.Point(3, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(114, 32);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Name";
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label23.Location = new System.Drawing.Point(3, 64);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(114, 32);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "Phone";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label24.Location = new System.Drawing.Point(3, 96);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(114, 34);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "Email";
+            // 
+            // OCIName1
+            // 
+            this.OCIName1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OCIName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIName1.Location = new System.Drawing.Point(123, 3);
+            this.OCIName1.Name = "OCIName1";
+            this.OCIName1.Size = new System.Drawing.Size(442, 24);
+            this.OCIName1.TabIndex = 13;
+            // 
+            // OCIEmail1
+            // 
+            this.OCIEmail1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OCIEmail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIEmail1.Location = new System.Drawing.Point(123, 99);
+            this.OCIEmail1.Name = "OCIEmail1";
+            this.OCIEmail1.Size = new System.Drawing.Size(442, 24);
+            this.OCIEmail1.TabIndex = 16;
+            // 
+            // OCITeamMember1
+            // 
+            this.OCITeamMember1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCITeamMember1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OCITeamMember1.FormattingEnabled = true;
+            this.OCITeamMember1.Items.AddRange(new object[] {
+            "Assistant",
+            "Supervisor",
+            "Manager",
+            "Associate Lawyer",
+            "Managing Partner",
+            "Law Clerk",
+            "Accounting",
+            "President / Owner / Director"});
+            this.OCITeamMember1.Location = new System.Drawing.Point(123, 35);
+            this.OCITeamMember1.Name = "OCITeamMember1";
+            this.OCITeamMember1.Size = new System.Drawing.Size(442, 24);
+            this.OCITeamMember1.TabIndex = 17;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel10);
@@ -632,6 +831,58 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(685, 130);
             this.tableLayoutPanel10.TabIndex = 150;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label27.Location = new System.Drawing.Point(3, 32);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(114, 32);
+            this.label27.TabIndex = 157;
+            this.label27.Text = "Team Member";
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.ColumnCount = 2;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
+            this.tableLayoutPanel19.Controls.Add(this.OCIPhoneExtension2, 1, 0);
+            this.tableLayoutPanel19.Controls.Add(this.OCIPhone2, 0, 0);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(120, 64);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 1;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(565, 32);
+            this.tableLayoutPanel19.TabIndex = 155;
+            // 
+            // OCIPhoneExtension2
+            // 
+            this.OCIPhoneExtension2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OCIPhoneExtension2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhoneExtension2.Location = new System.Drawing.Point(350, 3);
+            this.OCIPhoneExtension2.Name = "OCIPhoneExtension2";
+            this.OCIPhoneExtension2.Size = new System.Drawing.Size(212, 24);
+            this.OCIPhoneExtension2.TabIndex = 155;
+            // 
+            // OCIPhone2
+            // 
+            this.OCIPhone2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OCIPhone2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCIPhone2.Location = new System.Drawing.Point(3, 3);
+            this.OCIPhone2.Mask = "(999) 000-0000";
+            this.OCIPhone2.Name = "OCIPhone2";
+            this.OCIPhone2.Size = new System.Drawing.Size(341, 24);
+            this.OCIPhone2.TabIndex = 15;
             // 
             // label15
             // 
@@ -698,6 +949,25 @@ namespace RRFFilesManager.Controls.ContactControls
             this.OCIEmail2.Size = new System.Drawing.Size(559, 24);
             this.OCIEmail2.TabIndex = 16;
             // 
+            // OCITeamMember2
+            // 
+            this.OCITeamMember2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCITeamMember2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OCITeamMember2.FormattingEnabled = true;
+            this.OCITeamMember2.Items.AddRange(new object[] {
+            "Assistant",
+            "Supervisor",
+            "Manager",
+            "Associate Lawyer",
+            "Managing Partner",
+            "Law Clerk",
+            "Accounting",
+            "President / Owner / Director"});
+            this.OCITeamMember2.Location = new System.Drawing.Point(123, 35);
+            this.OCITeamMember2.Name = "OCITeamMember2";
+            this.OCITeamMember2.Size = new System.Drawing.Size(559, 24);
+            this.OCITeamMember2.TabIndex = 20;
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -757,11 +1027,11 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel14.Controls.Add(this.JobTitle, 0, 1);
-            this.tableLayoutPanel14.Controls.Add(this.LicenseNumber, 0, 1);
             this.tableLayoutPanel14.Controls.Add(this.label21, 0, 0);
-            this.tableLayoutPanel14.Controls.Add(this.Date, 0, 1);
             this.tableLayoutPanel14.Controls.Add(this.label17, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.label20, 2, 0);
+            this.tableLayoutPanel14.Controls.Add(this.Date, 2, 1);
+            this.tableLayoutPanel14.Controls.Add(this.LicenseNumber, 1, 1);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 123);
@@ -771,16 +1041,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel14.Size = new System.Drawing.Size(1098, 46);
             this.tableLayoutPanel14.TabIndex = 156;
-            // 
-            // JobTitle
-            // 
-            this.JobTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.JobTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JobTitle.Location = new System.Drawing.Point(3, 19);
-            this.JobTitle.Name = "JobTitle";
-            this.JobTitle.Size = new System.Drawing.Size(543, 24);
-            this.JobTitle.TabIndex = 45;
             // 
             // LicenseNumber
             // 
@@ -1004,273 +1264,25 @@ namespace RRFFilesManager.Controls.ContactControls
             this.CompanyTextBox.Size = new System.Drawing.Size(493, 24);
             this.CompanyTextBox.TabIndex = 40;
             // 
-            // groupBox5
+            // JobTitle
             // 
-            this.groupBox5.Controls.Add(this.tableLayoutPanel12);
-            this.groupBox5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox5.Location = new System.Drawing.Point(3, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(574, 155);
-            this.groupBox5.TabIndex = 152;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Other Contact Information";
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 2;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Controls.Add(this.label25, 0, 1);
-            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel18, 1, 2);
-            this.tableLayoutPanel12.Controls.Add(this.label22, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.label23, 0, 2);
-            this.tableLayoutPanel12.Controls.Add(this.label24, 0, 3);
-            this.tableLayoutPanel12.Controls.Add(this.OCIName1, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.OCIEmail1, 1, 3);
-            this.tableLayoutPanel12.Controls.Add(this.OCITeamMember1, 1, 1);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 22);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 4;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(568, 130);
-            this.tableLayoutPanel12.TabIndex = 150;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(3, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(114, 32);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Name";
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label23.Location = new System.Drawing.Point(3, 64);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(114, 32);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "Phone";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(3, 96);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(114, 34);
-            this.label24.TabIndex = 5;
-            this.label24.Text = "Email";
-            // 
-            // OCIName1
-            // 
-            this.OCIName1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OCIName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCIName1.Location = new System.Drawing.Point(123, 3);
-            this.OCIName1.Name = "OCIName1";
-            this.OCIName1.Size = new System.Drawing.Size(442, 24);
-            this.OCIName1.TabIndex = 13;
-            // 
-            // OCIEmail1
-            // 
-            this.OCIEmail1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OCIEmail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCIEmail1.Location = new System.Drawing.Point(123, 99);
-            this.OCIEmail1.Name = "OCIEmail1";
-            this.OCIEmail1.Size = new System.Drawing.Size(442, 24);
-            this.OCIEmail1.TabIndex = 16;
-            // 
-            // OCITeamMember1
-            // 
-            this.OCITeamMember1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCITeamMember1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.OCITeamMember1.FormattingEnabled = true;
-            this.OCITeamMember1.Items.AddRange(new object[] {
+            this.JobTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JobTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JobTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.JobTitle.FormattingEnabled = true;
+            this.JobTitle.Items.AddRange(new object[] {
             "Assistant",
             "Supervisor",
             "Manager",
             "Associate Lawyer",
             "Managing Partner",
             "Law Clerk",
-            "Accounting"});
-            this.OCITeamMember1.Location = new System.Drawing.Point(123, 35);
-            this.OCITeamMember1.Name = "OCITeamMember1";
-            this.OCITeamMember1.Size = new System.Drawing.Size(442, 24);
-            this.OCITeamMember1.TabIndex = 17;
-            // 
-            // tableLayoutPanel18
-            // 
-            this.tableLayoutPanel18.ColumnCount = 2;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
-            this.tableLayoutPanel18.Controls.Add(this.OCIPhoneExtension1, 1, 0);
-            this.tableLayoutPanel18.Controls.Add(this.OCIPhone1, 0, 0);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(120, 64);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 1;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(448, 32);
-            this.tableLayoutPanel18.TabIndex = 155;
-            // 
-            // OCIPhoneExtension1
-            // 
-            this.OCIPhoneExtension1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OCIPhoneExtension1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCIPhoneExtension1.Location = new System.Drawing.Point(278, 3);
-            this.OCIPhoneExtension1.Name = "OCIPhoneExtension1";
-            this.OCIPhoneExtension1.Size = new System.Drawing.Size(167, 24);
-            this.OCIPhoneExtension1.TabIndex = 155;
-            // 
-            // OCIPhone1
-            // 
-            this.OCIPhone1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OCIPhone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCIPhone1.Location = new System.Drawing.Point(3, 3);
-            this.OCIPhone1.Mask = "(999) 000-0000";
-            this.OCIPhone1.Name = "OCIPhone1";
-            this.OCIPhone1.Size = new System.Drawing.Size(269, 24);
-            this.OCIPhone1.TabIndex = 15;
-            // 
-            // tableLayoutPanel19
-            // 
-            this.tableLayoutPanel19.ColumnCount = 2;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.53846F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.46154F));
-            this.tableLayoutPanel19.Controls.Add(this.OCIPhoneExtension2, 1, 0);
-            this.tableLayoutPanel19.Controls.Add(this.OCIPhone2, 0, 0);
-            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(120, 64);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            this.tableLayoutPanel19.RowCount = 1;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(565, 32);
-            this.tableLayoutPanel19.TabIndex = 155;
-            // 
-            // OCIPhoneExtension2
-            // 
-            this.OCIPhoneExtension2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OCIPhoneExtension2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCIPhoneExtension2.Location = new System.Drawing.Point(350, 3);
-            this.OCIPhoneExtension2.Name = "OCIPhoneExtension2";
-            this.OCIPhoneExtension2.Size = new System.Drawing.Size(212, 24);
-            this.OCIPhoneExtension2.TabIndex = 155;
-            // 
-            // OCIPhone2
-            // 
-            this.OCIPhone2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OCIPhone2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCIPhone2.Location = new System.Drawing.Point(3, 3);
-            this.OCIPhone2.Mask = "(999) 000-0000";
-            this.OCIPhone2.Name = "OCIPhone2";
-            this.OCIPhone2.Size = new System.Drawing.Size(341, 24);
-            this.OCIPhone2.TabIndex = 15;
-            // 
-            // Cell
-            // 
-            this.Cell.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cell.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cell.Location = new System.Drawing.Point(123, 105);
-            this.Cell.Mask = "(999) 000-0000";
-            this.Cell.Name = "Cell";
-            this.Cell.Size = new System.Drawing.Size(292, 24);
-            this.Cell.TabIndex = 18;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(3, 102);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 34);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Cell";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label25.Location = new System.Drawing.Point(3, 32);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(114, 32);
-            this.label25.TabIndex = 156;
-            this.label25.Text = "Team Member";
-            // 
-            // OCITeamMember2
-            // 
-            this.OCITeamMember2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCITeamMember2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.OCITeamMember2.FormattingEnabled = true;
-            this.OCITeamMember2.Items.AddRange(new object[] {
-            "Assistant",
-            "Supervisor",
-            "Manager",
-            "Associate Lawyer",
-            "Managing Partner",
-            "Law Clerk",
-            "Accounting"});
-            this.OCITeamMember2.Location = new System.Drawing.Point(123, 35);
-            this.OCITeamMember2.Name = "OCITeamMember2";
-            this.OCITeamMember2.Size = new System.Drawing.Size(559, 24);
-            this.OCITeamMember2.TabIndex = 20;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label27.Location = new System.Drawing.Point(3, 32);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(114, 32);
-            this.label27.TabIndex = 157;
-            this.label27.Text = "Team Member";
+            "Accounting",
+            "President / Owner / Director"});
+            this.JobTitle.Location = new System.Drawing.Point(3, 19);
+            this.JobTitle.Name = "JobTitle";
+            this.JobTitle.Size = new System.Drawing.Size(543, 24);
+            this.JobTitle.TabIndex = 155;
             // 
             // OtherGroupsControl
             // 
@@ -1299,9 +1311,16 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel19.ResumeLayout(false);
+            this.tableLayoutPanel19.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1311,13 +1330,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel12.PerformLayout();
-            this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel18.PerformLayout();
-            this.tableLayoutPanel19.ResumeLayout(false);
-            this.tableLayoutPanel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1374,7 +1386,6 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.LinkLabel CompanyLink;
         internal System.Windows.Forms.TextBox CompanyTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
-        internal System.Windows.Forms.TextBox JobTitle;
         internal System.Windows.Forms.TextBox LicenseNumber;
         internal System.Windows.Forms.Label label21;
         internal System.Windows.Forms.TextBox Date;
@@ -1406,5 +1417,6 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox OCITeamMember2;
         private System.Windows.Forms.OpenFileDialog openPhotoDialog;
+        private System.Windows.Forms.ComboBox JobTitle;
     }
 }

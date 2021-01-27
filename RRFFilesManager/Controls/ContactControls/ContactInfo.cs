@@ -21,6 +21,7 @@ namespace RRFFilesManager.ContactForm
         private readonly IProvinceRepository _provinceRepository;
         private readonly ICompanyRepository _companyRepository;
         private readonly IGroupRepository _groupRepository;
+        private bool _editing;
         public ContactInfo()
         {
             _contactRepository = Program.GetService<IContactRepository>();
@@ -36,7 +37,7 @@ namespace RRFFilesManager.ContactForm
         //private ClientGroupControl clientGroupControl;
         //public ClientGroupControl ClientGroupControl => clientGroupControl ?? (clientGroupControl = new ClientGroupControl());
 
-        public IGroupControl GroupControl => (IGroupControl)Content.Controls?[0];
+        public IGroupControl GroupControl => Content.Controls.Count > 0 ? (IGroupControl)Content.Controls?[0] : null;
 
         public Contact Contact { get; set; }
         
@@ -120,7 +121,11 @@ namespace RRFFilesManager.ContactForm
 
         private void Group_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (_editing)
+                return;
             SetContent();
+            var group = (Abstractions.Group)Group?.SelectedItem;
+            GroupControl?.SetGroup(group);
         }
 
         private void SetContent()
@@ -130,7 +135,6 @@ namespace RRFFilesManager.ContactForm
                 Content.Controls.Clear();
                 return;
             }
-
             if (Group.Text == "Client")
                 Utils.SetContent(Content, new ClientGroupControl());
             else
@@ -144,7 +148,16 @@ namespace RRFFilesManager.ContactForm
 
         private void AddGroup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            var groupForm = new GroupForm();
+            groupForm.Show();
+            groupForm.FormClosing += GroupForm_FormClosing;
+        }
 
+        private void GroupForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _editing = true;
+            Utils.SetComboBoxDataSource(Group, _groupRepository.List());
+            _editing = false;
         }
     }
 }

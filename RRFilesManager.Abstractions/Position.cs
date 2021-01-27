@@ -2,11 +2,11 @@
 
 namespace RRFFilesManager.Abstractions
 {
-    public class Position
+    public class Group
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public virtual Group Group { get; set; }
+
         public override string ToString() =>  $"{Name}";
     }
 }

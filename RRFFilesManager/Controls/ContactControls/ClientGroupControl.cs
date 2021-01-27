@@ -1,17 +1,10 @@
 ﻿using RRFFilesManager.Abstractions;
-using RRFFilesManager.Controls.CompanyControls;
 using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Logic;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RRFFilesManager.Controls.ContactControls
@@ -21,6 +14,7 @@ namespace RRFFilesManager.Controls.ContactControls
         private readonly IProvinceRepository _provinceRepository;
         private readonly IMobileCarrierRepository _mobileCarrierRepository;
         private readonly IContactRepository _contactRepository;
+
         public ClientGroupControl()
         {
             _provinceRepository = Program.GetService<IProvinceRepository>();
@@ -30,6 +24,7 @@ namespace RRFFilesManager.Controls.ContactControls
             Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
             Utils.SetComboBoxDataSource(MobileCarrierComboBox, _mobileCarrierRepository.List());
         }
+        public Abstractions.Group Group { get; set; }
         public string[] Months => new string[]
         {
             "January",
@@ -73,6 +68,7 @@ namespace RRFFilesManager.Controls.ContactControls
             client.LastName = LastName.Text;
             client.Suffix = Suffix.Text;
             client.Email = Email.Text;
+            client.Email2 = Email2.Text;
 
             client.HomeNumber = HomeNumber.Text;
             client.WorkNumber = WorkNumber.Text;
@@ -125,6 +121,7 @@ namespace RRFFilesManager.Controls.ContactControls
             LastName.Text = client.LastName;
             Suffix.Text = client.Suffix;
             Email.Text = client.Email;
+            Email2.Text = client.Email2;
 
             HomeNumber.Text = client.HomeNumber;
             WorkNumber.Text = client.WorkNumber;
@@ -204,6 +201,11 @@ namespace RRFFilesManager.Controls.ContactControls
                 //it will give if file is already exits..
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public void SetGroup(Abstractions.Group group)
+        {
+            Group = group;
         }
     }
 }

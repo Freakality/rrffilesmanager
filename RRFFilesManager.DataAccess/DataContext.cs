@@ -24,6 +24,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Group> Groups { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

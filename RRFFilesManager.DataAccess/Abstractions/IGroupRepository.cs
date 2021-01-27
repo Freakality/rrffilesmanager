@@ -7,12 +7,12 @@ using System.Text;
 
 namespace RRFFilesManager.DataAccess.Abstractions
 {
-    public interface IGroupRepository
+    public interface IPositionRepository
     {
-        void Insert(Group group);
-        void Update(Group group);
-        void SoftDelete(int groupId);
-        Group GetById(int groupId);
-        IEnumerable<Group> List();
+        void Insert(Position position);
+        void Update(Position position);
+        void SoftDelete(int positionId);
+        Position GetById(int positionId);
+        IEnumerable<Position> List(int? groupId = null);
     }
 }

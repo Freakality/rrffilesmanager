@@ -20,15 +20,19 @@ namespace RRFFilesManager.Controls.ContactControls
         private readonly IProvinceRepository _provinceRepository;
         private readonly IMobileCarrierRepository _mobileCarrierRepository;
         private readonly IContactRepository _contactRepository;
+        private readonly IPositionRepository _positionRepository;
         public OtherGroupsControl()
         {
             _provinceRepository = Program.GetService<IProvinceRepository>();
             _mobileCarrierRepository = Program.GetService<IMobileCarrierRepository>();
             _contactRepository = Program.GetService<IContactRepository>();
+            _positionRepository = Program.GetService<IPositionRepository>();
             InitializeComponent();
             Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
+            
         }
 
+        public Group Group { get; set; }
         public Contact Contact { get; set; }
         private Company company;
         public Company Company
@@ -218,6 +222,13 @@ namespace RRFFilesManager.Controls.ContactControls
                 //it will give if file is already exits..
                 MessageBox.Show(ex.Message);
             }
+        }
+        public void SetGroup(Group group)
+        {
+            Group = group;
+            if (group == null)
+                return;
+            Utils.SetComboBoxDataSource(JobTitle, _positionRepository.List(group.ID));
         }
     }
 }
