@@ -303,6 +303,12 @@
     <Compile Include="Controls\DocumentControls\CreateDocument.Designer.cs">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TemplateControls\CreateTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -439,6 +445,9 @@
     <EmbeddedResource Include="Controls\DocumentControls\CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\TemplateControls\CreateTemplate.resx">
       <DependentUpon>CreateTemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -513,6 +522,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo.jpg" />
     <Content Include="Resources\RRFLogo.png" />
     <Content Include="Resources\RRFLogoSmall.png" />
     <Content Include="Resources\RRFLogoSmall2.png" />

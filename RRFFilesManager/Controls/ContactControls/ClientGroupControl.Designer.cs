@@ -31,6 +31,11 @@ namespace RRFFilesManager.Controls.ContactControls
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientGroupControl));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Email2 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.Salutation = new System.Windows.Forms.ComboBox();
@@ -51,7 +56,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -101,18 +105,15 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.Email2 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.Email = new System.Windows.Forms.TextBox();
+            this.EditLinkButton = new System.Windows.Forms.Button();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.ClientLinkPicture = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -126,8 +127,8 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientLinkPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -143,6 +144,68 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox1.TabIndex = 148;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contact Information";
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.Email, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.Email2, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label27, 1, 0);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(128, 71);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(733, 49);
+            this.tableLayoutPanel11.TabIndex = 154;
+            // 
+            // Email
+            // 
+            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(0, 19);
+            this.Email.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(363, 24);
+            this.Email.TabIndex = 17;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label31.Location = new System.Drawing.Point(3, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(187, 16);
+            this.label31.TabIndex = 8;
+            this.label31.Text = "E-mail Address (Primary)";
+            // 
+            // Email2
+            // 
+            this.Email2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email2.Location = new System.Drawing.Point(369, 19);
+            this.Email2.Name = "Email2";
+            this.Email2.Size = new System.Drawing.Size(361, 24);
+            this.Email2.TabIndex = 15;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label27.Location = new System.Drawing.Point(369, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(213, 16);
+            this.label27.TabIndex = 16;
+            this.label27.Text = "E-mail Address (Secondary)";
             // 
             // tableLayoutPanel7
             // 
@@ -420,21 +483,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1307, 167);
             this.tableLayoutPanel3.TabIndex = 152;
-            // 
-            // PhotoPictureBox
-            // 
-            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
-            this.PhotoPictureBox.InitialImage = null;
-            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
-            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 7;
-            this.PhotoPictureBox.TabStop = false;
-            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -1176,99 +1224,70 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Notes.Size = new System.Drawing.Size(1301, 83);
             this.Notes.TabIndex = 21;
             // 
-            // pictureBox1
+            // EditLinkButton
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::RRFFilesManager.Properties.Resources.Screenshot_1;
-            this.pictureBox1.Location = new System.Drawing.Point(892, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 149;
-            this.pictureBox1.TabStop = false;
+            this.EditLinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditLinkButton.BackColor = System.Drawing.Color.Maroon;
+            this.EditLinkButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.EditLinkButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EditLinkButton.ForeColor = System.Drawing.Color.White;
+            this.EditLinkButton.Location = new System.Drawing.Point(1080, 100);
+            this.EditLinkButton.Name = "EditLinkButton";
+            this.EditLinkButton.Size = new System.Drawing.Size(49, 25);
+            this.EditLinkButton.TabIndex = 154;
+            this.EditLinkButton.Text = "Edit";
+            this.EditLinkButton.UseVisualStyleBackColor = false;
+            this.EditLinkButton.Click += new System.EventHandler(this.EditLinkButton_Click);
             // 
-            // tableLayoutPanel11
+            // PhotoPictureBox
             // 
-            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Controls.Add(this.Email, 0, 1);
-            this.tableLayoutPanel11.Controls.Add(this.label31, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.Email2, 0, 1);
-            this.tableLayoutPanel11.Controls.Add(this.label27, 1, 0);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(128, 71);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 2;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(733, 49);
-            this.tableLayoutPanel11.TabIndex = 154;
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.InitialImage = null;
+            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
+            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 7;
+            this.PhotoPictureBox.TabStop = false;
+            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
-            // label31
+            // ClientLinkPicture
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label31.Location = new System.Drawing.Point(3, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(187, 16);
-            this.label31.TabIndex = 8;
-            this.label31.Text = "E-mail Address (Primary)";
-            // 
-            // Email2
-            // 
-            this.Email2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Email2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email2.Location = new System.Drawing.Point(369, 19);
-            this.Email2.Name = "Email2";
-            this.Email2.Size = new System.Drawing.Size(361, 24);
-            this.Email2.TabIndex = 15;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label27.Location = new System.Drawing.Point(369, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(213, 16);
-            this.label27.TabIndex = 16;
-            this.label27.Text = "E-mail Address (Secondary)";
-            // 
-            // Email
-            // 
-            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(0, 19);
-            this.Email.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(363, 24);
-            this.Email.TabIndex = 17;
+            this.ClientLinkPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClientLinkPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClientLinkPicture.Image = global::RRFFilesManager.Properties.Resources.logo;
+            this.ClientLinkPicture.Location = new System.Drawing.Point(892, 9);
+            this.ClientLinkPicture.Name = "ClientLinkPicture";
+            this.ClientLinkPicture.Size = new System.Drawing.Size(237, 116);
+            this.ClientLinkPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClientLinkPicture.TabIndex = 149;
+            this.ClientLinkPicture.TabStop = false;
+            this.ClientLinkPicture.Click += new System.EventHandler(this.ClientLinkPicture_Click);
             // 
             // ClientGroupControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.EditLinkButton);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel9);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ClientLinkPicture);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel8);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "ClientGroupControl";
             this.Size = new System.Drawing.Size(1350, 610);
             this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1289,9 +1308,8 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientLinkPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1308,7 +1326,7 @@ namespace RRFFilesManager.Controls.ContactControls
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.TextBox FirstName;
         internal System.Windows.Forms.TextBox LastName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ClientLinkPicture;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -1376,5 +1394,6 @@ namespace RRFFilesManager.Controls.ContactControls
         internal System.Windows.Forms.Label label31;
         internal System.Windows.Forms.TextBox Email2;
         internal System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button EditLinkButton;
     }
 }

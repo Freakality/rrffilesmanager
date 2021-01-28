@@ -25,6 +25,7 @@ namespace RRFFilesManager.Controls.ContactControls
             Utils.SetComboBoxDataSource(MobileCarrierComboBox, _mobileCarrierRepository.List());
         }
         public Abstractions.Group Group { get; set; }
+        public string ClientLink { get; set; }
         public string[] Months => new string[]
         {
             "January",
@@ -90,6 +91,7 @@ namespace RRFFilesManager.Controls.ContactControls
             client.FirstLenguage = FirstLenguage.Text;
 
             client.Notes = Notes.Text;
+            client.Link = ClientLink;
 
             if (PhotoPictureBox.Image != null)
                 client.Photo = Utils.ImageToByteArray(PhotoPictureBox.Image);
@@ -153,6 +155,7 @@ namespace RRFFilesManager.Controls.ContactControls
             OCIRelationship1.Text = client.Contact1?.Relationship;
             OCIPhone1.Text = client.Contact1?.DirectNumber;
             OCIEmail1.Text = client.Contact1?.Email;
+            ClientLink = client.Link;
         }
         private void MobileCarrier_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -206,6 +209,30 @@ namespace RRFFilesManager.Controls.ContactControls
         public void SetGroup(Abstractions.Group group)
         {
             Group = group;
+        }
+
+        private void EditLinkButton_Click(object sender, EventArgs e)
+        {
+            var inputBox = new InputBox("Client Link","Client Link","Link", ClientLink);
+            inputBox.Show();
+            inputBox.FormClosing += InputBox_FormClosing;
+        }
+        private void InputBox_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var inputBox = sender as InputBox;
+            if (inputBox.Value == null)
+                return;
+            ClientLink = inputBox.Value;
+        }
+
+        private void ClientLinkPicture_Click(object sender, EventArgs e)
+        {
+            if(ClientLink == null)
+            {
+                MessageBox.Show("Link not found.");
+                return;
+            }
+            System.Diagnostics.Process.Start(ClientLink);
         }
     }
 }

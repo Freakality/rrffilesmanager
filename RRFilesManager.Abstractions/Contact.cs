@@ -60,6 +60,7 @@ namespace RRFFilesManager.Abstractions
         [ForeignKey("Contact2")]
         public int? Contact2Id { get; set; }
         public virtual Contact Contact2 { get; set; }
+        public string Link { get; set; }
 
         public override string ToString() =>  $"{FirstName} {LastName}";
     }

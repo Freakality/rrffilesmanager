@@ -213,6 +213,10 @@
     <Compile Include="Migrations\20210127003412_Position.designer.cs">
       <DependentUpon>20210127003412_Position.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210127225403_ClientLink.cs" />
+    <Compile Include="Migrations\20210127225403_ClientLink.designer.cs">
+      <DependentUpon>20210127225403_ClientLink.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />
