@@ -37,6 +37,15 @@
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.4.4.0\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFrameworkCore.Jet, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFrameworkCore.Jet.3.1.0-alpha.4\lib\net461\EntityFrameworkCore.Jet.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFrameworkCore.Jet.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFrameworkCore.Jet.Data.3.1.0-alpha.4\lib\net461\EntityFrameworkCore.Jet.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFrameworkCore.Jet.OleDb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFrameworkCore.Jet.OleDb.3.1.0-alpha.4\lib\netstandard2.0\EntityFrameworkCore.Jet.OleDb.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -115,6 +124,9 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -138,6 +150,9 @@
       <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.OleDb, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.5.0.0\lib\net461\System.Data.OleDb.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -163,20 +178,23 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Security" />
-    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Permissions.4.7.0\lib\net461\System.Security.Permissions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -209,14 +227,11 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="ArchiveRepository.cs" />
     <Compile Include="FileRepository.cs" />
-    <Compile Include="Migrations\20210127003412_Position.cs" />
-    <Compile Include="Migrations\20210127003412_Position.designer.cs">
-      <DependentUpon>20210127003412_Position.cs</DependentUpon>
+    <Compile Include="Migrations\20210201014512_Initial_EFCore.cs" />
+    <Compile Include="Migrations\20210201014512_Initial_EFCore.designer.cs">
+      <DependentUpon>20210201014512_Initial_EFCore.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20210127225403_ClientLink.cs" />
-    <Compile Include="Migrations\20210127225403_ClientLink.designer.cs">
-      <DependentUpon>20210127225403_ClientLink.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />
@@ -225,63 +240,6 @@
     <Compile Include="LawyerRepository.cs" />
     <Compile Include="MatterSubTypesRepository.cs" />
     <Compile Include="MatterTypeRepository.cs" />
-    <Compile Include="Migrations\20201209003816_Initial_EFCore.cs" />
-    <Compile Include="Migrations\20201209003816_Initial_EFCore.designer.cs">
-      <DependentUpon>20201209003816_Initial_EFCore.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20201209033335_Archives.cs" />
-    <Compile Include="Migrations\20201209033335_Archives.designer.cs">
-      <DependentUpon>20201209033335_Archives.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20201209042345_Archives2.cs" />
-    <Compile Include="Migrations\20201209042345_Archives2.designer.cs">
-      <DependentUpon>20201209042345_Archives2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20201222002407_Contacts_Address.cs" />
-    <Compile Include="Migrations\20201222002407_Contacts_Address.designer.cs">
-      <DependentUpon>20201222002407_Contacts_Address.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210106005000_CompanyAddresses_ContactsFax.cs" />
-    <Compile Include="Migrations\20210106005000_CompanyAddresses_ContactsFax.designer.cs">
-      <DependentUpon>20210106005000_CompanyAddresses_ContactsFax.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210106122154_CompanyFax.cs" />
-    <Compile Include="Migrations\20210106122154_CompanyFax.designer.cs">
-      <DependentUpon>20210106122154_CompanyFax.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210119022044_Clients_Contacts.cs" />
-    <Compile Include="Migrations\20210119022044_Clients_Contacts.designer.cs">
-      <DependentUpon>20210119022044_Clients_Contacts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210120230939_Contacts_Fields.cs" />
-    <Compile Include="Migrations\20210120230939_Contacts_Fields.designer.cs">
-      <DependentUpon>20210120230939_Contacts_Fields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210120235119_Contacts_Fields1.cs" />
-    <Compile Include="Migrations\20210120235119_Contacts_Fields1.designer.cs">
-      <DependentUpon>20210120235119_Contacts_Fields1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210121035816_Contacts_OCI.cs" />
-    <Compile Include="Migrations\20210121035816_Contacts_OCI.designer.cs">
-      <DependentUpon>20210121035816_Contacts_OCI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210121040556_Contacts_TeamMember.cs" />
-    <Compile Include="Migrations\20210121040556_Contacts_TeamMember.designer.cs">
-      <DependentUpon>20210121040556_Contacts_TeamMember.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210121041513_Contacts_OCI2.cs" />
-    <Compile Include="Migrations\20210121041513_Contacts_OCI2.designer.cs">
-      <DependentUpon>20210121041513_Contacts_OCI2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210121050805_Contacts_JobTitle.cs" />
-    <Compile Include="Migrations\20210121050805_Contacts_JobTitle.designer.cs">
-      <DependentUpon>20210121050805_Contacts_JobTitle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210126234622_Client_Email2.cs" />
-    <Compile Include="Migrations\20210126234622_Client_Email2.designer.cs">
-      <DependentUpon>20210126234622_Client_Email2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\DataContextModelSnapshot.cs" />
     <Compile Include="MobileCarrierRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GroupRepository.cs" />

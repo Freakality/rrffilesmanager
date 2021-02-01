@@ -12,7 +12,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -21,11 +21,24 @@ namespace RRFFilesManager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Groups",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("Jet:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Groups", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "HearAboutUs",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -38,7 +51,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true),
                     NumberID = table.Column<int>(nullable: true)
                 },
@@ -52,7 +65,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -65,7 +78,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true),
                     Gate = table.Column<string>(nullable: true)
                 },
@@ -79,7 +92,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -88,11 +101,31 @@ namespace RRFFilesManager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Positions",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("Jet:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    GroupID = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Positions", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Positions_Groups_GroupID",
+                        column: x => x.GroupID,
+                        principalTable: "Groups",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MatterSubTypes",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true),
                     MatterTypeID = table.Column<int>(nullable: true),
                     StatutoryNotice = table.Column<string>(nullable: true)
@@ -113,7 +146,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     MatterTypeID = table.Column<int>(nullable: true),
                     Category = table.Column<string>(nullable: true),
                     TypeOfTemplate = table.Column<string>(nullable: true),
@@ -136,7 +169,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Salutation = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
@@ -171,12 +204,15 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     Description = table.Column<string>(nullable: true),
                     Memo = table.Column<string>(nullable: true),
                     Phone = table.Column<string>(nullable: true),
+                    Extension = table.Column<string>(nullable: true),
+                    Fax = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    Street = table.Column<string>(nullable: true),
+                    AddressLine1 = table.Column<string>(nullable: true),
+                    AddressLine2 = table.Column<string>(nullable: true),
                     City = table.Column<string>(nullable: true),
                     ProvinceID = table.Column<int>(nullable: true),
                     PostalCode = table.Column<string>(nullable: true)
@@ -193,11 +229,93 @@ namespace RRFFilesManager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Contacts",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("Jet:Identity", "1, 1"),
+                    GroupID = table.Column<int>(nullable: true),
+                    Salutation = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    Prefix = table.Column<string>(nullable: true),
+                    Suffix = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    Email2 = table.Column<string>(nullable: true),
+                    CompanyID = table.Column<int>(nullable: true),
+                    JobTitle = table.Column<string>(nullable: true),
+                    LicenseNumber = table.Column<string>(nullable: true),
+                    Date = table.Column<string>(nullable: true),
+                    HomeNumber = table.Column<string>(nullable: true),
+                    WorkNumber = table.Column<string>(nullable: true),
+                    Cell = table.Column<string>(nullable: true),
+                    DirectNumber = table.Column<string>(nullable: true),
+                    DirectExtension = table.Column<string>(nullable: true),
+                    OfficeNumber = table.Column<string>(nullable: true),
+                    OfficeExtension = table.Column<string>(nullable: true),
+                    Fax = table.Column<string>(nullable: true),
+                    AddressLine1 = table.Column<string>(nullable: true),
+                    AddressLine2 = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: true),
+                    ProvinceID = table.Column<int>(nullable: true),
+                    PostalCode = table.Column<string>(nullable: true),
+                    MobileNumber = table.Column<string>(nullable: true),
+                    MobileCarrier = table.Column<string>(nullable: true),
+                    EmailToText = table.Column<string>(nullable: true),
+                    Photo = table.Column<byte[]>(nullable: true),
+                    DateOfBirth = table.Column<DateTime>(nullable: true),
+                    HealthCard = table.Column<string>(nullable: true),
+                    SIN = table.Column<string>(nullable: true),
+                    FirstLenguage = table.Column<string>(nullable: true),
+                    Notes = table.Column<string>(nullable: true),
+                    Website = table.Column<string>(nullable: true),
+                    Relationship = table.Column<string>(nullable: true),
+                    TeamMember = table.Column<string>(nullable: true),
+                    Contact1Id = table.Column<int>(nullable: true),
+                    Contact2Id = table.Column<int>(nullable: true),
+                    Link = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Contacts", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Contacts_Companies_CompanyID",
+                        column: x => x.CompanyID,
+                        principalTable: "Companies",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Contacts_Contacts_Contact1Id",
+                        column: x => x.Contact1Id,
+                        principalTable: "Contacts",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Contacts_Contacts_Contact2Id",
+                        column: x => x.Contact2Id,
+                        principalTable: "Contacts",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Contacts_Groups_GroupID",
+                        column: x => x.GroupID,
+                        principalTable: "Groups",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Contacts_Provinces_ProvinceID",
+                        column: x => x.ProvinceID,
+                        principalTable: "Provinces",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Files",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Jet:Identity", "1, 1"),
                     FileNumber = table.Column<int>(nullable: false),
                     MatterTypeID = table.Column<int>(nullable: true),
                     DateOfCall = table.Column<DateTime>(nullable: false),
@@ -216,9 +334,9 @@ namespace RRFFilesManager.DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_Files", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Files_Clients_ClientID",
+                        name: "FK_Files_Contacts_ClientID",
                         column: x => x.ClientID,
-                        principalTable: "Clients",
+                        principalTable: "Contacts",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -260,42 +378,32 @@ namespace RRFFilesManager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Contacts",
+                name: "Archives",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Salutation = table.Column<string>(nullable: true),
-                    FirstName = table.Column<string>(nullable: true),
-                    MiddleName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    Initials = table.Column<string>(nullable: true),
-                    Prefix = table.Column<string>(nullable: true),
-                    Suffix = table.Column<string>(nullable: true),
-                    CompanyID = table.Column<int>(nullable: true),
-                    Memo = table.Column<string>(nullable: true),
-                    Phone = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true),
-                    Street = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    ProvinceID = table.Column<int>(nullable: true),
-                    PostalCode = table.Column<string>(nullable: true)
+                        .Annotation("Jet:Identity", "1, 1"),
+                    FileId = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Path = table.Column<string>(nullable: true),
+                    TemplateId = table.Column<int>(nullable: false),
+                    Created = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Contacts", x => x.ID);
+                    table.PrimaryKey("PK_Archives", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Contacts_Companies_CompanyID",
-                        column: x => x.CompanyID,
-                        principalTable: "Companies",
+                        name: "FK_Archives_Files_FileId",
+                        column: x => x.FileId,
+                        principalTable: "Files",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Contacts_Provinces_ProvinceID",
-                        column: x => x.ProvinceID,
-                        principalTable: "Provinces",
+                        name: "FK_Archives_Templates_TemplateId",
+                        column: x => x.TemplateId,
+                        principalTable: "Templates",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -303,8 +411,8 @@ namespace RRFFilesManager.DataAccess.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FileID = table.Column<int>(nullable: true),
+                        .Annotation("Jet:Identity", "1, 1"),
+                    FileId = table.Column<int>(nullable: false),
                     LiaDate = table.Column<DateTime>(nullable: false),
                     LiaMVR = table.Column<bool>(nullable: false),
                     LiaReportCollision = table.Column<bool>(nullable: false),
@@ -386,18 +494,28 @@ namespace RRFFilesManager.DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_Intakes", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Intakes_Files_FileID",
-                        column: x => x.FileID,
+                        name: "FK_Intakes_Files_FileId",
+                        column: x => x.FileId,
                         principalTable: "Files",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Intakes_DisabilityInsuranceCompanies_PolCompanyDeniedBenefitsID",
+                        name: "FK_Intakes_DisabilityInsuranceCompanies_PolCompanyDeniedBenefit~",
                         column: x => x.PolCompanyDeniedBenefitsID,
                         principalTable: "DisabilityInsuranceCompanies",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Archives_FileId",
+                table: "Archives",
+                column: "FileId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Archives_TemplateId",
+                table: "Archives",
+                column: "TemplateId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Clients_ProvinceID",
@@ -413,6 +531,21 @@ namespace RRFFilesManager.DataAccess.Migrations
                 name: "IX_Contacts_CompanyID",
                 table: "Contacts",
                 column: "CompanyID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Contacts_Contact1Id",
+                table: "Contacts",
+                column: "Contact1Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Contacts_Contact2Id",
+                table: "Contacts",
+                column: "Contact2Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Contacts_GroupID",
+                table: "Contacts",
+                column: "GroupID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Contacts_ProvinceID",
@@ -455,9 +588,10 @@ namespace RRFFilesManager.DataAccess.Migrations
                 column: "StaffInterviewerID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Intakes_FileID",
+                name: "IX_Intakes_FileId",
                 table: "Intakes",
-                column: "FileID");
+                column: "FileId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Intakes_PolCompanyDeniedBenefitsID",
@@ -470,6 +604,11 @@ namespace RRFFilesManager.DataAccess.Migrations
                 column: "MatterTypeID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Positions_GroupID",
+                table: "Positions",
+                column: "GroupID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Templates_MatterTypeID",
                 table: "Templates",
                 column: "MatterTypeID");
@@ -478,7 +617,10 @@ namespace RRFFilesManager.DataAccess.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Contacts");
+                name: "Archives");
+
+            migrationBuilder.DropTable(
+                name: "Clients");
 
             migrationBuilder.DropTable(
                 name: "Intakes");
@@ -487,10 +629,10 @@ namespace RRFFilesManager.DataAccess.Migrations
                 name: "MobileCarriers");
 
             migrationBuilder.DropTable(
-                name: "Templates");
+                name: "Positions");
 
             migrationBuilder.DropTable(
-                name: "Companies");
+                name: "Templates");
 
             migrationBuilder.DropTable(
                 name: "Files");
@@ -499,7 +641,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                 name: "DisabilityInsuranceCompanies");
 
             migrationBuilder.DropTable(
-                name: "Clients");
+                name: "Contacts");
 
             migrationBuilder.DropTable(
                 name: "Lawyers");
@@ -511,10 +653,16 @@ namespace RRFFilesManager.DataAccess.Migrations
                 name: "MatterSubTypes");
 
             migrationBuilder.DropTable(
-                name: "Provinces");
+                name: "Companies");
+
+            migrationBuilder.DropTable(
+                name: "Groups");
 
             migrationBuilder.DropTable(
                 name: "MatterTypes");
+
+            migrationBuilder.DropTable(
+                name: "Provinces");
         }
     }
 }
