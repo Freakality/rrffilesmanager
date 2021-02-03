@@ -56,7 +56,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -108,13 +107,13 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Notes = new System.Windows.Forms.TextBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
             this.EditLinkButton = new System.Windows.Forms.Button();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.ClientLinkPicture = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -128,6 +127,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientLinkPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -483,21 +483,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1307, 167);
             this.tableLayoutPanel3.TabIndex = 152;
-            // 
-            // PhotoPictureBox
-            // 
-            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
-            this.PhotoPictureBox.InitialImage = null;
-            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
-            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 7;
-            this.PhotoPictureBox.TabStop = false;
-            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -1254,6 +1239,21 @@ namespace RRFFilesManager.Controls.ContactControls
             this.EditLinkButton.UseVisualStyleBackColor = false;
             this.EditLinkButton.Click += new System.EventHandler(this.EditLinkButton_Click);
             // 
+            // PhotoPictureBox
+            // 
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.InitialImage = null;
+            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
+            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 7;
+            this.PhotoPictureBox.TabStop = false;
+            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
+            // 
             // ClientLinkPicture
             // 
             this.ClientLinkPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1288,7 +1288,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1309,6 +1308,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientLinkPicture)).EndInit();
             this.ResumeLayout(false);
 

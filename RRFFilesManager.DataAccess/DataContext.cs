@@ -31,8 +31,7 @@ namespace RRFFilesManager.DataAccess
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseLazyLoadingProxies();
-                //optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-                optionsBuilder.UseJet(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
             }
         }
 
