@@ -56,6 +56,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -95,7 +96,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.MonthBirth = new System.Windows.Forms.ComboBox();
             this.YearBirth = new System.Windows.Forms.MaskedTextBox();
             this.DayBirth = new System.Windows.Forms.ComboBox();
-            this.FirstLenguage = new System.Windows.Forms.TextBox();
+            this.FirstLanguage = new System.Windows.Forms.TextBox();
             this.SIN = new System.Windows.Forms.TextBox();
             this.HealthCard = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -107,13 +108,13 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Notes = new System.Windows.Forms.TextBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
             this.EditLinkButton = new System.Windows.Forms.Button();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.ClientLinkPicture = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -127,7 +128,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientLinkPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -483,6 +483,21 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1307, 167);
             this.tableLayoutPanel3.TabIndex = 152;
+            // 
+            // PhotoPictureBox
+            // 
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.InitialImage = null;
+            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
+            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 7;
+            this.PhotoPictureBox.TabStop = false;
+            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -980,7 +995,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel15, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.FirstLenguage, 1, 3);
+            this.tableLayoutPanel12.Controls.Add(this.FirstLanguage, 1, 3);
             this.tableLayoutPanel12.Controls.Add(this.SIN, 1, 2);
             this.tableLayoutPanel12.Controls.Add(this.HealthCard, 1, 1);
             this.tableLayoutPanel12.Controls.Add(this.label22, 0, 0);
@@ -1098,15 +1113,16 @@ namespace RRFFilesManager.Controls.ContactControls
             this.DayBirth.Size = new System.Drawing.Size(106, 26);
             this.DayBirth.TabIndex = 41;
             // 
-            // FirstLenguage
+            // FirstLanguage
             // 
-            this.FirstLenguage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.FirstLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstLenguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstLenguage.Location = new System.Drawing.Point(123, 108);
-            this.FirstLenguage.Name = "FirstLenguage";
-            this.FirstLenguage.Size = new System.Drawing.Size(372, 24);
-            this.FirstLenguage.TabIndex = 156;
+            this.FirstLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstLanguage.Location = new System.Drawing.Point(123, 108);
+            this.FirstLanguage.Name = "FirstLanguage";
+            this.FirstLanguage.Size = new System.Drawing.Size(372, 24);
+            this.FirstLanguage.TabIndex = 156;
+            this.FirstLanguage.TextChanged += new System.EventHandler(this.FirstLanguage_TextChanged);
             // 
             // SIN
             // 
@@ -1171,7 +1187,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(114, 37);
             this.label25.TabIndex = 5;
-            this.label25.Text = "First Lenguage";
+            this.label25.Text = "First Language";
             // 
             // label23
             // 
@@ -1239,21 +1255,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.EditLinkButton.UseVisualStyleBackColor = false;
             this.EditLinkButton.Click += new System.EventHandler(this.EditLinkButton_Click);
             // 
-            // PhotoPictureBox
-            // 
-            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
-            this.PhotoPictureBox.InitialImage = null;
-            this.PhotoPictureBox.Location = new System.Drawing.Point(1110, 12);
-            this.PhotoPictureBox.Margin = new System.Windows.Forms.Padding(3, 12, 3, 3);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(194, 152);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 7;
-            this.PhotoPictureBox.TabStop = false;
-            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
-            // 
             // ClientLinkPicture
             // 
             this.ClientLinkPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1288,6 +1289,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1308,7 +1310,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientLinkPicture)).EndInit();
             this.ResumeLayout(false);
 
@@ -1369,7 +1370,7 @@ namespace RRFFilesManager.Controls.ContactControls
         internal System.Windows.Forms.TextBox OCIName1;
         internal System.Windows.Forms.TextBox OCIPhone1;
         internal System.Windows.Forms.TextBox OCIEmail1;
-        internal System.Windows.Forms.TextBox FirstLenguage;
+        internal System.Windows.Forms.TextBox FirstLanguage;
         internal System.Windows.Forms.TextBox SIN;
         internal System.Windows.Forms.TextBox HealthCard;
         internal System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;

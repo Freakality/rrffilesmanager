@@ -20,7 +20,7 @@ namespace RRFFilesManager.Abstractions
         public string Email { get; set; }
         public string Email2 { get; set; }
         public virtual Company Company { get; set; }
-        public string JobTitle { get; set; }
+        public string TypeOfContact { get; set; }
         public string LicenseNumber { get; set; }
         public string Date { get; set; }
 
@@ -47,7 +47,7 @@ namespace RRFFilesManager.Abstractions
         public DateTime? DateOfBirth { get; set; }
         public string HealthCard { get; set; }
         public string SIN { get; set; }
-        public string FirstLenguage { get; set; }
+        public string FirstLanguage { get; set; }
 
         public string Notes { get; set; }
 

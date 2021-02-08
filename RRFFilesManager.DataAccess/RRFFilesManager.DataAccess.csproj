@@ -217,6 +217,14 @@
     <Compile Include="Migrations\20210127225403_ClientLink.designer.cs">
       <DependentUpon>20210127225403_ClientLink.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210208014816_TypeOfContact.cs" />
+    <Compile Include="Migrations\20210208014816_TypeOfContact.designer.cs">
+      <DependentUpon>20210208014816_TypeOfContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210208015014_FirstLanguage.cs" />
+    <Compile Include="Migrations\20210208015014_FirstLanguage.designer.cs">
+      <DependentUpon>20210208015014_FirstLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />

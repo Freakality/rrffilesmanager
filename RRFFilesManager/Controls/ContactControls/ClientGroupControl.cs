@@ -88,7 +88,7 @@ namespace RRFFilesManager.Controls.ContactControls
             client.DateOfBirth = PCIDateOfBirth;
             client.HealthCard = HealthCard.Text;
             client.SIN = SIN.Text;
-            client.FirstLenguage = FirstLenguage.Text;
+            client.FirstLanguage = FirstLanguage.Text;
 
             client.Notes = Notes.Text;
             client.Link = ClientLink;
@@ -144,7 +144,7 @@ namespace RRFFilesManager.Controls.ContactControls
             DayBirth.Text = client.DateOfBirth?.Day.ToString();
             HealthCard.Text = client.HealthCard;
             SIN.Text = client.SIN;
-            FirstLenguage.Text = client.FirstLenguage;
+            FirstLanguage.Text = client.FirstLanguage;
 
             Notes.Text = client.Notes;
 
@@ -233,6 +233,11 @@ namespace RRFFilesManager.Controls.ContactControls
                 return;
             }
             System.Diagnostics.Process.Start(ClientLink);
+        }
+
+        private void FirstLanguage_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

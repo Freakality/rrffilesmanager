@@ -93,11 +93,12 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Notes = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.LicenseNumber = new System.Windows.Forms.TextBox();
+            this.TypeOfContact = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.Date = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.TextBox();
+            this.LicenseNumber = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.Salutation = new System.Windows.Forms.ComboBox();
@@ -112,7 +113,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.CompanyLink = new System.Windows.Forms.LinkLabel();
             this.CompanyTextBox = new System.Windows.Forms.TextBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
-            this.JobTitle = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
@@ -1026,7 +1026,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel14.Controls.Add(this.JobTitle, 0, 1);
+            this.tableLayoutPanel14.Controls.Add(this.TypeOfContact, 0, 1);
             this.tableLayoutPanel14.Controls.Add(this.label21, 0, 0);
             this.tableLayoutPanel14.Controls.Add(this.label17, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.label20, 2, 0);
@@ -1042,15 +1042,26 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel14.Size = new System.Drawing.Size(1098, 46);
             this.tableLayoutPanel14.TabIndex = 156;
             // 
-            // LicenseNumber
+            // TypeOfContact
             // 
-            this.LicenseNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LicenseNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LicenseNumber.Location = new System.Drawing.Point(552, 19);
-            this.LicenseNumber.Name = "LicenseNumber";
-            this.LicenseNumber.Size = new System.Drawing.Size(323, 24);
-            this.LicenseNumber.TabIndex = 44;
+            this.TypeOfContact.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TypeOfContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypeOfContact.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TypeOfContact.FormattingEnabled = true;
+            this.TypeOfContact.Items.AddRange(new object[] {
+            "Assistant",
+            "Supervisor",
+            "Manager",
+            "Associate Lawyer",
+            "Managing Partner",
+            "Law Clerk",
+            "Accounting",
+            "President / Owner / Director"});
+            this.TypeOfContact.Location = new System.Drawing.Point(3, 19);
+            this.TypeOfContact.Name = "TypeOfContact";
+            this.TypeOfContact.Size = new System.Drawing.Size(543, 24);
+            this.TypeOfContact.TabIndex = 155;
+            this.TypeOfContact.SelectedIndexChanged += new System.EventHandler(this.TypeOfContact_SelectedIndexChanged);
             // 
             // label21
             // 
@@ -1059,19 +1070,9 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label21.Location = new System.Drawing.Point(3, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 16);
+            this.label21.Size = new System.Drawing.Size(124, 16);
             this.label21.TabIndex = 41;
-            this.label21.Text = "Job Title";
-            // 
-            // Date
-            // 
-            this.Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(881, 19);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(214, 24);
-            this.Date.TabIndex = 38;
+            this.label21.Text = "Type of Contact";
             // 
             // label17
             // 
@@ -1094,6 +1095,26 @@ namespace RRFFilesManager.Controls.ContactControls
             this.label20.Size = new System.Drawing.Size(43, 16);
             this.label20.TabIndex = 43;
             this.label20.Text = "Date";
+            // 
+            // Date
+            // 
+            this.Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Location = new System.Drawing.Point(881, 19);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(214, 24);
+            this.Date.TabIndex = 38;
+            // 
+            // LicenseNumber
+            // 
+            this.LicenseNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LicenseNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LicenseNumber.Location = new System.Drawing.Point(552, 19);
+            this.LicenseNumber.Name = "LicenseNumber";
+            this.LicenseNumber.Size = new System.Drawing.Size(323, 24);
+            this.LicenseNumber.TabIndex = 44;
             // 
             // tableLayoutPanel7
             // 
@@ -1264,26 +1285,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.CompanyTextBox.Size = new System.Drawing.Size(493, 24);
             this.CompanyTextBox.TabIndex = 40;
             // 
-            // JobTitle
-            // 
-            this.JobTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.JobTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JobTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.JobTitle.FormattingEnabled = true;
-            this.JobTitle.Items.AddRange(new object[] {
-            "Assistant",
-            "Supervisor",
-            "Manager",
-            "Associate Lawyer",
-            "Managing Partner",
-            "Law Clerk",
-            "Accounting",
-            "President / Owner / Director"});
-            this.JobTitle.Location = new System.Drawing.Point(3, 19);
-            this.JobTitle.Name = "JobTitle";
-            this.JobTitle.Size = new System.Drawing.Size(543, 24);
-            this.JobTitle.TabIndex = 155;
-            // 
             // OtherGroupsControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1417,6 +1418,6 @@ namespace RRFFilesManager.Controls.ContactControls
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox OCITeamMember2;
         private System.Windows.Forms.OpenFileDialog openPhotoDialog;
-        private System.Windows.Forms.ComboBox JobTitle;
+        private System.Windows.Forms.ComboBox TypeOfContact;
     }
 }

@@ -67,7 +67,7 @@ namespace RRFFilesManager.Controls.ContactControls
             client.LastName = LastName.Text;
             client.Email = Email.Text;
             client.Company = Company;
-            client.JobTitle = JobTitle.Text;
+            client.TypeOfContact = TypeOfContact.Text;
             client.LicenseNumber = LicenseNumber.Text;
             client.Date = Date.Text;
 
@@ -135,7 +135,7 @@ namespace RRFFilesManager.Controls.ContactControls
             LastName.Text = client.LastName;
             Email.Text = client.Email;
             CompanyTextBox.Text = client.Company?.Description;
-            JobTitle.Text = client.JobTitle;
+            TypeOfContact.Text = client.TypeOfContact;
             LicenseNumber.Text = client.LicenseNumber;
             Date.Text = client.Date;
 
@@ -228,7 +228,12 @@ namespace RRFFilesManager.Controls.ContactControls
             Group = group;
             if (group == null)
                 return;
-            Utils.SetComboBoxDataSource(JobTitle, _positionRepository.List(group.ID));
+            Utils.SetComboBoxDataSource(TypeOfContact, _positionRepository.List(group.ID));
+        }
+
+        private void TypeOfContact_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
