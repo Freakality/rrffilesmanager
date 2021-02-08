@@ -225,6 +225,14 @@
     <Compile Include="Migrations\20210208015014_FirstLanguage.designer.cs">
       <DependentUpon>20210208015014_FirstLanguage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210208021806_DaysFromDateOfLoss.cs" />
+    <Compile Include="Migrations\20210208021806_DaysFromDateOfLoss.designer.cs">
+      <DependentUpon>20210208021806_DaysFromDateOfLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210208021852_DaysFromDateOfLoss2.cs" />
+    <Compile Include="Migrations\20210208021852_DaysFromDateOfLoss2.designer.cs">
+      <DependentUpon>20210208021852_DaysFromDateOfLoss2.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />

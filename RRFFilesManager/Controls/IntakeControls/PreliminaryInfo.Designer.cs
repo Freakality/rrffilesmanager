@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.Label AdditionalNotesLabel;
             System.Windows.Forms.Label DateOFCallLabel;
-            System.Windows.Forms.Label DateOfLossLabel;
             System.Windows.Forms.Label FileLawyerLabel;
             System.Windows.Forms.Label HowHearLabel;
             System.Windows.Forms.Label ResponsibleLawyerLabel;
@@ -38,6 +37,7 @@
             System.Windows.Forms.Label MatterSubTypeLabel;
             System.Windows.Forms.Label StaffInterviewerLabel;
             System.Windows.Forms.Label FileNumberLabel;
+            this.DateOfLossLabel = new System.Windows.Forms.Label();
             this.AdditionalNotesTextBox = new System.Windows.Forms.TextBox();
             this.LawyerComboBox = new System.Windows.Forms.ComboBox();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -48,7 +48,7 @@
             this.LimitationPeriodTextBox = new System.Windows.Forms.TextBox();
             this.HowHearComboBox = new System.Windows.Forms.ComboBox();
             this.DateOfLossDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.StatutoryNoticeLabel = new System.Windows.Forms.Label();
             this.StatutoryNoticeBox = new System.Windows.Forms.TextBox();
             this.DateOFCallDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Label42 = new System.Windows.Forms.Label();
@@ -59,7 +59,6 @@
             this.MatterTypeComboBox = new System.Windows.Forms.ComboBox();
             AdditionalNotesLabel = new System.Windows.Forms.Label();
             DateOFCallLabel = new System.Windows.Forms.Label();
-            DateOfLossLabel = new System.Windows.Forms.Label();
             FileLawyerLabel = new System.Windows.Forms.Label();
             HowHearLabel = new System.Windows.Forms.Label();
             ResponsibleLawyerLabel = new System.Windows.Forms.Label();
@@ -93,14 +92,14 @@
             // 
             // DateOfLossLabel
             // 
-            DateOfLossLabel.AutoSize = true;
-            DateOfLossLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DateOfLossLabel.ForeColor = System.Drawing.Color.Black;
-            DateOfLossLabel.Location = new System.Drawing.Point(618, 92);
-            DateOfLossLabel.Name = "DateOfLossLabel";
-            DateOfLossLabel.Size = new System.Drawing.Size(92, 17);
-            DateOfLossLabel.TabIndex = 8;
-            DateOfLossLabel.Text = "Date Of Loss:";
+            this.DateOfLossLabel.AutoSize = true;
+            this.DateOfLossLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateOfLossLabel.ForeColor = System.Drawing.Color.Black;
+            this.DateOfLossLabel.Location = new System.Drawing.Point(618, 92);
+            this.DateOfLossLabel.Name = "DateOfLossLabel";
+            this.DateOfLossLabel.Size = new System.Drawing.Size(92, 17);
+            this.DateOfLossLabel.TabIndex = 8;
+            this.DateOfLossLabel.Text = "Date Of Loss:";
             // 
             // FileLawyerLabel
             // 
@@ -226,8 +225,8 @@
             this.TableLayoutPanel1.Controls.Add(this.DateOfLossDateTimePicker, 3, 2);
             this.TableLayoutPanel1.Controls.Add(HowHearLabel, 0, 1);
             this.TableLayoutPanel1.Controls.Add(FileLawyerLabel, 2, 1);
-            this.TableLayoutPanel1.Controls.Add(DateOfLossLabel, 2, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Label1, 2, 4);
+            this.TableLayoutPanel1.Controls.Add(this.DateOfLossLabel, 2, 2);
+            this.TableLayoutPanel1.Controls.Add(this.StatutoryNoticeLabel, 2, 4);
             this.TableLayoutPanel1.Controls.Add(this.StatutoryNoticeBox, 3, 4);
             this.TableLayoutPanel1.Controls.Add(DateOFCallLabel, 0, 0);
             this.TableLayoutPanel1.Controls.Add(this.DateOFCallDateTimePicker, 1, 0);
@@ -327,14 +326,14 @@
             this.DateOfLossDateTimePicker.TabIndex = 9;
             this.DateOfLossDateTimePicker.ValueChanged += new System.EventHandler(this.DateOfLossDateTimePicker_ValueChanged);
             // 
-            // Label1
+            // StatutoryNoticeLabel
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(618, 184);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(112, 17);
-            this.Label1.TabIndex = 27;
-            this.Label1.Text = "Statutory Notice";
+            this.StatutoryNoticeLabel.AutoSize = true;
+            this.StatutoryNoticeLabel.Location = new System.Drawing.Point(618, 184);
+            this.StatutoryNoticeLabel.Name = "StatutoryNoticeLabel";
+            this.StatutoryNoticeLabel.Size = new System.Drawing.Size(112, 17);
+            this.StatutoryNoticeLabel.TabIndex = 27;
+            this.StatutoryNoticeLabel.Text = "Statutory Notice";
             // 
             // StatutoryNoticeBox
             // 
@@ -487,6 +486,7 @@
         internal System.Windows.Forms.GroupBox GroupBox6;
         internal System.Windows.Forms.ComboBox MatterTypeComboBox;
         private System.Windows.Forms.Button FindIntakeButton;
-        internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.Label StatutoryNoticeLabel;
+        private System.Windows.Forms.Label DateOfLossLabel;
     }
 }

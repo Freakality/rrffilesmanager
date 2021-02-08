@@ -86,32 +86,42 @@ namespace RRFFilesManager.IntakeForm
         private void MatterSubTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
-            if (matterSubType?.StatutoryNotice != null)
-            {
-                StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
-            }
-            else
-            {
-                StatutoryNoticeBox.Text = "";
-            }
+            SetStatutoryNoticeBox(matterSubType);
         }
 
         private void DateOfLossDateTimePicker_ValueChanged(object Sender, EventArgs e)
         {
             DateOfLossDateTimePicker.CustomFormat = "MMM-dd-yyyy";
             var matterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
-            if (matterSubType?.StatutoryNotice != null)
-            {
-                StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays(10).ToString("MMM-dd-yyyy");
-            }
-            else
-            {
-                StatutoryNoticeBox.Text = "";
-            }
+            SetStatutoryNoticeBox(matterSubType);
 
             if (DateOfLossDateTimePicker.CustomFormat == "MMM-dd-yyyy")
             {
                 LimitationPeriodTextBox.Text = DateOfLossDateTimePicker.Value.AddYears(2).ToString("MMM-dd-yyyy");
+            }
+        }
+        public void SetStatutoryNoticeBox(MatterSubType matterSubType)
+        {
+            if (matterSubType == null)
+                return;
+
+            if (matterSubType?.DaysFromDateOfLoss != null)
+            {
+                StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays((double)matterSubType?.DaysFromDateOfLoss).ToString("MMM-dd-yyyy");
+                StatutoryNoticeBox.Show();
+                StatutoryNoticeLabel.Show();
+            }
+            else if(matterSubType.StatutoryNotice != null)
+            {
+                StatutoryNoticeBox.Text = matterSubType.StatutoryNotice;
+                StatutoryNoticeBox.Show();
+                StatutoryNoticeLabel.Show();
+            }
+            else
+            {
+                StatutoryNoticeBox.Text = "";
+                StatutoryNoticeBox.Hide();
+                StatutoryNoticeLabel.Hide();
             }
         }
 
@@ -197,6 +207,14 @@ namespace RRFFilesManager.IntakeForm
                 return;
             }
             Utils.SetComboBoxDataSource(MatterSubTypeComboBox, _matterSubTypeRepository.List().Where(s => s.MatterType.ID == matterType.ID).ToList());
+            if (matterType.Description == "Disability")
+            {
+                DateOfLossLabel.Text = "Date of Denial:";
+            }
+            else
+            {
+                DateOfLossLabel.Text = "Date Of Loss:";
+            }
         }
 
         private void FindIntakeButton_Click(object sender, EventArgs e)

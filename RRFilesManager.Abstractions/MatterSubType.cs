@@ -12,6 +12,7 @@ namespace RRFFilesManager.Abstractions
         public string Description { get; set; }
         public virtual MatterType MatterType { get; set; }
         public string StatutoryNotice { get; set; }
+        public int? DaysFromDateOfLoss { get; set; }
         public override string ToString() => Description;
     }
 }
