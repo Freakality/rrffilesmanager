@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RRFFilesManager.Logic;
 using Westwind.RazorHosting;
+using RRFFilesManager.Abstractions;
 
 namespace RRFFilesManager.IntakeForm
 {
     public partial class ClientIntakeProcess : UserControl
     {
+        private readonly ArchiveManager _archiveManager;
         public ClientIntakeProcess()
         {
+            _archiveManager = new ArchiveManager();
             InitializeComponent();
         }
 
@@ -79,7 +82,8 @@ namespace RRFFilesManager.IntakeForm
 
         private void SendCIPEmail()
         {
-            var attachmentPath = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
+            var workbook = _archiveManager.CreateAndAddArchive(Home.IntakeForm.Intake.File); ;
+            var attachmentPath = workbook.Path;
             string clientFullName = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com"};
             var subject = $"Client Intake Process Invoked - {clientFullName}";

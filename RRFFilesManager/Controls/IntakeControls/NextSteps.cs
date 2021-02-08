@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-
 using System.Windows.Forms;
-using Microsoft.Office.Interop.Word;
-using Microsoft.Office.Interop.Excel;
-using RRFFilesManager.DataAccess;
-using System.Configuration;
-using System.IO;
-using Microsoft.Office.Interop.Outlook;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
 using RRFFilesManager.DataAccess.Abstractions;
@@ -24,9 +13,13 @@ namespace RRFFilesManager.IntakeForm
     {
         public bool RefillCYADocument { get; set; }
         private readonly ITemplateRepository _templateRepository;
+        private readonly ArchiveManager _archiveManager;
+        private Archive Document { get; set; }
+        private Archive Workbook { get; set; }
         public NextSteps()
         {
-            _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
+            _templateRepository = Program.GetService<ITemplateRepository>();
+            _archiveManager = new ArchiveManager();
             InitializeComponent();
             var typesOfTemplates = _templateRepository.List(Home.IntakeForm.Intake.File.MatterType.ID, "CYA")?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
             TypeTemplate.Items.AddRange(typesOfTemplates);
@@ -105,7 +98,8 @@ namespace RRFFilesManager.IntakeForm
         
         public void CreateSendItemPAH()
         {
-            var attachmentPath = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
+            CreateOrUpdateDocument();
+            var attachmentPath = Document.Path;
             string clientFullName = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
             var subject = $"Print and Hold Process - {clientFullName}";
@@ -114,9 +108,11 @@ namespace RRFFilesManager.IntakeForm
         }
         public void CreateSendItemCYA()
         {
-            var attachmentPath = IntakeManager.CreateOrRefillIntakeDocument(Home.IntakeForm.Intake, ((Abstractions.Template)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
+            CreateOrUpdateDocument();
+            var attachmentPath = Document.Path;
             RefillCYADocument = false;
-            var attachmentPath2 = IntakeManager.CreateOrUpdateIntakeWorkBook(Home.IntakeForm.Intake);
+            CreateOrUpdateWorkbook();
+            var attachmentPath2 = Workbook.Path;
             string nameStr = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
             string signat = Home.IntakeForm.Intake.File.StaffInterviewer.Description;
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
@@ -151,7 +147,8 @@ namespace RRFFilesManager.IntakeForm
         private void DocumentPreview_Click(object sender, EventArgs e)
         {
             PleaseWait.Instance.Show();
-            var filePath = IntakeManager.CreateOrRefillIntakeDocument(Home.IntakeForm.Intake, ((Abstractions.Template)TemplateName.SelectedItem)?.TemplatePath, RefillCYADocument);
+            CreateOrUpdateDocument();
+            var filePath = Document.Path;
             RefillCYADocument = false;
             PleaseWait.Instance.Hide();
             var wordApp = new Microsoft.Office.Interop.Word.Application();
@@ -159,7 +156,24 @@ namespace RRFFilesManager.IntakeForm
             wordApp.Visible = true;
         }
 
-        
+        private void CreateOrUpdateDocument()
+        {
+            var template = ((Abstractions.Template)TemplateName.SelectedItem);
+            if (Document == null)
+                Document = _archiveManager.CreateAndAddArchive(Home.IntakeForm.Intake.File, template);
+            else if(RefillCYADocument)
+                _archiveManager.UpdateArchive(Document);
+        }
+
+        private void CreateOrUpdateWorkbook()
+        {
+            if (Workbook == null)
+                Workbook = _archiveManager.CreateAndAddArchive(Home.IntakeForm.Intake.File);
+            else
+                _archiveManager.UpdateArchive(Workbook);
+        }
+
+
 
         private void MVATemplatesGroupBox_Enter(object sender, EventArgs e)
         {

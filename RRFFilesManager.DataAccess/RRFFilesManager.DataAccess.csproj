@@ -233,6 +233,10 @@
     <Compile Include="Migrations\20210208021852_DaysFromDateOfLoss2.designer.cs">
       <DependentUpon>20210208021852_DaysFromDateOfLoss2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210208034556_ArchiveTemplateOptional.cs" />
+    <Compile Include="Migrations\20210208034556_ArchiveTemplateOptional.designer.cs">
+      <DependentUpon>20210208034556_ArchiveTemplateOptional.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />
