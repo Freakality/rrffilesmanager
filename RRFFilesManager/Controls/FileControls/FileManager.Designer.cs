@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label Label117;
-            System.Windows.Forms.Label Label115;
-            System.Windows.Forms.Label CBoxClientNameLabel;
-            System.Windows.Forms.Label Label116;
             System.Windows.Forms.Label Label73;
             System.Windows.Forms.Label Label74;
             System.Windows.Forms.Label Label75;
@@ -100,7 +96,6 @@
             System.Windows.Forms.Label DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel;
             System.Windows.Forms.Label DeadlineToReceiveInsurerSubmissionsLabel;
             System.Windows.Forms.Label HearingStartDateLabel;
-            System.Windows.Forms.Label Label114;
             System.Windows.Forms.Label Label100;
             System.Windows.Forms.Label TBoxLiabilityMeetingDateLabel;
             System.Windows.Forms.Label TBoxActualDateSOCServedLabel;
@@ -193,26 +188,25 @@
             System.Windows.Forms.Label TBoxMediatorAdjusterNameLabel;
             System.Windows.Forms.Label TBoxMediatorInsurerNameLabel;
             System.Windows.Forms.Label TBoxMediatorDefenceCounselLabel;
-            System.Windows.Forms.Label Label113;
-            System.Windows.Forms.Label Label112;
-            System.Windows.Forms.Label Label111;
             System.Windows.Forms.Label TBoxFileOpenDateLabel1;
-            System.Windows.Forms.Label TBoxIronMountainSKPBoxLabel;
-            System.Windows.Forms.Label TBoxNextReviewDateLabel;
-            System.Windows.Forms.Label TBoxScheDestDateLabel;
             System.Windows.Forms.Label TBoxLimDateLabel;
             System.Windows.Forms.Label CBoxMatterTypeLabel;
             System.Windows.Forms.Label TBoxFileCloseDateLabel;
-            System.Windows.Forms.Label TBoxDateOfLossLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileManager));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.ProjectedABSettlementValueLabel = new System.Windows.Forms.Label();
+            this.ProjectedABSettlementDateLabel = new System.Windows.Forms.Label();
+            this.ProjectedSettlementValueLabel = new System.Windows.Forms.Label();
+            this.ProjectedSettlementDateLabel = new System.Windows.Forms.Label();
+            this.NextReviewDateLabel = new System.Windows.Forms.Label();
+            this.NextLabel = new System.Windows.Forms.Label();
+            this.DateOfLossLabel = new System.Windows.Forms.Label();
             this.TextBox77 = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.TextBox50 = new System.Windows.Forms.TextBox();
@@ -460,42 +454,28 @@
             this.ExpertsLayWitness = new System.Windows.Forms.TabPage();
             this.PLReportsDataGridView = new System.Windows.Forms.DataGridView();
             this.Invoices = new System.Windows.Forms.TabPage();
-            this.ClientInfo = new System.Windows.Forms.TabPage();
-            this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.GroupBox32 = new System.Windows.Forms.GroupBox();
-            this.TextBox28 = new System.Windows.Forms.TextBox();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.CBoxClientNameTextBox = new System.Windows.Forms.TextBox();
-            this.TextBox25 = new System.Windows.Forms.TextBox();
-            this.TextBox26 = new System.Windows.Forms.TextBox();
-            this.TextBox27 = new System.Windows.Forms.TextBox();
+            this.PeopleTab = new System.Windows.Forms.TabPage();
             this.MedicalInfo = new System.Windows.Forms.TabPage();
             this.TabControl6 = new System.Windows.Forms.TabControl();
             this.MedicalAppointments = new System.Windows.Forms.TabPage();
             this.MedApptsDataGridView = new System.Windows.Forms.DataGridView();
-            this.TextBox24 = new System.Windows.Forms.TextBox();
-            this.TextBox23 = new System.Windows.Forms.TextBox();
-            this.TextBox22 = new System.Windows.Forms.TextBox();
-            this.TextBox21 = new System.Windows.Forms.TextBox();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.NextTextBox = new System.Windows.Forms.TextBox();
+            this.ProjectedABSettlementValueTextBox = new System.Windows.Forms.TextBox();
+            this.ProjectedABSettlementDateTextBox = new System.Windows.Forms.TextBox();
+            this.ProjectedSettlementValueTextBox = new System.Windows.Forms.TextBox();
             this.HomeButton = new System.Windows.Forms.Button();
-            this.TextBox20 = new System.Windows.Forms.TextBox();
-            this.MainComboBox = new System.Windows.Forms.ComboBox();
             this.ProtectedAccounts = new System.Windows.Forms.TabPage();
             this.CollateralBenefits = new System.Windows.Forms.TabPage();
             this.SpecialDamages = new System.Windows.Forms.TabPage();
             this.SpecialDamagesDataGridView = new System.Windows.Forms.DataGridView();
-            this.TBoxFileOpenDateTextBox = new System.Windows.Forms.TextBox();
-            this.TBoxIronMountainSKPBoxTextBox = new System.Windows.Forms.TextBox();
-            this.CBoxMatterTypeTextBox = new System.Windows.Forms.TextBox();
-            this.TBoxNextReviewDateTextBox = new System.Windows.Forms.TextBox();
-            this.ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.TBoxDateOfLossTextBox = new System.Windows.Forms.TextBox();
-            this.TBoxLimDateTextBox = new System.Windows.Forms.TextBox();
+            this.FileOpenDateTextBox = new System.Windows.Forms.TextBox();
+            this.ProjectedSettlementDateTextBox = new System.Windows.Forms.TextBox();
+            this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
+            this.NextReviewDateTextBox = new System.Windows.Forms.TextBox();
+            this.DateOfLossTextBox = new System.Windows.Forms.TextBox();
+            this.LimDateTextBox = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
-            this.TBoxFileCloseDateTextBox = new System.Windows.Forms.TextBox();
+            this.FileCloseDateTextBox = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.ClientNotes = new System.Windows.Forms.TabPage();
             this.ClientNotesDataGridView = new System.Windows.Forms.DataGridView();
@@ -805,11 +785,11 @@
             this.TextBox113 = new System.Windows.Forms.TextBox();
             this.TextBox114 = new System.Windows.Forms.TextBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.FileNumberTextBox = new System.Windows.Forms.TextBox();
+            this.ClientNameTextBox = new System.Windows.Forms.TextBox();
+            this.FindFileButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            Label117 = new System.Windows.Forms.Label();
-            Label115 = new System.Windows.Forms.Label();
-            CBoxClientNameLabel = new System.Windows.Forms.Label();
-            Label116 = new System.Windows.Forms.Label();
             Label73 = new System.Windows.Forms.Label();
             Label74 = new System.Windows.Forms.Label();
             Label75 = new System.Windows.Forms.Label();
@@ -878,7 +858,6 @@
             DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel = new System.Windows.Forms.Label();
             DeadlineToReceiveInsurerSubmissionsLabel = new System.Windows.Forms.Label();
             HearingStartDateLabel = new System.Windows.Forms.Label();
-            Label114 = new System.Windows.Forms.Label();
             Label100 = new System.Windows.Forms.Label();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
             TBoxActualDateSOCServedLabel = new System.Windows.Forms.Label();
@@ -971,17 +950,10 @@
             TBoxMediatorAdjusterNameLabel = new System.Windows.Forms.Label();
             TBoxMediatorInsurerNameLabel = new System.Windows.Forms.Label();
             TBoxMediatorDefenceCounselLabel = new System.Windows.Forms.Label();
-            Label113 = new System.Windows.Forms.Label();
-            Label112 = new System.Windows.Forms.Label();
-            Label111 = new System.Windows.Forms.Label();
             TBoxFileOpenDateLabel1 = new System.Windows.Forms.Label();
-            TBoxIronMountainSKPBoxLabel = new System.Windows.Forms.Label();
-            TBoxNextReviewDateLabel = new System.Windows.Forms.Label();
-            TBoxScheDestDateLabel = new System.Windows.Forms.Label();
             TBoxLimDateLabel = new System.Windows.Forms.Label();
             CBoxMatterTypeLabel = new System.Windows.Forms.Label();
             TBoxFileCloseDateLabel = new System.Windows.Forms.Label();
-            TBoxDateOfLossLabel = new System.Windows.Forms.Label();
             this.TableLayoutPanel4.SuspendLayout();
             this.GroupBox34.SuspendLayout();
             this.TableLayoutPanel5.SuspendLayout();
@@ -1002,15 +974,10 @@
             this.ExpertsLayWitness.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PLReportsDataGridView)).BeginInit();
             this.Invoices.SuspendLayout();
-            this.ClientInfo.SuspendLayout();
-            this.GroupBox32.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
-            this.TableLayoutPanel1.SuspendLayout();
             this.MedicalInfo.SuspendLayout();
             this.TabControl6.SuspendLayout();
             this.MedicalAppointments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MedApptsDataGridView)).BeginInit();
-            this.GroupBox2.SuspendLayout();
             this.SpecialDamages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpecialDamagesDataGridView)).BeginInit();
             this.ClientNotes.SuspendLayout();
@@ -1078,44 +1045,9 @@
             this.GroupBox38.SuspendLayout();
             this.TableLayoutPanel10.SuspendLayout();
             this.GroupBox1.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Label117
-            // 
-            Label117.AutoSize = true;
-            Label117.Location = new System.Drawing.Point(3, 150);
-            Label117.Name = "Label117";
-            Label117.Size = new System.Drawing.Size(140, 17);
-            Label117.TabIndex = 4;
-            Label117.Text = "Healthcard Number:";
-            // 
-            // Label115
-            // 
-            Label115.AutoSize = true;
-            Label115.Location = new System.Drawing.Point(3, 50);
-            Label115.Name = "Label115";
-            Label115.Size = new System.Drawing.Size(92, 17);
-            Label115.TabIndex = 2;
-            Label115.Text = "Date of Birth:";
-            // 
-            // CBoxClientNameLabel
-            // 
-            CBoxClientNameLabel.AutoSize = true;
-            CBoxClientNameLabel.Location = new System.Drawing.Point(3, 0);
-            CBoxClientNameLabel.Name = "CBoxClientNameLabel";
-            CBoxClientNameLabel.Size = new System.Drawing.Size(94, 17);
-            CBoxClientNameLabel.TabIndex = 0;
-            CBoxClientNameLabel.Text = "Client Name:";
-            // 
-            // Label116
-            // 
-            Label116.AutoSize = true;
-            Label116.Location = new System.Drawing.Point(3, 100);
-            Label116.Name = "Label116";
-            Label116.Size = new System.Drawing.Size(87, 17);
-            Label116.TabIndex = 3;
-            Label116.Text = "SIN Number:";
             // 
             // Label73
             // 
@@ -1728,14 +1660,6 @@
             HearingStartDateLabel.Size = new System.Drawing.Size(131, 17);
             HearingStartDateLabel.TabIndex = 18;
             HearingStartDateLabel.Text = "Hearing Start Date:";
-            // 
-            // Label114
-            // 
-            Label114.Location = new System.Drawing.Point(1150, 131);
-            Label114.Name = "Label114";
-            Label114.Size = new System.Drawing.Size(144, 35);
-            Label114.TabIndex = 140;
-            Label114.Text = "Projected AB Settlement Value";
             // 
             // Label100
             // 
@@ -2565,75 +2489,20 @@
             TBoxMediatorDefenceCounselLabel.TabIndex = 128;
             TBoxMediatorDefenceCounselLabel.Text = "Defence Counsel:";
             // 
-            // Label113
-            // 
-            Label113.Location = new System.Drawing.Point(1150, 78);
-            Label113.Name = "Label113";
-            Label113.Size = new System.Drawing.Size(144, 35);
-            Label113.TabIndex = 138;
-            Label113.Text = "Projected AB Settlement Date";
-            Label113.UseWaitCursor = true;
-            // 
-            // Label112
-            // 
-            Label112.Location = new System.Drawing.Point(839, 120);
-            Label112.Name = "Label112";
-            Label112.Size = new System.Drawing.Size(128, 65);
-            Label112.TabIndex = 136;
-            Label112.Text = "Projected Tort/Contract Settlement Date";
-            Label112.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // Label111
-            // 
-            Label111.AutoSize = true;
-            Label111.Location = new System.Drawing.Point(302, 78);
-            Label111.Name = "Label111";
-            Label111.Size = new System.Drawing.Size(104, 17);
-            Label111.TabIndex = 134;
-            Label111.Text = "Date Of Denial";
-            Label111.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // TBoxFileOpenDateLabel1
             // 
             TBoxFileOpenDateLabel1.AutoSize = true;
-            TBoxFileOpenDateLabel1.Location = new System.Drawing.Point(562, 29);
+            TBoxFileOpenDateLabel1.Location = new System.Drawing.Point(559, 0);
             TBoxFileOpenDateLabel1.Name = "TBoxFileOpenDateLabel1";
             TBoxFileOpenDateLabel1.Size = new System.Drawing.Size(104, 17);
             TBoxFileOpenDateLabel1.TabIndex = 132;
             TBoxFileOpenDateLabel1.Text = "File Open Date";
             TBoxFileOpenDateLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // TBoxIronMountainSKPBoxLabel
-            // 
-            TBoxIronMountainSKPBoxLabel.Location = new System.Drawing.Point(839, 54);
-            TBoxIronMountainSKPBoxLabel.Name = "TBoxIronMountainSKPBoxLabel";
-            TBoxIronMountainSKPBoxLabel.Size = new System.Drawing.Size(128, 67);
-            TBoxIronMountainSKPBoxLabel.TabIndex = 130;
-            TBoxIronMountainSKPBoxLabel.Text = "Projected Tort/Contract Settlement Date";
-            TBoxIronMountainSKPBoxLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // TBoxNextReviewDateLabel
-            // 
-            TBoxNextReviewDateLabel.AutoSize = true;
-            TBoxNextReviewDateLabel.Location = new System.Drawing.Point(1150, 25);
-            TBoxNextReviewDateLabel.Name = "TBoxNextReviewDateLabel";
-            TBoxNextReviewDateLabel.Size = new System.Drawing.Size(144, 17);
-            TBoxNextReviewDateLabel.TabIndex = 48;
-            TBoxNextReviewDateLabel.Text = "Next AB Review Date";
-            // 
-            // TBoxScheDestDateLabel
-            // 
-            TBoxScheDestDateLabel.Location = new System.Drawing.Point(828, 11);
-            TBoxScheDestDateLabel.Name = "TBoxScheDestDateLabel";
-            TBoxScheDestDateLabel.Size = new System.Drawing.Size(139, 43);
-            TBoxScheDestDateLabel.TabIndex = 8;
-            TBoxScheDestDateLabel.Text = "Next Tort/Contract Review Date";
-            TBoxScheDestDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // TBoxLimDateLabel
             // 
             TBoxLimDateLabel.AutoSize = true;
-            TBoxLimDateLabel.Location = new System.Drawing.Point(302, 125);
+            TBoxLimDateLabel.Location = new System.Drawing.Point(281, 55);
             TBoxLimDateLabel.Name = "TBoxLimDateLabel";
             TBoxLimDateLabel.Size = new System.Drawing.Size(108, 17);
             TBoxLimDateLabel.TabIndex = 6;
@@ -2643,7 +2512,7 @@
             // CBoxMatterTypeLabel
             // 
             CBoxMatterTypeLabel.AutoSize = true;
-            CBoxMatterTypeLabel.Location = new System.Drawing.Point(8, 78);
+            CBoxMatterTypeLabel.Location = new System.Drawing.Point(3, 55);
             CBoxMatterTypeLabel.Name = "CBoxMatterTypeLabel";
             CBoxMatterTypeLabel.Size = new System.Drawing.Size(82, 17);
             CBoxMatterTypeLabel.TabIndex = 46;
@@ -2653,22 +2522,75 @@
             // TBoxFileCloseDateLabel
             // 
             TBoxFileCloseDateLabel.AutoSize = true;
-            TBoxFileCloseDateLabel.Location = new System.Drawing.Point(561, 79);
+            TBoxFileCloseDateLabel.Location = new System.Drawing.Point(559, 55);
             TBoxFileCloseDateLabel.Name = "TBoxFileCloseDateLabel";
             TBoxFileCloseDateLabel.Size = new System.Drawing.Size(104, 17);
             TBoxFileCloseDateLabel.TabIndex = 10;
             TBoxFileCloseDateLabel.Text = "File Close Date";
             TBoxFileCloseDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // TBoxDateOfLossLabel
+            // ProjectedABSettlementValueLabel
             // 
-            TBoxDateOfLossLabel.AutoSize = true;
-            TBoxDateOfLossLabel.Location = new System.Drawing.Point(302, 29);
-            TBoxDateOfLossLabel.Name = "TBoxDateOfLossLabel";
-            TBoxDateOfLossLabel.Size = new System.Drawing.Size(88, 17);
-            TBoxDateOfLossLabel.TabIndex = 12;
-            TBoxDateOfLossLabel.Text = "Date Of Loss";
-            TBoxDateOfLossLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.ProjectedABSettlementValueLabel.Location = new System.Drawing.Point(1135, 110);
+            this.ProjectedABSettlementValueLabel.Name = "ProjectedABSettlementValueLabel";
+            this.ProjectedABSettlementValueLabel.Size = new System.Drawing.Size(114, 54);
+            this.ProjectedABSettlementValueLabel.TabIndex = 140;
+            this.ProjectedABSettlementValueLabel.Text = "Projected AB Settlement Value";
+            // 
+            // ProjectedABSettlementDateLabel
+            // 
+            this.ProjectedABSettlementDateLabel.Location = new System.Drawing.Point(1135, 55);
+            this.ProjectedABSettlementDateLabel.Name = "ProjectedABSettlementDateLabel";
+            this.ProjectedABSettlementDateLabel.Size = new System.Drawing.Size(114, 35);
+            this.ProjectedABSettlementDateLabel.TabIndex = 138;
+            this.ProjectedABSettlementDateLabel.Text = "Projected AB Settlement Date";
+            this.ProjectedABSettlementDateLabel.UseWaitCursor = true;
+            // 
+            // ProjectedSettlementValueLabel
+            // 
+            this.ProjectedSettlementValueLabel.Location = new System.Drawing.Point(837, 110);
+            this.ProjectedSettlementValueLabel.Name = "ProjectedSettlementValueLabel";
+            this.ProjectedSettlementValueLabel.Size = new System.Drawing.Size(128, 56);
+            this.ProjectedSettlementValueLabel.TabIndex = 136;
+            this.ProjectedSettlementValueLabel.Text = "Projected Tort/Contract Settlement Value";
+            this.ProjectedSettlementValueLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // ProjectedSettlementDateLabel
+            // 
+            this.ProjectedSettlementDateLabel.Location = new System.Drawing.Point(837, 55);
+            this.ProjectedSettlementDateLabel.Name = "ProjectedSettlementDateLabel";
+            this.ProjectedSettlementDateLabel.Size = new System.Drawing.Size(128, 55);
+            this.ProjectedSettlementDateLabel.TabIndex = 130;
+            this.ProjectedSettlementDateLabel.Text = "Projected Tort/Contract Settlement Date";
+            this.ProjectedSettlementDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // NextReviewDateLabel
+            // 
+            this.NextReviewDateLabel.AutoSize = true;
+            this.NextReviewDateLabel.Location = new System.Drawing.Point(1135, 0);
+            this.NextReviewDateLabel.Name = "NextReviewDateLabel";
+            this.NextReviewDateLabel.Size = new System.Drawing.Size(112, 34);
+            this.NextReviewDateLabel.TabIndex = 48;
+            this.NextReviewDateLabel.Text = "Next AB Review Date";
+            // 
+            // NextLabel
+            // 
+            this.NextLabel.Location = new System.Drawing.Point(837, 0);
+            this.NextLabel.Name = "NextLabel";
+            this.NextLabel.Size = new System.Drawing.Size(114, 43);
+            this.NextLabel.TabIndex = 8;
+            this.NextLabel.Text = "Next Tort/Contract Review Date";
+            this.NextLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // DateOfLossLabel
+            // 
+            this.DateOfLossLabel.AutoSize = true;
+            this.DateOfLossLabel.Location = new System.Drawing.Point(281, 0);
+            this.DateOfLossLabel.Name = "DateOfLossLabel";
+            this.DateOfLossLabel.Size = new System.Drawing.Size(88, 17);
+            this.DateOfLossLabel.TabIndex = 12;
+            this.DateOfLossLabel.Text = "Date Of Loss";
+            this.DateOfLossLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // TextBox77
             // 
@@ -4990,107 +4912,14 @@
             this.Invoices.Text = "Invoices";
             this.Invoices.UseVisualStyleBackColor = true;
             // 
-            // ClientInfo
+            // PeopleTab
             // 
-            this.ClientInfo.Controls.Add(this.LinkLabel1);
-            this.ClientInfo.Controls.Add(this.GroupBox32);
-            this.ClientInfo.Controls.Add(this.PictureBox2);
-            this.ClientInfo.Controls.Add(this.TableLayoutPanel1);
-            this.ClientInfo.Location = new System.Drawing.Point(4, 26);
-            this.ClientInfo.Name = "ClientInfo";
-            this.ClientInfo.Size = new System.Drawing.Size(1437, 515);
-            this.ClientInfo.TabIndex = 9;
-            this.ClientInfo.Text = "Client Info";
-            this.ClientInfo.UseVisualStyleBackColor = true;
-            // 
-            // LinkLabel1
-            // 
-            this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Location = new System.Drawing.Point(532, 350);
-            this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(176, 17);
-            this.LinkLabel1.TabIndex = 5;
-            this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "Completed Questionnaire";
-            // 
-            // GroupBox32
-            // 
-            this.GroupBox32.Controls.Add(this.TextBox28);
-            this.GroupBox32.Location = new System.Drawing.Point(22, 248);
-            this.GroupBox32.Name = "GroupBox32";
-            this.GroupBox32.Size = new System.Drawing.Size(470, 230);
-            this.GroupBox32.TabIndex = 4;
-            this.GroupBox32.TabStop = false;
-            this.GroupBox32.Text = "Notes";
-            // 
-            // TextBox28
-            // 
-            this.TextBox28.BackColor = System.Drawing.SystemColors.Info;
-            this.TextBox28.Location = new System.Drawing.Point(7, 32);
-            this.TextBox28.Multiline = true;
-            this.TextBox28.Name = "TextBox28";
-            this.TextBox28.Size = new System.Drawing.Size(450, 175);
-            this.TextBox28.TabIndex = 8;
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(514, 23);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(204, 203);
-            this.PictureBox2.TabIndex = 3;
-            this.PictureBox2.TabStop = false;
-            // 
-            // TableLayoutPanel1
-            // 
-            this.TableLayoutPanel1.ColumnCount = 2;
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.85507F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.14493F));
-            this.TableLayoutPanel1.Controls.Add(Label117, 0, 3);
-            this.TableLayoutPanel1.Controls.Add(Label115, 0, 1);
-            this.TableLayoutPanel1.Controls.Add(CBoxClientNameLabel, 0, 0);
-            this.TableLayoutPanel1.Controls.Add(this.CBoxClientNameTextBox, 1, 0);
-            this.TableLayoutPanel1.Controls.Add(Label116, 0, 2);
-            this.TableLayoutPanel1.Controls.Add(this.TextBox25, 1, 1);
-            this.TableLayoutPanel1.Controls.Add(this.TextBox26, 1, 2);
-            this.TableLayoutPanel1.Controls.Add(this.TextBox27, 1, 3);
-            this.TableLayoutPanel1.Location = new System.Drawing.Point(22, 23);
-            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
-            this.TableLayoutPanel1.RowCount = 4;
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanel1.Size = new System.Drawing.Size(470, 203);
-            this.TableLayoutPanel1.TabIndex = 2;
-            // 
-            // CBoxClientNameTextBox
-            // 
-            this.CBoxClientNameTextBox.Location = new System.Drawing.Point(190, 3);
-            this.CBoxClientNameTextBox.Name = "CBoxClientNameTextBox";
-            this.CBoxClientNameTextBox.Size = new System.Drawing.Size(267, 23);
-            this.CBoxClientNameTextBox.TabIndex = 1;
-            // 
-            // TextBox25
-            // 
-            this.TextBox25.Location = new System.Drawing.Point(190, 53);
-            this.TextBox25.Name = "TextBox25";
-            this.TextBox25.Size = new System.Drawing.Size(267, 23);
-            this.TextBox25.TabIndex = 5;
-            // 
-            // TextBox26
-            // 
-            this.TextBox26.Location = new System.Drawing.Point(190, 103);
-            this.TextBox26.Name = "TextBox26";
-            this.TextBox26.Size = new System.Drawing.Size(267, 23);
-            this.TextBox26.TabIndex = 6;
-            // 
-            // TextBox27
-            // 
-            this.TextBox27.Location = new System.Drawing.Point(190, 153);
-            this.TextBox27.Name = "TextBox27";
-            this.TextBox27.Size = new System.Drawing.Size(267, 23);
-            this.TextBox27.TabIndex = 7;
+            this.PeopleTab.Location = new System.Drawing.Point(4, 26);
+            this.PeopleTab.Name = "PeopleTab";
+            this.PeopleTab.Size = new System.Drawing.Size(1437, 515);
+            this.PeopleTab.TabIndex = 9;
+            this.PeopleTab.Text = "People";
+            this.PeopleTab.UseVisualStyleBackColor = true;
             // 
             // MedicalInfo
             // 
@@ -5140,52 +4969,43 @@
             this.MedApptsDataGridView.Size = new System.Drawing.Size(1384, 393);
             this.MedApptsDataGridView.TabIndex = 0;
             // 
-            // TextBox24
+            // NextTextBox
             // 
-            this.TextBox24.Location = new System.Drawing.Point(973, 19);
-            this.TextBox24.Name = "TextBox24";
-            this.TextBox24.Size = new System.Drawing.Size(150, 23);
-            this.TextBox24.TabIndex = 142;
+            this.NextTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NextTextBox.Enabled = false;
+            this.NextTextBox.Location = new System.Drawing.Point(977, 3);
+            this.NextTextBox.Name = "NextTextBox";
+            this.NextTextBox.Size = new System.Drawing.Size(152, 23);
+            this.NextTextBox.TabIndex = 142;
             // 
-            // TextBox23
+            // ProjectedABSettlementValueTextBox
             // 
-            this.TextBox23.Location = new System.Drawing.Point(1300, 132);
-            this.TextBox23.Name = "TextBox23";
-            this.TextBox23.Size = new System.Drawing.Size(130, 23);
-            this.TextBox23.TabIndex = 141;
+            this.ProjectedABSettlementValueTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedABSettlementValueTextBox.Enabled = false;
+            this.ProjectedABSettlementValueTextBox.Location = new System.Drawing.Point(1275, 113);
+            this.ProjectedABSettlementValueTextBox.Name = "ProjectedABSettlementValueTextBox";
+            this.ProjectedABSettlementValueTextBox.Size = new System.Drawing.Size(153, 23);
+            this.ProjectedABSettlementValueTextBox.TabIndex = 141;
             // 
-            // TextBox22
+            // ProjectedABSettlementDateTextBox
             // 
-            this.TextBox22.Location = new System.Drawing.Point(1300, 79);
-            this.TextBox22.Name = "TextBox22";
-            this.TextBox22.Size = new System.Drawing.Size(130, 23);
-            this.TextBox22.TabIndex = 139;
-            this.TextBox22.UseWaitCursor = true;
+            this.ProjectedABSettlementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedABSettlementDateTextBox.Enabled = false;
+            this.ProjectedABSettlementDateTextBox.Location = new System.Drawing.Point(1275, 58);
+            this.ProjectedABSettlementDateTextBox.Name = "ProjectedABSettlementDateTextBox";
+            this.ProjectedABSettlementDateTextBox.Size = new System.Drawing.Size(153, 23);
+            this.ProjectedABSettlementDateTextBox.TabIndex = 139;
+            this.ProjectedABSettlementDateTextBox.UseWaitCursor = true;
+            this.ProjectedABSettlementDateTextBox.TextChanged += new System.EventHandler(this.TextBox22_TextChanged);
             // 
-            // TextBox21
+            // ProjectedSettlementValueTextBox
             // 
-            this.TextBox21.Location = new System.Drawing.Point(973, 125);
-            this.TextBox21.Name = "TextBox21";
-            this.TextBox21.Size = new System.Drawing.Size(150, 23);
-            this.TextBox21.TabIndex = 137;
-            // 
-            // GroupBox2
-            // 
-            this.GroupBox2.Controls.Add(this.searchBox);
-            this.GroupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(259, 13);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(1011, 62);
-            this.GroupBox2.TabIndex = 140;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "Search";
-            // 
-            // searchBox
-            // 
-            this.searchBox.Location = new System.Drawing.Point(16, 22);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(989, 27);
-            this.searchBox.TabIndex = 0;
+            this.ProjectedSettlementValueTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedSettlementValueTextBox.Enabled = false;
+            this.ProjectedSettlementValueTextBox.Location = new System.Drawing.Point(977, 113);
+            this.ProjectedSettlementValueTextBox.Name = "ProjectedSettlementValueTextBox";
+            this.ProjectedSettlementValueTextBox.Size = new System.Drawing.Size(152, 23);
+            this.ProjectedSettlementValueTextBox.TabIndex = 137;
             // 
             // HomeButton
             // 
@@ -5200,22 +5020,6 @@
             this.HomeButton.Text = "Home";
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
-            // 
-            // TextBox20
-            // 
-            this.TextBox20.Location = new System.Drawing.Point(425, 73);
-            this.TextBox20.Name = "TextBox20";
-            this.TextBox20.Size = new System.Drawing.Size(114, 23);
-            this.TextBox20.TabIndex = 143;
-            // 
-            // MainComboBox
-            // 
-            this.MainComboBox.FormattingEnabled = true;
-            this.MainComboBox.Location = new System.Drawing.Point(114, 117);
-            this.MainComboBox.Name = "MainComboBox";
-            this.MainComboBox.Size = new System.Drawing.Size(182, 25);
-            this.MainComboBox.TabIndex = 3;
-            this.MainComboBox.ValueMember = "ID";
             // 
             // ProtectedAccounts
             // 
@@ -5255,78 +5059,84 @@
             this.SpecialDamagesDataGridView.Size = new System.Drawing.Size(1437, 515);
             this.SpecialDamagesDataGridView.TabIndex = 0;
             // 
-            // TBoxFileOpenDateTextBox
+            // FileOpenDateTextBox
             // 
-            this.TBoxFileOpenDateTextBox.Location = new System.Drawing.Point(689, 26);
-            this.TBoxFileOpenDateTextBox.Name = "TBoxFileOpenDateTextBox";
-            this.TBoxFileOpenDateTextBox.Size = new System.Drawing.Size(114, 23);
-            this.TBoxFileOpenDateTextBox.TabIndex = 133;
+            this.FileOpenDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileOpenDateTextBox.Enabled = false;
+            this.FileOpenDateTextBox.Location = new System.Drawing.Point(679, 3);
+            this.FileOpenDateTextBox.Name = "FileOpenDateTextBox";
+            this.FileOpenDateTextBox.Size = new System.Drawing.Size(152, 23);
+            this.FileOpenDateTextBox.TabIndex = 133;
             // 
-            // TBoxIronMountainSKPBoxTextBox
+            // ProjectedSettlementDateTextBox
             // 
-            this.TBoxIronMountainSKPBoxTextBox.Location = new System.Drawing.Point(973, 73);
-            this.TBoxIronMountainSKPBoxTextBox.Name = "TBoxIronMountainSKPBoxTextBox";
-            this.TBoxIronMountainSKPBoxTextBox.Size = new System.Drawing.Size(150, 23);
-            this.TBoxIronMountainSKPBoxTextBox.TabIndex = 131;
+            this.ProjectedSettlementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedSettlementDateTextBox.Enabled = false;
+            this.ProjectedSettlementDateTextBox.Location = new System.Drawing.Point(977, 58);
+            this.ProjectedSettlementDateTextBox.Name = "ProjectedSettlementDateTextBox";
+            this.ProjectedSettlementDateTextBox.Size = new System.Drawing.Size(152, 23);
+            this.ProjectedSettlementDateTextBox.TabIndex = 131;
             // 
-            // CBoxMatterTypeTextBox
+            // MatterTypeTextBox
             // 
-            this.CBoxMatterTypeTextBox.Location = new System.Drawing.Point(114, 75);
-            this.CBoxMatterTypeTextBox.Name = "CBoxMatterTypeTextBox";
-            this.CBoxMatterTypeTextBox.Size = new System.Drawing.Size(182, 23);
-            this.CBoxMatterTypeTextBox.TabIndex = 47;
+            this.MatterTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatterTypeTextBox.Enabled = false;
+            this.MatterTypeTextBox.Location = new System.Drawing.Point(123, 58);
+            this.MatterTypeTextBox.Name = "MatterTypeTextBox";
+            this.MatterTypeTextBox.Size = new System.Drawing.Size(152, 23);
+            this.MatterTypeTextBox.TabIndex = 47;
             // 
-            // TBoxNextReviewDateTextBox
+            // NextReviewDateTextBox
             // 
-            this.TBoxNextReviewDateTextBox.Location = new System.Drawing.Point(1300, 26);
-            this.TBoxNextReviewDateTextBox.Name = "TBoxNextReviewDateTextBox";
-            this.TBoxNextReviewDateTextBox.Size = new System.Drawing.Size(130, 23);
-            this.TBoxNextReviewDateTextBox.TabIndex = 49;
+            this.NextReviewDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NextReviewDateTextBox.Enabled = false;
+            this.NextReviewDateTextBox.Location = new System.Drawing.Point(1275, 3);
+            this.NextReviewDateTextBox.Name = "NextReviewDateTextBox";
+            this.NextReviewDateTextBox.Size = new System.Drawing.Size(153, 23);
+            this.NextReviewDateTextBox.TabIndex = 49;
             // 
-            // ComboBox1
+            // DateOfLossTextBox
             // 
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Location = new System.Drawing.Point(114, 29);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(182, 25);
-            this.ComboBox1.TabIndex = 4;
-            this.ComboBox1.ValueMember = "ID";
+            this.DateOfLossTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DateOfLossTextBox.Enabled = false;
+            this.DateOfLossTextBox.Location = new System.Drawing.Point(401, 3);
+            this.DateOfLossTextBox.Name = "DateOfLossTextBox";
+            this.DateOfLossTextBox.Size = new System.Drawing.Size(152, 23);
+            this.DateOfLossTextBox.TabIndex = 13;
             // 
-            // TBoxDateOfLossTextBox
+            // LimDateTextBox
             // 
-            this.TBoxDateOfLossTextBox.Location = new System.Drawing.Point(425, 29);
-            this.TBoxDateOfLossTextBox.Name = "TBoxDateOfLossTextBox";
-            this.TBoxDateOfLossTextBox.Size = new System.Drawing.Size(114, 23);
-            this.TBoxDateOfLossTextBox.TabIndex = 13;
-            // 
-            // TBoxLimDateTextBox
-            // 
-            this.TBoxLimDateTextBox.Location = new System.Drawing.Point(425, 122);
-            this.TBoxLimDateTextBox.Name = "TBoxLimDateTextBox";
-            this.TBoxLimDateTextBox.Size = new System.Drawing.Size(114, 23);
-            this.TBoxLimDateTextBox.TabIndex = 7;
+            this.LimDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LimDateTextBox.Enabled = false;
+            this.LimDateTextBox.Location = new System.Drawing.Point(401, 58);
+            this.LimDateTextBox.Name = "LimDateTextBox";
+            this.LimDateTextBox.Size = new System.Drawing.Size(152, 23);
+            this.LimDateTextBox.TabIndex = 7;
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(8, 125);
+            this.Label1.Location = new System.Drawing.Point(3, 110);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(84, 17);
             this.Label1.TabIndex = 5;
             this.Label1.Text = "File Number";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // TBoxFileCloseDateTextBox
+            // FileCloseDateTextBox
             // 
-            this.TBoxFileCloseDateTextBox.Location = new System.Drawing.Point(689, 75);
-            this.TBoxFileCloseDateTextBox.Name = "TBoxFileCloseDateTextBox";
-            this.TBoxFileCloseDateTextBox.Size = new System.Drawing.Size(114, 23);
-            this.TBoxFileCloseDateTextBox.TabIndex = 11;
+            this.FileCloseDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileCloseDateTextBox.Enabled = false;
+            this.FileCloseDateTextBox.Location = new System.Drawing.Point(679, 58);
+            this.FileCloseDateTextBox.Name = "FileCloseDateTextBox";
+            this.FileCloseDateTextBox.Size = new System.Drawing.Size(152, 23);
+            this.FileCloseDateTextBox.TabIndex = 11;
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(8, 32);
+            this.Label2.Location = new System.Drawing.Point(3, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(90, 17);
             this.Label2.TabIndex = 6;
@@ -7393,10 +7203,13 @@
             // 
             // TabControl1
             // 
+            this.TabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl1.Controls.Add(this.Action);
             this.TabControl1.Controls.Add(this.ABDenials);
             this.TabControl1.Controls.Add(this.TaskLog);
-            this.TabControl1.Controls.Add(this.ClientInfo);
+            this.TabControl1.Controls.Add(this.PeopleTab);
             this.TabControl1.Controls.Add(this.MedicalInfo);
             this.TabControl1.Controls.Add(this.ExpertsLayWitness);
             this.TabControl1.Controls.Add(this.Invoices);
@@ -8291,34 +8104,9 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.TextBox20);
-            this.GroupBox1.Controls.Add(this.TextBox24);
-            this.GroupBox1.Controls.Add(Label114);
-            this.GroupBox1.Controls.Add(this.TextBox23);
-            this.GroupBox1.Controls.Add(Label113);
-            this.GroupBox1.Controls.Add(this.TextBox22);
-            this.GroupBox1.Controls.Add(Label112);
-            this.GroupBox1.Controls.Add(this.TextBox21);
-            this.GroupBox1.Controls.Add(Label111);
-            this.GroupBox1.Controls.Add(this.MainComboBox);
-            this.GroupBox1.Controls.Add(TBoxFileOpenDateLabel1);
-            this.GroupBox1.Controls.Add(TBoxIronMountainSKPBoxLabel);
-            this.GroupBox1.Controls.Add(this.TBoxFileOpenDateTextBox);
-            this.GroupBox1.Controls.Add(this.TBoxIronMountainSKPBoxTextBox);
-            this.GroupBox1.Controls.Add(this.CBoxMatterTypeTextBox);
-            this.GroupBox1.Controls.Add(TBoxNextReviewDateLabel);
-            this.GroupBox1.Controls.Add(TBoxScheDestDateLabel);
-            this.GroupBox1.Controls.Add(this.TBoxNextReviewDateTextBox);
-            this.GroupBox1.Controls.Add(TBoxLimDateLabel);
-            this.GroupBox1.Controls.Add(CBoxMatterTypeLabel);
-            this.GroupBox1.Controls.Add(this.ComboBox1);
-            this.GroupBox1.Controls.Add(TBoxFileCloseDateLabel);
-            this.GroupBox1.Controls.Add(this.TBoxDateOfLossTextBox);
-            this.GroupBox1.Controls.Add(this.TBoxLimDateTextBox);
-            this.GroupBox1.Controls.Add(this.Label1);
-            this.GroupBox1.Controls.Add(this.TBoxFileCloseDateTextBox);
-            this.GroupBox1.Controls.Add(TBoxDateOfLossLabel);
-            this.GroupBox1.Controls.Add(this.Label2);
+            this.GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GroupBox1.Controls.Add(this.tableLayoutPanel18);
             this.GroupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(16, 75);
             this.GroupBox1.Name = "GroupBox1";
@@ -8326,6 +8114,88 @@
             this.GroupBox1.TabIndex = 139;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Info";
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 10;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel18.Controls.Add(this.FileNumberTextBox, 1, 2);
+            this.tableLayoutPanel18.Controls.Add(this.ClientNameTextBox, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.Label2, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedABSettlementValueTextBox, 9, 2);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedABSettlementValueLabel, 8, 2);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedSettlementValueTextBox, 7, 2);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedSettlementValueLabel, 6, 2);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedABSettlementDateTextBox, 9, 1);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedABSettlementDateLabel, 8, 1);
+            this.tableLayoutPanel18.Controls.Add(this.NextTextBox, 7, 0);
+            this.tableLayoutPanel18.Controls.Add(this.DateOfLossLabel, 2, 0);
+            this.tableLayoutPanel18.Controls.Add(this.DateOfLossTextBox, 3, 0);
+            this.tableLayoutPanel18.Controls.Add(this.Label1, 0, 2);
+            this.tableLayoutPanel18.Controls.Add(this.FileOpenDateTextBox, 5, 0);
+            this.tableLayoutPanel18.Controls.Add(TBoxFileOpenDateLabel1, 4, 0);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedSettlementDateTextBox, 7, 1);
+            this.tableLayoutPanel18.Controls.Add(this.ProjectedSettlementDateLabel, 6, 1);
+            this.tableLayoutPanel18.Controls.Add(this.NextLabel, 6, 0);
+            this.tableLayoutPanel18.Controls.Add(this.NextReviewDateLabel, 8, 0);
+            this.tableLayoutPanel18.Controls.Add(TBoxFileCloseDateLabel, 4, 1);
+            this.tableLayoutPanel18.Controls.Add(this.NextReviewDateTextBox, 9, 0);
+            this.tableLayoutPanel18.Controls.Add(this.FileCloseDateTextBox, 5, 1);
+            this.tableLayoutPanel18.Controls.Add(CBoxMatterTypeLabel, 0, 1);
+            this.tableLayoutPanel18.Controls.Add(this.MatterTypeTextBox, 1, 1);
+            this.tableLayoutPanel18.Controls.Add(TBoxLimDateLabel, 2, 1);
+            this.tableLayoutPanel18.Controls.Add(this.LimDateTextBox, 3, 1);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 19);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 3;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1431, 166);
+            this.tableLayoutPanel18.TabIndex = 144;
+            // 
+            // FileNumberTextBox
+            // 
+            this.FileNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileNumberTextBox.Enabled = false;
+            this.FileNumberTextBox.Location = new System.Drawing.Point(123, 113);
+            this.FileNumberTextBox.Name = "FileNumberTextBox";
+            this.FileNumberTextBox.Size = new System.Drawing.Size(152, 23);
+            this.FileNumberTextBox.TabIndex = 145;
+            // 
+            // ClientNameTextBox
+            // 
+            this.ClientNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientNameTextBox.Enabled = false;
+            this.ClientNameTextBox.Location = new System.Drawing.Point(123, 3);
+            this.ClientNameTextBox.Name = "ClientNameTextBox";
+            this.ClientNameTextBox.Size = new System.Drawing.Size(152, 23);
+            this.ClientNameTextBox.TabIndex = 144;
+            this.ClientNameTextBox.TextChanged += new System.EventHandler(this.ClientName_TextChanged);
+            // 
+            // FindFileButton
+            // 
+            this.FindFileButton.BackColor = System.Drawing.Color.Maroon;
+            this.FindFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindFileButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindFileButton.ForeColor = System.Drawing.Color.White;
+            this.FindFileButton.Location = new System.Drawing.Point(1143, 25);
+            this.FindFileButton.Name = "FindFileButton";
+            this.FindFileButton.Size = new System.Drawing.Size(152, 37);
+            this.FindFileButton.TabIndex = 143;
+            this.FindFileButton.Text = "Find File";
+            this.FindFileButton.UseVisualStyleBackColor = false;
+            this.FindFileButton.Click += new System.EventHandler(this.FindFileButton_Click);
             // 
             // PictureBox1
             // 
@@ -8343,13 +8213,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 820);
-            this.Controls.Add(this.GroupBox2);
+            this.Controls.Add(this.FindFileButton);
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.TabControl1);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.PictureBox1);
             this.Name = "FileManager";
             this.Text = "File Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FileManager_FormClosing);
             this.TableLayoutPanel4.ResumeLayout(false);
             this.TableLayoutPanel4.PerformLayout();
             this.GroupBox34.ResumeLayout(false);
@@ -8382,19 +8253,10 @@
             this.ExpertsLayWitness.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PLReportsDataGridView)).EndInit();
             this.Invoices.ResumeLayout(false);
-            this.ClientInfo.ResumeLayout(false);
-            this.ClientInfo.PerformLayout();
-            this.GroupBox32.ResumeLayout(false);
-            this.GroupBox32.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
-            this.TableLayoutPanel1.ResumeLayout(false);
-            this.TableLayoutPanel1.PerformLayout();
             this.MedicalInfo.ResumeLayout(false);
             this.TabControl6.ResumeLayout(false);
             this.MedicalAppointments.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MedApptsDataGridView)).EndInit();
-            this.GroupBox2.ResumeLayout(false);
-            this.GroupBox2.PerformLayout();
             this.SpecialDamages.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SpecialDamagesDataGridView)).EndInit();
             this.ClientNotes.ResumeLayout(false);
@@ -8501,7 +8363,8 @@
             this.TableLayoutPanel10.ResumeLayout(false);
             this.TableLayoutPanel10.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -8756,42 +8619,28 @@
         internal System.Windows.Forms.TabPage ExpertsLayWitness;
         internal System.Windows.Forms.DataGridView PLReportsDataGridView;
         internal System.Windows.Forms.TabPage Invoices;
-        internal System.Windows.Forms.TabPage ClientInfo;
-        internal System.Windows.Forms.LinkLabel LinkLabel1;
-        internal System.Windows.Forms.GroupBox GroupBox32;
-        internal System.Windows.Forms.TextBox TextBox28;
-        internal System.Windows.Forms.PictureBox PictureBox2;
-        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel1;
-        internal System.Windows.Forms.TextBox CBoxClientNameTextBox;
-        internal System.Windows.Forms.TextBox TextBox25;
-        internal System.Windows.Forms.TextBox TextBox26;
-        internal System.Windows.Forms.TextBox TextBox27;
+        internal System.Windows.Forms.TabPage PeopleTab;
         internal System.Windows.Forms.TabPage MedicalInfo;
         internal System.Windows.Forms.TabControl TabControl6;
         internal System.Windows.Forms.TabPage MedicalAppointments;
         internal System.Windows.Forms.DataGridView MedApptsDataGridView;
-        internal System.Windows.Forms.TextBox TextBox24;
-        internal System.Windows.Forms.TextBox TextBox23;
-        internal System.Windows.Forms.TextBox TextBox22;
-        internal System.Windows.Forms.TextBox TextBox21;
-        internal System.Windows.Forms.GroupBox GroupBox2;
-        internal System.Windows.Forms.TextBox searchBox;
+        internal System.Windows.Forms.TextBox NextTextBox;
+        internal System.Windows.Forms.TextBox ProjectedABSettlementValueTextBox;
+        internal System.Windows.Forms.TextBox ProjectedABSettlementDateTextBox;
+        internal System.Windows.Forms.TextBox ProjectedSettlementValueTextBox;
         internal System.Windows.Forms.Button HomeButton;
-        internal System.Windows.Forms.TextBox TextBox20;
-        internal System.Windows.Forms.ComboBox MainComboBox;
         internal System.Windows.Forms.TabPage ProtectedAccounts;
         internal System.Windows.Forms.TabPage CollateralBenefits;
         internal System.Windows.Forms.TabPage SpecialDamages;
         internal System.Windows.Forms.DataGridView SpecialDamagesDataGridView;
-        internal System.Windows.Forms.TextBox TBoxFileOpenDateTextBox;
-        internal System.Windows.Forms.TextBox TBoxIronMountainSKPBoxTextBox;
-        internal System.Windows.Forms.TextBox CBoxMatterTypeTextBox;
-        internal System.Windows.Forms.TextBox TBoxNextReviewDateTextBox;
-        internal System.Windows.Forms.ComboBox ComboBox1;
-        internal System.Windows.Forms.TextBox TBoxDateOfLossTextBox;
-        internal System.Windows.Forms.TextBox TBoxLimDateTextBox;
+        internal System.Windows.Forms.TextBox FileOpenDateTextBox;
+        internal System.Windows.Forms.TextBox ProjectedSettlementDateTextBox;
+        internal System.Windows.Forms.TextBox MatterTypeTextBox;
+        internal System.Windows.Forms.TextBox NextReviewDateTextBox;
+        internal System.Windows.Forms.TextBox DateOfLossTextBox;
+        internal System.Windows.Forms.TextBox LimDateTextBox;
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.TextBox TBoxFileCloseDateTextBox;
+        internal System.Windows.Forms.TextBox FileCloseDateTextBox;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.TabPage ClientNotes;
         internal System.Windows.Forms.DataGridView ClientNotesDataGridView;
@@ -9102,6 +8951,17 @@
         internal System.Windows.Forms.TextBox TextBox114;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.PictureBox PictureBox1;
+        internal System.Windows.Forms.Button FindFileButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        internal System.Windows.Forms.TextBox ClientNameTextBox;
+        internal System.Windows.Forms.TextBox FileNumberTextBox;
+        private System.Windows.Forms.Label ProjectedSettlementValueLabel;
+        private System.Windows.Forms.Label ProjectedSettlementDateLabel;
+        private System.Windows.Forms.Label NextLabel;
+        private System.Windows.Forms.Label ProjectedABSettlementValueLabel;
+        private System.Windows.Forms.Label ProjectedABSettlementDateLabel;
+        private System.Windows.Forms.Label NextReviewDateLabel;
+        private System.Windows.Forms.Label DateOfLossLabel;
     }
 }
 

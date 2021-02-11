@@ -39,7 +39,13 @@ namespace RRFFilesManager.ContactForm
 
         public IGroupControl GroupControl => Content.Controls.Count > 0 ? (IGroupControl)Content.Controls?[0] : null;
 
-        public Contact Contact { get; set; }
+        private Contact Contact { get; set; }
+
+        public void SetContact(Contact contact)
+        {
+            Contact = contact;
+            FillForm(Contact);
+        }
         
         private void FindContactButton_Click(object sender, EventArgs e)
         {
@@ -50,8 +56,7 @@ namespace RRFFilesManager.ContactForm
         private void FindContact_FormClosing(object sender, FormClosingEventArgs e)
         {
             var findContactForm = sender as FindContact;
-            Contact = findContactForm.Selected;
-            FillForm(Contact);
+            SetContact(findContactForm.Selected);
         }
 
         public void FillContact(Contact client)
@@ -66,7 +71,7 @@ namespace RRFFilesManager.ContactForm
                 return;
             Group.SelectedItem = client.Group;
             SetContent();
-            GroupControl.FillForm(client);
+            GroupControl.SetContact(client);
         }
 
 

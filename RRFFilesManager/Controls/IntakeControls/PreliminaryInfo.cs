@@ -108,21 +108,18 @@ namespace RRFFilesManager.IntakeForm
             if (matterSubType?.DaysFromDateOfLoss != null)
             {
                 StatutoryNoticeBox.Text = DateOfLossDateTimePicker.Value.AddDays((double)matterSubType?.DaysFromDateOfLoss).ToString("MMM-dd-yyyy");
-                StatutoryNoticeBox.Show();
                 StatutoryNoticeLabel.Show();
+                StatutoryNoticeLabel.Show();
+                StatutoryNoticeBox.Enabled = true;
             }
             else if(matterSubType.StatutoryNotice != null)
             {
                 StatutoryNoticeBox.Text = matterSubType.StatutoryNotice;
-                StatutoryNoticeBox.Show();
-                StatutoryNoticeLabel.Show();
-            }
-            else
-            {
-                StatutoryNoticeBox.Text = "";
-                StatutoryNoticeBox.Hide();
                 StatutoryNoticeLabel.Hide();
+                StatutoryNoticeBox.Show();
+                StatutoryNoticeBox.Enabled = false;
             }
+
         }
 
         private void LawyerComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -210,10 +207,16 @@ namespace RRFFilesManager.IntakeForm
             if (matterType.Description == "Disability")
             {
                 DateOfLossLabel.Text = "Date of Denial:";
+                StatutoryNoticeBox.Hide();
+                StatutoryNoticeLabel.Hide();
             }
             else
             {
                 DateOfLossLabel.Text = "Date Of Loss:";
+                StatutoryNoticeBox.Clear();
+                StatutoryNoticeBox.Show();
+                StatutoryNoticeLabel.Show();
+                StatutoryNoticeBox.Enabled = true;
             }
         }
 

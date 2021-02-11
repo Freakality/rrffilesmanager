@@ -27,6 +27,7 @@ namespace RRFFilesManager.Abstractions
         public virtual Intake Intake { get; set; }
 
         public virtual ICollection<Archive> Archives { get; set; }
+        public virtual ICollection<FileContact> Peoples { get; set; }
 
         public override string ToString() => $"{FileNumber} - {Client?.FirstName} {Client?.LastName}";
     }

@@ -25,6 +25,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<Company> Companies { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<FileContact> FileContacts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,6 +34,11 @@ namespace RRFFilesManager.DataAccess
                 optionsBuilder.UseLazyLoadingProxies();
                 optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
             }
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<FileContact>().HasKey(sc => new { sc.FileId, sc.ContactId });
         }
 
 

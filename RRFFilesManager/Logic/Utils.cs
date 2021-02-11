@@ -46,6 +46,8 @@ namespace RRFFilesManager.Logic
         public static void SetContent(Control Content, Control control)
         {
             Content.Controls.Clear();
+            if (control == null)
+                return;
             Content.Controls.Add(control);
             Content.Controls[0].Dock = DockStyle.Fill;
         }

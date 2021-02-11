@@ -4,6 +4,7 @@ using RRFFilesManager.Logic;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -11,15 +12,17 @@ namespace RRFFilesManager.Controls.ContactControls
 {
     public partial class ClientGroupControl : UserControl, IGroupControl
     {
+        private readonly IGroupRepository _groupRepository;
         private readonly IProvinceRepository _provinceRepository;
         private readonly IMobileCarrierRepository _mobileCarrierRepository;
         private readonly IContactRepository _contactRepository;
-
+        public Contact Contact { get; set; }
         public ClientGroupControl()
         {
             _provinceRepository = Program.GetService<IProvinceRepository>();
             _mobileCarrierRepository = Program.GetService<IMobileCarrierRepository>();
             _contactRepository = Program.GetService<IContactRepository>();
+            _groupRepository = Program.GetService<IGroupRepository>();
             InitializeComponent();
             Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
             Utils.SetComboBoxDataSource(MobileCarrierComboBox, _mobileCarrierRepository.List());
@@ -61,9 +64,15 @@ namespace RRFFilesManager.Controls.ContactControls
                 }
             }
         }
+        public void SetContact(Contact contact)
+        {
+            Contact = contact;
+            FillForm(Contact);
+        }
 
         public void FillContact(Contact client)
         {
+            client.Group = _groupRepository.List().FirstOrDefault(s => s.Name == "Client");
             client.Salutation = Salutation.Text;
             client.FirstName = FirstName.Text;
             client.LastName = LastName.Text;

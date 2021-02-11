@@ -303,6 +303,25 @@
     <Compile Include="Controls\DocumentControls\CreateDocument.Designer.cs">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileControls\IPeopleInformation.cs" />
+    <Compile Include="Controls\FileControls\PeopleOtherContactControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\PeopleOtherContactControl.Designer.cs">
+      <DependentUpon>PeopleOtherContactControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FileControls\PeopleClientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\PeopleClientControl.Designer.cs">
+      <DependentUpon>PeopleClientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FileControls\PeopleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\PeopleControl.Designer.cs">
+      <DependentUpon>PeopleControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -445,6 +464,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DocumentControls\CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\PeopleOtherContactControl.resx">
+      <DependentUpon>PeopleOtherContactControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\PeopleClientControl.resx">
+      <DependentUpon>PeopleClientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\PeopleControl.resx">
+      <DependentUpon>PeopleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>

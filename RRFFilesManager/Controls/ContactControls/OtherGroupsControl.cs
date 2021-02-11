@@ -34,16 +34,7 @@ namespace RRFFilesManager.Controls.ContactControls
 
         public Group Group { get; set; }
         public Contact Contact { get; set; }
-        private Company company;
-        public Company Company
-        {
-            get => company;
-            set
-            {
-                company = value;
-                FillForm(company);
-            }
-        }
+        public Company Company { get; set; }
         public string[] Months => new string[]
         {
             "January",
@@ -134,6 +125,7 @@ namespace RRFFilesManager.Controls.ContactControls
             FirstName.Text = client.FirstName;
             LastName.Text = client.LastName;
             Email.Text = client.Email;
+            Company = client.Company;
             CompanyTextBox.Text = client.Company?.Description;
             TypeOfContact.Text = client.TypeOfContact;
             LicenseNumber.Text = client.LicenseNumber;
@@ -190,6 +182,12 @@ namespace RRFFilesManager.Controls.ContactControls
             Company = findCompanyForm.Selected;
             if (Company == null)
                 CompanyTextBox.Text = Company.Description;
+            FillForm(Company);
+        }
+        public void SetContact(Contact contact)
+        {
+            Contact = contact;
+            FillForm(Contact);
         }
 
         private void CompanyLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

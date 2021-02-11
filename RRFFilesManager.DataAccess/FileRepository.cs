@@ -71,6 +71,30 @@ namespace RRFFilesManager.DataAccess
             return query.FirstOrDefault();
         }
 
-        
+        public void AddFileContact(File file, Contact contact)
+        {
+            var exist = _context.FileContacts.Any(s => s.File.ID == file.ID && s.Contact.ID == contact.ID);
+            if (exist)
+                return;
+            var fileContact = new FileContact
+            {
+                File = file,
+                FileId = file.ID,
+                Contact = contact,
+                ContactId = contact.ID
+            };
+            _context.FileContacts.Add(fileContact);
+            _context.SaveChanges();
+        }
+
+        public void RemoveFileContact(File file, Contact contact)
+        {
+            var fileContact = _context.FileContacts.FirstOrDefault(s => s.File == file && s.Contact == contact);
+            if (fileContact == null)
+                return;
+            _context.FileContacts.Remove(fileContact);
+            _context.SaveChanges();
+        }
+
     }
 }

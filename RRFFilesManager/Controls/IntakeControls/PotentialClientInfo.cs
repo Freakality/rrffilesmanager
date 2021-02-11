@@ -21,11 +21,13 @@ namespace RRFFilesManager.IntakeForm
         private readonly IProvinceRepository _provinceRepository;
         private readonly IMobileCarrierRepository _mobileCarrierRepository;
         private readonly IContactRepository _contactRepository;
+        private readonly IFileRepository _fileRepository;
         public PotentialClientInfo()
         {
             _provinceRepository = (IProvinceRepository)Program.ServiceProvider.GetService(typeof(IProvinceRepository));
             _mobileCarrierRepository = (IMobileCarrierRepository)Program.ServiceProvider.GetService(typeof(IMobileCarrierRepository));
             _contactRepository = (IContactRepository)Program.ServiceProvider.GetService(typeof(IContactRepository));
+            _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
             Utils.SetContent(Content, new ClientGroupControl());
 
@@ -54,6 +56,10 @@ namespace RRFFilesManager.IntakeForm
         public void OnNext()
         {
             UpsertClient();
+            var file = Home.IntakeForm.Intake.File;
+            if (file == null)
+                return;
+            _fileRepository.AddFileContact(file, file.Client);
         }
 
         public void FillClient(Contact client)
@@ -65,7 +71,7 @@ namespace RRFFilesManager.IntakeForm
         {
             if (client == null)
                 return;
-            GroupControl.FillForm(client);
+            GroupControl.SetContact(client);
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -61,6 +62,8 @@ namespace RRFFilesManager.Abstractions
         public int? Contact2Id { get; set; }
         public virtual Contact Contact2 { get; set; }
         public string Link { get; set; }
+
+        public virtual IList<FileContact> Peoples { get; set; }
 
         public override string ToString() =>  $"{FirstName} {LastName}";
     }
