@@ -15,6 +15,7 @@ using System.Text;
 
 using System.Windows.Forms;
 using System.IO;
+using RRFFilesManager.Controls.ArchiveControls;
 
 namespace RRFFilesManager
 {
@@ -118,6 +119,15 @@ namespace RRFFilesManager
             }
             catch { }
             
+        }
+
+        private void PrivateFootPrintButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            PleaseWait.Instance.Show();
+            var uploadArchivesForm = new UploadArchivesForm();
+            uploadArchivesForm.Show();
+            PleaseWait.Instance.Hide();
         }
     }
 }

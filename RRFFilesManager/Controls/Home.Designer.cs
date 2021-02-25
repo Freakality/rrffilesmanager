@@ -51,7 +51,7 @@
             this.ClientInfoButton = new System.Windows.Forms.Button();
             this.CalendarButton = new System.Windows.Forms.Button();
             this.CreateDocumentsButton = new System.Windows.Forms.Button();
-            this.Button7 = new System.Windows.Forms.Button();
+            this.PrivateFootPrintButton = new System.Windows.Forms.Button();
             this.DocumentTemplate = new System.Windows.Forms.Button();
             this.Button5 = new System.Windows.Forms.Button();
             this.Button6 = new System.Windows.Forms.Button();
@@ -414,20 +414,21 @@
             this.CreateDocumentsButton.UseVisualStyleBackColor = false;
             this.CreateDocumentsButton.Click += new System.EventHandler(this.CreateDocumentsButton_Click);
             // 
-            // Button7
+            // PrivateFootPrintButton
             // 
-            this.Button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button7.ForeColor = System.Drawing.Color.White;
-            this.Button7.Location = new System.Drawing.Point(388, 455);
-            this.Button7.Margin = new System.Windows.Forms.Padding(10);
-            this.Button7.Name = "Button7";
-            this.Button7.Size = new System.Drawing.Size(169, 72);
-            this.Button7.TabIndex = 7;
-            this.Button7.Text = "PRIVATE FOOTPRINT";
-            this.Button7.UseVisualStyleBackColor = false;
+            this.PrivateFootPrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PrivateFootPrintButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrivateFootPrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrivateFootPrintButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrivateFootPrintButton.ForeColor = System.Drawing.Color.White;
+            this.PrivateFootPrintButton.Location = new System.Drawing.Point(388, 455);
+            this.PrivateFootPrintButton.Margin = new System.Windows.Forms.Padding(10);
+            this.PrivateFootPrintButton.Name = "PrivateFootPrintButton";
+            this.PrivateFootPrintButton.Size = new System.Drawing.Size(169, 72);
+            this.PrivateFootPrintButton.TabIndex = 7;
+            this.PrivateFootPrintButton.Text = "PRIVATE FOOTPRINT";
+            this.PrivateFootPrintButton.UseVisualStyleBackColor = false;
+            this.PrivateFootPrintButton.Click += new System.EventHandler(this.PrivateFootPrintButton_Click);
             // 
             // DocumentTemplate
             // 
@@ -541,7 +542,7 @@
             this.TableLayoutPanel1.Controls.Add(this.ClientInfoButton, 1, 1);
             this.TableLayoutPanel1.Controls.Add(this.CalendarButton, 1, 0);
             this.TableLayoutPanel1.Controls.Add(this.CreateDocumentsButton, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.Button7, 0, 5);
+            this.TableLayoutPanel1.Controls.Add(this.PrivateFootPrintButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.DocumentTemplate, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button5, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button6, 0, 5);
@@ -630,7 +631,7 @@
         internal System.Windows.Forms.Button ClientInfoButton;
         internal System.Windows.Forms.Button CalendarButton;
         internal System.Windows.Forms.Button CreateDocumentsButton;
-        internal System.Windows.Forms.Button Button7;
+        internal System.Windows.Forms.Button PrivateFootPrintButton;
         internal System.Windows.Forms.Button DocumentTemplate;
         internal System.Windows.Forms.Button Button5;
         internal System.Windows.Forms.Button Button6;

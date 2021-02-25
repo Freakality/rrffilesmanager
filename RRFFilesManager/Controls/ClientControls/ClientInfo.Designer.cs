@@ -33,7 +33,6 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.CompletedQuestionnaireLink = new System.Windows.Forms.LinkLabel();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.FindClientButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
             this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,11 +76,12 @@
             this.YearBirth = new System.Windows.Forms.MaskedTextBox();
             this.DayBirth = new System.Windows.Forms.ComboBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.PotentialClientInfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
             this.TableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // PotentialClientInfoPanel
@@ -144,19 +144,6 @@
             this.CompletedQuestionnaireLink.Text = "Completed Questionnaire";
             this.CompletedQuestionnaireLink.Visible = false;
             this.CompletedQuestionnaireLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CompletedQuestionnaireLink_LinkClicked);
-            // 
-            // PhotoPictureBox
-            // 
-            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
-            this.PhotoPictureBox.Location = new System.Drawing.Point(987, 65);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(250, 250);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 6;
-            this.PhotoPictureBox.TabStop = false;
-            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // FindClientButton
             // 
@@ -566,7 +553,7 @@
             this.TableLayoutPanel9.ColumnCount = 3;
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
-            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.TableLayoutPanel9.Controls.Add(this.Label70, 0, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label71, 1, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label72, 2, 0);
@@ -607,7 +594,7 @@
             // 
             this.Label72.AutoSize = true;
             this.Label72.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label72.Location = new System.Drawing.Point(180, 0);
+            this.Label72.Location = new System.Drawing.Point(178, 0);
             this.Label72.Name = "Label72";
             this.Label72.Size = new System.Drawing.Size(30, 13);
             this.Label72.TabIndex = 36;
@@ -633,7 +620,7 @@
             "December"});
             this.MonthBirth.Location = new System.Drawing.Point(70, 16);
             this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(104, 25);
+            this.MonthBirth.Size = new System.Drawing.Size(102, 25);
             this.MonthBirth.TabIndex = 38;
             // 
             // YearBirth
@@ -686,11 +673,24 @@
             "29",
             "30",
             "31"});
-            this.DayBirth.Location = new System.Drawing.Point(180, 16);
+            this.DayBirth.Location = new System.Drawing.Point(178, 16);
             this.DayBirth.MaxDropDownItems = 11;
             this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(114, 25);
+            this.DayBirth.Size = new System.Drawing.Size(116, 25);
             this.DayBirth.TabIndex = 41;
+            // 
+            // PhotoPictureBox
+            // 
+            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.Location = new System.Drawing.Point(987, 65);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(250, 250);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 6;
+            this.PhotoPictureBox.TabStop = false;
+            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // ClientInfo
             // 
@@ -704,13 +704,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientInfo_FormClosing);
             this.PotentialClientInfoPanel.ResumeLayout(false);
             this.PotentialClientInfoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.TableLayoutPanel4.ResumeLayout(false);
             this.TableLayoutPanel4.PerformLayout();
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
             this.TableLayoutPanel9.ResumeLayout(false);
             this.TableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
