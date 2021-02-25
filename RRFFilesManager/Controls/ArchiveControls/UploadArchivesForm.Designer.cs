@@ -75,9 +75,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
-            this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ArchivesGridView)).BeginInit();
@@ -93,8 +94,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.panel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.PreviewPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -599,7 +601,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(584, 128);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -609,7 +611,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(151, 6);
+            this.button1.Location = new System.Drawing.Point(195, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -645,16 +647,18 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
-            // axAcroPDF
+            // richTextBox
             // 
-            this.axAcroPDF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axAcroPDF.Enabled = true;
-            this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
-            this.axAcroPDF.Name = "axAcroPDF";
-            this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
-            this.axAcroPDF.Size = new System.Drawing.Size(465, 665);
-            this.axAcroPDF.TabIndex = 0;
-            this.axAcroPDF.Visible = false;
+            this.richTextBox.BackColor = System.Drawing.Color.White;
+            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.ReadOnly = true;
+            this.richTextBox.Size = new System.Drawing.Size(465, 665);
+            this.richTextBox.TabIndex = 3;
+            this.richTextBox.Text = "";
+            this.richTextBox.Visible = false;
             // 
             // pictureBox
             // 
@@ -668,18 +672,25 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.pictureBox.TabStop = false;
             this.pictureBox.Visible = false;
             // 
-            // richTextBox
+            // axAcroPDF
             // 
-            this.richTextBox.BackColor = System.Drawing.Color.White;
-            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.ReadOnly = true;
-            this.richTextBox.Size = new System.Drawing.Size(465, 665);
-            this.richTextBox.TabIndex = 3;
-            this.richTextBox.Text = "";
-            this.richTextBox.Visible = false;
+            this.axAcroPDF.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axAcroPDF.Enabled = true;
+            this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
+            this.axAcroPDF.Name = "axAcroPDF";
+            this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
+            this.axAcroPDF.Size = new System.Drawing.Size(465, 665);
+            this.axAcroPDF.TabIndex = 0;
+            this.axAcroPDF.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(284, 32);
+            this.panel3.TabIndex = 0;
             // 
             // previewHandlerHost1
             // 
@@ -718,8 +729,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.PreviewPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -775,5 +787,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private AxAcroPDFLib.AxAcroPDF axAcroPDF;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.Panel panel3;
     }
 }
