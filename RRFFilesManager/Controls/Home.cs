@@ -76,7 +76,6 @@ namespace RRFFilesManager
 
         private void Contacts_Click(object sender, EventArgs e)
         {
-            Hide();
             PleaseWait.Instance.Show();
             ContactInfo = new ContactInfo();
             ContactInfo.Show();

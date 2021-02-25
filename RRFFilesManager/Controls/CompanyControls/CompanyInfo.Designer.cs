@@ -34,6 +34,11 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.label18 = new System.Windows.Forms.Label();
             this.Memo = new System.Windows.Forms.TextBox();
             this.TableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AddressLine2 = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.Description = new System.Windows.Forms.TextBox();
             this.Label8 = new System.Windows.Forms.Label();
@@ -42,25 +47,20 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.label1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.AddressLine1 = new System.Windows.Forms.TextBox();
-            this.Label4 = new System.Windows.Forms.Label();
             this.PostalCode = new System.Windows.Forms.TextBox();
             this.Label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.PhoneNumber = new System.Windows.Forms.MaskedTextBox();
-            this.Label7 = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.TextBox();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.Fax = new System.Windows.Forms.TextBox();
+            this.Extension = new System.Windows.Forms.TextBox();
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.FindCompany = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
-            this.AddressLine2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.Fax = new System.Windows.Forms.TextBox();
-            this.Extension = new System.Windows.Forms.TextBox();
             this.PotentialClientInfoPanel.SuspendLayout();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
@@ -167,6 +167,58 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.TableLayoutPanel3.Size = new System.Drawing.Size(973, 178);
             this.TableLayoutPanel3.TabIndex = 36;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(324, 121);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(324, 18);
+            this.tableLayoutPanel6.TabIndex = 41;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(100, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(33, 18);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Fax";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 18);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Extension";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(651, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 16);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Address Line 2";
+            // 
+            // AddressLine2
+            // 
+            this.AddressLine2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddressLine2.Location = new System.Drawing.Point(651, 19);
+            this.AddressLine2.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.AddressLine2.Name = "AddressLine2";
+            this.AddressLine2.Size = new System.Drawing.Size(302, 24);
+            this.AddressLine2.TabIndex = 39;
+            // 
             // Label2
             // 
             this.Label2.AutoSize = true;
@@ -242,14 +294,6 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.AddressLine1.Size = new System.Drawing.Size(301, 24);
             this.AddressLine1.TabIndex = 10;
             // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(3, 182);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(0, 15);
-            this.Label4.TabIndex = 2;
-            // 
             // PostalCode
             // 
             this.PostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -289,15 +333,6 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.PhoneNumber.Size = new System.Drawing.Size(301, 24);
             this.PhoneNumber.TabIndex = 38;
             // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(651, 121);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(46, 18);
-            this.Label7.TabIndex = 8;
-            this.Label7.Text = "Email";
-            // 
             // Email
             // 
             this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -307,6 +342,57 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(302, 24);
             this.Email.TabIndex = 7;
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Location = new System.Drawing.Point(651, 121);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(46, 18);
+            this.Label7.TabIndex = 8;
+            this.Label7.Text = "Email";
+            // 
+            // Label4
+            // 
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(3, 182);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(0, 15);
+            this.Label4.TabIndex = 2;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel5.Controls.Add(this.Fax, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.Extension, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(324, 139);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(324, 43);
+            this.tableLayoutPanel5.TabIndex = 42;
+            // 
+            // Fax
+            // 
+            this.Fax.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Fax.Location = new System.Drawing.Point(100, 3);
+            this.Fax.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Fax.Name = "Fax";
+            this.Fax.Size = new System.Drawing.Size(204, 24);
+            this.Fax.TabIndex = 11;
+            // 
+            // Extension
+            // 
+            this.Extension.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Extension.Location = new System.Drawing.Point(3, 3);
+            this.Extension.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Extension.Name = "Extension";
+            this.Extension.Size = new System.Drawing.Size(74, 24);
+            this.Extension.TabIndex = 10;
             // 
             // Cancel
             // 
@@ -360,92 +446,6 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Label41.Size = new System.Drawing.Size(165, 26);
             this.Label41.TabIndex = 2;
             this.Label41.Text = "Company Info";
-            // 
-            // AddressLine2
-            // 
-            this.AddressLine2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddressLine2.Location = new System.Drawing.Point(651, 19);
-            this.AddressLine2.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.AddressLine2.Name = "AddressLine2";
-            this.AddressLine2.Size = new System.Drawing.Size(302, 24);
-            this.AddressLine2.TabIndex = 39;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(651, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 16);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Address Line 2";
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel6.Controls.Add(this.label15, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label14, 0, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(324, 121);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(324, 18);
-            this.tableLayoutPanel6.TabIndex = 41;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(100, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(33, 18);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Fax";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 18);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Extension";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel5.Controls.Add(this.Fax, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.Extension, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(324, 139);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(324, 43);
-            this.tableLayoutPanel5.TabIndex = 42;
-            // 
-            // Fax
-            // 
-            this.Fax.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Fax.Location = new System.Drawing.Point(100, 3);
-            this.Fax.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Fax.Name = "Fax";
-            this.Fax.Size = new System.Drawing.Size(204, 24);
-            this.Fax.TabIndex = 11;
-            // 
-            // Extension
-            // 
-            this.Extension.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Extension.Location = new System.Drawing.Point(3, 3);
-            this.Extension.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.Extension.Name = "Extension";
-            this.Extension.Size = new System.Drawing.Size(74, 24);
-            this.Extension.TabIndex = 10;
             // 
             // CompanyInfo
             // 

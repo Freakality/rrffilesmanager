@@ -32,7 +32,7 @@ namespace RRFFilesManager.Controls.FileControls
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeopleClientControl));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.Email2Label = new System.Windows.Forms.TextBox();
+            this.Email2Label = new System.Windows.Forms.LinkLabel();
             this.FirstLanguageLabel = new System.Windows.Forms.TextBox();
             this.SINLabel = new System.Windows.Forms.TextBox();
             this.HealthCardLabel = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.EmailLabel = new System.Windows.Forms.TextBox();
+            this.EmailLabel = new System.Windows.Forms.LinkLabel();
             this.FaxLabel = new System.Windows.Forms.TextBox();
             this.CellLabel = new System.Windows.Forms.TextBox();
             this.WorkPhoneLabel = new System.Windows.Forms.TextBox();
@@ -136,15 +136,16 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             // Email2Label
             // 
-            this.Email2Label.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Email2Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Email2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email2Label.Location = new System.Drawing.Point(103, 115);
+            this.Email2Label.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.Email2Label.Location = new System.Drawing.Point(103, 112);
             this.Email2Label.Name = "Email2Label";
-            this.Email2Label.ReadOnly = true;
-            this.Email2Label.Size = new System.Drawing.Size(333, 19);
+            this.Email2Label.Size = new System.Drawing.Size(333, 32);
             this.Email2Label.TabIndex = 8;
+            this.Email2Label.TabStop = true;
             this.Email2Label.Text = "Email2";
+            this.Email2Label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Email2Label_LinkClicked);
             // 
             // FirstLanguageLabel
             // 
@@ -579,15 +580,16 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             // EmailLabel
             // 
-            this.EmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(103, 115);
+            this.EmailLabel.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.EmailLabel.Location = new System.Drawing.Point(103, 112);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.ReadOnly = true;
-            this.EmailLabel.Size = new System.Drawing.Size(258, 19);
+            this.EmailLabel.Size = new System.Drawing.Size(258, 32);
             this.EmailLabel.TabIndex = 8;
+            this.EmailLabel.TabStop = true;
             this.EmailLabel.Text = "Email";
+            this.EmailLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.EmailLabel_LinkClicked);
             // 
             // FaxLabel
             // 
@@ -811,7 +813,7 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox HomePhoneLabel;
-        private System.Windows.Forms.TextBox EmailLabel;
+        private System.Windows.Forms.LinkLabel EmailLabel;
         private System.Windows.Forms.TextBox FaxLabel;
         private System.Windows.Forms.TextBox TextToEmailLabel;
         private System.Windows.Forms.TextBox PostalCodeLabel;
@@ -821,7 +823,7 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox Email2Label;
+        private System.Windows.Forms.LinkLabel Email2Label;
         private System.Windows.Forms.TextBox FirstLanguageLabel;
         private System.Windows.Forms.TextBox SINLabel;
         private System.Windows.Forms.TextBox HealthCardLabel;

@@ -73,8 +73,9 @@ namespace RRFFilesManager.Controls.FileControls
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            FindContact.Instance.Show();
-            FindContact.Instance.FormClosing += new FormClosingEventHandler(this.FindContact_FormClosing);
+            var findContact = new FindContact(true);
+            findContact.Show();
+            findContact.FormClosing += new FormClosingEventHandler(this.FindContact_FormClosing);
         }
 
         private void FindContact_FormClosing(object sender, FormClosingEventArgs e)

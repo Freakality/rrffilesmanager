@@ -16,7 +16,8 @@ namespace RRFFilesManager.ContactForm
     {
 
         private readonly IContactRepository _contactRepository;
-        public FindContact()
+        private readonly bool CanEdit;
+        public FindContact(bool canCreate = false, bool canEdit = true)
         {
             _contactRepository = (IContactRepository)Program.ServiceProvider.GetService(typeof(IContactRepository));
             InitializeComponent();
@@ -24,13 +25,15 @@ namespace RRFFilesManager.ContactForm
             ContactsGridView.MultiSelect = false;
             ContactsGridView.ReadOnly = true;
             ContactsGridView.DataSource = _contactRepository.Search(SearchTextBox.Text, 50);
+            CanEdit = canEdit;
+            CreateButton.Visible = canCreate;
+            if (!canCreate)
+                TableLayoutPanel.ColumnCount = 1;
         }
 
-        private static FindContact instance;
-        public static FindContact Instance => instance == null || instance.IsDisposed ? (instance = new FindContact()) : instance;
         public Contact Selected { get; set; }
-        
 
+        public ContactInfo ContactInfo { get; set; }
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
             ContactsGridView.DataSource = _contactRepository.Search(SearchTextBox.Text, 50);
@@ -45,6 +48,27 @@ namespace RRFFilesManager.ContactForm
                 Selected = _contactRepository.GetById(contactId);
             }
             Close();
+        }
+
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            OpenContactInfo();
+        }
+
+        private void OpenContactInfo()
+        {
+            ContactInfo = new ContactInfo(Selected);
+            ContactInfo.Show();
+            ContactInfo.FormClosing += new FormClosingEventHandler(this.ContactInfo_FormClosing);
+        }
+        private void ContactInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var companyInfo = sender as ContactInfo;
+            if (companyInfo.Contact.ID != default)
+            {
+                Selected = companyInfo.Contact;
+                Close();
+            }
         }
     }
 }

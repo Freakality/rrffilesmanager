@@ -39,7 +39,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.WebsiteLabel = new System.Windows.Forms.LinkLabel();
             this.OC2NameLabel = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.OC2EmailLabel = new System.Windows.Forms.TextBox();
+            this.OC2EmailLabel = new System.Windows.Forms.LinkLabel();
             this.OC2PhoneLabel = new System.Windows.Forms.TextBox();
             this.OC2TeamMemberLabel = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.OC1EmailLabel = new System.Windows.Forms.TextBox();
+            this.OC1EmailLabel = new System.Windows.Forms.LinkLabel();
             this.OC1PhoneLabel = new System.Windows.Forms.TextBox();
             this.OC1TeamMemberLabel = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.EmailLabel = new System.Windows.Forms.TextBox();
+            this.EmailLabel = new System.Windows.Forms.LinkLabel();
             this.FaxLabel = new System.Windows.Forms.TextBox();
             this.CellLabel = new System.Windows.Forms.TextBox();
             this.OfficePhoneLabel = new System.Windows.Forms.TextBox();
@@ -233,15 +233,16 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             // OC2EmailLabel
             // 
-            this.OC2EmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC2EmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OC2EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OC2EmailLabel.Location = new System.Drawing.Point(103, 87);
+            this.OC2EmailLabel.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.OC2EmailLabel.Location = new System.Drawing.Point(103, 84);
             this.OC2EmailLabel.Name = "OC2EmailLabel";
-            this.OC2EmailLabel.ReadOnly = true;
-            this.OC2EmailLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC2EmailLabel.Size = new System.Drawing.Size(258, 28);
             this.OC2EmailLabel.TabIndex = 7;
+            this.OC2EmailLabel.TabStop = true;
             this.OC2EmailLabel.Text = "OCEmail";
+            this.OC2EmailLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OC2EmailLabel_LinkClicked);
             // 
             // OC2PhoneLabel
             // 
@@ -376,15 +377,16 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             // OC1EmailLabel
             // 
-            this.OC1EmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC1EmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OC1EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OC1EmailLabel.Location = new System.Drawing.Point(103, 87);
+            this.OC1EmailLabel.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.OC1EmailLabel.Location = new System.Drawing.Point(103, 84);
             this.OC1EmailLabel.Name = "OC1EmailLabel";
-            this.OC1EmailLabel.ReadOnly = true;
-            this.OC1EmailLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC1EmailLabel.Size = new System.Drawing.Size(258, 28);
             this.OC1EmailLabel.TabIndex = 7;
+            this.OC1EmailLabel.TabStop = true;
             this.OC1EmailLabel.Text = "OC1Email";
+            this.OC1EmailLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OC1EmailLabel_LinkClicked);
             // 
             // OC1PhoneLabel
             // 
@@ -646,15 +648,16 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             // EmailLabel
             // 
-            this.EmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(103, 115);
+            this.EmailLabel.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.EmailLabel.Location = new System.Drawing.Point(103, 112);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.ReadOnly = true;
-            this.EmailLabel.Size = new System.Drawing.Size(258, 19);
+            this.EmailLabel.Size = new System.Drawing.Size(258, 32);
             this.EmailLabel.TabIndex = 8;
+            this.EmailLabel.TabStop = true;
             this.EmailLabel.Text = "Email";
+            this.EmailLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.EmailLabel_LinkClicked);
             // 
             // FaxLabel
             // 
@@ -817,7 +820,7 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox OC2NameLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.TextBox OC2EmailLabel;
+        private System.Windows.Forms.LinkLabel OC2EmailLabel;
         private System.Windows.Forms.TextBox OC2PhoneLabel;
         private System.Windows.Forms.TextBox OC2TeamMemberLabel;
         private System.Windows.Forms.Label label13;
@@ -836,7 +839,7 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TextBox EmailLabel;
+        private System.Windows.Forms.LinkLabel EmailLabel;
         private System.Windows.Forms.TextBox FaxLabel;
         private System.Windows.Forms.TextBox CellLabel;
         private System.Windows.Forms.TextBox OfficePhoneLabel;
@@ -849,7 +852,7 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.LinkLabel WebsiteLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox OC1EmailLabel;
+        private System.Windows.Forms.LinkLabel OC1EmailLabel;
         private System.Windows.Forms.TextBox OC1PhoneLabel;
         private System.Windows.Forms.TextBox OC1TeamMemberLabel;
         private System.Windows.Forms.Label label10;

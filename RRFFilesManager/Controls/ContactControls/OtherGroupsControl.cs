@@ -181,7 +181,8 @@ namespace RRFFilesManager.Controls.ContactControls
             var findCompanyForm = sender as FindCompany;
             Company = findCompanyForm.Selected;
             if (Company == null)
-                CompanyTextBox.Text = Company.Description;
+                return;
+            CompanyTextBox.Text = Company.Description;
             FillForm(Company);
         }
         public void SetContact(Contact contact)

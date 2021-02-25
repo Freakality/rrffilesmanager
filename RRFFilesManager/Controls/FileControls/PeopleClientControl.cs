@@ -71,5 +71,17 @@ namespace RRFFilesManager.Controls.FileControls
         {
 
         }
+
+        private void Email2Label_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Email2Label.LinkVisited = true;
+            System.Diagnostics.Process.Start($"mailto:{Email2Label.Text}");
+        }
+
+        private void EmailLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            EmailLabel.LinkVisited = true;
+            System.Diagnostics.Process.Start($"mailto:{EmailLabel.Text}");
+        }
     }
 }

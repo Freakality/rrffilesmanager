@@ -31,6 +31,30 @@ namespace RRFFilesManager.ContactForm
             InitializeComponent();
             Utils.SetComboBoxDataSource(Group, _groupRepository.List());
         }
+
+        public ContactInfo(Contact contact) : this()
+        {
+            Contact = contact;
+        }
+
+        private Contact contact;
+        public Contact Contact
+        {
+            get
+            {
+                if (contact == null)
+                    contact = new Contact();
+                FillContact(contact);
+                return contact;
+            }
+            set
+            {
+                contact = value;
+                if (contact == null)
+                    return;
+                FillForm(contact);
+            }
+        }
         //private OtherGroupsControl otherGroupsControl;
         //public OtherGroupsControl OtherGroupsControl => otherGroupsControl ?? (otherGroupsControl = new OtherGroupsControl());
 
@@ -39,7 +63,6 @@ namespace RRFFilesManager.ContactForm
 
         public IGroupControl GroupControl => Content.Controls.Count > 0 ? (IGroupControl)Content.Controls?[0] : null;
 
-        private Contact Contact { get; set; }
 
         public void SetContact(Contact contact)
         {
@@ -49,8 +72,9 @@ namespace RRFFilesManager.ContactForm
         
         private void FindContactButton_Click(object sender, EventArgs e)
         {
-            FindContact.Instance.Show();
-            FindContact.Instance.FormClosing += new FormClosingEventHandler(this.FindContact_FormClosing);
+            var findContact = new FindContact();
+            findContact.Show();
+            findContact.FormClosing += new FormClosingEventHandler(this.FindContact_FormClosing);
         }
 
         private void FindContact_FormClosing(object sender, FormClosingEventArgs e)
@@ -92,13 +116,11 @@ namespace RRFFilesManager.ContactForm
                 return;
             UpsertContact();
             Close();
-            Home.Instance.Show();
         }
 
         private void Cancel_Click(object sender, EventArgs e)
         {
             Close();
-            Home.Instance.Show();
         }
 
        
