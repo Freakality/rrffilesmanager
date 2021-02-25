@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210225045925_DocumentFolder_DocumentType")]
+    partial class DocumentFolder_DocumentType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,62 +28,17 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ACPaidToDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ACRemaining")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateRangeFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateRangeTo")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DocumentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DocumentFolder")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DocumentType")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("FileId")
                         .HasColumnType("int");
-
-                    b.Property<string>("IEAssessPdToDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MRACPaidToDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MRACRemaining")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MRPaidToDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MRRemaining")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PolicyClaimLimit")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("StatementPeriodFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StatementPeriodTo")
-                        .HasColumnType("datetime2");
 
                     b.Property<int?>("TemplateId")
                         .HasColumnType("int");

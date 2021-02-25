@@ -15,5 +15,22 @@ namespace RRFFilesManager.Abstractions
         public int? TemplateId { get; set; }
         public virtual Template Template { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
+
+        public string DocumentFolder { get; set; }
+        public string DocumentType { get; set; }
+        public DateTime DocumentDate { get; set; }
+        public DateTime DateRangeFrom { get; set; }
+        public DateTime DateRangeTo { get; set; }
+        public string PolicyClaimLimit { get; set; }
+        public DateTime StatementPeriodFrom { get; set; }
+        public DateTime StatementPeriodTo { get; set; }
+        public string MRACPaidToDate { get; set; }
+        public string MRACRemaining { get; set; }
+        public string ACPaidToDate { get; set; }
+        public string ACRemaining { get; set; }
+        public string MRPaidToDate { get; set; }
+        public string MRRemaining { get; set; }
+        public string IEAssessPdToDate { get; set; }
+        
     }
 }

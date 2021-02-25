@@ -1,51 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AxAcroPDFLib;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Win32;
+using RRFFilesManager.Abstractions;
+using RRFFilesManager.DataAccess.Abstractions;
+using RRFFilesManager.FileControls;
 using RRFFilesManager.Logic;
 
 namespace RRFFilesManager.Controls.ArchiveControls
 {
     public partial class UploadArchivesForm : Form
     {
+        private Abstractions.File CurrentFile { get; set; }
         BindingList<FileInfo> UploadedFiles = new BindingList<FileInfo>();
+        BindingList<Archive> Archives = new BindingList<Archive>();
+        private readonly IDocumentFolderRepository _documentFolderRepository;
+        private readonly IDocumentTypeRepository _documentTypeRepository;
+        private readonly IArchiveRepository _archiveRepository;
         public UploadArchivesForm()
         {
+            _documentFolderRepository = Program.GetService<IDocumentFolderRepository>();
+            _documentTypeRepository = Program.GetService<IDocumentTypeRepository>();
+            _archiveRepository = Program.GetService<IArchiveRepository>();
             InitializeComponent();
-            InitAsync();
+
+            Utils.SetComboBoxDataSource(DocumentFolder, _documentFolderRepository.List());
+
+
             axAcroPDF.setShowToolbar(false);
             axAcroPDF.setShowScrollbars(true);
 
             this.AllowDrop = true;
             this.DragEnter += new DragEventHandler(UploadArchivesForm_DragEnter);
             this.DragDrop += new DragEventHandler(UploadArchivesForm_DragDrop);
+
             FilesGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FilesGridView.MultiSelect = false;
             FilesGridView.ReadOnly = true;
             FilesGridView.DragEnter += new DragEventHandler(UploadArchivesForm_DragEnter);
             FilesGridView.DragDrop += new DragEventHandler(UploadArchivesForm_DragDrop);
-            this.FilesGridView.DataSource = this.UploadedFiles;
+            FilesGridView.DataSource = UploadedFiles;
+
+            ArchivesGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ArchivesGridView.MultiSelect = false;
+            ArchivesGridView.ReadOnly = true;
+            ArchivesGridView.DataSource = Archives;
+
             //this.printPreviewControl.Document = new System.Drawing.Printing.PrintDocument();
             //this.printPreviewControl.Document.DocumentName = "C:\\Users\\felix\\Downloads\\327485 (1).pdf";
-            
+
         }
 
-        private async void InitAsync()
-        {
-            //await WebView.EnsureCoreWebView2Async(null);
-            //WebView.Source = new Uri("C:\\Users\\felix\\Downloads\\327485 (1).pdf");
-            //WebView.Source = new Uri("C:\\Users\\felix\\Downloads\\IntegracionGDS.docx");
-            //WebView.Source = new Uri("C:\\Users\\felix\\Downloads\\Document Entry Form1 (2).jpg");
-        }
         void UploadArchivesForm_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
@@ -54,11 +70,16 @@ namespace RRFFilesManager.Controls.ArchiveControls
         void UploadArchivesForm_DragDrop(object sender, DragEventArgs e)
         {
             string[] paths = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (string path in paths) 
+            AddFiles(paths);
+        }
+
+        private void AddFiles(string[] paths)
+        {
+            foreach (string path in paths)
             {
                 //if (UploadedFiles.Any(s => s.FullName == path))
                 //    continue;
-                if (File.Exists(path))
+                if (System.IO.File.Exists(path))
                 {
                     var fileInfo = new FileInfo(path);
                     UploadedFiles.Add(fileInfo);
@@ -72,21 +93,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
                         //    continue;
                         UploadedFiles.Add(new FileInfo(filePath));
                     }
-                        
+
                 }
                 else
                 {
                     // path doesn't exist.
                 }
-                //Directory.GetFiles(sourceDir)
-                UpdateDataSource();
             }
         }
 
-        private void UpdateDataSource()
-        {
-            FilesGridView.Update();
-        }
 
         private void UploadArchivesForm_Load(object sender, EventArgs e)
         {
@@ -116,6 +131,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             //webView.NavigateToString("<h1>Hola Mundo!</h1>");//.Navigate(path);
             //PreviewHandlerHost = new PreviewHandlerHost();
             //Utils.SetContent(PreviewPanel, PreviewHandlerHost);
+
+            FilePreview(path);
+
+        }
+        private void FilePreview(string path)
+        {
             previewHandlerHost1.Hide();
             axAcroPDF.Hide();
             pictureBox.Hide();
@@ -169,7 +190,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             }
             else if (ext == ".txt" || perceivedType == "text")
             {
-                richTextBox.Text = File.ReadAllText(path);
+                richTextBox.Text = System.IO.File.ReadAllText(path);
                 richTextBox.Show();
             }
             else
@@ -180,8 +201,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
                 previewHandlerHost1.Show();
                 //}
             }
-
-
         }
 
         private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
@@ -207,6 +226,137 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void PreviewHandlerHost_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FindFileButton_Click(object sender, EventArgs e)
+        {
+            FindFile.Instance.Show();
+            FindFile.Instance.FormClosing += new FormClosingEventHandler(FindFile_FormClosing);
+        }
+
+        private void FindFile_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var findFileForm = sender as FindFile;
+            SetForm(findFileForm.SelectedFile);
+        }
+
+        private void SetForm(Abstractions.File file)
+        {
+            if (file == null)
+                return;
+            CurrentFile = file;
+            MatterTypeTextBox.Text = CurrentFile.MatterType.ToString();
+            FileNumberTextBox.Text = CurrentFile.FileNumber.ToString();
+        }
+
+        private void DoneButton_Click(object sender, EventArgs e)
+        {
+            var selected = FilesGridView.SelectedRows[0].DataBoundItem as FileInfo;
+            var archive = GetArchive();
+            _archiveRepository.Insert(CurrentFile, archive);
+
+            Archives.Add(archive);
+            UploadedFiles.Remove(selected);
+            ClearForm();
+        }
+
+        public Archive GetArchive()
+        {
+            string regexSearch = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+            Regex r = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
+
+            var selected = FilesGridView.SelectedRows[0].DataBoundItem as FileInfo;
+            var path = selected.FullName;
+            var extension = Path.GetExtension(path);
+            var newDirectory = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], $"{CurrentFile.FileNumber}");
+            if (!string.IsNullOrWhiteSpace(DocumentFolder.Text))
+                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentFolder.Text, ""));
+            if (!string.IsNullOrWhiteSpace(DocumentType.Text))
+                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentType.Text, ""));
+            
+
+            if (!Directory.Exists(newDirectory))
+                Directory.CreateDirectory(newDirectory);
+            var newFileName = $"{r.Replace(DocumentName.Text, "")}{extension}";
+            var newPath = Path.Combine(newDirectory, newFileName);
+            System.IO.File.Copy(path, newPath, true);
+            var archive = new Archive();
+            archive.File = CurrentFile;
+            archive.Path = newPath;
+            archive.Name = newFileName;
+            archive.DocumentFolder = DocumentFolder.Text;
+            archive.DocumentType = DocumentType.Text;
+            archive.DocumentDate = DocumentDate.Value;
+            archive.DateRangeFrom = DateRangeFrom.Value;
+            archive.DateRangeTo = DateRangeTo.Value;
+            archive.PolicyClaimLimit = PolicyClaimLimit.Text;
+            archive.StatementPeriodFrom = StatementPeriodFrom.Value;
+            archive.StatementPeriodTo = StatementPeriodTo.Value;
+            archive.MRACPaidToDate = MRACPaidToDate.Text;
+            archive.MRACRemaining = MRACRemaining.Text;
+            archive.ACPaidToDate = ACPaidToDate.Text;
+            archive.ACRemaining = ACRemaining.Text;
+            archive.MRPaidToDate = MRPaidToDate.Text;
+            archive.MRRemaining = MRRemaining.Text;
+            archive.IEAssessPdToDate = IEAssessPdToDate.Text;
+            return archive;
+        }
+
+        private void ClearForm()
+        {
+            DocumentFolder.ResetText();
+            DocumentType.ResetText();
+            DocumentDate.ResetText();
+            DateRangeFrom.ResetText();
+            DateRangeTo.ResetText();
+            PolicyClaimLimit.ResetText();
+            StatementPeriodFrom.ResetText();
+            StatementPeriodTo.ResetText();
+            MRACPaidToDate.ResetText();
+            MRACRemaining.ResetText();
+            ACPaidToDate.ResetText();
+            ACRemaining.ResetText();
+            MRPaidToDate.ResetText();
+            MRRemaining.ResetText();
+            IEAssessPdToDate.ResetText();
+        }
+
+        private void DocumentFolder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var documentFolder = DocumentFolder.SelectedItem as DocumentFolder;
+            if (documentFolder == null)
+                return;
+            Utils.SetComboBoxDataSource(DocumentType, _documentTypeRepository.List().Where(s => s.DocumentFolder.ID == documentFolder.ID).ToList());
+        }
+
+        private void ArchivesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void SelectFiles_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    
+                    AddFiles(openFileDialog1.FileNames);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
+                    $"Details:\n\n{ex.StackTrace}");
+                }
+            }
+        }
+
+        private void ArchivesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var selected = ArchivesGridView.SelectedRows[0].DataBoundItem as Archive;
+            if (selected == null)
+                return;
+            FilePreview(selected.Path);
         }
     }
 }

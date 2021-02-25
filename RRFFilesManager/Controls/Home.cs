@@ -122,6 +122,11 @@ namespace RRFFilesManager
 
         private void PrivateFootPrintButton_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ImportDocumentsButton_Click(object sender, EventArgs e)
+        {
             Hide();
             PleaseWait.Instance.Show();
             var uploadArchivesForm = new UploadArchivesForm();

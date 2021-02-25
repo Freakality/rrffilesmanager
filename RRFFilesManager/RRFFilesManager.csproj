@@ -619,6 +619,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Migrations\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">

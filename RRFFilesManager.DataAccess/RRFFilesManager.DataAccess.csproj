@@ -192,6 +192,8 @@
     <Compile Include="Abstractions\IContactRepository.cs" />
     <Compile Include="Abstractions\IDisabilityInsuranceCompanyRepository.cs" />
     <Compile Include="Abstractions\IArchiveRepository.cs" />
+    <Compile Include="Abstractions\IDocumentTypeRepository.cs" />
+    <Compile Include="Abstractions\IDocumentFolderRepository.cs" />
     <Compile Include="Abstractions\IPositionRepository.cs" />
     <Compile Include="Abstractions\IHearAboutUsRepository.cs" />
     <Compile Include="Abstractions\IFileRepository.cs" />
@@ -208,7 +210,9 @@
     <Compile Include="ContactRepository.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="ArchiveRepository.cs" />
+    <Compile Include="DocumentTypeRepository.cs" />
     <Compile Include="FileRepository.cs" />
+    <Compile Include="DocumentFolderRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />
     <Compile Include="Migrations\20210127003412_Position.designer.cs">
       <DependentUpon>20210127003412_Position.cs</DependentUpon>
@@ -240,6 +244,14 @@
     <Compile Include="Migrations\20210210222416_FileContacts.cs" />
     <Compile Include="Migrations\20210210222416_FileContacts.designer.cs">
       <DependentUpon>20210210222416_FileContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210225045925_DocumentFolder_DocumentType.cs" />
+    <Compile Include="Migrations\20210225045925_DocumentFolder_DocumentType.designer.cs">
+      <DependentUpon>20210225045925_DocumentFolder_DocumentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210225053325_Archive_New_Fields.cs" />
+    <Compile Include="Migrations\20210225053325_Archive_New_Fields.designer.cs">
+      <DependentUpon>20210225053325_Archive_New_Fields.cs</DependentUpon>
     </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />

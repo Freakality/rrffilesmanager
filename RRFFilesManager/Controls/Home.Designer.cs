@@ -44,11 +44,11 @@
             this.Button17 = new System.Windows.Forms.Button();
             this.Button16 = new System.Windows.Forms.Button();
             this.Button15 = new System.Windows.Forms.Button();
-            this.Button14 = new System.Windows.Forms.Button();
+            this.ImportDocumentsButton = new System.Windows.Forms.Button();
             this.Button13 = new System.Windows.Forms.Button();
             this.Contacts = new System.Windows.Forms.Button();
             this.Button11 = new System.Windows.Forms.Button();
-            this.ClientInfoButton = new System.Windows.Forms.Button();
+            this.AddNewTaskButton = new System.Windows.Forms.Button();
             this.CalendarButton = new System.Windows.Forms.Button();
             this.CreateDocumentsButton = new System.Windows.Forms.Button();
             this.PrivateFootPrintButton = new System.Windows.Forms.Button();
@@ -304,20 +304,21 @@
             this.Button15.Text = "MASTER TASKS";
             this.Button15.UseVisualStyleBackColor = false;
             // 
-            // Button14
+            // ImportDocumentsButton
             // 
-            this.Button14.BackColor = System.Drawing.Color.Maroon;
-            this.Button14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button14.ForeColor = System.Drawing.Color.White;
-            this.Button14.Location = new System.Drawing.Point(10, 366);
-            this.Button14.Margin = new System.Windows.Forms.Padding(10);
-            this.Button14.Name = "Button14";
-            this.Button14.Size = new System.Drawing.Size(169, 69);
-            this.Button14.TabIndex = 4;
-            this.Button14.Text = "ADD NEW TASKS";
-            this.Button14.UseVisualStyleBackColor = false;
+            this.ImportDocumentsButton.BackColor = System.Drawing.Color.Maroon;
+            this.ImportDocumentsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImportDocumentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImportDocumentsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImportDocumentsButton.ForeColor = System.Drawing.Color.White;
+            this.ImportDocumentsButton.Location = new System.Drawing.Point(10, 366);
+            this.ImportDocumentsButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ImportDocumentsButton.Name = "ImportDocumentsButton";
+            this.ImportDocumentsButton.Size = new System.Drawing.Size(169, 69);
+            this.ImportDocumentsButton.TabIndex = 4;
+            this.ImportDocumentsButton.Text = "IMPORT DOCUMENTS";
+            this.ImportDocumentsButton.UseVisualStyleBackColor = false;
+            this.ImportDocumentsButton.Click += new System.EventHandler(this.ImportDocumentsButton_Click);
             // 
             // Button13
             // 
@@ -366,21 +367,20 @@
             this.Button11.Text = "CLIENT NOTES";
             this.Button11.UseVisualStyleBackColor = false;
             // 
-            // ClientInfoButton
+            // AddNewTaskButton
             // 
-            this.ClientInfoButton.BackColor = System.Drawing.Color.Black;
-            this.ClientInfoButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClientInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClientInfoButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientInfoButton.ForeColor = System.Drawing.Color.White;
-            this.ClientInfoButton.Location = new System.Drawing.Point(199, 99);
-            this.ClientInfoButton.Margin = new System.Windows.Forms.Padding(10);
-            this.ClientInfoButton.Name = "ClientInfoButton";
-            this.ClientInfoButton.Size = new System.Drawing.Size(169, 69);
-            this.ClientInfoButton.TabIndex = 4;
-            this.ClientInfoButton.Text = "CLIENT INFO";
-            this.ClientInfoButton.UseVisualStyleBackColor = false;
-            this.ClientInfoButton.Click += new System.EventHandler(this.ClientInfoButton_Click);
+            this.AddNewTaskButton.BackColor = System.Drawing.Color.Black;
+            this.AddNewTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddNewTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddNewTaskButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewTaskButton.ForeColor = System.Drawing.Color.White;
+            this.AddNewTaskButton.Location = new System.Drawing.Point(199, 99);
+            this.AddNewTaskButton.Margin = new System.Windows.Forms.Padding(10);
+            this.AddNewTaskButton.Name = "AddNewTaskButton";
+            this.AddNewTaskButton.Size = new System.Drawing.Size(169, 69);
+            this.AddNewTaskButton.TabIndex = 4;
+            this.AddNewTaskButton.Text = "ADD NEW TASKS";
+            this.AddNewTaskButton.UseVisualStyleBackColor = false;
             // 
             // CalendarButton
             // 
@@ -535,11 +535,11 @@
             this.TableLayoutPanel1.Controls.Add(this.Button17, 2, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button16, 2, 0);
             this.TableLayoutPanel1.Controls.Add(this.Button15, 1, 4);
-            this.TableLayoutPanel1.Controls.Add(this.Button14, 0, 4);
+            this.TableLayoutPanel1.Controls.Add(this.ImportDocumentsButton, 0, 4);
             this.TableLayoutPanel1.Controls.Add(this.Button13, 1, 3);
             this.TableLayoutPanel1.Controls.Add(this.Contacts, 1, 2);
             this.TableLayoutPanel1.Controls.Add(this.Button11, 0, 3);
-            this.TableLayoutPanel1.Controls.Add(this.ClientInfoButton, 1, 1);
+            this.TableLayoutPanel1.Controls.Add(this.AddNewTaskButton, 1, 1);
             this.TableLayoutPanel1.Controls.Add(this.CalendarButton, 1, 0);
             this.TableLayoutPanel1.Controls.Add(this.CreateDocumentsButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.PrivateFootPrintButton, 0, 5);
@@ -624,11 +624,11 @@
         internal System.Windows.Forms.Button Button17;
         internal System.Windows.Forms.Button Button16;
         internal System.Windows.Forms.Button Button15;
-        internal System.Windows.Forms.Button Button14;
+        internal System.Windows.Forms.Button ImportDocumentsButton;
         internal System.Windows.Forms.Button Button13;
         internal System.Windows.Forms.Button Contacts;
         internal System.Windows.Forms.Button Button11;
-        internal System.Windows.Forms.Button ClientInfoButton;
+        internal System.Windows.Forms.Button AddNewTaskButton;
         internal System.Windows.Forms.Button CalendarButton;
         internal System.Windows.Forms.Button CreateDocumentsButton;
         internal System.Windows.Forms.Button PrivateFootPrintButton;

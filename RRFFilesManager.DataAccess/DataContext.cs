@@ -26,6 +26,8 @@ namespace RRFFilesManager.DataAccess
         public DbSet<Group> Groups { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<FileContact> FileContacts { get; set; }
+        public DbSet<DocumentFolder> DocumentFolders { get; set; }
+        public DbSet<DocumentType> DocumentTypes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
