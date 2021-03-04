@@ -34,7 +34,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         public override string GetFileName(DocumentType documentType, DateTime documentDate)
         {
-            return $"{documentDate:yyyy-MM-dd} - {documentType.Description} - From {Sender} - To {Recipient}";
+            return $"{documentDate:yyyy-MM-dd} - {documentType.Description} - From {Sender.Text} - To {Recipient.Text}";
         }
 
         private void AdditionalInfo_TextChanged(object sender, EventArgs e)

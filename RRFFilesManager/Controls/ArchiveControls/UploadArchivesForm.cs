@@ -273,7 +273,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void DoneButton_Click(object sender, EventArgs e)
         {
-            var selected = FilesGridView.SelectedRows[0].DataBoundItem as FileInfo;
+            
+            var selected = SelectedFile;
+            if (selected == null)
+                return;
             var archive = GetArchive();
             _archiveRepository.Insert(CurrentFile, archive);
 
