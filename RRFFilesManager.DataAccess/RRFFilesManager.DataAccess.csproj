@@ -193,7 +193,8 @@
     <Compile Include="Abstractions\IDisabilityInsuranceCompanyRepository.cs" />
     <Compile Include="Abstractions\IArchiveRepository.cs" />
     <Compile Include="Abstractions\IDocumentTypeRepository.cs" />
-    <Compile Include="Abstractions\IDocumentFolderRepository.cs" />
+    <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
+    <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
     <Compile Include="Abstractions\IPositionRepository.cs" />
     <Compile Include="Abstractions\IHearAboutUsRepository.cs" />
     <Compile Include="Abstractions\IFileRepository.cs" />
@@ -211,8 +212,9 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="ArchiveRepository.cs" />
     <Compile Include="DocumentTypeRepository.cs" />
+    <Compile Include="DocumentCategoryRepository.cs" />
     <Compile Include="FileRepository.cs" />
-    <Compile Include="DocumentFolderRepository.cs" />
+    <Compile Include="DocumentGroupRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />
     <Compile Include="Migrations\20210127003412_Position.designer.cs">
       <DependentUpon>20210127003412_Position.cs</DependentUpon>
@@ -252,6 +254,38 @@
     <Compile Include="Migrations\20210225053325_Archive_New_Fields.cs" />
     <Compile Include="Migrations\20210225053325_Archive_New_Fields.designer.cs">
       <DependentUpon>20210225053325_Archive_New_Fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304032359_DataCategory_Rename.cs" />
+    <Compile Include="Migrations\20210304032359_DataCategory_Rename.designer.cs">
+      <DependentUpon>20210304032359_DataCategory_Rename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304032547_DataCategory_Rename2.cs" />
+    <Compile Include="Migrations\20210304032547_DataCategory_Rename2.designer.cs">
+      <DependentUpon>20210304032547_DataCategory_Rename2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304033434_DataType.cs" />
+    <Compile Include="Migrations\20210304033434_DataType.designer.cs">
+      <DependentUpon>20210304033434_DataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304034253_DocumentGroup.cs" />
+    <Compile Include="Migrations\20210304034253_DocumentGroup.designer.cs">
+      <DependentUpon>20210304034253_DocumentGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304034900_DocumentGroup2.cs" />
+    <Compile Include="Migrations\20210304034900_DocumentGroup2.designer.cs">
+      <DependentUpon>20210304034900_DocumentGroup2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304035017_DocumentGroup3.cs" />
+    <Compile Include="Migrations\20210304035017_DocumentGroup3.designer.cs">
+      <DependentUpon>20210304035017_DocumentGroup3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304043656_DocumentType_FormEnum.cs" />
+    <Compile Include="Migrations\20210304043656_DocumentType_FormEnum.designer.cs">
+      <DependentUpon>20210304043656_DocumentType_FormEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210304061836_ArchiveNewFields.cs" />
+    <Compile Include="Migrations\20210304061836_ArchiveNewFields.designer.cs">
+      <DependentUpon>20210304061836_ArchiveNewFields.cs</DependentUpon>
     </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
@@ -325,9 +359,9 @@
     <Compile Include="TemplateRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RRFilesManager.Abstractions\RRFilesManager.Abstractions.csproj">
+    <ProjectReference Include="..\RRFilesManager.Abstractions\RRFFilesManager.Abstractions.csproj">
       <Project>{029a062a-76f4-437a-a3fd-d0a12b5ad521}</Project>
-      <Name>RRFilesManager.Abstractions</Name>
+      <Name>RRFFilesManager.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

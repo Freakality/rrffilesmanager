@@ -7,12 +7,12 @@ using System.Text;
 
 namespace RRFFilesManager.DataAccess.Abstractions
 {
-    public interface IDocumentTypeRepository
+    public interface IDocumentCategoryRepository
     { 
-        void Insert(DocumentType documentType);
-        void Update(DocumentType documentType);
+        void Insert(DocumentCategory documentType);
+        void Update(DocumentCategory documentType);
         void SoftDelete(int documentTypeId);
-        DocumentType GetById(int documentTypeId);
-        IEnumerable<DocumentType> List();
+        DocumentCategory GetById(int documentTypeId);
+        IEnumerable<DocumentCategory> List();
     }
 }

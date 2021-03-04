@@ -17,10 +17,12 @@ namespace RRFFilesManager.Abstractions
         public DateTime Created { get; set; } = DateTime.Now;
 
         public string DocumentFolder { get; set; }
+        public string DocumentCategory { get; set; }
         public string DocumentType { get; set; }
         public DateTime DocumentDate { get; set; }
         public DateTime DateRangeFrom { get; set; }
         public DateTime DateRangeTo { get; set; }
+
         public string PolicyClaimLimit { get; set; }
         public DateTime StatementPeriodFrom { get; set; }
         public DateTime StatementPeriodTo { get; set; }
@@ -30,7 +32,22 @@ namespace RRFFilesManager.Abstractions
         public string ACRemaining { get; set; }
         public string MRPaidToDate { get; set; }
         public string MRRemaining { get; set; }
+        public string HHPaidToDate { get; set; }
         public string IEAssessPdToDate { get; set; }
-        
+
+        public string Sender { get; set; }
+        public string Recipient { get; set; }
+
+        public string AdditionalInfo { get; set; }
+
+        public string BenefitType { get; set; }
+
+        public string PreparedBy { get; set; }
+
+        public string FacilityName { get; set; }
+        public string HealthcarePractitioner { get; set; }
+        public string TypeOfAssessment { get; set; }
+        public string TreatmentAmount { get; set; }
+
     }
 }

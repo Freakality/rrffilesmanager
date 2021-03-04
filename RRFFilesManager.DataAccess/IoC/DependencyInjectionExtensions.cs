@@ -34,7 +34,8 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IArchiveRepository, ArchiveRepository>();
             services.AddTransient<IGroupRepository, GroupRepository>();
             services.AddTransient<IPositionRepository, PositionRepository>();
-            services.AddTransient<IDocumentFolderRepository, DocumentFolderRepository>();
+            services.AddTransient<IDocumentGroupRepository, DocumentGroupRepository>();
+            services.AddTransient<IDocumentCategoryRepository, DocumentCategoryRepository>();
             services.AddTransient<IDocumentTypeRepository, DocumentTypeRepository>();
             return services;
         }

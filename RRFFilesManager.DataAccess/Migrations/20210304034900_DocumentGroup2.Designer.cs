@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210304034900_DocumentGroup2")]
+    partial class DocumentGroup2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,12 +34,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("ACRemaining")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("AdditionalInfo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BenefitType")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
@@ -56,20 +52,8 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("DocumentFolder")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DocumentType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FacilityName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("FileId")
                         .HasColumnType("int");
-
-                    b.Property<string>("HHPaidToDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HealthcarePractitioner")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IEAssessPdToDate")
                         .HasColumnType("nvarchar(max)");
@@ -95,15 +79,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("PolicyClaimLimit")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PreparedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Recipient")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sender")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("StatementPeriodFrom")
                         .HasColumnType("datetime2");
 
@@ -112,12 +87,6 @@ namespace RRFFilesManager.DataAccess.Migrations
 
                     b.Property<int?>("TemplateId")
                         .HasColumnType("int");
-
-                    b.Property<string>("TreatmentAmount")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TypeOfAssessment")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
@@ -429,7 +398,7 @@ namespace RRFFilesManager.DataAccess.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("DocumentGroups");
+                    b.ToTable("DocumentFolders");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.DocumentType", b =>
@@ -443,9 +412,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("DocumentCategoryID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DocumentForm")
                         .HasColumnType("int");
 
                     b.HasKey("ID");

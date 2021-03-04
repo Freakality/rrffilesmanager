@@ -6,12 +6,10 @@ using System.Text;
 
 namespace RRFFilesManager.Abstractions
 {
-    public class DocumentType
+    public class DocumentGroup
     {
         public int ID { get; set; }
         public string Description { get; set; }
-        public virtual DocumentCategory DocumentCategory { get; set; }
-        public DocumentFormEnum DocumentForm { get; set; }
         public override string ToString() => Description;
     }
 }

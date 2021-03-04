@@ -25,18 +25,40 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private Abstractions.File CurrentFile { get; set; }
         BindingList<FileInfo> UploadedFiles = new BindingList<FileInfo>();
         BindingList<Archive> Archives = new BindingList<Archive>();
-        private readonly IDocumentFolderRepository _documentFolderRepository;
+        private readonly IDocumentGroupRepository _documentGroupRepository;
+        private readonly IDocumentCategoryRepository _documentCategoryRepository;
         private readonly IDocumentTypeRepository _documentTypeRepository;
         private readonly IArchiveRepository _archiveRepository;
+
+        private DocumentFormUserControl DocumentForm => DocumentFormContent.Controls.Count > 0 ? DocumentFormContent.Controls[0] as DocumentFormUserControl : null;
+        StandardBenefitsStatementUserControl StandardBenefitsStatementUserControl;
+        AdditionalInformationUserControl AdditionalInformationUserControl;
+        SenderRecipientUserControl SenderRecipientUserControl;
+        BenefitTypeUserControl BenefitTypeUserControl;
+        PreparedByUserControl PreparedByUserControl;
+        MedicalRecordUserControl MedicalRecordUserControl;
+        MedicalRecordWithAmountUserControl MedicalRecordWithAmountUserControl;
+        BenefitsPaidToDateUserControl BenefitsPaidToDateUserControl;
+
+        public FileInfo SelectedFile => FilesGridView.SelectedRows.Count > 0 ? FilesGridView.SelectedRows?[0]?.DataBoundItem as FileInfo : null;
+
         public UploadArchivesForm()
         {
-            _documentFolderRepository = Program.GetService<IDocumentFolderRepository>();
+            _documentGroupRepository = Program.GetService<IDocumentGroupRepository>();
+            _documentCategoryRepository = Program.GetService<IDocumentCategoryRepository>();
             _documentTypeRepository = Program.GetService<IDocumentTypeRepository>();
             _archiveRepository = Program.GetService<IArchiveRepository>();
             InitializeComponent();
 
-            Utils.SetComboBoxDataSource(DocumentFolder, _documentFolderRepository.List());
-
+            Utils.SetComboBoxDataSource(DocumentGroup, _documentGroupRepository.List());
+            StandardBenefitsStatementUserControl = new StandardBenefitsStatementUserControl();
+            AdditionalInformationUserControl = new AdditionalInformationUserControl();
+            SenderRecipientUserControl = new SenderRecipientUserControl();
+            BenefitTypeUserControl = new BenefitTypeUserControl();
+            PreparedByUserControl = new PreparedByUserControl();
+            MedicalRecordUserControl = new MedicalRecordUserControl();
+            MedicalRecordWithAmountUserControl = new MedicalRecordWithAmountUserControl();
+            BenefitsPaidToDateUserControl = new BenefitsPaidToDateUserControl();
 
             axAcroPDF.setShowToolbar(false);
             axAcroPDF.setShowScrollbars(true);
@@ -269,10 +291,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var path = selected.FullName;
             var extension = Path.GetExtension(path);
             var newDirectory = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], $"{CurrentFile.FileNumber}");
-            if (!string.IsNullOrWhiteSpace(DocumentFolder.Text))
-                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentFolder.Text, ""));
-            if (!string.IsNullOrWhiteSpace(DocumentType.Text))
-                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentType.Text, ""));
+            if (!string.IsNullOrWhiteSpace(DocumentGroup.Text))
+                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentGroup.Text, ""));
+            if (!string.IsNullOrWhiteSpace(DocumentCategory.Text))
+                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentCategory.Text, ""));
             
 
             if (!Directory.Exists(newDirectory))
@@ -284,49 +306,32 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.File = CurrentFile;
             archive.Path = newPath;
             archive.Name = newFileName;
-            archive.DocumentFolder = DocumentFolder.Text;
-            archive.DocumentType = DocumentType.Text;
+            archive.DocumentFolder = DocumentGroup.Text;
+            archive.DocumentCategory = DocumentCategory.Text;
             archive.DocumentDate = DocumentDate.Value;
             archive.DateRangeFrom = DateRangeFrom.Value;
             archive.DateRangeTo = DateRangeTo.Value;
-            archive.PolicyClaimLimit = PolicyClaimLimit.Text;
-            archive.StatementPeriodFrom = StatementPeriodFrom.Value;
-            archive.StatementPeriodTo = StatementPeriodTo.Value;
-            archive.MRACPaidToDate = MRACPaidToDate.Text;
-            archive.MRACRemaining = MRACRemaining.Text;
-            archive.ACPaidToDate = ACPaidToDate.Text;
-            archive.ACRemaining = ACRemaining.Text;
-            archive.MRPaidToDate = MRPaidToDate.Text;
-            archive.MRRemaining = MRRemaining.Text;
-            archive.IEAssessPdToDate = IEAssessPdToDate.Text;
+            DocumentForm.SetArchive(archive);
             return archive;
         }
 
         private void ClearForm()
         {
-            DocumentFolder.ResetText();
-            DocumentType.ResetText();
+            DocumentGroup.ResetText();
+            DocumentCategory.ResetText();
             DocumentDate.ResetText();
             DateRangeFrom.ResetText();
             DateRangeTo.ResetText();
-            PolicyClaimLimit.ResetText();
-            StatementPeriodFrom.ResetText();
-            StatementPeriodTo.ResetText();
-            MRACPaidToDate.ResetText();
-            MRACRemaining.ResetText();
-            ACPaidToDate.ResetText();
-            ACRemaining.ResetText();
-            MRPaidToDate.ResetText();
-            MRRemaining.ResetText();
-            IEAssessPdToDate.ResetText();
+            DocumentForm.ClearForm();
+            
         }
 
         private void DocumentFolder_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var documentFolder = DocumentFolder.SelectedItem as DocumentFolder;
+            var documentFolder = DocumentGroup.SelectedItem as DocumentGroup;
             if (documentFolder == null)
                 return;
-            Utils.SetComboBoxDataSource(DocumentType, _documentTypeRepository.List().Where(s => s.DocumentFolder.ID == documentFolder.ID).ToList());
+            Utils.SetComboBoxDataSource(DocumentCategory, _documentCategoryRepository.List().Where(s => s.DocumentGroup.ID == documentFolder.ID).ToList());
         }
 
         private void ArchivesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -357,6 +362,77 @@ namespace RRFFilesManager.Controls.ArchiveControls
             if (selected == null)
                 return;
             FilePreview(selected.Path);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DocumentCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var documentCategory = DocumentCategory.SelectedItem as DocumentCategory;
+            if (documentCategory == null)
+                return;
+            Utils.SetComboBoxDataSource(DocumentType, _documentTypeRepository.List().Where(s => s.DocumentCategory.ID == documentCategory.ID).ToList());
+        }
+
+        private void DocumentType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var documentType = DocumentType.SelectedItem as DocumentType;
+            if (documentType == null)
+            {
+                Utils.SetContent(DocumentFormContent, null);
+                return;
+            }
+            
+
+            if (documentType.DocumentForm == DocumentFormEnum.AdditionalInformation)
+            {
+                Utils.SetContent(DocumentFormContent, AdditionalInformationUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.StandardBenefitsStatement)
+            {
+                Utils.SetContent(DocumentFormContent, StandardBenefitsStatementUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.SenderRecipient)
+            {
+                Utils.SetContent(DocumentFormContent, SenderRecipientUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.BenefitType)
+            {
+                Utils.SetContent(DocumentFormContent, BenefitTypeUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.PreparedBy)
+            {
+                Utils.SetContent(DocumentFormContent, PreparedByUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.MedicalRecord)
+            {
+                Utils.SetContent(DocumentFormContent, MedicalRecordUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.MedicalRecordWithAmount)
+            {
+                Utils.SetContent(DocumentFormContent, MedicalRecordWithAmountUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.BenefitsPaidToDate)
+            {
+                Utils.SetContent(DocumentFormContent, BenefitsPaidToDateUserControl);
+            }
+
+            if (DocumentForm == null || SelectedFile == null)
+                return;
+            DocumentForm?.SetDocumentType(documentType);
+            DocumentForm?.SetDocumentDate(DocumentDate.Value);
+            //DocumentForm?.SetDocumentExtension(SelectedFile?.Extension);
+            DocumentForm?.SetFileNameControl(DocumentName);
+            DocumentForm.OnChange();
+
         }
     }
 }

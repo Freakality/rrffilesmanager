@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRFFilesManager", "RRFFilesManager\RRFFilesManager.csproj", "{00386A31-B7CC-4232-8F5E-F42804E1FF8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRFilesManager.Abstractions", "RRFilesManager.Abstractions\RRFilesManager.Abstractions.csproj", "{029A062A-76F4-437A-A3FD-D0A12B5AD521}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RRFFilesManager.Abstractions", "RRFilesManager.Abstractions\RRFFilesManager.Abstractions.csproj", "{029A062A-76F4-437A-A3FD-D0A12B5AD521}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRFFilesManager.DataAccess", "RRFFilesManager.DataAccess\RRFFilesManager.DataAccess.csproj", "{79F155FD-87C5-40A4-8A2F-C9974058B4CB}"
 EndProject
