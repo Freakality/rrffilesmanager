@@ -22,7 +22,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             FacilityName.ResetText();
             HealthcarePractitioner.ResetText();
-            AdditionalInfo.ResetText();
             TypeOfAssessment.ResetText();
             TreatmentAmount.ResetText();
         }
@@ -31,14 +30,13 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             archive.FacilityName = FacilityName.Text;
             archive.HealthcarePractitioner = HealthcarePractitioner.Text;
-            archive.AdditionalInfo = AdditionalInfo.Text;
             archive.TypeOfAssessment = TypeOfAssessment.Text;
             archive.TreatmentAmount = TreatmentAmount.Text;
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime documentDate)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
         {
-            var filename = $"{documentDate:yyyy-MM-dd} - {documentType.Description}";
+            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)}";
             if (!string.IsNullOrEmpty(FacilityName.Text))
                 filename += $" - {FacilityName.Text}";
             else
@@ -70,6 +68,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void TreatmentAmount_TextChanged(object sender, EventArgs e)
         {
             OnChange();
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -32,13 +32,13 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.IEAssessPdToDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.MRPaidToDate = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ACPaidToDate = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.MRACPaidToDate = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.MRACPaidToDate = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ACPaidToDate = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.MRPaidToDate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.HHPaidToDate = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8.SuspendLayout();
@@ -96,53 +96,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label14.Text = "IE Assess Pd To Date";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // MRPaidToDate
+            // panel2
             // 
-            this.MRPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MRPaidToDate.Location = new System.Drawing.Point(153, 55);
-            this.MRPaidToDate.Name = "MRPaidToDate";
-            this.MRPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.MRPaidToDate.TabIndex = 18;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(144, 26);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "M/R Paid To Date";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // ACPaidToDate
-            // 
-            this.ACPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ACPaidToDate.Location = new System.Drawing.Point(153, 29);
-            this.ACPaidToDate.Name = "ACPaidToDate";
-            this.ACPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.ACPaidToDate.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 26);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 26);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "AC Paid To Date";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // MRACPaidToDate
-            // 
-            this.MRACPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MRACPaidToDate.Location = new System.Drawing.Point(153, 3);
-            this.MRACPaidToDate.Name = "MRACPaidToDate";
-            this.MRACPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.MRACPaidToDate.TabIndex = 11;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(584, 104);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(284, 26);
+            this.panel2.TabIndex = 23;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label7
             // 
@@ -156,14 +118,53 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label7.Text = "MR/AC Paid To Date";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // panel2
+            // MRACPaidToDate
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(584, 104);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(284, 26);
-            this.panel2.TabIndex = 23;
+            this.MRACPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MRACPaidToDate.Location = new System.Drawing.Point(153, 3);
+            this.MRACPaidToDate.Name = "MRACPaidToDate";
+            this.MRACPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.MRACPaidToDate.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 26);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "AC Paid To Date";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // ACPaidToDate
+            // 
+            this.ACPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ACPaidToDate.Location = new System.Drawing.Point(153, 29);
+            this.ACPaidToDate.Name = "ACPaidToDate";
+            this.ACPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.ACPaidToDate.TabIndex = 14;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(144, 26);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "M/R Paid To Date";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // MRPaidToDate
+            // 
+            this.MRPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MRPaidToDate.Location = new System.Drawing.Point(153, 55);
+            this.MRPaidToDate.Name = "MRPaidToDate";
+            this.MRPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.MRPaidToDate.TabIndex = 18;
             // 
             // label1
             // 

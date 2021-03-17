@@ -24,7 +24,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
     {
         private Abstractions.File CurrentFile { get; set; }
         BindingList<FileInfo> UploadedFiles = new BindingList<FileInfo>();
-        BindingList<Archive> Archives = new BindingList<Archive>();
+        BindingList<Models.Archive> Archives = new BindingList<Models.Archive>();
         private readonly IDocumentGroupRepository _documentGroupRepository;
         private readonly IDocumentCategoryRepository _documentCategoryRepository;
         private readonly IDocumentTypeRepository _documentTypeRepository;
@@ -82,6 +82,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             //this.printPreviewControl.Document = new System.Drawing.Printing.PrintDocument();
             //this.printPreviewControl.Document.DocumentName = "C:\\Users\\felix\\Downloads\\327485 (1).pdf";
 
+            DateRangeFrom_ValueChanged(null, null);
+
         }
 
         void UploadArchivesForm_DragEnter(object sender, DragEventArgs e)
@@ -122,6 +124,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
                     // path doesn't exist.
                 }
             }
+            FilesGridView_CellClick(null, null);
         }
 
 
@@ -143,6 +146,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void FilesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            ClearForm();
             var path = FilesGridView?.SelectedRows?[0]?.Cells?["FullName"]?.Value.ToString();
             //this.printPreviewControl.Document = new System.Drawing.Printing.PrintDocument();
             //this.printPreviewControl.Document.DocumentName = path;
@@ -280,9 +284,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var archive = GetArchive();
             _archiveRepository.Insert(CurrentFile, archive);
 
-            Archives.Add(archive);
+            Archives.Add(new Models.Archive(archive));
             UploadedFiles.Remove(selected);
             ClearForm();
+            FilesGridView_CellClick(null, null);
         }
 
         public Archive GetArchive()
@@ -321,11 +326,26 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void ClearForm()
         {
             DocumentGroup.ResetText();
+            DocumentGroup.SelectedItem = null;
             DocumentCategory.ResetText();
+            DocumentCategory.SelectedItem = null;
+            
             DocumentDate.ResetText();
+            DocumentDate.Value = DateTime.Now;
+            DocumentDate.Checked = true;
+
             DateRangeFrom.ResetText();
+            DateRangeFrom.Value = DateTime.Now;
+            DateRangeFrom.Checked = false;
+
             DateRangeTo.ResetText();
-            DocumentForm.ClearForm();
+            DateRangeTo.Value = DateTime.Now;
+            DateRangeTo.Checked = false;
+
+            DocumentName.ResetText();
+            DocumentType.ResetText();
+            DocumentType.SelectedItem = null;
+            DocumentForm?.ClearForm();
             
         }
 
@@ -427,15 +447,35 @@ namespace RRFFilesManager.Controls.ArchiveControls
             {
                 Utils.SetContent(DocumentFormContent, BenefitsPaidToDateUserControl);
             }
+            OnChange();
+        }
 
+        private void DocumentDate_ValueChanged(object sender, EventArgs e)
+        {
+            OnChange();
+        }
+
+        private void DateRangeFrom_ValueChanged(object sender, EventArgs e)
+        {
+            DateRangeTo.Checked = DateRangeFrom.Checked;
+            OnChange();
+        }
+
+        private void DateRangeTo_ValueChanged(object sender, EventArgs e)
+        {
+            DateRangeFrom.Checked = DateRangeTo.Checked;
+            OnChange();
+        }
+
+        private void OnChange()
+        {
+            var documentType = DocumentType.SelectedItem as DocumentType;
             if (DocumentForm == null || SelectedFile == null)
                 return;
-            DocumentForm?.SetDocumentType(documentType);
-            DocumentForm?.SetDocumentDate(DocumentDate.Value);
+            DocumentForm?.SetDocumentParameters(documentType, DocumentDate.ToNullableValue(), DateRangeFrom.ToNullableValue(), DateRangeTo.ToNullableValue());
             //DocumentForm?.SetDocumentExtension(SelectedFile?.Extension);
             DocumentForm?.SetFileNameControl(DocumentName);
-            DocumentForm.OnChange();
-
+            DocumentForm?.OnChange();
         }
     }
 }

@@ -287,6 +287,7 @@
     <Compile Include="Controls\ArchiveControls\MedicalRecordWithAmountUserControl.Designer.cs">
       <DependentUpon>MedicalRecordWithAmountUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ArchiveControls\Models\Archive.cs" />
     <Compile Include="Controls\ArchiveControls\PreparedByUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -466,6 +467,7 @@
     <Compile Include="Logic\ArchiveManager.cs" />
     <Compile Include="Logic\CNSignOn.cs" />
     <Compile Include="Logic\Excel.cs" />
+    <Compile Include="Logic\Extensions.cs" />
     <Compile Include="Logic\FileManager.cs" />
     <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />

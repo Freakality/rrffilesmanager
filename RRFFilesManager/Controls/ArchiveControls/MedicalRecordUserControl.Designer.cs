@@ -30,8 +30,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void InitializeComponent()
         {
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.AdditionalInfo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.FacilityName = new System.Windows.Forms.TextBox();
@@ -46,8 +44,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.AdditionalInfo, 1, 2);
-            this.tableLayoutPanel8.Controls.Add(this.label9, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.FacilityName, 1, 0);
@@ -64,27 +60,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(868, 130);
             this.tableLayoutPanel8.TabIndex = 5;
-            // 
-            // AdditionalInfo
-            // 
-            this.AdditionalInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdditionalInfo.Location = new System.Drawing.Point(153, 55);
-            this.AdditionalInfo.Name = "AdditionalInfo";
-            this.AdditionalInfo.Size = new System.Drawing.Size(278, 20);
-            this.AdditionalInfo.TabIndex = 9;
-            this.AdditionalInfo.TextChanged += new System.EventHandler(this.AdditionalInfo_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 26);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Additional Info";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
             // 
             // label1
             // 
@@ -143,8 +119,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        internal System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox AdditionalInfo;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox FacilityName;

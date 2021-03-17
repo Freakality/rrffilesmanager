@@ -15,7 +15,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             
         }
         DocumentType DocumentType { get; set; }
-        DateTime DocumentDate { get; set; }
+        DateTime? DocumentDate { get; set; }
+        DateTime? DocumentDateFrom { get; set; }
+        DateTime? DocumentDateTo { get; set; }
         //string DocumentExtension { get; set; }
         Control FileNameControl { get; set; }
         public virtual void ClearForm()
@@ -23,21 +25,22 @@ namespace RRFFilesManager.Controls.ArchiveControls
         }
         public virtual string GetFileName()
         {
-            return GetFileName(DocumentType, DocumentDate);
+            return GetFileName(DocumentType, DocumentDate, DocumentDateFrom, DocumentDateTo);
         }
 
-        public virtual string GetFileName(DocumentType documentType, DateTime documentDate)
+        public virtual string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
         {
-            return $"{documentDate:yyyy-MM-dd} - {documentType.Description}";
+            if(documentDate != null)
+                return $"{documentDate:yyyy-MM-dd} - {documentType.Description}";
+            return $"{documentDateFrom:yyyy-MM-dd} - {documentDateTo:yyyy-MM-dd} - {documentType.Description}";
         }
 
-        public virtual void SetDocumentType(DocumentType documentType)
+        public virtual void SetDocumentParameters(DocumentType documentType, DateTime? documentDate, DateTime? from, DateTime? to)
         {
             DocumentType = documentType;
-        }
-        public virtual void SetDocumentDate(DateTime documentDate)
-        {
             DocumentDate = documentDate;
+            DocumentDateFrom = from;
+            DocumentDateTo = to;
         }
 
         //public void SetDocumentExtension(string documentExtension)

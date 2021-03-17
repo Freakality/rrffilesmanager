@@ -56,6 +56,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(868, 130);
             this.tableLayoutPanel8.TabIndex = 4;
+            this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
             // 
             // label9
             // 

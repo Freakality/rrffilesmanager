@@ -32,14 +32,17 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.AdditionalInfo = AdditionalInfo.Text;
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime documentDate)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
         {
-            return $"{documentDate:yyyy-MM-dd} - {documentType.Description} - From {Sender.Text} - To {Recipient.Text}";
+            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)} - From {Sender.Text} - To {Recipient.Text}";
+            if (!string.IsNullOrWhiteSpace(AdditionalInfo.Text))
+                filename += $" - {AdditionalInfo.Text}";
+            return filename;
         }
 
         private void AdditionalInfo_TextChanged(object sender, EventArgs e)
         {
-
+            OnChange();
         }
 
         private void Sender_TextChanged(object sender, EventArgs e)
@@ -50,6 +53,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void Recipient_TextChanged(object sender, EventArgs e)
         {
             OnChange();
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

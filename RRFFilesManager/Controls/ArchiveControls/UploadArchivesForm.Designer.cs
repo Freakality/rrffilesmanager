@@ -68,11 +68,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.ArchivesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
-            this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
             groupBox1 = new System.Windows.Forms.GroupBox();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
@@ -311,12 +311,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // DocumentDate
             // 
-            this.DocumentDate.CustomFormat = "yyyy-MM-dd";
+            this.DocumentDate.CustomFormat = " ";
             this.DocumentDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DocumentDate.Location = new System.Drawing.Point(587, 3);
             this.DocumentDate.Name = "DocumentDate";
+            this.DocumentDate.ShowCheckBox = true;
             this.DocumentDate.Size = new System.Drawing.Size(278, 20);
             this.DocumentDate.TabIndex = 4;
+            this.DocumentDate.Value = new System.DateTime(2021, 3, 16, 0, 0, 0, 0);
+            this.DocumentDate.ValueChanged += new System.EventHandler(this.DocumentDate_ValueChanged);
             // 
             // tableLayoutPanel6
             // 
@@ -337,21 +340,29 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // DateRangeTo
             // 
-            this.DateRangeTo.CustomFormat = "yyyy-MM-dd";
+            this.DateRangeTo.Checked = false;
+            this.DateRangeTo.CustomFormat = " ";
             this.DateRangeTo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DateRangeTo.Location = new System.Drawing.Point(145, 3);
             this.DateRangeTo.Name = "DateRangeTo";
+            this.DateRangeTo.ShowCheckBox = true;
             this.DateRangeTo.Size = new System.Drawing.Size(136, 20);
             this.DateRangeTo.TabIndex = 6;
+            this.DateRangeTo.Value = new System.DateTime(2021, 3, 16, 0, 0, 0, 0);
+            this.DateRangeTo.ValueChanged += new System.EventHandler(this.DateRangeTo_ValueChanged);
             // 
             // DateRangeFrom
             // 
-            this.DateRangeFrom.CustomFormat = "yyyy-MM-dd";
+            this.DateRangeFrom.Checked = false;
+            this.DateRangeFrom.CustomFormat = " ";
             this.DateRangeFrom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DateRangeFrom.Location = new System.Drawing.Point(3, 3);
             this.DateRangeFrom.Name = "DateRangeFrom";
+            this.DateRangeFrom.ShowCheckBox = true;
             this.DateRangeFrom.Size = new System.Drawing.Size(136, 20);
             this.DateRangeFrom.TabIndex = 5;
+            this.DateRangeFrom.Value = new System.DateTime(2021, 3, 16, 0, 0, 0, 0);
+            this.DateRangeFrom.ValueChanged += new System.EventHandler(this.DateRangeFrom_ValueChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -592,15 +603,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
-            // previewHandlerHost1
-            // 
-            this.previewHandlerHost1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewHandlerHost1.Location = new System.Drawing.Point(0, 0);
-            this.previewHandlerHost1.Name = "previewHandlerHost1";
-            this.previewHandlerHost1.Size = new System.Drawing.Size(465, 665);
-            this.previewHandlerHost1.TabIndex = 4;
-            this.previewHandlerHost1.Text = "previewHandlerHost2";
-            // 
             // richTextBox
             // 
             this.richTextBox.BackColor = System.Drawing.Color.White;
@@ -641,6 +643,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Multiselect = true;
+            // 
+            // previewHandlerHost1
+            // 
+            this.previewHandlerHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewHandlerHost1.Location = new System.Drawing.Point(0, 0);
+            this.previewHandlerHost1.Name = "previewHandlerHost1";
+            this.previewHandlerHost1.Size = new System.Drawing.Size(465, 665);
+            this.previewHandlerHost1.TabIndex = 4;
+            this.previewHandlerHost1.Text = "previewHandlerHost2";
             // 
             // UploadArchivesForm
             // 

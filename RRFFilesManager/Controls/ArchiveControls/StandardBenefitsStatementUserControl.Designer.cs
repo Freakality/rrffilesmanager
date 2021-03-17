@@ -30,8 +30,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void InitializeComponent()
         {
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.IEAssessPdToDate = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.HHPaidToDate = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.MRRemaining = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.MRPaidToDate = new System.Windows.Forms.TextBox();
@@ -50,8 +50,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.PolicyClaimLimit = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.HHPaidToDate = new System.Windows.Forms.TextBox();
+            this.IEAssessPdToDate = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
@@ -97,25 +97,26 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel8.TabIndex = 3;
             this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
             // 
-            // IEAssessPdToDate
+            // HHPaidToDate
             // 
-            this.IEAssessPdToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IEAssessPdToDate.Location = new System.Drawing.Point(587, 107);
-            this.IEAssessPdToDate.Name = "IEAssessPdToDate";
-            this.IEAssessPdToDate.Size = new System.Drawing.Size(278, 20);
-            this.IEAssessPdToDate.TabIndex = 22;
+            this.HHPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HHPaidToDate.Location = new System.Drawing.Point(153, 107);
+            this.HHPaidToDate.Name = "HHPaidToDate";
+            this.HHPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.HHPaidToDate.TabIndex = 26;
+            this.HHPaidToDate.TextChanged += new System.EventHandler(this.HHPaidToDate_TextChanged);
             // 
-            // label14
+            // label1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(437, 104);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(144, 26);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "IE Assess Pd To Date";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 26);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "HH Paid To Date";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // MRRemaining
             // 
@@ -304,26 +305,27 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PolicyClaimLimit.Size = new System.Drawing.Size(278, 20);
             this.PolicyClaimLimit.TabIndex = 9;
             // 
-            // label1
+            // IEAssessPdToDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 26);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "HH Paid To Date";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.IEAssessPdToDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IEAssessPdToDate.Location = new System.Drawing.Point(587, 107);
+            this.IEAssessPdToDate.Name = "IEAssessPdToDate";
+            this.IEAssessPdToDate.Size = new System.Drawing.Size(278, 20);
+            this.IEAssessPdToDate.TabIndex = 22;
+            this.IEAssessPdToDate.TextChanged += new System.EventHandler(this.IEAssessPdToDate_TextChanged);
             // 
-            // HHPaidToDate
+            // label14
             // 
-            this.HHPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HHPaidToDate.Location = new System.Drawing.Point(153, 107);
-            this.HHPaidToDate.Name = "HHPaidToDate";
-            this.HHPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.HHPaidToDate.TabIndex = 26;
-            this.HHPaidToDate.TextChanged += new System.EventHandler(this.HHPaidToDate_TextChanged);
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(437, 104);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(144, 26);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "IE Assess Pd To Date";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // StandardBenefitsStatementUserControl
             // 

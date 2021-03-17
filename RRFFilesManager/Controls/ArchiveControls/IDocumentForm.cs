@@ -11,6 +11,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
     {
         void SetArchive(Archive archive);
         void ClearForm();
-        string GetFileName(DocumentType documentType, DateTime documentDate);
+        string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null);
     }
 }

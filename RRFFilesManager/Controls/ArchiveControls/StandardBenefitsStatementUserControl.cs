@@ -57,9 +57,19 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime documentDate)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
         {
-            return $"{documentDate:yyyy-MM-dd} - {documentType.Description}";
+            return $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)}";
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IEAssessPdToDate_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
