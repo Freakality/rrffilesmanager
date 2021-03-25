@@ -23,7 +23,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             AdditionalInfo.ResetText();
         }
 
-        public override void SetArchive(Archive archive)
+        public override void FillArchiveInfo(Archive archive)
         {
             archive.AdditionalInfo = AdditionalInfo.Text;
         }
@@ -43,9 +43,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)}";
+            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
             if (!string.IsNullOrWhiteSpace(AdditionalInfo.Text))
                 filename += $" - {AdditionalInfo.Text}";
             return filename;

@@ -160,17 +160,17 @@ namespace RRFFilesManager.IntakeForm
         {
             var template = ((Abstractions.Template)TemplateName.SelectedItem);
             if (Document == null)
-                Document = _archiveManager.CreateAndAddArchive(Home.IntakeForm.Intake.File, template);
+                Document = _archiveManager.CreateAndAddArchiveFromTemplate(Home.IntakeForm.Intake.File, template);
             else if(RefillCYADocument)
-                _archiveManager.UpdateArchive(Document);
+                _archiveManager.UpdateArchiveFromTemplate(Document);
         }
 
         private void CreateOrUpdateWorkbook()
         {
             if (Workbook == null)
-                Workbook = _archiveManager.CreateAndAddArchive(Home.IntakeForm.Intake.File);
+                Workbook = _archiveManager.CreateAndAddArchiveFromTemplate(Home.IntakeForm.Intake.File);
             else
-                _archiveManager.UpdateArchive(Workbook);
+                _archiveManager.UpdateArchiveFromTemplate(Workbook);
         }
 
 

@@ -28,7 +28,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private readonly IDocumentGroupRepository _documentGroupRepository;
         private readonly IDocumentCategoryRepository _documentCategoryRepository;
         private readonly IDocumentTypeRepository _documentTypeRepository;
-        private readonly IArchiveRepository _archiveRepository;
+        private readonly ArchiveManager _archiveManager;
+        private readonly IUploadArchivesSettingsRepository _uploadArchivesSettingsRepository;
+        private UploadArchivesSettings UploadArchivesSettings { get; set; }
 
         private DocumentFormUserControl DocumentForm => DocumentFormContent.Controls.Count > 0 ? DocumentFormContent.Controls[0] as DocumentFormUserControl : null;
         StandardBenefitsStatementUserControl StandardBenefitsStatementUserControl;
@@ -39,6 +41,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
         MedicalRecordUserControl MedicalRecordUserControl;
         MedicalRecordWithAmountUserControl MedicalRecordWithAmountUserControl;
         BenefitsPaidToDateUserControl BenefitsPaidToDateUserControl;
+        NameOfPartyUserControl NameOfPartyUserControl;
+        NameUserControl NameUserControl;
+        NameAndTypeOfPartyUserControl NameAndTypeOfPartyUserControl;
+        NameAndTypeOfPartyAndTypeOfMotionUserControl NameAndTypeOfPartyAndTypeOfMotionUserControl;
+        NameOfOrganizationUserControl NameOfOrganizationUserControl;
+        EmptyUserControl EmptyUserControl;
 
         public FileInfo SelectedFile => FilesGridView.SelectedRows.Count > 0 ? FilesGridView.SelectedRows?[0]?.DataBoundItem as FileInfo : null;
 
@@ -47,8 +55,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             _documentGroupRepository = Program.GetService<IDocumentGroupRepository>();
             _documentCategoryRepository = Program.GetService<IDocumentCategoryRepository>();
             _documentTypeRepository = Program.GetService<IDocumentTypeRepository>();
-            _archiveRepository = Program.GetService<IArchiveRepository>();
+            _archiveManager = new ArchiveManager();
+            _uploadArchivesSettingsRepository = Program.GetService<IUploadArchivesSettingsRepository>();
             InitializeComponent();
+            
 
             Utils.SetComboBoxDataSource(DocumentGroup, _documentGroupRepository.List());
             StandardBenefitsStatementUserControl = new StandardBenefitsStatementUserControl();
@@ -59,6 +69,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             MedicalRecordUserControl = new MedicalRecordUserControl();
             MedicalRecordWithAmountUserControl = new MedicalRecordWithAmountUserControl();
             BenefitsPaidToDateUserControl = new BenefitsPaidToDateUserControl();
+            NameOfPartyUserControl = new NameOfPartyUserControl();
+            NameUserControl = new NameUserControl();
+            NameAndTypeOfPartyUserControl = new NameAndTypeOfPartyUserControl();
+            NameAndTypeOfPartyAndTypeOfMotionUserControl = new NameAndTypeOfPartyAndTypeOfMotionUserControl();
+            NameOfOrganizationUserControl = new NameOfOrganizationUserControl();
+            EmptyUserControl = new EmptyUserControl();
 
             axAcroPDF.setShowToolbar(false);
             axAcroPDF.setShowScrollbars(true);
@@ -77,13 +93,34 @@ namespace RRFFilesManager.Controls.ArchiveControls
             ArchivesGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ArchivesGridView.MultiSelect = false;
             ArchivesGridView.ReadOnly = true;
+            AddButtonToGridView(ArchivesGridView, "Undo");
             ArchivesGridView.DataSource = Archives;
 
             //this.printPreviewControl.Document = new System.Drawing.Printing.PrintDocument();
             //this.printPreviewControl.Document.DocumentName = "C:\\Users\\felix\\Downloads\\327485 (1).pdf";
 
             DateRangeFrom_ValueChanged(null, null);
+            InitializeSettings();
+        }
 
+        private void AddButtonToGridView(DataGridView GridView, string name, string text = null)
+        {
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Name = name;
+            editButtonColumn.Text = text ?? name;
+            editButtonColumn.UseColumnTextForButtonValue = true;
+            int columnIndex = 0;
+            if (GridView.Columns[name] == null)
+            {
+                GridView.Columns.Insert(columnIndex, editButtonColumn);
+            }
+        }
+        private void InitializeSettings()
+        {
+            UploadedFiles.Clear();
+            UploadArchivesSettings = _uploadArchivesSettingsRepository.Get();
+            if (UploadArchivesSettings?.InputFolders != null)
+                AddFiles(UploadArchivesSettings?.InputFolders?.Select(s => s.Path).ToArray());
         }
 
         void UploadArchivesForm_DragEnter(object sender, DragEventArgs e)
@@ -110,7 +147,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
                 }
                 else if (Directory.Exists(path))
                 {
-                    var filesPath = Directory.GetFiles(path);
+                    
+                    var filesPath = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
                     foreach (string filePath in filesPath)
                     {
                         //if (UploadedFiles.Any(s => s.FullName == filePath))
@@ -147,6 +185,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void FilesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ClearForm();
+            if (FilesGridView?.SelectedRows?.Count == 0)
+                return;
             var path = FilesGridView?.SelectedRows?[0]?.Cells?["FullName"]?.Value.ToString();
             //this.printPreviewControl.Document = new System.Drawing.Printing.PrintDocument();
             //this.printPreviewControl.Document.DocumentName = path;
@@ -277,49 +317,62 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void DoneButton_Click(object sender, EventArgs e)
         {
-            
+            if (CurrentFile == null)
+            {
+                MessageBox.Show("File can not be null");
+                return;
+            }
             var selected = SelectedFile;
             if (selected == null)
                 return;
-            var archive = GetArchive();
-            _archiveRepository.Insert(CurrentFile, archive);
-
-            Archives.Add(new Models.Archive(archive));
-            UploadedFiles.Remove(selected);
+            ProcessFile(selected);
             ClearForm();
             FilesGridView_CellClick(null, null);
         }
 
-        public Archive GetArchive()
+        private void ProcessFile(FileInfo selected)
         {
-            string regexSearch = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
-            Regex r = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
+            var archive = GetArchive();
+            var extension = Path.GetExtension(archive.Path);
+            var newFileName = _archiveManager.EscapeText($"{DocumentName.Text}{extension}");
+            _archiveManager.Insert(CurrentFile, archive, newFileName);
+            Archives.Add(new Models.Archive(archive));
+            MoveArchiveToOutputFolder(archive);
+            UploadedFiles.Remove(selected);
+        }
 
+        private void MoveArchiveToOutputFolder(Archive archive)
+        {
+            if (string.IsNullOrWhiteSpace(UploadArchivesSettings.OutputFolder))
+                return;
             var selected = FilesGridView.SelectedRows[0].DataBoundItem as FileInfo;
             var path = selected.FullName;
-            var extension = Path.GetExtension(path);
-            var newDirectory = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], $"{CurrentFile.FileNumber}");
-            if (!string.IsNullOrWhiteSpace(DocumentGroup.Text))
-                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentGroup.Text, ""));
-            if (!string.IsNullOrWhiteSpace(DocumentCategory.Text))
-                newDirectory = Path.Combine(newDirectory, r.Replace(DocumentCategory.Text, ""));
+            var archiveFileName = Path.GetFileName(path);
+            var destFileName = Path.Combine(UploadArchivesSettings.OutputFolder, archiveFileName);
+            try
+            {
+                System.IO.File.Move(path, destFileName);
+            }
+            catch { }
             
+        }
 
-            if (!Directory.Exists(newDirectory))
-                Directory.CreateDirectory(newDirectory);
-            var newFileName = $"{r.Replace(DocumentName.Text, "")}{extension}";
-            var newPath = Path.Combine(newDirectory, newFileName);
-            System.IO.File.Copy(path, newPath, true);
+        public Archive GetArchive()
+        {
+            var selected = FilesGridView.SelectedRows[0].DataBoundItem as FileInfo;
+            var path = selected.FullName;
+            var fileName = System.IO.Path.GetFileName(selected.FullName);
             var archive = new Archive();
             archive.File = CurrentFile;
-            archive.Path = newPath;
-            archive.Name = newFileName;
+            archive.OriginalPath = path;
+            archive.Path = path;
+            archive.Name = fileName;
             archive.DocumentFolder = DocumentGroup.Text;
             archive.DocumentCategory = DocumentCategory.Text;
             archive.DocumentDate = DocumentDate.Value;
             archive.DateRangeFrom = DateRangeFrom.Value;
             archive.DateRangeTo = DateRangeTo.Value;
-            DocumentForm.SetArchive(archive);
+            DocumentForm.FillArchiveInfo(archive);
             return archive;
         }
 
@@ -381,10 +434,26 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void ArchivesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var selected = ArchivesGridView.SelectedRows[0].DataBoundItem as Archive;
+            var selected = ArchivesGridView.SelectedRows[0].DataBoundItem as Models.Archive;
             if (selected == null)
                 return;
+            if (e.ColumnIndex == ArchivesGridView.Columns["Undo"].Index)
+            {
+                UndoProcessedArchive(selected);
+                return;
+            }
             FilePreview(selected.Path);
+        }
+
+        private void UndoProcessedArchive(Models.Archive archive)
+        {
+            var originalArchive = archive.GetArchive();
+            var filename = Path.GetFileName(originalArchive.OriginalPath);
+            var sourceFileName = Path.Combine(UploadArchivesSettings.OutputFolder, filename);
+            System.IO.File.Move(sourceFileName, originalArchive.OriginalPath);
+            _archiveManager.Delete(originalArchive);
+            InitializeSettings();
+            Archives.Remove(archive);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -407,13 +476,13 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void DocumentType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DocumentForm?.ClearForm();
             var documentType = DocumentType.SelectedItem as DocumentType;
             if (documentType == null)
             {
                 Utils.SetContent(DocumentFormContent, null);
                 return;
             }
-            
 
             if (documentType.DocumentForm == DocumentFormEnum.AdditionalInformation)
             {
@@ -447,6 +516,30 @@ namespace RRFFilesManager.Controls.ArchiveControls
             {
                 Utils.SetContent(DocumentFormContent, BenefitsPaidToDateUserControl);
             }
+            else if (documentType.DocumentForm == DocumentFormEnum.NameOfParty)
+            {
+                Utils.SetContent(DocumentFormContent, NameOfPartyUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.Name)
+            {
+                Utils.SetContent(DocumentFormContent, NameUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.NameAndTypeOfParty)
+            {
+                Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.NameAndTypeOfPartyAndTypeOfMotion)
+            {
+                Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyAndTypeOfMotionUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.NameOfOrganization)
+            {
+                Utils.SetContent(DocumentFormContent, NameOfOrganizationUserControl);
+            }
+            else if (documentType.DocumentForm == DocumentFormEnum.Empty)
+            {
+                Utils.SetContent(DocumentFormContent, EmptyUserControl);
+            }
             OnChange();
         }
 
@@ -472,10 +565,33 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var documentType = DocumentType.SelectedItem as DocumentType;
             if (DocumentForm == null || SelectedFile == null)
                 return;
-            DocumentForm?.SetDocumentParameters(documentType, DocumentDate.ToNullableValue(), DateRangeFrom.ToNullableValue(), DateRangeTo.ToNullableValue());
+            DocumentForm?.SetDocumentParameters(documentType, DocumentDate.ToNullableValue(), DateRangeFrom.ToNullableValue(), DateRangeTo.ToNullableValue(), documentType.DocumentNameType);
             //DocumentForm?.SetDocumentExtension(SelectedFile?.Extension);
             DocumentForm?.SetFileNameControl(DocumentName);
             DocumentForm?.OnChange();
+        }
+
+        private void SelectFolders_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+
+                    AddFiles(new string[] { folderBrowserDialog1.SelectedPath });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
+                    $"Details:\n\n{ex.StackTrace}");
+                }
+            }
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            var settingsForm = new SettingsForm();
+            settingsForm.Show();
         }
     }
 }

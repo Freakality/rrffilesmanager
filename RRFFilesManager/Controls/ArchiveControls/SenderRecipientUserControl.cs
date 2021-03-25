@@ -25,16 +25,16 @@ namespace RRFFilesManager.Controls.ArchiveControls
             AdditionalInfo.ResetText();
         }
 
-        public override void SetArchive(Archive archive)
+        public override void FillArchiveInfo(Archive archive)
         {
             archive.Sender = Sender.Text;
             archive.Recipient = Recipient.Text;
             archive.AdditionalInfo = AdditionalInfo.Text;
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)} - From {Sender.Text} - To {Recipient.Text}";
+            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)} - From {Sender.Text} - To {Recipient.Text}";
             if (!string.IsNullOrWhiteSpace(AdditionalInfo.Text))
                 filename += $" - {AdditionalInfo.Text}";
             return filename;

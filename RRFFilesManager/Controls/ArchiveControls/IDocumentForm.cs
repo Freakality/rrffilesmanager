@@ -9,8 +9,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
 {
     public interface IDocumentForm
     {
-        void SetArchive(Archive archive);
+        void FillArchiveInfo(Archive archive);
         void ClearForm();
-        string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null);
+        string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default);
     }
 }

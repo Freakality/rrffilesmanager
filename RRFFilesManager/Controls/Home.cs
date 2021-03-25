@@ -127,11 +127,11 @@ namespace RRFFilesManager
 
         private void ImportDocumentsButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            PleaseWait.Instance.Show();
-            var uploadArchivesForm = new UploadArchivesForm();
-            uploadArchivesForm.Show();
-            PleaseWait.Instance.Hide();
+                Hide();
+                PleaseWait.Instance.Show();
+                var uploadArchivesForm = new UploadArchivesForm();
+                uploadArchivesForm.Show();
+                PleaseWait.Instance.Hide();
         }
     }
 }

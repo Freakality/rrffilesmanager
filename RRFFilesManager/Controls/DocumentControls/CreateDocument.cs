@@ -147,7 +147,7 @@ namespace RRFFilesManager
             Submitting.Instance.Show();
             try
             {
-                Archive = _archiveManager.CreateAndAddArchive(File, Template);
+                Archive = _archiveManager.CreateAndAddArchiveFromTemplate(File, Template);
             }
             catch(Exception e)
             {

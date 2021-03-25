@@ -80,7 +80,7 @@ namespace RRFFilesManager.Logic
         {
             if (fileName == null)
                 return null;
-            var path = Path.Combine(ConfigurationManager.AppSettings["ExcelTemplatesPath"], fileNumber.ToString());
+            var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], fileNumber.ToString());
             Directory.CreateDirectory(path);
             return Path.Combine(path, fileName);
         }

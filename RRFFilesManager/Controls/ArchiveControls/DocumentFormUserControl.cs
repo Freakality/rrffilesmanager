@@ -18,6 +18,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         DateTime? DocumentDate { get; set; }
         DateTime? DocumentDateFrom { get; set; }
         DateTime? DocumentDateTo { get; set; }
+        DocumentNameTypeEnum DocumentNameType { get; set; }
         //string DocumentExtension { get; set; }
         Control FileNameControl { get; set; }
         public virtual void ClearForm()
@@ -25,22 +26,34 @@ namespace RRFFilesManager.Controls.ArchiveControls
         }
         public virtual string GetFileName()
         {
-            return GetFileName(DocumentType, DocumentDate, DocumentDateFrom, DocumentDateTo);
+            return GetFileName(DocumentType, DocumentDate, DocumentDateFrom, DocumentDateTo, DocumentNameType);
         }
 
-        public virtual string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
+        public virtual string GetFileNameDatePart(DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
         {
-            if(documentDate != null)
-                return $"{documentDate:yyyy-MM-dd} - {documentType.Description}";
-            return $"{documentDateFrom:yyyy-MM-dd} - {documentDateTo:yyyy-MM-dd} - {documentType.Description}";
+            string datePart;
+            if (documentDate != null)
+                datePart = $"{documentDate:yyyy-MM-dd}";
+            else
+                datePart = $"{documentDateFrom:yyyy-MM-dd} - {documentDateTo:yyyy-MM-dd}";
+            return datePart;
         }
 
-        public virtual void SetDocumentParameters(DocumentType documentType, DateTime? documentDate, DateTime? from, DateTime? to)
+        public virtual string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        {
+            var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
+            if(documentNameType == DocumentNameTypeEnum.FirstDate)
+                return $"{datePart} - {documentType.Description}";
+            return $"{documentType.Description} - {datePart}";
+        }
+
+        public virtual void SetDocumentParameters(DocumentType documentType, DateTime? documentDate, DateTime? from, DateTime? to, DocumentNameTypeEnum documentNameType = default)
         {
             DocumentType = documentType;
             DocumentDate = documentDate;
             DocumentDateFrom = from;
             DocumentDateTo = to;
+            DocumentNameType = documentNameType;
         }
 
         //public void SetDocumentExtension(string documentExtension)
@@ -58,7 +71,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             FileNameControl.Text = GetFileName();
         }
 
-        public virtual void SetArchive(Archive archive)
+        public virtual void FillArchiveInfo(Archive archive)
         {
         }
     }

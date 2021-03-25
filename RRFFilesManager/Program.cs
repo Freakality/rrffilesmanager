@@ -21,10 +21,17 @@ namespace RRFFilesManager
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            ConfigureServices();
-            Application.Run(Home.Instance);
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                ConfigureServices();
+                Application.Run(Home.Instance);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         static void ConfigureServices()

@@ -33,6 +33,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             System.Windows.Forms.Label DateOFCallLabel;
             System.Windows.Forms.Label label15;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UploadArchivesForm));
+            this.Settings = new System.Windows.Forms.Button();
+            this.SelectFolders = new System.Windows.Forms.Button();
             this.SelectFiles = new System.Windows.Forms.Button();
             this.FilesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,11 +70,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.ArchivesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             groupBox1 = new System.Windows.Forms.GroupBox();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
@@ -99,6 +102,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(this.Settings);
+            groupBox1.Controls.Add(this.SelectFolders);
             groupBox1.Controls.Add(this.SelectFiles);
             groupBox1.Controls.Add(this.FilesGridView);
             groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,6 +114,32 @@ namespace RRFFilesManager.Controls.ArchiveControls
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Uploaded files";
+            // 
+            // Settings
+            // 
+            this.Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Settings.Location = new System.Drawing.Point(603, -3);
+            this.Settings.Margin = new System.Windows.Forms.Padding(0);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(88, 20);
+            this.Settings.TabIndex = 3;
+            this.Settings.Text = "Settings";
+            this.Settings.UseVisualStyleBackColor = true;
+            this.Settings.Click += new System.EventHandler(this.Settings_Click);
+            // 
+            // SelectFolders
+            // 
+            this.SelectFolders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectFolders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectFolders.Location = new System.Drawing.Point(691, -2);
+            this.SelectFolders.Margin = new System.Windows.Forms.Padding(0);
+            this.SelectFolders.Name = "SelectFolders";
+            this.SelectFolders.Size = new System.Drawing.Size(88, 20);
+            this.SelectFolders.TabIndex = 2;
+            this.SelectFolders.Text = "Select Folder";
+            this.SelectFolders.UseVisualStyleBackColor = true;
+            this.SelectFolders.Click += new System.EventHandler(this.SelectFolders_Click);
             // 
             // SelectFiles
             // 
@@ -603,6 +634,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
+            // previewHandlerHost1
+            // 
+            this.previewHandlerHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewHandlerHost1.Location = new System.Drawing.Point(0, 0);
+            this.previewHandlerHost1.Name = "previewHandlerHost1";
+            this.previewHandlerHost1.Size = new System.Drawing.Size(465, 665);
+            this.previewHandlerHost1.TabIndex = 4;
+            this.previewHandlerHost1.Text = "previewHandlerHost2";
+            // 
             // richTextBox
             // 
             this.richTextBox.BackColor = System.Drawing.Color.White;
@@ -643,15 +683,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Multiselect = true;
-            // 
-            // previewHandlerHost1
-            // 
-            this.previewHandlerHost1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewHandlerHost1.Location = new System.Drawing.Point(0, 0);
-            this.previewHandlerHost1.Name = "previewHandlerHost1";
-            this.previewHandlerHost1.Size = new System.Drawing.Size(465, 665);
-            this.previewHandlerHost1.TabIndex = 4;
-            this.previewHandlerHost1.Text = "previewHandlerHost2";
             // 
             // UploadArchivesForm
             // 
@@ -732,5 +763,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
         internal System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel DocumentFormContent;
         private PreviewHandlerHost previewHandlerHost1;
+        private System.Windows.Forms.Button SelectFolders;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button Settings;
     }
 }

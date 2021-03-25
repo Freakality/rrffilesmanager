@@ -11,36 +11,34 @@ using System.Windows.Forms;
 
 namespace RRFFilesManager.Controls.ArchiveControls
 {
-    public partial class BenefitTypeUserControl : DocumentFormUserControl
+    public partial class NameUserControl : DocumentFormUserControl
     {
-        public BenefitTypeUserControl()
+        public NameUserControl()
         {
             InitializeComponent();
         }
 
         public override void ClearForm()
         {
-            BenefitType.ResetText();
+            Name.ResetText();
         }
 
         public override void FillArchiveInfo(Archive archive)
         {
-            archive.BenefitType = BenefitType.Text;
+            archive.DocumentName = Name.Text;
         }
 
         public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            return $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)} - {BenefitType.Text}";
+            //[Document Type] -of[Name of Party] - [Document Date]
+            var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
+            return $"{documentType.Description} - of {Name.Text} - {datePart}";
         }
 
-        private void BenefitType_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void Name_TextChanged(object sender, EventArgs e)
         {
             OnChange();
-        }
-
-        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

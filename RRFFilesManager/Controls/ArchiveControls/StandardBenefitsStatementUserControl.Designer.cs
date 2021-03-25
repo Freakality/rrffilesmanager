@@ -125,6 +125,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.MRRemaining.Name = "MRRemaining";
             this.MRRemaining.Size = new System.Drawing.Size(278, 20);
             this.MRRemaining.TabIndex = 20;
+            this.MRRemaining.TextChanged += new System.EventHandler(this.MRRemaining_TextChanged);
             // 
             // label13
             // 

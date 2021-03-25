@@ -18,7 +18,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             InitializeComponent();
         }
 
-        public override void SetArchive(Archive archive)
+        public override void FillArchiveInfo(Archive archive)
         {
             archive.PolicyClaimLimit = PolicyClaimLimit.Text;
             archive.StatementPeriodFrom = StatementPeriodFrom.Value;
@@ -57,9 +57,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            return $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)}";
+            return $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -68,6 +68,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
         }
 
         private void IEAssessPdToDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MRRemaining_TextChanged(object sender, EventArgs e)
         {
 
         }

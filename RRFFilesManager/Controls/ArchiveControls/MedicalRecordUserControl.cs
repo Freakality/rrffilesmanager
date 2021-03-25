@@ -24,14 +24,14 @@ namespace RRFFilesManager.Controls.ArchiveControls
             HealthcarePractitioner.ResetText();
         }
 
-        public override void SetArchive(Archive archive)
+        public override void FillArchiveInfo(Archive archive)
         {
             archive.FacilityName = FacilityName.Text;
             archive.HealthcarePractitioner = HealthcarePractitioner.Text;
         }
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)}";
+            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
             if (!string.IsNullOrEmpty(FacilityName.Text))
                 filename += $" - {FacilityName.Text}";
             else

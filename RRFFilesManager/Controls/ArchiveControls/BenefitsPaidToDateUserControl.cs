@@ -18,7 +18,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             InitializeComponent();
         }
 
-        public override void SetArchive(Archive archive)
+        public override void FillArchiveInfo(Archive archive)
         {
             archive.MRACPaidToDate = MRACPaidToDate.Text;
             archive.ACPaidToDate = ACPaidToDate.Text;
@@ -34,9 +34,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             IEAssessPdToDate.ResetText();
             HHPaidToDate.ResetText();
         }
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            return $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)}";
+            return $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
         }
 
         private void IEAssessPdToDate_TextChanged(object sender, EventArgs e)

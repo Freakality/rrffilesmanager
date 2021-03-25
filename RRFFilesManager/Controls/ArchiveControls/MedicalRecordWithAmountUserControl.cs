@@ -26,7 +26,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             TreatmentAmount.ResetText();
         }
 
-        public override void SetArchive(Archive archive)
+        public override void FillArchiveInfo(Archive archive)
         {
             archive.FacilityName = FacilityName.Text;
             archive.HealthcarePractitioner = HealthcarePractitioner.Text;
@@ -34,14 +34,28 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.TreatmentAmount = TreatmentAmount.Text;
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
+        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo)}";
-            if (!string.IsNullOrEmpty(FacilityName.Text))
-                filename += $" - {FacilityName.Text}";
-            else
-                filename += $" - {HealthcarePractitioner.Text}";
-            return $"{filename} - {TypeOfAssessment.Text} - {TreatmentAmount.Text}";
+            if(documentNameType == DocumentNameTypeEnum.FirstDate)
+            {
+                var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
+                if (!string.IsNullOrEmpty(FacilityName.Text))
+                    filename += $" - {FacilityName.Text}";
+                else
+                    filename += $" - {HealthcarePractitioner.Text}";
+                return $"{filename} - {TypeOfAssessment.Text} - {TreatmentAmount.Text}";
+            }
+            else if (documentNameType == DocumentNameTypeEnum.FirstDate)
+            {
+                var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
+                var filename = $"{documentType.Description}";
+                if (!string.IsNullOrEmpty(FacilityName.Text))
+                    filename += $" - {FacilityName.Text}";
+                else
+                    filename += $" - {HealthcarePractitioner.Text}";
+                return $"{filename} - {datePart}";
+            }
+            return base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo);
         }
 
 

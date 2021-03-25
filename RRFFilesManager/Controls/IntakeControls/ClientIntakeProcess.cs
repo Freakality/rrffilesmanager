@@ -82,7 +82,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void SendCIPEmail()
         {
-            var workbook = _archiveManager.CreateAndAddArchive(Home.IntakeForm.Intake.File); ;
+            var workbook = _archiveManager.CreateAndAddArchiveFromTemplate(Home.IntakeForm.Intake.File); ;
             var attachmentPath = workbook.Path;
             string clientFullName = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
             string[] to = new string[] { "DManzano@InjuryLawyerCanada.com"};
