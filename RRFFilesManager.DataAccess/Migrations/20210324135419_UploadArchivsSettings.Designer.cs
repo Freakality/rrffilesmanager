@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210324135419_UploadArchivsSettings")]
+    partial class UploadArchivsSettings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,9 +58,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("DocumentFolder")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DocumentName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("DocumentType")
                         .HasColumnType("nvarchar(max)");
 
@@ -92,15 +91,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NameOfOrganization")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NameOfParty")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OriginalPath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
 
@@ -129,12 +119,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TypeOfAssessment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TypeOfMotion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TypeOfParty")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -466,9 +450,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<int>("DocumentForm")
                         .HasColumnType("int");
 
-                    b.Property<int>("DocumentNameType")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
                     b.HasIndex("DocumentCategoryID");
@@ -566,14 +547,9 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UploadArchivesSettingsID")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
-                    b.HasIndex("UploadArchivesSettingsID");
-
-                    b.ToTable("FilePath");
+                    b.ToTable("UploadArchivesSettings");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Group", b =>
@@ -989,21 +965,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.ToTable("Templates");
                 });
 
-            modelBuilder.Entity("RRFFilesManager.Abstractions.UploadArchivesSettings", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("OutputFolder")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("UploadArchivesSettings");
-                });
-
             modelBuilder.Entity("RRFFilesManager.Abstractions.Archive", b =>
                 {
                     b.HasOne("RRFFilesManager.Abstractions.File", "File")
@@ -1112,13 +1073,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasForeignKey("FileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("RRFFilesManager.Abstractions.FilePath", b =>
-                {
-                    b.HasOne("RRFFilesManager.Abstractions.UploadArchivesSettings", null)
-                        .WithMany("InputFolders")
-                        .HasForeignKey("UploadArchivesSettingsID");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Intake", b =>

@@ -9,47 +9,47 @@ using System.Text;
 
 namespace RRFFilesManager.DataAccess
 {
-    public class DocumentCategoryRepository : IDocumentCategoryRepository
+    public class DocumentTypeRepository : IDocumentTypeRepository
     {
         private readonly DataContext _context;
-        public DocumentCategoryRepository(DataContext context)
+        public DocumentTypeRepository(DataContext context)
         {
             _context = context;
         }
 
-        public  DocumentCategory GetById(int documentTypeId)
+        public  DocumentType GetById(int documentTypeId)
         {
-            var documentType = _context.DocumentCategories.FirstOrDefault(x => x.ID == documentTypeId);
+            var documentType = _context.DocumentTypes.FirstOrDefault(x => x.ID == documentTypeId);
 
             return documentType;
 
         }
 
-        public void Insert(DocumentCategory documentType)
+        public void Insert(DocumentType documentType)
         {
-            _context.DocumentCategories.Add(documentType);
+            _context.DocumentTypes.Add(documentType);
 
             _context.SaveChanges();
         }
 
 
 
-        public  IEnumerable<DocumentCategory> List()
+        public  IEnumerable<DocumentType> List()
         {
-            var documentTypes = _context.DocumentCategories.ToList();
+            var documentTypes = _context.DocumentTypes.ToList();
             return documentTypes;
         }
 
 
         public void SoftDelete(int documentTypeId)
         {
-            var accountToDelete = _context.DocumentCategories.Find(documentTypeId);
+            var accountToDelete = _context.DocumentTypes.Find(documentTypeId);
 
             _context.SaveChanges();
 
         }
 
-        public void Update(DocumentCategory documentType)
+        public void Update(DocumentType documentType)
         {
             var trxDocumentType = GetById(documentType.ID);
             _context.Entry(trxDocumentType).CurrentValues.SetValues(documentType);

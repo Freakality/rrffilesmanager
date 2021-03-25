@@ -29,6 +29,8 @@ namespace RRFFilesManager.DataAccess
         public DbSet<DocumentGroup> DocumentGroups { get; set; }
         public DbSet<DocumentCategory> DocumentCategories { get; set; }
         public DbSet<DocumentType> DocumentTypes { get; set; }
+        public DbSet<UploadArchivesSettings> UploadArchivesSettings { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -12,6 +12,7 @@ namespace RRFFilesManager.Abstractions
         public virtual File File { get; set; }
         public string Name { get; set; }
         public string Path { get; set; }
+        public string OriginalPath { get; set; }
         public int? TemplateId { get; set; }
         public virtual Template Template { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
@@ -49,5 +50,12 @@ namespace RRFFilesManager.Abstractions
         public string TypeOfAssessment { get; set; }
         public string TreatmentAmount { get; set; }
 
+        public string NameOfParty { get; set; }
+        public string TypeOfParty { get; set; }
+        public string TypeOfMotion { get; set; }
+
+        public string NameOfOrganization { get; set; }
+
+        public string DocumentName { get; set; }
     }
 }

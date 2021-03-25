@@ -12,6 +12,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void Insert(File file, Archive archive);
         void Update(Archive archive);
         void SoftDelete(int archiveId);
+        void Delete(Archive archive);
         Archive GetById(int archiveId);
         IEnumerable<Archive> List();
     }

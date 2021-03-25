@@ -41,6 +41,13 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
+        public void Delete(Archive archive)
+        {
+            var trxArchive = GetById(archive.ID);
+            _context.Archives.Remove(trxArchive);
+            _context.SaveChanges();
+        }
+
         public void Update(Archive archive)
         {
             var trxArchive = GetById(archive.ID);

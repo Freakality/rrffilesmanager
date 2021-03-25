@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210324200155_UploadArchivsSettings2")]
+    partial class UploadArchivsSettings2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,9 +58,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("DocumentFolder")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DocumentName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("DocumentType")
                         .HasColumnType("nvarchar(max)");
 
@@ -92,15 +91,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NameOfOrganization")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NameOfParty")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OriginalPath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
 
@@ -129,12 +119,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TypeOfAssessment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TypeOfMotion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TypeOfParty")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -464,9 +448,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("DocumentForm")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DocumentNameType")
                         .HasColumnType("int");
 
                     b.HasKey("ID");

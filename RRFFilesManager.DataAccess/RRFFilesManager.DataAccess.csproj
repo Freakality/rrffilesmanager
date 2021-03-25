@@ -205,14 +205,15 @@
     <Compile Include="Abstractions\IMobileCarrierRepository.cs" />
     <Compile Include="Abstractions\IGroupRepository.cs" />
     <Compile Include="Abstractions\IProvinceRepository.cs" />
+    <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
     <Compile Include="ClientRepository.cs" />
     <Compile Include="CompanyRepository.cs" />
     <Compile Include="ContactRepository.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="ArchiveRepository.cs" />
-    <Compile Include="DocumentTypeRepository.cs" />
     <Compile Include="DocumentCategoryRepository.cs" />
+    <Compile Include="DocumentTypeRepository.cs" />
     <Compile Include="FileRepository.cs" />
     <Compile Include="DocumentGroupRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />
@@ -287,6 +288,26 @@
     <Compile Include="Migrations\20210304061836_ArchiveNewFields.designer.cs">
       <DependentUpon>20210304061836_ArchiveNewFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210324135419_UploadArchivsSettings.cs" />
+    <Compile Include="Migrations\20210324135419_UploadArchivsSettings.designer.cs">
+      <DependentUpon>20210324135419_UploadArchivsSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210324200155_UploadArchivsSettings2.cs" />
+    <Compile Include="Migrations\20210324200155_UploadArchivsSettings2.designer.cs">
+      <DependentUpon>20210324200155_UploadArchivsSettings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210324222709_ArchiveOriginalPath.cs" />
+    <Compile Include="Migrations\20210324222709_ArchiveOriginalPath.designer.cs">
+      <DependentUpon>20210324222709_ArchiveOriginalPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210325011044_DocumentType_DocumentNameType.cs" />
+    <Compile Include="Migrations\20210325011044_DocumentType_DocumentNameType.designer.cs">
+      <DependentUpon>20210325011044_DocumentType_DocumentNameType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210325024101_Archive_NewFields.cs" />
+    <Compile Include="Migrations\20210325024101_Archive_NewFields.designer.cs">
+      <DependentUpon>20210325024101_Archive_NewFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />
@@ -356,6 +377,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GroupRepository.cs" />
     <Compile Include="ProvinceRepository.cs" />
+    <Compile Include="UploadArchivesSettingsRepository.cs" />
     <Compile Include="TemplateRepository.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,6 +13,12 @@ namespace RRFFilesManager.Abstractions
         PreparedBy,
         MedicalRecord,
         MedicalRecordWithAmount,
-        BenefitsPaidToDate
+        BenefitsPaidToDate,
+        NameOfParty,
+        Name,
+        NameAndTypeOfParty,
+        NameAndTypeOfPartyAndTypeOfMotion,
+        NameOfOrganization,
+        Empty
     }
 }
