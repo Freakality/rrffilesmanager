@@ -407,7 +407,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var documentFolder = DocumentGroup.SelectedItem as DocumentGroup;
             if (documentFolder == null)
                 return;
+            Utils.SetComboBoxDataSource(DocumentType, new List<DocumentType>());
             Utils.SetComboBoxDataSource(DocumentCategory, _documentCategoryRepository.List().Where(s => s.DocumentGroup.ID == documentFolder.ID).ToList());
+            if (documentFolder.DocumentForm != null)
+                SetContent(documentFolder.DocumentForm.Value);
         }
 
         private void ArchivesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -472,6 +475,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             if (documentCategory == null)
                 return;
             Utils.SetComboBoxDataSource(DocumentType, _documentTypeRepository.List().Where(s => s.DocumentCategory.ID == documentCategory.ID).ToList());
+            if (documentCategory.DocumentForm != null)
+                SetContent(documentCategory.DocumentForm.Value);
         }
 
         private void DocumentType_SelectedIndexChanged(object sender, EventArgs e)
@@ -483,64 +488,69 @@ namespace RRFFilesManager.Controls.ArchiveControls
                 Utils.SetContent(DocumentFormContent, null);
                 return;
             }
+            SetContent(documentType.DocumentForm);
+            OnChange();
+        }
 
-            if (documentType.DocumentForm == DocumentFormEnum.AdditionalInformation)
+        private void SetContent(DocumentFormEnum documentForm) {
+            
+
+            if (documentForm == DocumentFormEnum.AdditionalInformation)
             {
                 Utils.SetContent(DocumentFormContent, AdditionalInformationUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.StandardBenefitsStatement)
+            else if (documentForm == DocumentFormEnum.StandardBenefitsStatement)
             {
                 Utils.SetContent(DocumentFormContent, StandardBenefitsStatementUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.SenderRecipient)
+            else if (documentForm == DocumentFormEnum.SenderRecipient)
             {
                 Utils.SetContent(DocumentFormContent, SenderRecipientUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.BenefitType)
+            else if (documentForm == DocumentFormEnum.BenefitType)
             {
                 Utils.SetContent(DocumentFormContent, BenefitTypeUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.PreparedBy)
+            else if (documentForm == DocumentFormEnum.PreparedBy)
             {
                 Utils.SetContent(DocumentFormContent, PreparedByUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.MedicalRecord)
+            else if (documentForm == DocumentFormEnum.MedicalRecord)
             {
                 Utils.SetContent(DocumentFormContent, MedicalRecordUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.MedicalRecordWithAmount)
+            else if (documentForm == DocumentFormEnum.MedicalRecordWithAmount)
             {
                 Utils.SetContent(DocumentFormContent, MedicalRecordWithAmountUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.BenefitsPaidToDate)
+            else if (documentForm == DocumentFormEnum.BenefitsPaidToDate)
             {
                 Utils.SetContent(DocumentFormContent, BenefitsPaidToDateUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.NameOfParty)
+            else if (documentForm == DocumentFormEnum.NameOfParty)
             {
                 Utils.SetContent(DocumentFormContent, NameOfPartyUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.Name)
+            else if (documentForm == DocumentFormEnum.Name)
             {
                 Utils.SetContent(DocumentFormContent, NameUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.NameAndTypeOfParty)
+            else if (documentForm == DocumentFormEnum.NameAndTypeOfParty)
             {
                 Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.NameAndTypeOfPartyAndTypeOfMotion)
+            else if (documentForm  == DocumentFormEnum.NameAndTypeOfPartyAndTypeOfMotion)
             {
                 Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyAndTypeOfMotionUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.NameOfOrganization)
+            else if (documentForm == DocumentFormEnum.NameOfOrganization)
             {
                 Utils.SetContent(DocumentFormContent, NameOfOrganizationUserControl);
             }
-            else if (documentType.DocumentForm == DocumentFormEnum.Empty)
+            else if (documentForm == DocumentFormEnum.Empty)
             {
                 Utils.SetContent(DocumentFormContent, EmptyUserControl);
             }
-            OnChange();
         }
 
         private void DocumentDate_ValueChanged(object sender, EventArgs e)
@@ -562,10 +572,14 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void OnChange()
         {
+            var documentGroup = DocumentGroup.SelectedItem as DocumentGroup;
+            var documentCategory = DocumentCategory.SelectedItem as DocumentCategory;
             var documentType = DocumentType.SelectedItem as DocumentType;
-            if (DocumentForm == null || SelectedFile == null)
+            if (DocumentForm == null || SelectedFile == null || documentGroup == null)
                 return;
-            DocumentForm?.SetDocumentParameters(documentType, DocumentDate.ToNullableValue(), DateRangeFrom.ToNullableValue(), DateRangeTo.ToNullableValue(), documentType.DocumentNameType);
+            var documentNameType = documentGroup?.DocumentNameType ?? documentCategory?.DocumentNameType ?? documentType?.DocumentNameType ?? default;
+            var text = documentType?.Description ?? documentCategory?.Description ?? documentGroup.Description;
+            DocumentForm?.SetDocumentParameters(text, DocumentDate.ToNullableValue(), DateRangeFrom.ToNullableValue(), DateRangeTo.ToNullableValue(), documentNameType);
             //DocumentForm?.SetDocumentExtension(SelectedFile?.Extension);
             DocumentForm?.SetFileNameControl(DocumentName);
             DocumentForm?.OnChange();

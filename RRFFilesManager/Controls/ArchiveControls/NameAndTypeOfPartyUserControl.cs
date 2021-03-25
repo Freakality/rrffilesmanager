@@ -30,11 +30,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.TypeOfParty = TypeOfParty.Text;
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
             //[Document Type] -of[Name of Party] - [Type of Party] - [Document Date]
             var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
-            return $"{documentType.Description} - of {NameOfParty.Text} - {TypeOfParty.Text} - {datePart}";
+            return $"{text} - of {NameOfParty.Text} - {TypeOfParty.Text} - {datePart}";
         }
 
         private void NameOfParty_TextChanged(object sender, EventArgs e)

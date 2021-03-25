@@ -14,7 +14,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             
         }
-        DocumentType DocumentType { get; set; }
+        string Text { get; set; }
         DateTime? DocumentDate { get; set; }
         DateTime? DocumentDateFrom { get; set; }
         DateTime? DocumentDateTo { get; set; }
@@ -26,7 +26,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         }
         public virtual string GetFileName()
         {
-            return GetFileName(DocumentType, DocumentDate, DocumentDateFrom, DocumentDateTo, DocumentNameType);
+            return GetFileName(Text, DocumentDate, DocumentDateFrom, DocumentDateTo, DocumentNameType);
         }
 
         public virtual string GetFileNameDatePart(DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null)
@@ -39,17 +39,17 @@ namespace RRFFilesManager.Controls.ArchiveControls
             return datePart;
         }
 
-        public virtual string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        public virtual string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
             var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
             if(documentNameType == DocumentNameTypeEnum.FirstDate)
-                return $"{datePart} - {documentType.Description}";
-            return $"{documentType.Description} - {datePart}";
+                return $"{datePart} - {text}";
+            return $"{text} - {datePart}";
         }
 
-        public virtual void SetDocumentParameters(DocumentType documentType, DateTime? documentDate, DateTime? from, DateTime? to, DocumentNameTypeEnum documentNameType = default)
+        public virtual void SetDocumentParameters(string text, DateTime? documentDate, DateTime? from, DateTime? to, DocumentNameTypeEnum documentNameType = default)
         {
-            DocumentType = documentType;
+            Text = text;
             DocumentDate = documentDate;
             DocumentDateFrom = from;
             DocumentDateTo = to;

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210325033130_Archive_NewFields2")]
+    partial class Archive_NewFields2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -431,9 +433,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<int?>("DocumentGroupID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("DocumentNameType")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
                     b.HasIndex("DocumentGroupID");
@@ -452,9 +451,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("DocumentForm")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DocumentNameType")
                         .HasColumnType("int");
 
                     b.HasKey("ID");

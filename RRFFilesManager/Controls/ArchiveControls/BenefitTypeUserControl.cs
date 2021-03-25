@@ -28,9 +28,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.BenefitType = BenefitType.Text;
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
-            return $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)} - {BenefitType.Text}";
+            return $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)} - {BenefitType.Text}";
         }
 
         private void BenefitType_SelectedIndexChanged(object sender, EventArgs e)

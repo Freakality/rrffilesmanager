@@ -34,11 +34,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.TreatmentAmount = TreatmentAmount.Text;
         }
 
-        public override string GetFileName(DocumentType documentType, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
             if(documentNameType == DocumentNameTypeEnum.FirstDate)
             {
-                var filename = $"{base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
+                var filename = $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
                 if (!string.IsNullOrEmpty(FacilityName.Text))
                     filename += $" - {FacilityName.Text}";
                 else
@@ -48,14 +48,14 @@ namespace RRFFilesManager.Controls.ArchiveControls
             else if (documentNameType == DocumentNameTypeEnum.FirstDate)
             {
                 var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
-                var filename = $"{documentType.Description}";
+                var filename = $"{text}";
                 if (!string.IsNullOrEmpty(FacilityName.Text))
                     filename += $" - {FacilityName.Text}";
                 else
                     filename += $" - {HealthcarePractitioner.Text}";
                 return $"{filename} - {datePart}";
             }
-            return base.GetFileName(documentType, documentDate, documentDateFrom, documentDateTo);
+            return base.GetFileName(text, documentDate, documentDateFrom, documentDateTo);
         }
 
 

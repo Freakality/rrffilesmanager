@@ -308,6 +308,14 @@
     <Compile Include="Migrations\20210325024101_Archive_NewFields.designer.cs">
       <DependentUpon>20210325024101_Archive_NewFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210325033130_Archive_NewFields2.cs" />
+    <Compile Include="Migrations\20210325033130_Archive_NewFields2.designer.cs">
+      <DependentUpon>20210325033130_Archive_NewFields2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210325034536_Archive_NewFields3.cs" />
+    <Compile Include="Migrations\20210325034536_Archive_NewFields3.designer.cs">
+      <DependentUpon>20210325034536_Archive_NewFields3.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />

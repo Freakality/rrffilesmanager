@@ -11,6 +11,8 @@ namespace RRFFilesManager.Abstractions
         public int ID { get; set; }
         public string Description { get; set; }
         public virtual DocumentGroup DocumentGroup { get; set; }
+        public DocumentFormEnum? DocumentForm { get; set; }
+        public DocumentNameTypeEnum? DocumentNameType { get; set; }
         public override string ToString() => Description;
     }
 }
