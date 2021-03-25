@@ -197,12 +197,17 @@ namespace RRFFilesManager.Controls.ArchiveControls
             //webView.NavigateToString("<h1>Hola Mundo!</h1>");//.Navigate(path);
             //PreviewHandlerHost = new PreviewHandlerHost();
             //Utils.SetContent(PreviewPanel, PreviewHandlerHost);
-
-            FilePreview(path);
+            try
+            {
+                FilePreview(path);
+            }
+            catch { }
 
         }
         private void FilePreview(string path)
         {
+            if (path == null || previewHandlerHost1 == null || axAcroPDF == null || pictureBox == null || richTextBox == null)
+                return;
             previewHandlerHost1.Hide();
             axAcroPDF.Hide();
             pictureBox.Hide();
@@ -437,6 +442,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void ArchivesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (ArchivesGridView?.SelectedRows?.Count == 0)
+                return;
             var selected = ArchivesGridView.SelectedRows[0].DataBoundItem as Models.Archive;
             if (selected == null)
                 return;
