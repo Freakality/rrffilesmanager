@@ -390,7 +390,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             
             DocumentDate.ResetText();
             DocumentDate.Value = DateTime.Now;
-            DocumentDate.Checked = true;
+            DocumentDate.Checked = false;
 
             DateRangeFrom.ResetText();
             DateRangeFrom.Value = DateTime.Now;
@@ -562,18 +562,23 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void DocumentDate_ValueChanged(object sender, EventArgs e)
         {
+            DocumentDate.CustomFormat = (DocumentDate.Checked && DocumentDate.Value != DocumentDate.MinDate) ? "MM/dd/yyyy" : " ";
             OnChange();
         }
 
         private void DateRangeFrom_ValueChanged(object sender, EventArgs e)
         {
             DateRangeTo.Checked = DateRangeFrom.Checked;
+            DateRangeFrom.CustomFormat = (DateRangeFrom.Checked && DateRangeFrom.Value != DateRangeFrom.MinDate) ? "MM/dd/yyyy" : " ";
+            DateRangeTo.CustomFormat = (DateRangeTo.Checked && DateRangeTo.Value != DateRangeTo.MinDate) ? "MM/dd/yyyy" : " ";
             OnChange();
         }
 
         private void DateRangeTo_ValueChanged(object sender, EventArgs e)
         {
             DateRangeFrom.Checked = DateRangeTo.Checked;
+            DateRangeFrom.CustomFormat = (DateRangeFrom.Checked && DateRangeFrom.Value != DateRangeFrom.MinDate) ? "MM/dd/yyyy" : " ";
+            DateRangeTo.CustomFormat = (DateRangeTo.Checked && DateRangeTo.Value != DateRangeTo.MinDate) ? "MM/dd/yyyy" : " ";
             OnChange();
         }
 
