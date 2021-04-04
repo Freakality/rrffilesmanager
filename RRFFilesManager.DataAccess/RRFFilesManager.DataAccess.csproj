@@ -316,6 +316,10 @@
     <Compile Include="Migrations\20210325034536_Archive_NewFields3.designer.cs">
       <DependentUpon>20210325034536_Archive_NewFields3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210404125546_DocumentType_IndexCategory.cs" />
+    <Compile Include="Migrations\20210404125546_DocumentType_IndexCategory.designer.cs">
+      <DependentUpon>20210404125546_DocumentType_IndexCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />
