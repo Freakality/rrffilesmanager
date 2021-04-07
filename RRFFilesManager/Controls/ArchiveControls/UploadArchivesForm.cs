@@ -372,8 +372,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.OriginalPath = path;
             archive.Path = path;
             archive.Name = fileName;
-            archive.DocumentFolder = DocumentGroup.Text;
-            archive.DocumentCategory = DocumentCategory.Text;
+            archive.DocumentGroup = (DocumentGroup)DocumentGroup.SelectedItem;
+            archive.DocumentCategory = (DocumentCategory)DocumentCategory.SelectedItem;
+            archive.DocumentType = (DocumentType)DocumentType.SelectedItem;
             archive.DocumentDate = DocumentDate.Value;
             archive.DateRangeFrom = DateRangeFrom.Value;
             archive.DateRangeTo = DateRangeTo.Value;
@@ -618,6 +619,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             var settingsForm = new SettingsForm();
             settingsForm.Show();
+        }
+
+        private void DocumentName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

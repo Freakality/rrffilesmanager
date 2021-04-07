@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210404131821_Archive_DocumentType")]
+    partial class Archive_DocumentType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,14 +49,14 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<DateTime>("DateRangeTo")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("DocumentCategoryID")
-                        .HasColumnType("int");
+                    b.Property<string>("DocumentCategory")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DocumentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("DocumentGroupID")
-                        .HasColumnType("int");
+                    b.Property<string>("DocumentFolder")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DocumentName")
                         .HasColumnType("nvarchar(max)");
@@ -138,10 +140,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("DocumentCategoryID");
-
-                    b.HasIndex("DocumentGroupID");
 
                     b.HasIndex("DocumentTypeID");
 
@@ -1027,14 +1025,6 @@ namespace RRFFilesManager.DataAccess.Migrations
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Archive", b =>
                 {
-                    b.HasOne("RRFFilesManager.Abstractions.DocumentCategory", "DocumentCategory")
-                        .WithMany()
-                        .HasForeignKey("DocumentCategoryID");
-
-                    b.HasOne("RRFFilesManager.Abstractions.DocumentGroup", "DocumentGroup")
-                        .WithMany()
-                        .HasForeignKey("DocumentGroupID");
-
                     b.HasOne("RRFFilesManager.Abstractions.DocumentType", "DocumentType")
                         .WithMany()
                         .HasForeignKey("DocumentTypeID");

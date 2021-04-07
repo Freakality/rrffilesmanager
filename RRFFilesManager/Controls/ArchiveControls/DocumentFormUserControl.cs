@@ -74,5 +74,22 @@ namespace RRFFilesManager.Controls.ArchiveControls
         public virtual void FillArchiveInfo(Archive archive)
         {
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // DocumentFormUserControl
+            // 
+            this.Name = "DocumentFormUserControl";
+            this.Load += new System.EventHandler(this.DocumentFormUserControl_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void DocumentFormUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

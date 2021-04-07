@@ -65,10 +65,10 @@ namespace RRFFilesManager.Logic
             if (file == null)
                 throw new Exception("File can not be null");
             var archiveFolderPath = GetFileFolderPath(file);
-            if (!string.IsNullOrWhiteSpace(archive.DocumentFolder))
-                archiveFolderPath = System.IO.Path.Combine(archiveFolderPath, EscapeText(archive.DocumentFolder));
-            if (!string.IsNullOrWhiteSpace(archive.DocumentCategory))
-                archiveFolderPath = System.IO.Path.Combine(archiveFolderPath, EscapeText(archive.DocumentCategory));
+            if (!string.IsNullOrWhiteSpace(archive.DocumentGroup?.Description))
+                archiveFolderPath = System.IO.Path.Combine(archiveFolderPath, EscapeText(archive.DocumentGroup.Description));
+            if (!string.IsNullOrWhiteSpace(archive.DocumentCategory?.Description))
+                archiveFolderPath = System.IO.Path.Combine(archiveFolderPath, EscapeText(archive.DocumentCategory.Description));
             System.IO.Directory.CreateDirectory(archiveFolderPath);
             return archiveFolderPath;
         }

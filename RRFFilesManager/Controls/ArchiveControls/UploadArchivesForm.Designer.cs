@@ -436,6 +436,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentName.Name = "DocumentName";
             this.DocumentName.Size = new System.Drawing.Size(712, 34);
             this.DocumentName.TabIndex = 22;
+            this.DocumentName.TextChanged += new System.EventHandler(this.DocumentName_TextChanged);
             // 
             // IntakeInfo
             // 

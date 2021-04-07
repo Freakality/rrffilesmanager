@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RRFFilesManager.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,15 +14,15 @@ namespace RRFFilesManager.Controls.ArchiveControls.Models
             File = archive.File.FileNumber;
             Name = archive.Name;
             Path = archive.Path;
-            Group = archive.DocumentFolder;
+            Group = archive.DocumentGroup;
             Category = archive.DocumentCategory;
             this.archive = archive;
         }
         public int File { get; set; }
         public string Name { get; set; }
         public string Path { get; set; }
-        public string Group { get; set; }
-        public string Category { get; set; }
+        public DocumentGroup Group { get; set; }
+        public DocumentCategory Category { get; set; }
 
         public Abstractions.Archive GetArchive() => this.archive;
     }

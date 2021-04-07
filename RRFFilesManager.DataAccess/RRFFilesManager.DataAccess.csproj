@@ -320,6 +320,14 @@
     <Compile Include="Migrations\20210404125546_DocumentType_IndexCategory.designer.cs">
       <DependentUpon>20210404125546_DocumentType_IndexCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210404131821_Archive_DocumentType.cs" />
+    <Compile Include="Migrations\20210404131821_Archive_DocumentType.designer.cs">
+      <DependentUpon>20210404131821_Archive_DocumentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210404132214_Archive_DocumentCategoryAndGroup.cs" />
+    <Compile Include="Migrations\20210404132214_Archive_DocumentCategoryAndGroup.designer.cs">
+      <DependentUpon>20210404132214_Archive_DocumentCategoryAndGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />

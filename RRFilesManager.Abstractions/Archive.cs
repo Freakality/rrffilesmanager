@@ -17,9 +17,9 @@ namespace RRFFilesManager.Abstractions
         public virtual Template Template { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
 
-        public string DocumentFolder { get; set; }
-        public string DocumentCategory { get; set; }
-        public string DocumentType { get; set; }
+        public virtual DocumentGroup DocumentGroup { get; set; }
+        public virtual DocumentCategory DocumentCategory { get; set; }
+        public virtual DocumentType DocumentType { get; set; }
         public DateTime DocumentDate { get; set; }
         public DateTime DateRangeFrom { get; set; }
         public DateTime DateRangeTo { get; set; }

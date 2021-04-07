@@ -410,6 +410,7 @@
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileControls\IPeopleInformation.cs" />
+    <Compile Include="Controls\FileControls\Models\ArchiveBinderIndex.cs" />
     <Compile Include="Controls\FileControls\PeopleOtherContactControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -559,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ArchiveControls\BenefitTypeUserControl.resx">
       <DependentUpon>BenefitTypeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ArchiveControls\DocumentFormUserControl.resx">
+      <DependentUpon>DocumentFormUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ArchiveControls\EmptyUserControl.resx">
       <DependentUpon>EmptyUserControl.cs</DependentUpon>
