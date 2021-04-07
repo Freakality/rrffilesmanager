@@ -21,6 +21,9 @@ namespace RRFFilesManager.Controls.FileControls
         string DOCUMENT_TEMPLATE_PATH = $"{AppDomain.CurrentDomain.BaseDirectory}\\DocumentTemplate\\Medical Brief Index.docx";
         private File File { get; set; }
         private List<ArchiveBinderIndex> ArchivesBinderIndex { get; set; }
+
+        private List<ArchiveBinderIndex> ArchivesBinderIndexToExport => (DataGridView.DataSource as SortableBindingList<ArchiveBinderIndex>)?.Where(s => s.Check).ToList();
+
         private readonly IFileRepository _fileRepository;
         private readonly IArchiveRepository _archiveRepository;
         public MedicalBinderIndexControl()
@@ -104,8 +107,8 @@ namespace RRFFilesManager.Controls.FileControls
                     try
                     {
                         wordApp.Visible = false;
-                        Word.FillDocument(document, File);
-                        if (extension == "docx")
+                        Word.FillDocumentMBIReport(document, File, ArchivesBinderIndexToExport.Select(s => s.GetArchive()));
+                        if (extension == ".docx")
                             document.SaveAs(filePath);
                         else if (extension == ".pdf")
                         {
