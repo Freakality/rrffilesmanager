@@ -9,15 +9,18 @@ namespace RRFFilesManager.Controls.FileControls.Models
 {
     public class ArchiveBinderIndex
     {
-        private Abstractions.Archive archive;
-        public ArchiveBinderIndex(Abstractions.Archive archive)
+        private Archive archive;
+        public ArchiveBinderIndex(Archive archive)
         {
+            ID = archive.ID;
             Type = archive.DocumentType;
             Date = archive.Created;
             Name = archive.Name;
             IndexCategory = archive.DocumentType?.IndexCategory;
             this.archive = archive;
         }
+        public bool Check { get; set; }
+        public int ID { get; set; }
         public DocumentType Type { get; set; }
         public DateTime Date { get; set; }
         public string Name { get; set; }

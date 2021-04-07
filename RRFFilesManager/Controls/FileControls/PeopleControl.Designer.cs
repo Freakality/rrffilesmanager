@@ -215,6 +215,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.PeoplesDataGridView.Size = new System.Drawing.Size(552, 324);
             this.PeoplesDataGridView.TabIndex = 1;
             this.PeoplesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PeoplesDataGridView_CellClick);
+            this.PeoplesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PeoplesDataGridView_CellContentClick);
             // 
             // PeopleInformationPanel
             // 

@@ -18,11 +18,15 @@ namespace RRFFilesManager
     {
         public File File { get; set; }
         public readonly PeopleControl PeopleControl;
+        public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
         public FileManager()
         {
             InitializeComponent();
             PeopleControl = new PeopleControl();
             Utils.SetContent(PeopleTab, PeopleControl);
+
+            MedicalBinderIndexControl = new MedicalBinderIndexControl();
+            Utils.SetContent(MedicalBinderIndexTab, MedicalBinderIndexControl);
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -46,7 +50,8 @@ namespace RRFFilesManager
 
         private void SetForm(File file)
         {
-            PeopleControl.SetFile(File);
+            PeopleControl.SetFile(file);
+            MedicalBinderIndexControl.SetFile(file);
             ClientNameTextBox.Text = file.Client.ToString();
             MatterTypeTextBox.Text = file.MatterType.ToString();
             FileNumberTextBox.Text = file.FileNumber.ToString();

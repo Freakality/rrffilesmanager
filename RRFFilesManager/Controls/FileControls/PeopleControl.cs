@@ -149,5 +149,10 @@ namespace RRFFilesManager.Controls.FileControls
         {
 
         }
+
+        private void PeoplesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
