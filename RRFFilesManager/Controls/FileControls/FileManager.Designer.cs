@@ -4854,7 +4854,7 @@
             this.MedicalBinderIndexTab.Location = new System.Drawing.Point(4, 26);
             this.MedicalBinderIndexTab.Name = "MedicalBinderIndexTab";
             this.MedicalBinderIndexTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalBinderIndexTab.Size = new System.Drawing.Size(1402, 462);
+            this.MedicalBinderIndexTab.Size = new System.Drawing.Size(1423, 479);
             this.MedicalBinderIndexTab.TabIndex = 1;
             this.MedicalBinderIndexTab.Text = "Medical Binder Index";
             this.MedicalBinderIndexTab.UseVisualStyleBackColor = true;
@@ -4938,10 +4938,11 @@
             this.TabControl6.Controls.Add(this.MedicalBinderIndexTab);
             this.TabControl6.Controls.Add(this.MedicalSummaries);
             this.TabControl6.Controls.Add(this.PrescriptionSummaries);
-            this.TabControl6.Location = new System.Drawing.Point(16, 17);
+            this.TabControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControl6.Location = new System.Drawing.Point(3, 3);
             this.TabControl6.Name = "TabControl6";
             this.TabControl6.SelectedIndex = 0;
-            this.TabControl6.Size = new System.Drawing.Size(1410, 492);
+            this.TabControl6.Size = new System.Drawing.Size(1431, 509);
             this.TabControl6.TabIndex = 5;
             // 
             // MedicalAppointments

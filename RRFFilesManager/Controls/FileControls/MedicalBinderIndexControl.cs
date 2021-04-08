@@ -21,6 +21,30 @@ namespace RRFFilesManager.Controls.FileControls
         string DOCUMENT_TEMPLATE_PATH = $"{AppDomain.CurrentDomain.BaseDirectory}\\DocumentTemplate\\Medical Brief Index.docx";
         private File File { get; set; }
         private List<ArchiveBinderIndex> ArchivesBinderIndex { get; set; }
+        private List<ArchiveBinderIndex> ArchivesBinderIndexFiltered { 
+            get 
+            {
+                var archives = ArchivesBinderIndex
+                    .Where(s => s.Name.ToLower().Contains(SearchBox.Text.ToLower()) || s.Type.Description.ToLower().Contains(SearchBox.Text.ToLower()))
+                    .Where(s => string.IsNullOrWhiteSpace(DocumentTypesBox.Text) || DocumentTypesBox.Text == s.Type?.Description)
+                    .ToList();
+                return archives;
+            } 
+        }
+
+        private List<string> DocumentTypes
+        {
+            get
+            {
+                var items = new List<string>();
+                items.Add("");
+                items.AddRange(ArchivesBinderIndex.Select(s => s.Type.Description).Distinct().ToList());
+                return items;
+            }
+        }
+        
+
+        private List<string> IndexCategories => ArchivesBinderIndex.Select(s => s.Type.IndexCategory).Distinct().ToList();
 
         private List<ArchiveBinderIndex> ArchivesBinderIndexToExport => (DataGridView.DataSource as SortableBindingList<ArchiveBinderIndex>)?.Where(s => s.Check).ToList();
 
@@ -38,6 +62,7 @@ namespace RRFFilesManager.Controls.FileControls
             File = file;
             ArchivesBinderIndex = file.Archives.Where(s => s.DocumentGroup?.ID == 3).Select(s => new ArchiveBinderIndex(s)).ToList();
             FillDataGridView();
+            DocumentTypesBox.DataSource = DocumentTypes;
         }
 
 
@@ -141,6 +166,26 @@ namespace RRFFilesManager.Controls.FileControls
         private void ExportPDFButton_Click(object sender, EventArgs e)
         {
             ExportReport(".pdf");
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            OnChange();
+        }
+
+        public void OnChange()
+        {
+            DataGridView.DataSource = new SortableBindingList<ArchiveBinderIndex>(ArchivesBinderIndexFiltered);
+        }
+
+        private void DocumentTypesBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OnChange();
+        }
+
+        private void IndexCategoriesBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OnChange();
         }
     }
 }
