@@ -34,6 +34,8 @@ namespace RRFFilesManager.Controls.FileControls
         public void SetFile(File file)
         {
             File = file;
+            if (file == null)
+                return;
             FillPeopleDataGridView();
             var contact = File.Peoples.FirstOrDefault()?.Contact;
             if (contact == null)
@@ -55,6 +57,8 @@ namespace RRFFilesManager.Controls.FileControls
 
         private void FillPeopleDataGridView()
         {
+            if (File == null)
+                return;
             PeoplesDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             PeoplesDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             PeoplesDataGridView.MultiSelect = false;

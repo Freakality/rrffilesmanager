@@ -19,6 +19,7 @@ namespace RRFFilesManager
         public File File { get; set; }
         public readonly PeopleControl PeopleControl;
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
+        public readonly ABBinderControl ABBinderControl;
         public FileManager()
         {
             InitializeComponent();
@@ -27,6 +28,9 @@ namespace RRFFilesManager
 
             MedicalBinderIndexControl = new MedicalBinderIndexControl();
             Utils.SetContent(MedicalBinderIndexTab, MedicalBinderIndexControl);
+
+            ABBinderControl = new ABBinderControl();
+            Utils.SetContent(ABBinderTab, ABBinderControl);
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -45,12 +49,18 @@ namespace RRFFilesManager
         {
             var findFileForm = sender as FindFile;
             File = findFileForm.SelectedFile;
+            if (File == null)
+                return;
             SetForm(File);
         }
 
         private void SetForm(File file)
         {
+            if(file == null)
+                return;
             PeopleControl.SetFile(file);
+            ABBinderControl.SetFile(file);
+
             MedicalBinderIndexControl.SetFile(file);
             ClientNameTextBox.Text = file.Client.ToString();
             MatterTypeTextBox.Text = file.MatterType.ToString();

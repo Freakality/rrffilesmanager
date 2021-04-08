@@ -409,6 +409,12 @@
     <Compile Include="Controls\DocumentControls\CreateDocument.Designer.cs">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileControls\ABBinderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\ABBinderControl.Designer.cs">
+      <DependentUpon>ABBinderControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FileControls\IPeopleInformation.cs" />
     <Compile Include="Controls\FileControls\MedicalBinderIndexControl.cs">
       <SubType>UserControl</SubType>
@@ -416,6 +422,7 @@
     <Compile Include="Controls\FileControls\MedicalBinderIndexControl.Designer.cs">
       <DependentUpon>MedicalBinderIndexControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileControls\Models\ArchiveBinder.cs" />
     <Compile Include="Controls\FileControls\Models\ArchiveBinderIndex.cs" />
     <Compile Include="Controls\FileControls\PeopleOtherContactControl.cs">
       <SubType>UserControl</SubType>
@@ -636,6 +643,9 @@
     <EmbeddedResource Include="Controls\DocumentControls\CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\ABBinderControl.resx">
+      <DependentUpon>ABBinderControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\MedicalBinderIndexControl.resx">
       <DependentUpon>MedicalBinderIndexControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -709,6 +719,9 @@
     <EmbeddedResource Include="Controls\TemplateControls\FindTemplate.resx">
       <DependentUpon>FindTemplate.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DocumentTemplate\AB Index.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="DocumentTemplate\Medical Brief Index.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

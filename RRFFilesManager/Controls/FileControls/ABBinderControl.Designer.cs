@@ -1,7 +1,7 @@
 ﻿
 namespace RRFFilesManager.Controls.FileControls
 {
-    partial class MedicalBinderIndexControl
+    partial class ABBinderControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,34 +29,58 @@ namespace RRFFilesManager.Controls.FileControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.SearchBox = new System.Windows.Forms.TextBox();
+            this.DocumentTypesBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ExportPDFButton = new System.Windows.Forms.Button();
             this.ExportWordButton = new System.Windows.Forms.Button();
-            this.SearchBox = new System.Windows.Forms.TextBox();
+            this.DataGridView = new System.Windows.Forms.DataGridView();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.DocumentTypesBox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataGridView
+            // tableLayoutPanel2
             // 
-            this.DataGridView.AllowUserToAddRows = false;
-            this.DataGridView.AllowUserToDeleteRows = false;
-            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridView.Location = new System.Drawing.Point(3, 53);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.ReadOnly = true;
-            this.DataGridView.RowHeadersVisible = false;
-            this.DataGridView.Size = new System.Drawing.Size(1396, 356);
-            this.DataGridView.TabIndex = 2;
-            this.DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellContentClick);
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.SearchBox, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.DocumentTypesBox, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1396, 44);
+            this.tableLayoutPanel2.TabIndex = 4;
+            // 
+            // SearchBox
+            // 
+            this.SearchBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchBox.Location = new System.Drawing.Point(1057, 10);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(329, 20);
+            this.SearchBox.TabIndex = 0;
+            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
+            // 
+            // DocumentTypesBox
+            // 
+            this.DocumentTypesBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTypesBox.FormattingEnabled = true;
+            this.DocumentTypesBox.Location = new System.Drawing.Point(10, 10);
+            this.DocumentTypesBox.Margin = new System.Windows.Forms.Padding(10);
+            this.DocumentTypesBox.Name = "DocumentTypesBox";
+            this.DocumentTypesBox.Size = new System.Drawing.Size(329, 21);
+            this.DocumentTypesBox.TabIndex = 1;
+            this.DocumentTypesBox.SelectedIndexChanged += new System.EventHandler(this.DocumentTypesBox_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -73,8 +97,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1402, 462);
-            this.tableLayoutPanel1.TabIndex = 3;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // panel1
             // 
@@ -85,7 +108,6 @@ namespace RRFFilesManager.Controls.FileControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1396, 44);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ExportPDFButton
             // 
@@ -117,75 +139,45 @@ namespace RRFFilesManager.Controls.FileControls
             this.ExportWordButton.UseVisualStyleBackColor = false;
             this.ExportWordButton.Click += new System.EventHandler(this.ExportWordButton_Click);
             // 
-            // SearchBox
+            // DataGridView
             // 
-            this.SearchBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchBox.Location = new System.Drawing.Point(1057, 10);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(329, 20);
-            this.SearchBox.TabIndex = 0;
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
+            this.DataGridView.AllowUserToAddRows = false;
+            this.DataGridView.AllowUserToDeleteRows = false;
+            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridView.Location = new System.Drawing.Point(3, 53);
+            this.DataGridView.Name = "DataGridView";
+            this.DataGridView.ReadOnly = true;
+            this.DataGridView.RowHeadersVisible = false;
+            this.DataGridView.Size = new System.Drawing.Size(1396, 356);
+            this.DataGridView.TabIndex = 2;
+            this.DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellContentClick);
             // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.SearchBox, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.DocumentTypesBox, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1396, 44);
-            this.tableLayoutPanel2.TabIndex = 4;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
-            // 
-            // DocumentTypesBox
-            // 
-            this.DocumentTypesBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DocumentTypesBox.FormattingEnabled = true;
-            this.DocumentTypesBox.Location = new System.Drawing.Point(10, 10);
-            this.DocumentTypesBox.Margin = new System.Windows.Forms.Padding(10);
-            this.DocumentTypesBox.Name = "DocumentTypesBox";
-            this.DocumentTypesBox.Size = new System.Drawing.Size(329, 21);
-            this.DocumentTypesBox.TabIndex = 1;
-            this.DocumentTypesBox.SelectedIndexChanged += new System.EventHandler(this.DocumentTypesBox_SelectedIndexChanged);
-            // 
-            // MedicalBinderIndexControl
+            // ABBinderControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "MedicalBinderIndexControl";
+            this.Name = "ABBinderControl";
             this.Size = new System.Drawing.Size(1402, 462);
-            this.Load += new System.EventHandler(this.MedicalBinderIndexControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DataGridView;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox SearchBox;
+        private System.Windows.Forms.ComboBox DocumentTypesBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Button ExportPDFButton;
         internal System.Windows.Forms.Button ExportWordButton;
+        private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.TextBox SearchBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.ComboBox DocumentTypesBox;
     }
 }

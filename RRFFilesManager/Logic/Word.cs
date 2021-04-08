@@ -101,5 +101,26 @@ namespace RRFFilesManager.Logic
         {
             return ((char)(i + 65)).ToString();
         }
+
+        public static void FillDocumentABBReport(Document document, File file, IEnumerable<Archive> archives)
+        {
+            if (file == null || archives?.Count() == 0)
+                return;
+            FillDocument(document, file);
+            Range range = document.Range(0, 0);
+            if (range.Find.Execute("$$$ABBReport$$$"))
+            {
+                ReplaceAll(document, "$$$ABBReport$$$", "");
+                int i = 0;
+                foreach(var archive in archives)
+                {
+                    range.InsertAfter(archive.Name);
+                    i++;
+                    if(archives.Count() > i)
+                        range.InsertAfter(Environment.NewLine);
+                    
+                }
+            }
+        }
     }
 }
