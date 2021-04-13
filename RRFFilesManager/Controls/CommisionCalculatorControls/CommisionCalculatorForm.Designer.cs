@@ -57,7 +57,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.MatterTypeBox = new System.Windows.Forms.TextBox();
             this.ResponsibleParalegalCB = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.SettlementDateTB = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.DeductibleAmountTB = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -76,9 +75,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.HowManyHearingsLabel = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.DidMatterProceedToTrialChB = new System.Windows.Forms.CheckBox();
-            this.DidMatterProceedToHearingChB = new System.Windows.Forms.CheckBox();
-            this.HowManyHearingsTB = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
@@ -116,6 +112,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.RP2xDeductibleAchievedTB = new System.Windows.Forms.TextBox();
             this.RPMatterProceededToHearingTB = new System.Windows.Forms.TextBox();
             this.RPTotalCommissionTB = new System.Windows.Forms.TextBox();
+            this.SettlementDateDTP = new System.Windows.Forms.DateTimePicker();
+            this.DidMatterProceedToTrialCB = new System.Windows.Forms.ComboBox();
+            this.DidMatterProceedToHearingCB = new System.Windows.Forms.ComboBox();
+            this.HowManyHearingsCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -382,6 +382,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // LawyerContractTermTB
             // 
             this.LawyerContractTermTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LawyerContractTermTB.Enabled = false;
             this.LawyerContractTermTB.Location = new System.Drawing.Point(157, 143);
             this.LawyerContractTermTB.Margin = new System.Windows.Forms.Padding(7);
             this.LawyerContractTermTB.Name = "LawyerContractTermTB";
@@ -433,6 +434,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.FileLawyerTB.Name = "FileLawyerTB";
             this.FileLawyerTB.Size = new System.Drawing.Size(343, 20);
             this.FileLawyerTB.TabIndex = 5;
+            this.FileLawyerTB.TextChanged += new System.EventHandler(this.FileLawyerTB_TextChanged);
             // 
             // label4
             // 
@@ -469,6 +471,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.MatterTypeBox.Name = "MatterTypeBox";
             this.MatterTypeBox.Size = new System.Drawing.Size(343, 20);
             this.MatterTypeBox.TabIndex = 1;
+            this.MatterTypeBox.TextChanged += new System.EventHandler(this.MatterTypeBox_TextChanged);
             // 
             // ResponsibleParalegalCB
             // 
@@ -485,7 +488,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.SettlementDateTB, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.SettlementDateDTP, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.label10, 0, 6);
             this.tableLayoutPanel6.Controls.Add(this.DeductibleAmountTB, 1, 6);
             this.tableLayoutPanel6.Controls.Add(this.label11, 0, 5);
@@ -514,16 +517,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel6.Size = new System.Drawing.Size(507, 245);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
-            // SettlementDateTB
-            // 
-            this.SettlementDateTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SettlementDateTB.Enabled = false;
-            this.SettlementDateTB.Location = new System.Drawing.Point(157, 41);
-            this.SettlementDateTB.Margin = new System.Windows.Forms.Padding(7);
-            this.SettlementDateTB.Name = "SettlementDateTB";
-            this.SettlementDateTB.Size = new System.Drawing.Size(343, 20);
-            this.SettlementDateTB.TabIndex = 147;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -540,6 +533,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // DeductibleAmountTB
             // 
             this.DeductibleAmountTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeductibleAmountTB.Enabled = false;
             this.DeductibleAmountTB.Location = new System.Drawing.Point(157, 211);
             this.DeductibleAmountTB.Margin = new System.Windows.Forms.Padding(7);
             this.DeductibleAmountTB.Name = "DeductibleAmountTB";
@@ -602,6 +596,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.FeeAmountBeforeTaxTB.Name = "FeeAmountBeforeTaxTB";
             this.FeeAmountBeforeTaxTB.Size = new System.Drawing.Size(343, 20);
             this.FeeAmountBeforeTaxTB.TabIndex = 7;
+            this.FeeAmountBeforeTaxTB.TextChanged += new System.EventHandler(this.FeeAmountBeforeTaxTB_TextChanged);
             // 
             // label14
             // 
@@ -669,6 +664,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.InvoiceDateDTP.Name = "InvoiceDateDTP";
             this.InvoiceDateDTP.Size = new System.Drawing.Size(343, 20);
             this.InvoiceDateDTP.TabIndex = 148;
+            this.InvoiceDateDTP.ValueChanged += new System.EventHandler(this.InvoiceDateDTP_ValueChanged);
             // 
             // panel1
             // 
@@ -685,13 +681,13 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel7.Controls.Add(this.HowManyHearingsCB, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.DidMatterProceedToHearingCB, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.HowManyHearingsLabel, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.label18, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.label17, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.DidMatterProceedToTrialChB, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.DidMatterProceedToHearingChB, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.HowManyHearingsTB, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.DidMatterProceedToTrialCB, 1, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 75);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
@@ -709,7 +705,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.HowManyHearingsLabel.Location = new System.Drawing.Point(5, 66);
             this.HowManyHearingsLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.HowManyHearingsLabel.Name = "HowManyHearingsLabel";
-            this.HowManyHearingsLabel.Size = new System.Drawing.Size(238, 34);
+            this.HowManyHearingsLabel.Size = new System.Drawing.Size(218, 34);
             this.HowManyHearingsLabel.TabIndex = 6;
             this.HowManyHearingsLabel.Text = "How Many Hearings";
             this.HowManyHearingsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -723,7 +719,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label18.Location = new System.Drawing.Point(5, 33);
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(238, 33);
+            this.label18.Size = new System.Drawing.Size(218, 33);
             this.label18.TabIndex = 5;
             this.label18.Text = "Did Matter Proceed to Hearing";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -736,40 +732,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label17.Location = new System.Drawing.Point(5, 0);
             this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(238, 33);
+            this.label17.Size = new System.Drawing.Size(218, 33);
             this.label17.TabIndex = 1;
             this.label17.Text = "Did Matter Proceed to Trial";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // DidMatterProceedToTrialChB
-            // 
-            this.DidMatterProceedToTrialChB.AutoSize = true;
-            this.DidMatterProceedToTrialChB.Location = new System.Drawing.Point(255, 7);
-            this.DidMatterProceedToTrialChB.Margin = new System.Windows.Forms.Padding(7);
-            this.DidMatterProceedToTrialChB.Name = "DidMatterProceedToTrialChB";
-            this.DidMatterProceedToTrialChB.Size = new System.Drawing.Size(15, 14);
-            this.DidMatterProceedToTrialChB.TabIndex = 2;
-            this.DidMatterProceedToTrialChB.UseVisualStyleBackColor = true;
-            // 
-            // DidMatterProceedToHearingChB
-            // 
-            this.DidMatterProceedToHearingChB.AutoSize = true;
-            this.DidMatterProceedToHearingChB.Location = new System.Drawing.Point(255, 40);
-            this.DidMatterProceedToHearingChB.Margin = new System.Windows.Forms.Padding(7);
-            this.DidMatterProceedToHearingChB.Name = "DidMatterProceedToHearingChB";
-            this.DidMatterProceedToHearingChB.Size = new System.Drawing.Size(15, 14);
-            this.DidMatterProceedToHearingChB.TabIndex = 3;
-            this.DidMatterProceedToHearingChB.UseVisualStyleBackColor = true;
-            this.DidMatterProceedToHearingChB.CheckedChanged += new System.EventHandler(this.DidMatterProceedToHearingChB_CheckedChanged);
-            // 
-            // HowManyHearingsTB
-            // 
-            this.HowManyHearingsTB.Location = new System.Drawing.Point(255, 73);
-            this.HowManyHearingsTB.Margin = new System.Windows.Forms.Padding(7);
-            this.HowManyHearingsTB.Name = "HowManyHearingsTB";
-            this.HowManyHearingsTB.Size = new System.Drawing.Size(26, 20);
-            this.HowManyHearingsTB.TabIndex = 4;
-            this.HowManyHearingsTB.Visible = false;
             // 
             // tableLayoutPanel8
             // 
@@ -815,6 +781,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.CalculateButton.TabIndex = 148;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = false;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // label20
             // 
@@ -1254,6 +1221,54 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.RPTotalCommissionTB.Size = new System.Drawing.Size(96, 20);
             this.RPTotalCommissionTB.TabIndex = 12;
             // 
+            // SettlementDateDTP
+            // 
+            this.SettlementDateDTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SettlementDateDTP.Location = new System.Drawing.Point(157, 41);
+            this.SettlementDateDTP.Margin = new System.Windows.Forms.Padding(7);
+            this.SettlementDateDTP.Name = "SettlementDateDTP";
+            this.SettlementDateDTP.Size = new System.Drawing.Size(343, 20);
+            this.SettlementDateDTP.TabIndex = 149;
+            this.SettlementDateDTP.ValueChanged += new System.EventHandler(this.SettlementDateDTP_ValueChanged);
+            // 
+            // DidMatterProceedToTrialCB
+            // 
+            this.DidMatterProceedToTrialCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DidMatterProceedToTrialCB.FormattingEnabled = true;
+            this.DidMatterProceedToTrialCB.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.DidMatterProceedToTrialCB.Location = new System.Drawing.Point(231, 3);
+            this.DidMatterProceedToTrialCB.Name = "DidMatterProceedToTrialCB";
+            this.DidMatterProceedToTrialCB.Size = new System.Drawing.Size(54, 21);
+            this.DidMatterProceedToTrialCB.TabIndex = 7;
+            // 
+            // DidMatterProceedToHearingCB
+            // 
+            this.DidMatterProceedToHearingCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DidMatterProceedToHearingCB.FormattingEnabled = true;
+            this.DidMatterProceedToHearingCB.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.DidMatterProceedToHearingCB.Location = new System.Drawing.Point(231, 36);
+            this.DidMatterProceedToHearingCB.Name = "DidMatterProceedToHearingCB";
+            this.DidMatterProceedToHearingCB.Size = new System.Drawing.Size(54, 21);
+            this.DidMatterProceedToHearingCB.TabIndex = 8;
+            this.DidMatterProceedToHearingCB.SelectedIndexChanged += new System.EventHandler(this.DidMatterProceedToHearingCB_SelectedIndexChanged);
+            // 
+            // HowManyHearingsCB
+            // 
+            this.HowManyHearingsCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HowManyHearingsCB.FormattingEnabled = true;
+            this.HowManyHearingsCB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.HowManyHearingsCB.Location = new System.Drawing.Point(231, 69);
+            this.HowManyHearingsCB.Name = "HowManyHearingsCB";
+            this.HowManyHearingsCB.Size = new System.Drawing.Size(54, 21);
+            this.HowManyHearingsCB.TabIndex = 9;
+            // 
             // CommissionCalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1328,7 +1343,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
         private System.Windows.Forms.TextBox MatterTypeBox;
         private System.Windows.Forms.ComboBox ResponsibleParalegalCB;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.TextBox SettlementDateTB;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox DeductibleAmountTB;
         private System.Windows.Forms.Label label11;
@@ -1347,9 +1361,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
         private System.Windows.Forms.Label HowManyHearingsLabel;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckBox DidMatterProceedToTrialChB;
-        private System.Windows.Forms.CheckBox DidMatterProceedToHearingChB;
-        private System.Windows.Forms.TextBox HowManyHearingsTB;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         internal System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Label label20;
@@ -1387,5 +1398,9 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
         private System.Windows.Forms.TextBox RPMatterProceededToHearingTB;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox RPTotalCommissionTB;
+        private System.Windows.Forms.DateTimePicker SettlementDateDTP;
+        private System.Windows.Forms.ComboBox HowManyHearingsCB;
+        private System.Windows.Forms.ComboBox DidMatterProceedToHearingCB;
+        private System.Windows.Forms.ComboBox DidMatterProceedToTrialCB;
     }
 }

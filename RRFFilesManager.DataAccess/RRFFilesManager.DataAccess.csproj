@@ -328,6 +328,14 @@
     <Compile Include="Migrations\20210404132214_Archive_DocumentCategoryAndGroup.designer.cs">
       <DependentUpon>20210404132214_Archive_DocumentCategoryAndGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210413034549_Lawyer_ContractDate.cs" />
+    <Compile Include="Migrations\20210413034549_Lawyer_ContractDate.designer.cs">
+      <DependentUpon>20210413034549_Lawyer_ContractDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210413040850_Lawyer_EarnBaseCommissionAsFileLawyer.cs" />
+    <Compile Include="Migrations\20210413040850_Lawyer_EarnBaseCommissionAsFileLawyer.designer.cs">
+      <DependentUpon>20210413040850_Lawyer_EarnBaseCommissionAsFileLawyer.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionRepository.cs" />
     <Compile Include="IoC\DependencyInjectionExtensions.cs" />
     <Compile Include="DisabilityInsuranceCompanyRepository.cs" />

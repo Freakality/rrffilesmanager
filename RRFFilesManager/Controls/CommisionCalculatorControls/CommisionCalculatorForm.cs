@@ -78,18 +78,133 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             Home.Instance.Show();
         }
 
-        private void DidMatterProceedToHearingChB_CheckedChanged(object sender, EventArgs e)
+        private void MatterTypeBox_TextChanged(object sender, EventArgs e)
         {
-            if (DidMatterProceedToHearingChB.Checked)
+            if(MatterTypeBox.Text == "Motor Vehicle Accident")
+            {
+                var items = new string[] {
+                    "MVA Tort Only",
+                    "MVA Tort",
+                    "MVA AB",
+                    "AB Only"
+                };
+                CommissionSubTypeCB.DataSource = items.ToList();
+            }
+            else
+            {
+                CommissionSubTypeCB.DataSource = null;
+            }
+        }
+
+        private void DidMatterProceedToHearingCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DidMatterProceedToHearingCB.Text == "Yes")
             {
                 HowManyHearingsLabel.Show();
-                HowManyHearingsTB.Show();
+                HowManyHearingsCB.Show();
             }
             else
             {
                 HowManyHearingsLabel.Hide();
-                HowManyHearingsTB.Hide();
+                HowManyHearingsCB.Hide();
             }
+        }
+
+        private void FileLawyerTB_TextChanged(object sender, EventArgs e)
+        {
+            if(IsPostContract())
+            {
+                LawyerContractTermTB.Text = "Post Contract";
+            }
+            else
+            {
+                LawyerContractTermTB.Text = "Pre-Contract";
+            }
+        }
+
+        private bool IsPostContract()
+        {
+            return File.FileLawyer.ContractDate == null || File.DateOfCall >= File.FileLawyer.ContractDate;
+        }
+        private bool IsDeductibleAchieved()
+        {
+            var feeAmount = Double.Parse(FeeAmountBeforeTaxTB.Text);
+            var deductibleAmount = GetDeductibleAmount();
+            return deductibleAmount < feeAmount;
+        }
+
+        private void Calculate()
+        {
+            FillFLBaseCommissionTB();
+            FillDeductibleAmount();
+
+        }
+
+        private void FeeAmountBeforeTaxTB_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FillFLBaseCommissionTB()
+        {
+            FLBaseCommissionTB.Text = $"{GetFileLawyerBaseComission()}";
+        }
+
+        private double GetFileLawyerBaseComission()
+        {
+            if ((bool)File.FileLawyer.EarnBaseCommissionAsFileLawyer)
+                return Double.Parse(FeeAmountBeforeTaxTB.Text) * 0.1;
+            else
+                return 0;
+        }
+
+        private void FillDeductibleAmount()
+        {
+            DeductibleAmountTB.Text = $"{GetDeductibleAmount()}";
+        }
+
+        private double GetDeductibleAmount()
+        {
+            var minDate = SettlementDateDTP.Value.AddDays(30);
+            if (minDate > InvoiceDateDTP.Value)
+                minDate = InvoiceDateDTP.Value;
+            double days = (minDate - File.DateOfCall).TotalDays;
+            var months = Math.Ceiling(days / 30);
+            var amount = months * 1000;
+            if (File.DateOfCall.Day > 16)
+                amount -= 500;
+            if(minDate.Day < 16)
+                amount -= 500;
+            return amount;
+        }
+
+        private double GetResponsibleLawyerBaseComission()
+        {
+            var feeAmount = Double.Parse(FeeAmountBeforeTaxTB.Text);
+            var deductibleAmount = GetDeductibleAmount();
+            var isDeductibleAchieved = IsDeductibleAchieved();
+            var isPostContract = IsPostContract();
+            var multiplier = 0.5;
+            if (!isDeductibleAchieved)
+            {
+                multiplier /= 2;
+            }
+            return feeAmount - 0.5 * deductibleAmount * multiplier;
+        }
+
+        private void SettlementDateDTP_ValueChanged(object sender, EventArgs e)
+        {
+            //FillDeductibleAmount();
+        }
+
+        private void InvoiceDateDTP_ValueChanged(object sender, EventArgs e)
+        {
+            //FillDeductibleAmount();
+        }
+
+        private void CalculateButton_Click(object sender, EventArgs e)
+        {
+            Calculate();
         }
     }
 }
