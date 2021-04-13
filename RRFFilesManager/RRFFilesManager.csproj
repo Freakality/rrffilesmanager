@@ -205,10 +205,12 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.8.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -360,6 +362,12 @@
     <Compile Include="Controls\ClientControls\ClientInfo.Designer.cs">
       <DependentUpon>ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.Designer.cs">
+      <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CompanyControls\CompanyInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +379,9 @@
     </Compile>
     <Compile Include="Controls\CompanyControls\FindCompany.Designer.cs">
       <DependentUpon>FindCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Components\CurrencyTextBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\ContactControls\GroupForm.cs">
       <SubType>Form</SubType>
@@ -527,6 +538,7 @@
     <Compile Include="Logic\FileManager.cs" />
     <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />
+    <Compile Include="Logic\UserManager.cs" />
     <Compile Include="PdfAxHost .cs">
       <SubType>Component</SubType>
     </Compile>
@@ -618,6 +630,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ClientControls\ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.resx">
+      <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CompanyControls\CompanyInfo.resx">
       <DependentUpon>CompanyInfo.cs</DependentUpon>

@@ -16,6 +16,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using RRFFilesManager.Controls.ArchiveControls;
+using RRFFilesManager.Controls.CommisionCalculatorControls;
 
 namespace RRFFilesManager
 {
@@ -24,6 +25,8 @@ namespace RRFFilesManager
         public Home()
         {
             InitializeComponent();
+            UserFullName.Text = UserManager.GetUserFullName();
+            UserName.Text = UserManager.GetFullUserName();
         }
 
         private static Home instance;
@@ -132,6 +135,15 @@ namespace RRFFilesManager
                 var uploadArchivesForm = new UploadArchivesForm();
                 uploadArchivesForm.Show();
                 PleaseWait.Instance.Hide();
+        }
+
+        private void CommisionCalculatorButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            PleaseWait.Instance.Show();
+            var form = new CommissionCalculatorForm();
+            form.Show();
+            PleaseWait.Instance.Hide();
         }
     }
 }
