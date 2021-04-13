@@ -156,6 +156,8 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -802,6 +804,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             // CalculateButton
             // 
+            this.CalculateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CalculateButton.BackColor = System.Drawing.Color.Maroon;
             this.CalculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalculateButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -930,6 +933,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             // RLBaseCommissionTB
             // 
+            this.RLBaseCommissionTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RLBaseCommissionTB.Enabled = false;
             this.RLBaseCommissionTB.Location = new System.Drawing.Point(203, 3);
             this.RLBaseCommissionTB.Name = "RLBaseCommissionTB";
@@ -1055,6 +1059,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel10.Controls.Add(this.FLBaseCommissionTB, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.label31, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.FLTotalCommissionTB, 1, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(103, 93);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 6;
@@ -1082,6 +1087,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             // FLBaseCommissionTB
             // 
+            this.FLBaseCommissionTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FLBaseCommissionTB.Enabled = false;
             this.FLBaseCommissionTB.Location = new System.Drawing.Point(203, 3);
             this.FLBaseCommissionTB.Name = "FLBaseCommissionTB";
@@ -1166,6 +1172,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             // RPBaseCommissionTB
             // 
+            this.RPBaseCommissionTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RPBaseCommissionTB.Enabled = false;
             this.RPBaseCommissionTB.Location = new System.Drawing.Point(203, 3);
             this.RPBaseCommissionTB.Name = "RPBaseCommissionTB";
