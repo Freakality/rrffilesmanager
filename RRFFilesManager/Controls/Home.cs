@@ -139,11 +139,20 @@ namespace RRFFilesManager
 
         private void CommisionCalculatorButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            PleaseWait.Instance.Show();
-            var form = new CommissionCalculatorForm();
-            form.Show();
-            PleaseWait.Instance.Hide();
+            var authorizedUsers = new string[] { "FOISYR", "MANZANOD", "ITDEV", "FELIX" };
+            if (authorizedUsers.Any(user => UserManager.GetUserName().ToUpper() == user))
+            {
+                Hide();
+                PleaseWait.Instance.Show();
+                var form = new CommissionCalculatorForm();
+                form.Show();
+                PleaseWait.Instance.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Not Authorized");
+            }
+            
         }
     }
 }
