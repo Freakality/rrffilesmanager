@@ -700,6 +700,7 @@
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.ABDenials = new System.Windows.Forms.TabPage();
             this.TabControl5 = new System.Windows.Forms.TabControl();
+            this.ABBinderTab = new System.Windows.Forms.TabPage();
             this.ABTimeline = new System.Windows.Forms.TabPage();
             this.ABPolicyParticulars = new System.Windows.Forms.TabPage();
             this.Denials = new System.Windows.Forms.TabPage();
@@ -790,7 +791,6 @@
             this.ClientNameTextBox = new System.Windows.Forms.TextBox();
             this.FindFileButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ABBinderTab = new System.Windows.Forms.TabPage();
             Label73 = new System.Windows.Forms.Label();
             Label74 = new System.Windows.Forms.Label();
             Label75 = new System.Windows.Forms.Label();
@@ -4875,7 +4875,7 @@
             this.PrescriptionSummaries.Location = new System.Drawing.Point(4, 26);
             this.PrescriptionSummaries.Name = "PrescriptionSummaries";
             this.PrescriptionSummaries.Padding = new System.Windows.Forms.Padding(3);
-            this.PrescriptionSummaries.Size = new System.Drawing.Size(1402, 462);
+            this.PrescriptionSummaries.Size = new System.Drawing.Size(1423, 479);
             this.PrescriptionSummaries.TabIndex = 3;
             this.PrescriptionSummaries.Text = "Prescription Summaries";
             this.PrescriptionSummaries.UseVisualStyleBackColor = true;
@@ -4953,7 +4953,7 @@
             this.MedicalAppointments.Location = new System.Drawing.Point(4, 26);
             this.MedicalAppointments.Name = "MedicalAppointments";
             this.MedicalAppointments.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalAppointments.Size = new System.Drawing.Size(1402, 462);
+            this.MedicalAppointments.Size = new System.Drawing.Size(1423, 479);
             this.MedicalAppointments.TabIndex = 0;
             this.MedicalAppointments.Text = "Medical Appointments";
             this.MedicalAppointments.UseVisualStyleBackColor = true;
@@ -7254,6 +7254,16 @@
             this.TabControl5.Size = new System.Drawing.Size(1431, 509);
             this.TabControl5.TabIndex = 5;
             // 
+            // ABBinderTab
+            // 
+            this.ABBinderTab.Location = new System.Drawing.Point(4, 26);
+            this.ABBinderTab.Name = "ABBinderTab";
+            this.ABBinderTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ABBinderTab.Size = new System.Drawing.Size(1423, 479);
+            this.ABBinderTab.TabIndex = 7;
+            this.ABBinderTab.Text = "AB Binder";
+            this.ABBinderTab.UseVisualStyleBackColor = true;
+            // 
             // ABTimeline
             // 
             this.ABTimeline.Location = new System.Drawing.Point(4, 26);
@@ -8210,16 +8220,6 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 142;
             this.PictureBox1.TabStop = false;
-            // 
-            // ABBinderTab
-            // 
-            this.ABBinderTab.Location = new System.Drawing.Point(4, 26);
-            this.ABBinderTab.Name = "ABBinderTab";
-            this.ABBinderTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ABBinderTab.Size = new System.Drawing.Size(1423, 479);
-            this.ABBinderTab.TabIndex = 7;
-            this.ABBinderTab.Text = "AB Binder";
-            this.ABBinderTab.UseVisualStyleBackColor = true;
             // 
             // FileManager
             // 

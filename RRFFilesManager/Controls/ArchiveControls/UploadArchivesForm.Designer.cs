@@ -70,12 +70,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.ArchivesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
             groupBox1 = new System.Windows.Forms.GroupBox();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
@@ -639,6 +639,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
+            // previewHandlerHost1
+            // 
+            this.previewHandlerHost1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewHandlerHost1.Location = new System.Drawing.Point(0, 0);
+            this.previewHandlerHost1.Name = "previewHandlerHost1";
+            this.previewHandlerHost1.Size = new System.Drawing.Size(465, 665);
+            this.previewHandlerHost1.TabIndex = 4;
+            this.previewHandlerHost1.Text = "previewHandlerHost2";
+            // 
             // richTextBox
             // 
             this.richTextBox.BackColor = System.Drawing.Color.White;
@@ -679,15 +688,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Multiselect = true;
-            // 
-            // previewHandlerHost1
-            // 
-            this.previewHandlerHost1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewHandlerHost1.Location = new System.Drawing.Point(0, 0);
-            this.previewHandlerHost1.Name = "previewHandlerHost1";
-            this.previewHandlerHost1.Size = new System.Drawing.Size(465, 665);
-            this.previewHandlerHost1.TabIndex = 4;
-            this.previewHandlerHost1.Text = "previewHandlerHost2";
             // 
             // UploadArchivesForm
             // 

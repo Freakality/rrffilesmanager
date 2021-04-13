@@ -33,7 +33,6 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.CompletedQuestionnaireLink = new System.Windows.Forms.LinkLabel();
-            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.FindClientButton = new System.Windows.Forms.Button();
             this.Label41 = new System.Windows.Forms.Label();
             this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,7 +62,6 @@
             this.PCIEmail = new System.Windows.Forms.TextBox();
             this.PCIProvince = new System.Windows.Forms.ComboBox();
             this.PCIEmailToText = new System.Windows.Forms.TextBox();
-            this.PCIMobileCarrier = new System.Windows.Forms.ComboBox();
             this.Label14 = new System.Windows.Forms.Label();
             this.PCIPostalCode = new System.Windows.Forms.TextBox();
             this.Label13 = new System.Windows.Forms.Label();
@@ -76,12 +74,14 @@
             this.MonthBirth = new System.Windows.Forms.ComboBox();
             this.YearBirth = new System.Windows.Forms.MaskedTextBox();
             this.DayBirth = new System.Windows.Forms.ComboBox();
+            this.PCIMobileCarrier = new System.Windows.Forms.ComboBox();
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
+            this.PhotoPictureBox = new System.Windows.Forms.PictureBox();
             this.PotentialClientInfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.TableLayoutPanel4.SuspendLayout();
             this.TableLayoutPanel3.SuspendLayout();
             this.TableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // PotentialClientInfoPanel
@@ -144,19 +144,6 @@
             this.CompletedQuestionnaireLink.Text = "Completed Questionnaire";
             this.CompletedQuestionnaireLink.Visible = false;
             this.CompletedQuestionnaireLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CompletedQuestionnaireLink_LinkClicked);
-            // 
-            // PhotoPictureBox
-            // 
-            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
-            this.PhotoPictureBox.Location = new System.Drawing.Point(987, 65);
-            this.PhotoPictureBox.Name = "PhotoPictureBox";
-            this.PhotoPictureBox.Size = new System.Drawing.Size(250, 250);
-            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PhotoPictureBox.TabIndex = 6;
-            this.PhotoPictureBox.TabStop = false;
-            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // FindClientButton
             // 
@@ -498,19 +485,6 @@
             this.PCIEmailToText.Size = new System.Drawing.Size(295, 24);
             this.PCIEmailToText.TabIndex = 27;
             // 
-            // PCIMobileCarrier
-            // 
-            this.PCIMobileCarrier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCIMobileCarrier.DisplayMember = "Carrier";
-            this.PCIMobileCarrier.FormattingEnabled = true;
-            this.PCIMobileCarrier.Location = new System.Drawing.Point(3, 260);
-            this.PCIMobileCarrier.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.PCIMobileCarrier.Name = "PCIMobileCarrier";
-            this.PCIMobileCarrier.Size = new System.Drawing.Size(295, 25);
-            this.PCIMobileCarrier.TabIndex = 28;
-            this.PCIMobileCarrier.ValueMember = "Carrier";
-            // 
             // Label14
             // 
             this.Label14.AutoSize = true;
@@ -566,7 +540,7 @@
             this.TableLayoutPanel9.ColumnCount = 3;
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1295F));
             this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.8705F));
-            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.TableLayoutPanel9.Controls.Add(this.Label70, 0, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label71, 1, 0);
             this.TableLayoutPanel9.Controls.Add(this.Label72, 2, 0);
@@ -597,7 +571,7 @@
             // 
             this.Label71.AutoSize = true;
             this.Label71.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label71.Location = new System.Drawing.Point(69, 0);
+            this.Label71.Location = new System.Drawing.Point(68, 0);
             this.Label71.Name = "Label71";
             this.Label71.Size = new System.Drawing.Size(44, 13);
             this.Label71.TabIndex = 35;
@@ -607,7 +581,7 @@
             // 
             this.Label72.AutoSize = true;
             this.Label72.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.Label72.Location = new System.Drawing.Point(177, 0);
+            this.Label72.Location = new System.Drawing.Point(175, 0);
             this.Label72.Name = "Label72";
             this.Label72.Size = new System.Drawing.Size(30, 13);
             this.Label72.TabIndex = 36;
@@ -631,9 +605,9 @@
             "October",
             "November",
             "December"});
-            this.MonthBirth.Location = new System.Drawing.Point(69, 16);
+            this.MonthBirth.Location = new System.Drawing.Point(68, 16);
             this.MonthBirth.Name = "MonthBirth";
-            this.MonthBirth.Size = new System.Drawing.Size(102, 25);
+            this.MonthBirth.Size = new System.Drawing.Size(101, 25);
             this.MonthBirth.TabIndex = 38;
             // 
             // YearBirth
@@ -643,7 +617,7 @@
             this.YearBirth.Location = new System.Drawing.Point(3, 16);
             this.YearBirth.Mask = "0000";
             this.YearBirth.Name = "YearBirth";
-            this.YearBirth.Size = new System.Drawing.Size(60, 24);
+            this.YearBirth.Size = new System.Drawing.Size(59, 24);
             this.YearBirth.TabIndex = 40;
             this.YearBirth.ValidatingType = typeof(int);
             // 
@@ -686,11 +660,37 @@
             "29",
             "30",
             "31"});
-            this.DayBirth.Location = new System.Drawing.Point(177, 16);
+            this.DayBirth.Location = new System.Drawing.Point(175, 16);
             this.DayBirth.MaxDropDownItems = 11;
             this.DayBirth.Name = "DayBirth";
-            this.DayBirth.Size = new System.Drawing.Size(117, 25);
+            this.DayBirth.Size = new System.Drawing.Size(119, 25);
             this.DayBirth.TabIndex = 41;
+            // 
+            // PCIMobileCarrier
+            // 
+            this.PCIMobileCarrier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PCIMobileCarrier.DisplayMember = "Carrier";
+            this.PCIMobileCarrier.FormattingEnabled = true;
+            this.PCIMobileCarrier.Location = new System.Drawing.Point(3, 260);
+            this.PCIMobileCarrier.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.PCIMobileCarrier.Name = "PCIMobileCarrier";
+            this.PCIMobileCarrier.Size = new System.Drawing.Size(295, 25);
+            this.PCIMobileCarrier.TabIndex = 28;
+            this.PCIMobileCarrier.ValueMember = "Carrier";
+            // 
+            // PhotoPictureBox
+            // 
+            this.PhotoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PhotoPictureBox.Image")));
+            this.PhotoPictureBox.Location = new System.Drawing.Point(987, 65);
+            this.PhotoPictureBox.Name = "PhotoPictureBox";
+            this.PhotoPictureBox.Size = new System.Drawing.Size(250, 250);
+            this.PhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PhotoPictureBox.TabIndex = 6;
+            this.PhotoPictureBox.TabStop = false;
+            this.PhotoPictureBox.Click += new System.EventHandler(this.PhotoPictureBox_Click);
             // 
             // ClientInfo
             // 
@@ -704,13 +704,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientInfo_FormClosing);
             this.PotentialClientInfoPanel.ResumeLayout(false);
             this.PotentialClientInfoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.TableLayoutPanel4.ResumeLayout(false);
             this.TableLayoutPanel4.PerformLayout();
             this.TableLayoutPanel3.ResumeLayout(false);
             this.TableLayoutPanel3.PerformLayout();
             this.TableLayoutPanel9.ResumeLayout(false);
             this.TableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
