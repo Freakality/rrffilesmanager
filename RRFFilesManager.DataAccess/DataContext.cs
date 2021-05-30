@@ -31,6 +31,8 @@ namespace RRFFilesManager.DataAccess
         public DbSet<DocumentType> DocumentTypes { get; set; }
         public DbSet<UploadArchivesSettings> UploadArchivesSettings { get; set; }
         public DbSet<ComissionCalculator> ComissionCalculator { get; set; }
+        public DbSet<Pharmacy> Pharmacies { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

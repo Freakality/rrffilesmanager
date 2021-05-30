@@ -196,6 +196,7 @@
     <Compile Include="Abstractions\IDocumentTypeRepository.cs" />
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
+    <Compile Include="Abstractions\IPharmacyRepository.cs" />
     <Compile Include="Abstractions\IPositionRepository.cs" />
     <Compile Include="Abstractions\IHearAboutUsRepository.cs" />
     <Compile Include="Abstractions\IFileRepository.cs" />
@@ -218,6 +219,11 @@
     <Compile Include="DocumentTypeRepository.cs" />
     <Compile Include="FileRepository.cs" />
     <Compile Include="DocumentGroupRepository.cs" />
+    <Compile Include="Migrations\20210530135625_Pharmacy.cs" />
+    <Compile Include="Migrations\20210530135625_Pharmacy.designer.cs">
+      <DependentUpon>20210530135625_Pharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />
     <Compile Include="Migrations\20210127003412_Position.designer.cs">
       <DependentUpon>20210127003412_Position.cs</DependentUpon>
