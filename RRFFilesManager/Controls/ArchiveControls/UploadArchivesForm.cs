@@ -58,7 +58,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             _archiveManager = new ArchiveManager();
             _uploadArchivesSettingsRepository = Program.GetService<IUploadArchivesSettingsRepository>();
             InitializeComponent();
-            
 
             Utils.SetComboBoxDataSource(DocumentGroup, _documentGroupRepository.List());
             StandardBenefitsStatementUserControl = new StandardBenefitsStatementUserControl();
@@ -76,8 +75,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             NameOfOrganizationUserControl = new NameOfOrganizationUserControl();
             EmptyUserControl = new EmptyUserControl();
 
-            axAcroPDF.setShowToolbar(false);
-            axAcroPDF.setShowScrollbars(true);
 
             this.AllowDrop = true;
             this.DragEnter += new DragEventHandler(UploadArchivesForm_DragEnter);
@@ -199,81 +196,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             //Utils.SetContent(PreviewPanel, PreviewHandlerHost);
             try
             {
-                FilePreview(path);
+                previewArchiveUserControl.Preview(path);
             }
             catch { }
 
         }
-        private void FilePreview(string path)
-        {
-            if (path == null || previewHandlerHost1 == null || axAcroPDF == null || pictureBox == null || richTextBox == null)
-                return;
-            previewHandlerHost1.Hide();
-            axAcroPDF.Hide();
-            pictureBox.Hide();
-            richTextBox.Hide();
-
-            var ext = Path.GetExtension(path);
-            var perceivedType = Convert.ToString(Registry.ClassesRoot.OpenSubKey(ext).GetValue("PerceivedType"));
-            if (ext == ".pdf")
-            {
-                //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UploadArchivesForm));
-                //axAcroPDF = new AxAcroPDF();
-                //((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
-                //this.axAcroPDF.Dock = System.Windows.Forms.DockStyle.Fill;
-                //this.axAcroPDF.Enabled = true;
-                //this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
-                //this.axAcroPDF.Name = "axAcroPDF";
-                //this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
-                //this.axAcroPDF.Size = new System.Drawing.Size(465, 665);
-                //this.axAcroPDF.TabIndex = 0;
-                //this.axAcroPDF.Visible = false;
-                //((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
-                axAcroPDF.LoadFile(path);
-                axAcroPDF.src = path;
-                axAcroPDF.setShowToolbar(false);
-                //axAcroPDF.setLayoutMode("SinglePage");
-                //axAcroPDF.setPageMode("PDUseNone");
-                axAcroPDF.Show();
-            }
-            else if (ext == ".jpg" || ext == ".jpeg" || ext == ".png" || perceivedType == "image")
-            {
-                var imagenOriginal = new Bitmap(path);
-                Bitmap resized = imagenOriginal;
-                var maxWidth = PreviewPanel.Width;
-                var maxHeight = PreviewPanel.Height;
-                if (imagenOriginal.Width > maxWidth)
-                {
-                    var ratio = (double)imagenOriginal.Width / (double)maxWidth;
-                    var height = Convert.ToInt32(Math.Round((double)imagenOriginal.Height / ratio));
-                    resized = new Bitmap(imagenOriginal, new Size(maxWidth, height));
-                }
-                else if (imagenOriginal.Height > Height)
-                {
-                    var ratio = (double)imagenOriginal.Height / (double)Height;
-                    var newWidth = Convert.ToInt32(Math.Round((double)imagenOriginal.Width / ratio));
-                    resized = new Bitmap(imagenOriginal, new Size(newWidth, maxHeight));
-                }
-                var width =
-
-                pictureBox.Image = resized;
-                pictureBox.Show();
-            }
-            else if (ext == ".txt" || perceivedType == "text")
-            {
-                richTextBox.Text = System.IO.File.ReadAllText(path);
-                richTextBox.Show();
-            }
-            else
-            {
-                //if (ext == ".doc" || ext == ".docx" || ext == ".xls" || ext == ".xlsx")
-                //{
-                previewHandlerHost1.Open(path);
-                previewHandlerHost1.Show();
-                //}
-            }
-        }
-
+        
         private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
         {
 
@@ -453,7 +381,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
                 UndoProcessedArchive(selected);
                 return;
             }
-            FilePreview(selected.Path);
+            previewArchiveUserControl.Preview(selected.Path);
         }
 
         private void UndoProcessedArchive(Models.Archive archive)

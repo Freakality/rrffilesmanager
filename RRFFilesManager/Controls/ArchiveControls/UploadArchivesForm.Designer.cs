@@ -32,7 +32,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             System.Windows.Forms.GroupBox groupBox1;
             System.Windows.Forms.Label DateOFCallLabel;
             System.Windows.Forms.Label label15;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UploadArchivesForm));
             this.Settings = new System.Windows.Forms.Button();
             this.SelectFolders = new System.Windows.Forms.Button();
             this.SelectFiles = new System.Windows.Forms.Button();
@@ -70,12 +69,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.ArchivesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
-            this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
-            this.richTextBox = new System.Windows.Forms.RichTextBox();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
+            this.previewArchiveUserControl = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             groupBox1 = new System.Windows.Forms.GroupBox();
             DateOFCallLabel = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
@@ -96,8 +93,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             ((System.ComponentModel.ISupportInitialize)(this.ArchivesGridView)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.PreviewPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -629,65 +624,34 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // PreviewPanel
             // 
-            this.PreviewPanel.Controls.Add(this.previewHandlerHost1);
-            this.PreviewPanel.Controls.Add(this.richTextBox);
-            this.PreviewPanel.Controls.Add(this.pictureBox);
-            this.PreviewPanel.Controls.Add(this.axAcroPDF);
+            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl);
+            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
             this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
             this.PreviewPanel.Name = "PreviewPanel";
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
-            // previewHandlerHost1
-            // 
-            this.previewHandlerHost1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewHandlerHost1.Location = new System.Drawing.Point(0, 0);
-            this.previewHandlerHost1.Name = "previewHandlerHost1";
-            this.previewHandlerHost1.Size = new System.Drawing.Size(465, 665);
-            this.previewHandlerHost1.TabIndex = 4;
-            this.previewHandlerHost1.Text = "previewHandlerHost2";
-            // 
-            // richTextBox
-            // 
-            this.richTextBox.BackColor = System.Drawing.Color.White;
-            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.ReadOnly = true;
-            this.richTextBox.Size = new System.Drawing.Size(465, 665);
-            this.richTextBox.TabIndex = 3;
-            this.richTextBox.Text = "";
-            this.richTextBox.Visible = false;
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(465, 665);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox.TabIndex = 2;
-            this.pictureBox.TabStop = false;
-            this.pictureBox.Visible = false;
-            // 
-            // axAcroPDF
-            // 
-            this.axAcroPDF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axAcroPDF.Enabled = true;
-            this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
-            this.axAcroPDF.Name = "axAcroPDF";
-            this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
-            this.axAcroPDF.Size = new System.Drawing.Size(465, 665);
-            this.axAcroPDF.TabIndex = 0;
-            this.axAcroPDF.Visible = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Multiselect = true;
+            // 
+            // previewArchiveUserControl1
+            // 
+            this.previewArchiveUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewArchiveUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
+            this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
+            this.previewArchiveUserControl1.TabIndex = 0;
+            // 
+            // previewArchiveUserControl
+            // 
+            this.previewArchiveUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewArchiveUserControl.Location = new System.Drawing.Point(0, 0);
+            this.previewArchiveUserControl.Name = "previewArchiveUserControl";
+            this.previewArchiveUserControl.Size = new System.Drawing.Size(465, 665);
+            this.previewArchiveUserControl.TabIndex = 1;
             // 
             // UploadArchivesForm
             // 
@@ -720,8 +684,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             ((System.ComponentModel.ISupportInitialize)(this.ArchivesGridView)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.PreviewPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -731,9 +693,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel PreviewPanel;
-        private AxAcroPDFLib.AxAcroPDF axAcroPDF;
-        private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.DataGridView ArchivesGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView FilesGridView;
@@ -767,9 +726,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private System.Windows.Forms.ComboBox DocumentType;
         internal System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel DocumentFormContent;
-        private PreviewHandlerHost previewHandlerHost1;
         private System.Windows.Forms.Button SelectFolders;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button Settings;
+        private PreviewArchiveUserControl previewArchiveUserControl1;
+        private PreviewArchiveUserControl previewArchiveUserControl;
     }
 }

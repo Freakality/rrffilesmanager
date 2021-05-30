@@ -332,6 +332,12 @@
     <Compile Include="Controls\ArchiveControls\PreparedByUserControl.Designer.cs">
       <DependentUpon>PreparedByUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ArchiveControls\PreviewArchiveUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ArchiveControls\PreviewArchiveUserControl.Designer.cs">
+      <DependentUpon>PreviewArchiveUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ArchiveControls\SenderRecipientUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -458,6 +464,18 @@
     </Compile>
     <Compile Include="Controls\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\FindPharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\FindPharmacy.Designer.cs">
+      <DependentUpon>FindPharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrescriptionSummariesControls\PrescriptionSummariesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PrescriptionSummariesControls\PrescriptionSummariesForm.Designer.cs">
+      <DependentUpon>PrescriptionSummariesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\TemplateControls\CreateTemplate.cs">
       <SubType>Form</SubType>
@@ -616,6 +634,9 @@
     <EmbeddedResource Include="Controls\ArchiveControls\PreparedByUserControl.resx">
       <DependentUpon>PreparedByUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ArchiveControls\PreviewArchiveUserControl.resx">
+      <DependentUpon>PreviewArchiveUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ArchiveControls\SenderRecipientUserControl.resx">
       <DependentUpon>SenderRecipientUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -675,6 +696,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PharmacyControls\FindPharmacy.resx">
+      <DependentUpon>FindPharmacy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TemplateControls\CreateTemplate.resx">
       <DependentUpon>CreateTemplate.cs</DependentUpon>

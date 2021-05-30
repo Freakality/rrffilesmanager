@@ -14,5 +14,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void SoftDelete(int pharmacyId);
         Pharmacy GetById(int pharmacyId);
         IEnumerable<Pharmacy> List();
+        IEnumerable<Pharmacy> Search(string searchText, int? take = null);
     }
 }
