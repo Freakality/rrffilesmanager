@@ -36,7 +36,7 @@ namespace RRFFilesManager.FileControls
 
         private void RefreshIntakeGridViewDataSource()
         {
-            GridView.DataSource = _fileRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 10);
+            GridView.DataSource = _fileRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 20);
         }
 
         public void SetOnlyHoldIntakes(bool value)

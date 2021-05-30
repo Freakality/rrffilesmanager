@@ -42,7 +42,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.Label41 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.CommissionSubTypeCB = new System.Windows.Forms.ComboBox();
+            this.ComissionSubTypeCB = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ParalegalContractTermTB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.MatterTypeBox = new System.Windows.Forms.TextBox();
             this.ResponsibleParalegalCB = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.SettlementDateDTP = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.DeductibleAmountTB = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,11 +73,13 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.InvoiceDateDTP = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.HowManyHearingsCB = new System.Windows.Forms.ComboBox();
+            this.DidMatterProceedToHearingCB = new System.Windows.Forms.ComboBox();
             this.HowManyHearingsLabel = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.DidMatterProceedToTrialCB = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.CalculateButton = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -84,6 +87,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.ResponsibleLawyerCommissionTB = new System.Windows.Forms.TextBox();
             this.ResponsibleParalegalCommissionTB = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label28 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.RLBaseCommissionTB = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -91,7 +95,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.RL2xDeductibleAchievedTB = new System.Windows.Forms.TextBox();
             this.RLMatterProceededToTrialTB = new System.Windows.Forms.TextBox();
             this.RLMatterProceededToHearingTB = new System.Windows.Forms.TextBox();
@@ -102,20 +105,17 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label31 = new System.Windows.Forms.Label();
             this.FLTotalCommissionTB = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.label29 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.RPBaseCommissionTB = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.RP15xDeductibleAchievedTB = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.RP2xDeductibleAchievedTB = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.RPMatterProceededToHearingTB = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.RPTotalCommissionTB = new System.Windows.Forms.TextBox();
-            this.SettlementDateDTP = new System.Windows.Forms.DateTimePicker();
-            this.DidMatterProceedToTrialCB = new System.Windows.Forms.ComboBox();
-            this.DidMatterProceedToHearingCB = new System.Windows.Forms.ComboBox();
-            this.HowManyHearingsCB = new System.Windows.Forms.ComboBox();
+            this.CalculateButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -153,6 +153,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.HomeButton.TabIndex = 144;
             this.HomeButton.Text = "Home";
             this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -293,7 +294,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.CommissionSubTypeCB, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.ComissionSubTypeCB, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.label9, 0, 6);
             this.tableLayoutPanel5.Controls.Add(this.ParalegalContractTermTB, 1, 6);
             this.tableLayoutPanel5.Controls.Add(this.label8, 0, 5);
@@ -321,15 +322,15 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel5.Size = new System.Drawing.Size(507, 245);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
-            // CommissionSubTypeCB
+            // ComissionSubTypeCB
             // 
-            this.CommissionSubTypeCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CommissionSubTypeCB.FormattingEnabled = true;
-            this.CommissionSubTypeCB.Location = new System.Drawing.Point(157, 41);
-            this.CommissionSubTypeCB.Margin = new System.Windows.Forms.Padding(7);
-            this.CommissionSubTypeCB.Name = "CommissionSubTypeCB";
-            this.CommissionSubTypeCB.Size = new System.Drawing.Size(343, 21);
-            this.CommissionSubTypeCB.TabIndex = 15;
+            this.ComissionSubTypeCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ComissionSubTypeCB.FormattingEnabled = true;
+            this.ComissionSubTypeCB.Location = new System.Drawing.Point(157, 41);
+            this.ComissionSubTypeCB.Margin = new System.Windows.Forms.Padding(7);
+            this.ComissionSubTypeCB.Name = "ComissionSubTypeCB";
+            this.ComissionSubTypeCB.Size = new System.Drawing.Size(343, 21);
+            this.ComissionSubTypeCB.TabIndex = 15;
             // 
             // label9
             // 
@@ -482,6 +483,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.ResponsibleParalegalCB.Name = "ResponsibleParalegalCB";
             this.ResponsibleParalegalCB.Size = new System.Drawing.Size(343, 21);
             this.ResponsibleParalegalCB.TabIndex = 14;
+            this.ResponsibleParalegalCB.SelectedIndexChanged += new System.EventHandler(this.ResponsibleParalegalCB_SelectedIndexChanged);
             // 
             // tableLayoutPanel6
             // 
@@ -516,6 +518,18 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(507, 245);
             this.tableLayoutPanel6.TabIndex = 1;
+            // 
+            // SettlementDateDTP
+            // 
+            this.SettlementDateDTP.CustomFormat = "MMM-dd-yyyy";
+            this.SettlementDateDTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SettlementDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.SettlementDateDTP.Location = new System.Drawing.Point(157, 41);
+            this.SettlementDateDTP.Margin = new System.Windows.Forms.Padding(7);
+            this.SettlementDateDTP.Name = "SettlementDateDTP";
+            this.SettlementDateDTP.Size = new System.Drawing.Size(343, 20);
+            this.SettlementDateDTP.TabIndex = 149;
+            this.SettlementDateDTP.ValueChanged += new System.EventHandler(this.SettlementDateDTP_ValueChanged);
             // 
             // label10
             // 
@@ -658,7 +672,9 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             // InvoiceDateDTP
             // 
+            this.InvoiceDateDTP.CustomFormat = "MMM-dd-yyyy";
             this.InvoiceDateDTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InvoiceDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.InvoiceDateDTP.Location = new System.Drawing.Point(157, 177);
             this.InvoiceDateDTP.Margin = new System.Windows.Forms.Padding(7);
             this.InvoiceDateDTP.Name = "InvoiceDateDTP";
@@ -696,6 +712,32 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(288, 100);
             this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // HowManyHearingsCB
+            // 
+            this.HowManyHearingsCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HowManyHearingsCB.FormattingEnabled = true;
+            this.HowManyHearingsCB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.HowManyHearingsCB.Location = new System.Drawing.Point(231, 69);
+            this.HowManyHearingsCB.Name = "HowManyHearingsCB";
+            this.HowManyHearingsCB.Size = new System.Drawing.Size(54, 21);
+            this.HowManyHearingsCB.TabIndex = 9;
+            // 
+            // DidMatterProceedToHearingCB
+            // 
+            this.DidMatterProceedToHearingCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DidMatterProceedToHearingCB.FormattingEnabled = true;
+            this.DidMatterProceedToHearingCB.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.DidMatterProceedToHearingCB.Location = new System.Drawing.Point(231, 36);
+            this.DidMatterProceedToHearingCB.Name = "DidMatterProceedToHearingCB";
+            this.DidMatterProceedToHearingCB.Size = new System.Drawing.Size(54, 21);
+            this.DidMatterProceedToHearingCB.TabIndex = 8;
+            this.DidMatterProceedToHearingCB.SelectedIndexChanged += new System.EventHandler(this.DidMatterProceedToHearingCB_SelectedIndexChanged);
             // 
             // HowManyHearingsLabel
             // 
@@ -737,6 +779,18 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label17.Text = "Did Matter Proceed to Trial";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // DidMatterProceedToTrialCB
+            // 
+            this.DidMatterProceedToTrialCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DidMatterProceedToTrialCB.FormattingEnabled = true;
+            this.DidMatterProceedToTrialCB.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.DidMatterProceedToTrialCB.Location = new System.Drawing.Point(231, 3);
+            this.DidMatterProceedToTrialCB.Name = "DidMatterProceedToTrialCB";
+            this.DidMatterProceedToTrialCB.Size = new System.Drawing.Size(54, 21);
+            this.DidMatterProceedToTrialCB.TabIndex = 7;
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -748,7 +802,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel8.Controls.Add(this.label20, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.label21, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.label22, 5, 0);
@@ -767,21 +821,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1326, 270);
             this.tableLayoutPanel8.TabIndex = 147;
-            // 
-            // CalculateButton
-            // 
-            this.CalculateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CalculateButton.BackColor = System.Drawing.Color.Maroon;
-            this.CalculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalculateButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalculateButton.ForeColor = System.Drawing.Color.White;
-            this.CalculateButton.Location = new System.Drawing.Point(1194, 404);
-            this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(134, 37);
-            this.CalculateButton.TabIndex = 148;
-            this.CalculateButton.Text = "Calculate";
-            this.CalculateButton.UseVisualStyleBackColor = false;
-            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // label20
             // 
@@ -885,6 +924,19 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel9.Size = new System.Drawing.Size(302, 174);
             this.tableLayoutPanel9.TabIndex = 9;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(5, 140);
+            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(190, 34);
+            this.label28.TabIndex = 8;
+            this.label28.Text = "Total Commission";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -893,7 +945,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label23.Location = new System.Drawing.Point(5, 0);
             this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(190, 29);
+            this.label23.Size = new System.Drawing.Size(190, 28);
             this.label23.TabIndex = 1;
             this.label23.Text = "Base Commission";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -912,10 +964,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label24.AutoSize = true;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(5, 29);
+            this.label24.Location = new System.Drawing.Point(5, 28);
             this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(190, 29);
+            this.label24.Size = new System.Drawing.Size(190, 28);
             this.label24.TabIndex = 3;
             this.label24.Text = "1.5x Deductible Achieved";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -924,7 +976,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             this.RL15xDeductibleAchievedTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RL15xDeductibleAchievedTB.Enabled = false;
-            this.RL15xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 32);
+            this.RL15xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 31);
             this.RL15xDeductibleAchievedTB.Name = "RL15xDeductibleAchievedTB";
             this.RL15xDeductibleAchievedTB.Size = new System.Drawing.Size(96, 20);
             this.RL15xDeductibleAchievedTB.TabIndex = 4;
@@ -934,10 +986,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label25.AutoSize = true;
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(5, 58);
+            this.label25.Location = new System.Drawing.Point(5, 56);
             this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(190, 29);
+            this.label25.Size = new System.Drawing.Size(190, 28);
             this.label25.TabIndex = 5;
             this.label25.Text = "2x Deductible Achieved";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -947,10 +999,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label26.AutoSize = true;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(5, 87);
+            this.label26.Location = new System.Drawing.Point(5, 84);
             this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(190, 29);
+            this.label26.Size = new System.Drawing.Size(190, 28);
             this.label26.TabIndex = 6;
             this.label26.Text = "Matter Proceeded to Trial";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -960,32 +1012,19 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label27.AutoSize = true;
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(5, 116);
+            this.label27.Location = new System.Drawing.Point(5, 112);
             this.label27.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(190, 29);
+            this.label27.Size = new System.Drawing.Size(190, 28);
             this.label27.TabIndex = 7;
             this.label27.Text = "Matter Proceeded to Hearing";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(5, 145);
-            this.label28.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(190, 29);
-            this.label28.TabIndex = 8;
-            this.label28.Text = "Total Commission";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // RL2xDeductibleAchievedTB
             // 
             this.RL2xDeductibleAchievedTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RL2xDeductibleAchievedTB.Enabled = false;
-            this.RL2xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 61);
+            this.RL2xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 59);
             this.RL2xDeductibleAchievedTB.Name = "RL2xDeductibleAchievedTB";
             this.RL2xDeductibleAchievedTB.Size = new System.Drawing.Size(96, 20);
             this.RL2xDeductibleAchievedTB.TabIndex = 9;
@@ -994,7 +1033,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             this.RLMatterProceededToTrialTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RLMatterProceededToTrialTB.Enabled = false;
-            this.RLMatterProceededToTrialTB.Location = new System.Drawing.Point(203, 90);
+            this.RLMatterProceededToTrialTB.Location = new System.Drawing.Point(203, 87);
             this.RLMatterProceededToTrialTB.Name = "RLMatterProceededToTrialTB";
             this.RLMatterProceededToTrialTB.Size = new System.Drawing.Size(96, 20);
             this.RLMatterProceededToTrialTB.TabIndex = 10;
@@ -1003,7 +1042,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             this.RLMatterProceededToHearingTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RLMatterProceededToHearingTB.Enabled = false;
-            this.RLMatterProceededToHearingTB.Location = new System.Drawing.Point(203, 119);
+            this.RLMatterProceededToHearingTB.Location = new System.Drawing.Point(203, 115);
             this.RLMatterProceededToHearingTB.Name = "RLMatterProceededToHearingTB";
             this.RLMatterProceededToHearingTB.Size = new System.Drawing.Size(96, 20);
             this.RLMatterProceededToHearingTB.TabIndex = 11;
@@ -1012,7 +1051,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             this.RLTotalCommissionTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RLTotalCommissionTB.Enabled = false;
-            this.RLTotalCommissionTB.Location = new System.Drawing.Point(203, 148);
+            this.RLTotalCommissionTB.Location = new System.Drawing.Point(203, 143);
             this.RLTotalCommissionTB.Name = "RLTotalCommissionTB";
             this.RLTotalCommissionTB.Size = new System.Drawing.Size(96, 20);
             this.RLTotalCommissionTB.TabIndex = 12;
@@ -1047,7 +1086,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label30.Location = new System.Drawing.Point(5, 0);
             this.label30.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(190, 29);
+            this.label30.Size = new System.Drawing.Size(190, 28);
             this.label30.TabIndex = 1;
             this.label30.Text = "Base Commission";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1066,10 +1105,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(5, 29);
+            this.label31.Location = new System.Drawing.Point(5, 28);
             this.label31.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(190, 29);
+            this.label31.Size = new System.Drawing.Size(190, 28);
             this.label31.TabIndex = 3;
             this.label31.Text = "Total Commission";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1078,7 +1117,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             this.FLTotalCommissionTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FLTotalCommissionTB.Enabled = false;
-            this.FLTotalCommissionTB.Location = new System.Drawing.Point(203, 32);
+            this.FLTotalCommissionTB.Location = new System.Drawing.Point(203, 31);
             this.FLTotalCommissionTB.Name = "FLTotalCommissionTB";
             this.FLTotalCommissionTB.Size = new System.Drawing.Size(96, 20);
             this.FLTotalCommissionTB.TabIndex = 4;
@@ -1111,19 +1150,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel11.Size = new System.Drawing.Size(302, 174);
             this.tableLayoutPanel11.TabIndex = 11;
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(5, 116);
-            this.label29.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(190, 29);
-            this.label29.TabIndex = 8;
-            this.label29.Text = "Total Commission";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
@@ -1132,7 +1158,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label32.Location = new System.Drawing.Point(5, 0);
             this.label32.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(190, 29);
+            this.label32.Size = new System.Drawing.Size(190, 28);
             this.label32.TabIndex = 1;
             this.label32.Text = "Base Commission";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1151,10 +1177,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label33.AutoSize = true;
             this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(5, 29);
+            this.label33.Location = new System.Drawing.Point(5, 28);
             this.label33.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(190, 29);
+            this.label33.Size = new System.Drawing.Size(190, 28);
             this.label33.TabIndex = 3;
             this.label33.Text = "1.5x Deductible Achieved";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1163,7 +1189,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             // 
             this.RP15xDeductibleAchievedTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RP15xDeductibleAchievedTB.Enabled = false;
-            this.RP15xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 32);
+            this.RP15xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 31);
             this.RP15xDeductibleAchievedTB.Name = "RP15xDeductibleAchievedTB";
             this.RP15xDeductibleAchievedTB.Size = new System.Drawing.Size(96, 20);
             this.RP15xDeductibleAchievedTB.TabIndex = 4;
@@ -1173,101 +1199,81 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label34.AutoSize = true;
             this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(5, 58);
+            this.label34.Location = new System.Drawing.Point(5, 56);
             this.label34.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(190, 29);
+            this.label34.Size = new System.Drawing.Size(190, 28);
             this.label34.TabIndex = 5;
             this.label34.Text = "2x Deductible Achieved";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // RP2xDeductibleAchievedTB
+            // 
+            this.RP2xDeductibleAchievedTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RP2xDeductibleAchievedTB.Enabled = false;
+            this.RP2xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 59);
+            this.RP2xDeductibleAchievedTB.Name = "RP2xDeductibleAchievedTB";
+            this.RP2xDeductibleAchievedTB.Size = new System.Drawing.Size(96, 20);
+            this.RP2xDeductibleAchievedTB.TabIndex = 9;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(5, 87);
+            this.label36.Location = new System.Drawing.Point(5, 84);
             this.label36.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(190, 29);
+            this.label36.Size = new System.Drawing.Size(190, 28);
             this.label36.TabIndex = 7;
             this.label36.Text = "Matter Proceeded to Hearing";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // RP2xDeductibleAchievedTB
-            // 
-            this.RP2xDeductibleAchievedTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RP2xDeductibleAchievedTB.Enabled = false;
-            this.RP2xDeductibleAchievedTB.Location = new System.Drawing.Point(203, 61);
-            this.RP2xDeductibleAchievedTB.Name = "RP2xDeductibleAchievedTB";
-            this.RP2xDeductibleAchievedTB.Size = new System.Drawing.Size(96, 20);
-            this.RP2xDeductibleAchievedTB.TabIndex = 9;
             // 
             // RPMatterProceededToHearingTB
             // 
             this.RPMatterProceededToHearingTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RPMatterProceededToHearingTB.Enabled = false;
-            this.RPMatterProceededToHearingTB.Location = new System.Drawing.Point(203, 90);
+            this.RPMatterProceededToHearingTB.Location = new System.Drawing.Point(203, 87);
             this.RPMatterProceededToHearingTB.Name = "RPMatterProceededToHearingTB";
             this.RPMatterProceededToHearingTB.Size = new System.Drawing.Size(96, 20);
             this.RPMatterProceededToHearingTB.TabIndex = 11;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(5, 112);
+            this.label29.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(190, 28);
+            this.label29.TabIndex = 8;
+            this.label29.Text = "Total Commission";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // RPTotalCommissionTB
             // 
             this.RPTotalCommissionTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RPTotalCommissionTB.Enabled = false;
-            this.RPTotalCommissionTB.Location = new System.Drawing.Point(203, 119);
+            this.RPTotalCommissionTB.Location = new System.Drawing.Point(203, 115);
             this.RPTotalCommissionTB.Name = "RPTotalCommissionTB";
             this.RPTotalCommissionTB.Size = new System.Drawing.Size(96, 20);
             this.RPTotalCommissionTB.TabIndex = 12;
             // 
-            // SettlementDateDTP
+            // CalculateButton
             // 
-            this.SettlementDateDTP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SettlementDateDTP.Location = new System.Drawing.Point(157, 41);
-            this.SettlementDateDTP.Margin = new System.Windows.Forms.Padding(7);
-            this.SettlementDateDTP.Name = "SettlementDateDTP";
-            this.SettlementDateDTP.Size = new System.Drawing.Size(343, 20);
-            this.SettlementDateDTP.TabIndex = 149;
-            this.SettlementDateDTP.ValueChanged += new System.EventHandler(this.SettlementDateDTP_ValueChanged);
-            // 
-            // DidMatterProceedToTrialCB
-            // 
-            this.DidMatterProceedToTrialCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DidMatterProceedToTrialCB.FormattingEnabled = true;
-            this.DidMatterProceedToTrialCB.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.DidMatterProceedToTrialCB.Location = new System.Drawing.Point(231, 3);
-            this.DidMatterProceedToTrialCB.Name = "DidMatterProceedToTrialCB";
-            this.DidMatterProceedToTrialCB.Size = new System.Drawing.Size(54, 21);
-            this.DidMatterProceedToTrialCB.TabIndex = 7;
-            // 
-            // DidMatterProceedToHearingCB
-            // 
-            this.DidMatterProceedToHearingCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DidMatterProceedToHearingCB.FormattingEnabled = true;
-            this.DidMatterProceedToHearingCB.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.DidMatterProceedToHearingCB.Location = new System.Drawing.Point(231, 36);
-            this.DidMatterProceedToHearingCB.Name = "DidMatterProceedToHearingCB";
-            this.DidMatterProceedToHearingCB.Size = new System.Drawing.Size(54, 21);
-            this.DidMatterProceedToHearingCB.TabIndex = 8;
-            this.DidMatterProceedToHearingCB.SelectedIndexChanged += new System.EventHandler(this.DidMatterProceedToHearingCB_SelectedIndexChanged);
-            // 
-            // HowManyHearingsCB
-            // 
-            this.HowManyHearingsCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HowManyHearingsCB.FormattingEnabled = true;
-            this.HowManyHearingsCB.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.HowManyHearingsCB.Location = new System.Drawing.Point(231, 69);
-            this.HowManyHearingsCB.Name = "HowManyHearingsCB";
-            this.HowManyHearingsCB.Size = new System.Drawing.Size(54, 21);
-            this.HowManyHearingsCB.TabIndex = 9;
+            this.CalculateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CalculateButton.BackColor = System.Drawing.Color.Maroon;
+            this.CalculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalculateButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalculateButton.ForeColor = System.Drawing.Color.White;
+            this.CalculateButton.Location = new System.Drawing.Point(1194, 404);
+            this.CalculateButton.Name = "CalculateButton";
+            this.CalculateButton.Size = new System.Drawing.Size(134, 37);
+            this.CalculateButton.TabIndex = 148;
+            this.CalculateButton.Text = "Calculate";
+            this.CalculateButton.UseVisualStyleBackColor = false;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // CommissionCalculatorForm
             // 
@@ -1328,7 +1334,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
         internal System.Windows.Forms.Label Label41;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.ComboBox CommissionSubTypeCB;
+        private System.Windows.Forms.ComboBox ComissionSubTypeCB;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ParalegalContractTermTB;
         private System.Windows.Forms.Label label8;

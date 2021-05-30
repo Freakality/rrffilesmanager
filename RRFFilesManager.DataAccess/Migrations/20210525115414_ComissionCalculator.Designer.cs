@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210525115414_ComissionCalculator")]
+    partial class ComissionCalculator
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -239,6 +241,9 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<int?>("FileLawyerID")
                         .HasColumnType("int");
 
+                    b.Property<double?>("MatterProceededToHearingMultiplier")
+                        .HasColumnType("float");
+
                     b.Property<double?>("MatterProceededToTrialMultiplier")
                         .HasColumnType("float");
 
@@ -254,9 +259,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<double?>("RLDeductibleAchievedx2Multiplier")
                         .HasColumnType("float");
 
-                    b.Property<double?>("RLMatterProceededToABHearingMultiplier")
-                        .HasColumnType("float");
-
                     b.Property<double?>("RPBaseComissionMultiplier")
                         .HasColumnType("float");
 
@@ -264,9 +266,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("float");
 
                     b.Property<double?>("RPDeductibleAchievedx2Multiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RPMatterProceededToABHearingMultiplier")
                         .HasColumnType("float");
 
                     b.Property<int?>("ResponsibleLawyerID")
@@ -280,7 +279,7 @@ namespace RRFFilesManager.DataAccess.Migrations
 
                     b.HasIndex("ResponsibleLawyerID");
 
-                    b.ToTable("ComissionCalculator");
+                    b.ToTable("ComissionCalculators");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Company", b =>
@@ -949,9 +948,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("EarnBaseCommissionAsFileLawyer")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsParalegal")
                         .HasColumnType("bit");
 
                     b.Property<int?>("NumberID")

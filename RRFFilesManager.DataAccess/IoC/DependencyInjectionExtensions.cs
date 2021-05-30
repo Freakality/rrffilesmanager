@@ -38,6 +38,7 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IDocumentCategoryRepository, DocumentCategoryRepository>();
             services.AddTransient<IDocumentTypeRepository, DocumentTypeRepository>();
             services.AddTransient<IUploadArchivesSettingsRepository, UploadArchivesSettingsRepository>();
+            services.AddTransient<IComissionCalculatorRepository, ComissionCalculatorRepository>();
             return services;
         }
     }

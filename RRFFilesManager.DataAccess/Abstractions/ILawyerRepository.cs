@@ -13,6 +13,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void Update(Lawyer lawyer);
         void SoftDelete(int lawyerId);
         Lawyer GetById(int lawyerId);
-        IEnumerable<Lawyer> List();
+        IEnumerable<Lawyer> List(bool? isParalegal = null);
     }
 }

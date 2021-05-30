@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210413053312_Lawyer_ResponsibleLawyerBaseCommissionMultiplier")]
+    partial class Lawyer_ResponsibleLawyerBaseCommissionMultiplier
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -215,72 +217,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasIndex("ProvinceID");
 
                     b.ToTable("Clients");
-                });
-
-            modelBuilder.Entity("RRFFilesManager.Abstractions.ComissionCalculator", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ComissionSubType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContractTerm")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("DeductibleAchieved")
-                        .HasColumnType("bit");
-
-                    b.Property<double?>("FLBaseComissionMultiplier")
-                        .HasColumnType("float");
-
-                    b.Property<int?>("FileLawyerID")
-                        .HasColumnType("int");
-
-                    b.Property<double?>("MatterProceededToTrialMultiplier")
-                        .HasColumnType("float");
-
-                    b.Property<int?>("MatterTypeID")
-                        .HasColumnType("int");
-
-                    b.Property<double?>("RLBaseComissionMultiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RLDeductibleAchievedx1d5Multiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RLDeductibleAchievedx2Multiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RLMatterProceededToABHearingMultiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RPBaseComissionMultiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RPDeductibleAchievedx1d5Multiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RPDeductibleAchievedx2Multiplier")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("RPMatterProceededToABHearingMultiplier")
-                        .HasColumnType("float");
-
-                    b.Property<int?>("ResponsibleLawyerID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("FileLawyerID");
-
-                    b.HasIndex("MatterTypeID");
-
-                    b.HasIndex("ResponsibleLawyerID");
-
-                    b.ToTable("ComissionCalculator");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Company", b =>
@@ -951,9 +887,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<bool?>("EarnBaseCommissionAsFileLawyer")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsParalegal")
-                        .HasColumnType("bit");
-
                     b.Property<int?>("NumberID")
                         .HasColumnType("int");
 
@@ -1133,21 +1066,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.Province", "Province")
                         .WithMany()
                         .HasForeignKey("ProvinceID");
-                });
-
-            modelBuilder.Entity("RRFFilesManager.Abstractions.ComissionCalculator", b =>
-                {
-                    b.HasOne("RRFFilesManager.Abstractions.Lawyer", "FileLawyer")
-                        .WithMany()
-                        .HasForeignKey("FileLawyerID");
-
-                    b.HasOne("RRFFilesManager.Abstractions.MatterType", "MatterType")
-                        .WithMany()
-                        .HasForeignKey("MatterTypeID");
-
-                    b.HasOne("RRFFilesManager.Abstractions.Lawyer", "ResponsibleLawyer")
-                        .WithMany()
-                        .HasForeignKey("ResponsibleLawyerID");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Company", b =>

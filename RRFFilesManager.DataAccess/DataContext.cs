@@ -30,7 +30,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<DocumentCategory> DocumentCategories { get; set; }
         public DbSet<DocumentType> DocumentTypes { get; set; }
         public DbSet<UploadArchivesSettings> UploadArchivesSettings { get; set; }
-        
+        public DbSet<ComissionCalculator> ComissionCalculator { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
