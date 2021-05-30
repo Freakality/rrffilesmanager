@@ -30,8 +30,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox groupBox1;
-            System.Windows.Forms.Label DateOFCallLabel;
-            System.Windows.Forms.Label label15;
             this.Settings = new System.Windows.Forms.Button();
             this.SelectFolders = new System.Windows.Forms.Button();
             this.SelectFiles = new System.Windows.Forms.Button();
@@ -54,10 +52,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.DocumentName = new System.Windows.Forms.TextBox();
-            this.IntakeInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.FindFileButton = new System.Windows.Forms.Button();
-            this.FileNumberTextBox = new System.Windows.Forms.TextBox();
-            this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DoneButton = new System.Windows.Forms.Button();
@@ -65,17 +59,16 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentType = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.DocumentFormContent = new System.Windows.Forms.Panel();
+            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ArchivesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.previewArchiveUserControl = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
+            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
-            this.previewArchiveUserControl = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             groupBox1 = new System.Windows.Forms.GroupBox();
-            DateOFCallLabel = new System.Windows.Forms.Label();
-            label15 = new System.Windows.Forms.Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FilesGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -85,7 +78,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.IntakeInfo.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
@@ -162,26 +154,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.FilesGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilesGridView_CellClick);
             this.FilesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilesGridView_CellContentClick);
             // 
-            // DateOFCallLabel
-            // 
-            DateOFCallLabel.AutoSize = true;
-            DateOFCallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DateOFCallLabel.Location = new System.Drawing.Point(153, 0);
-            DateOFCallLabel.Name = "DateOFCallLabel";
-            DateOFCallLabel.Size = new System.Drawing.Size(83, 16);
-            DateOFCallLabel.TabIndex = 144;
-            DateOFCallLabel.Text = "Matter Type:";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label15.Location = new System.Drawing.Point(512, 0);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(84, 16);
-            label15.TabIndex = 145;
-            label15.Text = "File Number:";
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -214,8 +186,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.IntakeInfo, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.findFilePanelUserControl1, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 157);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -433,62 +405,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentName.TabIndex = 22;
             this.DocumentName.TextChanged += new System.EventHandler(this.DocumentName_TextChanged);
             // 
-            // IntakeInfo
-            // 
-            this.IntakeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IntakeInfo.ColumnCount = 5;
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.IntakeInfo.Controls.Add(this.FindFileButton, 0, 0);
-            this.IntakeInfo.Controls.Add(this.FileNumberTextBox, 4, 0);
-            this.IntakeInfo.Controls.Add(label15, 3, 0);
-            this.IntakeInfo.Controls.Add(this.MatterTypeTextBox, 2, 0);
-            this.IntakeInfo.Controls.Add(DateOFCallLabel, 1, 0);
-            this.IntakeInfo.Location = new System.Drawing.Point(0, 0);
-            this.IntakeInfo.Margin = new System.Windows.Forms.Padding(0);
-            this.IntakeInfo.Name = "IntakeInfo";
-            this.IntakeInfo.RowCount = 1;
-            this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.IntakeInfo.Size = new System.Drawing.Size(868, 35);
-            this.IntakeInfo.TabIndex = 145;
-            // 
-            // FindFileButton
-            // 
-            this.FindFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindFileButton.BackColor = System.Drawing.Color.Maroon;
-            this.FindFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindFileButton.ForeColor = System.Drawing.Color.White;
-            this.FindFileButton.Location = new System.Drawing.Point(3, 3);
-            this.FindFileButton.Name = "FindFileButton";
-            this.FindFileButton.Size = new System.Drawing.Size(144, 29);
-            this.FindFileButton.TabIndex = 146;
-            this.FindFileButton.Text = "Find File";
-            this.FindFileButton.UseVisualStyleBackColor = false;
-            this.FindFileButton.Click += new System.EventHandler(this.FindFileButton_Click);
-            // 
-            // FileNumberTextBox
-            // 
-            this.FileNumberTextBox.Enabled = false;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(612, 3);
-            this.FileNumberTextBox.Name = "FileNumberTextBox";
-            this.FileNumberTextBox.ReadOnly = true;
-            this.FileNumberTextBox.Size = new System.Drawing.Size(253, 20);
-            this.FileNumberTextBox.TabIndex = 143;
-            // 
-            // MatterTypeTextBox
-            // 
-            this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(253, 3);
-            this.MatterTypeTextBox.Name = "MatterTypeTextBox";
-            this.MatterTypeTextBox.ReadOnly = true;
-            this.MatterTypeTextBox.Size = new System.Drawing.Size(253, 20);
-            this.MatterTypeTextBox.TabIndex = 142;
-            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
@@ -579,6 +495,13 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentFormContent.Size = new System.Drawing.Size(868, 140);
             this.DocumentFormContent.TabIndex = 3;
             // 
+            // findFilePanelUserControl1
+            // 
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(3, 3);
+            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(862, 35);
+            this.findFilePanelUserControl1.TabIndex = 147;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ArchivesGridView);
@@ -632,10 +555,13 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
-            // openFileDialog1
+            // previewArchiveUserControl
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Multiselect = true;
+            this.previewArchiveUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewArchiveUserControl.Location = new System.Drawing.Point(0, 0);
+            this.previewArchiveUserControl.Name = "previewArchiveUserControl";
+            this.previewArchiveUserControl.Size = new System.Drawing.Size(465, 665);
+            this.previewArchiveUserControl.TabIndex = 1;
             // 
             // previewArchiveUserControl1
             // 
@@ -645,13 +571,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
             this.previewArchiveUserControl1.TabIndex = 0;
             // 
-            // previewArchiveUserControl
+            // openFileDialog1
             // 
-            this.previewArchiveUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewArchiveUserControl.Location = new System.Drawing.Point(0, 0);
-            this.previewArchiveUserControl.Name = "previewArchiveUserControl";
-            this.previewArchiveUserControl.Size = new System.Drawing.Size(465, 665);
-            this.previewArchiveUserControl.TabIndex = 1;
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Multiselect = true;
             // 
             // UploadArchivesForm
             // 
@@ -674,8 +597,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.IntakeInfo.ResumeLayout(false);
-            this.IntakeInfo.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
@@ -715,10 +636,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox DocumentName;
-        private System.Windows.Forms.TableLayoutPanel IntakeInfo;
-        private System.Windows.Forms.Button FindFileButton;
-        private System.Windows.Forms.TextBox FileNumberTextBox;
-        private System.Windows.Forms.TextBox MatterTypeTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button DoneButton;
@@ -731,5 +648,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private System.Windows.Forms.Button Settings;
         private PreviewArchiveUserControl previewArchiveUserControl1;
         private PreviewArchiveUserControl previewArchiveUserControl;
+        private CommonControls.FindFilePanelUserControl findFilePanelUserControl1;
     }
 }

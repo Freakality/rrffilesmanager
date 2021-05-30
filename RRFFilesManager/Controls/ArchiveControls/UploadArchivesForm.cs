@@ -22,7 +22,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
 {
     public partial class UploadArchivesForm : Form
     {
-        private Abstractions.File CurrentFile { get; set; }
+        private Abstractions.File CurrentFile => findFilePanelUserControl1.File;
         BindingList<FileInfo> UploadedFiles = new BindingList<FileInfo>();
         BindingList<Models.Archive> Archives = new BindingList<Models.Archive>();
         private readonly IDocumentGroupRepository _documentGroupRepository;
@@ -225,27 +225,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void PreviewHandlerHost_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void FindFileButton_Click(object sender, EventArgs e)
-        {
-            FindFile.Instance.Show();
-            FindFile.Instance.FormClosing += new FormClosingEventHandler(FindFile_FormClosing);
-        }
-
-        private void FindFile_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var findFileForm = sender as FindFile;
-            SetForm(findFileForm.SelectedFile);
-        }
-
-        private void SetForm(Abstractions.File file)
-        {
-            if (file == null)
-                return;
-            CurrentFile = file;
-            MatterTypeTextBox.Text = CurrentFile.MatterType.ToString();
-            FileNumberTextBox.Text = CurrentFile.FileNumber.ToString();
         }
 
         private void DoneButton_Click(object sender, EventArgs e)
