@@ -33,7 +33,7 @@
             this.Button28 = new System.Windows.Forms.Button();
             this.Button27 = new System.Windows.Forms.Button();
             this.Button26 = new System.Windows.Forms.Button();
-            this.Button25 = new System.Windows.Forms.Button();
+            this.PrescriptionSummariesButton = new System.Windows.Forms.Button();
             this.Button24 = new System.Windows.Forms.Button();
             this.CommisionCalculatorButton = new System.Windows.Forms.Button();
             this.Button22 = new System.Windows.Forms.Button();
@@ -143,20 +143,21 @@
             this.Button26.Text = "STAFF PORTAL";
             this.Button26.UseVisualStyleBackColor = false;
             // 
-            // Button25
+            // PrescriptionSummariesButton
             // 
-            this.Button25.BackColor = System.Drawing.Color.Gray;
-            this.Button25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button25.ForeColor = System.Drawing.Color.White;
-            this.Button25.Location = new System.Drawing.Point(577, 358);
-            this.Button25.Margin = new System.Windows.Forms.Padding(10);
-            this.Button25.Name = "Button25";
-            this.Button25.Size = new System.Drawing.Size(169, 67);
-            this.Button25.TabIndex = 4;
-            this.Button25.Text = "FILE REVIEWS";
-            this.Button25.UseVisualStyleBackColor = false;
+            this.PrescriptionSummariesButton.BackColor = System.Drawing.Color.Gray;
+            this.PrescriptionSummariesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrescriptionSummariesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrescriptionSummariesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrescriptionSummariesButton.ForeColor = System.Drawing.Color.White;
+            this.PrescriptionSummariesButton.Location = new System.Drawing.Point(577, 358);
+            this.PrescriptionSummariesButton.Margin = new System.Windows.Forms.Padding(10);
+            this.PrescriptionSummariesButton.Name = "PrescriptionSummariesButton";
+            this.PrescriptionSummariesButton.Size = new System.Drawing.Size(169, 67);
+            this.PrescriptionSummariesButton.TabIndex = 4;
+            this.PrescriptionSummariesButton.Text = "PRESCRIPTION SUMMARIES";
+            this.PrescriptionSummariesButton.UseVisualStyleBackColor = false;
+            this.PrescriptionSummariesButton.Click += new System.EventHandler(this.PrescriptionSummariesButton_Click);
             // 
             // Button24
             // 
@@ -529,7 +530,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button28, 4, 2);
             this.TableLayoutPanel1.Controls.Add(this.Button27, 4, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button26, 4, 0);
-            this.TableLayoutPanel1.Controls.Add(this.Button25, 3, 4);
+            this.TableLayoutPanel1.Controls.Add(this.PrescriptionSummariesButton, 3, 4);
             this.TableLayoutPanel1.Controls.Add(this.Button24, 3, 3);
             this.TableLayoutPanel1.Controls.Add(this.CommisionCalculatorButton, 3, 2);
             this.TableLayoutPanel1.Controls.Add(this.Button22, 3, 1);
@@ -646,7 +647,7 @@
         internal System.Windows.Forms.Button Button28;
         internal System.Windows.Forms.Button Button27;
         internal System.Windows.Forms.Button Button26;
-        internal System.Windows.Forms.Button Button25;
+        internal System.Windows.Forms.Button PrescriptionSummariesButton;
         internal System.Windows.Forms.Button Button24;
         internal System.Windows.Forms.Button CommisionCalculatorButton;
         internal System.Windows.Forms.Button Button22;

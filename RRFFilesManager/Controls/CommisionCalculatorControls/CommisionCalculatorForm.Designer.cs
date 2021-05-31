@@ -29,7 +29,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.HomeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -116,7 +115,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.label29 = new System.Windows.Forms.Label();
             this.RPTotalCommissionTB = new System.Windows.Forms.TextBox();
             this.CalculateButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -129,17 +128,8 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
-            this.PictureBox1.Location = new System.Drawing.Point(1124, 2);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(224, 68);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 143;
-            this.PictureBox1.TabStop = false;
             // 
             // HomeButton
             // 
@@ -1275,6 +1265,16 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.CalculateButton.UseVisualStyleBackColor = false;
             this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
+            this.PictureBox1.Location = new System.Drawing.Point(1124, 2);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(224, 68);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 143;
+            this.PictureBox1.TabStop = false;
+            // 
             // CommissionCalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1291,7 +1291,6 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.Name = "CommissionCalculatorForm";
             this.Text = "CommisionCalculatorForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CommissionCalculatorForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -1314,6 +1313,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

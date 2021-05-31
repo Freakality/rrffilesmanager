@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using System.IO;
 using RRFFilesManager.Controls.ArchiveControls;
 using RRFFilesManager.Controls.CommisionCalculatorControls;
+using RRFFilesManager.Controls.PrescriptionSummariesControls;
 
 namespace RRFFilesManager
 {
@@ -47,11 +48,7 @@ namespace RRFFilesManager
 
         private void IntakeButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            PleaseWait.Instance.Show();
-            IntakeForm = new IntakeForm.IntakeForm();
-            IntakeForm.Show();
-            PleaseWait.Instance.Hide();
+            IntakeForm = Utils.OpenForm<IntakeForm.IntakeForm>(this);
         }
 
         private void ConflictChecks_Click(object sender, EventArgs e)
@@ -61,46 +58,27 @@ namespace RRFFilesManager
 
         private void FileManagerButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            PleaseWait.Instance.Show();
-            FileManager = new FileManager();
-            FileManager.Show();
-            PleaseWait.Instance.Hide();
+            FileManager = Utils.OpenForm<FileManager>(this);
         }
 
         private void ClientInfoButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            PleaseWait.Instance.Show();
-            ContactInfo = new ContactInfo();
-            ContactInfo.Show();
-            PleaseWait.Instance.Hide();
+            ContactInfo = Utils.OpenForm<ContactInfo>(this);
         }
 
         private void Contacts_Click(object sender, EventArgs e)
         {
-            PleaseWait.Instance.Show();
-            ContactInfo = new ContactInfo();
-            ContactInfo.Show();
-            PleaseWait.Instance.Hide();
+            ContactInfo = Utils.OpenForm<ContactInfo>(this);
         }
 
         private void CreateDocumentsButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            PleaseWait.Instance.Show();
-            CreateDocument = new CreateDocument();
-            CreateDocument.Show();
-            PleaseWait.Instance.Hide();
+            CreateDocument = Utils.OpenForm<CreateDocument>(this);
         }
 
         private void CreateTemplates_Click(object sender, EventArgs e)
         {
-            Hide();
-            PleaseWait.Instance.Show();
-            CreateTemplate = new CreateTemplate();
-            CreateTemplate.Show();
-            PleaseWait.Instance.Hide();
+            CreateTemplate = Utils.OpenForm<CreateTemplate>(this);
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
@@ -130,11 +108,7 @@ namespace RRFFilesManager
 
         private void ImportDocumentsButton_Click(object sender, EventArgs e)
         {
-                Hide();
-                PleaseWait.Instance.Show();
-                var uploadArchivesForm = new UploadArchivesForm();
-                uploadArchivesForm.Show();
-                PleaseWait.Instance.Hide();
+            Utils.OpenForm<UploadArchivesForm>(this);
         }
 
         private void CommisionCalculatorButton_Click(object sender, EventArgs e)
@@ -142,17 +116,18 @@ namespace RRFFilesManager
             var authorizedUsers = new string[] { "FOISYR", "MANZANOD", "ITDEV", "FELIX" };
             if (authorizedUsers.Any(user => UserManager.GetUserName().ToUpper() == user))
             {
-                Hide();
-                PleaseWait.Instance.Show();
-                var form = new CommissionCalculatorForm();
-                form.Show();
-                PleaseWait.Instance.Hide();
+                Utils.OpenForm<CommissionCalculatorForm>(this);
             }
             else
             {
                 MessageBox.Show("Not Authorized");
             }
             
+        }
+
+        private void PrescriptionSummariesButton_Click(object sender, EventArgs e)
+        {
+            Utils.OpenForm<PrescriptionSummariesForm>(this);
         }
     }
 }

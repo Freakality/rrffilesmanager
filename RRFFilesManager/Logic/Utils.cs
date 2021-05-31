@@ -51,5 +51,15 @@ namespace RRFFilesManager.Logic
             Content.Controls.Add(control);
             Content.Controls[0].Dock = DockStyle.Fill;
         }
+
+        public static T OpenForm<T>(Form from = null) where T : Form, new()
+        {
+            from?.Hide();
+            PleaseWait.Instance.Show();
+            var form = new T();
+            form.Show();
+            PleaseWait.Instance.Hide();
+            return form;
+        }
     }
 }
