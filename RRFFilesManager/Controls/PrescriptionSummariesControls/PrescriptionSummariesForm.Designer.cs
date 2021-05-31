@@ -31,16 +31,15 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         {
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.PreviewPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.DoneButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
+            this.DoneButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.PharmacyNameTB = new System.Windows.Forms.TextBox();
             this.FindPharmacyButton = new System.Windows.Forms.Button();
+            this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
@@ -70,7 +69,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.findFilePanelUserControl1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -80,14 +78,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(868, 665);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // PreviewPanel
-            // 
-            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
-            this.PreviewPanel.Name = "PreviewPanel";
-            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
-            this.PreviewPanel.TabIndex = 1;
             // 
             // tableLayoutPanel8
             // 
@@ -106,6 +96,16 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel8.Size = new System.Drawing.Size(868, 350);
             this.tableLayoutPanel8.TabIndex = 146;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.DoneButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 320);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(868, 30);
+            this.panel2.TabIndex = 1;
+            // 
             // DoneButton
             // 
             this.DoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,26 +117,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DoneButton.Text = "Done";
             this.DoneButton.UseVisualStyleBackColor = true;
             this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.DoneButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 320);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(868, 30);
-            this.panel2.TabIndex = 1;
-            // 
-            // findFilePanelUserControl1
-            // 
-            this.findFilePanelUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.findFilePanelUserControl1.File = null;
-            this.findFilePanelUserControl1.Location = new System.Drawing.Point(3, 3);
-            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
-            this.findFilePanelUserControl1.Size = new System.Drawing.Size(862, 94);
-            this.findFilePanelUserControl1.TabIndex = 148;
-            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
             // 
             // tableLayoutPanel2
             // 
@@ -177,8 +157,8 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.PharmacyNameTB, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.FindPharmacyButton, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pharmacyComboBox1, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(200, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -187,19 +167,12 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel3.Size = new System.Drawing.Size(398, 30);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // PharmacyNameTB
-            // 
-            this.PharmacyNameTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PharmacyNameTB.Location = new System.Drawing.Point(3, 3);
-            this.PharmacyNameTB.Name = "PharmacyNameTB";
-            this.PharmacyNameTB.Size = new System.Drawing.Size(362, 20);
-            this.PharmacyNameTB.TabIndex = 0;
-            // 
             // FindPharmacyButton
             // 
             this.FindPharmacyButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindPharmacyButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.FindPharmacyButton.Location = new System.Drawing.Point(371, 3);
+            this.FindPharmacyButton.Location = new System.Drawing.Point(371, 2);
+            this.FindPharmacyButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
             this.FindPharmacyButton.Name = "FindPharmacyButton";
             this.FindPharmacyButton.Size = new System.Drawing.Size(24, 24);
             this.FindPharmacyButton.TabIndex = 1;
@@ -207,6 +180,25 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.FindPharmacyButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.FindPharmacyButton.UseVisualStyleBackColor = true;
             this.FindPharmacyButton.Click += new System.EventHandler(this.FindPharmacyButton_Click);
+            // 
+            // PreviewPanel
+            // 
+            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
+            this.PreviewPanel.Name = "PreviewPanel";
+            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
+            this.PreviewPanel.TabIndex = 1;
+            // 
+            // pharmacyComboBox1
+            // 
+            this.pharmacyComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.pharmacyComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pharmacyComboBox1.FormattingEnabled = true;
+            this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.pharmacyComboBox1.Name = "pharmacyComboBox1";
+            this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
+            this.pharmacyComboBox1.TabIndex = 2;
             // 
             // PrescriptionSummariesForm
             // 
@@ -216,6 +208,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.Controls.Add(this.tableLayoutPanel5);
             this.Name = "PrescriptionSummariesForm";
             this.Text = "PrescriptionSummariesForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrescriptionSummariesForm_FormClosing);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
@@ -223,7 +216,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -240,7 +232,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         internal System.Windows.Forms.Label Label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox PharmacyNameTB;
         private System.Windows.Forms.Button FindPharmacyButton;
+        private PharmacyControls.PharmacyComboBox pharmacyComboBox1;
     }
 }

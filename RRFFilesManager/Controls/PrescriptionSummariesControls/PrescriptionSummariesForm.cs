@@ -1,5 +1,8 @@
 ﻿using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.PharmacyControls;
+using RRFFilesManager.DataAccess;
+using RRFFilesManager.DataAccess.Abstractions;
+using RRFFilesManager.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +18,10 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
     public partial class PrescriptionSummariesForm : Form
     {
         public Pharmacy Pharmacy { get; set; }
+        private IPharmacyRepository _pharmacyRepository { get; set; }
         public PrescriptionSummariesForm()
         {
+            _pharmacyRepository = Program.GetService<IPharmacyRepository>();
             InitializeComponent();
         }
 
@@ -40,6 +45,16 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         {
             var findPharmacyForm = sender as FindPharmacy;
             Pharmacy = findPharmacyForm.Selected;
+        }
+
+        private void PrescriptionSummariesForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Utils.CloseForm(this, Home.Instance);
+        }
+
+        private void PharmaciesCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

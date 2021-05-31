@@ -61,5 +61,9 @@ namespace RRFFilesManager.Logic
             PleaseWait.Instance.Hide();
             return form;
         }
+        public static void CloseForm(Form from, Form to)
+        {
+            to.Show();
+        }   
     }
 }

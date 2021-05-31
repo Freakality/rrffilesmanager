@@ -477,6 +477,18 @@
     <Compile Include="Controls\PharmacyControls\FindPharmacy.Designer.cs">
       <DependentUpon>FindPharmacy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PharmacyControls\PharmacyComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\PharmacyComboBox.Designer.cs">
+      <DependentUpon>PharmacyComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\PharmacyTextBoxControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\PharmacyTextBoxControl.Designer.cs">
+      <DependentUpon>PharmacyTextBoxControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PrescriptionSummariesControls\PrescriptionSummariesForm.cs">
       <SubType>Form</SubType>
     </Compile>
