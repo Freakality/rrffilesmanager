@@ -41,14 +41,14 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
                 return;
             }
             ProcessArchive(Archive);
-            ClearForm();
-            FilesGridView_CellClick(null, null);
+            //ClearForm();
+            //FilesGridView_CellClick(null, null);
         }
 
         private void ProcessArchive(Archive archive)
         {
             
-            UploadedFiles.Remove(selected);
+            
         }
 
         private void PrescriptionSummariesForm_FormClosing(object sender, FormClosingEventArgs e)

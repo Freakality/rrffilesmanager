@@ -57,12 +57,12 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.ClientPostalCodeTB = new System.Windows.Forms.TextBox();
             this.PharmacyPostalCodeTB = new System.Windows.Forms.TextBox();
             this.KeepRxFillDate = new System.Windows.Forms.CheckBox();
-            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
-            this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.PreviewPanel = new System.Windows.Forms.Panel();
-            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.label8 = new System.Windows.Forms.Label();
             this.DispenseQuantityNUD = new System.Windows.Forms.NumericUpDown();
+            this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
+            this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
@@ -72,9 +72,9 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DispenseQuantityNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.PreviewPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DispenseQuantityNUD)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel5
@@ -98,8 +98,8 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.findFileAndArchivePanelUserControl1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.DataGridView, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.findFileAndArchivePanelUserControl1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -348,8 +348,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             // pharmacyComboBox1
             // 
-            this.pharmacyComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.pharmacyComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pharmacyComboBox1.FormattingEnabled = true;
             this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
@@ -445,44 +443,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.KeepRxFillDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.KeepRxFillDate.UseVisualStyleBackColor = true;
             // 
-            // findFileAndArchivePanelUserControl1
-            // 
-            this.findFileAndArchivePanelUserControl1.Archive = null;
-            this.findFileAndArchivePanelUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.findFileAndArchivePanelUserControl1.File = null;
-            this.findFileAndArchivePanelUserControl1.Location = new System.Drawing.Point(3, 3);
-            this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";
-            this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 94);
-            this.findFileAndArchivePanelUserControl1.TabIndex = 147;
-            this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load);
-            // 
-            // DataGridView
-            // 
-            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridView.Location = new System.Drawing.Point(3, 453);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.Size = new System.Drawing.Size(862, 209);
-            this.DataGridView.TabIndex = 148;
-            // 
-            // PreviewPanel
-            // 
-            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
-            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
-            this.PreviewPanel.Name = "PreviewPanel";
-            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
-            this.PreviewPanel.TabIndex = 1;
-            // 
-            // previewArchiveUserControl1
-            // 
-            this.previewArchiveUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewArchiveUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
-            this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
-            this.previewArchiveUserControl1.TabIndex = 0;
-            this.previewArchiveUserControl1.Load += new System.EventHandler(this.previewArchiveUserControl1_Load);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -501,6 +461,41 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DispenseQuantityNUD.Name = "DispenseQuantityNUD";
             this.DispenseQuantityNUD.Size = new System.Drawing.Size(96, 20);
             this.DispenseQuantityNUD.TabIndex = 16;
+            // 
+            // DataGridView
+            // 
+            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridView.Location = new System.Drawing.Point(3, 453);
+            this.DataGridView.Name = "DataGridView";
+            this.DataGridView.Size = new System.Drawing.Size(862, 209);
+            this.DataGridView.TabIndex = 148;
+            // 
+            // findFileAndArchivePanelUserControl1
+            // 
+            this.findFileAndArchivePanelUserControl1.Archive = null;
+            this.findFileAndArchivePanelUserControl1.File = null;
+            this.findFileAndArchivePanelUserControl1.Location = new System.Drawing.Point(3, 3);
+            this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";
+            this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 35);
+            this.findFileAndArchivePanelUserControl1.TabIndex = 149;
+            // 
+            // PreviewPanel
+            // 
+            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
+            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
+            this.PreviewPanel.Name = "PreviewPanel";
+            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
+            this.PreviewPanel.TabIndex = 1;
+            // 
+            // previewArchiveUserControl1
+            // 
+            this.previewArchiveUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewArchiveUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
+            this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
+            this.previewArchiveUserControl1.TabIndex = 0;
             // 
             // PrescriptionSummariesForm
             // 
@@ -523,9 +518,9 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DispenseQuantityNUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.PreviewPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DispenseQuantityNUD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,14 +533,10 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button DoneButton;
-        private CommonControls.FindFilePanelUserControl findFilePanelUserControl1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         internal System.Windows.Forms.Label Label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button CreatePharmacyButton;
-        private PharmacyControls.PharmacyComboBox pharmacyComboBox1;
-        private CommonControls.FindFileAndArchivePanelUserControl findFileAndArchivePanelUserControl1;
-        private ArchiveControls.PreviewArchiveUserControl previewArchiveUserControl1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox NarcoticTB;
@@ -564,8 +555,11 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.DateTimePicker RxFillDateTB;
         private System.Windows.Forms.CheckBox KeepRxFillDate;
-        private PharmacyControls.DrugComboBox drugComboBox1;
         internal System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown DispenseQuantityNUD;
+        private PharmacyControls.DrugComboBox drugComboBox1;
+        private PharmacyControls.PharmacyComboBox pharmacyComboBox1;
+        private CommonControls.FindFileAndArchivePanelUserControl findFileAndArchivePanelUserControl1;
+        private ArchiveControls.PreviewArchiveUserControl previewArchiveUserControl1;
     }
 }
