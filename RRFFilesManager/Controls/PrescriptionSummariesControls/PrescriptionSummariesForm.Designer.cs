@@ -35,42 +35,46 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.panel2 = new System.Windows.Forms.Panel();
             this.DoneButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.FindPharmacyButton = new System.Windows.Forms.Button();
-            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
-            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
-            this.PreviewPanel = new System.Windows.Forms.Panel();
-            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.RxFillDateTB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ClientPostalCodeTB = new System.Windows.Forms.TextBox();
-            this.PharmacyPostalCodeTB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ProductNameTB = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.StrengthTB = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.NarcoticTB = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.DrugIdenNoTB = new System.Windows.Forms.TextBox();
+            this.drugComboBox1 = new RRFFilesManager.Controls.PharmacyControls.DrugComboBox();
+            this.NarcoticTB = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.StrengthTB = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ProductNameTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.CreatePharmacyButton = new System.Windows.Forms.Button();
+            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.RxFillDateTB = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.ClientPostalCodeTB = new System.Windows.Forms.TextBox();
+            this.PharmacyPostalCodeTB = new System.Windows.Forms.TextBox();
+            this.KeepRxFillDate = new System.Windows.Forms.CheckBox();
+            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
             this.DataGridView = new System.Windows.Forms.DataGridView();
+            this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
+            this.label8 = new System.Windows.Forms.Label();
+            this.DispenseQuantityNUD = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.PreviewPanel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
+            this.PreviewPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DispenseQuantityNUD)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel5
@@ -150,23 +154,26 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.NarcoticTB, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.StrengthTB, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.ProductNameTB, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.NarcoticTB, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.StrengthTB, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.ProductNameTB, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.Label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.DispenseQuantityNUD, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowCount = 8;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -176,6 +183,128 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(868, 320);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel7.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.drugComboBox1, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(200, 90);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(275, 30);
+            this.tableLayoutPanel7.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(248, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 24);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "+";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // drugComboBox1
+            // 
+            this.drugComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drugComboBox1.FormattingEnabled = true;
+            this.drugComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.drugComboBox1.Name = "drugComboBox1";
+            this.drugComboBox1.Size = new System.Drawing.Size(239, 21);
+            this.drugComboBox1.TabIndex = 2;
+            this.drugComboBox1.SelectedIndexChanged += new System.EventHandler(this.drugComboBox1_SelectedIndexChanged);
+            // 
+            // NarcoticTB
+            // 
+            this.NarcoticTB.Location = new System.Drawing.Point(203, 183);
+            this.NarcoticTB.Name = "NarcoticTB";
+            this.NarcoticTB.ReadOnly = true;
+            this.NarcoticTB.Size = new System.Drawing.Size(96, 20);
+            this.NarcoticTB.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 180);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(194, 30);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Narcotic";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // StrengthTB
+            // 
+            this.StrengthTB.Location = new System.Drawing.Point(203, 153);
+            this.StrengthTB.Name = "StrengthTB";
+            this.StrengthTB.ReadOnly = true;
+            this.StrengthTB.Size = new System.Drawing.Size(96, 20);
+            this.StrengthTB.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(194, 30);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Strength";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // ProductNameTB
+            // 
+            this.ProductNameTB.Location = new System.Drawing.Point(203, 123);
+            this.ProductNameTB.Name = "ProductNameTB";
+            this.ProductNameTB.ReadOnly = true;
+            this.ProductNameTB.Size = new System.Drawing.Size(239, 20);
+            this.ProductNameTB.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 30);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Product Name";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(194, 30);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Drug Iden No. (DIN)";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 30);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Rx Fill Date";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Label2
             // 
@@ -194,7 +323,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.FindPharmacyButton, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.CreatePharmacyButton, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.pharmacyComboBox1, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(200, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -204,19 +333,18 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel3.Size = new System.Drawing.Size(398, 30);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // FindPharmacyButton
+            // CreatePharmacyButton
             // 
-            this.FindPharmacyButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FindPharmacyButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.FindPharmacyButton.Location = new System.Drawing.Point(371, 2);
-            this.FindPharmacyButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
-            this.FindPharmacyButton.Name = "FindPharmacyButton";
-            this.FindPharmacyButton.Size = new System.Drawing.Size(24, 24);
-            this.FindPharmacyButton.TabIndex = 1;
-            this.FindPharmacyButton.Text = "+";
-            this.FindPharmacyButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.FindPharmacyButton.UseVisualStyleBackColor = true;
-            this.FindPharmacyButton.Click += new System.EventHandler(this.FindPharmacyButton_Click);
+            this.CreatePharmacyButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreatePharmacyButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CreatePharmacyButton.Location = new System.Drawing.Point(371, 2);
+            this.CreatePharmacyButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
+            this.CreatePharmacyButton.Name = "CreatePharmacyButton";
+            this.CreatePharmacyButton.Size = new System.Drawing.Size(24, 24);
+            this.CreatePharmacyButton.TabIndex = 1;
+            this.CreatePharmacyButton.Text = "+";
+            this.CreatePharmacyButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CreatePharmacyButton.UseVisualStyleBackColor = true;
             // 
             // pharmacyComboBox1
             // 
@@ -228,6 +356,94 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.pharmacyComboBox1.Name = "pharmacyComboBox1";
             this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
             this.pharmacyComboBox1.TabIndex = 2;
+            this.pharmacyComboBox1.SelectedIndexChanged += new System.EventHandler(this.pharmacyComboBox1_SelectedIndexChanged);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.RxFillDateTB, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.KeepRxFillDate, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(200, 30);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(668, 30);
+            this.tableLayoutPanel4.TabIndex = 4;
+            // 
+            // RxFillDateTB
+            // 
+            this.RxFillDateTB.CustomFormat = "MMM-dd-yyyy";
+            this.RxFillDateTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RxFillDateTB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.RxFillDateTB.Location = new System.Drawing.Point(23, 3);
+            this.RxFillDateTB.Name = "RxFillDateTB";
+            this.RxFillDateTB.Size = new System.Drawing.Size(218, 20);
+            this.RxFillDateTB.TabIndex = 150;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(247, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 30);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Travel Range";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.ClientPostalCodeTB, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.PharmacyPostalCodeTB, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(444, 0);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(224, 30);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // ClientPostalCodeTB
+            // 
+            this.ClientPostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientPostalCodeTB.Location = new System.Drawing.Point(3, 3);
+            this.ClientPostalCodeTB.Name = "ClientPostalCodeTB";
+            this.ClientPostalCodeTB.ReadOnly = true;
+            this.ClientPostalCodeTB.Size = new System.Drawing.Size(106, 20);
+            this.ClientPostalCodeTB.TabIndex = 0;
+            // 
+            // PharmacyPostalCodeTB
+            // 
+            this.PharmacyPostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PharmacyPostalCodeTB.Location = new System.Drawing.Point(115, 3);
+            this.PharmacyPostalCodeTB.Name = "PharmacyPostalCodeTB";
+            this.PharmacyPostalCodeTB.ReadOnly = true;
+            this.PharmacyPostalCodeTB.Size = new System.Drawing.Size(106, 20);
+            this.PharmacyPostalCodeTB.TabIndex = 1;
+            // 
+            // KeepRxFillDate
+            // 
+            this.KeepRxFillDate.AutoSize = true;
+            this.KeepRxFillDate.Location = new System.Drawing.Point(3, 6);
+            this.KeepRxFillDate.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.KeepRxFillDate.Name = "KeepRxFillDate";
+            this.KeepRxFillDate.Size = new System.Drawing.Size(14, 14);
+            this.KeepRxFillDate.TabIndex = 151;
+            this.KeepRxFillDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.KeepRxFillDate.UseVisualStyleBackColor = true;
             // 
             // findFileAndArchivePanelUserControl1
             // 
@@ -239,6 +455,15 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 94);
             this.findFileAndArchivePanelUserControl1.TabIndex = 147;
             this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load);
+            // 
+            // DataGridView
+            // 
+            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGridView.Location = new System.Drawing.Point(3, 453);
+            this.DataGridView.Name = "DataGridView";
+            this.DataGridView.Size = new System.Drawing.Size(862, 209);
+            this.DataGridView.TabIndex = 148;
             // 
             // PreviewPanel
             // 
@@ -256,206 +481,26 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
             this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
             this.previewArchiveUserControl1.TabIndex = 0;
+            this.previewArchiveUserControl1.Load += new System.EventHandler(this.previewArchiveUserControl1_Load);
             // 
-            // tableLayoutPanel4
+            // label8
             // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.RxFillDateTB, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(200, 30);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(668, 30);
-            this.tableLayoutPanel4.TabIndex = 4;
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 60);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 30);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Dispense Quantity";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // tableLayoutPanel6
+            // DispenseQuantityNUD
             // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.ClientPostalCodeTB, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.PharmacyPostalCodeTB, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(434, 0);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(234, 30);
-            this.tableLayoutPanel6.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 30);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Rx Fill Date";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // RxFillDateTB
-            // 
-            this.RxFillDateTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RxFillDateTB.Location = new System.Drawing.Point(3, 3);
-            this.RxFillDateTB.Name = "RxFillDateTB";
-            this.RxFillDateTB.Size = new System.Drawing.Size(228, 20);
-            this.RxFillDateTB.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(237, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 30);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Travel Range";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // ClientPostalCodeTB
-            // 
-            this.ClientPostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClientPostalCodeTB.Enabled = false;
-            this.ClientPostalCodeTB.Location = new System.Drawing.Point(3, 3);
-            this.ClientPostalCodeTB.Name = "ClientPostalCodeTB";
-            this.ClientPostalCodeTB.ReadOnly = true;
-            this.ClientPostalCodeTB.Size = new System.Drawing.Size(111, 20);
-            this.ClientPostalCodeTB.TabIndex = 0;
-            // 
-            // PharmacyPostalCodeTB
-            // 
-            this.PharmacyPostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PharmacyPostalCodeTB.Enabled = false;
-            this.PharmacyPostalCodeTB.Location = new System.Drawing.Point(120, 3);
-            this.PharmacyPostalCodeTB.Name = "PharmacyPostalCodeTB";
-            this.PharmacyPostalCodeTB.ReadOnly = true;
-            this.PharmacyPostalCodeTB.Size = new System.Drawing.Size(111, 20);
-            this.PharmacyPostalCodeTB.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 30);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Drug Iden No. (DIN)";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 30);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Product Name";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // ProductNameTB
-            // 
-            this.ProductNameTB.Location = new System.Drawing.Point(203, 93);
-            this.ProductNameTB.Name = "ProductNameTB";
-            this.ProductNameTB.Size = new System.Drawing.Size(96, 20);
-            this.ProductNameTB.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 120);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(194, 30);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Strength";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // StrengthTB
-            // 
-            this.StrengthTB.Location = new System.Drawing.Point(203, 123);
-            this.StrengthTB.Name = "StrengthTB";
-            this.StrengthTB.Size = new System.Drawing.Size(96, 20);
-            this.StrengthTB.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(194, 30);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Narcotic";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // NarcoticTB
-            // 
-            this.NarcoticTB.Location = new System.Drawing.Point(203, 153);
-            this.NarcoticTB.Name = "NarcoticTB";
-            this.NarcoticTB.Size = new System.Drawing.Size(96, 20);
-            this.NarcoticTB.TabIndex = 13;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel7.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.DrugIdenNoTB, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(200, 60);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(131, 30);
-            this.tableLayoutPanel7.TabIndex = 14;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(104, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // DrugIdenNoTB
-            // 
-            this.DrugIdenNoTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DrugIdenNoTB.Location = new System.Drawing.Point(3, 3);
-            this.DrugIdenNoTB.Name = "DrugIdenNoTB";
-            this.DrugIdenNoTB.Size = new System.Drawing.Size(95, 20);
-            this.DrugIdenNoTB.TabIndex = 2;
-            // 
-            // DataGridView
-            // 
-            this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridView.Location = new System.Drawing.Point(3, 453);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.Size = new System.Drawing.Size(862, 209);
-            this.DataGridView.TabIndex = 148;
+            this.DispenseQuantityNUD.Location = new System.Drawing.Point(203, 63);
+            this.DispenseQuantityNUD.Name = "DispenseQuantityNUD";
+            this.DispenseQuantityNUD.Size = new System.Drawing.Size(96, 20);
+            this.DispenseQuantityNUD.TabIndex = 16;
             // 
             // PrescriptionSummariesForm
             // 
@@ -472,15 +517,15 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.PreviewPanel.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
+            this.PreviewPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DispenseQuantityNUD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,13 +542,12 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         internal System.Windows.Forms.Label Label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button FindPharmacyButton;
+        private System.Windows.Forms.Button CreatePharmacyButton;
         private PharmacyControls.PharmacyComboBox pharmacyComboBox1;
         private CommonControls.FindFileAndArchivePanelUserControl findFileAndArchivePanelUserControl1;
         private ArchiveControls.PreviewArchiveUserControl previewArchiveUserControl1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox DrugIdenNoTB;
         private System.Windows.Forms.TextBox NarcoticTB;
         internal System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox StrengthTB;
@@ -517,7 +561,11 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TextBox ClientPostalCodeTB;
         private System.Windows.Forms.TextBox PharmacyPostalCodeTB;
-        private System.Windows.Forms.TextBox RxFillDateTB;
         private System.Windows.Forms.DataGridView DataGridView;
+        private System.Windows.Forms.DateTimePicker RxFillDateTB;
+        private System.Windows.Forms.CheckBox KeepRxFillDate;
+        private PharmacyControls.DrugComboBox drugComboBox1;
+        internal System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown DispenseQuantityNUD;
     }
 }

@@ -255,93 +255,93 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\ArchiveControls\AdditionalInformationUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\AdditionalInformationUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\AdditionalInformationUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\AdditionalInformationUserControl.Designer.cs">
       <DependentUpon>AdditionalInformationUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\BenefitsPaidToDateUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\BenefitsPaidToDateUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\BenefitsPaidToDateUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\BenefitsPaidToDateUserControl.Designer.cs">
       <DependentUpon>BenefitsPaidToDateUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\BenefitTypeUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\BenefitTypeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\BenefitTypeUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\BenefitTypeUserControl.Designer.cs">
       <DependentUpon>BenefitTypeUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\DocumentFormUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\DocumentFormUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\EmptyUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\EmptyUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\EmptyUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\EmptyUserControl.Designer.cs">
       <DependentUpon>EmptyUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\IDocumentForm.cs" />
-    <Compile Include="Controls\ArchiveControls\MedicalRecordUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\Abstractions\IDocumentForm.cs" />
+    <Compile Include="Controls\ArchiveControls\UserControls\MedicalRecordUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\MedicalRecordUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\MedicalRecordUserControl.Designer.cs">
       <DependentUpon>MedicalRecordUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\MedicalRecordWithAmountUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\MedicalRecordWithAmountUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\MedicalRecordWithAmountUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\MedicalRecordWithAmountUserControl.Designer.cs">
       <DependentUpon>MedicalRecordWithAmountUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ArchiveControls\Models\Archive.cs" />
-    <Compile Include="Controls\ArchiveControls\NameAndTypeOfPartyAndTypeOfMotionUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameAndTypeOfPartyAndTypeOfMotionUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameAndTypeOfPartyAndTypeOfMotionUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameAndTypeOfPartyAndTypeOfMotionUserControl.Designer.cs">
       <DependentUpon>NameAndTypeOfPartyAndTypeOfMotionUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameAndTypeOfPartyUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameAndTypeOfPartyUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameAndTypeOfPartyUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameAndTypeOfPartyUserControl.Designer.cs">
       <DependentUpon>NameAndTypeOfPartyUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameOfOrganizationUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameOfOrganizationUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameOfOrganizationUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameOfOrganizationUserControl.Designer.cs">
       <DependentUpon>NameOfOrganizationUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameOfPartyUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameOfPartyUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameOfPartyUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameOfPartyUserControl.Designer.cs">
       <DependentUpon>NameOfPartyUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\NameUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\NameUserControl.Designer.cs">
       <DependentUpon>NameUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\PreparedByUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\PreparedByUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\PreparedByUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\PreparedByUserControl.Designer.cs">
       <DependentUpon>PreparedByUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\PreviewArchiveUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\PreviewArchiveUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\PreviewArchiveUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\PreviewArchiveUserControl.Designer.cs">
       <DependentUpon>PreviewArchiveUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\SenderRecipientUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\SenderRecipientUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\SenderRecipientUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\SenderRecipientUserControl.Designer.cs">
       <DependentUpon>SenderRecipientUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ArchiveControls\SettingsForm.cs">
@@ -350,10 +350,10 @@
     <Compile Include="Controls\ArchiveControls\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\StandardBenefitsStatementUserControl.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\StandardBenefitsStatementUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ArchiveControls\StandardBenefitsStatementUserControl.Designer.cs">
+    <Compile Include="Controls\ArchiveControls\UserControls\StandardBenefitsStatementUserControl.Designer.cs">
       <DependentUpon>StandardBenefitsStatementUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ArchiveControls\UploadArchivesForm.cs">
@@ -374,16 +374,16 @@
     <Compile Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.Designer.cs">
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CommonControls\FindFileAndArchivePanelUserControl.cs">
+    <Compile Include="Controls\FileControls\UserControls\FindFileAndArchivePanelUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\CommonControls\FindFileAndArchivePanelUserControl.Designer.cs">
+    <Compile Include="Controls\FileControls\UserControls\FindFileAndArchivePanelUserControl.Designer.cs">
       <DependentUpon>FindFileAndArchivePanelUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CommonControls\FindFilePanelUserControl.cs">
+    <Compile Include="Controls\FileControls\UserControls\FindFilePanelUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\CommonControls\FindFilePanelUserControl.Designer.cs">
+    <Compile Include="Controls\FileControls\UserControls\FindFilePanelUserControl.Designer.cs">
       <DependentUpon>FindFilePanelUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CompanyControls\CompanyInfo.cs">
@@ -438,37 +438,37 @@
     <Compile Include="Controls\DocumentControls\CreateDocument.Designer.cs">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FileControls\ABBinderControl.cs">
+    <Compile Include="Controls\FileControls\UserControls\ABBinderControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FileControls\ABBinderControl.Designer.cs">
+    <Compile Include="Controls\FileControls\UserControls\ABBinderControl.Designer.cs">
       <DependentUpon>ABBinderControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FileControls\IPeopleInformation.cs" />
-    <Compile Include="Controls\FileControls\MedicalBinderIndexControl.cs">
+    <Compile Include="Controls\FileControls\Abstractions\IPeopleInformation.cs" />
+    <Compile Include="Controls\FileControls\UserControls\MedicalBinderIndexControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FileControls\MedicalBinderIndexControl.Designer.cs">
+    <Compile Include="Controls\FileControls\UserControls\MedicalBinderIndexControl.Designer.cs">
       <DependentUpon>MedicalBinderIndexControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileControls\Models\ArchiveBinder.cs" />
     <Compile Include="Controls\FileControls\Models\ArchiveBinderIndex.cs" />
-    <Compile Include="Controls\FileControls\PeopleOtherContactControl.cs">
+    <Compile Include="Controls\FileControls\UserControls\PeopleOtherContactControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FileControls\PeopleOtherContactControl.Designer.cs">
+    <Compile Include="Controls\FileControls\UserControls\PeopleOtherContactControl.Designer.cs">
       <DependentUpon>PeopleOtherContactControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FileControls\PeopleClientControl.cs">
+    <Compile Include="Controls\FileControls\UserControls\PeopleClientControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FileControls\PeopleClientControl.Designer.cs">
+    <Compile Include="Controls\FileControls\UserControls\PeopleClientControl.Designer.cs">
       <DependentUpon>PeopleClientControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FileControls\PeopleControl.cs">
+    <Compile Include="Controls\FileControls\UserControls\PeopleControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FileControls\PeopleControl.Designer.cs">
+    <Compile Include="Controls\FileControls\UserControls\PeopleControl.Designer.cs">
       <DependentUpon>PeopleControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\InputBox.cs">
@@ -477,23 +477,23 @@
     <Compile Include="Controls\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PharmacyControls\CustomControls\DrugComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\CustomControls\DrugComboBox.Designer.cs">
+      <DependentUpon>DrugComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PharmacyControls\FindPharmacy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\PharmacyControls\FindPharmacy.Designer.cs">
       <DependentUpon>FindPharmacy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PharmacyControls\PharmacyComboBox.cs">
+    <Compile Include="Controls\PharmacyControls\CustomControls\PharmacyComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\PharmacyControls\PharmacyComboBox.Designer.cs">
+    <Compile Include="Controls\PharmacyControls\CustomControls\PharmacyComboBox.Designer.cs">
       <DependentUpon>PharmacyComboBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PharmacyControls\PharmacyTextBoxControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Controls\PharmacyControls\PharmacyTextBoxControl.Designer.cs">
-      <DependentUpon>PharmacyTextBoxControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\PrescriptionSummariesControls\PrescriptionSummariesForm.cs">
       <SubType>Form</SubType>
@@ -619,55 +619,55 @@
     <Compile Include="Controls\TemplateControls\FindTemplate.Designer.cs">
       <DependentUpon>FindTemplate.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\ArchiveControls\AdditionalInformationUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\AdditionalInformationUserControl.resx">
       <DependentUpon>AdditionalInformationUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\BenefitsPaidToDateUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\BenefitsPaidToDateUserControl.resx">
       <DependentUpon>BenefitsPaidToDateUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\BenefitTypeUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\BenefitTypeUserControl.resx">
       <DependentUpon>BenefitTypeUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\DocumentFormUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\DocumentFormUserControl.resx">
       <DependentUpon>DocumentFormUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\EmptyUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\EmptyUserControl.resx">
       <DependentUpon>EmptyUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\MedicalRecordUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\MedicalRecordUserControl.resx">
       <DependentUpon>MedicalRecordUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\MedicalRecordWithAmountUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\MedicalRecordWithAmountUserControl.resx">
       <DependentUpon>MedicalRecordWithAmountUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\NameAndTypeOfPartyAndTypeOfMotionUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\NameAndTypeOfPartyAndTypeOfMotionUserControl.resx">
       <DependentUpon>NameAndTypeOfPartyAndTypeOfMotionUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\NameAndTypeOfPartyUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\NameAndTypeOfPartyUserControl.resx">
       <DependentUpon>NameAndTypeOfPartyUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\NameOfOrganizationUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\NameOfOrganizationUserControl.resx">
       <DependentUpon>NameOfOrganizationUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\NameOfPartyUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\NameOfPartyUserControl.resx">
       <DependentUpon>NameOfPartyUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\NameUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\NameUserControl.resx">
       <DependentUpon>NameUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\PreparedByUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\PreparedByUserControl.resx">
       <DependentUpon>PreparedByUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\PreviewArchiveUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\PreviewArchiveUserControl.resx">
       <DependentUpon>PreviewArchiveUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\SenderRecipientUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\SenderRecipientUserControl.resx">
       <DependentUpon>SenderRecipientUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ArchiveControls\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ArchiveControls\StandardBenefitsStatementUserControl.resx">
+    <EmbeddedResource Include="Controls\ArchiveControls\UserControls\StandardBenefitsStatementUserControl.resx">
       <DependentUpon>StandardBenefitsStatementUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ArchiveControls\UploadArchivesForm.resx">
@@ -679,10 +679,10 @@
     <EmbeddedResource Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.resx">
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\CommonControls\FindFileAndArchivePanelUserControl.resx">
+    <EmbeddedResource Include="Controls\FileControls\UserControls\FindFileAndArchivePanelUserControl.resx">
       <DependentUpon>FindFileAndArchivePanelUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\CommonControls\FindFilePanelUserControl.resx">
+    <EmbeddedResource Include="Controls\FileControls\UserControls\FindFilePanelUserControl.resx">
       <DependentUpon>FindFilePanelUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CompanyControls\CompanyInfo.resx">
@@ -709,19 +709,19 @@
     <EmbeddedResource Include="Controls\DocumentControls\CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FileControls\ABBinderControl.resx">
+    <EmbeddedResource Include="Controls\FileControls\UserControls\ABBinderControl.resx">
       <DependentUpon>ABBinderControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FileControls\MedicalBinderIndexControl.resx">
+    <EmbeddedResource Include="Controls\FileControls\UserControls\MedicalBinderIndexControl.resx">
       <DependentUpon>MedicalBinderIndexControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FileControls\PeopleOtherContactControl.resx">
+    <EmbeddedResource Include="Controls\FileControls\UserControls\PeopleOtherContactControl.resx">
       <DependentUpon>PeopleOtherContactControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FileControls\PeopleClientControl.resx">
+    <EmbeddedResource Include="Controls\FileControls\UserControls\PeopleClientControl.resx">
       <DependentUpon>PeopleClientControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FileControls\PeopleControl.resx">
+    <EmbeddedResource Include="Controls\FileControls\UserControls\PeopleControl.resx">
       <DependentUpon>PeopleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\InputBox.resx">
@@ -850,6 +850,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\PrescriptionSummariesControls\Models\" />
     <Folder Include="Migrations\" />
     <Folder Include="Models\" />
   </ItemGroup>

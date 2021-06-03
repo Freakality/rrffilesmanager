@@ -42,7 +42,12 @@ namespace RRFFilesManager.Controls.CommonControls
             if (file == null)
                 return;
             File = file;
-            Utils.SetComboBoxDataSource(ArchivesCB, _archiveRepository.List(File));
+            ArchivesCB.DataSource = _archiveRepository.List(
+                                        File.ID,
+                                        3,  //MedicalBinder  
+                                        12, //Medical Record
+                                        69  //CNRs
+                                    );
             FileNumberTextBox.Text = File.FileNumber.ToString();
         }
 

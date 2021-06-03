@@ -30,11 +30,18 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public  IEnumerable<Archive> List(File file = null)
+        public  IEnumerable<Archive> List(int? fileID = null, int? documentGroupID = null, int? documentCategoryID = null, int? documentTypeID = null)
         {
-            if (file != null)
-                return _context.Archives.Where(s => s.File == file).ToList();
-            return _context.Archives.ToList(); ;
+            var query = _context.Archives.AsQueryable();
+            if (fileID != null)
+                query = query.Where(s => s.File.ID == fileID.Value);
+            if (documentGroupID != null)
+                query = query.Where(s => s.DocumentGroup.ID == documentGroupID.Value);
+            if (documentCategoryID != null)
+                query = query.Where(s => s.DocumentCategory.ID == documentCategoryID.Value);
+            if (documentTypeID != null)
+                query = query.Where(s => s.DocumentType.ID == documentTypeID.Value);
+            return query.ToList();
         }
 
         public void SoftDelete(int archiveId)

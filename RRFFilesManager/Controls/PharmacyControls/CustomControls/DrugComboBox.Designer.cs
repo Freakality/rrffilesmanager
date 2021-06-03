@@ -1,7 +1,7 @@
 ﻿
 namespace RRFFilesManager.Controls.PharmacyControls
 {
-    partial class PharmacyTextBoxControl
+    partial class DrugComboBox
     {
         /// <summary>
         /// Required designer variable.

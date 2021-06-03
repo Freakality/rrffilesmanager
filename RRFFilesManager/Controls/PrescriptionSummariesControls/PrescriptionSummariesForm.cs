@@ -17,7 +17,10 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 {
     public partial class PrescriptionSummariesForm : Form
     {
-        public Pharmacy Pharmacy { get; set; }
+        public File File => findFileAndArchivePanelUserControl1.File;
+        public Archive Archive => findFileAndArchivePanelUserControl1.Archive;
+        public Pharmacy Pharmacy => pharmacyComboBox1.Pharmacy;
+        public Drug Drug => drugComboBox1.Drug;
         private IPharmacyRepository _pharmacyRepository { get; set; }
         public PrescriptionSummariesForm()
         {
@@ -32,19 +35,20 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 
         private void DoneButton_Click(object sender, EventArgs e)
         {
+            if (File == null)
+            {
+                MessageBox.Show("File can not be null");
+                return;
+            }
+            ProcessArchive(Archive);
+            ClearForm();
+            FilesGridView_CellClick(null, null);
+        }
+
+        private void ProcessArchive(Archive archive)
+        {
             
-        }
-
-        private void FindPharmacyButton_Click(object sender, EventArgs e)
-        {
-            FindPharmacy.Instance.Show();
-            FindPharmacy.Instance.FormClosing += new FormClosingEventHandler(FindPharmacy_FormClosing);
-        }
-
-        private void FindPharmacy_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var findPharmacyForm = sender as FindPharmacy;
-            Pharmacy = findPharmacyForm.Selected;
+            UploadedFiles.Remove(selected);
         }
 
         private void PrescriptionSummariesForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -69,6 +73,24 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             if (archive == null)
                 return;
             previewArchiveUserControl1.Preview(archive.Path);
+        }
+
+        private void drugComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ProductNameTB.Text = Drug?.Name;
+            StrengthTB.Text = Drug?.Strength;
+            NarcoticTB.Text = Drug?.Schedule;
+        }
+
+        private void previewArchiveUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pharmacyComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PharmacyPostalCodeTB.Text = Pharmacy?.PostalCode;
+            ClientPostalCodeTB.Text = File?.Client?.PostalCode;
         }
     }
 }
