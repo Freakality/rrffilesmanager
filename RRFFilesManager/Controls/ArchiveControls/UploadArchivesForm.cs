@@ -90,7 +90,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             ArchivesGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ArchivesGridView.MultiSelect = false;
             ArchivesGridView.ReadOnly = true;
-            AddButtonToGridView(ArchivesGridView, "Undo");
+            Utils.AddButtonToGridView(ArchivesGridView, "Undo");
             ArchivesGridView.DataSource = Archives;
 
             //this.printPreviewControl.Document = new System.Drawing.Printing.PrintDocument();

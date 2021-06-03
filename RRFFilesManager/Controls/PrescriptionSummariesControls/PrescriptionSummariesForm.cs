@@ -22,10 +22,18 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         public Pharmacy Pharmacy => pharmacyComboBox1.Pharmacy;
         public Drug Drug => drugComboBox1.Drug;
         private IPharmacyRepository _pharmacyRepository { get; set; }
+
+        //BindingList<Models.Archive> Archives = new BindingList<Models.Archive>();
         public PrescriptionSummariesForm()
         {
             _pharmacyRepository = Program.GetService<IPharmacyRepository>();
             InitializeComponent();
+
+            DataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DataGridView.MultiSelect = false;
+            DataGridView.ReadOnly = true;
+            Utils.AddButtonToGridView(DataGridView, "Undo");
+            //DataGridView.DataSource = Archives;
         }
 
         private void findFilePanelUserControl1_Load(object sender, EventArgs e)
@@ -79,7 +87,16 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         {
             ProductNameTB.Text = Drug?.Name;
             StrengthTB.Text = Drug?.Strength;
-            NarcoticTB.Text = Drug?.Schedule;
+            NarcoticTB.Text = HasNarcotic();
+        }
+
+        private string HasNarcotic()
+        {
+            if (Drug == null)
+                return null;
+            var narcotics = new string[] { "CDSA I", "CDSA II", "CDSA III", "CDSA IIII" };
+            var hasNarcotic = narcotics.Any(s => Drug.Schedule.Contains(s));
+            return hasNarcotic ? "Yes" : "";
         }
 
         private void previewArchiveUserControl1_Load(object sender, EventArgs e)

@@ -64,6 +64,18 @@ namespace RRFFilesManager.Logic
         public static void CloseForm(Form from, Form to)
         {
             to.Show();
-        }   
+        }
+
+        public static void AddButtonToGridView(DataGridView GridView, string name, int columnIndex = 0, string text = null)
+        {
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Name = name;
+            editButtonColumn.Text = text ?? name;
+            editButtonColumn.UseColumnTextForButtonValue = true;
+            if (GridView.Columns[name] == null)
+            {
+                GridView.Columns.Insert(columnIndex, editButtonColumn);
+            }
+        }
     }
 }
