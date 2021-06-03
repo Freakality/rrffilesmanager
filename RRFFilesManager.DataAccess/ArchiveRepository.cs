@@ -30,8 +30,10 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public  IEnumerable<Archive> List()
+        public  IEnumerable<Archive> List(File file = null)
         {
+            if (file != null)
+                return _context.Archives.Where(s => s.File == file).ToList();
             return _context.Archives.ToList(); ;
         }
 

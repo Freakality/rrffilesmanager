@@ -33,11 +33,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel = new System.Windows.Forms.Panel();
             this.previewHandlerHost1 = new RRFFilesManager.PreviewHandlerHost();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
-            this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
             this.PreviewPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
             this.SuspendLayout();
             // 
             // PreviewPanel
@@ -75,17 +75,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.richTextBox.Text = "";
             this.richTextBox.Visible = false;
             // 
-            // axAcroPDF
-            // 
-            this.axAcroPDF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axAcroPDF.Enabled = true;
-            this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
-            this.axAcroPDF.Name = "axAcroPDF";
-            this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
-            this.axAcroPDF.Size = new System.Drawing.Size(465, 665);
-            this.axAcroPDF.TabIndex = 0;
-            this.axAcroPDF.Visible = false;
-            // 
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -98,16 +87,26 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.pictureBox.TabStop = false;
             this.pictureBox.Visible = false;
             // 
+            // axAcroPDF
+            // 
+            this.axAcroPDF.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axAcroPDF.Enabled = true;
+            this.axAcroPDF.Location = new System.Drawing.Point(0, 0);
+            this.axAcroPDF.Name = "axAcroPDF";
+            this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
+            this.axAcroPDF.Size = new System.Drawing.Size(465, 665);
+            this.axAcroPDF.TabIndex = 0;
+            this.axAcroPDF.Visible = false;
+            // 
             // PreviewArchiveUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.PreviewPanel);
             this.Name = "PreviewArchiveUserControl";
             this.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
             this.ResumeLayout(false);
 
         }

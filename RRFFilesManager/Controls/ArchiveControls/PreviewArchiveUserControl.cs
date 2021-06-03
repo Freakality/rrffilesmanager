@@ -35,25 +35,32 @@ namespace RRFFilesManager.Controls.ArchiveControls
             axAcroPDF.Hide();
             pictureBox.Hide();
             richTextBox.Hide();
-
-            var ext = Path.GetExtension(path);
-            var perceivedType = Convert.ToString(Registry.ClassesRoot.OpenSubKey(ext).GetValue("PerceivedType"));
-            if (ext == ".pdf")
+            try
             {
-                PreviewPDF(path);
+                var ext = Path.GetExtension(path);
+                var perceivedType = Convert.ToString(Registry.ClassesRoot.OpenSubKey(ext).GetValue("PerceivedType"));
+                if (ext == ".pdf")
+                {
+                    PreviewPDF(path);
+                }
+                else if (ext == ".jpg" || ext == ".jpeg" || ext == ".png" || perceivedType == "image")
+                {
+                    PreviewPicture(path);
+                }
+                else if (ext == ".txt" || perceivedType == "text")
+                {
+                    PreviewText(path);
+                }
+                else
+                {
+                    PreviewDefault(path);
+                }
             }
-            else if (ext == ".jpg" || ext == ".jpeg" || ext == ".png" || perceivedType == "image")
+            catch(Exception e)
             {
-                PreviewPicture(path);
+                MessageBox.Show($"Error al intentar previsualizar archivo: {e.Message}");
             }
-            else if (ext == ".txt" || perceivedType == "text")
-            {
-                PreviewText(path);
-            }
-            else
-            {
-                PreviewDefault(path);
-            }
+            
         }
 
         private void PreviewPDF(string path)
@@ -61,6 +68,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             axAcroPDF.LoadFile(path);
             axAcroPDF.src = path;
             axAcroPDF.setShowToolbar(false);
+            axAcroPDF.Refresh();
+            axAcroPDF.Size = PreviewPanel.Size;
             axAcroPDF.Show();
         }
 

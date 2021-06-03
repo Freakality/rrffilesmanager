@@ -374,6 +374,12 @@
     <Compile Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.Designer.cs">
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CommonControls\FindFileAndArchivePanelUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CommonControls\FindFileAndArchivePanelUserControl.Designer.cs">
+      <DependentUpon>FindFileAndArchivePanelUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CommonControls\FindFilePanelUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -672,6 +678,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.resx">
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CommonControls\FindFileAndArchivePanelUserControl.resx">
+      <DependentUpon>FindFileAndArchivePanelUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CommonControls\FindFilePanelUserControl.resx">
       <DependentUpon>FindFilePanelUserControl.cs</DependentUpon>

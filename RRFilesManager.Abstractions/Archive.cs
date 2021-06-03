@@ -57,5 +57,7 @@ namespace RRFFilesManager.Abstractions
         public string NameOfOrganization { get; set; }
 
         public string DocumentName { get; set; }
+
+        public override string ToString() => $"{Name}";
     }
 }

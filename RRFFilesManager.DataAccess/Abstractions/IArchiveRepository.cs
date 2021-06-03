@@ -14,6 +14,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void SoftDelete(int archiveId);
         void Delete(Archive archive);
         Archive GetById(int archiveId);
-        IEnumerable<Archive> List();
+        IEnumerable<Archive> List(File file = null);
     }
 }

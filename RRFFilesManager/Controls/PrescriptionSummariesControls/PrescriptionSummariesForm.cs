@@ -56,5 +56,19 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         {
 
         }
+
+        private void findFileAndArchivePanelUserControl1_Load(object sender, EventArgs e)
+        {
+            var archiveCB = findFileAndArchivePanelUserControl1.ArchivesComboBox;
+            archiveCB.SelectedIndexChanged += ArchivesCB_SelectedIndexChanged;
+        }
+
+        private void ArchivesCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var archive = findFileAndArchivePanelUserControl1.Archive;
+            if (archive == null)
+                return;
+            previewArchiveUserControl1.Preview(archive.Path);
+        }
     }
 }
