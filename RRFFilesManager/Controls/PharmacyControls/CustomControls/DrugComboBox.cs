@@ -45,5 +45,10 @@ namespace RRFFilesManager.Controls.PharmacyControls
             Items.Clear();
             Items.AddRange(items);
         }
+        public void Reset()
+        {
+            ResetText();
+            FillItems();
+        }
     }
 }

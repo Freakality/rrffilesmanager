@@ -32,8 +32,29 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             DataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridView.MultiSelect = false;
             DataGridView.ReadOnly = true;
-            Utils.AddButtonToGridView(DataGridView, "Undo");
+            //Utils.AddButtonToGridView(DataGridView, "Undo");
             //DataGridView.DataSource = Archives;
+        }
+        private void SetForm()
+        {
+            SetForm(File);
+            SetForm(Drug);
+            SetForm(Pharmacy);
+        }
+        private void SetForm(Drug drug)
+        {
+            ProductNameTB.Text = drug?.Name;
+            StrengthTB.Text = drug?.Strength;
+            NarcoticTB.Text = HasNarcotic(drug);
+        }
+
+        private void SetForm(Pharmacy pharmacy)
+        {
+            PharmacyPostalCodeTB.Text = pharmacy?.PostalCode;
+        }
+        private void SetForm(File file)
+        {
+            ClientPostalCodeTB.Text = file?.Client?.PostalCode;
         }
 
         private void findFilePanelUserControl1_Load(object sender, EventArgs e)
@@ -85,17 +106,17 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 
         private void drugComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ProductNameTB.Text = Drug?.Name;
-            StrengthTB.Text = Drug?.Strength;
-            NarcoticTB.Text = HasNarcotic();
+            SetForm();
         }
 
-        private string HasNarcotic()
+        
+
+        private string HasNarcotic(Drug drug)
         {
-            if (Drug == null)
+            if (drug == null)
                 return null;
             var narcotics = new string[] { "CDSA I", "CDSA II", "CDSA III", "CDSA IIII" };
-            var hasNarcotic = narcotics.Any(s => Drug.Schedule.Contains(s));
+            var hasNarcotic = narcotics.Any(s => drug.Schedule.Contains(s));
             return hasNarcotic ? "Yes" : "";
         }
 
@@ -106,8 +127,37 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 
         private void pharmacyComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PharmacyPostalCodeTB.Text = Pharmacy?.PostalCode;
-            ClientPostalCodeTB.Text = File?.Client?.PostalCode;
+            SetForm();
+        }
+
+        private void DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ResetForm();
+            if (DataGridView?.SelectedRows?.Count == 0)
+                return;
+            var path = DataGridView?.SelectedRows?[0]?.Cells?["FullName"]?.Value.ToString();
+            try
+            {
+                previewArchiveUserControl1.Preview(path);
+            }
+            catch { }
+        }
+
+        private void ResetForm()
+        {
+            if (!KeepRxFillDate.Checked)
+                RxFillDateTB.Value = DateTime.Now;
+
+            pharmacyComboBox1.Reset();
+            PharmacyPostalCodeTB.ResetText();
+            ClientPostalCodeTB.ResetText();
+
+            DispenseQuantityNUD.Value = 0;
+
+            drugComboBox1.Reset();
+            ProductNameTB.ResetText();
+            StrengthTB.ResetText();
+            NarcoticTB.ResetText();
         }
     }
 }

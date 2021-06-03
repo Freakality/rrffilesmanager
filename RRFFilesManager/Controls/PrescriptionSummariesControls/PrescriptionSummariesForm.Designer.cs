@@ -470,6 +470,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.Size = new System.Drawing.Size(862, 209);
             this.DataGridView.TabIndex = 148;
+            this.DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellClick);
             // 
             // findFileAndArchivePanelUserControl1
             // 
@@ -479,6 +480,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";
             this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 35);
             this.findFileAndArchivePanelUserControl1.TabIndex = 149;
+            this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load);
             // 
             // PreviewPanel
             // 
@@ -496,6 +498,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
             this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
             this.previewArchiveUserControl1.TabIndex = 0;
+            this.previewArchiveUserControl1.Load += new System.EventHandler(this.previewArchiveUserControl1_Load);
             // 
             // PrescriptionSummariesForm
             // 
