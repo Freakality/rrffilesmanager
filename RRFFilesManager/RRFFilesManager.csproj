@@ -407,17 +407,17 @@
     <Compile Include="Controls\ContactControls\GroupForm.Designer.cs">
       <DependentUpon>GroupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ContactControls\IGroupControl.cs" />
-    <Compile Include="Controls\ContactControls\OtherGroupsControl.cs">
+    <Compile Include="Controls\ContactControls\Abstractions\IGroupControl.cs" />
+    <Compile Include="Controls\ContactControls\UserControls\OtherGroupsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ContactControls\OtherGroupsControl.Designer.cs">
+    <Compile Include="Controls\ContactControls\UserControls\OtherGroupsControl.Designer.cs">
       <DependentUpon>OtherGroupsControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ContactControls\ClientGroupControl.cs">
+    <Compile Include="Controls\ContactControls\UserControls\ClientGroupControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ContactControls\ClientGroupControl.Designer.cs">
+    <Compile Include="Controls\ContactControls\UserControls\ClientGroupControl.Designer.cs">
       <DependentUpon>ClientGroupControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ContactControls\ContactInfo.cs">
@@ -531,10 +531,10 @@
     <Compile Include="Controls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IntakeControls\ClientIntakeProcess.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\ClientIntakeProcess.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\IntakeControls\ClientIntakeProcess.Designer.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\ClientIntakeProcess.Designer.cs">
       <DependentUpon>ClientIntakeProcess.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\IntakeControls\FindIntake.cs">
@@ -549,28 +549,28 @@
     <Compile Include="Controls\IntakeControls\IntakeForm.Designer.cs">
       <DependentUpon>IntakeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IntakeControls\IntakeSheets.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\IntakeSheets.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\IntakeControls\IntakeSheets.Designer.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\IntakeSheets.Designer.cs">
       <DependentUpon>IntakeSheets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IntakeControls\NextSteps.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\NextSteps.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\IntakeControls\NextSteps.Designer.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\NextSteps.Designer.cs">
       <DependentUpon>NextSteps.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IntakeControls\PotentialClientInfo.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\PotentialClientInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\IntakeControls\PotentialClientInfo.Designer.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\PotentialClientInfo.Designer.cs">
       <DependentUpon>PotentialClientInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\IntakeControls\PreliminaryInfo.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\PreliminaryInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\IntakeControls\PreliminaryInfo.Designer.cs">
+    <Compile Include="Controls\IntakeControls\UserControls\PreliminaryInfo.Designer.cs">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\ArchiveManager.cs" />
@@ -694,10 +694,10 @@
     <EmbeddedResource Include="Controls\ContactControls\GroupForm.resx">
       <DependentUpon>GroupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ContactControls\OtherGroupsControl.resx">
+    <EmbeddedResource Include="Controls\ContactControls\UserControls\OtherGroupsControl.resx">
       <DependentUpon>OtherGroupsControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ContactControls\ClientGroupControl.resx">
+    <EmbeddedResource Include="Controls\ContactControls\UserControls\ClientGroupControl.resx">
       <DependentUpon>ClientGroupControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ContactControls\ContactInfo.resx">
@@ -748,7 +748,7 @@
     <EmbeddedResource Include="Controls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\IntakeControls\ClientIntakeProcess.resx">
+    <EmbeddedResource Include="Controls\IntakeControls\UserControls\ClientIntakeProcess.resx">
       <DependentUpon>ClientIntakeProcess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\IntakeControls\FindIntake.resx">
@@ -757,16 +757,16 @@
     <EmbeddedResource Include="Controls\IntakeControls\IntakeForm.resx">
       <DependentUpon>IntakeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\IntakeControls\IntakeSheets.resx">
+    <EmbeddedResource Include="Controls\IntakeControls\UserControls\IntakeSheets.resx">
       <DependentUpon>IntakeSheets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\IntakeControls\NextSteps.resx">
+    <EmbeddedResource Include="Controls\IntakeControls\UserControls\NextSteps.resx">
       <DependentUpon>NextSteps.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\IntakeControls\PotentialClientInfo.resx">
+    <EmbeddedResource Include="Controls\IntakeControls\UserControls\PotentialClientInfo.resx">
       <DependentUpon>PotentialClientInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\IntakeControls\PreliminaryInfo.resx">
+    <EmbeddedResource Include="Controls\IntakeControls\UserControls\PreliminaryInfo.resx">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SharedControls\PleaseWait.resx">
