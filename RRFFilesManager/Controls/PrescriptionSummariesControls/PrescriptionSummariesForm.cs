@@ -22,18 +22,22 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         public Pharmacy Pharmacy => pharmacyComboBox1.Pharmacy;
         public Drug Drug => drugComboBox1.Drug;
         private IPharmacyRepository _pharmacyRepository { get; set; }
+        private IOutOfPocketHealthCareExpRepository _outOfPocketHealthCareExpRepository { get; set; }
 
-        //BindingList<Models.Archive> Archives = new BindingList<Models.Archive>();
+
+        BindingList<ArchiveControls.Models.Archive> Archives = new BindingList<ArchiveControls.Models.Archive>();
         public PrescriptionSummariesForm()
         {
             _pharmacyRepository = Program.GetService<IPharmacyRepository>();
+            _outOfPocketHealthCareExpRepository = Program.GetService<IOutOfPocketHealthCareExpRepository>();
             InitializeComponent();
 
             DataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridView.MultiSelect = false;
             DataGridView.ReadOnly = true;
-            //Utils.AddButtonToGridView(DataGridView, "Undo");
-            //DataGridView.DataSource = Archives;
+            Utils.AddButtonToGridView(DataGridView, "Undo");
+            DataGridView.DataSource = Archives;
+
         }
         private void SetForm()
         {
@@ -64,21 +68,63 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 
         private void DoneButton_Click(object sender, EventArgs e)
         {
+            if (!Validate())
+                return;
+            var value = InsertEntity();
+            Archives.Add(new ArchiveControls.Models.Archive(value));
+            ResetForm();
+        }
+        public OutOfPocketHealthCareExp InsertEntity()
+        {
+            var value = new OutOfPocketHealthCareExp();
+            FillEntity(value);
+            _outOfPocketHealthCareExpRepository.Insert(value);
+            return value;
+        }
+        public void FillEntity(OutOfPocketHealthCareExp outOfPocketHealthCareExp)
+        {
+            outOfPocketHealthCareExp.File = File;
+            outOfPocketHealthCareExp.Archive = Archive;
+            outOfPocketHealthCareExp.Pharmacy = Pharmacy;
+            outOfPocketHealthCareExp.RxFillDate = RxFillDateTB.Value;
+            outOfPocketHealthCareExp.DispenseQuantity = Convert.ToInt32(DispenseQuantityNUD.Value);
+            outOfPocketHealthCareExp.Drug = Drug;
+        }
+        public new bool Validate()
+        {
             if (File == null)
             {
-                MessageBox.Show("File can not be null");
-                return;
+                MessageBox.Show("Please select File");
+                return false;
             }
-            ProcessArchive(Archive);
-            //ClearForm();
-            //FilesGridView_CellClick(null, null);
+            else if(Archive == null)
+            {
+                MessageBox.Show("Please select Archive");
+                return false;
+            }
+            else if (Pharmacy == null)
+            {
+                MessageBox.Show("Please select Pharmacy");
+                return false;
+            }
+            else if (Drug == null)
+            {
+                MessageBox.Show("Please select Drug");
+                return false;
+            }
+            return true;
         }
-
-        private void ProcessArchive(Archive archive)
-        {
-            
-            
-        }
+        //private void ClearForm()
+        //{
+        //    findFileAndArchivePanelUserControl1.ClearForm();
+        //    pharmacyComboBox1.Reset();
+        //    RxFillDateTB.Value = DateTime.Now;
+        //    DispenseQuantityNUD.ResetText();
+        //    drugComboBox1.Reset();
+        //    ProductNameTB.ResetText();
+        //    StrengthTB.ResetText();
+        //    NarcoticTB.ResetText();
+        //}
 
         private void PrescriptionSummariesForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -132,17 +178,24 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 
         private void DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ResetForm();
             if (DataGridView?.SelectedRows?.Count == 0)
                 return;
-            var path = DataGridView?.SelectedRows?[0]?.Cells?["FullName"]?.Value.ToString();
-            try
+            var selected = DataGridView.SelectedRows[0].DataBoundItem as ArchiveControls.Models.Archive;
+            if (selected == null)
+                return;
+            if (e.ColumnIndex == DataGridView.Columns["Undo"].Index)
             {
-                previewArchiveUserControl1.Preview(path);
+                UndoProcessedArchive(selected);
+                return;
             }
-            catch { }
+            previewArchiveUserControl1.Preview(selected.Path);
         }
-
+        private void UndoProcessedArchive(ArchiveControls.Models.Archive archive)
+        {
+            var originalEntity = archive.GetOutOfPocketHealthCareExp();
+            _outOfPocketHealthCareExpRepository.Delete(originalEntity);
+            Archives.Remove(archive);
+        }
         private void ResetForm()
         {
             if (!KeepRxFillDate.Checked)

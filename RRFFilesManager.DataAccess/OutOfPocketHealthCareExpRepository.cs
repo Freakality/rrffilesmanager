@@ -53,12 +53,11 @@ namespace RRFFilesManager.DataAccess
 
             return query.ToList();
         }
-        public void SoftDelete(int outOfPocketHealthCareExpId)
+        public void Delete(OutOfPocketHealthCareExp outOfPocketHealthCareExp)
         {
-            var accountToDelete = _context.OutOfPocketHealthCareExp.Find(outOfPocketHealthCareExpId);
-
+            var trxOutOfPocketHealthCareExp = GetById(outOfPocketHealthCareExp.ID);
+            _context.OutOfPocketHealthCareExp.Remove(trxOutOfPocketHealthCareExp);
             _context.SaveChanges();
-
         }
 
         public void Update(OutOfPocketHealthCareExp outOfPocketHealthCareExp)

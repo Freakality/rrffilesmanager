@@ -234,6 +234,10 @@
     <Compile Include="Migrations\20210610035843_OutOfPocketHealthCareExp.designer.cs">
       <DependentUpon>20210610035843_OutOfPocketHealthCareExp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210610040615_OutOfPocketHealthCareExp_Archive.cs" />
+    <Compile Include="Migrations\20210610040615_OutOfPocketHealthCareExp_Archive.designer.cs">
+      <DependentUpon>20210610040615_OutOfPocketHealthCareExp_Archive.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />

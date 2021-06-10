@@ -10,6 +10,7 @@ namespace RRFFilesManager.Controls.ArchiveControls.Models
     public class Archive
     {
         private Abstractions.Archive archive;
+        private Abstractions.OutOfPocketHealthCareExp outOfPocketHealthCareExp;
         public Archive(Abstractions.Archive archive) {
             File = archive.File.FileNumber;
             Name = archive.Name;
@@ -18,6 +19,10 @@ namespace RRFFilesManager.Controls.ArchiveControls.Models
             Category = archive.DocumentCategory;
             this.archive = archive;
         }
+        public Archive(OutOfPocketHealthCareExp outOfPocketHealthCareExp) : this(outOfPocketHealthCareExp.Archive)
+        {
+            this.outOfPocketHealthCareExp = outOfPocketHealthCareExp;
+        }
         public int File { get; set; }
         public string Name { get; set; }
         public string Path { get; set; }
@@ -25,5 +30,6 @@ namespace RRFFilesManager.Controls.ArchiveControls.Models
         public DocumentCategory Category { get; set; }
 
         public Abstractions.Archive GetArchive() => this.archive;
+        public OutOfPocketHealthCareExp GetOutOfPocketHealthCareExp() => this.outOfPocketHealthCareExp;
     }
 }

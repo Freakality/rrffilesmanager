@@ -11,9 +11,9 @@ namespace RRFFilesManager.DataAccess.Abstractions
     {
         void Insert(OutOfPocketHealthCareExp outOfPocketHealthCareExp);
         void Update(OutOfPocketHealthCareExp outOfPocketHealthCareExp);
-        void SoftDelete(int outOfPocketHealthCareExpId);
         OutOfPocketHealthCareExp GetById(int outOfPocketHealthCareExpId);
         IEnumerable<OutOfPocketHealthCareExp> List();
         IEnumerable<OutOfPocketHealthCareExp> Search(string searchText, int? take = null);
+        void Delete(OutOfPocketHealthCareExp outOfPocketHealthCareExp);
     }
 }

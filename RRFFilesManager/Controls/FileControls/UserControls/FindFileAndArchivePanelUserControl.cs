@@ -55,5 +55,13 @@ namespace RRFFilesManager.Controls.CommonControls
         {
             Archive = ArchivesCB.SelectedItem as Archive;
         }
+
+        public void ClearForm()
+        {
+            File = null;
+            FileNumberTextBox.ResetText();
+            Archive = null;
+            ArchivesCB.ResetText();
+        }
     }
 }
