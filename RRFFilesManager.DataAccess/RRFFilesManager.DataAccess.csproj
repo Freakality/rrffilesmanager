@@ -197,6 +197,7 @@
     <Compile Include="Abstractions\IDocumentTypeRepository.cs" />
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
+    <Compile Include="Abstractions\IOutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="Abstractions\IPharmacyRepository.cs" />
     <Compile Include="Abstractions\IPositionRepository.cs" />
     <Compile Include="Abstractions\IHearAboutUsRepository.cs" />
@@ -229,6 +230,11 @@
     <Compile Include="Migrations\20210603031429_Drug.designer.cs">
       <DependentUpon>20210603031429_Drug.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210610035843_OutOfPocketHealthCareExp.cs" />
+    <Compile Include="Migrations\20210610035843_OutOfPocketHealthCareExp.designer.cs">
+      <DependentUpon>20210610035843_OutOfPocketHealthCareExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />
     <Compile Include="Migrations\20210127003412_Position.designer.cs">
