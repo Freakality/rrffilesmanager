@@ -36,8 +36,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DoneButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.drugComboBox1 = new RRFFilesManager.Controls.PharmacyControls.DrugComboBox();
+            this.DrugCreateButton = new System.Windows.Forms.Button();
             this.NarcoticTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.StrengthTB = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.Label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.CreatePharmacyButton = new System.Windows.Forms.Button();
-            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.RxFillDateTB = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,8 +58,10 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.label8 = new System.Windows.Forms.Label();
             this.DispenseQuantityNUD = new System.Windows.Forms.NumericUpDown();
             this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
             this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.drugComboBox1 = new RRFFilesManager.Controls.PharmacyControls.DrugComboBox();
+            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
+            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
             this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -189,7 +189,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel7.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.DrugCreateButton, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.drugComboBox1, 0, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(200, 90);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -199,28 +199,19 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel7.Size = new System.Drawing.Size(275, 30);
             this.tableLayoutPanel7.TabIndex = 14;
             // 
-            // button1
+            // DrugCreateButton
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(248, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // drugComboBox1
-            // 
-            this.drugComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drugComboBox1.FormattingEnabled = true;
-            this.drugComboBox1.Location = new System.Drawing.Point(3, 3);
-            this.drugComboBox1.Name = "drugComboBox1";
-            this.drugComboBox1.Size = new System.Drawing.Size(239, 21);
-            this.drugComboBox1.TabIndex = 2;
-            this.drugComboBox1.SelectedIndexChanged += new System.EventHandler(this.drugComboBox1_SelectedIndexChanged);
+            this.DrugCreateButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrugCreateButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DrugCreateButton.Location = new System.Drawing.Point(248, 2);
+            this.DrugCreateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
+            this.DrugCreateButton.Name = "DrugCreateButton";
+            this.DrugCreateButton.Size = new System.Drawing.Size(24, 24);
+            this.DrugCreateButton.TabIndex = 1;
+            this.DrugCreateButton.Text = "+";
+            this.DrugCreateButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DrugCreateButton.UseVisualStyleBackColor = true;
+            this.DrugCreateButton.Click += new System.EventHandler(this.DrugCreateButton_Click);
             // 
             // NarcoticTB
             // 
@@ -345,16 +336,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.CreatePharmacyButton.Text = "+";
             this.CreatePharmacyButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.CreatePharmacyButton.UseVisualStyleBackColor = true;
-            // 
-            // pharmacyComboBox1
-            // 
-            this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pharmacyComboBox1.FormattingEnabled = true;
-            this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
-            this.pharmacyComboBox1.Name = "pharmacyComboBox1";
-            this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
-            this.pharmacyComboBox1.TabIndex = 2;
-            this.pharmacyComboBox1.SelectedIndexChanged += new System.EventHandler(this.pharmacyComboBox1_SelectedIndexChanged);
+            this.CreatePharmacyButton.Click += new System.EventHandler(this.CreatePharmacyButton_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -472,6 +454,35 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DataGridView.TabIndex = 148;
             this.DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellClick);
             // 
+            // PreviewPanel
+            // 
+            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
+            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
+            this.PreviewPanel.Name = "PreviewPanel";
+            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
+            this.PreviewPanel.TabIndex = 1;
+            // 
+            // drugComboBox1
+            // 
+            this.drugComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drugComboBox1.FormattingEnabled = true;
+            this.drugComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.drugComboBox1.Name = "drugComboBox1";
+            this.drugComboBox1.Size = new System.Drawing.Size(239, 21);
+            this.drugComboBox1.TabIndex = 2;
+            this.drugComboBox1.SelectedIndexChanged += new System.EventHandler(this.drugComboBox1_SelectedIndexChanged);
+            // 
+            // pharmacyComboBox1
+            // 
+            this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pharmacyComboBox1.FormattingEnabled = true;
+            this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.pharmacyComboBox1.Name = "pharmacyComboBox1";
+            this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
+            this.pharmacyComboBox1.TabIndex = 2;
+            this.pharmacyComboBox1.SelectedIndexChanged += new System.EventHandler(this.pharmacyComboBox1_SelectedIndexChanged);
+            // 
             // findFileAndArchivePanelUserControl1
             // 
             this.findFileAndArchivePanelUserControl1.Archive = null;
@@ -481,15 +492,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 35);
             this.findFileAndArchivePanelUserControl1.TabIndex = 149;
             this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load);
-            // 
-            // PreviewPanel
-            // 
-            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
-            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
-            this.PreviewPanel.Name = "PreviewPanel";
-            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
-            this.PreviewPanel.TabIndex = 1;
             // 
             // previewArchiveUserControl1
             // 
@@ -541,7 +543,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button CreatePharmacyButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DrugCreateButton;
         private System.Windows.Forms.TextBox NarcoticTB;
         internal System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox StrengthTB;

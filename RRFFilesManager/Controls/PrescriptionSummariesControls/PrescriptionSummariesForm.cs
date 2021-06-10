@@ -159,5 +159,17 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             StrengthTB.ResetText();
             NarcoticTB.ResetText();
         }
+
+        private void CreatePharmacyButton_Click(object sender, EventArgs e)
+        {
+            var form = new CreatePharmacyForm();
+            form.Show();
+        }
+
+        private void DrugCreateButton_Click(object sender, EventArgs e)
+        {
+            var form = new CreateDrugForm();
+            form.Show();
+        }
     }
 }

@@ -477,6 +477,18 @@
     <Compile Include="Controls\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PharmacyControls\CreateDrugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\CreateDrugForm.Designer.cs">
+      <DependentUpon>CreateDrugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\CreatePharmacyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PharmacyControls\CreatePharmacyForm.Designer.cs">
+      <DependentUpon>CreatePharmacyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PharmacyControls\CustomControls\DrugComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -500,6 +512,12 @@
     </Compile>
     <Compile Include="Controls\PrescriptionSummariesControls\PrescriptionSummariesForm.Designer.cs">
       <DependentUpon>PrescriptionSummariesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProvinceControls\CustomControls\ProvinceComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ProvinceControls\CustomControls\ProvinceComboBox.Designer.cs">
+      <DependentUpon>ProvinceComboBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\TemplateControls\CreateTemplate.cs">
       <SubType>Form</SubType>
@@ -727,6 +745,12 @@
     <EmbeddedResource Include="Controls\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PharmacyControls\CreateDrugForm.resx">
+      <DependentUpon>CreateDrugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PharmacyControls\CreatePharmacyForm.resx">
+      <DependentUpon>CreatePharmacyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\PharmacyControls\FindPharmacy.resx">
       <DependentUpon>FindPharmacy.cs</DependentUpon>
     </EmbeddedResource>
@@ -851,6 +875,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\PrescriptionSummariesControls\Models\" />
+    <Folder Include="Controls\SharedControls\CustomControls\" />
     <Folder Include="Migrations\" />
     <Folder Include="Models\" />
   </ItemGroup>
