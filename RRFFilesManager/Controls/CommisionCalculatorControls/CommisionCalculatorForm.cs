@@ -75,9 +75,10 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
         private void FindFile_FormClosing(object sender, FormClosingEventArgs e)
         {
             var findFileForm = sender as FindFile;
-            File = findFileForm.SelectedFile;
-            if (File == null)
+            
+            if (findFileForm.SelectedFile == null)
                 return;
+            File = findFileForm.SelectedFile;
             FillForm(File);
         }
 
@@ -384,15 +385,15 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
 
         private double GetDeductibleAmount()
         {
-            var minDate = SettlementDateDTP.Value.AddDays(30);
-            if (minDate > InvoiceDateDTP.Value)
-                minDate = InvoiceDateDTP.Value;
-            double days = (minDate - File.DateOfCall).TotalDays;
+            var endDate = SettlementDateDTP.Value.AddDays(30);
+            if (endDate > InvoiceDateDTP.Value)
+                endDate = InvoiceDateDTP.Value;
+            double days = (endDate - File.DateOfCall).TotalDays;
             var months = Math.Ceiling(days / 30);
             var amount = months * 1000;
-            if (File.DateOfCall.Day > 16)
+            if (File.DateOfCall.Day >= 16)
                 amount -= 500;
-            if(minDate.Day < 16)
+            if(endDate.Day < 16)
                 amount -= 500;
             return amount;
         }
@@ -443,6 +444,11 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
         private void ResponsibleParalegalCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             ResponsibleParalegalCommissionTB.Text = ResponsibleParalegalCB.Text;
+        }
+
+        private void ComissionSubTypeCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

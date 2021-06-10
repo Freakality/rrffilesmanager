@@ -49,6 +49,7 @@ namespace RRFFilesManager.Controls.CommonControls
                                         69  //CNRs
                                     );
             FileNumberTextBox.Text = File.FileNumber.ToString();
+            ClientTB.Text = File.Client?.ToString();
         }
 
         private void ArchivesCB_SelectedIndexChanged(object sender, EventArgs e)

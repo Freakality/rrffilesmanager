@@ -485,7 +485,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.findFileAndArchivePanelUserControl1.File = null;
             this.findFileAndArchivePanelUserControl1.Location = new System.Drawing.Point(3, 3);
             this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";
-            this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 35);
+            this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 70);
             this.findFileAndArchivePanelUserControl1.TabIndex = 149;
             this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load);
             // 

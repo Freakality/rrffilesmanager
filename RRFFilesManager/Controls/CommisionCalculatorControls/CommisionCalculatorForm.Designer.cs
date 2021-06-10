@@ -321,6 +321,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             this.ComissionSubTypeCB.Name = "ComissionSubTypeCB";
             this.ComissionSubTypeCB.Size = new System.Drawing.Size(343, 21);
             this.ComissionSubTypeCB.TabIndex = 15;
+            this.ComissionSubTypeCB.SelectedIndexChanged += new System.EventHandler(this.ComissionSubTypeCB_SelectedIndexChanged);
             // 
             // label9
             // 
