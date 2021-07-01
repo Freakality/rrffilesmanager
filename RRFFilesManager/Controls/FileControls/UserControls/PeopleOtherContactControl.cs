@@ -64,7 +64,7 @@ namespace RRFFilesManager.Controls.FileControls
             LicenseNumberLabel.Text = contact.LicenseNumber;
 
             if (contact.Photo != null)
-                PhotoPictureBox.Image = Utils.ByteArrayToImage(contact.Photo);
+                PhotoPictureBox.Image = Utils.Utils.ByteArrayToImage(contact.Photo);
         }
 
         private void NameLabel_Click(object sender, EventArgs e)

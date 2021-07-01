@@ -37,7 +37,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.DrugCreateButton = new System.Windows.Forms.Button();
-            this.drugComboBox1 = new RRFFilesManager.Controls.PharmacyControls.DrugComboBox();
             this.NarcoticTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.StrengthTB = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.Label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.CreatePharmacyButton = new System.Windows.Forms.Button();
-            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.RxFillDateTB = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,8 +58,10 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.label8 = new System.Windows.Forms.Label();
             this.DispenseQuantityNUD = new System.Windows.Forms.NumericUpDown();
             this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
             this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.drugComboBox1 = new RRFFilesManager.Controls.PharmacyControls.DrugComboBox();
+            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
+            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
             this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -213,16 +213,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DrugCreateButton.UseVisualStyleBackColor = true;
             this.DrugCreateButton.Click += new System.EventHandler(this.DrugCreateButton_Click);
             // 
-            // drugComboBox1
-            // 
-            this.drugComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drugComboBox1.FormattingEnabled = true;
-            this.drugComboBox1.Location = new System.Drawing.Point(3, 3);
-            this.drugComboBox1.Name = "drugComboBox1";
-            this.drugComboBox1.Size = new System.Drawing.Size(239, 21);
-            this.drugComboBox1.TabIndex = 2;
-            this.drugComboBox1.SelectedIndexChanged += new System.EventHandler(this.drugComboBox1_SelectedIndexChanged);
-            // 
             // NarcoticTB
             // 
             this.NarcoticTB.Location = new System.Drawing.Point(203, 183);
@@ -348,16 +338,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.CreatePharmacyButton.UseVisualStyleBackColor = true;
             this.CreatePharmacyButton.Click += new System.EventHandler(this.CreatePharmacyButton_Click);
             // 
-            // pharmacyComboBox1
-            // 
-            this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pharmacyComboBox1.FormattingEnabled = true;
-            this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
-            this.pharmacyComboBox1.Name = "pharmacyComboBox1";
-            this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
-            this.pharmacyComboBox1.TabIndex = 2;
-            this.pharmacyComboBox1.SelectedIndexChanged += new System.EventHandler(this.pharmacyComboBox1_SelectedIndexChanged);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 4;
@@ -479,6 +459,35 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DataGridView.TabIndex = 148;
             this.DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellClick);
             // 
+            // PreviewPanel
+            // 
+            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
+            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
+            this.PreviewPanel.Name = "PreviewPanel";
+            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
+            this.PreviewPanel.TabIndex = 1;
+            // 
+            // drugComboBox1
+            // 
+            this.drugComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drugComboBox1.FormattingEnabled = true;
+            this.drugComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.drugComboBox1.Name = "drugComboBox1";
+            this.drugComboBox1.Size = new System.Drawing.Size(239, 21);
+            this.drugComboBox1.TabIndex = 2;
+            this.drugComboBox1.SelectedIndexChanged += new System.EventHandler(this.drugComboBox1_SelectedIndexChanged);
+            // 
+            // pharmacyComboBox1
+            // 
+            this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pharmacyComboBox1.FormattingEnabled = true;
+            this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.pharmacyComboBox1.Name = "pharmacyComboBox1";
+            this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
+            this.pharmacyComboBox1.TabIndex = 2;
+            this.pharmacyComboBox1.SelectedIndexChanged += new System.EventHandler(this.pharmacyComboBox1_SelectedIndexChanged);
+            // 
             // findFileAndArchivePanelUserControl1
             // 
             this.findFileAndArchivePanelUserControl1.Archive = null;
@@ -488,15 +497,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 70);
             this.findFileAndArchivePanelUserControl1.TabIndex = 149;
             this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load);
-            // 
-            // PreviewPanel
-            // 
-            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
-            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
-            this.PreviewPanel.Name = "PreviewPanel";
-            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
-            this.PreviewPanel.TabIndex = 1;
             // 
             // previewArchiveUserControl1
             // 

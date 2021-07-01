@@ -7,7 +7,7 @@ using System.Text;
 
 using System.Windows.Forms;
 
-namespace RRFFilesManager.Logic
+namespace RRFFilesManager.Utils
 {
     public class Utils
     {

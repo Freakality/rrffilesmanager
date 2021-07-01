@@ -33,9 +33,9 @@ namespace RRFFilesManager.Controls.CommonControls
             System.Windows.Forms.Label DateOFCallLabel;
             System.Windows.Forms.Label label1;
             this.IntakeInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.ClientTB = new System.Windows.Forms.TextBox();
             this.FindFileButton = new System.Windows.Forms.Button();
             this.FileNumberTextBox = new System.Windows.Forms.TextBox();
+            this.ClientTB = new System.Windows.Forms.TextBox();
             this.ArchivesCB = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -108,17 +108,6 @@ namespace RRFFilesManager.Controls.CommonControls
             this.IntakeInfo.Size = new System.Drawing.Size(868, 35);
             this.IntakeInfo.TabIndex = 148;
             // 
-            // ClientTB
-            // 
-            this.ClientTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClientTB.Enabled = false;
-            this.ClientTB.Location = new System.Drawing.Point(253, 8);
-            this.ClientTB.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.ClientTB.Name = "ClientTB";
-            this.ClientTB.ReadOnly = true;
-            this.ClientTB.Size = new System.Drawing.Size(253, 20);
-            this.ClientTB.TabIndex = 147;
-            // 
             // FindFileButton
             // 
             this.FindFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -144,6 +133,17 @@ namespace RRFFilesManager.Controls.CommonControls
             this.FileNumberTextBox.ReadOnly = true;
             this.FileNumberTextBox.Size = new System.Drawing.Size(253, 20);
             this.FileNumberTextBox.TabIndex = 143;
+            // 
+            // ClientTB
+            // 
+            this.ClientTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientTB.Enabled = false;
+            this.ClientTB.Location = new System.Drawing.Point(253, 8);
+            this.ClientTB.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.ClientTB.Name = "ClientTB";
+            this.ClientTB.ReadOnly = true;
+            this.ClientTB.Size = new System.Drawing.Size(253, 20);
+            this.ClientTB.TabIndex = 147;
             // 
             // ArchivesCB
             // 

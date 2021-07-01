@@ -29,7 +29,7 @@ namespace RRFFilesManager.ContactForm
             _companyRepository = Program.GetService<ICompanyRepository>();
             _groupRepository = Program.GetService<IGroupRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(Group, _groupRepository.List());
+            Utils.Utils.SetComboBoxDataSource(Group, _groupRepository.List());
         }
 
         public ContactInfo(Contact contact) : this()
@@ -163,9 +163,9 @@ namespace RRFFilesManager.ContactForm
                 return;
             }
             if (Group.Text == "Client")
-                Utils.SetContent(Content, new ClientGroupControl());
+                Utils.Utils.SetContent(Content, new ClientGroupControl());
             else
-                Utils.SetContent(Content, new OtherGroupsControl());
+                Utils.Utils.SetContent(Content, new OtherGroupsControl());
         }
 
         private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
@@ -183,7 +183,7 @@ namespace RRFFilesManager.ContactForm
         private void GroupForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             _editing = true;
-            Utils.SetComboBoxDataSource(Group, _groupRepository.List());
+            Utils.Utils.SetComboBoxDataSource(Group, _groupRepository.List());
             _editing = false;
         }
     }

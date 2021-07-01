@@ -24,8 +24,8 @@ namespace RRFFilesManager.Controls.ContactControls
             _contactRepository = Program.GetService<IContactRepository>();
             _groupRepository = Program.GetService<IGroupRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
-            Utils.SetComboBoxDataSource(MobileCarrierComboBox, _mobileCarrierRepository.List());
+            Utils.Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
+            Utils.Utils.SetComboBoxDataSource(MobileCarrierComboBox, _mobileCarrierRepository.List());
         }
         public Abstractions.Group Group { get; set; }
         public string ClientLink { get; set; }
@@ -103,7 +103,7 @@ namespace RRFFilesManager.Controls.ContactControls
             client.Link = ClientLink;
 
             if (PhotoPictureBox.Image != null)
-                client.Photo = Utils.ImageToByteArray(PhotoPictureBox.Image);
+                client.Photo = Utils.Utils.ImageToByteArray(PhotoPictureBox.Image);
 
             if (!string.IsNullOrWhiteSpace(OCIName1.Text))
             {
@@ -158,7 +158,7 @@ namespace RRFFilesManager.Controls.ContactControls
             Notes.Text = client.Notes;
 
             if (client.Photo != null)
-                PhotoPictureBox.Image = Utils.ByteArrayToImage(client.Photo);
+                PhotoPictureBox.Image = Utils.Utils.ByteArrayToImage(client.Photo);
 
             OCIName1.Text = client.Contact1?.FirstName;
             OCIRelationship1.Text = client.Contact1?.Relationship;

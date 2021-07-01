@@ -50,7 +50,7 @@ namespace RRFFilesManager.IntakeForm
         }
         private void Intake_Load(object sender, EventArgs e)
         {
-            Utils.SetContent(Content, PreliminaryInfo);
+            Utils.Utils.SetContent(Content, PreliminaryInfo);
             this.BackButton.Visible = false;
         }
 
@@ -68,25 +68,25 @@ namespace RRFFilesManager.IntakeForm
             if (contentType == typeof(PreliminaryInfo) && PreliminaryInfo.Validate())
             {
                 BackButton.Visible = true;
-                Utils.SetContent(Content, PotentialClientInfo);
+                Utils.Utils.SetContent(Content, PotentialClientInfo);
                 PreliminaryInfo.OnNext();
             }
             else if (contentType == typeof(PotentialClientInfo) && PotentialClientInfo.Validate())
             {
                 IntakeSheets.BringMattertypeForm();
-                Utils.SetContent(Content, IntakeSheets);
+                Utils.Utils.SetContent(Content, IntakeSheets);
                 PotentialClientInfo.OnNext();
             }
             else if (contentType == typeof(IntakeSheets) && IntakeSheets.Validate())
             {
                 NextButton.Visible = false;
-                Utils.SetContent(Content, NextSteps);
+                Utils.Utils.SetContent(Content, NextSteps);
                 IntakeSheets.OnNext();
             }
             else if (contentType == typeof(NextSteps) && NextSteps.Validate())
             {
                 NextButton.Visible = false;
-                Utils.SetContent(Content, ClientIntakeProcess);
+                Utils.Utils.SetContent(Content, ClientIntakeProcess);
                 NextSteps.OnNext();
             }
         }
@@ -98,21 +98,21 @@ namespace RRFFilesManager.IntakeForm
             if (contentType == typeof(PotentialClientInfo))
             {
                 BackButton.Visible = false;
-                Utils.SetContent(Content, PreliminaryInfo);
+                Utils.Utils.SetContent(Content, PreliminaryInfo);
             }
             else if (contentType == typeof(IntakeSheets))
             {
-                Utils.SetContent(Content, PotentialClientInfo);
+                Utils.Utils.SetContent(Content, PotentialClientInfo);
             }
             else if (contentType == typeof(NextSteps))
             {
                 NextButton.Visible = true;
-                Utils.SetContent(Content, IntakeSheets);
+                Utils.Utils.SetContent(Content, IntakeSheets);
             }
             else if (contentType == typeof(ClientIntakeProcess))
             {
                 NextButton.Visible = true;
-                Utils.SetContent(Content, NextSteps);
+                Utils.Utils.SetContent(Content, NextSteps);
             }
         }
 

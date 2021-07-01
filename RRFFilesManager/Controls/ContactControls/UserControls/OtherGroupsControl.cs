@@ -28,7 +28,7 @@ namespace RRFFilesManager.Controls.ContactControls
             _contactRepository = Program.GetService<IContactRepository>();
             _positionRepository = Program.GetService<IPositionRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
+            Utils.Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
             
         }
 
@@ -79,7 +79,7 @@ namespace RRFFilesManager.Controls.ContactControls
             client.Notes = Notes.Text;
 
             if (PhotoPictureBox.Image != null)
-                client.Photo = Utils.ImageToByteArray(PhotoPictureBox.Image);
+                client.Photo = Utils.Utils.ImageToByteArray(PhotoPictureBox.Image);
 
             if (!string.IsNullOrWhiteSpace(OCIName1.Text))
             {
@@ -148,7 +148,7 @@ namespace RRFFilesManager.Controls.ContactControls
             Notes.Text = client.Notes;
 
             if (client.Photo != null)
-                PhotoPictureBox.Image = Utils.ByteArrayToImage(client.Photo);
+                PhotoPictureBox.Image = Utils.Utils.ByteArrayToImage(client.Photo);
 
             OCIName1.Text = client.Contact1?.FirstName;
             OCITeamMember1.Text = client.Contact1?.TeamMember;
@@ -227,7 +227,7 @@ namespace RRFFilesManager.Controls.ContactControls
             Group = group;
             if (group == null)
                 return;
-            Utils.SetComboBoxDataSource(TypeOfContact, _positionRepository.List(group.ID));
+            Utils.Utils.SetComboBoxDataSource(TypeOfContact, _positionRepository.List(group.ID));
         }
 
         private void TypeOfContact_SelectedIndexChanged(object sender, EventArgs e)

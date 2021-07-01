@@ -138,11 +138,11 @@ namespace RRFFilesManager.IntakeForm
 
         private void Initialize()
         {
-            Utils.SetComboBoxDataSource(MatterTypeComboBox, _matterTypeRepository.List(), nameof(MatterType.Description));
-            Utils.SetComboBoxDataSource(HowHearComboBox, _hearAboutUsRepository.List(), nameof(HearAboutUs.Description));
-            Utils.SetComboBoxDataSource(StaffInterviewerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
-            Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
-            Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.NumberID != null).ToList(), nameof(Lawyer.Description));
+            Utils.Utils.SetComboBoxDataSource(MatterTypeComboBox, _matterTypeRepository.List(), nameof(MatterType.Description));
+            Utils.Utils.SetComboBoxDataSource(HowHearComboBox, _hearAboutUsRepository.List(), nameof(HearAboutUs.Description));
+            Utils.Utils.SetComboBoxDataSource(StaffInterviewerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
+            Utils.Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
+            Utils.Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.NumberID != null).ToList(), nameof(Lawyer.Description));
             DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
             DateOfLossDateTimePicker.CustomFormat = " ";
         }
@@ -200,10 +200,10 @@ namespace RRFFilesManager.IntakeForm
             var matterType = (MatterType)MatterTypeComboBox.SelectedValue;
             if (matterType == null)
             {
-                Utils.SetComboBoxDataSource(MatterSubTypeComboBox, null);
+                Utils.Utils.SetComboBoxDataSource(MatterSubTypeComboBox, null);
                 return;
             }
-            Utils.SetComboBoxDataSource(MatterSubTypeComboBox, _matterSubTypeRepository.List().Where(s => s.MatterType.ID == matterType.ID).ToList());
+            Utils.Utils.SetComboBoxDataSource(MatterSubTypeComboBox, _matterSubTypeRepository.List().Where(s => s.MatterType.ID == matterType.ID).ToList());
             if (matterType.Description == "Disability")
             {
                 DateOfLossLabel.Text = "Date of Denial:";

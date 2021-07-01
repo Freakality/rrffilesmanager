@@ -44,9 +44,9 @@ namespace RRFFilesManager
 
         private void Initialize()
         {
-            Utils.SetComboBoxDataSource(MatterTypeComboBox, _matterTypeRepository.List());
-            Utils.SetComboBoxDataSource(CategoryCombobox, _templateRepository.GetCategories());
-            Utils.SetComboBoxDataSource(TypeOfTemplateComboBox, _templateRepository.GetTypesOfTemplate());
+            Utils.Utils.SetComboBoxDataSource(MatterTypeComboBox, _matterTypeRepository.List());
+            Utils.Utils.SetComboBoxDataSource(CategoryCombobox, _templateRepository.GetCategories());
+            Utils.Utils.SetComboBoxDataSource(TypeOfTemplateComboBox, _templateRepository.GetTypesOfTemplate());
             EditButton.Visible = false;
         }
 

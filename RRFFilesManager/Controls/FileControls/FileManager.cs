@@ -24,13 +24,13 @@ namespace RRFFilesManager
         {
             InitializeComponent();
             PeopleControl = new PeopleControl();
-            Utils.SetContent(PeopleTab, PeopleControl);
+            Utils.Utils.SetContent(PeopleTab, PeopleControl);
 
             MedicalBinderIndexControl = new MedicalBinderIndexControl();
-            Utils.SetContent(MedicalBinderIndexTab, MedicalBinderIndexControl);
+            Utils.Utils.SetContent(MedicalBinderIndexTab, MedicalBinderIndexControl);
 
             ABBinderControl = new ABBinderControl();
-            Utils.SetContent(ABBinderTab, ABBinderControl);
+            Utils.Utils.SetContent(ABBinderTab, ABBinderControl);
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

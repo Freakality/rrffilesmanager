@@ -48,7 +48,7 @@ namespace RRFFilesManager
 
         private void IntakeButton_Click(object sender, EventArgs e)
         {
-            IntakeForm = Utils.OpenForm<IntakeForm.IntakeForm>(this);
+            IntakeForm = Utils.Utils.OpenForm<IntakeForm.IntakeForm>(this);
         }
 
         private void ConflictChecks_Click(object sender, EventArgs e)
@@ -58,27 +58,27 @@ namespace RRFFilesManager
 
         private void FileManagerButton_Click(object sender, EventArgs e)
         {
-            FileManager = Utils.OpenForm<FileManager>(this);
+            FileManager = Utils.Utils.OpenForm<FileManager>(this);
         }
 
         private void ClientInfoButton_Click(object sender, EventArgs e)
         {
-            ContactInfo = Utils.OpenForm<ContactInfo>(this);
+            ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
         }
 
         private void Contacts_Click(object sender, EventArgs e)
         {
-            ContactInfo = Utils.OpenForm<ContactInfo>(this);
+            ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
         }
 
         private void CreateDocumentsButton_Click(object sender, EventArgs e)
         {
-            CreateDocument = Utils.OpenForm<CreateDocument>(this);
+            CreateDocument = Utils.Utils.OpenForm<CreateDocument>(this);
         }
 
         private void CreateTemplates_Click(object sender, EventArgs e)
         {
-            CreateTemplate = Utils.OpenForm<CreateTemplate>(this);
+            CreateTemplate = Utils.Utils.OpenForm<CreateTemplate>(this);
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace RRFFilesManager
 
         private void ImportDocumentsButton_Click(object sender, EventArgs e)
         {
-            Utils.OpenForm<UploadArchivesForm>(this);
+            Utils.Utils.OpenForm<UploadArchivesForm>(this);
         }
 
         private void CommisionCalculatorButton_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace RRFFilesManager
             var authorizedUsers = new string[] { "FOISYR", "MANZANOD", "ITDEV", "FELIX" };
             if (authorizedUsers.Any(user => UserManager.GetUserName().ToUpper() == user))
             {
-                Utils.OpenForm<CommissionCalculatorForm>(this);
+                Utils.Utils.OpenForm<CommissionCalculatorForm>(this);
             }
             else
             {
@@ -127,7 +127,7 @@ namespace RRFFilesManager
 
         private void PrescriptionSummariesButton_Click(object sender, EventArgs e)
         {
-            Utils.OpenForm<PrescriptionSummariesForm>(this);
+            Utils.Utils.OpenForm<PrescriptionSummariesForm>(this);
         }
     }
 }

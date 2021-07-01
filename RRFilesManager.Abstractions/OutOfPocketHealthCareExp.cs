@@ -15,6 +15,8 @@ namespace RRFFilesManager.Abstractions
         public DateTime RxFillDate { get; set; }
         public int DispenseQuantity { get; set; }
         public virtual Drug Drug { get; set; }
+        public virtual double? ReturnKilometresTraveled { get; set; }
+        public virtual double? TravelExpenses { get; set; }
         public override string ToString() => $"{File} - {Pharmacy} - {Drug}";
     }
 }

@@ -29,7 +29,7 @@ namespace RRFFilesManager.IntakeForm
             _contactRepository = (IContactRepository)Program.ServiceProvider.GetService(typeof(IContactRepository));
             _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
-            Utils.SetContent(Content, new ClientGroupControl());
+            Utils.Utils.SetContent(Content, new ClientGroupControl());
 
         }
         public IGroupControl GroupControl => (IGroupControl)Content.Controls?[0];

@@ -59,7 +59,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             _uploadArchivesSettingsRepository = Program.GetService<IUploadArchivesSettingsRepository>();
             InitializeComponent();
 
-            Utils.SetComboBoxDataSource(DocumentGroup, _documentGroupRepository.List());
+            Utils.Utils.SetComboBoxDataSource(DocumentGroup, _documentGroupRepository.List());
             StandardBenefitsStatementUserControl = new StandardBenefitsStatementUserControl();
             AdditionalInformationUserControl = new AdditionalInformationUserControl();
             SenderRecipientUserControl = new SenderRecipientUserControl();
@@ -90,7 +90,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             ArchivesGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ArchivesGridView.MultiSelect = false;
             ArchivesGridView.ReadOnly = true;
-            Utils.AddButtonToGridView(ArchivesGridView, "Undo");
+            Utils.Utils.AddButtonToGridView(ArchivesGridView, "Undo");
             ArchivesGridView.DataSource = Archives;
 
             //this.printPreviewControl.Document = new System.Drawing.Printing.PrintDocument();
@@ -320,8 +320,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var documentFolder = DocumentGroup.SelectedItem as DocumentGroup;
             if (documentFolder == null)
                 return;
-            Utils.SetComboBoxDataSource(DocumentType, new List<DocumentType>());
-            Utils.SetComboBoxDataSource(DocumentCategory, _documentCategoryRepository.List().Where(s => s.DocumentGroup.ID == documentFolder.ID).ToList());
+            Utils.Utils.SetComboBoxDataSource(DocumentType, new List<DocumentType>());
+            Utils.Utils.SetComboBoxDataSource(DocumentCategory, _documentCategoryRepository.List().Where(s => s.DocumentGroup.ID == documentFolder.ID).ToList());
             if (documentFolder.DocumentForm != null)
                 SetContent(documentFolder.DocumentForm.Value);
         }
@@ -389,7 +389,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var documentCategory = DocumentCategory.SelectedItem as DocumentCategory;
             if (documentCategory == null)
                 return;
-            Utils.SetComboBoxDataSource(DocumentType, _documentTypeRepository.List().Where(s => s.DocumentCategory.ID == documentCategory.ID).ToList());
+            Utils.Utils.SetComboBoxDataSource(DocumentType, _documentTypeRepository.List().Where(s => s.DocumentCategory.ID == documentCategory.ID).ToList());
             if (documentCategory.DocumentForm != null)
                 SetContent(documentCategory.DocumentForm.Value);
         }
@@ -400,7 +400,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var documentType = DocumentType.SelectedItem as DocumentType;
             if (documentType == null)
             {
-                Utils.SetContent(DocumentFormContent, null);
+                Utils.Utils.SetContent(DocumentFormContent, null);
                 return;
             }
             SetContent(documentType.DocumentForm);
@@ -412,59 +412,59 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
             if (documentForm == DocumentFormEnum.AdditionalInformation)
             {
-                Utils.SetContent(DocumentFormContent, AdditionalInformationUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, AdditionalInformationUserControl);
             }
             else if (documentForm == DocumentFormEnum.StandardBenefitsStatement)
             {
-                Utils.SetContent(DocumentFormContent, StandardBenefitsStatementUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, StandardBenefitsStatementUserControl);
             }
             else if (documentForm == DocumentFormEnum.SenderRecipient)
             {
-                Utils.SetContent(DocumentFormContent, SenderRecipientUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, SenderRecipientUserControl);
             }
             else if (documentForm == DocumentFormEnum.BenefitType)
             {
-                Utils.SetContent(DocumentFormContent, BenefitTypeUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, BenefitTypeUserControl);
             }
             else if (documentForm == DocumentFormEnum.PreparedBy)
             {
-                Utils.SetContent(DocumentFormContent, PreparedByUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, PreparedByUserControl);
             }
             else if (documentForm == DocumentFormEnum.MedicalRecord)
             {
-                Utils.SetContent(DocumentFormContent, MedicalRecordUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, MedicalRecordUserControl);
             }
             else if (documentForm == DocumentFormEnum.MedicalRecordWithAmount)
             {
-                Utils.SetContent(DocumentFormContent, MedicalRecordWithAmountUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, MedicalRecordWithAmountUserControl);
             }
             else if (documentForm == DocumentFormEnum.BenefitsPaidToDate)
             {
-                Utils.SetContent(DocumentFormContent, BenefitsPaidToDateUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, BenefitsPaidToDateUserControl);
             }
             else if (documentForm == DocumentFormEnum.NameOfParty)
             {
-                Utils.SetContent(DocumentFormContent, NameOfPartyUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, NameOfPartyUserControl);
             }
             else if (documentForm == DocumentFormEnum.Name)
             {
-                Utils.SetContent(DocumentFormContent, NameUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, NameUserControl);
             }
             else if (documentForm == DocumentFormEnum.NameAndTypeOfParty)
             {
-                Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyUserControl);
             }
             else if (documentForm  == DocumentFormEnum.NameAndTypeOfPartyAndTypeOfMotion)
             {
-                Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyAndTypeOfMotionUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, NameAndTypeOfPartyAndTypeOfMotionUserControl);
             }
             else if (documentForm == DocumentFormEnum.NameOfOrganization)
             {
-                Utils.SetContent(DocumentFormContent, NameOfOrganizationUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, NameOfOrganizationUserControl);
             }
             else if (documentForm == DocumentFormEnum.Empty)
             {
-                Utils.SetContent(DocumentFormContent, EmptyUserControl);
+                Utils.Utils.SetContent(DocumentFormContent, EmptyUserControl);
             }
         }
 

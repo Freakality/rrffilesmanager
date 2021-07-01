@@ -29,8 +29,8 @@ namespace RRFFilesManager.ClientForm
             _intakeRepository = Program.GetService<IIntakeRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.List());
-            Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.List());
+            Utils.Utils.SetComboBoxDataSource(PCIProvince, _provinceRepository.List());
+            Utils.Utils.SetComboBoxDataSource(PCIMobileCarrier, _mobileCarrierRepository.List());
             YearBirth.Text = "1970";
         }
 
@@ -122,7 +122,7 @@ namespace RRFFilesManager.ClientForm
             client.DateOfBirth = PCIDateOfBirth;
             client.Notes = PCIOtherNotes.Text;
             if (PhotoPictureBox.Image != null)
-                client.Photo = Utils.ImageToByteArray(PhotoPictureBox.Image);
+                client.Photo = Utils.Utils.ImageToByteArray(PhotoPictureBox.Image);
         }
 
         public void FillForm(Contact client)
@@ -148,7 +148,7 @@ namespace RRFFilesManager.ClientForm
             DayBirth.Text = client.DateOfBirth?.Day.ToString();
             PCIOtherNotes.Text = client.Notes;
             if(Client.Photo != null)
-                PhotoPictureBox.Image = Utils.ByteArrayToImage(Client.Photo);
+                PhotoPictureBox.Image = Utils.Utils.ByteArrayToImage(Client.Photo);
         }
 
         private void NotesTextBox_TextChanged(object sender, EventArgs e)

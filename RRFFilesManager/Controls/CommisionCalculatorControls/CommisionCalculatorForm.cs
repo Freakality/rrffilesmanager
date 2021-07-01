@@ -26,7 +26,7 @@ namespace RRFFilesManager.Controls.CommisionCalculatorControls
             _comissionCalculatorRepository = Program.GetService<IComissionCalculatorRepository>();
             _lawyerRepository = Program.GetService<ILawyerRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(ResponsibleParalegalCB, _lawyerRepository.List(true));
+            Utils.Utils.SetComboBoxDataSource(ResponsibleParalegalCB, _lawyerRepository.List(true));
         }
 
         public void FillForm(Contact Client)

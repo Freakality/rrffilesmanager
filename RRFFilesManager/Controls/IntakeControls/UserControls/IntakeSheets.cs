@@ -79,7 +79,7 @@ namespace RRFFilesManager.IntakeForm
 
         private void IntakeSheets_Load(object sender, EventArgs e)
         {
-            Utils.SetComboBoxDataSource(PolCompanyDeniedBenefits, _disabilityInsuranceCompanyRepository.List());
+            Utils.Utils.SetComboBoxDataSource(PolCompanyDeniedBenefits, _disabilityInsuranceCompanyRepository.List());
         }
 
         public void LoadLiabilityTab()

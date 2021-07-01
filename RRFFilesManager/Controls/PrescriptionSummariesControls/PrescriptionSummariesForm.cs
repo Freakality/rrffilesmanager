@@ -2,6 +2,7 @@
 using RRFFilesManager.Controls.PharmacyControls;
 using RRFFilesManager.DataAccess;
 using RRFFilesManager.DataAccess.Abstractions;
+using RRFFilesManager.FileControls;
 using RRFFilesManager.Logic;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Web;
 
 namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 {
@@ -23,7 +27,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         public Drug Drug => drugComboBox1.Drug;
         private IPharmacyRepository _pharmacyRepository { get; set; }
         private IOutOfPocketHealthCareExpRepository _outOfPocketHealthCareExpRepository { get; set; }
-
+        //public double? Distance { get; set; }
 
         BindingList<ArchiveControls.Models.Archive> Archives = new BindingList<ArchiveControls.Models.Archive>();
         public PrescriptionSummariesForm()
@@ -35,7 +39,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             DataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridView.MultiSelect = false;
             DataGridView.ReadOnly = true;
-            Utils.AddButtonToGridView(DataGridView, "Undo");
+            Utils.Utils.AddButtonToGridView(DataGridView, "Undo");
             DataGridView.DataSource = Archives;
 
         }
@@ -44,6 +48,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             SetForm(File);
             SetForm(Drug);
             SetForm(Pharmacy);
+            //Distance = GetDistance();
         }
         private void SetForm(Drug drug)
         {
@@ -89,6 +94,8 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             outOfPocketHealthCareExp.RxFillDate = RxFillDateTB.Value;
             outOfPocketHealthCareExp.DispenseQuantity = Convert.ToInt32(DispenseQuantityNUD.Value);
             outOfPocketHealthCareExp.Drug = Drug;
+            outOfPocketHealthCareExp.ReturnKilometresTraveled = GetDistance();
+            outOfPocketHealthCareExp.TravelExpenses = outOfPocketHealthCareExp.ReturnKilometresTraveled * 0.5;
         }
         public new bool Validate()
         {
@@ -128,7 +135,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 
         private void PrescriptionSummariesForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Utils.CloseForm(this, Home.Instance);
+            Utils.Utils.CloseForm(this, Home.Instance);
         }
 
         private void PharmaciesCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,6 +147,20 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         {
             var archiveCB = findFileAndArchivePanelUserControl1.ArchivesComboBox;
             archiveCB.SelectedIndexChanged += ArchivesCB_SelectedIndexChanged;
+        }
+
+        private double? GetDistance()
+        {
+            var clientPostalCode = Pharmacy?.PostalCode;
+            var pharmacyPostalCode = File?.Client?.PostalCode;
+            return GetDistance(clientPostalCode, pharmacyPostalCode);
+        }
+        private double? GetDistance(string fromPostalCode, string toPostalCode)
+        {
+            if (fromPostalCode == null || toPostalCode == null)
+                return null;
+            var distance = Utils.Distance.BetweenTwoPostCodes(fromPostalCode, toPostalCode);
+            return distance;
         }
 
         private void ArchivesCB_SelectedIndexChanged(object sender, EventArgs e)

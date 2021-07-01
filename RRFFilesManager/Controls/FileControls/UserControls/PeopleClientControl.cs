@@ -54,7 +54,7 @@ namespace RRFFilesManager.Controls.FileControls
             OCPhoneLabel.Text = contact.Contact1?.DirectNumber;
             OCEmail.Text = contact.Contact1?.Email;
             if (contact.Photo != null)
-                PhotoPictureBox.Image = Utils.ByteArrayToImage(contact.Photo);
+                PhotoPictureBox.Image = Utils.Utils.ByteArrayToImage(contact.Photo);
         }
 
         private void NameLabel_Click(object sender, EventArgs e)

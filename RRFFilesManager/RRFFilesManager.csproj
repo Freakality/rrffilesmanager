@@ -175,6 +175,9 @@
     <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SharpShell, Version=2.7.2.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpShell.2.7.2\lib\net40-client\SharpShell.dll</HintPath>
     </Reference>
@@ -609,7 +612,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Logic\TemplateManager.cs" />
-    <Compile Include="Logic\Utils.cs" />
+    <Compile Include="Utils\Abstractions\GeolocationResponse.cs" />
+    <Compile Include="Utils\Utils.cs" />
     <Compile Include="Logic\Word.cs" />
     <Compile Include="Controls\SharedControls\PleaseWait.cs">
       <SubType>Form</SubType>
@@ -637,6 +641,7 @@
     <Compile Include="Controls\TemplateControls\FindTemplate.Designer.cs">
       <DependentUpon>FindTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Distance.cs" />
     <EmbeddedResource Include="Controls\ArchiveControls\UserControls\AdditionalInformationUserControl.resx">
       <DependentUpon>AdditionalInformationUserControl.cs</DependentUpon>
     </EmbeddedResource>

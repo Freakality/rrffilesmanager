@@ -22,7 +22,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             _provinceRepository = Program.GetService<IProvinceRepository>();
             _companyRepository = Program.GetService<ICompanyRepository>();
             InitializeComponent();
-            Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
+            Utils.Utils.SetComboBoxDataSource(Province, _provinceRepository.List());
         }
 
         public CompanyInfo(Company company) : this()

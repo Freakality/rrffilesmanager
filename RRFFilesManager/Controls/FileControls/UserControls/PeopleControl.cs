@@ -46,9 +46,9 @@ namespace RRFFilesManager.Controls.FileControls
         private void SetPeoplePanelInformation(Contact contact)
         {
             if(contact.ID == File.Client.ID)
-                Utils.SetContent(PeopleInformationPanel, PeopleClientControl);
+                Utils.Utils.SetContent(PeopleInformationPanel, PeopleClientControl);
             else
-                Utils.SetContent(PeopleInformationPanel, PeopleOtherContactControl);
+                Utils.Utils.SetContent(PeopleInformationPanel, PeopleOtherContactControl);
             if (PeopleInformation == null)
                 return;
             PeopleInformation.SetContact(contact);
