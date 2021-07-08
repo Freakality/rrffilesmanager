@@ -450,7 +450,7 @@
             this.ComboBox3 = new System.Windows.Forms.ComboBox();
             this.MedicalBinderIndexTab = new System.Windows.Forms.TabPage();
             this.MedicalSummaries = new System.Windows.Forms.TabPage();
-            this.PrescriptionSummaries = new System.Windows.Forms.TabPage();
+            this.PrescriptionSummariesTab = new System.Windows.Forms.TabPage();
             this.ExpertsLayWitness = new System.Windows.Forms.TabPage();
             this.PLReportsDataGridView = new System.Windows.Forms.DataGridView();
             this.Invoices = new System.Windows.Forms.TabPage();
@@ -4870,15 +4870,16 @@
             this.MedicalSummaries.Text = "Medical Summaries";
             this.MedicalSummaries.UseVisualStyleBackColor = true;
             // 
-            // PrescriptionSummaries
+            // PrescriptionSummariesTab
             // 
-            this.PrescriptionSummaries.Location = new System.Drawing.Point(4, 26);
-            this.PrescriptionSummaries.Name = "PrescriptionSummaries";
-            this.PrescriptionSummaries.Padding = new System.Windows.Forms.Padding(3);
-            this.PrescriptionSummaries.Size = new System.Drawing.Size(1423, 479);
-            this.PrescriptionSummaries.TabIndex = 3;
-            this.PrescriptionSummaries.Text = "Prescription Summaries";
-            this.PrescriptionSummaries.UseVisualStyleBackColor = true;
+            this.PrescriptionSummariesTab.Location = new System.Drawing.Point(4, 26);
+            this.PrescriptionSummariesTab.Name = "PrescriptionSummariesTab";
+            this.PrescriptionSummariesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.PrescriptionSummariesTab.Size = new System.Drawing.Size(1423, 479);
+            this.PrescriptionSummariesTab.TabIndex = 3;
+            this.PrescriptionSummariesTab.Text = "Prescription Summaries";
+            this.PrescriptionSummariesTab.UseVisualStyleBackColor = true;
+            this.PrescriptionSummariesTab.Click += new System.EventHandler(this.PrescriptionSummariesTab_Click);
             // 
             // ExpertsLayWitness
             // 
@@ -4938,7 +4939,7 @@
             this.TabControl6.Controls.Add(this.MedicalAppointments);
             this.TabControl6.Controls.Add(this.MedicalBinderIndexTab);
             this.TabControl6.Controls.Add(this.MedicalSummaries);
-            this.TabControl6.Controls.Add(this.PrescriptionSummaries);
+            this.TabControl6.Controls.Add(this.PrescriptionSummariesTab);
             this.TabControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl6.Location = new System.Drawing.Point(3, 3);
             this.TabControl6.Name = "TabControl6";
@@ -8629,7 +8630,7 @@
         internal System.Windows.Forms.ComboBox ComboBox3;
         internal System.Windows.Forms.TabPage MedicalBinderIndexTab;
         internal System.Windows.Forms.TabPage MedicalSummaries;
-        internal System.Windows.Forms.TabPage PrescriptionSummaries;
+        internal System.Windows.Forms.TabPage PrescriptionSummariesTab;
         internal System.Windows.Forms.TabPage ExpertsLayWitness;
         internal System.Windows.Forms.DataGridView PLReportsDataGridView;
         internal System.Windows.Forms.TabPage Invoices;

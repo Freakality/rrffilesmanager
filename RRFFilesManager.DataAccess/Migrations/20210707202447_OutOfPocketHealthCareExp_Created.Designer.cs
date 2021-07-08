@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210707202447_OutOfPocketHealthCareExp_Created")]
+    partial class OutOfPocketHealthCareExp_Created
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1073,12 +1075,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<int?>("FileID")
                         .HasColumnType("int");
 
-                    b.Property<double?>("MiscExpenses")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("ParkingExpenses")
-                        .HasColumnType("float");
-
                     b.Property<int?>("PharmacyID")
                         .HasColumnType("int");
 
@@ -1089,9 +1085,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<double?>("TravelExpenses")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("TreatmentExpenses")
                         .HasColumnType("float");
 
                     b.HasKey("ID");

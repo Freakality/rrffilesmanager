@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRFFilesManager.Utils;
 
 namespace RRFFilesManager.Controls.FileControls
 {
@@ -63,48 +64,16 @@ namespace RRFFilesManager.Controls.FileControls
             if (file == null)
                 return;
             ArchivesBinderIndex = file.Archives.Where(s => s.DocumentGroup?.ID == 3).Select(s => new ArchiveBinderIndex(s)).ToList();
-            FillDataGridView();
+            Utils.Utils.InitializeDataGridViewWithCheck(DataGridView, ArchivesBinderIndex);
             DocumentTypesBox.DataSource = DocumentTypes;
-        }
-
-
-        private void FillDataGridView()
-        {
-            DataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DataGridView.MultiSelect = false;
-            DataGridView.DataSource = new SortableBindingList<ArchiveBinderIndex>(ArchivesBinderIndex);
-            DataGridView.ReadOnly = false;
-            foreach (DataGridViewColumn column in DataGridView.Columns)
-            {
-                column.ReadOnly = true;
-            }
-            DataGridView.Columns["Check"].ReadOnly = false;
-            DataGridView.Columns["Check"].HeaderText = "";
-
-
-            if (DataGridView.Columns.Count == 0)
-                return;
-            DataGridView.Columns["ID"].Visible = false;
-            
         }
 
         private Archive GetDataGridViewArchive()
         {
-            var id = GetDataGridViewId();
+            var id = Utils.Utils.GetDataGridViewId(DataGridView);
             if (id == null)
                 return null;
             return _archiveRepository.GetById(id.Value);
-        }
-
-        private int? GetDataGridViewId()
-        {
-            if (DataGridView?.SelectedRows.Count == 0)
-                return null;
-            var id = DataGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString();
-            if (id == null)
-                return null;
-            return int.Parse(id);
         }
 
         private void MedicalBinderIndexControl_Load(object sender, EventArgs e)

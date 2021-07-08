@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -76,6 +77,37 @@ namespace RRFFilesManager.Utils
             {
                 GridView.Columns.Insert(columnIndex, editButtonColumn);
             }
+        }
+
+        public static int? GetDataGridViewId(DataGridView DataGridView)
+        {
+            if (DataGridView?.SelectedRows.Count == 0)
+                return null;
+            var id = DataGridView?.SelectedRows?[0]?.Cells?["ID"]?.Value.ToString();
+            if (id == null)
+                return null;
+            return int.Parse(id);
+        }
+
+        public static  void InitializeDataGridViewWithCheck<T>(DataGridView DataGridView, List<T> items)
+        {
+            DataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGridView.MultiSelect = false;
+            DataGridView.DataSource = new SortableBindingList<T>(items);
+            DataGridView.ReadOnly = false;
+            foreach (DataGridViewColumn column in DataGridView.Columns)
+            {
+                column.ReadOnly = true;
+            }
+            DataGridView.Columns["Check"].ReadOnly = false;
+            DataGridView.Columns["Check"].HeaderText = "";
+
+
+            if (DataGridView.Columns.Count == 0)
+                return;
+            DataGridView.Columns["ID"].Visible = false;
+
         }
     }
 }

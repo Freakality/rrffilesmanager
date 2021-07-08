@@ -122,5 +122,51 @@ namespace RRFFilesManager.Logic
                 }
             }
         }
+
+        public static void FillDocumentPrescriptionsReport(Document document, File file, IEnumerable<OutOfPocketHealthCareExp> prescriptions)
+        {
+            if (file == null || prescriptions?.Count() == 0)
+                return;
+            FillDocument(document, file);
+            Range range = document.Range(0, 0);
+            if (range.Find.Execute("$$$PSROW$$$"))
+            {
+                ReplaceAll(document, "$$$PSROW$$$", "");
+                var table = document.Tables[1];
+                var line = 2;
+                foreach (var prescription in prescriptions)
+                {
+                    line++;
+                    if (line < prescriptions.Count() + 2)
+                    table.Rows.Add(table.Rows[line]);
+                    table.Cell(line, 1).Range.InsertAfter(prescription.RxFillDate.ToString("dddd, MMMM d, yyyy"));
+                    table.Cell(line, 2).Range.InsertAfter(prescription.Pharmacy.Name);
+                    if (prescription.ReturnKilometresTraveled != null)
+                        table.Cell(line, 3).Range.InsertAfter(Math.Round(prescription.ReturnKilometresTraveled.Value, 2).ToString());
+                    if(prescription.TravelExpenses != null)
+                        table.Cell(line, 4).Range.InsertAfter(Math.Round(prescription.TravelExpenses.Value, 2).ToString());
+                    if (prescription.ParkingExpenses != null)
+                        table.Cell(line, 5).Range.InsertAfter(Math.Round(prescription.ParkingExpenses.Value, 2).ToString());
+                    if (prescription.TreatmentExpenses != null)
+                        table.Cell(line, 6).Range.InsertAfter(Math.Round(prescription.TreatmentExpenses.Value, 2).ToString());
+                    if (prescription.MiscExpenses != null)
+                        table.Cell(line, 7).Range.InsertAfter(Math.Round(prescription.MiscExpenses.Value, 2).ToString());
+                }
+
+                var totalReturnKilometresTraveled = prescriptions.Sum(s => s.ReturnKilometresTraveled ?? 0);
+                var totalTravelExpenses = prescriptions.Sum(s => s.TravelExpenses ?? 0);
+                var totalParkingExpenses = prescriptions.Sum(s => s.ParkingExpenses ?? 0);
+                var totalTreatmentExpenses = prescriptions.Sum(s => s.TreatmentExpenses ?? 0);
+                var totalMiscExpenses = prescriptions.Sum(s => s.MiscExpenses ?? 0);
+                var total = totalTravelExpenses + totalParkingExpenses + totalTreatmentExpenses + totalMiscExpenses;
+                ReplaceAll(document, "$$$PSTRKT$$$", Math.Round(totalReturnKilometresTraveled, 2).ToString());
+                ReplaceAll(document, "$$$PSTE$$$", Math.Round(totalTravelExpenses, 2).ToString());
+                ReplaceAll(document, "$$$PSTPE$$$", Math.Round(totalParkingExpenses, 2).ToString());
+                ReplaceAll(document, "$$$PSTTE$$$", Math.Round(totalTreatmentExpenses, 2).ToString());
+                ReplaceAll(document, "$$$PSTME$$$", Math.Round(totalMiscExpenses, 2).ToString());
+                ReplaceAll(document, "$$$PST$$$", Math.Round(total, 2).ToString());
+
+            }
+        }
     }
 }

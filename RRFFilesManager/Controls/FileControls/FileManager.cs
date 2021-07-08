@@ -1,5 +1,6 @@
 ﻿using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.FileControls;
+using RRFFilesManager.Controls.FileControls.UserControls;
 using RRFFilesManager.FileControls;
 using RRFFilesManager.Logic;
 using System;
@@ -19,6 +20,7 @@ namespace RRFFilesManager
         public File File { get; set; }
         public readonly PeopleControl PeopleControl;
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
+        public readonly PrescriptionSummariesControl PrescriptionSummariesControl;
         public readonly ABBinderControl ABBinderControl;
         public FileManager()
         {
@@ -28,6 +30,9 @@ namespace RRFFilesManager
 
             MedicalBinderIndexControl = new MedicalBinderIndexControl();
             Utils.Utils.SetContent(MedicalBinderIndexTab, MedicalBinderIndexControl);
+
+            PrescriptionSummariesControl = new PrescriptionSummariesControl();
+            Utils.Utils.SetContent(PrescriptionSummariesTab, PrescriptionSummariesControl);
 
             ABBinderControl = new ABBinderControl();
             Utils.Utils.SetContent(ABBinderTab, ABBinderControl);
@@ -62,6 +67,8 @@ namespace RRFFilesManager
             ABBinderControl.SetFile(file);
 
             MedicalBinderIndexControl.SetFile(file);
+            PrescriptionSummariesControl.SetFile(file);
+
             ClientNameTextBox.Text = file.Client.ToString();
             MatterTypeTextBox.Text = file.MatterType.ToString();
             FileNumberTextBox.Text = file.FileNumber.ToString();
@@ -115,6 +122,11 @@ namespace RRFFilesManager
         private void FileManager_FormClosing(object sender, FormClosingEventArgs e)
         {
             Home.Instance.Show();
+        }
+
+        private void PrescriptionSummariesTab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
