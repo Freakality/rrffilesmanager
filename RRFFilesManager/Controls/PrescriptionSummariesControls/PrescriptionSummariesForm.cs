@@ -220,12 +220,12 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private void ResetForm()
         {
             if (!KeepRxFillDate.Checked)
+            {
                 RxFillDateTB.Value = DateTime.Now;
-
-            pharmacyComboBox1.Reset();
-            PharmacyPostalCodeTB.ResetText();
-            ClientPostalCodeTB.ResetText();
-
+                pharmacyComboBox1.Reset();
+                PharmacyPostalCodeTB.ResetText();
+                ClientPostalCodeTB.ResetText();
+            }
             DispenseQuantityNUD.Value = 0;
 
             drugComboBox1.Reset();
