@@ -26,8 +26,8 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             get
             {
                 var items = Prescriptions
-                    .Where(s => s.HealthPractitionerClinic.Name.ToLower().Contains(SearchBox.Text.ToLower()))
-                    .Where(s => string.IsNullOrWhiteSpace(PharmaciesBox.Text) || PharmaciesBox.Text == s.HealthPractitionerClinic?.Name)
+                    .Where(s => s.ProviderName.Name.ToLower().Contains(SearchBox.Text.ToLower()))
+                    .Where(s => string.IsNullOrWhiteSpace(PharmaciesBox.Text) || PharmaciesBox.Text == s.ProviderName?.Name)
                     .ToList();
                 return items;
             }
@@ -39,7 +39,7 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             {
                 var items = new List<string>();
                 items.Add("");
-                items.AddRange(Prescriptions.Select(s => s.HealthPractitionerClinic.Name).Distinct().ToList());
+                items.AddRange(Prescriptions.Select(s => s.ProviderName.Name).Distinct().ToList());
                 return items;
             }
         }
