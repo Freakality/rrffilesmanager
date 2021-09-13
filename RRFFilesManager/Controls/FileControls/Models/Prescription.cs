@@ -15,6 +15,8 @@ namespace RRFFilesManager.Controls.FileControls.Models
             ID = outOfPocketHealthCareExp.ID;
             Date = outOfPocketHealthCareExp.RxFillDate;
             HealthPractitionerClinic = outOfPocketHealthCareExp.Pharmacy;
+            Drug = outOfPocketHealthCareExp.Drug;
+            DispenseQuantity = outOfPocketHealthCareExp.DispenseQuantity;
             ReturnKilometresTraveled = Math.Round(outOfPocketHealthCareExp.ReturnKilometresTraveled ?? 0, 2);
             TravelExpenses = Math.Round(outOfPocketHealthCareExp.TravelExpenses ?? 0, 2);
             ParkingExpenses = Math.Round(outOfPocketHealthCareExp.ParkingExpenses ?? 0, 2);
@@ -26,6 +28,8 @@ namespace RRFFilesManager.Controls.FileControls.Models
         public int ID { get; set; }
         public DateTime Date { get; set; }
         public Pharmacy HealthPractitionerClinic { get; set; }
+        public Drug Drug { get; set; }
+        public int DispenseQuantity { get; set; }
         public double? ReturnKilometresTraveled { get; set; }
         public double? TravelExpenses { get; set; }
         public double? ParkingExpenses { get; set; }
