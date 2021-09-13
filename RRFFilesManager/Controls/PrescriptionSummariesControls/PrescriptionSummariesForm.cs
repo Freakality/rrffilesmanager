@@ -30,7 +30,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         private IOutOfPocketHealthCareExpRepository _outOfPocketHealthCareExpRepository { get; set; }
         //public double? Distance { get; set; }
 
-        BindingList<ArchiveControls.Models.Archive> Archives = new BindingList<ArchiveControls.Models.Archive>();
+        BindingList<ArchiveControls.Models.Archive<OutOfPocketHealthCareExp>> Archives = new BindingList<ArchiveControls.Models.Archive<OutOfPocketHealthCareExp>>();
         public PrescriptionSummariesForm()
         {
             _pharmacyRepository = Program.GetService<IPharmacyRepository>();
@@ -77,7 +77,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             if (!Validate())
                 return;
             var value = InsertEntity();
-            Archives.Add(new ArchiveControls.Models.Archive(value));
+            Archives.Add(new ArchiveControls.Models.Archive<OutOfPocketHealthCareExp>(value, value.Archive));
             Archive.Open();
             ResetForm();
         }
@@ -203,7 +203,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         {
             if (DataGridView?.SelectedRows?.Count == 0)
                 return;
-            var selected = DataGridView.SelectedRows[0].DataBoundItem as ArchiveControls.Models.Archive;
+            var selected = DataGridView.SelectedRows[0].DataBoundItem as ArchiveControls.Models.Archive<OutOfPocketHealthCareExp>;
             if (selected == null)
                 return;
             if (e.ColumnIndex == DataGridView.Columns["Undo"].Index)
@@ -213,9 +213,9 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             }
             previewArchiveUserControl1.Preview(selected.Path);
         }
-        private void UndoProcessedArchive(ArchiveControls.Models.Archive archive)
+        private void UndoProcessedArchive(ArchiveControls.Models.Archive<OutOfPocketHealthCareExp> archive)
         {
-            var originalEntity = archive.GetOutOfPocketHealthCareExp();
+            var originalEntity = archive.GetOriginalEntity();
             _outOfPocketHealthCareExpRepository.Delete(originalEntity);
             Archives.Remove(archive);
         }
