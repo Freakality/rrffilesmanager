@@ -620,6 +620,7 @@
     </Compile>
     <Compile Include="Logic\TemplateManager.cs" />
     <Compile Include="Utils\Abstractions\GeolocationResponse.cs" />
+    <Compile Include="Utils\ExtensionMethods.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="Logic\Word.cs" />
     <Compile Include="Controls\SharedControls\PleaseWait.cs">

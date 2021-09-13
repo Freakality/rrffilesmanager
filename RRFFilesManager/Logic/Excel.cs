@@ -9,6 +9,13 @@ namespace RRFFilesManager.Logic
 {
     public class Excel
     {
+        public static void Open(string path)
+        {
+            var excelApp = new Microsoft.Office.Interop.Excel.Application();
+            excelApp.DisplayAlerts = false;
+            var workbook = excelApp?.Workbooks?.Open(path);
+            excelApp.Visible = true;
+        }
         public static void ReplaceAll(Worksheet worksheet, string findText, string replaceWith)
         {
             worksheet.Cells.Replace(findText, replaceWith);

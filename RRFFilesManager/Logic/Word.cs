@@ -11,6 +11,14 @@ namespace RRFFilesManager.Logic
     public class Word
     {
 
+        public static void Open(string path)
+        {
+            var wordApp = new Application();
+            wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+            var document = wordApp?.Documents.Open(FileName: path);
+            wordApp.Visible = true;
+        }
+
         public static void ReplaceAll(Document document, string findText, string replaceWith)
         {
             if(string.IsNullOrWhiteSpace(replaceWith))

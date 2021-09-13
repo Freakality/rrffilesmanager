@@ -17,6 +17,7 @@ using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.FileControls;
 using RRFFilesManager.Logic;
+using RRFFilesManager.Utils;
 
 namespace RRFFilesManager.Controls.ArchiveControls
 {
@@ -246,7 +247,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             var archive = GetArchive();
             var extension = Path.GetExtension(archive.Path);
-            var newFileName = _archiveManager.EscapeText($"{DocumentName.Text}{extension}");
+            var newFileName = $"{DocumentName.Text}{extension}".EscapeText();
             _archiveManager.Insert(CurrentFile, archive, newFileName);
             Archives.Add(new Models.Archive(archive));
             MoveArchiveToOutputFolder(archive);
