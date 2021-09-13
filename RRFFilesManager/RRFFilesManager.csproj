@@ -487,6 +487,12 @@
     <Compile Include="Controls\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MedicalSummariesControls\MedicalSummariesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MedicalSummariesControls\MedicalSummariesForm.Designer.cs">
+      <DependentUpon>MedicalSummariesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PharmacyControls\CreateDrugForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -761,6 +767,9 @@
     <EmbeddedResource Include="Controls\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MedicalSummariesControls\MedicalSummariesForm.resx">
+      <DependentUpon>MedicalSummariesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\PharmacyControls\CreateDrugForm.resx">
       <DependentUpon>CreateDrugForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -893,6 +902,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\MedicalSummariesControls\CustomControls\" />
     <Folder Include="Controls\PrescriptionSummariesControls\Models\" />
     <Folder Include="Controls\SharedControls\CustomControls\" />
     <Folder Include="Migrations\" />

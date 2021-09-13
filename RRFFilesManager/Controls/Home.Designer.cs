@@ -41,7 +41,7 @@
             this.Button20 = new System.Windows.Forms.Button();
             this.Button19 = new System.Windows.Forms.Button();
             this.Button18 = new System.Windows.Forms.Button();
-            this.Button17 = new System.Windows.Forms.Button();
+            this.MedicalSummariesButton = new System.Windows.Forms.Button();
             this.Button16 = new System.Windows.Forms.Button();
             this.Button15 = new System.Windows.Forms.Button();
             this.ImportDocumentsButton = new System.Windows.Forms.Button();
@@ -265,20 +265,21 @@
             this.Button18.Text = "VARIOUS DOCUMENT UPDATES";
             this.Button18.UseVisualStyleBackColor = false;
             // 
-            // Button17
+            // MedicalSummariesButton
             // 
-            this.Button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Button17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button17.ForeColor = System.Drawing.Color.White;
-            this.Button17.Location = new System.Drawing.Point(388, 97);
-            this.Button17.Margin = new System.Windows.Forms.Padding(10);
-            this.Button17.Name = "Button17";
-            this.Button17.Size = new System.Drawing.Size(169, 67);
-            this.Button17.TabIndex = 4;
-            this.Button17.Text = "MEDICAL INFO";
-            this.Button17.UseVisualStyleBackColor = false;
+            this.MedicalSummariesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MedicalSummariesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MedicalSummariesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MedicalSummariesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MedicalSummariesButton.ForeColor = System.Drawing.Color.White;
+            this.MedicalSummariesButton.Location = new System.Drawing.Point(388, 97);
+            this.MedicalSummariesButton.Margin = new System.Windows.Forms.Padding(10);
+            this.MedicalSummariesButton.Name = "MedicalSummariesButton";
+            this.MedicalSummariesButton.Size = new System.Drawing.Size(169, 67);
+            this.MedicalSummariesButton.TabIndex = 4;
+            this.MedicalSummariesButton.Text = "MEDICAL SUMMARIES";
+            this.MedicalSummariesButton.UseVisualStyleBackColor = false;
+            this.MedicalSummariesButton.Click += new System.EventHandler(this.MedicalSummariesButton_Click);
             // 
             // Button16
             // 
@@ -538,7 +539,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button20, 2, 4);
             this.TableLayoutPanel1.Controls.Add(this.Button19, 2, 3);
             this.TableLayoutPanel1.Controls.Add(this.Button18, 2, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Button17, 2, 1);
+            this.TableLayoutPanel1.Controls.Add(this.MedicalSummariesButton, 2, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button16, 2, 0);
             this.TableLayoutPanel1.Controls.Add(this.Button15, 1, 4);
             this.TableLayoutPanel1.Controls.Add(this.ImportDocumentsButton, 0, 4);
@@ -655,7 +656,7 @@
         internal System.Windows.Forms.Button Button20;
         internal System.Windows.Forms.Button Button19;
         internal System.Windows.Forms.Button Button18;
-        internal System.Windows.Forms.Button Button17;
+        internal System.Windows.Forms.Button MedicalSummariesButton;
         internal System.Windows.Forms.Button Button16;
         internal System.Windows.Forms.Button Button15;
         internal System.Windows.Forms.Button ImportDocumentsButton;

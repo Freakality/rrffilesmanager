@@ -60,7 +60,12 @@ namespace RRFFilesManager.Utils
             var form = new T();
             form.Show();
             PleaseWait.Instance.Hide();
+            form.FormClosing += ReturnHome_FormClosing;
             return form;
+        }
+        private static void ReturnHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseForm(sender as Form, Home.Instance);
         }
         public static void CloseForm(Form from, Form to)
         {
