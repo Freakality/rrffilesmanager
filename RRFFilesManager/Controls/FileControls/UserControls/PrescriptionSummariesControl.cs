@@ -112,6 +112,7 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
                         document.Close(SaveChanges: false);
                         wordApp.Quit();
                     }
+                    Word.Open(filePath);
                 }
                 catch (Exception ex)
                 {
