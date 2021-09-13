@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Web;
+using RRFFilesManager.Utils;
 
 namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 {
@@ -77,6 +78,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
                 return;
             var value = InsertEntity();
             Archives.Add(new ArchiveControls.Models.Archive(value));
+            Archive.Open();
             ResetForm();
         }
         public OutOfPocketHealthCareExp InsertEntity()
