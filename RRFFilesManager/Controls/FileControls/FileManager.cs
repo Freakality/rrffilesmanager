@@ -71,6 +71,7 @@ namespace RRFFilesManager
 
             ClientNameTextBox.Text = file.Client.ToString();
             MatterTypeTextBox.Text = file.MatterType.ToString();
+            MatterSubTypeTextBox.Text = file.MatterSubType.ToString();
             FileNumberTextBox.Text = file.FileNumber.ToString();
             DateOfLossTextBox.Text = file.DateOFLoss.ToString("d");
             LimDateTextBox.Text = file.LimitationPeriod;

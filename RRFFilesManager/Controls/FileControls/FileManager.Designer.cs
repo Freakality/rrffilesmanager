@@ -192,14 +192,15 @@
             System.Windows.Forms.Label TBoxLimDateLabel;
             System.Windows.Forms.Label CBoxMatterTypeLabel;
             System.Windows.Forms.Label TBoxFileCloseDateLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label label111;
             this.ProjectedABSettlementValueLabel = new System.Windows.Forms.Label();
             this.ProjectedABSettlementDateLabel = new System.Windows.Forms.Label();
             this.ProjectedSettlementValueLabel = new System.Windows.Forms.Label();
@@ -470,7 +471,6 @@
             this.SpecialDamagesDataGridView = new System.Windows.Forms.DataGridView();
             this.FileOpenDateTextBox = new System.Windows.Forms.TextBox();
             this.ProjectedSettlementDateTextBox = new System.Windows.Forms.TextBox();
-            this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
             this.NextReviewDateTextBox = new System.Windows.Forms.TextBox();
             this.DateOfLossTextBox = new System.Windows.Forms.TextBox();
             this.LimDateTextBox = new System.Windows.Forms.TextBox();
@@ -791,6 +791,8 @@
             this.ClientNameTextBox = new System.Windows.Forms.TextBox();
             this.FindFileButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
+            this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
             Label73 = new System.Windows.Forms.Label();
             Label74 = new System.Windows.Forms.Label();
             Label75 = new System.Windows.Forms.Label();
@@ -955,6 +957,7 @@
             TBoxLimDateLabel = new System.Windows.Forms.Label();
             CBoxMatterTypeLabel = new System.Windows.Forms.Label();
             TBoxFileCloseDateLabel = new System.Windows.Forms.Label();
+            label111 = new System.Windows.Forms.Label();
             this.TableLayoutPanel4.SuspendLayout();
             this.GroupBox34.SuspendLayout();
             this.TableLayoutPanel5.SuspendLayout();
@@ -2493,9 +2496,10 @@
             // TBoxFileOpenDateLabel1
             // 
             TBoxFileOpenDateLabel1.AutoSize = true;
+            TBoxFileOpenDateLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             TBoxFileOpenDateLabel1.Location = new System.Drawing.Point(559, 0);
             TBoxFileOpenDateLabel1.Name = "TBoxFileOpenDateLabel1";
-            TBoxFileOpenDateLabel1.Size = new System.Drawing.Size(104, 17);
+            TBoxFileOpenDateLabel1.Size = new System.Drawing.Size(114, 56);
             TBoxFileOpenDateLabel1.TabIndex = 132;
             TBoxFileOpenDateLabel1.Text = "File Open Date";
             TBoxFileOpenDateLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2503,9 +2507,10 @@
             // TBoxLimDateLabel
             // 
             TBoxLimDateLabel.AutoSize = true;
-            TBoxLimDateLabel.Location = new System.Drawing.Point(281, 55);
+            TBoxLimDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            TBoxLimDateLabel.Location = new System.Drawing.Point(281, 110);
             TBoxLimDateLabel.Name = "TBoxLimDateLabel";
-            TBoxLimDateLabel.Size = new System.Drawing.Size(108, 17);
+            TBoxLimDateLabel.Size = new System.Drawing.Size(114, 56);
             TBoxLimDateLabel.TabIndex = 6;
             TBoxLimDateLabel.Text = "Limitation Date";
             TBoxLimDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2513,9 +2518,10 @@
             // CBoxMatterTypeLabel
             // 
             CBoxMatterTypeLabel.AutoSize = true;
-            CBoxMatterTypeLabel.Location = new System.Drawing.Point(3, 55);
+            CBoxMatterTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            CBoxMatterTypeLabel.Location = new System.Drawing.Point(3, 56);
             CBoxMatterTypeLabel.Name = "CBoxMatterTypeLabel";
-            CBoxMatterTypeLabel.Size = new System.Drawing.Size(82, 17);
+            CBoxMatterTypeLabel.Size = new System.Drawing.Size(114, 54);
             CBoxMatterTypeLabel.TabIndex = 46;
             CBoxMatterTypeLabel.Text = "Matter Type";
             CBoxMatterTypeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2523,44 +2529,51 @@
             // TBoxFileCloseDateLabel
             // 
             TBoxFileCloseDateLabel.AutoSize = true;
-            TBoxFileCloseDateLabel.Location = new System.Drawing.Point(559, 55);
+            TBoxFileCloseDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            TBoxFileCloseDateLabel.Location = new System.Drawing.Point(559, 56);
             TBoxFileCloseDateLabel.Name = "TBoxFileCloseDateLabel";
-            TBoxFileCloseDateLabel.Size = new System.Drawing.Size(104, 17);
+            TBoxFileCloseDateLabel.Size = new System.Drawing.Size(114, 54);
             TBoxFileCloseDateLabel.TabIndex = 10;
             TBoxFileCloseDateLabel.Text = "File Close Date";
             TBoxFileCloseDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ProjectedABSettlementValueLabel
             // 
+            this.ProjectedABSettlementValueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedABSettlementValueLabel.Location = new System.Drawing.Point(1135, 110);
             this.ProjectedABSettlementValueLabel.Name = "ProjectedABSettlementValueLabel";
-            this.ProjectedABSettlementValueLabel.Size = new System.Drawing.Size(114, 54);
+            this.ProjectedABSettlementValueLabel.Size = new System.Drawing.Size(134, 56);
             this.ProjectedABSettlementValueLabel.TabIndex = 140;
             this.ProjectedABSettlementValueLabel.Text = "Projected AB Settlement Value";
+            this.ProjectedABSettlementValueLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ProjectedABSettlementDateLabel
             // 
-            this.ProjectedABSettlementDateLabel.Location = new System.Drawing.Point(1135, 55);
+            this.ProjectedABSettlementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedABSettlementDateLabel.Location = new System.Drawing.Point(1135, 56);
             this.ProjectedABSettlementDateLabel.Name = "ProjectedABSettlementDateLabel";
-            this.ProjectedABSettlementDateLabel.Size = new System.Drawing.Size(114, 35);
+            this.ProjectedABSettlementDateLabel.Size = new System.Drawing.Size(134, 54);
             this.ProjectedABSettlementDateLabel.TabIndex = 138;
             this.ProjectedABSettlementDateLabel.Text = "Projected AB Settlement Date";
+            this.ProjectedABSettlementDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.ProjectedABSettlementDateLabel.UseWaitCursor = true;
             // 
             // ProjectedSettlementValueLabel
             // 
+            this.ProjectedSettlementValueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedSettlementValueLabel.Location = new System.Drawing.Point(837, 110);
             this.ProjectedSettlementValueLabel.Name = "ProjectedSettlementValueLabel";
-            this.ProjectedSettlementValueLabel.Size = new System.Drawing.Size(128, 56);
+            this.ProjectedSettlementValueLabel.Size = new System.Drawing.Size(134, 56);
             this.ProjectedSettlementValueLabel.TabIndex = 136;
             this.ProjectedSettlementValueLabel.Text = "Projected Tort/Contract Settlement Value";
             this.ProjectedSettlementValueLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ProjectedSettlementDateLabel
             // 
-            this.ProjectedSettlementDateLabel.Location = new System.Drawing.Point(837, 55);
+            this.ProjectedSettlementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedSettlementDateLabel.Location = new System.Drawing.Point(837, 56);
             this.ProjectedSettlementDateLabel.Name = "ProjectedSettlementDateLabel";
-            this.ProjectedSettlementDateLabel.Size = new System.Drawing.Size(128, 55);
+            this.ProjectedSettlementDateLabel.Size = new System.Drawing.Size(134, 54);
             this.ProjectedSettlementDateLabel.TabIndex = 130;
             this.ProjectedSettlementDateLabel.Text = "Projected Tort/Contract Settlement Date";
             this.ProjectedSettlementDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2568,17 +2581,20 @@
             // NextReviewDateLabel
             // 
             this.NextReviewDateLabel.AutoSize = true;
+            this.NextReviewDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NextReviewDateLabel.Location = new System.Drawing.Point(1135, 0);
             this.NextReviewDateLabel.Name = "NextReviewDateLabel";
-            this.NextReviewDateLabel.Size = new System.Drawing.Size(112, 34);
+            this.NextReviewDateLabel.Size = new System.Drawing.Size(134, 56);
             this.NextReviewDateLabel.TabIndex = 48;
             this.NextReviewDateLabel.Text = "Next AB Review Date";
+            this.NextReviewDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // NextLabel
             // 
+            this.NextLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NextLabel.Location = new System.Drawing.Point(837, 0);
             this.NextLabel.Name = "NextLabel";
-            this.NextLabel.Size = new System.Drawing.Size(114, 43);
+            this.NextLabel.Size = new System.Drawing.Size(134, 56);
             this.NextLabel.TabIndex = 8;
             this.NextLabel.Text = "Next Tort/Contract Review Date";
             this.NextLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2586,9 +2602,10 @@
             // DateOfLossLabel
             // 
             this.DateOfLossLabel.AutoSize = true;
-            this.DateOfLossLabel.Location = new System.Drawing.Point(281, 0);
+            this.DateOfLossLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DateOfLossLabel.Location = new System.Drawing.Point(281, 56);
             this.DateOfLossLabel.Name = "DateOfLossLabel";
-            this.DateOfLossLabel.Size = new System.Drawing.Size(88, 17);
+            this.DateOfLossLabel.Size = new System.Drawing.Size(114, 54);
             this.DateOfLossLabel.TabIndex = 12;
             this.DateOfLossLabel.Text = "Date Of Loss";
             this.DateOfLossLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -4797,8 +4814,8 @@
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.InvoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InvoicesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -4877,7 +4894,7 @@
             this.PrescriptionSummariesTab.Padding = new System.Windows.Forms.Padding(3);
             this.PrescriptionSummariesTab.Size = new System.Drawing.Size(1423, 479);
             this.PrescriptionSummariesTab.TabIndex = 3;
-            this.PrescriptionSummariesTab.Text = "Prescription Summaries";
+            this.PrescriptionSummariesTab.Text = "Travel Log";
             this.PrescriptionSummariesTab.UseVisualStyleBackColor = true;
             this.PrescriptionSummariesTab.Click += new System.EventHandler(this.PrescriptionSummariesTab_Click);
             // 
@@ -4894,8 +4911,8 @@
             // PLReportsDataGridView
             // 
             this.PLReportsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.PLReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PLReportsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.PLReportsDataGridView.Name = "PLReportsDataGridView";
@@ -4962,8 +4979,8 @@
             // MedApptsDataGridView
             // 
             this.MedApptsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.MedApptsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MedApptsDataGridView.Location = new System.Drawing.Point(12, 63);
             this.MedApptsDataGridView.Name = "MedApptsDataGridView";
@@ -4994,7 +5011,7 @@
             // 
             this.ProjectedABSettlementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedABSettlementDateTextBox.Enabled = false;
-            this.ProjectedABSettlementDateTextBox.Location = new System.Drawing.Point(1275, 58);
+            this.ProjectedABSettlementDateTextBox.Location = new System.Drawing.Point(1275, 59);
             this.ProjectedABSettlementDateTextBox.Name = "ProjectedABSettlementDateTextBox";
             this.ProjectedABSettlementDateTextBox.Size = new System.Drawing.Size(153, 23);
             this.ProjectedABSettlementDateTextBox.TabIndex = 139;
@@ -5075,19 +5092,10 @@
             // 
             this.ProjectedSettlementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedSettlementDateTextBox.Enabled = false;
-            this.ProjectedSettlementDateTextBox.Location = new System.Drawing.Point(977, 58);
+            this.ProjectedSettlementDateTextBox.Location = new System.Drawing.Point(977, 59);
             this.ProjectedSettlementDateTextBox.Name = "ProjectedSettlementDateTextBox";
             this.ProjectedSettlementDateTextBox.Size = new System.Drawing.Size(152, 23);
             this.ProjectedSettlementDateTextBox.TabIndex = 131;
-            // 
-            // MatterTypeTextBox
-            // 
-            this.MatterTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(123, 58);
-            this.MatterTypeTextBox.Name = "MatterTypeTextBox";
-            this.MatterTypeTextBox.Size = new System.Drawing.Size(152, 23);
-            this.MatterTypeTextBox.TabIndex = 47;
             // 
             // NextReviewDateTextBox
             // 
@@ -5102,7 +5110,7 @@
             // 
             this.DateOfLossTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DateOfLossTextBox.Enabled = false;
-            this.DateOfLossTextBox.Location = new System.Drawing.Point(401, 3);
+            this.DateOfLossTextBox.Location = new System.Drawing.Point(401, 59);
             this.DateOfLossTextBox.Name = "DateOfLossTextBox";
             this.DateOfLossTextBox.Size = new System.Drawing.Size(152, 23);
             this.DateOfLossTextBox.TabIndex = 13;
@@ -5111,7 +5119,7 @@
             // 
             this.LimDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LimDateTextBox.Enabled = false;
-            this.LimDateTextBox.Location = new System.Drawing.Point(401, 58);
+            this.LimDateTextBox.Location = new System.Drawing.Point(401, 113);
             this.LimDateTextBox.Name = "LimDateTextBox";
             this.LimDateTextBox.Size = new System.Drawing.Size(152, 23);
             this.LimDateTextBox.TabIndex = 7;
@@ -5119,9 +5127,10 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(3, 110);
+            this.Label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Label1.Location = new System.Drawing.Point(281, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(84, 17);
+            this.Label1.Size = new System.Drawing.Size(114, 56);
             this.Label1.TabIndex = 5;
             this.Label1.Text = "File Number";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -5131,7 +5140,7 @@
             // 
             this.FileCloseDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileCloseDateTextBox.Enabled = false;
-            this.FileCloseDateTextBox.Location = new System.Drawing.Point(679, 58);
+            this.FileCloseDateTextBox.Location = new System.Drawing.Point(679, 59);
             this.FileCloseDateTextBox.Name = "FileCloseDateTextBox";
             this.FileCloseDateTextBox.Size = new System.Drawing.Size(152, 23);
             this.FileCloseDateTextBox.TabIndex = 11;
@@ -5139,9 +5148,10 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
+            this.Label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Label2.Location = new System.Drawing.Point(3, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(90, 17);
+            this.Label2.Size = new System.Drawing.Size(114, 56);
             this.Label2.TabIndex = 6;
             this.Label2.Text = "Client Name";
             this.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -5160,8 +5170,8 @@
             // ClientNotesDataGridView
             // 
             this.ClientNotesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientNotesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientNotesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.ClientNotesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientNotesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClientNotesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -5614,14 +5624,14 @@
             // ActionLogDataGridView
             // 
             this.ActionLogDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.NullValue = null;
-            this.ActionLogDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.NullValue = null;
+            this.ActionLogDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.ActionLogDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ActionLogDataGridView.Location = new System.Drawing.Point(3, 74);
             this.ActionLogDataGridView.Name = "ActionLogDataGridView";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.ActionLogDataGridView.RowTemplate.Height = 60;
             this.ActionLogDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ActionLogDataGridView.Size = new System.Drawing.Size(1431, 427);
@@ -6161,8 +6171,8 @@
             // UndertakingsDataGridView
             // 
             this.UndertakingsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.UndertakingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(15, 19);
             this.UndertakingsDataGridView.Name = "UndertakingsDataGridView";
@@ -7300,8 +7310,8 @@
             // ABDenialsDataGridView
             // 
             this.ABDenialsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.ABDenialsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ABDenialsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameofBenefit,
@@ -8143,7 +8153,7 @@
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel18.Controls.Add(this.FileNumberTextBox, 1, 2);
+            this.tableLayoutPanel18.Controls.Add(label111, 0, 2);
             this.tableLayoutPanel18.Controls.Add(this.ClientNameTextBox, 1, 0);
             this.tableLayoutPanel18.Controls.Add(this.Label2, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.ProjectedABSettlementValueTextBox, 9, 2);
@@ -8153,9 +8163,6 @@
             this.tableLayoutPanel18.Controls.Add(this.ProjectedABSettlementDateTextBox, 9, 1);
             this.tableLayoutPanel18.Controls.Add(this.ProjectedABSettlementDateLabel, 8, 1);
             this.tableLayoutPanel18.Controls.Add(this.NextTextBox, 7, 0);
-            this.tableLayoutPanel18.Controls.Add(this.DateOfLossLabel, 2, 0);
-            this.tableLayoutPanel18.Controls.Add(this.DateOfLossTextBox, 3, 0);
-            this.tableLayoutPanel18.Controls.Add(this.Label1, 0, 2);
             this.tableLayoutPanel18.Controls.Add(this.FileOpenDateTextBox, 5, 0);
             this.tableLayoutPanel18.Controls.Add(TBoxFileOpenDateLabel1, 4, 0);
             this.tableLayoutPanel18.Controls.Add(this.ProjectedSettlementDateTextBox, 7, 1);
@@ -8167,14 +8174,19 @@
             this.tableLayoutPanel18.Controls.Add(this.FileCloseDateTextBox, 5, 1);
             this.tableLayoutPanel18.Controls.Add(CBoxMatterTypeLabel, 0, 1);
             this.tableLayoutPanel18.Controls.Add(this.MatterTypeTextBox, 1, 1);
-            this.tableLayoutPanel18.Controls.Add(TBoxLimDateLabel, 2, 1);
-            this.tableLayoutPanel18.Controls.Add(this.LimDateTextBox, 3, 1);
+            this.tableLayoutPanel18.Controls.Add(this.LimDateTextBox, 3, 2);
+            this.tableLayoutPanel18.Controls.Add(this.DateOfLossTextBox, 3, 1);
+            this.tableLayoutPanel18.Controls.Add(TBoxLimDateLabel, 2, 2);
+            this.tableLayoutPanel18.Controls.Add(this.DateOfLossLabel, 2, 1);
+            this.tableLayoutPanel18.Controls.Add(this.FileNumberTextBox, 3, 0);
+            this.tableLayoutPanel18.Controls.Add(this.Label1, 2, 0);
+            this.tableLayoutPanel18.Controls.Add(this.MatterSubTypeTextBox, 1, 2);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 3;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.73494F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.53012F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel18.Size = new System.Drawing.Size(1431, 166);
             this.tableLayoutPanel18.TabIndex = 144;
@@ -8183,7 +8195,7 @@
             // 
             this.FileNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileNumberTextBox.Enabled = false;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(123, 113);
+            this.FileNumberTextBox.Location = new System.Drawing.Point(401, 3);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
             this.FileNumberTextBox.Size = new System.Drawing.Size(152, 23);
             this.FileNumberTextBox.TabIndex = 145;
@@ -8221,6 +8233,34 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 142;
             this.PictureBox1.TabStop = false;
+            // 
+            // label111
+            // 
+            label111.AutoSize = true;
+            label111.Dock = System.Windows.Forms.DockStyle.Fill;
+            label111.Location = new System.Drawing.Point(3, 110);
+            label111.Name = "label111";
+            label111.Size = new System.Drawing.Size(114, 56);
+            label111.TabIndex = 146;
+            label111.Text = "Matter Sub-Type";
+            label111.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // MatterTypeTextBox
+            // 
+            this.MatterTypeTextBox.Enabled = false;
+            this.MatterTypeTextBox.Location = new System.Drawing.Point(123, 59);
+            this.MatterTypeTextBox.Name = "MatterTypeTextBox";
+            this.MatterTypeTextBox.Size = new System.Drawing.Size(152, 23);
+            this.MatterTypeTextBox.TabIndex = 47;
+            // 
+            // MatterSubTypeTextBox
+            // 
+            this.MatterSubTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatterSubTypeTextBox.Enabled = false;
+            this.MatterSubTypeTextBox.Location = new System.Drawing.Point(123, 113);
+            this.MatterSubTypeTextBox.Name = "MatterSubTypeTextBox";
+            this.MatterSubTypeTextBox.Size = new System.Drawing.Size(152, 23);
+            this.MatterSubTypeTextBox.TabIndex = 147;
             // 
             // FileManager
             // 
@@ -8650,7 +8690,6 @@
         internal System.Windows.Forms.DataGridView SpecialDamagesDataGridView;
         internal System.Windows.Forms.TextBox FileOpenDateTextBox;
         internal System.Windows.Forms.TextBox ProjectedSettlementDateTextBox;
-        internal System.Windows.Forms.TextBox MatterTypeTextBox;
         internal System.Windows.Forms.TextBox NextReviewDateTextBox;
         internal System.Windows.Forms.TextBox DateOfLossTextBox;
         internal System.Windows.Forms.TextBox LimDateTextBox;
@@ -8978,6 +9017,8 @@
         private System.Windows.Forms.Label NextReviewDateLabel;
         private System.Windows.Forms.Label DateOfLossLabel;
         private System.Windows.Forms.TabPage ABBinderTab;
+        internal System.Windows.Forms.TextBox MatterTypeTextBox;
+        internal System.Windows.Forms.TextBox MatterSubTypeTextBox;
     }
 }
 
