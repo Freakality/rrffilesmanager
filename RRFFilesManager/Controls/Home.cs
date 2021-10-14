@@ -19,6 +19,7 @@ using RRFFilesManager.Controls.ArchiveControls;
 using RRFFilesManager.Controls.CommisionCalculatorControls;
 using RRFFilesManager.Controls.PrescriptionSummariesControls;
 using RRFFilesManager.Controls.MedicalSummariesControls;
+using RRFFilesManager.Controls.PredictorCalculatorControls;
 
 namespace RRFFilesManager
 {
@@ -134,6 +135,11 @@ namespace RRFFilesManager
         private void MedicalSummariesButton_Click(object sender, EventArgs e)
         {
             Utils.Utils.OpenForm<MedicalSummariesForm>(this);
+        }
+
+        private void PredictorCalculatorButton_Click(object sender, EventArgs e)
+        {
+            Utils.Utils.OpenForm<PredictorCalculatorForm>(this);
         }
     }
 }

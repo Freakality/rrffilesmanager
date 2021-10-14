@@ -34,7 +34,7 @@
             this.Button27 = new System.Windows.Forms.Button();
             this.Button26 = new System.Windows.Forms.Button();
             this.PrescriptionSummariesButton = new System.Windows.Forms.Button();
-            this.Button24 = new System.Windows.Forms.Button();
+            this.PredictorCalculatorButton = new System.Windows.Forms.Button();
             this.CommisionCalculatorButton = new System.Windows.Forms.Button();
             this.Button22 = new System.Windows.Forms.Button();
             this.Button21 = new System.Windows.Forms.Button();
@@ -159,20 +159,21 @@
             this.PrescriptionSummariesButton.UseVisualStyleBackColor = false;
             this.PrescriptionSummariesButton.Click += new System.EventHandler(this.PrescriptionSummariesButton_Click);
             // 
-            // Button24
+            // PredictorCalculatorButton
             // 
-            this.Button24.BackColor = System.Drawing.Color.Gray;
-            this.Button24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button24.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button24.ForeColor = System.Drawing.Color.White;
-            this.Button24.Location = new System.Drawing.Point(577, 271);
-            this.Button24.Margin = new System.Windows.Forms.Padding(10);
-            this.Button24.Name = "Button24";
-            this.Button24.Size = new System.Drawing.Size(169, 67);
-            this.Button24.TabIndex = 4;
-            this.Button24.Text = "FIRM RESOURCES";
-            this.Button24.UseVisualStyleBackColor = false;
+            this.PredictorCalculatorButton.BackColor = System.Drawing.Color.Gray;
+            this.PredictorCalculatorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PredictorCalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PredictorCalculatorButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PredictorCalculatorButton.ForeColor = System.Drawing.Color.White;
+            this.PredictorCalculatorButton.Location = new System.Drawing.Point(577, 271);
+            this.PredictorCalculatorButton.Margin = new System.Windows.Forms.Padding(10);
+            this.PredictorCalculatorButton.Name = "PredictorCalculatorButton";
+            this.PredictorCalculatorButton.Size = new System.Drawing.Size(169, 67);
+            this.PredictorCalculatorButton.TabIndex = 4;
+            this.PredictorCalculatorButton.Text = "PREDICTOR CALCULATOR";
+            this.PredictorCalculatorButton.UseVisualStyleBackColor = false;
+            this.PredictorCalculatorButton.Click += new System.EventHandler(this.PredictorCalculatorButton_Click);
             // 
             // CommisionCalculatorButton
             // 
@@ -532,7 +533,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button27, 4, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button26, 4, 0);
             this.TableLayoutPanel1.Controls.Add(this.PrescriptionSummariesButton, 3, 4);
-            this.TableLayoutPanel1.Controls.Add(this.Button24, 3, 3);
+            this.TableLayoutPanel1.Controls.Add(this.PredictorCalculatorButton, 3, 3);
             this.TableLayoutPanel1.Controls.Add(this.CommisionCalculatorButton, 3, 2);
             this.TableLayoutPanel1.Controls.Add(this.Button22, 3, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button21, 3, 0);
@@ -649,7 +650,7 @@
         internal System.Windows.Forms.Button Button27;
         internal System.Windows.Forms.Button Button26;
         internal System.Windows.Forms.Button PrescriptionSummariesButton;
-        internal System.Windows.Forms.Button Button24;
+        internal System.Windows.Forms.Button PredictorCalculatorButton;
         internal System.Windows.Forms.Button CommisionCalculatorButton;
         internal System.Windows.Forms.Button Button22;
         internal System.Windows.Forms.Button Button21;

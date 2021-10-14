@@ -38,23 +38,23 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.TreatmentCentrePostalCodeTB = new System.Windows.Forms.TextBox();
             this.DataGridView = new System.Windows.Forms.DataGridView();
             this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.DocumentSummaryTB = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.DocumentGroupCB = new System.Windows.Forms.ComboBox();
-            this.DocumentTypeCB = new System.Windows.Forms.ComboBox();
-            this.DocumentCategoryCB = new System.Windows.Forms.ComboBox();
             this.DocumentGroupCKB = new System.Windows.Forms.CheckBox();
             this.DocumentTypeCKB = new System.Windows.Forms.CheckBox();
             this.DocumentCategoryCKB = new System.Windows.Forms.CheckBox();
+            this.DocumentCategoryCB = new System.Windows.Forms.ComboBox();
+            this.DocumentTypeCB = new System.Windows.Forms.ComboBox();
             this.DoneButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
-            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
             this.PreviewPanel.SuspendLayout();
@@ -166,6 +166,15 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
+            // previewArchiveUserControl1
+            // 
+            this.previewArchiveUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewArchiveUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
+            this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
+            this.previewArchiveUserControl1.TabIndex = 0;
+            this.previewArchiveUserControl1.Load += new System.EventHandler(this.previewArchiveUserControl1_Load);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -244,26 +253,6 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.DocumentGroupCB.TabIndex = 151;
             this.DocumentGroupCB.SelectedIndexChanged += new System.EventHandler(this.DocumentGroupCB_SelectedIndexChanged);
             // 
-            // DocumentTypeCB
-            // 
-            this.DocumentTypeCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DocumentTypeCB.FormattingEnabled = true;
-            this.DocumentTypeCB.Location = new System.Drawing.Point(203, 63);
-            this.DocumentTypeCB.Name = "DocumentTypeCB";
-            this.DocumentTypeCB.Size = new System.Drawing.Size(213, 21);
-            this.DocumentTypeCB.TabIndex = 153;
-            this.DocumentTypeCB.SelectedIndexChanged += new System.EventHandler(this.DocumentTypeCB_SelectedIndexChanged);
-            // 
-            // DocumentCategoryCB
-            // 
-            this.DocumentCategoryCB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DocumentCategoryCB.FormattingEnabled = true;
-            this.DocumentCategoryCB.Location = new System.Drawing.Point(203, 33);
-            this.DocumentCategoryCB.Name = "DocumentCategoryCB";
-            this.DocumentCategoryCB.Size = new System.Drawing.Size(213, 21);
-            this.DocumentCategoryCB.TabIndex = 152;
-            this.DocumentCategoryCB.SelectedIndexChanged += new System.EventHandler(this.DocumentCategoryCB_SelectedIndexChanged);
-            // 
             // DocumentGroupCKB
             // 
             this.DocumentGroupCKB.AutoSize = true;
@@ -299,6 +288,26 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.DocumentCategoryCKB.TabIndex = 157;
             this.DocumentCategoryCKB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DocumentCategoryCKB.UseVisualStyleBackColor = true;
+            // 
+            // DocumentCategoryCB
+            // 
+            this.DocumentCategoryCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentCategoryCB.FormattingEnabled = true;
+            this.DocumentCategoryCB.Location = new System.Drawing.Point(203, 33);
+            this.DocumentCategoryCB.Name = "DocumentCategoryCB";
+            this.DocumentCategoryCB.Size = new System.Drawing.Size(213, 21);
+            this.DocumentCategoryCB.TabIndex = 152;
+            this.DocumentCategoryCB.SelectedIndexChanged += new System.EventHandler(this.DocumentCategoryCB_SelectedIndexChanged);
+            // 
+            // DocumentTypeCB
+            // 
+            this.DocumentTypeCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTypeCB.FormattingEnabled = true;
+            this.DocumentTypeCB.Location = new System.Drawing.Point(203, 63);
+            this.DocumentTypeCB.Name = "DocumentTypeCB";
+            this.DocumentTypeCB.Size = new System.Drawing.Size(213, 21);
+            this.DocumentTypeCB.TabIndex = 153;
+            this.DocumentTypeCB.SelectedIndexChanged += new System.EventHandler(this.DocumentTypeCB_SelectedIndexChanged);
             // 
             // DoneButton
             // 
@@ -356,6 +365,16 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.tableLayoutPanel1.Size = new System.Drawing.Size(868, 665);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // findFileAndArchivePanelUserControl1
+            // 
+            this.findFileAndArchivePanelUserControl1.Archive = null;
+            this.findFileAndArchivePanelUserControl1.File = null;
+            this.findFileAndArchivePanelUserControl1.Location = new System.Drawing.Point(3, 3);
+            this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";
+            this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 70);
+            this.findFileAndArchivePanelUserControl1.TabIndex = 149;
+            this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load_1);
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -371,25 +390,6 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1348, 673);
             this.tableLayoutPanel5.TabIndex = 3;
-            // 
-            // findFileAndArchivePanelUserControl1
-            // 
-            this.findFileAndArchivePanelUserControl1.Archive = null;
-            this.findFileAndArchivePanelUserControl1.File = null;
-            this.findFileAndArchivePanelUserControl1.Location = new System.Drawing.Point(3, 3);
-            this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";
-            this.findFileAndArchivePanelUserControl1.Size = new System.Drawing.Size(862, 70);
-            this.findFileAndArchivePanelUserControl1.TabIndex = 149;
-            this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load_1);
-            // 
-            // previewArchiveUserControl1
-            // 
-            this.previewArchiveUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewArchiveUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
-            this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
-            this.previewArchiveUserControl1.TabIndex = 0;
-            this.previewArchiveUserControl1.Load += new System.EventHandler(this.previewArchiveUserControl1_Load);
             // 
             // MedicalSummariesForm
             // 

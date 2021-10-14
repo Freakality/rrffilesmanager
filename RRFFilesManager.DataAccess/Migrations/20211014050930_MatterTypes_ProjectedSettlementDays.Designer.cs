@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20211014050930_MatterTypes_ProjectedSettlementDays")]
+    partial class MatterTypes_ProjectedSettlementDays
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -290,17 +292,11 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<double>("ContigencyFee")
-                        .HasColumnType("float");
-
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("MatterTypeID")
                         .HasColumnType("int");
-
-                    b.Property<double>("ProjectedDisbursementsAmount")
-                        .HasColumnType("float");
 
                     b.Property<double>("ProjectedSettlementDays")
                         .HasColumnType("float");
@@ -1054,16 +1050,10 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<double?>("ContigencyFee")
-                        .HasColumnType("float");
-
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("ProjectedDisbursementsAmount")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("ProjectedSettlementDays")
+                    b.Property<double>("ProjectedSettlementDays")
                         .HasColumnType("float");
 
                     b.HasKey("ID");

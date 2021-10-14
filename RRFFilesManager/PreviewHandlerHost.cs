@@ -327,7 +327,7 @@ namespace RRFFilesManager
                 }
                 catch (Exception ex)
                 {
-                    ErrorMessage = "Preview could not be generated.\n" + ex.Message;
+                    ErrorMessage = $"Preview could not be generated.\nError: {ex.Message}\nPath: {filename}";
                 }
             }
             else

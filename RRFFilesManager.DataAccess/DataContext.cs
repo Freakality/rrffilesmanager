@@ -35,6 +35,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<Drug> Drugs { get; set; }
         public DbSet<OutOfPocketHealthCareExp> OutOfPocketHealthCareExp { get; set; }
         public DbSet<MedicalSummary> MedicalSummaries { get; set; }
+        public DbSet<ComissionSubType> ComissionSubTypes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

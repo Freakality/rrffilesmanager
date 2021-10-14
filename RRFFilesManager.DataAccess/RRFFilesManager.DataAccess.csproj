@@ -197,6 +197,7 @@
     <Compile Include="Abstractions\IDocumentTypeRepository.cs" />
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
+    <Compile Include="Abstractions\IGenericRepository.cs" />
     <Compile Include="Abstractions\IMedicalSummaryRepository.cs" />
     <Compile Include="Abstractions\IOutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="Abstractions\IPharmacyRepository.cs" />
@@ -223,6 +224,8 @@
     <Compile Include="DocumentTypeRepository.cs" />
     <Compile Include="FileRepository.cs" />
     <Compile Include="DocumentGroupRepository.cs" />
+    <Compile Include="ComissionSubTypeRepository.cs" />
+    <Compile Include="GenericRepository.cs" />
     <Compile Include="Migrations\20210530135625_Pharmacy.cs" />
     <Compile Include="Migrations\20210530135625_Pharmacy.designer.cs">
       <DependentUpon>20210530135625_Pharmacy.cs</DependentUpon>
@@ -255,6 +258,30 @@
     <Compile Include="Migrations\20210913020301_MedicalSummary.cs" />
     <Compile Include="Migrations\20210913020301_MedicalSummary.designer.cs">
       <DependentUpon>20210913020301_MedicalSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20211014050253_ComissionSubTypes.cs" />
+    <Compile Include="Migrations\20211014050253_ComissionSubTypes.designer.cs">
+      <DependentUpon>20211014050253_ComissionSubTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20211014050930_MatterTypes_ProjectedSettlementDays.cs" />
+    <Compile Include="Migrations\20211014050930_MatterTypes_ProjectedSettlementDays.designer.cs">
+      <DependentUpon>20211014050930_MatterTypes_ProjectedSettlementDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20211014051140_MatterTypes_ProjectedSettlementDaysNotNull.cs" />
+    <Compile Include="Migrations\20211014051140_MatterTypes_ProjectedSettlementDaysNotNull.designer.cs">
+      <DependentUpon>20211014051140_MatterTypes_ProjectedSettlementDaysNotNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20211014053254_ContigencyFee.cs" />
+    <Compile Include="Migrations\20211014053254_ContigencyFee.designer.cs">
+      <DependentUpon>20211014053254_ContigencyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20211014053347_ContigencyFeeNULL.cs" />
+    <Compile Include="Migrations\20211014053347_ContigencyFeeNULL.designer.cs">
+      <DependentUpon>20211014053347_ContigencyFeeNULL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20211014055441_ProjectedDisbursementsAmount.cs" />
+    <Compile Include="Migrations\20211014055441_ProjectedDisbursementsAmount.designer.cs">
+      <DependentUpon>20211014055441_ProjectedDisbursementsAmount.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
