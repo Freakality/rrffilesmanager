@@ -63,3 +63,5 @@ RRFFilesManager.DataAccess/obj/
 RRFFilesManager.Abstractions/bin/
 RRFFilesManager/publish/
 RRFilesManager.Abstractions/obj/
+RRFilesManager.Abstractions/bin/
+RRFFilesManager/RRFFilesManager.csproj.user

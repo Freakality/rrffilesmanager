@@ -11,7 +11,7 @@ using System.IO;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
-using SharpShell.Interop;
+//using SharpShell.Interop;
 
 namespace RRFFilesManager
 {
