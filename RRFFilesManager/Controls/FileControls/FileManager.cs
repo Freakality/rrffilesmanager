@@ -1,6 +1,7 @@
 ﻿using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.FileControls;
 using RRFFilesManager.Controls.FileControls.UserControls;
+using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.FileControls;
 using RRFFilesManager.Logic;
 using System;
@@ -22,8 +23,14 @@ namespace RRFFilesManager
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
         public readonly PrescriptionSummariesControl PrescriptionSummariesControl;
         public readonly ABBinderControl ABBinderControl;
+        private readonly IFileRepository _fileRepository;
+        public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAction;
+        public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAccidentBenefits;
+        public TabPage SemiAnnualFileReviewTabAction = new TabPage("Semi-Annual File Review");
+        public TabPage SemiAnnualFileReviewTabAccidentBenefits = new TabPage("Semi-Annual File Review");
         public FileManager()
         {
+            _fileRepository = Program.GetService<IFileRepository>();
             InitializeComponent();
             PeopleControl = new PeopleControl();
             Utils.Utils.SetContent(PeopleTab, PeopleControl);
@@ -36,6 +43,12 @@ namespace RRFFilesManager
 
             ABBinderControl = new ABBinderControl();
             Utils.Utils.SetContent(ABBinderTab, ABBinderControl);
+
+            SemiAnnualFileReviewControlAction = new SemiAnnualFileReviewControl(0);
+            Utils.Utils.SetContent(SemiAnnualFileReviewTabAction, SemiAnnualFileReviewControlAction);
+
+            SemiAnnualFileReviewControlAccidentBenefits = new SemiAnnualFileReviewControl(1);
+            Utils.Utils.SetContent(SemiAnnualFileReviewTabAccidentBenefits, SemiAnnualFileReviewControlAccidentBenefits);
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -73,9 +86,17 @@ namespace RRFFilesManager
             MatterTypeTextBox.Text = file.MatterType.ToString();
             MatterSubTypeTextBox.Text = file.MatterSubType.ToString();
             FileNumberTextBox.Text = file.FileNumber.ToString();
-            DateOfLossTextBox.Text = file.DateOFLoss.ToString("d");
+            DateOfLossTextBox.Text = file.DateOFLoss.ToString("MMM-dd-yyyy");
             LimDateTextBox.Text = file.LimitationPeriod;
-            FileOpenDateTextBox.Text = file.DateOfCall.ToString("d");
+            FileOpenDateTextBox.Text = file.DateOfCall.ToString("MMM-dd-yyyy");
+            /*DateTime nextReview = file.DateOfCall.AddMonths(6);
+            while (nextReview.Date < DateTime.Now.Date)
+            {
+                nextReview = nextReview.AddMonths(6);
+            }
+            NextTextBox.Text = nextReview.ToString("MMM-dd-yyyy");
+            NextReviewDateTextBox.Text = nextReview.ToString("MMM-dd-yyyy");*/
+            SetProjections();
 
             if(file.MatterType.Description == "Disability")
             {
@@ -103,6 +124,10 @@ namespace RRFFilesManager
                 ProjectedABSettlementValueLabel.Show();
                 ProjectedABSettlementValueTextBox.Show();
             }
+            SubTypeCategoryComboBox.MatterType = File.MatterType;
+            if (File.SubTypeCategory != null)
+                SubTypeCategoryComboBox.SelectedItem = File.SubTypeCategory;
+            
         }
 
         private void TextBox22_TextChanged(object sender, EventArgs e)
@@ -128,6 +153,122 @@ namespace RRFFilesManager
         private void PrescriptionSummariesTab_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public List<string> GetDateMatterSub()
+        {
+            List<string> DateMatterSub = new List<string>();
+            DateMatterSub.Add(FileOpenDateTextBox.Text);
+            DateMatterSub.Add(MatterTypeTextBox.Text);
+            DateMatterSub.Add(MatterSubTypeTextBox.Text);
+            return DateMatterSub;
+        }
+
+        private void SetSemiAnnualFileReviewTab(File file)
+        {
+            /*
+            */
+            if (file.SubTypeCategory.Description.Contains("AB") && !file.SubTypeCategory.Description.Contains("TORT"))
+            {
+                if (TabControl2.TabPages.Contains(SemiAnnualFileReviewTabAction))
+                {
+                    TabControl2.TabPages.Remove(SemiAnnualFileReviewTabAction);
+                }
+                SemiAnnualFileReviewControlAccidentBenefits.File = file;
+                SemiAnnualFileReviewControlAccidentBenefits.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
+                TabControl5.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
+            }
+            else if (!file.SubTypeCategory.Description.Contains("AB") && file.SubTypeCategory.Description.Contains("TORT"))
+            {
+                if (TabControl5.TabPages.Contains(SemiAnnualFileReviewTabAccidentBenefits))
+                {
+                    TabControl5.TabPages.Remove(SemiAnnualFileReviewTabAccidentBenefits);
+                }
+                SemiAnnualFileReviewControlAction.File = file;
+                SemiAnnualFileReviewControlAction.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
+                TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
+            }
+            else
+            {
+                SemiAnnualFileReviewControlAccidentBenefits.File = SemiAnnualFileReviewControlAction.File = file;
+                TabControl5.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
+                TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
+            }
+            
+        }
+
+        private void SubTypeCategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            File.SubTypeCategory = (ComissionSubType)SubTypeCategoryComboBox.SelectedItem;
+            _fileRepository.Update(File);
+            SetSemiAnnualFileReviewTab(File);
+        }
+
+        private void SetProjections()
+        {
+            DateTime TDate = File.DateOfCall;
+            DateTime TProjectedSettlementDate = Convert.ToDateTime("01/01/0001");
+            string TProjectedSettlementValue = "";
+            DateTime ABDate = File.DateOfCall;
+            DateTime ABProjectedSettlementDate = Convert.ToDateTime("01/01/0001");
+            string ABProjectedSettlementValue = "";
+            bool HasT = false;
+            bool HasAB = false;
+            foreach (FileReview NextReview in File.Reviews)
+            {
+                if (NextReview.FRActionABenefitsStatus == 0)
+                {
+                    if (HasT == false)
+                        HasT = true;
+                    if (NextReview.FRDate >= TDate)
+                    {
+                        TDate = NextReview.FRDate;
+                        TProjectedSettlementDate = NextReview.FRProjectedSettlementDate;
+                        TProjectedSettlementValue = NextReview.FRProjectedSettlementValue;
+                    }
+                }
+                else if (NextReview.FRActionABenefitsStatus == 1)
+                {
+                    if (HasAB == false)
+                        HasAB = true;
+                    if (NextReview.FRDate >= ABDate)
+                    {
+                        ABDate = NextReview.FRDate;
+                        ABProjectedSettlementDate = NextReview.FRProjectedSettlementDate;
+                        ABProjectedSettlementValue = NextReview.FRProjectedSettlementValue;
+                    }
+                }
+            }
+            SetProjectionPerType(HasT, NextTextBox, TDate, ProjectedSettlementDateTextBox, TProjectedSettlementDate, ProjectedSettlementValueTextBox, TProjectedSettlementValue);
+            SetProjectionPerType(HasAB, NextReviewDateTextBox, ABDate, ProjectedABSettlementDateTextBox, ABProjectedSettlementDate, ProjectedABSettlementValueTextBox, ABProjectedSettlementValue);
+        }
+
+        private void SetProjectionPerType (bool Has, TextBox NextDateBox, DateTime NextDate, TextBox SettleDateBox, DateTime SettleDate, TextBox SettleValueBox, string SettleValue)
+        {
+            if (Has)
+            {
+                DateTime OriginalDate = Convert.ToDateTime("01/01/0001");
+                bool success = false;
+                if (!String.IsNullOrEmpty(NextDateBox.Text))
+                {
+                    success = DateTime.TryParse(NextDateBox.Text, out OriginalDate);
+                }
+                if (!success)
+                {
+                    OriginalDate = Convert.ToDateTime("01/01/0001");
+                }
+                if (NextDate.AddMonths(6) > OriginalDate)
+                {
+                    NextDateBox.Text = NextDate.AddMonths(6).ToString("MMM-dd-yyyy");
+                    SettleDateBox.Text = SettleDate.ToString("MMM-dd-yyyy");
+                    SettleValueBox.Text = SettleValue;
+                }
+            }
+        }
+
+        private void ReviewDoneSaveButton_Click2(object sender, EventArgs e)
+        {
+            SetProjections();   
         }
     }
 }

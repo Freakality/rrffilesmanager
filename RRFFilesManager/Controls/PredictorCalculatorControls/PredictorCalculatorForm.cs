@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RRFFilesManager.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,9 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
     {
         public double ProjectedSettlementDays => matterTypeComboBox1.MatterType.ProjectedSettlementDays
                                                     ?? comissionSubTypeComboBox1.ComissionSubType.ProjectedSettlementDays;
+        public bool semiannual = false;
+        public bool Transferring = false;
+        public SemiAnnualData SemiAnnualData = new SemiAnnualData();
         public DateTime ProjectedSettlementDate
         {
             get
@@ -56,6 +60,22 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
         {
             InitializeComponent();
             ContingencyFeeTypeCB_SelectedIndexChanged(null, null);
+            if (semiannual)
+                TransferButton.Visible = true;
+            else
+                TransferButton.Visible = false;
+        }
+
+        public PredictorCalculatorForm(File file, bool state)
+        {
+            InitializeComponent();
+            ContingencyFeeTypeCB_SelectedIndexChanged(null, null);
+            matterTypeComboBox1.SelectedItem = file.MatterType;
+            comissionSubTypeComboBox1.SelectedItem = file.SubTypeCategory;
+            matterTypeComboBox1.Enabled = false;
+            FileOpenDateDTP.Value = file.DateOfCall;
+            FileOpenDateDTP.Enabled = false;
+            semiannual = state;
         }
 
         private void matterTypeComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,5 +146,34 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             else if (ProjectedProfit < 0)
                 ProjectedProfitTB.BackColor = Color.FromArgb(255, 80, 80);
         }
+
+        private void PredictorCalculatorForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (semiannual)
+            {
+                SemiAnnualData.ProjectedSettlementAmount = ProjectedSettlementAmountTB.Text;
+                SemiAnnualData.ProjectedDisbursements = ProjectedDisbursementsTB.Text;
+                SemiAnnualData.ProjectedFees = ProjectedFeesTB.Text;
+                SemiAnnualData.ProjectedProfit = ProjectedProfitTB.Text;
+                if (!String.IsNullOrEmpty(ProjectedSettlementDateTB.Text))
+                    SemiAnnualData.ProjectedSettlementDate = Convert.ToDateTime(ProjectedSettlementDateTB.Text);
+                semiannual = false;
+            }
+        }
+
+        private void TransferButton_Click(object sender, EventArgs e)
+        {
+            Transferring = true;
+            Close();
+        }
+    }
+
+    public class SemiAnnualData
+    {
+        public string ProjectedSettlementAmount { get; set; }
+        public string ProjectedDisbursements { get; set; }
+        public string ProjectedFees { get; set; }
+        public string ProjectedProfit { get; set; }
+        public DateTime ProjectedSettlementDate { get; set; }
     }
 }

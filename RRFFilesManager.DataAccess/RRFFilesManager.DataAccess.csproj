@@ -197,6 +197,7 @@
     <Compile Include="Abstractions\IDocumentTypeRepository.cs" />
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
+    <Compile Include="Abstractions\IFileReviewRepository.cs" />
     <Compile Include="Abstractions\IGenericRepository.cs" />
     <Compile Include="Abstractions\IMedicalSummaryRepository.cs" />
     <Compile Include="Abstractions\IOutOfPocketHealthCareExpRepository.cs" />
@@ -225,6 +226,7 @@
     <Compile Include="FileRepository.cs" />
     <Compile Include="DocumentGroupRepository.cs" />
     <Compile Include="ComissionSubTypeRepository.cs" />
+    <Compile Include="FileReviewRepository.cs" />
     <Compile Include="GenericRepository.cs" />
     <Compile Include="Migrations\20210530135625_Pharmacy.cs" />
     <Compile Include="Migrations\20210530135625_Pharmacy.designer.cs">
@@ -282,6 +284,18 @@
     <Compile Include="Migrations\20211014055441_ProjectedDisbursementsAmount.cs" />
     <Compile Include="Migrations\20211014055441_ProjectedDisbursementsAmount.designer.cs">
       <DependentUpon>20211014055441_ProjectedDisbursementsAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220108155638_File_Reviews.cs" />
+    <Compile Include="Migrations\20220108155638_File_Reviews.designer.cs">
+      <DependentUpon>20220108155638_File_Reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220119170551_File_Review_Revision.cs" />
+    <Compile Include="Migrations\20220119170551_File_Review_Revision.designer.cs">
+      <DependentUpon>20220119170551_File_Review_Revision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220121211016_FileReviewUpdateandRepository.cs" />
+    <Compile Include="Migrations\20220121211016_FileReviewUpdateandRepository.designer.cs">
+      <DependentUpon>20220121211016_FileReviewUpdateandRepository.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />

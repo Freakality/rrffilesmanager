@@ -367,8 +367,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void UndoProcessedArchive(Models.Archive archive)
         {
             var originalArchive = archive.GetArchive();
-            var filename = Path.GetFileName(originalArchive.OriginalPath);
-            var sourceFileName = Path.Combine(UploadArchivesSettings.OutputFolder, filename);
+            //var filename = Path.GetFileName(originalArchive.OriginalPath);
+            //var sourceFileName = Path.Combine(UploadArchivesSettings.OutputFolder, filename);
+            var sourceFileName = originalArchive.Path;
             System.IO.File.Move(sourceFileName, originalArchive.OriginalPath);
             _archiveManager.Delete(originalArchive);
             InitializeSettings();

@@ -34,11 +34,13 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.ContingencyFeeTypeCB = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.TransferButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.FileOpenDateDTP = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.ProfitPredictorCB = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.SettlementAmountTB = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.ContingencyFeeCB = new System.Windows.Forms.ComboBox();
@@ -66,13 +68,12 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.Label41 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.matterTypeComboBox1 = new RRFFilesManager.Controls.SharedControls.CustomControls.MatterTypeComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comissionSubTypeComboBox1 = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.HomeButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.CalculateWhatCB = new System.Windows.Forms.ComboBox();
-            this.SettlementAmountTB = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.matterTypeComboBox1 = new RRFFilesManager.Controls.SharedControls.CustomControls.MatterTypeComboBox();
-            this.comissionSubTypeComboBox1 = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -141,6 +142,7 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.TransferButton, 1, 6);
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.FileOpenDateDTP, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label3, 0, 0);
@@ -166,6 +168,21 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50328F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(607, 319);
             this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // TransferButton
+            // 
+            this.TransferButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TransferButton.BackColor = System.Drawing.Color.Maroon;
+            this.TransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferButton.ForeColor = System.Drawing.Color.White;
+            this.TransferButton.Location = new System.Drawing.Point(470, 237);
+            this.TransferButton.Name = "TransferButton";
+            this.TransferButton.Size = new System.Drawing.Size(134, 33);
+            this.TransferButton.TabIndex = 156;
+            this.TransferButton.Text = "Transfer";
+            this.TransferButton.UseVisualStyleBackColor = false;
+            this.TransferButton.Click += new System.EventHandler(this.TransferButton_Click);
             // 
             // label1
             // 
@@ -229,6 +246,18 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.label5.TabIndex = 4;
             this.label5.Text = "Settlement Amount";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SettlementAmountTB
+            // 
+            this.SettlementAmountTB.CurrencySymbol = "$";
+            this.SettlementAmountTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SettlementAmountTB.Location = new System.Drawing.Point(157, 124);
+            this.SettlementAmountTB.Margin = new System.Windows.Forms.Padding(7);
+            this.SettlementAmountTB.Name = "SettlementAmountTB";
+            this.SettlementAmountTB.Size = new System.Drawing.Size(443, 20);
+            this.SettlementAmountTB.TabIndex = 155;
+            this.SettlementAmountTB.Text = "$ ";
+            this.SettlementAmountTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -583,6 +612,16 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Matter Type";
             // 
+            // matterTypeComboBox1
+            // 
+            this.matterTypeComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matterTypeComboBox1.FormattingEnabled = true;
+            this.matterTypeComboBox1.Location = new System.Drawing.Point(3, 16);
+            this.matterTypeComboBox1.Name = "matterTypeComboBox1";
+            this.matterTypeComboBox1.Size = new System.Drawing.Size(321, 21);
+            this.matterTypeComboBox1.TabIndex = 0;
+            this.matterTypeComboBox1.SelectedIndexChanged += new System.EventHandler(this.matterTypeComboBox1_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comissionSubTypeComboBox1);
@@ -593,6 +632,16 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Matter Sub-Type";
+            // 
+            // comissionSubTypeComboBox1
+            // 
+            this.comissionSubTypeComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comissionSubTypeComboBox1.FormattingEnabled = true;
+            this.comissionSubTypeComboBox1.Location = new System.Drawing.Point(3, 16);
+            this.comissionSubTypeComboBox1.MatterType = null;
+            this.comissionSubTypeComboBox1.Name = "comissionSubTypeComboBox1";
+            this.comissionSubTypeComboBox1.Size = new System.Drawing.Size(321, 21);
+            this.comissionSubTypeComboBox1.TabIndex = 0;
             // 
             // HomeButton
             // 
@@ -631,38 +680,6 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.CalculateWhatCB.TabIndex = 0;
             this.CalculateWhatCB.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // SettlementAmountTB
-            // 
-            this.SettlementAmountTB.CurrencySymbol = "$";
-            this.SettlementAmountTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SettlementAmountTB.Location = new System.Drawing.Point(157, 124);
-            this.SettlementAmountTB.Margin = new System.Windows.Forms.Padding(7);
-            this.SettlementAmountTB.Name = "SettlementAmountTB";
-            this.SettlementAmountTB.Size = new System.Drawing.Size(443, 20);
-            this.SettlementAmountTB.TabIndex = 155;
-            this.SettlementAmountTB.Text = "$ ";
-            this.SettlementAmountTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // matterTypeComboBox1
-            // 
-            this.matterTypeComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matterTypeComboBox1.FormattingEnabled = true;
-            this.matterTypeComboBox1.Location = new System.Drawing.Point(3, 16);
-            this.matterTypeComboBox1.Name = "matterTypeComboBox1";
-            this.matterTypeComboBox1.Size = new System.Drawing.Size(321, 21);
-            this.matterTypeComboBox1.TabIndex = 0;
-            this.matterTypeComboBox1.SelectedIndexChanged += new System.EventHandler(this.matterTypeComboBox1_SelectedIndexChanged);
-            // 
-            // comissionSubTypeComboBox1
-            // 
-            this.comissionSubTypeComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comissionSubTypeComboBox1.FormattingEnabled = true;
-            this.comissionSubTypeComboBox1.Location = new System.Drawing.Point(3, 16);
-            this.comissionSubTypeComboBox1.MatterType = null;
-            this.comissionSubTypeComboBox1.Name = "comissionSubTypeComboBox1";
-            this.comissionSubTypeComboBox1.Size = new System.Drawing.Size(321, 21);
-            this.comissionSubTypeComboBox1.TabIndex = 0;
-            // 
             // PredictorCalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,6 +693,7 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.Controls.Add(this.HomeButton);
             this.Name = "PredictorCalculatorForm";
             this.Text = "PredictorCalculatorForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PredictorCalculatorForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
@@ -738,5 +756,6 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
         private System.Windows.Forms.TextBox ProjectedProfitTB;
         private System.Windows.Forms.TextBox BestPredictorTB;
         private SharedControls.CustomControls.ComissionSubTypeComboBox comissionSubTypeComboBox1;
+        internal System.Windows.Forms.Button TransferButton;
     }
 }

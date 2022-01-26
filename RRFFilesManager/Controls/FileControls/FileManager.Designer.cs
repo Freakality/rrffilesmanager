@@ -192,15 +192,16 @@
             System.Windows.Forms.Label TBoxLimDateLabel;
             System.Windows.Forms.Label CBoxMatterTypeLabel;
             System.Windows.Forms.Label TBoxFileCloseDateLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label label111;
+            System.Windows.Forms.Label label112;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProjectedABSettlementValueLabel = new System.Windows.Forms.Label();
             this.ProjectedABSettlementDateLabel = new System.Windows.Forms.Label();
             this.ProjectedSettlementValueLabel = new System.Windows.Forms.Label();
@@ -787,12 +788,13 @@
             this.TextBox114 = new System.Windows.Forms.TextBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.FileNumberTextBox = new System.Windows.Forms.TextBox();
             this.ClientNameTextBox = new System.Windows.Forms.TextBox();
+            this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
+            this.FileNumberTextBox = new System.Windows.Forms.TextBox();
+            this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
+            this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.FindFileButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
-            this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
             Label73 = new System.Windows.Forms.Label();
             Label74 = new System.Windows.Forms.Label();
             Label75 = new System.Windows.Forms.Label();
@@ -958,6 +960,7 @@
             CBoxMatterTypeLabel = new System.Windows.Forms.Label();
             TBoxFileCloseDateLabel = new System.Windows.Forms.Label();
             label111 = new System.Windows.Forms.Label();
+            label112 = new System.Windows.Forms.Label();
             this.TableLayoutPanel4.SuspendLayout();
             this.GroupBox34.SuspendLayout();
             this.TableLayoutPanel5.SuspendLayout();
@@ -2508,7 +2511,7 @@
             // 
             TBoxLimDateLabel.AutoSize = true;
             TBoxLimDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            TBoxLimDateLabel.Location = new System.Drawing.Point(281, 110);
+            TBoxLimDateLabel.Location = new System.Drawing.Point(559, 110);
             TBoxLimDateLabel.Name = "TBoxLimDateLabel";
             TBoxLimDateLabel.Size = new System.Drawing.Size(114, 56);
             TBoxLimDateLabel.TabIndex = 6;
@@ -2536,6 +2539,26 @@
             TBoxFileCloseDateLabel.TabIndex = 10;
             TBoxFileCloseDateLabel.Text = "File Close Date";
             TBoxFileCloseDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label111
+            // 
+            label111.AutoSize = true;
+            label111.Location = new System.Drawing.Point(3, 110);
+            label111.Name = "label111";
+            label111.Size = new System.Drawing.Size(109, 17);
+            label111.TabIndex = 146;
+            label111.Text = "Matter Sub-Type";
+            label111.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label112
+            // 
+            label112.AutoSize = true;
+            label112.Location = new System.Drawing.Point(281, 110);
+            label112.Name = "label112";
+            label112.Size = new System.Drawing.Size(69, 34);
+            label112.TabIndex = 147;
+            label112.Text = "Sub-Type Category";
+            label112.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ProjectedABSettlementValueLabel
             // 
@@ -4814,8 +4837,8 @@
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.InvoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InvoicesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -4911,8 +4934,8 @@
             // PLReportsDataGridView
             // 
             this.PLReportsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.PLReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PLReportsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.PLReportsDataGridView.Name = "PLReportsDataGridView";
@@ -4979,8 +5002,8 @@
             // MedApptsDataGridView
             // 
             this.MedApptsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.MedApptsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MedApptsDataGridView.Location = new System.Drawing.Point(12, 63);
             this.MedApptsDataGridView.Name = "MedApptsDataGridView";
@@ -5119,7 +5142,7 @@
             // 
             this.LimDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LimDateTextBox.Enabled = false;
-            this.LimDateTextBox.Location = new System.Drawing.Point(401, 113);
+            this.LimDateTextBox.Location = new System.Drawing.Point(679, 113);
             this.LimDateTextBox.Name = "LimDateTextBox";
             this.LimDateTextBox.Size = new System.Drawing.Size(152, 23);
             this.LimDateTextBox.TabIndex = 7;
@@ -5170,8 +5193,8 @@
             // ClientNotesDataGridView
             // 
             this.ClientNotesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientNotesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientNotesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.ClientNotesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientNotesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClientNotesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -5624,14 +5647,14 @@
             // ActionLogDataGridView
             // 
             this.ActionLogDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.NullValue = null;
-            this.ActionLogDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.NullValue = null;
+            this.ActionLogDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ActionLogDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ActionLogDataGridView.Location = new System.Drawing.Point(3, 74);
             this.ActionLogDataGridView.Name = "ActionLogDataGridView";
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.ActionLogDataGridView.RowTemplate.Height = 60;
             this.ActionLogDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ActionLogDataGridView.Size = new System.Drawing.Size(1431, 427);
@@ -5943,6 +5966,9 @@
             // 
             // TabControl2
             // 
+            this.TabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl2.Controls.Add(this.Timeline);
             this.TabControl2.Controls.Add(this.Liability);
             this.TabControl2.Controls.Add(this.EmploymentEconomicLoss);
@@ -6171,8 +6197,8 @@
             // UndertakingsDataGridView
             // 
             this.UndertakingsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.UndertakingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(15, 19);
             this.UndertakingsDataGridView.Name = "UndertakingsDataGridView";
@@ -7310,8 +7336,8 @@
             // ABDenialsDataGridView
             // 
             this.ABDenialsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.ABDenialsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ABDenialsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameofBenefit,
@@ -8153,6 +8179,7 @@
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel18.Controls.Add(label112, 2, 2);
             this.tableLayoutPanel18.Controls.Add(label111, 0, 2);
             this.tableLayoutPanel18.Controls.Add(this.ClientNameTextBox, 1, 0);
             this.tableLayoutPanel18.Controls.Add(this.Label2, 0, 0);
@@ -8174,13 +8201,14 @@
             this.tableLayoutPanel18.Controls.Add(this.FileCloseDateTextBox, 5, 1);
             this.tableLayoutPanel18.Controls.Add(CBoxMatterTypeLabel, 0, 1);
             this.tableLayoutPanel18.Controls.Add(this.MatterTypeTextBox, 1, 1);
-            this.tableLayoutPanel18.Controls.Add(this.LimDateTextBox, 3, 2);
             this.tableLayoutPanel18.Controls.Add(this.DateOfLossTextBox, 3, 1);
-            this.tableLayoutPanel18.Controls.Add(TBoxLimDateLabel, 2, 2);
             this.tableLayoutPanel18.Controls.Add(this.DateOfLossLabel, 2, 1);
             this.tableLayoutPanel18.Controls.Add(this.FileNumberTextBox, 3, 0);
             this.tableLayoutPanel18.Controls.Add(this.Label1, 2, 0);
             this.tableLayoutPanel18.Controls.Add(this.MatterSubTypeTextBox, 1, 2);
+            this.tableLayoutPanel18.Controls.Add(this.LimDateTextBox, 5, 2);
+            this.tableLayoutPanel18.Controls.Add(TBoxLimDateLabel, 4, 2);
+            this.tableLayoutPanel18.Controls.Add(this.SubTypeCategoryComboBox, 3, 2);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
@@ -8191,15 +8219,6 @@
             this.tableLayoutPanel18.Size = new System.Drawing.Size(1431, 166);
             this.tableLayoutPanel18.TabIndex = 144;
             // 
-            // FileNumberTextBox
-            // 
-            this.FileNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FileNumberTextBox.Enabled = false;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(401, 3);
-            this.FileNumberTextBox.Name = "FileNumberTextBox";
-            this.FileNumberTextBox.Size = new System.Drawing.Size(152, 23);
-            this.FileNumberTextBox.TabIndex = 145;
-            // 
             // ClientNameTextBox
             // 
             this.ClientNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -8209,6 +8228,43 @@
             this.ClientNameTextBox.Size = new System.Drawing.Size(152, 23);
             this.ClientNameTextBox.TabIndex = 144;
             this.ClientNameTextBox.TextChanged += new System.EventHandler(this.ClientName_TextChanged);
+            // 
+            // MatterTypeTextBox
+            // 
+            this.MatterTypeTextBox.Enabled = false;
+            this.MatterTypeTextBox.Location = new System.Drawing.Point(123, 59);
+            this.MatterTypeTextBox.Name = "MatterTypeTextBox";
+            this.MatterTypeTextBox.Size = new System.Drawing.Size(152, 23);
+            this.MatterTypeTextBox.TabIndex = 47;
+            // 
+            // FileNumberTextBox
+            // 
+            this.FileNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileNumberTextBox.Enabled = false;
+            this.FileNumberTextBox.Location = new System.Drawing.Point(401, 3);
+            this.FileNumberTextBox.Name = "FileNumberTextBox";
+            this.FileNumberTextBox.Size = new System.Drawing.Size(152, 23);
+            this.FileNumberTextBox.TabIndex = 145;
+            // 
+            // MatterSubTypeTextBox
+            // 
+            this.MatterSubTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatterSubTypeTextBox.Enabled = false;
+            this.MatterSubTypeTextBox.Location = new System.Drawing.Point(123, 113);
+            this.MatterSubTypeTextBox.Name = "MatterSubTypeTextBox";
+            this.MatterSubTypeTextBox.Size = new System.Drawing.Size(152, 23);
+            this.MatterSubTypeTextBox.TabIndex = 147;
+            // 
+            // SubTypeCategoryComboBox
+            // 
+            this.SubTypeCategoryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SubTypeCategoryComboBox.FormattingEnabled = true;
+            this.SubTypeCategoryComboBox.Location = new System.Drawing.Point(401, 113);
+            this.SubTypeCategoryComboBox.MatterType = null;
+            this.SubTypeCategoryComboBox.Name = "SubTypeCategoryComboBox";
+            this.SubTypeCategoryComboBox.Size = new System.Drawing.Size(152, 25);
+            this.SubTypeCategoryComboBox.TabIndex = 148;
+            this.SubTypeCategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.SubTypeCategoryComboBox_SelectedIndexChanged);
             // 
             // FindFileButton
             // 
@@ -8233,34 +8289,6 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 142;
             this.PictureBox1.TabStop = false;
-            // 
-            // label111
-            // 
-            label111.AutoSize = true;
-            label111.Dock = System.Windows.Forms.DockStyle.Fill;
-            label111.Location = new System.Drawing.Point(3, 110);
-            label111.Name = "label111";
-            label111.Size = new System.Drawing.Size(114, 56);
-            label111.TabIndex = 146;
-            label111.Text = "Matter Sub-Type";
-            label111.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // MatterTypeTextBox
-            // 
-            this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(123, 59);
-            this.MatterTypeTextBox.Name = "MatterTypeTextBox";
-            this.MatterTypeTextBox.Size = new System.Drawing.Size(152, 23);
-            this.MatterTypeTextBox.TabIndex = 47;
-            // 
-            // MatterSubTypeTextBox
-            // 
-            this.MatterSubTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatterSubTypeTextBox.Enabled = false;
-            this.MatterSubTypeTextBox.Location = new System.Drawing.Point(123, 113);
-            this.MatterSubTypeTextBox.Name = "MatterSubTypeTextBox";
-            this.MatterSubTypeTextBox.Size = new System.Drawing.Size(152, 23);
-            this.MatterSubTypeTextBox.TabIndex = 147;
             // 
             // FileManager
             // 
@@ -9019,6 +9047,7 @@
         private System.Windows.Forms.TabPage ABBinderTab;
         internal System.Windows.Forms.TextBox MatterTypeTextBox;
         internal System.Windows.Forms.TextBox MatterSubTypeTextBox;
+        private Controls.SharedControls.CustomControls.ComissionSubTypeComboBox SubTypeCategoryComboBox;
     }
 }
 

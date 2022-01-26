@@ -19,6 +19,7 @@ namespace RRFFilesManager.Abstractions
         public virtual Lawyer FileLawyer { get; set; }
         public virtual Lawyer ResponsibleLawyer { get; set; }
         public virtual MatterSubType MatterSubType { get; set; }
+        public virtual ComissionSubType SubTypeCategory { get; set; }
         public string LimitationPeriod { get; set; }
         public string StatutoryNotice { get; set; }
         public string AdditionalNotes { get; set; }
@@ -29,6 +30,7 @@ namespace RRFFilesManager.Abstractions
         public virtual ICollection<Archive> Archives { get; set; }
         public virtual ICollection<FileContact> Peoples { get; set; }
         public virtual ICollection<OutOfPocketHealthCareExp> Prescriptions { get; set; }
+        public virtual ICollection<FileReview> Reviews { get; set; }
 
         public override string ToString() => $"{FileNumber} - {Client?.FirstName} {Client?.LastName}";
     }

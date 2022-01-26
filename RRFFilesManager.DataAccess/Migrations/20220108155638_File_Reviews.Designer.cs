@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220108155638_File_Reviews")]
+    partial class File_Reviews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -665,9 +667,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("StatutoryNotice")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SubTypeCategoryID")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
                     b.HasIndex("ClientID");
@@ -683,8 +682,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasIndex("ResponsibleLawyerID");
 
                     b.HasIndex("StaffInterviewerID");
-
-                    b.HasIndex("SubTypeCategoryID");
 
                     b.ToTable("Files");
                 });
@@ -730,9 +727,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<byte>("FRActionABenefitsStatus")
-                        .HasColumnType("tinyint");
 
                     b.Property<string>("FRCausationIssues")
                         .HasColumnType("nvarchar(max)");
@@ -1505,10 +1499,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.Lawyer", "StaffInterviewer")
                         .WithMany()
                         .HasForeignKey("StaffInterviewerID");
-
-                    b.HasOne("RRFFilesManager.Abstractions.ComissionSubType", "SubTypeCategory")
-                        .WithMany()
-                        .HasForeignKey("SubTypeCategoryID");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.FileContact", b =>
@@ -1535,7 +1525,7 @@ namespace RRFFilesManager.DataAccess.Migrations
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.FileReview", b =>
                 {
-                    b.HasOne("RRFFilesManager.Abstractions.File", "File")
+                    b.HasOne("RRFFilesManager.Abstractions.File", null)
                         .WithMany("Reviews")
                         .HasForeignKey("FileID");
                 });

@@ -378,6 +378,12 @@
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileControls\Models\Prescription.cs" />
+    <Compile Include="Controls\FileControls\UserControls\FileReviewTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\UserControls\FileReviewTabControl.Designer.cs">
+      <DependentUpon>FileReviewTabControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FileControls\UserControls\FindFileAndArchivePanelUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -480,6 +486,12 @@
     </Compile>
     <Compile Include="Controls\FileControls\UserControls\PrescriptionSummariesControl.Designer.cs">
       <DependentUpon>PrescriptionSummariesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FileControls\UserControls\SemiAnnualFileReviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\UserControls\SemiAnnualFileReviewControl.Designer.cs">
+      <DependentUpon>SemiAnnualFileReviewControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\InputBox.cs">
       <SubType>Form</SubType>
@@ -740,6 +752,9 @@
     <EmbeddedResource Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.resx">
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\UserControls\FileReviewTabControl.resx">
+      <DependentUpon>FileReviewTabControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\UserControls\FindFileAndArchivePanelUserControl.resx">
       <DependentUpon>FindFileAndArchivePanelUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -787,6 +802,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\UserControls\PrescriptionSummariesControl.resx">
       <DependentUpon>PrescriptionSummariesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\UserControls\SemiAnnualFileReviewControl.resx">
+      <DependentUpon>SemiAnnualFileReviewControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
@@ -969,9 +987,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.10\build\net461\Microsoft.EntityFrameworkCore.Design.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.EntityFrameworkCore.Design.3.1.10\build\net461\Microsoft.EntityFrameworkCore.Design.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.705.50\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.705.50\build\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
-  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Import Project="..\packages\Microsoft.Web.WebView2.1.0.705.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.705.50\build\Microsoft.Web.WebView2.targets')" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
 </Project>
