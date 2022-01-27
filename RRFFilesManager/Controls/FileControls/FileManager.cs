@@ -19,6 +19,7 @@ namespace RRFFilesManager
     public partial class FileManager : Form
     {
         public File File { get; set; }
+        public bool SettingFile = false;
         public readonly PeopleControl PeopleControl;
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
         public readonly PrescriptionSummariesControl PrescriptionSummariesControl;
@@ -46,9 +47,11 @@ namespace RRFFilesManager
 
             SemiAnnualFileReviewControlAction = new SemiAnnualFileReviewControl(0);
             Utils.Utils.SetContent(SemiAnnualFileReviewTabAction, SemiAnnualFileReviewControlAction);
+            SemiAnnualFileReviewControlAction.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
 
             SemiAnnualFileReviewControlAccidentBenefits = new SemiAnnualFileReviewControl(1);
             Utils.Utils.SetContent(SemiAnnualFileReviewTabAccidentBenefits, SemiAnnualFileReviewControlAccidentBenefits);
+            SemiAnnualFileReviewControlAccidentBenefits.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -59,6 +62,7 @@ namespace RRFFilesManager
 
         private void FindFileButton_Click(object sender, EventArgs e)
         {
+            SettingFile = true;
             FindFile.Instance.Show();
             FindFile.Instance.FormClosing += new FormClosingEventHandler(FindFile_FormClosing);
         }
@@ -96,7 +100,6 @@ namespace RRFFilesManager
             }
             NextTextBox.Text = nextReview.ToString("MMM-dd-yyyy");
             NextReviewDateTextBox.Text = nextReview.ToString("MMM-dd-yyyy");*/
-            SetProjections();
 
             if(file.MatterType.Description == "Disability")
             {
@@ -124,9 +127,18 @@ namespace RRFFilesManager
                 ProjectedABSettlementValueLabel.Show();
                 ProjectedABSettlementValueTextBox.Show();
             }
+            SubTypeCategoryComboBox.Enabled = true;
             SubTypeCategoryComboBox.MatterType = File.MatterType;
+            SubTypeCategoryComboBox.SelectedIndex = -1;
+            SettingFile = false;
             if (File.SubTypeCategory != null)
+            {
                 SubTypeCategoryComboBox.SelectedItem = File.SubTypeCategory;
+                SetSemiAnnualFileReviewTab(File);
+                SetProjections();
+            }
+
+
             
         }
 
@@ -168,24 +180,23 @@ namespace RRFFilesManager
         {
             /*
             */
-            if (file.SubTypeCategory.Description.Contains("AB") && !file.SubTypeCategory.Description.Contains("TORT"))
+            if (TabControl2.TabPages.Contains(SemiAnnualFileReviewTabAction))
             {
-                if (TabControl2.TabPages.Contains(SemiAnnualFileReviewTabAction))
-                {
-                    TabControl2.TabPages.Remove(SemiAnnualFileReviewTabAction);
-                }
+                TabControl2.TabPages.Remove(SemiAnnualFileReviewTabAction);
+            }
+            if (TabControl5.TabPages.Contains(SemiAnnualFileReviewTabAccidentBenefits))
+            {
+                TabControl5.TabPages.Remove(SemiAnnualFileReviewTabAccidentBenefits);
+            }
+
+            if (file.MatterType.Description == "Motor Vehicle Accident" && file.SubTypeCategory.Description.ToUpper().Contains("AB") && !file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
+            {
                 SemiAnnualFileReviewControlAccidentBenefits.File = file;
-                SemiAnnualFileReviewControlAccidentBenefits.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
                 TabControl5.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
             }
-            else if (!file.SubTypeCategory.Description.Contains("AB") && file.SubTypeCategory.Description.Contains("TORT"))
+            else if (file.MatterType.Description == "Motor Vehicle Accident" && !file.SubTypeCategory.Description.ToUpper().Contains("AB") && file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
             {
-                if (TabControl5.TabPages.Contains(SemiAnnualFileReviewTabAccidentBenefits))
-                {
-                    TabControl5.TabPages.Remove(SemiAnnualFileReviewTabAccidentBenefits);
-                }
                 SemiAnnualFileReviewControlAction.File = file;
-                SemiAnnualFileReviewControlAction.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
                 TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
             }
             else
@@ -199,9 +210,12 @@ namespace RRFFilesManager
 
         private void SubTypeCategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            File.SubTypeCategory = (ComissionSubType)SubTypeCategoryComboBox.SelectedItem;
-            _fileRepository.Update(File);
-            SetSemiAnnualFileReviewTab(File);
+            if (!SettingFile && (File.SubTypeCategory != (ComissionSubType)SubTypeCategoryComboBox.SelectedItem))
+            {
+                File.SubTypeCategory = (ComissionSubType)SubTypeCategoryComboBox.SelectedItem;
+                _fileRepository.Update(File);
+                SetSemiAnnualFileReviewTab(File);
+            }
         }
 
         private void SetProjections()

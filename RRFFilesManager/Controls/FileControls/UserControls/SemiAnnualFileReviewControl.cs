@@ -33,6 +33,10 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
 
         public void InitTabs()
         {
+            foreach (TabPage oldpage in TabControlFR.TabPages)
+            {
+                TabControlFR.TabPages.Remove(oldpage);
+            }
             DateTime initiald = File.DateOfCall;
             /*foreach (TabPage tab in TabControlFR.TabPages)
             {
