@@ -30,6 +30,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private readonly IDocumentCategoryRepository _documentCategoryRepository;
         private readonly IDocumentTypeRepository _documentTypeRepository;
         private readonly ArchiveManager _archiveManager;
+        private readonly IArchiveRepository _archiveRepository;
         private readonly IUploadArchivesSettingsRepository _uploadArchivesSettingsRepository;
         private UploadArchivesSettings UploadArchivesSettings { get; set; }
 
@@ -57,6 +58,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             _documentCategoryRepository = Program.GetService<IDocumentCategoryRepository>();
             _documentTypeRepository = Program.GetService<IDocumentTypeRepository>();
             _archiveManager = new ArchiveManager();
+            _archiveRepository = Program.GetService<IArchiveRepository>();
             _uploadArchivesSettingsRepository = Program.GetService<IUploadArchivesSettingsRepository>();
             InitializeComponent();
 
@@ -252,6 +254,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             Archives.Add(new Models.Archive(archive));
             MoveArchiveToOutputFolder(archive);
             UploadedFiles.Remove(selected);
+            DocumentForm.FillAdditionalArchiveInfo(_archiveRepository.GetById(archive.ID));
         }
 
         private void MoveArchiveToOutputFolder(Archive archive)

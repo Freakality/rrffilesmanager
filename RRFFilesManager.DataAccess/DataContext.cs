@@ -37,6 +37,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<MedicalSummary> MedicalSummaries { get; set; }
         public DbSet<ComissionSubType> ComissionSubTypes { get; set; }
         public DbSet<FileReview> FileReviews { get; set; }
+        public DbSet<StandardBenefitRow> StandardBenefitRows { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

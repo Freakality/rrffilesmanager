@@ -20,11 +20,14 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         public override void FillArchiveInfo(Archive archive)
         {
-            archive.MRACPaidToDate = MRACPaidToDate.Text;
-            archive.ACPaidToDate = ACPaidToDate.Text;
-            archive.MRPaidToDate = MRPaidToDate.Text;
-            archive.HHPaidToDate = HHPaidToDate.Text;
-            archive.IEAssessPdToDate = IEAssessPdToDate.Text;
+            archive.MRACPaidToDate = MRACPaidToDate.DollarValue.ToString();
+            archive.ACPaidToDate = ACPaidToDate.DollarValue.ToString();
+            archive.MRPaidToDate = MRPaidToDate.DollarValue.ToString();
+            archive.HHPaidToDate = HHPaidToDate.DollarValue.ToString();
+            archive.IEAssessPdToDate = IEAssessPdToDate.DollarValue.ToString();
+            archive.IRBPaidToDate = IRBPaidToDate.DollarValue.ToString();
+            archive.NonEarnerPdToDate = NonEarnerPdToDate.DollarValue.ToString();
+            archive.CGPaidToDate = CGPaidToDate.DollarValue.ToString();
         }
         public override void ClearForm()
         {
@@ -33,6 +36,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             MRPaidToDate.ResetText();
             IEAssessPdToDate.ResetText();
             HHPaidToDate.ResetText();
+            IRBPaidToDate.ResetText();
+            NonEarnerPdToDate.ResetText();
+            CGPaidToDate.ResetText();
         }
         public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {

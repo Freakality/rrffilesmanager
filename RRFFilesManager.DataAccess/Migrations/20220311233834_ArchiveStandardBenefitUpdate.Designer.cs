@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220311233834_ArchiveStandardBenefitUpdate")]
+    partial class ArchiveStandardBenefitUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,6 +29,9 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ACPaidToDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ACRemaining")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AdditionalInfo")
@@ -80,13 +85,16 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<string>("IRBPaidToDate")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("InsuranceCompany")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("MRACPaidToDate")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MRACRemaining")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("MRPaidToDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MRRemaining")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -1337,41 +1345,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.ToTable("Provinces");
                 });
 
-            modelBuilder.Entity("RRFFilesManager.Abstractions.StandardBenefitRow", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ArchiveId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DatePaid")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("IEAmount")
-                        .HasColumnType("float");
-
-                    b.Property<string>("MRGSAProvided")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Payee")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RowNumber")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("ArchiveId");
-
-                    b.ToTable("StandardBenefitRows");
-                });
-
             modelBuilder.Entity("RRFFilesManager.Abstractions.Template", b =>
                 {
                     b.Property<int>("ID")
@@ -1654,15 +1627,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.Group", "Group")
                         .WithMany()
                         .HasForeignKey("GroupID");
-                });
-
-            modelBuilder.Entity("RRFFilesManager.Abstractions.StandardBenefitRow", b =>
-                {
-                    b.HasOne("RRFFilesManager.Abstractions.Archive", "Archive")
-                        .WithMany("StandardBenefitRows")
-                        .HasForeignKey("ArchiveId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.Template", b =>

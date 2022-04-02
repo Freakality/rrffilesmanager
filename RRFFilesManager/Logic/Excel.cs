@@ -33,7 +33,11 @@ namespace RRFFilesManager.Logic
             worksheet.Cells.Replace(findText, replaceWith.ToString());
         }
 
-        public static void FillWorkSheet(Worksheet worksheet, Abstractions.File file)
+        public static void FillWorkSheet(Worksheet worksheet, Abstractions.Archive archive)
+        {
+
+        }
+        public static void FillWorkSheet(Worksheet worksheet, Abstractions.File file, IEnumerable<Abstractions.Archive> archives = null)
         {
             ReplaceAll(worksheet, "$$$FileNumber$$$", file.FileNumber);
             ReplaceAll(worksheet, "$$$DateOfCall$$$", file.DateOfCall);
@@ -164,6 +168,74 @@ namespace RRFFilesManager.Logic
             ReplaceAll(worksheet, "$$$ABNotes$$$", file.Intake.AccBenNotes);
 
             ReplaceAll(worksheet, "$$$OtherNotes$$$", file.Intake.Notes);
+
+            if (archives != null)
+            {
+                if (archives.First().StandardBenefitRows.Count > 0)
+                {
+                    var archive = archives.First();
+                    ReplaceAll(worksheet, $"$$$PolicyClaimLimit$$$", archive.PolicyClaimLimit);
+                    ReplaceAll(worksheet, $"$$$InsuranceCompany$$$", archive.InsuranceCompany);
+                    String _payee, _mrgsaprovided, _datepaid, _statementperiodends, _amount, _ieamount;
+                    var rows = archive.StandardBenefitRows.ToList();
+                    for (int i = 0; i <= 37; i++)
+                    {
+                        _payee = _mrgsaprovided = _datepaid = _statementperiodends = _amount = _ieamount = "";
+                        if (i <= rows.Count - 1)
+                        {
+                            _payee = rows[i].Payee;
+                            if (_payee.Length > 255)
+                            {
+                                _payee = _payee.Substring(0, 255);
+                            }
+                            _mrgsaprovided = rows[i].MRGSAProvided;
+                            if (_mrgsaprovided.Length > 255)
+                            {
+                                _mrgsaprovided = _mrgsaprovided.Substring(0, 255);
+                            }
+                            _datepaid = rows[i].DatePaid.ToShortDateString();
+                            _statementperiodends = archive.StatementPeriodTo.ToShortDateString();
+                            _amount = rows[i].Amount.ToString();
+                            _ieamount = rows[i].IEAmount.ToString();
+                        }
+                        ReplaceAll(worksheet, $"$$$Payee$$${i.ToString("D2")}", _payee);
+                        ReplaceAll(worksheet, $"$$$MRGSAProvided$$${i.ToString("D2")}", _mrgsaprovided);
+                        ReplaceAll(worksheet, $"$$$DatePaid$$${i.ToString("D2")}", _datepaid);
+                        ReplaceAll(worksheet, $"$$$StatementPeriodEnds$$${i.ToString("D2")}", _statementperiodends);
+                        ReplaceAll(worksheet, $"$$$Amount$$${i.ToString("D2")}", _amount);
+                        ReplaceAll(worksheet, $"$$$IEAmount$$${i.ToString("D2")}", _ieamount);
+
+                    }
+                }
+                else
+                {
+                    var archiveList = archives.ToList();
+                    object[,] arr = new object[(archiveList.Count*2)-1, 9];
+
+                    for (int i = 0, x = 0; i < (archiveList.Count*2)-1; i=i+2, x++)
+                    {
+                        var archive = archiveList[x];
+                        arr[i, 0] = archive.DocumentDate.ToShortDateString();
+                        arr[i, 1] = archive.MRACPaidToDate.ToString();
+                        arr[i, 2] = archive.ACPaidToDate.ToString();
+                        arr[i, 3] = archive.MRPaidToDate.ToString();
+                        arr[i, 4] = archive.HHPaidToDate.ToString();
+                        arr[i, 5] = archive.IRBPaidToDate.ToString();
+                        arr[i, 6] = archive.NonEarnerPdToDate.ToString();
+                        arr[i, 7] = archive.CGPaidToDate.ToString();
+                        arr[i, 8] = archive.IEAssessPdToDate.ToString();
+                        if (i+1 < (archiveList.Count*2)-1)
+                            for (int j = 0; j <= 8; j++)
+                            {
+                                arr[i + 1, j] = "";
+                            }
+                    }
+                    Range c1 = (Range)worksheet.Cells[4, 1];
+                    Range c2 = (Range)worksheet.Cells[(archiveList.Count*2) + 2, 9];
+                    Range range = worksheet.get_Range(c1, c2);
+                    range.Value = arr;
+                }
+            }
         }
     }
 }

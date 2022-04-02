@@ -251,12 +251,16 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             // 
             this.SettlementAmountTB.CurrencySymbol = "$";
             this.SettlementAmountTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SettlementAmountTB.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.SettlementAmountTB.Location = new System.Drawing.Point(157, 124);
             this.SettlementAmountTB.Margin = new System.Windows.Forms.Padding(7);
             this.SettlementAmountTB.Name = "SettlementAmountTB";
             this.SettlementAmountTB.Size = new System.Drawing.Size(443, 20);
             this.SettlementAmountTB.TabIndex = 155;
-            this.SettlementAmountTB.Text = "$ ";
             this.SettlementAmountTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
@@ -294,7 +298,9 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.ContingencyFeeCB.FormattingEnabled = true;
             this.ContingencyFeeCB.Items.AddRange(new object[] {
             "15.0%",
-            "20.0%"});
+            "20.0%",
+            "25.0%",
+            "30.0%"});
             this.ContingencyFeeCB.Location = new System.Drawing.Point(361, 7);
             this.ContingencyFeeCB.Margin = new System.Windows.Forms.Padding(7);
             this.ContingencyFeeCB.Name = "ContingencyFeeCB";

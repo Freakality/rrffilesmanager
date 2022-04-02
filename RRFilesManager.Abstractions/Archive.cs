@@ -25,16 +25,21 @@ namespace RRFFilesManager.Abstractions
         public DateTime DateRangeTo { get; set; }
 
         public string PolicyClaimLimit { get; set; }
+        public string InsuranceCompany { get; set; }
         public DateTime StatementPeriodFrom { get; set; }
         public DateTime StatementPeriodTo { get; set; }
         public string MRACPaidToDate { get; set; }
-        public string MRACRemaining { get; set; }
+        //public string MRACRemaining { get; set; }
         public string ACPaidToDate { get; set; }
-        public string ACRemaining { get; set; }
+        //public string ACRemaining { get; set; }
         public string MRPaidToDate { get; set; }
-        public string MRRemaining { get; set; }
+        //public string MRRemaining { get; set; }
         public string HHPaidToDate { get; set; }
         public string IEAssessPdToDate { get; set; }
+        public string IRBPaidToDate { get; set; }
+        public string NonEarnerPdToDate { get; set; }
+        public string CGPaidToDate { get; set; }
+
 
         public string Sender { get; set; }
         public string Recipient { get; set; }
@@ -57,6 +62,8 @@ namespace RRFFilesManager.Abstractions
         public string NameOfOrganization { get; set; }
 
         public string DocumentName { get; set; }
+
+        public virtual ICollection<StandardBenefitRow> StandardBenefitRows { get; set; }
 
         public override string ToString() => $"{Name}";
     }

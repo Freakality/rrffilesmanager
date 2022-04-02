@@ -122,6 +122,7 @@ namespace RRFFilesManager.Controls.FileControls
                     try
                     {
                         wordApp.Visible = false;
+                        wordApp.ActiveWindow.View.ReadingLayout = false;
                         Word.FillDocumentABBReport(document, File, ArchivesBinderToExport.Select(s => s.GetArchive()));
                         if (extension == ".doc")
                             document.SaveAs(filePath);
@@ -130,9 +131,9 @@ namespace RRFFilesManager.Controls.FileControls
                             document.SaveAs2(FileName: filePath, FileFormat: WdSaveFormat.wdFormatPDF);
                         }
                     }
-                    catch
+                    catch (Exception ex)
                     {
-
+                        MessageBox.Show(ex.ToString());
                     }
                     finally
                     {
@@ -165,6 +166,8 @@ namespace RRFFilesManager.Controls.FileControls
 
         public void OnChange()
         {
+            if (File == null)
+                return;
             DataGridView.DataSource = new SortableBindingList<ArchiveBinder>(ArchivesBinderFiltered);
         }
     }

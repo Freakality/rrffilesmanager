@@ -75,6 +75,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
         }
 
+        public virtual void FillAdditionalArchiveInfo(Archive archive)
+        {
+
+        }
+
         private void InitializeComponent()
         {
             this.SuspendLayout();

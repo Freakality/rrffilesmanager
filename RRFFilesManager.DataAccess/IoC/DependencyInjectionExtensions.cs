@@ -45,6 +45,7 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IMedicalSummaryRepository, MedicalSummaryRepository>();
             services.AddTransient<IGenericRepository<ComissionSubType>, ComissionSubTypeRepository>();
             services.AddTransient<IFileReviewRepository, FileReviewRepository>();
+            services.AddTransient<IStandardBenefitRowRepository, StandardBenefitRowRepository>();
             return services;
         }
     }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220330160019_StandardBenefitChanges")]
+    partial class StandardBenefitChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,9 +80,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IRBPaidToDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("InsuranceCompany")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MRACPaidToDate")
@@ -1364,6 +1363,9 @@ namespace RRFFilesManager.DataAccess.Migrations
 
                     b.Property<int>("RowNumber")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("StatementPeriodEnds")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 

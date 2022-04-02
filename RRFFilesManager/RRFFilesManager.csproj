@@ -493,6 +493,12 @@
     <Compile Include="Controls\FileControls\UserControls\SemiAnnualFileReviewControl.Designer.cs">
       <DependentUpon>SemiAnnualFileReviewControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileControls\UserControls\StandardBenefitStatementsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\UserControls\StandardBenefitStatementsControl.Designer.cs">
+      <DependentUpon>StandardBenefitStatementsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -806,6 +812,9 @@
     <EmbeddedResource Include="Controls\FileControls\UserControls\SemiAnnualFileReviewControl.resx">
       <DependentUpon>SemiAnnualFileReviewControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\UserControls\StandardBenefitStatementsControl.resx">
+      <DependentUpon>StandardBenefitStatementsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -894,6 +903,8 @@
     <None Include="DocumentTemplate\Prescription Summaries.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="DocumentTemplate\QuickABPaidToDate.xlsm" />
+    <None Include="DocumentTemplate\StandardBenefitStatements.xlsm" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

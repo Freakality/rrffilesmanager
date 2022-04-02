@@ -24,7 +24,8 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             {
                 if (SettlementDateTB.Text == "TO BE DETERMINED") {
                     var days = ((((ProjectedSettlementAmount - ProjectedDisbursementsAmount) * ContigencyFee) - (DeductibleAmount * (ProjectedProfit + 1))) / 1000) * 30;
-                    return FileOpenDateDTP.Value.AddDays(ProjectedSettlementDays - days);
+                    //var result 
+                    return FileOpenDateDTP.Value.AddDays(ProjectedSettlementDays + days);
                 }
                 return FileOpenDateDTP.Value.AddDays(ProjectedSettlementDays);
             }
@@ -40,7 +41,7 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             {
                 if (SettlementAmountTB.Text.Contains("TO BE DETERMINED"))
                     return (DeductibleAmount * (ProjectedProfit + 1) / ContigencyFee) + ProjectedDisbursementsAmount;
-                return double.TryParse(SettlementAmountTB.Text.Replace("$ ", ""), out double value) ? value : 0;
+                return double.TryParse(SettlementAmountTB.DollarValue.ToString(), out double value) ? value : 0;
             }
         }
         public double ProjectedDisbursementsAmount => matterTypeComboBox1.MatterType.ProjectedDisbursementsAmount

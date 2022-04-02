@@ -30,59 +30,54 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void InitializeComponent()
         {
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.HHPaidToDate = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MRRemaining = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.MRPaidToDate = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ACRemaining = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ACPaidToDate = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.MRACRemaining = new System.Windows.Forms.TextBox();
-            this.MRACPaidToDate = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.PolicyClaimLimit = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.StatementPeriodTo = new System.Windows.Forms.DateTimePicker();
             this.StatementPeriodFrom = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.PolicyClaimLimit = new System.Windows.Forms.TextBox();
-            this.IEAssessPdToDate = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.InsuranceCompany = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PayeeTB = new System.Windows.Forms.TextBox();
+            this.DatePaidDTP = new System.Windows.Forms.DateTimePicker();
+            this.MRACGSAProvidedTB = new System.Windows.Forms.TextBox();
+            this.AmountTB = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.IEAmountTB = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel8.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel8
             // 
-            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnCount = 6;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.HHPaidToDate, 1, 4);
-            this.tableLayoutPanel8.Controls.Add(this.label1, 0, 4);
-            this.tableLayoutPanel8.Controls.Add(this.MRRemaining, 3, 3);
-            this.tableLayoutPanel8.Controls.Add(this.label13, 2, 3);
-            this.tableLayoutPanel8.Controls.Add(this.MRPaidToDate, 1, 3);
-            this.tableLayoutPanel8.Controls.Add(this.label12, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.ACRemaining, 3, 2);
-            this.tableLayoutPanel8.Controls.Add(this.label11, 2, 2);
-            this.tableLayoutPanel8.Controls.Add(this.ACPaidToDate, 1, 2);
-            this.tableLayoutPanel8.Controls.Add(this.label10, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.MRACRemaining, 3, 1);
-            this.tableLayoutPanel8.Controls.Add(this.MRACPaidToDate, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label6, 2, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.PolicyClaimLimit, 1, 0);
-            this.tableLayoutPanel8.Controls.Add(this.IEAssessPdToDate, 3, 4);
-            this.tableLayoutPanel8.Controls.Add(this.label14, 2, 4);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 5, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label8, 4, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.InsuranceCompany, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.panel2, 0, 3);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -90,130 +85,138 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel8.RowCount = 5;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.30769F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.92308F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(868, 130);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(856, 130);
             this.tableLayoutPanel8.TabIndex = 3;
             this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
             // 
-            // HHPaidToDate
+            // label9
             // 
-            this.HHPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HHPaidToDate.Location = new System.Drawing.Point(153, 107);
-            this.HHPaidToDate.Name = "HHPaidToDate";
-            this.HHPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.HHPaidToDate.TabIndex = 26;
-            this.HHPaidToDate.TextChanged += new System.EventHandler(this.HHPaidToDate_TextChanged);
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 26);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Policy/Claim Limit";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.tableLayoutPanel8.SetColumnSpan(this.panel1, 6);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 29);
+            this.panel1.Name = "panel1";
+            this.tableLayoutPanel8.SetRowSpan(this.panel1, 2);
+            this.panel1.Size = new System.Drawing.Size(850, 36);
+            this.panel1.TabIndex = 11;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.61871F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.47482F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.53957F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.82734F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.53957F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 4, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(850, 36);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(453, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Date Paid";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(229, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 32);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "M/R A/C Good, Service or Assessment Provided";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 104);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(81, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 26);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "HH Paid To Date";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Payee";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // MRRemaining
+            // label5
             // 
-            this.MRRemaining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MRRemaining.Location = new System.Drawing.Point(587, 81);
-            this.MRRemaining.Name = "MRRemaining";
-            this.MRRemaining.Size = new System.Drawing.Size(278, 20);
-            this.MRRemaining.TabIndex = 20;
-            this.MRRemaining.TextChanged += new System.EventHandler(this.MRRemaining_TextChanged);
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(588, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Amount";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label13
+            // label6
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(437, 78);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(144, 26);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "M/R Remaining";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(706, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "IE Amount";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // MRPaidToDate
+            // PolicyClaimLimit
             // 
-            this.MRPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MRPaidToDate.Location = new System.Drawing.Point(153, 81);
-            this.MRPaidToDate.Name = "MRPaidToDate";
-            this.MRPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.MRPaidToDate.TabIndex = 18;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 78);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(144, 26);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "M/R Paid To Date";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // ACRemaining
-            // 
-            this.ACRemaining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ACRemaining.Location = new System.Drawing.Point(587, 55);
-            this.ACRemaining.Name = "ACRemaining";
-            this.ACRemaining.Size = new System.Drawing.Size(278, 20);
-            this.ACRemaining.TabIndex = 16;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(437, 52);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(144, 26);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "AC Remaining";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // ACPaidToDate
-            // 
-            this.ACPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ACPaidToDate.Location = new System.Drawing.Point(153, 55);
-            this.ACPaidToDate.Name = "ACPaidToDate";
-            this.ACPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.ACPaidToDate.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 52);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 26);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "AC Paid To Date";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // MRACRemaining
-            // 
-            this.MRACRemaining.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MRACRemaining.Location = new System.Drawing.Point(587, 29);
-            this.MRACRemaining.Name = "MRACRemaining";
-            this.MRACRemaining.Size = new System.Drawing.Size(278, 20);
-            this.MRACRemaining.TabIndex = 12;
-            // 
-            // MRACPaidToDate
-            // 
-            this.MRACPaidToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MRACPaidToDate.Location = new System.Drawing.Point(153, 29);
-            this.MRACPaidToDate.Name = "MRACPaidToDate";
-            this.MRACPaidToDate.Size = new System.Drawing.Size(278, 20);
-            this.MRACPaidToDate.TabIndex = 11;
+            this.PolicyClaimLimit.CurrencySymbol = "$";
+            this.PolicyClaimLimit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PolicyClaimLimit.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PolicyClaimLimit.Location = new System.Drawing.Point(103, 3);
+            this.PolicyClaimLimit.Name = "PolicyClaimLimit";
+            this.PolicyClaimLimit.Size = new System.Drawing.Size(108, 20);
+            this.PolicyClaimLimit.TabIndex = 12;
+            this.PolicyClaimLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tableLayoutPanel9
             // 
@@ -223,120 +226,194 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel9.Controls.Add(this.StatementPeriodTo, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.StatementPeriodFrom, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(584, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(628, 0);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(284, 26);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(228, 26);
             this.tableLayoutPanel9.TabIndex = 10;
             // 
             // StatementPeriodTo
             // 
-            this.StatementPeriodTo.CustomFormat = "yyyy-MM-dd";
+            this.StatementPeriodTo.CustomFormat = "MM/dd/yyyy";
             this.StatementPeriodTo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StatementPeriodTo.Location = new System.Drawing.Point(145, 3);
+            this.StatementPeriodTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.StatementPeriodTo.Location = new System.Drawing.Point(117, 3);
             this.StatementPeriodTo.Name = "StatementPeriodTo";
-            this.StatementPeriodTo.Size = new System.Drawing.Size(136, 20);
+            this.StatementPeriodTo.Size = new System.Drawing.Size(108, 20);
             this.StatementPeriodTo.TabIndex = 6;
             // 
             // StatementPeriodFrom
             // 
-            this.StatementPeriodFrom.CustomFormat = "yyyy-MM-dd";
+            this.StatementPeriodFrom.CustomFormat = "MM/dd/yyyy";
             this.StatementPeriodFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatementPeriodFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.StatementPeriodFrom.Location = new System.Drawing.Point(3, 3);
             this.StatementPeriodFrom.Name = "StatementPeriodFrom";
-            this.StatementPeriodFrom.Size = new System.Drawing.Size(136, 20);
+            this.StatementPeriodFrom.Size = new System.Drawing.Size(108, 20);
             this.StatementPeriodFrom.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(437, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 26);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "MR/AC Remaining";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 26);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "MR/AC Paid To Date";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(437, 0);
+            this.label8.Location = new System.Drawing.Point(481, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 26);
             this.label8.TabIndex = 3;
             this.label8.Text = "Statement Period";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label9
+            // label4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 26);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Policy/Claim Limit";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label4.Location = new System.Drawing.Point(217, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(144, 26);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Insurance Company";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // PolicyClaimLimit
+            // InsuranceCompany
             // 
-            this.PolicyClaimLimit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolicyClaimLimit.Location = new System.Drawing.Point(153, 3);
-            this.PolicyClaimLimit.Name = "PolicyClaimLimit";
-            this.PolicyClaimLimit.Size = new System.Drawing.Size(278, 20);
-            this.PolicyClaimLimit.TabIndex = 9;
+            this.InsuranceCompany.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InsuranceCompany.Location = new System.Drawing.Point(367, 3);
+            this.InsuranceCompany.Name = "InsuranceCompany";
+            this.InsuranceCompany.Size = new System.Drawing.Size(108, 20);
+            this.InsuranceCompany.TabIndex = 14;
             // 
-            // IEAssessPdToDate
+            // panel2
             // 
-            this.IEAssessPdToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IEAssessPdToDate.Location = new System.Drawing.Point(587, 107);
-            this.IEAssessPdToDate.Name = "IEAssessPdToDate";
-            this.IEAssessPdToDate.Size = new System.Drawing.Size(278, 20);
-            this.IEAssessPdToDate.TabIndex = 22;
-            this.IEAssessPdToDate.TextChanged += new System.EventHandler(this.IEAssessPdToDate_TextChanged);
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel8.SetColumnSpan(this.panel2, 6);
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 71);
+            this.panel2.Name = "panel2";
+            this.tableLayoutPanel8.SetRowSpan(this.panel2, 2);
+            this.panel2.Size = new System.Drawing.Size(850, 56);
+            this.panel2.TabIndex = 15;
             // 
-            // label14
+            // tableLayoutPanel1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(437, 104);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(144, 26);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "IE Assess Pd To Date";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.38362F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.38362F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.74425F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.74425F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.74425F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.Controls.Add(this.PayeeTB, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.DatePaidDTP, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.MRACGSAProvidedTB, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.AmountTB, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.IEAmountTB, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 5, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(848, 54);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // PayeeTB
+            // 
+            this.PayeeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PayeeTB.Location = new System.Drawing.Point(3, 3);
+            this.PayeeTB.Name = "PayeeTB";
+            this.PayeeTB.Size = new System.Drawing.Size(206, 20);
+            this.PayeeTB.TabIndex = 1;
+            // 
+            // DatePaidDTP
+            // 
+            this.DatePaidDTP.CustomFormat = "MM/dd/yyyy";
+            this.DatePaidDTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DatePaidDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatePaidDTP.Location = new System.Drawing.Point(427, 3);
+            this.DatePaidDTP.Name = "DatePaidDTP";
+            this.DatePaidDTP.Size = new System.Drawing.Size(121, 20);
+            this.DatePaidDTP.TabIndex = 3;
+            // 
+            // MRACGSAProvidedTB
+            // 
+            this.MRACGSAProvidedTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MRACGSAProvidedTB.Location = new System.Drawing.Point(215, 3);
+            this.MRACGSAProvidedTB.Name = "MRACGSAProvidedTB";
+            this.MRACGSAProvidedTB.Size = new System.Drawing.Size(206, 20);
+            this.MRACGSAProvidedTB.TabIndex = 2;
+            // 
+            // AmountTB
+            // 
+            this.AmountTB.CurrencySymbol = "$";
+            this.AmountTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AmountTB.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.AmountTB.Location = new System.Drawing.Point(554, 3);
+            this.AmountTB.Name = "AmountTB";
+            this.AmountTB.Size = new System.Drawing.Size(121, 20);
+            this.AmountTB.TabIndex = 5;
+            this.AmountTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // IEAmountTB
+            // 
+            this.IEAmountTB.CurrencySymbol = "$";
+            this.IEAmountTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IEAmountTB.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.IEAmountTB.Location = new System.Drawing.Point(681, 3);
+            this.IEAmountTB.Name = "IEAmountTB";
+            this.IEAmountTB.Size = new System.Drawing.Size(121, 20);
+            this.IEAmountTB.TabIndex = 6;
+            this.IEAmountTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Maroon;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(808, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(22, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StandardBenefitsStatementUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tableLayoutPanel8);
             this.Name = "StandardBenefitsStatementUserControl";
-            this.Size = new System.Drawing.Size(868, 130);
+            this.Size = new System.Drawing.Size(856, 130);
+            this.Load += new System.EventHandler(this.StandardBenefitsStatementUserControl_Load);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -344,27 +421,28 @@ namespace RRFFilesManager.Controls.ArchiveControls
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.TextBox IEAssessPdToDate;
-        internal System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox MRRemaining;
-        internal System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox MRPaidToDate;
-        internal System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox ACRemaining;
-        internal System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox ACPaidToDate;
-        internal System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox MRACRemaining;
-        private System.Windows.Forms.TextBox MRACPaidToDate;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.DateTimePicker StatementPeriodTo;
         private System.Windows.Forms.DateTimePicker StatementPeriodFrom;
-        internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox PolicyClaimLimit;
-        internal System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox HHPaidToDate;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private Components.CurrencyTextBox AmountTB;
+        private Components.CurrencyTextBox IEAmountTB;
+        private System.Windows.Forms.TextBox PayeeTB;
+        private System.Windows.Forms.DateTimePicker DatePaidDTP;
+        private System.Windows.Forms.TextBox MRACGSAProvidedTB;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Components.CurrencyTextBox PolicyClaimLimit;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox InsuranceCompany;
+        private System.Windows.Forms.Panel panel2;
     }
 }

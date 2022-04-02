@@ -24,6 +24,8 @@ namespace RRFFilesManager
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
         public readonly PrescriptionSummariesControl PrescriptionSummariesControl;
         public readonly ABBinderControl ABBinderControl;
+        public readonly StandardBenefitStatementsControl StandardBenefitStatementsControl;
+        public readonly StandardBenefitStatementsControl QuickABPaidToDateControl;
         private readonly IFileRepository _fileRepository;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAction;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAccidentBenefits;
@@ -44,6 +46,12 @@ namespace RRFFilesManager
 
             ABBinderControl = new ABBinderControl();
             Utils.Utils.SetContent(ABBinderTab, ABBinderControl);
+
+            StandardBenefitStatementsControl = new StandardBenefitStatementsControl();
+            Utils.Utils.SetContent(BenefitStatements, StandardBenefitStatementsControl);
+
+            QuickABPaidToDateControl = new StandardBenefitStatementsControl(true);
+            Utils.Utils.SetContent(QuickABPaidToDate, QuickABPaidToDateControl);
 
             SemiAnnualFileReviewControlAction = new SemiAnnualFileReviewControl(0);
             Utils.Utils.SetContent(SemiAnnualFileReviewTabAction, SemiAnnualFileReviewControlAction);
@@ -82,9 +90,10 @@ namespace RRFFilesManager
                 return;
             PeopleControl.SetFile(file);
             ABBinderControl.SetFile(file);
-
+            StandardBenefitStatementsControl.SetFile(file);
             MedicalBinderIndexControl.SetFile(file);
             PrescriptionSummariesControl.SetFile(file);
+            QuickABPaidToDateControl.SetFile(file);
 
             ClientNameTextBox.Text = file.Client.ToString();
             MatterTypeTextBox.Text = file.MatterType.ToString();

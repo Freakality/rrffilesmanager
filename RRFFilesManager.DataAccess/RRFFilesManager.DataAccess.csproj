@@ -212,6 +212,7 @@
     <Compile Include="Abstractions\IMobileCarrierRepository.cs" />
     <Compile Include="Abstractions\IGroupRepository.cs" />
     <Compile Include="Abstractions\IProvinceRepository.cs" />
+    <Compile Include="Abstractions\IStandardBenefitRowRepository.cs" />
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
     <Compile Include="DrugRepository.cs" />
@@ -296,6 +297,18 @@
     <Compile Include="Migrations\20220121211016_FileReviewUpdateandRepository.cs" />
     <Compile Include="Migrations\20220121211016_FileReviewUpdateandRepository.designer.cs">
       <DependentUpon>20220121211016_FileReviewUpdateandRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220311233834_ArchiveStandardBenefitUpdate.cs" />
+    <Compile Include="Migrations\20220311233834_ArchiveStandardBenefitUpdate.designer.cs">
+      <DependentUpon>20220311233834_ArchiveStandardBenefitUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220330160019_StandardBenefitChanges.cs" />
+    <Compile Include="Migrations\20220330160019_StandardBenefitChanges.designer.cs">
+      <DependentUpon>20220330160019_StandardBenefitChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220401204902_BenefitCleanup.cs" />
+    <Compile Include="Migrations\20220401204902_BenefitCleanup.designer.cs">
+      <DependentUpon>20220401204902_BenefitCleanup.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
@@ -508,6 +521,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GroupRepository.cs" />
     <Compile Include="ProvinceRepository.cs" />
+    <Compile Include="StandardBenefitRowRepository.cs" />
     <Compile Include="UploadArchivesSettingsRepository.cs" />
     <Compile Include="TemplateRepository.cs" />
   </ItemGroup>
