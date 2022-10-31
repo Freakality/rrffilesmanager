@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 using System.Windows.Forms;
@@ -63,9 +64,23 @@ namespace RRFFilesManager.Utils
             form.FormClosing += ReturnHome_FormClosing;
             return form;
         }
+        public static T OpenFormLogIn<T>(Form from = null) where T : Form, new()
+        {
+            from?.Hide();
+            PleaseWait.Instance.Show();
+            var form = new T();
+            form.Show();
+            PleaseWait.Instance.Hide();
+            form.FormClosing += ReturnLogIn_FormClosing;
+            return form;
+        }
         private static void ReturnHome_FormClosing(object sender, FormClosingEventArgs e)
         {
             CloseForm(sender as Form, Home.Instance);
+        }
+        private static void ReturnLogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseForm(sender as Form, LoginUI.Instance);
         }
         public static void CloseForm(Form from, Form to)
         {
@@ -113,6 +128,36 @@ namespace RRFFilesManager.Utils
                 return;
             DataGridView.Columns["ID"].Visible = false;
 
+        }
+
+        public static string GetHash(string username, string password)
+        {
+            byte[] salt;
+            new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
+            var pbkdf2 = new Rfc2898DeriveBytes(username + password, salt, 10310);
+            byte[] hash = pbkdf2.GetBytes(20);
+            byte[] hashBytes = new byte[36];
+            Array.Copy(salt, 0, hashBytes, 0, 16);
+            Array.Copy(hash, 0, hashBytes, 16, 20);
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            return savedPasswordHash;
+        }
+
+        public static int UserLog(string username, string password, string passwordHash2)
+        {
+            int ok = 1;
+            byte[] hashBytes2 = Convert.FromBase64String(passwordHash2);
+            byte[] salt2 = new byte[16];
+            Array.Copy(hashBytes2, 0, salt2, 0, 16);
+            var pbkdf22 = new Rfc2898DeriveBytes(username + password, salt2, 10310);
+            byte[] hash2 = pbkdf22.GetBytes(20);
+            for (int i = 0; i < 20; i++)
+                if (hashBytes2[i + 16] != hash2[i])
+                {
+                    ok = 0;
+                    break;
+                }
+            return ok;
         }
     }
 }

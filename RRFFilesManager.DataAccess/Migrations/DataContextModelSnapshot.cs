@@ -783,6 +783,60 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.ToTable("FileReviews");
                 });
 
+            modelBuilder.Entity("RRFFilesManager.Abstractions.FileTask", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CompletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DeferUntilDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FileId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("NotifiedRRFDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("StateID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TaskStartedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("WorkedOnDate1")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("WorkedOnDate2")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("WorkedOnDate3")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("FileId");
+
+                    b.HasIndex("StateID");
+
+                    b.HasIndex("TaskId");
+
+                    b.ToTable("FileTasks");
+                });
+
             modelBuilder.Entity("RRFFilesManager.Abstractions.Group", b =>
                 {
                     b.Property<int>("ID")
@@ -1062,6 +1116,9 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("ClearanceLevel")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("ContractDate")
                         .HasColumnType("datetime2");
 
@@ -1077,12 +1134,41 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<int?>("NumberID")
                         .HasColumnType("int");
 
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double?>("ResponsibleLawyerBaseCommissionMultiplier")
                         .HasColumnType("float");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
                     b.ToTable("Lawyers");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.LogItem", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("LawyerID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("LawyerID");
+
+                    b.ToTable("LogItems");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.MatterSubType", b =>
@@ -1372,6 +1458,93 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.ToTable("StandardBenefitRows");
                 });
 
+            modelBuilder.Entity("RRFFilesManager.Abstractions.Task", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CreatedByID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DeferBy")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DueBy")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsMasterTask")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("LawyerID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("LockDueDate")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("TaskCategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CreatedByID");
+
+                    b.HasIndex("LawyerID");
+
+                    b.HasIndex("TaskCategoryID");
+
+                    b.ToTable("Tasks");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.TaskCategory", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("TaskCategories");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.TaskDependency", b =>
+                {
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DependencyId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TaskId", "DependencyId");
+
+                    b.HasIndex("DependencyId");
+
+                    b.ToTable("TaskDependencies");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.TaskState", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("TaskStates");
+                });
+
             modelBuilder.Entity("RRFFilesManager.Abstractions.Template", b =>
                 {
                     b.Property<int>("ID")
@@ -1399,6 +1572,72 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasIndex("MatterTypeID");
 
                     b.ToTable("Templates");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.Timeline", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("ActualDateSOCIssued")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ActualDateSOCServed")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("AllDefendantUndertakingRecd")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateOfDefendantDiscovery")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateOfPlaintiffDiscovery")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DatePlaintiffUndertakingComplete")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateToFileTrialRecordBy")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateTrialRecordFiled")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DefendantAODRequest")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FileId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LiabilityMeetingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("MedicalSummariesPreDiscDueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("PlaintiffAODSent")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("PreDiscoveryMeetingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("PrePleadingsMeetingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ProposedDateIssueSOC")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ProposedDateToServeSOC")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("FileId")
+                        .IsUnique();
+
+                    b.ToTable("Timelines");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.UploadArchivesSettings", b =>
@@ -1578,6 +1817,25 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasForeignKey("FileID");
                 });
 
+            modelBuilder.Entity("RRFFilesManager.Abstractions.FileTask", b =>
+                {
+                    b.HasOne("RRFFilesManager.Abstractions.File", "File")
+                        .WithMany("Tasks")
+                        .HasForeignKey("FileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RRFFilesManager.Abstractions.TaskState", "State")
+                        .WithMany()
+                        .HasForeignKey("StateID");
+
+                    b.HasOne("RRFFilesManager.Abstractions.Task", "Task")
+                        .WithMany()
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("RRFFilesManager.Abstractions.Intake", b =>
                 {
                     b.HasOne("RRFFilesManager.Abstractions.File", "File")
@@ -1589,6 +1847,13 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.DisabilityInsuranceCompany", "PolCompanyDeniedBenefits")
                         .WithMany()
                         .HasForeignKey("PolCompanyDeniedBenefitsID");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.LogItem", b =>
+                {
+                    b.HasOne("RRFFilesManager.Abstractions.Lawyer", "Lawyer")
+                        .WithMany()
+                        .HasForeignKey("LawyerID");
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.MatterSubType", b =>
@@ -1665,11 +1930,50 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("RRFFilesManager.Abstractions.Task", b =>
+                {
+                    b.HasOne("RRFFilesManager.Abstractions.Lawyer", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedByID");
+
+                    b.HasOne("RRFFilesManager.Abstractions.Lawyer", "Lawyer")
+                        .WithMany()
+                        .HasForeignKey("LawyerID");
+
+                    b.HasOne("RRFFilesManager.Abstractions.TaskCategory", "TaskCategory")
+                        .WithMany()
+                        .HasForeignKey("TaskCategoryID");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.TaskDependency", b =>
+                {
+                    b.HasOne("RRFFilesManager.Abstractions.Task", "Dependency")
+                        .WithMany()
+                        .HasForeignKey("DependencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RRFFilesManager.Abstractions.Task", "Task")
+                        .WithMany("Dependencies")
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("RRFFilesManager.Abstractions.Template", b =>
                 {
                     b.HasOne("RRFFilesManager.Abstractions.MatterType", "MatterType")
                         .WithMany()
                         .HasForeignKey("MatterTypeID");
+                });
+
+            modelBuilder.Entity("RRFFilesManager.Abstractions.Timeline", b =>
+                {
+                    b.HasOne("RRFFilesManager.Abstractions.File", "File")
+                        .WithOne("Timeline")
+                        .HasForeignKey("RRFFilesManager.Abstractions.Timeline", "FileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

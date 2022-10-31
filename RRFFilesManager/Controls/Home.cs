@@ -20,6 +20,11 @@ using RRFFilesManager.Controls.CommisionCalculatorControls;
 using RRFFilesManager.Controls.PrescriptionSummariesControls;
 using RRFFilesManager.Controls.MedicalSummariesControls;
 using RRFFilesManager.Controls.PredictorCalculatorControls;
+using RRFFilesManager.Controls.MasterTaskControls;
+using RRFFilesManager.Controls;
+using RRFFilesManager.Abstractions;
+using RRFFilesManager.Controls.FileControls;
+using RRFFilesManager.Controls.UserManagerControls;
 
 namespace RRFFilesManager
 {
@@ -27,11 +32,37 @@ namespace RRFFilesManager
     {
         public Home()
         {
+            /* try
+             {
+                 using (LoginUI login = new LoginUI())
+                 {
+                     if (login.ShowDialog() != DialogResult.OK)
+                     {
+                         Environment.Exit(1);
+                     }
+                     else
+                     {
+                         if (CurrentUser.Level == EUserLevels.INVENTARIO && CurrentUser.Name != "NR")
+                         {
+                             MessageBox.Show("Usuario no admitido.");
+                             Environment.Exit(1);
+                         }
+                     }
+                 }
+             }
+             catch
+             {
+                 return;
+             }*/
+            User = Program.GetUser();
             InitializeComponent();
-            UserFullName.Text = UserManager.GetUserFullName();
-            UserName.Text = UserManager.GetFullUserName();
+            UserFullName.Text = User.Description;
+            UserName.Text = User.UserName;
+            //UserFullName.Text = UserManager.GetUserFullName();
+            //UserName.Text = UserManager.GetFullUserName();
         }
 
+        private static Lawyer User;
         private static Home instance;
         public static Home Instance => instance ?? (instance = new Home());
 
@@ -42,6 +73,10 @@ namespace RRFFilesManager
         public static ContactInfo ContactInfo { get; set; }
         public static CreateDocument CreateDocument { get; set; }
         public static CreateTemplate CreateTemplate { get; set; }
+        public static MasterTaskManager MasterTaskManager { get; set; }
+        public static AddTaskManager AddTaskManager { get; set; }
+        public static ChangeLogView ChangeLogView { get; set; }
+        public static UserManagerForm UserManagerForm { get; set; }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -115,7 +150,7 @@ namespace RRFFilesManager
 
         private void CommisionCalculatorButton_Click(object sender, EventArgs e)
         {
-            var authorizedUsers = new string[] { "FOISYR", "MANZANOD", "ITDEV", "FELIX" };
+            /*var authorizedUsers = new string[] { "FOISYR", "MANZANOD", "ITDEV", "FELIX" };
             if (authorizedUsers.Any(user => UserManager.GetUserName().ToUpper() == user))
             {
                 Utils.Utils.OpenForm<CommissionCalculatorForm>(this);
@@ -123,8 +158,12 @@ namespace RRFFilesManager
             else
             {
                 MessageBox.Show("Not Authorized");
-            }
-            
+            }*/
+            if (User.ClearanceLevel == 0 || User.ClearanceLevel == 99)
+                Utils.Utils.OpenForm<CommissionCalculatorForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
+
         }
 
         private void PrescriptionSummariesButton_Click(object sender, EventArgs e)
@@ -140,6 +179,32 @@ namespace RRFFilesManager
         private void PredictorCalculatorButton_Click(object sender, EventArgs e)
         {
             Utils.Utils.OpenForm<PredictorCalculatorForm>(this);
+        }
+
+        private void AddNewTaskButton_Click(object sender, EventArgs e)
+        {
+            AddTaskManager = Utils.Utils.OpenForm<AddTaskManager>(this);
+        }
+
+        private void MasterTaskButton_Click(object sender, EventArgs e)
+        {
+            MasterTaskManager = Utils.Utils.OpenForm<MasterTaskManager>(this);
+        }
+
+        private void ChangeLogViewButton_Click(object sender, EventArgs e)
+        {
+            if (User.ClearanceLevel == 0 || User.ClearanceLevel == 99)
+                ChangeLogView = Utils.Utils.OpenForm<ChangeLogView>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
+        }
+
+        private void UserName_Click(object sender, EventArgs e)
+        {
+            if (User.ClearanceLevel == 0 || User.ClearanceLevel == 99)
+                UserManagerForm = Utils.Utils.OpenForm<UserManagerForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
     }
 }

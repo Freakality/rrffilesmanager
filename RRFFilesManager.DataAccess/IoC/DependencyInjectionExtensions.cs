@@ -46,6 +46,13 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IGenericRepository<ComissionSubType>, ComissionSubTypeRepository>();
             services.AddTransient<IFileReviewRepository, FileReviewRepository>();
             services.AddTransient<IStandardBenefitRowRepository, StandardBenefitRowRepository>();
+            services.AddTransient<ITaskRepository, TaskRepository>();
+            services.AddTransient<IFileTaskRepository, FileTaskRepository>();
+            services.AddTransient<ILogItemRepository, LogItemRepository>();
+            services.AddTransient<ITaskCategoryRepository, TaskCategoryRepository>();
+            services.AddTransient<ITaskStateRepository, TaskStateRepository>();
+            services.AddTransient<ITimelineRepository, TimelineRepository>();
+            services.AddTransient<ILoggedUser, LoggedUser>();
             return services;
         }
     }

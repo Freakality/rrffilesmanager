@@ -42,9 +42,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
         public virtual string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
         {
             var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
-            if(documentNameType == DocumentNameTypeEnum.FirstDate)
+            //if(documentNameType == DocumentNameTypeEnum.FirstDate)
                 return $"{datePart} - {text}";
-            return $"{text} - {datePart}";
+            //return $"{text} - {datePart}";
         }
 
         public virtual void SetDocumentParameters(string text, DateTime? documentDate, DateTime? from, DateTime? to, DocumentNameTypeEnum documentNameType = default)

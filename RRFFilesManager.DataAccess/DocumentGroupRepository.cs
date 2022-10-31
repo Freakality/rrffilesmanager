@@ -36,7 +36,7 @@ namespace RRFFilesManager.DataAccess
 
         public  IEnumerable<DocumentGroup> List()
         {
-            var documentFolders = _context.DocumentGroups.ToList();
+            var documentFolders = _context.DocumentGroups.OrderBy(x=>x.Description).ToList();
             return documentFolders;
         }
 

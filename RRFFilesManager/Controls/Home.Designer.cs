@@ -43,7 +43,7 @@
             this.Button18 = new System.Windows.Forms.Button();
             this.MedicalSummariesButton = new System.Windows.Forms.Button();
             this.Button16 = new System.Windows.Forms.Button();
-            this.Button15 = new System.Windows.Forms.Button();
+            this.MasterTaskButton = new System.Windows.Forms.Button();
             this.ImportDocumentsButton = new System.Windows.Forms.Button();
             this.Button13 = new System.Windows.Forms.Button();
             this.Contacts = new System.Windows.Forms.Button();
@@ -59,13 +59,14 @@
             this.FileManagerButton = new System.Windows.Forms.Button();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.IntakeButton = new System.Windows.Forms.Button();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.UserFullName = new System.Windows.Forms.ToolStripStatusLabel();
             this.UserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ChangeLogViewButton = new System.Windows.Forms.Button();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.TableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Button30
@@ -297,20 +298,21 @@
             this.Button16.Text = "LIMITATION & DEADLINE TRACKER";
             this.Button16.UseVisualStyleBackColor = false;
             // 
-            // Button15
+            // MasterTaskButton
             // 
-            this.Button15.BackColor = System.Drawing.Color.Black;
-            this.Button15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button15.ForeColor = System.Drawing.Color.White;
-            this.Button15.Location = new System.Drawing.Point(199, 358);
-            this.Button15.Margin = new System.Windows.Forms.Padding(10);
-            this.Button15.Name = "Button15";
-            this.Button15.Size = new System.Drawing.Size(169, 67);
-            this.Button15.TabIndex = 4;
-            this.Button15.Text = "MASTER TASKS";
-            this.Button15.UseVisualStyleBackColor = false;
+            this.MasterTaskButton.BackColor = System.Drawing.Color.Black;
+            this.MasterTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MasterTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MasterTaskButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MasterTaskButton.ForeColor = System.Drawing.Color.White;
+            this.MasterTaskButton.Location = new System.Drawing.Point(199, 358);
+            this.MasterTaskButton.Margin = new System.Windows.Forms.Padding(10);
+            this.MasterTaskButton.Name = "MasterTaskButton";
+            this.MasterTaskButton.Size = new System.Drawing.Size(169, 67);
+            this.MasterTaskButton.TabIndex = 4;
+            this.MasterTaskButton.Text = "MASTER TASKS";
+            this.MasterTaskButton.UseVisualStyleBackColor = false;
+            this.MasterTaskButton.Click += new System.EventHandler(this.MasterTaskButton_Click);
             // 
             // ImportDocumentsButton
             // 
@@ -389,6 +391,7 @@
             this.AddNewTaskButton.TabIndex = 4;
             this.AddNewTaskButton.Text = "ADD NEW TASKS";
             this.AddNewTaskButton.UseVisualStyleBackColor = false;
+            this.AddNewTaskButton.Click += new System.EventHandler(this.AddNewTaskButton_Click);
             // 
             // CalendarButton
             // 
@@ -542,7 +545,7 @@
             this.TableLayoutPanel1.Controls.Add(this.Button18, 2, 2);
             this.TableLayoutPanel1.Controls.Add(this.MedicalSummariesButton, 2, 1);
             this.TableLayoutPanel1.Controls.Add(this.Button16, 2, 0);
-            this.TableLayoutPanel1.Controls.Add(this.Button15, 1, 4);
+            this.TableLayoutPanel1.Controls.Add(this.MasterTaskButton, 1, 4);
             this.TableLayoutPanel1.Controls.Add(this.ImportDocumentsButton, 0, 4);
             this.TableLayoutPanel1.Controls.Add(this.Button13, 1, 3);
             this.TableLayoutPanel1.Controls.Add(this.Contacts, 1, 2);
@@ -586,6 +589,44 @@
             this.IntakeButton.UseVisualStyleBackColor = false;
             this.IntakeButton.Click += new System.EventHandler(this.IntakeButton_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UserFullName,
+            this.UserName});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 754);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.statusStrip1.Size = new System.Drawing.Size(970, 22);
+            this.statusStrip1.TabIndex = 6;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // UserFullName
+            // 
+            this.UserFullName.Name = "UserFullName";
+            this.UserFullName.Size = new System.Drawing.Size(81, 17);
+            this.UserFullName.Text = "UserFullName";
+            // 
+            // UserName
+            // 
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(62, 17);
+            this.UserName.Text = "UserName";
+            this.UserName.Click += new System.EventHandler(this.UserName_Click);
+            // 
+            // ChangeLogViewButton
+            // 
+            this.ChangeLogViewButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ChangeLogViewButton.FlatAppearance.BorderSize = 0;
+            this.ChangeLogViewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangeLogViewButton.Location = new System.Drawing.Point(22, 754);
+            this.ChangeLogViewButton.Name = "ChangeLogViewButton";
+            this.ChangeLogViewButton.Size = new System.Drawing.Size(75, 23);
+            this.ChangeLogViewButton.TabIndex = 7;
+            this.ChangeLogViewButton.Text = "Change Log";
+            this.ChangeLogViewButton.UseVisualStyleBackColor = false;
+            this.ChangeLogViewButton.Click += new System.EventHandler(this.ChangeLogViewButton_Click);
+            // 
             // PictureBox1
             // 
             this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -597,36 +638,13 @@
             this.PictureBox1.TabIndex = 4;
             this.PictureBox1.TabStop = false;
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UserFullName,
-            this.UserName});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 751);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip1.Size = new System.Drawing.Size(970, 25);
-            this.statusStrip1.TabIndex = 6;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // UserFullName
-            // 
-            this.UserFullName.Name = "UserFullName";
-            this.UserFullName.Size = new System.Drawing.Size(101, 20);
-            this.UserFullName.Text = "UserFullName";
-            // 
-            // UserName
-            // 
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(78, 20);
-            this.UserName.Text = "UserName";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(970, 776);
+            this.Controls.Add(this.ChangeLogViewButton);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.TableLayoutPanel1);
@@ -634,9 +652,9 @@
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.TableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,7 +677,7 @@
         internal System.Windows.Forms.Button Button18;
         internal System.Windows.Forms.Button MedicalSummariesButton;
         internal System.Windows.Forms.Button Button16;
-        internal System.Windows.Forms.Button Button15;
+        internal System.Windows.Forms.Button MasterTaskButton;
         internal System.Windows.Forms.Button ImportDocumentsButton;
         internal System.Windows.Forms.Button Button13;
         internal System.Windows.Forms.Button Contacts;
@@ -679,5 +697,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel UserFullName;
         private System.Windows.Forms.ToolStripStatusLabel UserName;
+        private System.Windows.Forms.Button ChangeLogViewButton;
     }
 }

@@ -24,6 +24,13 @@ namespace RRFFilesManager.DataAccess
             return account;
 
         }
+        public Lawyer GetByUserName(string userName)
+        {
+            var account = _context.Lawyers.FirstOrDefault(x => x.UserName == userName);
+
+            return account;
+
+        }
 
         public void Insert(Lawyer lawyer)
         {

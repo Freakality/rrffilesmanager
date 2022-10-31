@@ -47,7 +47,6 @@
             this.GridView.Size = new System.Drawing.Size(800, 406);
             this.GridView.TabIndex = 3;
             this.GridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellClick);
-            this.GridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellContentClick);
             // 
             // SearchTextBox
             // 

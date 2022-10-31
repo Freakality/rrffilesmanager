@@ -1,4 +1,5 @@
 ﻿using RRFFilesManager.Abstractions;
+using RRFFilesManager.Controls.Components;
 using RRFFilesManager.Controls.FileControls;
 using RRFFilesManager.Controls.FileControls.UserControls;
 using RRFFilesManager.DataAccess.Abstractions;
@@ -19,6 +20,7 @@ namespace RRFFilesManager
     public partial class FileManager : Form
     {
         public File File { get; set; }
+        public Timeline FileTimeline { get; set; }
         public bool SettingFile = false;
         public readonly PeopleControl PeopleControl;
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
@@ -27,6 +29,11 @@ namespace RRFFilesManager
         public readonly StandardBenefitStatementsControl StandardBenefitStatementsControl;
         public readonly StandardBenefitStatementsControl QuickABPaidToDateControl;
         private readonly IFileRepository _fileRepository;
+        private readonly ITimelineRepository _timelineRepository;
+        private readonly ITaskCategoryRepository _taskCategoryRepository;
+        private readonly ITaskRepository _taskRepository;
+        private readonly ITaskStateRepository _taskStateRepository;
+        private readonly IFileTaskRepository _fileTaskRepository;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAction;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAccidentBenefits;
         public TabPage SemiAnnualFileReviewTabAction = new TabPage("Semi-Annual File Review");
@@ -34,7 +41,13 @@ namespace RRFFilesManager
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
+            _timelineRepository = Program.GetService<ITimelineRepository>();
+            _taskCategoryRepository = Program.GetService<ITaskCategoryRepository>();
+            _taskRepository = Program.GetService<ITaskRepository>();
+            _taskStateRepository = Program.GetService<ITaskStateRepository>();
+            _fileTaskRepository = Program.GetService<IFileTaskRepository>();
             InitializeComponent();
+            ComboBox2.SelectedIndex = 0;
             PeopleControl = new PeopleControl();
             Utils.Utils.SetContent(PeopleTab, PeopleControl);
 
@@ -146,9 +159,97 @@ namespace RRFFilesManager
                 SetSemiAnnualFileReviewTab(File);
                 SetProjections();
             }
-
+            TBoxLiabilityMeetingDate.Enabled = true;
+            TBoxProposedDateIssueSOC.Enabled = true;
+            TBoxPrePleadingsMeetingDate.Enabled = true;
+            TBoxActualDateSOCIssued.Enabled = true;
+            TBoxMedicalSummariesPreDiscDueDate.Enabled = true;
+            TBoxProposedDateToServeSOC.Enabled = true;
+            TBoxActualDateSOCServed.Enabled = true;
+            TBoxDateToFileTrialRecordBy.Enabled = true;
+            TBoxPreDiscoveryMeetingDate.Enabled = true;
+            TBoxDefendantAODRequest.Enabled = true;
+            TBoxDateOfPlaintiffDiscovery.Enabled = true; ;
+            TBoxPlaintiffAODSent.Enabled = true;
+            TBoxDateOfDefendantDiscovery.Enabled = true;
+            TBoxDateTrialRecordFiled.Enabled = true;
+            TBoxDatePlaintiffUndertakingComplete.Enabled = true;
+            TBoxAllDefendantUndertakingRecd.Enabled = true;
+            TimelineSaveBtn.Enabled = true;
+            if (File.Timeline != null)
+            {
+                FileTimeline = File.Timeline;
+                if (FileTimeline.LiabilityMeetingDate != default(DateTime))
+                    TBoxLiabilityMeetingDate.Value = FileTimeline.LiabilityMeetingDate;
+                if (FileTimeline.ProposedDateIssueSOC != default(DateTime))
+                    TBoxProposedDateIssueSOC.Value = FileTimeline.ProposedDateIssueSOC;
+                if (FileTimeline.PrePleadingsMeetingDate != default(DateTime))
+                    TBoxPrePleadingsMeetingDate.Value = FileTimeline.PrePleadingsMeetingDate;
+                if (FileTimeline.ActualDateSOCIssued != default(DateTime))
+                    TBoxActualDateSOCIssued.Value = FileTimeline.ActualDateSOCIssued;
+                if (FileTimeline.MedicalSummariesPreDiscDueDate != default(DateTime))
+                    TBoxMedicalSummariesPreDiscDueDate.Value = FileTimeline.MedicalSummariesPreDiscDueDate;
+                if (FileTimeline.ProposedDateToServeSOC != default(DateTime))
+                    TBoxProposedDateToServeSOC.Value = FileTimeline.ProposedDateToServeSOC;
+                if (FileTimeline.ActualDateSOCServed != default(DateTime))
+                    TBoxActualDateSOCServed.Value = FileTimeline.ActualDateSOCServed;
+                if (FileTimeline.DateToFileTrialRecordBy != default(DateTime))
+                    TBoxDateToFileTrialRecordBy.Value = FileTimeline.DateToFileTrialRecordBy;
+                if (FileTimeline.PreDiscoveryMeetingDate != default(DateTime))
+                    TBoxPreDiscoveryMeetingDate.Value = FileTimeline.PreDiscoveryMeetingDate;
+                if (FileTimeline.DefendantAODRequest != default(DateTime))
+                    TBoxDefendantAODRequest.Value = FileTimeline.DefendantAODRequest;
+                if (FileTimeline.DateOfPlaintiffDiscovery != default(DateTime))
+                    TBoxDateOfPlaintiffDiscovery.Value = FileTimeline.DateOfPlaintiffDiscovery;
+                if (FileTimeline.PlaintiffAODSent != default(DateTime))
+                    TBoxPlaintiffAODSent.Value = FileTimeline.PlaintiffAODSent;
+                if (FileTimeline.DateOfDefendantDiscovery != default(DateTime))
+                    TBoxDateOfDefendantDiscovery.Value = FileTimeline.DateOfDefendantDiscovery;
+                if (FileTimeline.DateTrialRecordFiled != default(DateTime))
+                    TBoxDateTrialRecordFiled.Value = FileTimeline.DateTrialRecordFiled;
+                if (FileTimeline.DatePlaintiffUndertakingComplete != default(DateTime))
+                    TBoxDatePlaintiffUndertakingComplete.Value = FileTimeline.DatePlaintiffUndertakingComplete;
+                if (FileTimeline.AllDefendantUndertakingRecd != default(DateTime))
+                    TBoxAllDefendantUndertakingRecd.Value = FileTimeline.AllDefendantUndertakingRecd;
+            }
+            if (File.Tasks.ToList().Count > 0)
+            {
+                RefreshActionLogDataGridViewDataSource();
+            }
 
             
+        }
+
+        private void RefreshActionLogDataGridViewDataSource()
+        {
+            /*int taskCategoryID = -1;
+            if (!(CBoxTaskCategory.SelectedValue is null))
+            {
+                if (!Int32.TryParse(CBoxTaskCategory.SelectedValue.ToString(), out taskCategoryID))
+                {
+                    taskCategoryID = -1;
+                }
+            }*/
+            bool setup = true;
+            if (ActionLogDataGridView.DataSource != null)
+                setup = false;
+            ActionLogDataGridView.DataSource = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
+            if (setup)
+            {
+                ActionLogDataGridView.Columns["ID"].Visible = false;
+                ActionLogDataGridView.Columns["File"].Visible = false;
+                ActionLogDataGridView.Columns["FileId"].Visible = false;
+                ActionLogDataGridView.Columns["TaskId"].Visible = false;
+                ActionLogDataGridView.Columns["DueDate"].HeaderText = "Due Date";
+                ActionLogDataGridView.Columns["DeferUntilDate"].HeaderText = "Defer Until Date";
+                ActionLogDataGridView.Columns["TaskStartedDate"].HeaderText = "Started Date";
+                ActionLogDataGridView.Columns["WorkedOnDate1"].HeaderText = "Worked On Date 1";
+                ActionLogDataGridView.Columns["WorkedOnDate2"].HeaderText = "Worked On Date 2";
+                ActionLogDataGridView.Columns["WorkedOnDate3"].HeaderText = "Worked On Date 3";
+                ActionLogDataGridView.Columns["NotifiedRRFDate"].HeaderText = "Notified RRF Date";
+                ActionLogDataGridView.Columns["CompletedDate"].HeaderText = "Completed Date";
+
+            }
         }
 
         private void TextBox22_TextChanged(object sender, EventArgs e)
@@ -292,6 +393,125 @@ namespace RRFFilesManager
         private void ReviewDoneSaveButton_Click2(object sender, EventArgs e)
         {
             SetProjections();   
+        }
+
+        private void DTP_ValueChanged(object sender, EventArgs e)
+        {
+            var dtp = sender as ColorDateTimePicker;
+            if (dtp.Value != default(DateTime))
+                (this.Timeline.Controls[dtp.Name + "TextBox"] as TextBox).Text = dtp.Value.ToString("MMMM dd, yyyy");
+            else
+                (this.Timeline.Controls[dtp.Name + "TextBox"] as TextBox).Text = "";
+        }
+
+        private void TimelineSaveBtn_Click(object sender, EventArgs e)
+        {
+            var timeline = FileTimeline;
+            if (timeline == null)
+                timeline = new Timeline();
+            FillTimeline(timeline);
+            TaskTimelineCheck(timeline);
+            if (timeline.ID == default)
+                _timelineRepository.Insert(timeline, timeline.File);
+            else
+                _timelineRepository.Update(timeline);
+            MessageBox.Show("Timeline has been saved.");
+        }
+
+        private void FillTimeline(Timeline timeline)
+        {
+            timeline.File = File;
+            if (!String.IsNullOrEmpty(TBoxLiabilityMeetingDateTextBox.Text))
+                timeline.LiabilityMeetingDate = TBoxLiabilityMeetingDate.Value;
+
+            if (!String.IsNullOrEmpty(TBoxProposedDateIssueSOCTextBox.Text))
+                timeline.ProposedDateIssueSOC = TBoxProposedDateIssueSOC.Value;
+
+            if (!String.IsNullOrEmpty(TBoxPrePleadingsMeetingDateTextBox.Text))
+                timeline.PrePleadingsMeetingDate = TBoxPrePleadingsMeetingDate.Value;
+
+            if (!String.IsNullOrEmpty(TBoxActualDateSOCIssuedTextBox.Text))
+                timeline.ActualDateSOCIssued = TBoxActualDateSOCIssued.Value;
+
+            if (!String.IsNullOrEmpty(TBoxMedicalSummariesPreDiscDueDateTextBox.Text))
+                timeline.MedicalSummariesPreDiscDueDate = TBoxMedicalSummariesPreDiscDueDate.Value;
+
+            if (!String.IsNullOrEmpty(TBoxProposedDateToServeSOCTextBox.Text))
+                timeline.ProposedDateToServeSOC = TBoxProposedDateToServeSOC.Value;
+
+            if (!String.IsNullOrEmpty(TBoxActualDateSOCServedTextBox.Text))
+                timeline.ActualDateSOCServed = TBoxActualDateSOCServed.Value;
+
+            if (!String.IsNullOrEmpty(TBoxDateToFileTrialRecordByTextBox.Text))
+                timeline.DateToFileTrialRecordBy = TBoxDateToFileTrialRecordBy.Value;
+
+            if (!String.IsNullOrEmpty(TBoxPreDiscoveryMeetingDateTextBox.Text))
+                timeline.PreDiscoveryMeetingDate = TBoxPreDiscoveryMeetingDate.Value;
+
+            if (!String.IsNullOrEmpty(TBoxDefendantAODRequestTextBox.Text))
+                timeline.DefendantAODRequest = TBoxDefendantAODRequest.Value;
+
+            if (!String.IsNullOrEmpty(TBoxDateOfPlaintiffDiscoveryTextBox.Text))
+                timeline.DateOfPlaintiffDiscovery = TBoxDateOfPlaintiffDiscovery.Value;
+
+            if (!String.IsNullOrEmpty(TBoxPlaintiffAODSentTextBox.Text))
+                timeline.PlaintiffAODSent = TBoxPlaintiffAODSent.Value;
+
+            if (!String.IsNullOrEmpty(TBoxDateOfDefendantDiscoveryTextBox.Text))
+                timeline.DateOfDefendantDiscovery = TBoxDateOfDefendantDiscovery.Value;
+
+            if (!String.IsNullOrEmpty(TBoxDateTrialRecordFiledTextBox.Text))
+                timeline.DateTrialRecordFiled = TBoxDateTrialRecordFiled.Value;
+
+            if (!String.IsNullOrEmpty(TBoxDatePlaintiffUndertakingCompleteTextBox.Text))
+                timeline.DatePlaintiffUndertakingComplete = TBoxDatePlaintiffUndertakingComplete.Value;
+
+            if (!String.IsNullOrEmpty(TBoxAllDefendantUndertakingRecdTextBox.Text))
+                timeline.AllDefendantUndertakingRecd = TBoxAllDefendantUndertakingRecd.Value;
+        }
+
+        private void TaskTimelineCheck(Timeline timeline)
+        {
+            TaskState taskState = _taskStateRepository.GetByDescription("To Do");
+            if (!String.IsNullOrEmpty(TBoxLiabilityMeetingDateTextBox.Text) && (timeline.LiabilityMeetingDate != TBoxLiabilityMeetingDate.MinDate && timeline.LiabilityMeetingDate != default(DateTime) && timeline.LiabilityMeetingDate != null))
+            {
+                AddFileTasks("Liability", taskState);
+            }
+            if (!String.IsNullOrEmpty(TBoxPrePleadingsMeetingDateTextBox.Text) && (timeline.PrePleadingsMeetingDate != TBoxPrePleadingsMeetingDate.MinDate && timeline.PrePleadingsMeetingDate != default(DateTime) && timeline.PrePleadingsMeetingDate != null))
+            {
+                AddFileTasks("Pre-Pleadings", taskState);
+            }
+            if (!String.IsNullOrEmpty(TBoxActualDateSOCIssuedTextBox.Text) && (timeline.ActualDateSOCIssued != TBoxActualDateSOCIssued.MinDate && timeline.ActualDateSOCIssued != default(DateTime) && timeline.ActualDateSOCIssued != null))
+            {
+                AddFileTasks("Pleadings", taskState);
+            }
+            if (!String.IsNullOrEmpty(TBoxPreDiscoveryMeetingDateTextBox.Text) && (timeline.PreDiscoveryMeetingDate != TBoxPreDiscoveryMeetingDate.MinDate && timeline.PreDiscoveryMeetingDate != default(DateTime) && timeline.PreDiscoveryMeetingDate != null))
+            {
+                AddFileTasks("Pre-Discovery", taskState);
+            }
+            if (!String.IsNullOrEmpty(TBoxDateOfPlaintiffDiscoveryTextBox.Text) && (timeline.DateOfPlaintiffDiscovery != TBoxDateOfPlaintiffDiscovery.MinDate && timeline.DateOfPlaintiffDiscovery != default(DateTime) && timeline.DateOfPlaintiffDiscovery != null))
+            {
+                AddFileTasks("Discovery", taskState);
+            }
+        }
+        private void AddFileTasks(string category, TaskState taskState)
+        {
+            var cat = _taskCategoryRepository.Search(category).FirstOrDefault();
+            if (cat != null)
+            {
+                var taskCategoryID = cat.ID;
+                var tasks = _taskRepository.Search("", taskCategoryID);
+                if (tasks.Count() > 0)
+                {
+                    _fileRepository.AddAllCategoryTasks(File, tasks, taskState);
+                }
+            }
+        }
+
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (File != null)
+                RefreshActionLogDataGridViewDataSource();
         }
     }
 }

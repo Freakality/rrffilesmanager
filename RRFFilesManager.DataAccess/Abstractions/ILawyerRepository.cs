@@ -14,5 +14,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void SoftDelete(int lawyerId);
         Lawyer GetById(int lawyerId);
         IEnumerable<Lawyer> List(bool? isParalegal = null);
+        Lawyer GetByUserName(string userName);
     }
 }

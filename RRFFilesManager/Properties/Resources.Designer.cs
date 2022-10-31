@@ -57,6 +57,7 @@ namespace RRFFilesManager.Properties {
             }
             set {
                 resourceCulture = value;
+                //resourceCulture = new System.Globalization.CultureInfo("en-CA");
             }
         }
         

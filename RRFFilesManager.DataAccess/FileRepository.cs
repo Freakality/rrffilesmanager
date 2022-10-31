@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
-
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System.Data.Objects;
+using System.Reflection;
 
 namespace RRFFilesManager.DataAccess
 {
@@ -16,13 +18,11 @@ namespace RRFFilesManager.DataAccess
         {
             _context = context;
         }
-
         public  File GetById(int fileId)
         {
             var account = _context.Files.FirstOrDefault(x => x.ID == fileId);
             return account;
         }
-
         public void Insert(File file)
         {
             _context.Files.Add(file);
@@ -96,5 +96,33 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
+        public void AddTask(File file, Task task, TaskState taskState)
+        {
+            var exist = _context.FileTasks.Any(s => s.File.ID == file.ID && s.Task.ID == task.ID);
+            if (exist)
+                return;
+            DateTime dueDate;
+            DateTime deferUntil;
+            var fileTask = new FileTask
+            {
+                File = file,
+                FileId = file.ID,
+                Task = task,
+                TaskId = task.ID,
+                DueDate = file.DateOfCall.AddDays(task.DueBy),
+                DeferUntilDate = file.DateOfCall.AddDays(task.DeferBy),
+                State = taskState
+            };
+            _context.FileTasks.Add(fileTask);
+            _context.SaveChanges(); 
+        }
+
+        public void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState)
+        {
+            foreach(Task task in tasks)
+            {
+                AddTask(file, task, taskState);
+            }
+        }
     }
 }

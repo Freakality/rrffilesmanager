@@ -365,6 +365,18 @@
     <Compile Include="Controls\ArchiveControls\UploadArchivesForm.Designer.cs">
       <DependentUpon>UploadArchivesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ChangeLogViewControls\ChangeLogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ChangeLogViewControls\ChangeLogView.Designer.cs">
+      <DependentUpon>ChangeLogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChangePasswordUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ChangePasswordUI.Designer.cs">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ClientControls\ClientInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +388,21 @@
     </Compile>
     <Compile Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.Designer.cs">
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Components\ColorDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\AddTaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\AddTaskManager.Designer.cs">
+      <DependentUpon>AddTaskManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FileControls\CreateEditFileTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\CreateEditFileTask.Designer.cs">
+      <DependentUpon>CreateEditFileTask.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileControls\Models\Prescription.cs" />
     <Compile Include="Controls\FileControls\UserControls\FileReviewTabControl.cs">
@@ -499,11 +526,35 @@
     <Compile Include="Controls\FileControls\UserControls\StandardBenefitStatementsControl.Designer.cs">
       <DependentUpon>StandardBenefitStatementsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterTaskControls\CreateEditTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterTaskControls\CreateEditTask.Designer.cs">
+      <DependentUpon>CreateEditTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterTaskControls\DependencySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterTaskControls\DependencySelect.Designer.cs">
+      <DependentUpon>DependencySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterTaskControls\MasterTaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterTaskControls\MasterTaskManager.Designer.cs">
+      <DependentUpon>MasterTaskManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MedicalSummariesControls\MedicalSummariesForm.cs">
       <SubType>Form</SubType>
@@ -649,6 +700,12 @@
     <Compile Include="Controls\IntakeControls\UserControls\PreliminaryInfo.Designer.cs">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UserManagerControls\UserManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\UserManagerControls\UserManagerForm.Designer.cs">
+      <DependentUpon>UserManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\ArchiveManager.cs" />
     <Compile Include="Logic\CNSignOn.cs" />
     <Compile Include="Logic\Excel.cs" />
@@ -752,11 +809,21 @@
     <EmbeddedResource Include="Controls\ArchiveControls\UploadArchivesForm.resx">
       <DependentUpon>UploadArchivesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangeLogViewControls\ChangeLogView.resx">
+      <DependentUpon>ChangeLogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChangePasswordUI.resx">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ClientControls\ClientInfo.resx">
       <DependentUpon>ClientInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CommisionCalculatorControls\CommisionCalculatorForm.resx">
       <DependentUpon>CommisionCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\AddTaskManager.resx">
+      <DependentUpon>AddTaskManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\UserControls\FileReviewTabControl.resx">
       <DependentUpon>FileReviewTabControl.cs</DependentUpon>
@@ -781,6 +848,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ContactControls\UserControls\ClientGroupControl.resx">
       <DependentUpon>ClientGroupControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ContactControls\ContactInfo.resx">
       <DependentUpon>ContactInfo.cs</DependentUpon>
@@ -815,8 +883,20 @@
     <EmbeddedResource Include="Controls\FileControls\UserControls\StandardBenefitStatementsControl.resx">
       <DependentUpon>StandardBenefitStatementsControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterTaskControls\CreateEditTask.resx">
+      <DependentUpon>CreateEditTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterTaskControls\DependencySelect.resx">
+      <DependentUpon>DependencySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterTaskControls\MasterTaskManager.resx">
+      <DependentUpon>MasterTaskManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MedicalSummariesControls\MedicalSummariesForm.resx">
       <DependentUpon>MedicalSummariesForm.cs</DependentUpon>
@@ -874,6 +954,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SharedControls\PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserManagerControls\UserManagerForm.resx">
+      <DependentUpon>UserManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -958,6 +1041,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\MasterTaskControls\UserControls\" />
     <Folder Include="Controls\MedicalSummariesControls\CustomControls\" />
     <Folder Include="Controls\PrescriptionSummariesControls\Models\" />
     <Folder Include="Migrations\" />

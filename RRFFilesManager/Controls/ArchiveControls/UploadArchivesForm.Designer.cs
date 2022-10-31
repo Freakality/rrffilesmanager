@@ -59,15 +59,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentType = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.DocumentFormContent = new System.Windows.Forms.Panel();
-            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ArchivesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
-            this.previewArchiveUserControl = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
-            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
+            this.previewArchiveUserControl = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
+            this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FilesGridView)).BeginInit();
@@ -495,14 +495,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentFormContent.Size = new System.Drawing.Size(868, 140);
             this.DocumentFormContent.TabIndex = 3;
             // 
-            // findFilePanelUserControl1
-            // 
-            this.findFilePanelUserControl1.File = null;
-            this.findFilePanelUserControl1.Location = new System.Drawing.Point(3, 3);
-            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
-            this.findFilePanelUserControl1.Size = new System.Drawing.Size(862, 35);
-            this.findFilePanelUserControl1.TabIndex = 147;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ArchivesGridView);
@@ -556,6 +548,19 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Multiselect = true;
+            // 
+            // findFilePanelUserControl1
+            // 
+            this.findFilePanelUserControl1.File = null;
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(3, 3);
+            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(862, 35);
+            this.findFilePanelUserControl1.TabIndex = 147;
+            // 
             // previewArchiveUserControl
             // 
             this.previewArchiveUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -571,11 +576,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
             this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
             this.previewArchiveUserControl1.TabIndex = 0;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Multiselect = true;
             // 
             // UploadArchivesForm
             // 

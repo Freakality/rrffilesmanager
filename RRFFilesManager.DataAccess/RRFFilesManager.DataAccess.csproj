@@ -139,6 +139,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
@@ -187,6 +188,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\Extensions.cs" />
     <Compile Include="Abstractions\IDrugRepository.cs" />
     <Compile Include="Abstractions\IComissionCalculatorRepository.cs" />
     <Compile Include="Abstractions\IClientRepository.cs" />
@@ -198,8 +200,11 @@
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
     <Compile Include="Abstractions\IFileReviewRepository.cs" />
+    <Compile Include="Abstractions\IFileTaskRepository.cs" />
     <Compile Include="Abstractions\IGenericRepository.cs" />
+    <Compile Include="Abstractions\ILogItemRepository.cs" />
     <Compile Include="Abstractions\IMedicalSummaryRepository.cs" />
+    <Compile Include="Abstractions\ILoggedUser.cs" />
     <Compile Include="Abstractions\IOutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="Abstractions\IPharmacyRepository.cs" />
     <Compile Include="Abstractions\IPositionRepository.cs" />
@@ -213,8 +218,13 @@
     <Compile Include="Abstractions\IGroupRepository.cs" />
     <Compile Include="Abstractions\IProvinceRepository.cs" />
     <Compile Include="Abstractions\IStandardBenefitRowRepository.cs" />
+    <Compile Include="Abstractions\ITaskCategoryRepository.cs" />
+    <Compile Include="Abstractions\ITaskRepository.cs" />
+    <Compile Include="Abstractions\ITaskStateRepository.cs" />
+    <Compile Include="Abstractions\ITimelineRepository.cs" />
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
+    <Compile Include="LoggedUser.cs" />
     <Compile Include="DrugRepository.cs" />
     <Compile Include="ComissionCalculatorRepository.cs" />
     <Compile Include="ClientRepository.cs" />
@@ -228,7 +238,9 @@
     <Compile Include="DocumentGroupRepository.cs" />
     <Compile Include="ComissionSubTypeRepository.cs" />
     <Compile Include="FileReviewRepository.cs" />
+    <Compile Include="FileTaskRepository.cs" />
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="LogItemRepository.cs" />
     <Compile Include="Migrations\20210530135625_Pharmacy.cs" />
     <Compile Include="Migrations\20210530135625_Pharmacy.designer.cs">
       <DependentUpon>20210530135625_Pharmacy.cs</DependentUpon>
@@ -309,6 +321,18 @@
     <Compile Include="Migrations\20220401204902_BenefitCleanup.cs" />
     <Compile Include="Migrations\20220401204902_BenefitCleanup.designer.cs">
       <DependentUpon>20220401204902_BenefitCleanup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220730021540_TasksLogsAndUsers.cs" />
+    <Compile Include="Migrations\20220730021540_TasksLogsAndUsers.designer.cs">
+      <DependentUpon>20220730021540_TasksLogsAndUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20221030012709_AddedTimelines.cs" />
+    <Compile Include="Migrations\20221030012709_AddedTimelines.designer.cs">
+      <DependentUpon>20221030012709_AddedTimelines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20221030133932_TaskCreators.cs" />
+    <Compile Include="Migrations\20221030133932_TaskCreators.designer.cs">
+      <DependentUpon>20221030133932_TaskCreators.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
@@ -522,6 +546,10 @@
     <Compile Include="GroupRepository.cs" />
     <Compile Include="ProvinceRepository.cs" />
     <Compile Include="StandardBenefitRowRepository.cs" />
+    <Compile Include="TaskCategoryRepository.cs" />
+    <Compile Include="TaskRepository.cs" />
+    <Compile Include="TaskStateRepository.cs" />
+    <Compile Include="TimelineRepository.cs" />
     <Compile Include="UploadArchivesSettingsRepository.cs" />
     <Compile Include="TemplateRepository.cs" />
   </ItemGroup>
@@ -537,12 +565,12 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.10\build\net461\Microsoft.EntityFrameworkCore.Design.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.EntityFrameworkCore.Design.3.1.10\build\net461\Microsoft.EntityFrameworkCore.Design.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.10\build\net461\Microsoft.EntityFrameworkCore.Design.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.EntityFrameworkCore.Design.3.1.10\build\net461\Microsoft.EntityFrameworkCore.Design.props'))" />
   </Target>
-  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
 </Project>

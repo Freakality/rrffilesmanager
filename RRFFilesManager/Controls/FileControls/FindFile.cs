@@ -59,11 +59,6 @@ namespace RRFFilesManager.FileControls
             GridView.Columns["ID"].Visible = false;
         }
 
-        private void GridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void GridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var selectedRows = GridView?.SelectedRows;
