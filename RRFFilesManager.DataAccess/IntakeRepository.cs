@@ -64,5 +64,26 @@ namespace RRFFilesManager.DataAccess
                 query = query.Take(take.Value);
             return query.ToList();
         }
+
+        public IEnumerable<object> Search2()
+        {
+            //var query =  (IEnumerable<Intake>)from intake in _context.Instakes
+            //             select new {}
+
+            var query = _context.Intakes.Select(x => new
+            {
+                DateOfCall = x.File.DateOfCall,
+                Interviewer = x.File.StaffInterviewer,
+                TypeOfMatter = x.File.MatterType,
+                HowHear = x.File.HowHear,
+                DateOfLoss = x.File.DateOFLoss,
+                ResponsibleLawyer = x.File.ResponsibleLawyer,
+                FileLaweyer = x.File.FileLawyer.ID,
+                Status = x.File.StatutoryNotice,
+                LastName = x.File.Client.LastName,
+                FirstName = x.File.Client.FirstName
+            });
+            return query;
+        }
     }
 }

@@ -37,7 +37,8 @@ namespace RRFFilesManager.IntakeForm
 
         private void RefreshIntakeGridViewDataSource()
         {
-            IntakesGridView.DataSource = _intakeRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 10);
+            //IntakesGridView.DataSource = _intakeRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 10);
+            IntakesGridView.DataSource = _intakeRepository.Search2();
         }
         
         public void SetOnlyHoldIntakes(bool value)
