@@ -83,7 +83,7 @@ namespace RRFFilesManager.DataAccess
                 LastName = x.File.Client.LastName,
                 FirstName = x.File.Client.FirstName
             });
-            return query;
+            return query.ToList();
         }
     }
 }

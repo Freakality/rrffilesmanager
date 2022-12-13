@@ -58,8 +58,8 @@ namespace RRFFilesManager.IntakeForm
             IntakesGridView.MultiSelect = false;
             IntakesGridView.ReadOnly = true;
             RefreshIntakeGridViewDataSource();
-            IntakesGridView.Columns["ID"].Visible = false;
-            IntakesGridView.Columns["FileId"].Visible = false;
+            //IntakesGridView.Columns["ID"].Visible = false;
+            //IntakesGridView.Columns["FileId"].Visible = false;
         }
 
         private void IntakesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
