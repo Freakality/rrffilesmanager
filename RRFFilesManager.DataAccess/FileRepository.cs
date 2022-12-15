@@ -43,6 +43,11 @@ namespace RRFFilesManager.DataAccess
         public void Update(File file)
         {
             var trxFile = GetById(file.ID);
+            if (file.CurrentStatus != trxFile.CurrentStatus)
+            {
+                file.DateOfStatusChange = DateTime.Now;
+                file.PreviousStatus = trxFile.CurrentStatus;
+            }
             _context.Entry(trxFile).CurrentValues.SetValues(file);
             _context.SaveChanges();
         }

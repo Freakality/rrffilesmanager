@@ -13,7 +13,10 @@ namespace RRFFilesManager.DataAccess
     {
  
 
-        public DataContext() : base() { }
+        public DataContext() : base() 
+        {
+            Database.Migrate();
+        }
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<Province> Provinces { get; set; }
@@ -51,6 +54,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<TaskDependency> TaskDependencies { get;  set; }
         public DbSet<LogItem> LogItems { get; set; }
         public DbSet<Timeline> Timelines { get; set; }
+        public DbSet<LawyerTask> LawyerTasks { get; set; }
         public Lawyer User { get; set; }
 
 
@@ -67,11 +71,15 @@ namespace RRFFilesManager.DataAccess
         {
             modelBuilder.Entity<FileContact>().HasKey(sc => new { sc.FileId, sc.ContactId });
             modelBuilder.Entity<TaskDependency>().HasKey(x => new { x.TaskId, x.DependencyId });
-
             modelBuilder.Entity<TaskDependency>()
                 .HasOne(x => x.Task)
                 .WithMany(y => y.Dependencies)
                 .HasForeignKey(x => x.TaskId)
+                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<LawyerTask>()
+                .HasOne(x => x.Lawyer)
+                .WithMany(x => x.Tasks)
+                .HasForeignKey(x => x.LawyerId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
 

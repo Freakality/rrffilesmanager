@@ -202,6 +202,7 @@
     <Compile Include="Abstractions\IFileReviewRepository.cs" />
     <Compile Include="Abstractions\IFileTaskRepository.cs" />
     <Compile Include="Abstractions\IGenericRepository.cs" />
+    <Compile Include="Abstractions\ILawyerTaskRepository.cs" />
     <Compile Include="Abstractions\ILogItemRepository.cs" />
     <Compile Include="Abstractions\IMedicalSummaryRepository.cs" />
     <Compile Include="Abstractions\ILoggedUser.cs" />
@@ -224,6 +225,7 @@
     <Compile Include="Abstractions\ITimelineRepository.cs" />
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
+    <Compile Include="LawyerTaskRepository.cs" />
     <Compile Include="LoggedUser.cs" />
     <Compile Include="DrugRepository.cs" />
     <Compile Include="ComissionCalculatorRepository.cs" />
@@ -333,6 +335,10 @@
     <Compile Include="Migrations\20221030133932_TaskCreators.cs" />
     <Compile Include="Migrations\20221030133932_TaskCreators.designer.cs">
       <DependentUpon>20221030133932_TaskCreators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20221215045243_FileStatusUpdate.cs" />
+    <Compile Include="Migrations\20221215045243_FileStatusUpdate.designer.cs">
+      <DependentUpon>20221215045243_FileStatusUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
