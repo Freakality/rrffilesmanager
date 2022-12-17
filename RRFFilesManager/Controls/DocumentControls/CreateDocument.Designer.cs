@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label DateOFCallLabel;
-            System.Windows.Forms.Label label1;
-            this.FindFileButton = new System.Windows.Forms.Button();
             this.GroupBox90 = new System.Windows.Forms.GroupBox();
-            this.IntakeInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.FileNumberTextBox = new System.Windows.Forms.TextBox();
-            this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
             this.TemplatesGroupBox = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Category = new System.Windows.Forms.ComboBox();
@@ -51,54 +45,18 @@
             this.EditButton = new System.Windows.Forms.Button();
             this.SaveAndCloseButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            DateOFCallLabel = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
+            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             this.GroupBox90.SuspendLayout();
-            this.IntakeInfo.SuspendLayout();
             this.TemplatesGroupBox.SuspendLayout();
             this.PotentialClientInfoPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DateOFCallLabel
-            // 
-            DateOFCallLabel.AutoSize = true;
-            DateOFCallLabel.Location = new System.Drawing.Point(3, 0);
-            DateOFCallLabel.Name = "DateOFCallLabel";
-            DateOFCallLabel.Size = new System.Drawing.Size(90, 17);
-            DateOFCallLabel.TabIndex = 144;
-            DateOFCallLabel.Text = "Matter Type:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(516, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(94, 17);
-            label1.TabIndex = 145;
-            label1.Text = "File Number:";
-            // 
-            // FindFileButton
-            // 
-            this.FindFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindFileButton.BackColor = System.Drawing.Color.Maroon;
-            this.FindFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindFileButton.ForeColor = System.Drawing.Color.White;
-            this.FindFileButton.Location = new System.Drawing.Point(29, 31);
-            this.FindFileButton.Name = "FindFileButton";
-            this.FindFileButton.Size = new System.Drawing.Size(77, 36);
-            this.FindFileButton.TabIndex = 141;
-            this.FindFileButton.Text = "Find File";
-            this.FindFileButton.UseVisualStyleBackColor = false;
-            this.FindFileButton.Click += new System.EventHandler(this.FindFileButton_Click);
-            // 
             // GroupBox90
             // 
             this.GroupBox90.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GroupBox90.Controls.Add(this.IntakeInfo);
-            this.GroupBox90.Controls.Add(this.FindFileButton);
+            this.GroupBox90.Controls.Add(this.findFilePanelUserControl1);
             this.GroupBox90.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox90.Location = new System.Drawing.Point(15, 49);
             this.GroupBox90.Margin = new System.Windows.Forms.Padding(15, 30, 3, 3);
@@ -107,46 +65,6 @@
             this.GroupBox90.TabIndex = 161;
             this.GroupBox90.TabStop = false;
             this.GroupBox90.Text = "File";
-            // 
-            // IntakeInfo
-            // 
-            this.IntakeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IntakeInfo.ColumnCount = 4;
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.IntakeInfo.Controls.Add(DateOFCallLabel, 0, 0);
-            this.IntakeInfo.Controls.Add(this.FileNumberTextBox, 3, 0);
-            this.IntakeInfo.Controls.Add(this.MatterTypeTextBox, 1, 0);
-            this.IntakeInfo.Controls.Add(label1, 2, 0);
-            this.IntakeInfo.Location = new System.Drawing.Point(184, 31);
-            this.IntakeInfo.Name = "IntakeInfo";
-            this.IntakeInfo.RowCount = 1;
-            this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.IntakeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.IntakeInfo.Size = new System.Drawing.Size(1028, 35);
-            this.IntakeInfo.TabIndex = 144;
-            // 
-            // FileNumberTextBox
-            // 
-            this.FileNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(670, 3);
-            this.FileNumberTextBox.Name = "FileNumberTextBox";
-            this.FileNumberTextBox.ReadOnly = true;
-            this.FileNumberTextBox.Size = new System.Drawing.Size(355, 24);
-            this.FileNumberTextBox.TabIndex = 143;
-            // 
-            // MatterTypeTextBox
-            // 
-            this.MatterTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(157, 3);
-            this.MatterTypeTextBox.Name = "MatterTypeTextBox";
-            this.MatterTypeTextBox.ReadOnly = true;
-            this.MatterTypeTextBox.Size = new System.Drawing.Size(353, 24);
-            this.MatterTypeTextBox.TabIndex = 142;
             // 
             // TemplatesGroupBox
             // 
@@ -360,6 +278,19 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Create Document";
             // 
+            // findFilePanelUserControl1
+            // 
+            this.findFilePanelUserControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.findFilePanelUserControl1.File = null;
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(29, 24);
+            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(1183, 43);
+            this.findFilePanelUserControl1.TabIndex = 148;
+            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
+            // 
             // CreateDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,8 +303,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateDocument_FormClosing);
             this.Load += new System.EventHandler(this.CreateDocument_Load);
             this.GroupBox90.ResumeLayout(false);
-            this.IntakeInfo.ResumeLayout(false);
-            this.IntakeInfo.PerformLayout();
             this.TemplatesGroupBox.ResumeLayout(false);
             this.TemplatesGroupBox.PerformLayout();
             this.PotentialClientInfoPanel.ResumeLayout(false);
@@ -384,12 +313,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button FindFileButton;
         internal System.Windows.Forms.GroupBox GroupBox90;
-        private System.Windows.Forms.TableLayoutPanel IntakeInfo;
-        private System.Windows.Forms.TextBox FileNumberTextBox;
-        private System.Windows.Forms.TextBox MatterTypeTextBox;
         internal System.Windows.Forms.GroupBox TemplatesGroupBox;
         internal System.Windows.Forms.Label Label74;
         internal System.Windows.Forms.Label Label73;
@@ -406,5 +330,6 @@
         private System.Windows.Forms.Button Cancel;
         internal System.Windows.Forms.Button EditButton;
         internal System.Windows.Forms.Button SaveAndCloseButton;
+        private Controls.CommonControls.FindFilePanelUserControl findFilePanelUserControl1;
     }
 }

@@ -14,6 +14,7 @@ namespace RRFFilesManager.Controls.CommonControls
     public partial class FindFilePanelUserControl : UserControl
     {
         public Abstractions.File File { get; set; }
+        public event EventHandler FileChanged;
         public FindFilePanelUserControl()
         {
             InitializeComponent();
@@ -28,6 +29,10 @@ namespace RRFFilesManager.Controls.CommonControls
         {
             var findFileForm = sender as FindFile;
             SetForm(findFileForm.SelectedFile);
+            if (FileChanged != null)
+            {
+                FileChanged(this, e);
+            }
         }
 
         private void SetForm(Abstractions.File file)
