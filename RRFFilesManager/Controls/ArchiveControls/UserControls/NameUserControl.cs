@@ -28,12 +28,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.DocumentName = Name.Text;
         }
 
-        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
-        {
-            //[Document Type] -of[Name of Party] - [Document Date]
-            var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
-            return $"{text} - of {Name.Text} - {datePart}";
-        }
+        //public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        //{
+        //    //[Document Type] -of[Name of Party] - [Document Date]
+        //    var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
+        //    return $"{text} - of {Name.Text} - {datePart}";
+        //}
 
 
         private void Name_TextChanged(object sender, EventArgs e)

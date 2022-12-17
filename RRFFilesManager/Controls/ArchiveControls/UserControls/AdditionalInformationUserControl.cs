@@ -43,13 +43,13 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         }
 
-        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
-        {
-            var filename = $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
-            if (!string.IsNullOrWhiteSpace(AdditionalInfo.Text))
-                filename += $" - {AdditionalInfo.Text}";
-            return filename;
-        }
+        //public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        //{
+        //    var filename = $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
+        //    if (!string.IsNullOrWhiteSpace(AdditionalInfo.Text))
+        //        filename += $" - {AdditionalInfo.Text}";
+        //    return filename;
+        //}
 
         private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
         {
