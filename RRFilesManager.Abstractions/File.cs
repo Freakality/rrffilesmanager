@@ -27,6 +27,9 @@ namespace RRFFilesManager.Abstractions
         public virtual Contact Client { get; set; }
         public virtual Intake Intake { get; set; }
         public virtual Timeline Timeline { get; set; }
+        public virtual FileStatus PreviousStatus { get; set; }
+        public virtual FileStatus CurrentStatus { get; set; }
+        public DateTime DateOfStatusChange { get; set; }
         public virtual ICollection<Archive> Archives { get; set; }
         public virtual ICollection<FileContact> Peoples { get; set; }
         public virtual ICollection<OutOfPocketHealthCareExp> Prescriptions { get; set; }
