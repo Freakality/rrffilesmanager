@@ -37,6 +37,7 @@ namespace RRFFilesManager.Controls.CommonControls
             File = file;
             MatterTypeTextBox.Text = File.MatterType?.ToString();
             FileNumberTextBox.Text = File.FileNumber.ToString();
+            ClientNameTextBox.Text = File.Client?.ToString();
         }
     }
 }

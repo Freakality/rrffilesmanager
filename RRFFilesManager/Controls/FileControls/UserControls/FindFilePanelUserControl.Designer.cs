@@ -31,28 +31,56 @@ namespace RRFFilesManager.Controls.CommonControls
         {
             System.Windows.Forms.Label label15;
             System.Windows.Forms.Label DateOFCallLabel;
+            System.Windows.Forms.Label label1;
             this.IntakeInfo = new System.Windows.Forms.TableLayoutPanel();
             this.FindFileButton = new System.Windows.Forms.Button();
             this.FileNumberTextBox = new System.Windows.Forms.TextBox();
             this.MatterTypeTextBox = new System.Windows.Forms.TextBox();
+            this.ClientNameTextBox = new System.Windows.Forms.TextBox();
             label15 = new System.Windows.Forms.Label();
             DateOFCallLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.IntakeInfo.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label15.Location = new System.Drawing.Point(358, 0);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(84, 16);
+            label15.TabIndex = 145;
+            label15.Text = "File Number:";
+            // 
+            // DateOFCallLabel
+            // 
+            DateOFCallLabel.AutoSize = true;
+            DateOFCallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            DateOFCallLabel.Location = new System.Drawing.Point(103, 0);
+            DateOFCallLabel.Name = "DateOFCallLabel";
+            DateOFCallLabel.Size = new System.Drawing.Size(83, 16);
+            DateOFCallLabel.TabIndex = 144;
+            DateOFCallLabel.Text = "Matter Type:";
+            DateOFCallLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // IntakeInfo
             // 
-            this.IntakeInfo.ColumnCount = 5;
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.IntakeInfo.ColumnCount = 7;
             this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.IntakeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.IntakeInfo.Controls.Add(label1, 5, 0);
             this.IntakeInfo.Controls.Add(this.FindFileButton, 0, 0);
             this.IntakeInfo.Controls.Add(this.FileNumberTextBox, 4, 0);
             this.IntakeInfo.Controls.Add(label15, 3, 0);
             this.IntakeInfo.Controls.Add(this.MatterTypeTextBox, 2, 0);
             this.IntakeInfo.Controls.Add(DateOFCallLabel, 1, 0);
+            this.IntakeInfo.Controls.Add(this.ClientNameTextBox, 6, 0);
             this.IntakeInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IntakeInfo.Location = new System.Drawing.Point(0, 0);
             this.IntakeInfo.Margin = new System.Windows.Forms.Padding(0);
@@ -71,49 +99,49 @@ namespace RRFFilesManager.Controls.CommonControls
             this.FindFileButton.ForeColor = System.Drawing.Color.White;
             this.FindFileButton.Location = new System.Drawing.Point(3, 3);
             this.FindFileButton.Name = "FindFileButton";
-            this.FindFileButton.Size = new System.Drawing.Size(144, 29);
+            this.FindFileButton.Size = new System.Drawing.Size(94, 29);
             this.FindFileButton.TabIndex = 146;
             this.FindFileButton.Text = "Find File";
+            this.FindFileButton.UseMnemonic = false;
             this.FindFileButton.UseVisualStyleBackColor = false;
             this.FindFileButton.Click += new System.EventHandler(this.FindFileButton_Click);
             // 
             // FileNumberTextBox
             // 
             this.FileNumberTextBox.Enabled = false;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(612, 3);
+            this.FileNumberTextBox.Location = new System.Drawing.Point(448, 3);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
             this.FileNumberTextBox.ReadOnly = true;
-            this.FileNumberTextBox.Size = new System.Drawing.Size(253, 20);
+            this.FileNumberTextBox.Size = new System.Drawing.Size(159, 20);
             this.FileNumberTextBox.TabIndex = 143;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label15.Location = new System.Drawing.Point(512, 0);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(84, 16);
-            label15.TabIndex = 145;
-            label15.Text = "File Number:";
             // 
             // MatterTypeTextBox
             // 
             this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(253, 3);
+            this.MatterTypeTextBox.Location = new System.Drawing.Point(193, 3);
             this.MatterTypeTextBox.Name = "MatterTypeTextBox";
             this.MatterTypeTextBox.ReadOnly = true;
-            this.MatterTypeTextBox.Size = new System.Drawing.Size(253, 20);
+            this.MatterTypeTextBox.Size = new System.Drawing.Size(159, 20);
             this.MatterTypeTextBox.TabIndex = 142;
             // 
-            // DateOFCallLabel
+            // ClientNameTextBox
             // 
-            DateOFCallLabel.AutoSize = true;
-            DateOFCallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DateOFCallLabel.Location = new System.Drawing.Point(153, 0);
-            DateOFCallLabel.Name = "DateOFCallLabel";
-            DateOFCallLabel.Size = new System.Drawing.Size(83, 16);
-            DateOFCallLabel.TabIndex = 144;
-            DateOFCallLabel.Text = "Matter Type:";
+            this.ClientNameTextBox.Enabled = false;
+            this.ClientNameTextBox.Location = new System.Drawing.Point(703, 3);
+            this.ClientNameTextBox.Name = "ClientNameTextBox";
+            this.ClientNameTextBox.ReadOnly = true;
+            this.ClientNameTextBox.Size = new System.Drawing.Size(159, 20);
+            this.ClientNameTextBox.TabIndex = 147;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(613, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(84, 16);
+            label1.TabIndex = 148;
+            label1.Text = "Client Name:";
             // 
             // FindFilePanelUserControl
             // 
@@ -134,5 +162,6 @@ namespace RRFFilesManager.Controls.CommonControls
         private System.Windows.Forms.Button FindFileButton;
         private System.Windows.Forms.TextBox FileNumberTextBox;
         private System.Windows.Forms.TextBox MatterTypeTextBox;
+        private System.Windows.Forms.TextBox ClientNameTextBox;
     }
 }
