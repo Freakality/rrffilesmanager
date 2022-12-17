@@ -45,24 +45,45 @@ namespace RRFFilesManager.Controls.CommonControls
             // 
             // label15
             // 
+            label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             label15.AutoSize = true;
             label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label15.Location = new System.Drawing.Point(358, 0);
+            label15.Location = new System.Drawing.Point(359, 10);
+            label15.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             label15.Name = "label15";
             label15.Size = new System.Drawing.Size(84, 16);
             label15.TabIndex = 145;
             label15.Text = "File Number:";
+            label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // DateOFCallLabel
             // 
+            DateOFCallLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             DateOFCallLabel.AutoSize = true;
             DateOFCallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            DateOFCallLabel.Location = new System.Drawing.Point(103, 0);
+            DateOFCallLabel.Location = new System.Drawing.Point(103, 10);
+            DateOFCallLabel.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             DateOFCallLabel.Name = "DateOFCallLabel";
-            DateOFCallLabel.Size = new System.Drawing.Size(83, 16);
+            DateOFCallLabel.Size = new System.Drawing.Size(84, 16);
             DateOFCallLabel.TabIndex = 144;
             DateOFCallLabel.Text = "Matter Type:";
-            DateOFCallLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            DateOFCallLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(615, 10);
+            label1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(84, 16);
+            label1.TabIndex = 148;
+            label1.Text = "Client Name:";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // IntakeInfo
             // 
@@ -108,40 +129,39 @@ namespace RRFFilesManager.Controls.CommonControls
             // 
             // FileNumberTextBox
             // 
+            this.FileNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FileNumberTextBox.Enabled = false;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(448, 3);
+            this.FileNumberTextBox.Location = new System.Drawing.Point(449, 8);
+            this.FileNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
             this.FileNumberTextBox.ReadOnly = true;
-            this.FileNumberTextBox.Size = new System.Drawing.Size(159, 20);
+            this.FileNumberTextBox.Size = new System.Drawing.Size(160, 20);
             this.FileNumberTextBox.TabIndex = 143;
             // 
             // MatterTypeTextBox
             // 
+            this.MatterTypeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(193, 3);
+            this.MatterTypeTextBox.Location = new System.Drawing.Point(193, 8);
+            this.MatterTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.MatterTypeTextBox.Name = "MatterTypeTextBox";
             this.MatterTypeTextBox.ReadOnly = true;
-            this.MatterTypeTextBox.Size = new System.Drawing.Size(159, 20);
+            this.MatterTypeTextBox.Size = new System.Drawing.Size(160, 20);
             this.MatterTypeTextBox.TabIndex = 142;
             // 
             // ClientNameTextBox
             // 
+            this.ClientNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ClientNameTextBox.Enabled = false;
-            this.ClientNameTextBox.Location = new System.Drawing.Point(703, 3);
+            this.ClientNameTextBox.Location = new System.Drawing.Point(705, 8);
+            this.ClientNameTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.ClientNameTextBox.Name = "ClientNameTextBox";
             this.ClientNameTextBox.ReadOnly = true;
-            this.ClientNameTextBox.Size = new System.Drawing.Size(159, 20);
+            this.ClientNameTextBox.Size = new System.Drawing.Size(160, 20);
             this.ClientNameTextBox.TabIndex = 147;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(613, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(84, 16);
-            label1.TabIndex = 148;
-            label1.Text = "Client Name:";
             // 
             // FindFilePanelUserControl
             // 

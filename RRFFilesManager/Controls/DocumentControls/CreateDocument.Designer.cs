@@ -280,14 +280,11 @@
             // 
             // findFilePanelUserControl1
             // 
-            this.findFilePanelUserControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.findFilePanelUserControl1.File = null;
-            this.findFilePanelUserControl1.Location = new System.Drawing.Point(29, 24);
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(0, 24);
             this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
-            this.findFilePanelUserControl1.Size = new System.Drawing.Size(1183, 43);
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(1212, 43);
             this.findFilePanelUserControl1.TabIndex = 148;
             this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
             // 
