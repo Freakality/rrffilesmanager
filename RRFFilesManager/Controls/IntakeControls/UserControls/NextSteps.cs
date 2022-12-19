@@ -6,6 +6,7 @@ using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
 using RRFFilesManager.DataAccess.Abstractions;
 using Template = RRFFilesManager.Abstractions.Template;
+using RRFFilesManager.Controls.FileControls;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -40,7 +41,7 @@ namespace RRFFilesManager.IntakeForm
             Home.IntakeForm.NextButton.Visible = false;
             MVATemplatesGroupBox.Visible = this.InvokeCYP.Checked;
             Submit.Visible = this.PAHProcess.Checked;
-            Submit.Text = "Print and Hold";
+            Submit.Text = "Hold and Follow-Up Process ";
         }
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,8 +75,14 @@ namespace RRFFilesManager.IntakeForm
                 }
                 else if (PAHProcess.Checked)
                 {
-                    IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, true);
-                    PrintAndHold();
+                    using (DaysCount Count = new DaysCount())
+                    {
+                        if (Count.ShowDialog() == DialogResult.OK)
+                        {
+                            IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, true);
+                            PrintAndHold();
+                        }
+                    }
                 }
                 Submitting.Instance.Hide();
                 Home.IntakeForm.Close();
