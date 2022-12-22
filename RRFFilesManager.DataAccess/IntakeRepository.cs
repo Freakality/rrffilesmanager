@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
-
+using System.Data;
 
 namespace RRFFilesManager.DataAccess
 {
@@ -65,21 +66,40 @@ namespace RRFFilesManager.DataAccess
             return query.ToList();
         }
 
-        public IEnumerable<object> Search2()
+        public IEnumerable<object> SearchInfoForReporting(DateTime from, DateTime to)
         {
-            //var query =  (IEnumerable<Intake>)from intake in _context.Instakes
-            //             select new {}
+            //var query = from y in _context.Intakes
+            //            select new
+            //            {
+            //                DateOfCall = y.File.DateOfCall.ToString(),
+            //                Interviewer = y.File.StaffInterviewer.Description,
+            //                TypeOfMatter = y.File.MatterType.Description,
+            //                HowHear = y.File.HowHear.Description,
+            //                DateOfLoss = y.File.DateOFLoss.ToString(),
+            //                ResponsibleLawyer = y.File.ResponsibleLawyer.Description,
+            //                FileLaweyer = y.File.FileLawyer.Description,
+            //                Status = y.File.CurrentStatus.Description,
+            //                LastName = y.File.Client.LastName,
+            //                FirstName = y.File.Client.FirstName
+            //            };
 
-            var query = _context.Intakes.Select(x => new
+            //var personData = _context.Database<Intake>();
+
+            //Console.WriteLine(personData.TableName); // output: People
+            //var nameColumn = personData.Prop("Name");
+            //Console.WriteLine(nameColumn.ColumnName); // output: MyName
+
+
+            var query = _context.Intakes.Where(j => j.File.DateOfCall >= from && j.File.DateOfCall <= to).Select(x => new
             {
-                DateOfCall = x.File.DateOfCall,
-                Interviewer = x.File.StaffInterviewer,
-                TypeOfMatter = x.File.MatterType,
-                HowHear = x.File.HowHear,
-                DateOfLoss = x.File.DateOFLoss,
-                ResponsibleLawyer = x.File.ResponsibleLawyer,
-                FileLaweyer = x.File.FileLawyer.ID,
-                Status = x.File.StatutoryNotice,
+                DateOfCall = x.File.DateOfCall.ToString(),
+                Interviewer = x.File.StaffInterviewer.Description,
+                TypeOfMatter = x.File.MatterType.Description,
+                HowHear = x.File.HowHear.Description,
+                DateOfLoss = x.File.DateOFLoss.ToString(),
+                ResponsibleLawyer = x.File.ResponsibleLawyer.Description,
+                FileLaweyer = x.File.FileLawyer.Description,
+                Status = x.File.CurrentStatus.Description,
                 LastName = x.File.Client.LastName,
                 FirstName = x.File.Client.FirstName
             });

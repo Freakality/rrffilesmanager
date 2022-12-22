@@ -25,6 +25,7 @@ namespace RRFFilesManager.IntakeForm
         public static FindIntake Instance => instance == null || instance.IsDisposed ? (instance = new FindIntake()) : instance;
         public Intake SelectedIntake { get; set; }
         private bool? OnlyHoldIntakes { get; set; }
+             
         private void SearchBox_Enter(object sender, EventArgs e)
         {
 
@@ -37,10 +38,9 @@ namespace RRFFilesManager.IntakeForm
 
         private void RefreshIntakeGridViewDataSource()
         {
-            //IntakesGridView.DataSource = _intakeRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 10);
-            IntakesGridView.DataSource = _intakeRepository.Search2();
+            IntakesGridView.DataSource = _intakeRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 10);
         }
-        
+
         public void SetOnlyHoldIntakes(bool value)
         {
             OnlyHoldIntakes = value;
@@ -58,8 +58,8 @@ namespace RRFFilesManager.IntakeForm
             IntakesGridView.MultiSelect = false;
             IntakesGridView.ReadOnly = true;
             RefreshIntakeGridViewDataSource();
-            //IntakesGridView.Columns["ID"].Visible = false;
-            //IntakesGridView.Columns["FileId"].Visible = false;
+            IntakesGridView.Columns["ID"].Visible = false;
+            IntakesGridView.Columns["FileId"].Visible = false;
         }
 
         private void IntakesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
