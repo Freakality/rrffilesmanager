@@ -36,8 +36,12 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gb_GroupBY = new System.Windows.Forms.GroupBox();
+            this.Chl_Columns = new System.Windows.Forms.CheckedListBox();
             this.Dg_Data = new System.Windows.Forms.DataGridView();
+            this.GroupByButton = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.Gb_FindInfoControls.SuspendLayout();
+            this.Gb_GroupBY.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,13 +118,28 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             // 
             this.Gb_GroupBY.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Gb_GroupBY.Controls.Add(this.RefreshButton);
+            this.Gb_GroupBY.Controls.Add(this.GroupByButton);
+            this.Gb_GroupBY.Controls.Add(this.Chl_Columns);
             this.Gb_GroupBY.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gb_GroupBY.Location = new System.Drawing.Point(244, 8);
             this.Gb_GroupBY.Name = "Gb_GroupBY";
-            this.Gb_GroupBY.Size = new System.Drawing.Size(525, 155);
+            this.Gb_GroupBY.Size = new System.Drawing.Size(618, 155);
             this.Gb_GroupBY.TabIndex = 1;
             this.Gb_GroupBY.TabStop = false;
             this.Gb_GroupBY.Text = "Group By";
+            // 
+            // Chl_Columns
+            // 
+            this.Chl_Columns.CheckOnClick = true;
+            this.Chl_Columns.ColumnWidth = 165;
+            this.Chl_Columns.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chl_Columns.FormattingEnabled = true;
+            this.Chl_Columns.Location = new System.Drawing.Point(16, 37);
+            this.Chl_Columns.MultiColumn = true;
+            this.Chl_Columns.Name = "Chl_Columns";
+            this.Chl_Columns.Size = new System.Drawing.Size(194, 114);
+            this.Chl_Columns.TabIndex = 0;
             // 
             // Dg_Data
             // 
@@ -136,8 +155,37 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Dg_Data.Name = "Dg_Data";
             this.Dg_Data.ReadOnly = true;
             this.Dg_Data.RowHeadersVisible = false;
-            this.Dg_Data.Size = new System.Drawing.Size(760, 245);
+            this.Dg_Data.Size = new System.Drawing.Size(853, 245);
             this.Dg_Data.TabIndex = 2;
+            // 
+            // GroupByButton
+            // 
+            this.GroupByButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GroupByButton.BackColor = System.Drawing.Color.Maroon;
+            this.GroupByButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GroupByButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupByButton.ForeColor = System.Drawing.Color.White;
+            this.GroupByButton.Location = new System.Drawing.Point(501, 114);
+            this.GroupByButton.Name = "GroupByButton";
+            this.GroupByButton.Size = new System.Drawing.Size(111, 35);
+            this.GroupByButton.TabIndex = 155;
+            this.GroupByButton.Text = "Group Info";
+            this.GroupByButton.UseVisualStyleBackColor = false;
+            this.GroupByButton.Click += new System.EventHandler(this.GroupByButton_Click);
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RefreshButton.BackColor = System.Drawing.Color.Maroon;
+            this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton.ForeColor = System.Drawing.Color.White;
+            this.RefreshButton.Location = new System.Drawing.Point(501, 37);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(111, 35);
+            this.RefreshButton.TabIndex = 156;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = false;
             // 
             // IntakeReportControls
             // 
@@ -147,9 +195,10 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Controls.Add(this.Gb_GroupBY);
             this.Controls.Add(this.Gb_FindInfoControls);
             this.Name = "IntakeReportControls";
-            this.Size = new System.Drawing.Size(778, 431);
+            this.Size = new System.Drawing.Size(871, 431);
             this.Gb_FindInfoControls.ResumeLayout(false);
             this.Gb_FindInfoControls.PerformLayout();
+            this.Gb_GroupBY.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Data)).EndInit();
             this.ResumeLayout(false);
 
@@ -165,5 +214,8 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox Gb_GroupBY;
         private System.Windows.Forms.DataGridView Dg_Data;
+        private System.Windows.Forms.CheckedListBox Chl_Columns;
+        internal System.Windows.Forms.Button RefreshButton;
+        internal System.Windows.Forms.Button GroupByButton;
     }
 }
