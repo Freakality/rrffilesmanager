@@ -17,7 +17,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
     {
         private readonly IIntakeRepository _intakeRepository;
         private DataTable ReportingInfo { get; set; }
-
+        private DataTable GroupInfo { get; set; } = new DataTable();
 
         public IntakeReportControls()
         {
@@ -55,7 +55,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
 
         private void GroupByButton_Click(object sender, EventArgs e)
         {
-            List<string> ColumnsList = new List<string>();
+            List<string> FieldsList = new List<string>();
             if (Chl_Columns.CheckedItems.Count == 0)
             {
                 MessageBox.Show("You have to check some columns to group the information");
@@ -65,31 +65,36 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
 
             for (int i = 0; i < Chl_Columns.CheckedItems.Count; i++)
             {
-                ColumnsList.Add(Chl_Columns.CheckedItems[i].ToString()) ;
+                FieldsList.Add(Chl_Columns.CheckedItems[i].ToString()) ;
             }
 
-            var qfields = string.Join(", ", ColumnsList.Select(x => $"it[\"{x}\"] as " + x));
+            //var qfields = string.Join(", ", FieldsList.Select(x => $"it[\"{x}\"] as " + x));
+            var qfields = string.Join(", ", FieldsList);
 
-
-            //MessageBox.Show(qfields);
 
             var q = ReportingInfo
                 .AsEnumerable()
                 .AsQueryable()
                 .GroupBy($"new({qfields})", "it")
                 .Select("new (it as Data, Count() as Count)").ToDynamicList();
+                //.Select("new (it as Data, Count() as Count)").ToDynamicList();
 
-
-            //DataTable dt = Utils.Utils.ListToDataTable(q);
+            GroupInfo.Rows.Clear();
+            GroupInfo.Columns.Clear();          
+            foreach (string field in FieldsList)
+            {
+                GroupInfo.Columns.Add(field,typeof(string));
+            }
+            GroupInfo.Columns.Add("Count", typeof(int));
             
-            //foreach (dynamic item in q)
-            //{
-            //    MessageBox.Show(item.Data[0]);
-            //    foreach (var row in item.Data)
-            //    {
-
-            //    }
-            //}
+            foreach (dynamic item in q)
+            {
+                GroupInfo.Rows.Add(item.Data, item.Count);
+                //foreach (DataRow row in item.Data)
+                //{
+                //    GroupInfo.Rows.Add(campos, item.Count);
+                //}
+            }
 
         }
     }
