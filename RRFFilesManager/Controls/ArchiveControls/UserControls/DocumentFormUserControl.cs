@@ -43,7 +43,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
             //if(documentNameType == DocumentNameTypeEnum.FirstDate)
-                return $"{datePart} - {text}";
+                return $"{datePart} {text}";
             //return $"{text} - {datePart}";
         }
 

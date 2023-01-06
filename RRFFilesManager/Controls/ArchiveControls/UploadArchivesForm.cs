@@ -261,7 +261,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             if (string.IsNullOrWhiteSpace(UploadArchivesSettings.OutputFolder))
                 return;
-            var selected = FilesGridView.SelectedRows[0].DataBoundItem as FileInfo;
+            var selected = SelectedFile;
             var path = selected.FullName;
             var archiveFileName = Path.GetFileName(path);
             var destFileName = Path.Combine(UploadArchivesSettings.OutputFolder, archiveFileName);
@@ -275,7 +275,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         public Archive GetArchive()
         {
-            var selected = FilesGridView.SelectedRows[0].DataBoundItem as FileInfo;
+            var selected = SelectedFile;
             var path = selected.FullName;
             var fileName = System.IO.Path.GetFileName(selected.FullName);
             var archive = new Archive();
@@ -503,7 +503,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             if (DocumentForm == null || SelectedFile == null || documentGroup == null)
                 return;
             var documentNameType = documentGroup?.DocumentNameType ?? documentCategory?.DocumentNameType ?? documentType?.DocumentNameType ?? default;
-            var text = documentType?.Description ?? documentCategory?.Description ?? documentGroup.Description;
+            var selectedFileName = System.IO.Path.GetFileName(SelectedFile.FullName);
+            var text = $"{documentType?.Description} - {selectedFileName}";
             DocumentForm?.SetDocumentParameters(text, DocumentDate.ToNullableValue(), DateRangeFrom.ToNullableValue(), DateRangeTo.ToNullableValue(), documentNameType);
             //DocumentForm?.SetDocumentExtension(SelectedFile?.Extension);
             DocumentForm?.SetFileNameControl(DocumentName);
@@ -534,6 +535,16 @@ namespace RRFFilesManager.Controls.ArchiveControls
         }
 
         private void DocumentName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void findFilePanelUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DocumentDate_EnabledChanged(object sender, EventArgs e)
         {
 
         }

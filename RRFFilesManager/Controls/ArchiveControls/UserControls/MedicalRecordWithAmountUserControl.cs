@@ -34,29 +34,29 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.TreatmentAmount = TreatmentAmount.Text;
         }
 
-        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
-        {
-            if(documentNameType == DocumentNameTypeEnum.FirstDate)
-            {
-                var filename = $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
-                if (!string.IsNullOrEmpty(FacilityName.Text))
-                    filename += $" - {FacilityName.Text}";
-                else
-                    filename += $" - {HealthcarePractitioner.Text}";
-                return $"{filename} - {TypeOfAssessment.Text} - {TreatmentAmount.Text}";
-            }
-            else if (documentNameType == DocumentNameTypeEnum.FirstDate)
-            {
-                var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
-                var filename = $"{text}";
-                if (!string.IsNullOrEmpty(FacilityName.Text))
-                    filename += $" - {FacilityName.Text}";
-                else
-                    filename += $" - {HealthcarePractitioner.Text}";
-                return $"{filename} - {datePart}";
-            }
-            return base.GetFileName(text, documentDate, documentDateFrom, documentDateTo);
-        }
+        //public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        //{
+        //    if(documentNameType == DocumentNameTypeEnum.FirstDate)
+        //    {
+        //        var filename = $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
+        //        if (!string.IsNullOrEmpty(FacilityName.Text))
+        //            filename += $" - {FacilityName.Text}";
+        //        else
+        //            filename += $" - {HealthcarePractitioner.Text}";
+        //        return $"{filename} - {TypeOfAssessment.Text} - {TreatmentAmount.Text}";
+        //    }
+        //    else if (documentNameType == DocumentNameTypeEnum.FirstDate)
+        //    {
+        //        var datePart = GetFileNameDatePart(documentDate, documentDateFrom, documentDateTo);
+        //        var filename = $"{text}";
+        //        if (!string.IsNullOrEmpty(FacilityName.Text))
+        //            filename += $" - {FacilityName.Text}";
+        //        else
+        //            filename += $" - {HealthcarePractitioner.Text}";
+        //        return $"{filename} - {datePart}";
+        //    }
+        //    return base.GetFileName(text, documentDate, documentDateFrom, documentDateTo);
+        //}
 
 
         private void AdditionalInfo_TextChanged(object sender, EventArgs e)

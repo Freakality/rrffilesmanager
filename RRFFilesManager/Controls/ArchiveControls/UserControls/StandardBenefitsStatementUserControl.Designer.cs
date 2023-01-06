@@ -217,6 +217,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PolicyClaimLimit.Size = new System.Drawing.Size(108, 20);
             this.PolicyClaimLimit.TabIndex = 12;
             this.PolicyClaimLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PolicyClaimLimit.TextChanged += new System.EventHandler(this.PolicyClaimLimit_TextChanged);
             // 
             // tableLayoutPanel9
             // 

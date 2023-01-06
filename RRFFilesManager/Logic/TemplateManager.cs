@@ -27,7 +27,7 @@ namespace RRFFilesManager.Logic
             if (!System.IO.File.Exists(docuemntTemplatePath))
                 throw new Exception("File not found.");
             var document = wordApp?.Documents.Open(FileName: docuemntTemplatePath, ReadOnly: true);
-            var fileName = $"{DateTime.Now:yyyyMMddhhmmss}_{template.TemplateName}.doc";
+            var fileName = $"{DateTime.Now:yyyyMMdd} {template.TemplateName}.doc";
             var filePath = GetDocumentFilePath(file.FileNumber, fileName);
 
             wordApp.Visible = false;

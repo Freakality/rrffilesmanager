@@ -29,15 +29,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.FacilityName = FacilityName.Text;
             archive.HealthcarePractitioner = HealthcarePractitioner.Text;
         }
-        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
-        {
-            var filename = $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
-            if (!string.IsNullOrEmpty(FacilityName.Text))
-                filename += $" - {FacilityName.Text}";
-            else
-                filename += $" - {HealthcarePractitioner.Text}";
-            return filename;
-        }
+        //public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        //{
+        //    var filename = $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
+        //    if (!string.IsNullOrEmpty(FacilityName.Text))
+        //        filename += $" - {FacilityName.Text}";
+        //    else
+        //        filename += $" - {HealthcarePractitioner.Text}";
+        //    return filename;
+        //}
 
 
         private void AdditionalInfo_TextChanged(object sender, EventArgs e)
