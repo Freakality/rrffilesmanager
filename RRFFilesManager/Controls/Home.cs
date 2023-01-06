@@ -215,6 +215,9 @@ namespace RRFFilesManager
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
-       
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            ReportsForm = Utils.Utils.OpenForm<ReportsForm>(this);
+        }
     }
 }

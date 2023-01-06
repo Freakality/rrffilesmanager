@@ -54,7 +54,7 @@
             this.PrivateFootPrintButton = new System.Windows.Forms.Button();
             this.DocumentTemplate = new System.Windows.Forms.Button();
             this.Button5 = new System.Windows.Forms.Button();
-            this.Button6 = new System.Windows.Forms.Button();
+            this.ReportButton = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
             this.FileManagerButton = new System.Windows.Forms.Button();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -472,20 +472,21 @@
             this.Button5.Text = "POST RESOLUTION DATA";
             this.Button5.UseVisualStyleBackColor = false;
             // 
-            // Button6
+            // ReportButton
             // 
-            this.Button6.BackColor = System.Drawing.Color.DarkGray;
-            this.Button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button6.ForeColor = System.Drawing.Color.Black;
-            this.Button6.Location = new System.Drawing.Point(766, 425);
-            this.Button6.Margin = new System.Windows.Forms.Padding(10);
-            this.Button6.Name = "Button6";
-            this.Button6.Size = new System.Drawing.Size(170, 64);
-            this.Button6.TabIndex = 5;
-            this.Button6.Text = "REPORTS";
-            this.Button6.UseVisualStyleBackColor = false;
+            this.ReportButton.BackColor = System.Drawing.Color.DarkGray;
+            this.ReportButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportButton.ForeColor = System.Drawing.Color.Black;
+            this.ReportButton.Location = new System.Drawing.Point(766, 425);
+            this.ReportButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ReportButton.Name = "ReportButton";
+            this.ReportButton.Size = new System.Drawing.Size(170, 64);
+            this.ReportButton.TabIndex = 5;
+            this.ReportButton.Text = "REPORTS";
+            this.ReportButton.UseVisualStyleBackColor = false;
+            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
             // Button3
             // 
@@ -556,7 +557,7 @@
             this.TableLayoutPanel1.Controls.Add(this.PrivateFootPrintButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.DocumentTemplate, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button5, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.Button6, 0, 5);
+            this.TableLayoutPanel1.Controls.Add(this.ReportButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button3, 0, 0);
             this.TableLayoutPanel1.Controls.Add(this.IntakeButton, 0, 1);
             this.TableLayoutPanel1.Controls.Add(this.FileManagerButton, 0, 2);
@@ -688,7 +689,7 @@
         internal System.Windows.Forms.Button PrivateFootPrintButton;
         internal System.Windows.Forms.Button DocumentTemplate;
         internal System.Windows.Forms.Button Button5;
-        internal System.Windows.Forms.Button Button6;
+        internal System.Windows.Forms.Button ReportButton;
         internal System.Windows.Forms.Button Button3;
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Button FileManagerButton;
