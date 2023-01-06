@@ -28,12 +28,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
         private void FindInfoButton_Click(object sender, EventArgs e)
         {
             ReportingInfo = Utils.Utils.ListToDataTable
-                (_intakeRepository.SearchInfoForReporting(Dtp_From.Value, Dtp_To.Value).ToList());
-            ReportingInfo.Columns.Add("Quantity", typeof(int));
-            foreach (DataRow row in ReportingInfo.Rows)
-            {
-                row["Quantity"] = 1;
-            }
+                (_intakeRepository.SearchInfoForReporting(Dtp_From.Value, Dtp_To.Value).ToList());           
             Dg_Data.DataSource = ReportingInfo;
             if (Dg_Data.Rows.Count == 0)
             {
@@ -61,40 +56,57 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
                 MessageBox.Show("You have to check some columns to group the information");
                 return;
             }
-
-
             for (int i = 0; i < Chl_Columns.CheckedItems.Count; i++)
             {
                 FieldsList.Add(Chl_Columns.CheckedItems[i].ToString()) ;
             }
+            var qfields = string.Join(", ", FieldsList.Select(x => $"it[\"{x}\"] as " + x));
 
-            //var qfields = string.Join(", ", FieldsList.Select(x => $"it[\"{x}\"] as " + x));
-            var qfields = string.Join(", ", FieldsList);
-
-
-            var q = ReportingInfo
+            
+            var GroupedInfoList = ReportingInfo
                 .AsEnumerable()
                 .AsQueryable()
-                .GroupBy($"new({qfields})", "it")
-                .Select("new (it as Data, Count() as Count)").ToDynamicList();
-                //.Select("new (it as Data, Count() as Count)").ToDynamicList();
+                .GroupBy($"new(" + qfields + ")", "it").Select("new (it as Data, Count() as Count)").ToDynamicList();
+
+            //GroupedInfoList era q. La idea es acceder a las propiedades que estan en index.data.key; pueden ser 1 o varias depediendo
+            // de cuantas columnas seleccione el usuario para agrupar la informacion, adelas de 1 que esta cantidad de registros 
+            // que seria Count() as Count como esta justo arriba
+
+            #region pruebas
+            //var qfirst = q[0];
+
+            //var fieldlist = FieldsList.Select(x => x);
+            //foreach (string Field in fieldlist)
+            //{
+            //    //var dictval = from x in qfirst
+            //    //              where x.Data.Key.Contains(Field)
+            //    //              select x;
+
+            //    var dictval = q[0].GetType().GetProperty(Field).GetValue(q[0], null);
+            //}
+            #endregion
+
 
             GroupInfo.Rows.Clear();
-            GroupInfo.Columns.Clear();          
+            GroupInfo.Columns.Clear();
+
+            // aqui agrego las columnas seleccionadas por el usuario a un datatable vacio donde se ira ingresando la informacion
+            // luego de acceder a la misma en la lista resultante GroupedInfoList
             foreach (string field in FieldsList)
             {
                 GroupInfo.Columns.Add(field,typeof(string));
             }
             GroupInfo.Columns.Add("Count", typeof(int));
-            
-            foreach (dynamic item in q)
-            {
-                GroupInfo.Rows.Add(item.Data, item.Count);
-                //foreach (DataRow row in item.Data)
-                //{
-                //    GroupInfo.Rows.Add(campos, item.Count);
-                //}
-            }
+
+          
+            //foreach (dynamic item in q)
+            //{
+            //    GroupInfo.Rows.Add(item.Data, item.Count);
+            //    //foreach (DataRow row in item.Data)
+            //    //{
+            //    //    GroupInfo.Rows.Add(campos, item.Count);
+            //    //}
+            //}
 
         }
     }
