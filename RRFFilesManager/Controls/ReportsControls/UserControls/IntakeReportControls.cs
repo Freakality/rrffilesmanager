@@ -17,7 +17,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
     {
         private readonly IIntakeRepository _intakeRepository;
         private DataTable ReportingInfo { get; set; }
-
+        private DataTable GroupInfo { get; set; } = new DataTable();
 
         public IntakeReportControls()
         {
@@ -28,12 +28,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
         private void FindInfoButton_Click(object sender, EventArgs e)
         {
             ReportingInfo = Utils.Utils.ListToDataTable
-                (_intakeRepository.SearchInfoForReporting(Dtp_From.Value, Dtp_To.Value).ToList());
-            ReportingInfo.Columns.Add("Quantity", typeof(int));
-            foreach (DataRow row in ReportingInfo.Rows)
-            {
-                row["Quantity"] = 1;
-            }
+                (_intakeRepository.SearchInfoForReporting(Dtp_From.Value, Dtp_To.Value).ToList());           
             Dg_Data.DataSource = ReportingInfo;
             if (Dg_Data.Rows.Count == 0)
             {
@@ -55,40 +50,62 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
 
         private void GroupByButton_Click(object sender, EventArgs e)
         {
-            List<string> ColumnsList = new List<string>();
+            List<string> FieldsList = new List<string>();
             if (Chl_Columns.CheckedItems.Count == 0)
             {
                 MessageBox.Show("You have to check some columns to group the information");
                 return;
             }
-
-
             for (int i = 0; i < Chl_Columns.CheckedItems.Count; i++)
             {
-                ColumnsList.Add(Chl_Columns.CheckedItems[i].ToString()) ;
+                FieldsList.Add(Chl_Columns.CheckedItems[i].ToString()) ;
             }
+            var qfields = string.Join(", ", FieldsList.Select(x => $"it[\"{x}\"] as " + x));
 
-            var qfields = string.Join(", ", ColumnsList.Select(x => $"it[\"{x}\"] as " + x));
-
-
-            //MessageBox.Show(qfields);
-
-            var q = ReportingInfo
+            
+            var GroupedInfoList = ReportingInfo
                 .AsEnumerable()
                 .AsQueryable()
-                .GroupBy($"new({qfields})", "it")
-                .Select("new (it as Data, Count() as Count)").ToDynamicList();
+                .GroupBy($"new(" + qfields + ")", "it").Select("new (it as Data, Count() as Count)").ToDynamicList();
+
+            //GroupedInfoList era q. La idea es acceder a las propiedades que estan en index.data.key; pueden ser 1 o varias depediendo
+            // de cuantas columnas seleccione el usuario para agrupar la informacion, adelas de 1 que esta cantidad de registros 
+            // que seria Count() as Count como esta justo arriba
+
+            #region pruebas
+            //var qfirst = q[0];
+
+            //var fieldlist = FieldsList.Select(x => x);
+            //foreach (string Field in fieldlist)
+            //{
+            //    //var dictval = from x in qfirst
+            //    //              where x.Data.Key.Contains(Field)
+            //    //              select x;
+
+            //    var dictval = q[0].GetType().GetProperty(Field).GetValue(q[0], null);
+            //}
+            #endregion
 
 
-            //DataTable dt = Utils.Utils.ListToDataTable(q);
-            
+            GroupInfo.Rows.Clear();
+            GroupInfo.Columns.Clear();
+
+            // aqui agrego las columnas seleccionadas por el usuario a un datatable vacio donde se ira ingresando la informacion
+            // luego de acceder a la misma en la lista resultante GroupedInfoList
+            foreach (string field in FieldsList)
+            {
+                GroupInfo.Columns.Add(field,typeof(string));
+            }
+            GroupInfo.Columns.Add("Count", typeof(int));
+
+          
             //foreach (dynamic item in q)
             //{
-            //    MessageBox.Show(item.Data[0]);
-            //    foreach (var row in item.Data)
-            //    {
-
-            //    }
+            //    GroupInfo.Rows.Add(item.Data, item.Count);
+            //    //foreach (DataRow row in item.Data)
+            //    //{
+            //    //    GroupInfo.Rows.Add(campos, item.Count);
+            //    //}
             //}
 
         }

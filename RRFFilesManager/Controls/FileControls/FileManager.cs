@@ -513,5 +513,6 @@ namespace RRFFilesManager
             if (File != null)
                 RefreshActionLogDataGridViewDataSource();
         }
+
     }
 }

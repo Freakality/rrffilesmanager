@@ -19,6 +19,7 @@ namespace RRFFilesManager
 {
     public partial class CreateDocument : Form
     {
+        private Abstractions.File CurrentFile => findFilePanelUserControl1.File;
         private readonly ITemplateRepository _templateRepository;
         private readonly ArchiveManager _archiveManager;
         private Abstractions.File File { get; set; }
@@ -31,17 +32,12 @@ namespace RRFFilesManager
             _templateRepository = (ITemplateRepository)Program.ServiceProvider.GetService(typeof(ITemplateRepository));
             _archiveManager = new ArchiveManager();
             InitializeComponent();
-        }
-        private void FindFileButton_Click(object sender, EventArgs e)
-        {
-            FindFile.Instance.Show();
-            FindFile.Instance.FormClosing += new FormClosingEventHandler(FindFile_FormClosing);
+            findFilePanelUserControl1.FileChanged += FileChanged;
         }
 
-        private void FindFile_FormClosing(object sender, FormClosingEventArgs e)
+        private void FileChanged(object sender, EventArgs e)
         {
-            var findFileForm = sender as FindFile;
-            SetForm(findFileForm.SelectedFile);
+            SetForm(CurrentFile);
             Archive = null;
         }
 
@@ -50,8 +46,6 @@ namespace RRFFilesManager
             if (file == null)
                 return;
             File = file;
-            MatterTypeTextBox.Text = File.MatterType.ToString();
-            FileNumberTextBox.Text = File.FileNumber.ToString();
 
             FillTypeOfTemplatesComboBox();
 
@@ -217,6 +211,11 @@ namespace RRFFilesManager
         {
             SaveArchiveDocument();
             Close();
+        }
+
+        private void findFilePanelUserControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

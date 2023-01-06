@@ -407,6 +407,18 @@
     <Compile Include="Controls\FileControls\CreateEditFileTask.Designer.cs">
       <DependentUpon>CreateEditFileTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileControls\DaysCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\DaysCount.designer.cs">
+      <DependentUpon>DaysCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FileControls\FileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\FileManager.designer.cs">
+      <DependentUpon>FileManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FileControls\Models\Prescription.cs" />
     <Compile Include="Controls\FileControls\UserControls\FileReviewTabControl.cs">
       <SubType>UserControl</SubType>
@@ -655,12 +667,6 @@
     <Compile Include="Controls\ClientControls\FindClient.Designer.cs">
       <DependentUpon>FindClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FileControls\FileManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Controls\FileControls\FileManager.Designer.cs">
-      <DependentUpon>FileManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\FileControls\FindFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -840,6 +846,12 @@
     <EmbeddedResource Include="Controls\FileControls\AddTaskManager.resx">
       <DependentUpon>AddTaskManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\DaysCount.resx">
+      <DependentUpon>DaysCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\FileManager.resx">
+      <DependentUpon>FileManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\UserControls\FileReviewTabControl.resx">
       <DependentUpon>FileReviewTabControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -939,9 +951,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TemplateControls\CreateTemplate.resx">
       <DependentUpon>CreateTemplate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FileControls\FileManager.resx">
-      <DependentUpon>FileManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ClientControls\FindClient.resx">
       <DependentUpon>FindClient.cs</DependentUpon>

@@ -320,6 +320,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentDate.TabIndex = 4;
             this.DocumentDate.Value = new System.DateTime(2021, 3, 16, 0, 0, 0, 0);
             this.DocumentDate.ValueChanged += new System.EventHandler(this.DocumentDate_ValueChanged);
+            this.DocumentDate.EnabledChanged += new System.EventHandler(this.DocumentDate_EnabledChanged);
             // 
             // tableLayoutPanel6
             // 
@@ -502,6 +503,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
             this.findFilePanelUserControl1.Size = new System.Drawing.Size(862, 35);
             this.findFilePanelUserControl1.TabIndex = 147;
+            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
             // 
             // groupBox2
             // 

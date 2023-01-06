@@ -408,16 +408,21 @@ namespace RRFFilesManager
         /// </summary>
         public void UnloadPreviewHandler()
         {
-            if (mCurrentPreviewHandler is IPreviewHandler)
+            try
             {
-                // explicitly unload the content
-                ((IPreviewHandler)mCurrentPreviewHandler).Unload();
+                if (mCurrentPreviewHandler is IPreviewHandler)
+                {
+                    // explicitly unload the content
+                    ((IPreviewHandler)mCurrentPreviewHandler)?.Unload();
+                }
+                if (mCurrentPreviewHandlerStream != null)
+                {
+                    mCurrentPreviewHandlerStream.Close();
+                    mCurrentPreviewHandlerStream = null;
+                }
             }
-            if (mCurrentPreviewHandlerStream != null)
-            {
-                mCurrentPreviewHandlerStream.Close();
-                mCurrentPreviewHandlerStream = null;
-            }
+            catch { }
+            
         }
 
         #region P/Invoke

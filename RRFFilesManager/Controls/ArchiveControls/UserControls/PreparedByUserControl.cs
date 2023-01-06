@@ -28,10 +28,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             archive.PreparedBy = PreparedBy.Text;
         }
 
-        public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
-        {
-            return $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
-        }
+        //public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)
+        //{
+        //    return $"{base.GetFileName(text, documentDate, documentDateFrom, documentDateTo, documentNameType)}";
+        //}
 
         private void PreparedBy_TextChanged(object sender, EventArgs e)
         {

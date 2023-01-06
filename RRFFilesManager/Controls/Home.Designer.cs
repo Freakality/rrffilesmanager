@@ -54,7 +54,7 @@
             this.PrivateFootPrintButton = new System.Windows.Forms.Button();
             this.DocumentTemplate = new System.Windows.Forms.Button();
             this.Button5 = new System.Windows.Forms.Button();
-            this.ReportsButton = new System.Windows.Forms.Button();
+            this.Button6 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
             this.FileManagerButton = new System.Windows.Forms.Button();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,7 +74,7 @@
             this.Button30.BackColor = System.Drawing.Color.DarkGray;
             this.Button30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button30.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button30.ForeColor = System.Drawing.Color.Black;
             this.Button30.Location = new System.Drawing.Point(766, 342);
             this.Button30.Margin = new System.Windows.Forms.Padding(10);
@@ -89,7 +89,7 @@
             this.Button29.BackColor = System.Drawing.Color.DarkGray;
             this.Button29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button29.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button29.ForeColor = System.Drawing.Color.Black;
             this.Button29.Location = new System.Drawing.Point(766, 259);
             this.Button29.Margin = new System.Windows.Forms.Padding(10);
@@ -104,7 +104,7 @@
             this.Button28.BackColor = System.Drawing.Color.DarkGray;
             this.Button28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button28.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button28.ForeColor = System.Drawing.Color.Black;
             this.Button28.Location = new System.Drawing.Point(766, 176);
             this.Button28.Margin = new System.Windows.Forms.Padding(10);
@@ -119,7 +119,7 @@
             this.Button27.BackColor = System.Drawing.Color.DarkGray;
             this.Button27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button27.ForeColor = System.Drawing.Color.Black;
             this.Button27.Location = new System.Drawing.Point(766, 93);
             this.Button27.Margin = new System.Windows.Forms.Padding(10);
@@ -134,7 +134,7 @@
             this.Button26.BackColor = System.Drawing.Color.DarkGray;
             this.Button26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button26.ForeColor = System.Drawing.Color.Black;
             this.Button26.Location = new System.Drawing.Point(766, 10);
             this.Button26.Margin = new System.Windows.Forms.Padding(10);
@@ -149,7 +149,7 @@
             this.PrescriptionSummariesButton.BackColor = System.Drawing.Color.Gray;
             this.PrescriptionSummariesButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PrescriptionSummariesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrescriptionSummariesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrescriptionSummariesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrescriptionSummariesButton.ForeColor = System.Drawing.Color.White;
             this.PrescriptionSummariesButton.Location = new System.Drawing.Point(577, 342);
             this.PrescriptionSummariesButton.Margin = new System.Windows.Forms.Padding(10);
@@ -165,7 +165,7 @@
             this.PredictorCalculatorButton.BackColor = System.Drawing.Color.Gray;
             this.PredictorCalculatorButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PredictorCalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PredictorCalculatorButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PredictorCalculatorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PredictorCalculatorButton.ForeColor = System.Drawing.Color.White;
             this.PredictorCalculatorButton.Location = new System.Drawing.Point(577, 259);
             this.PredictorCalculatorButton.Margin = new System.Windows.Forms.Padding(10);
@@ -181,7 +181,7 @@
             this.CommisionCalculatorButton.BackColor = System.Drawing.Color.Gray;
             this.CommisionCalculatorButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CommisionCalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CommisionCalculatorButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CommisionCalculatorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommisionCalculatorButton.ForeColor = System.Drawing.Color.White;
             this.CommisionCalculatorButton.Location = new System.Drawing.Point(577, 176);
             this.CommisionCalculatorButton.Margin = new System.Windows.Forms.Padding(10);
@@ -197,7 +197,7 @@
             this.Button22.BackColor = System.Drawing.Color.Gray;
             this.Button22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button22.ForeColor = System.Drawing.Color.White;
             this.Button22.Location = new System.Drawing.Point(577, 93);
             this.Button22.Margin = new System.Windows.Forms.Padding(10);
@@ -212,7 +212,7 @@
             this.Button21.BackColor = System.Drawing.Color.Gray;
             this.Button21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button21.ForeColor = System.Drawing.Color.White;
             this.Button21.Location = new System.Drawing.Point(577, 10);
             this.Button21.Margin = new System.Windows.Forms.Padding(10);
@@ -227,7 +227,7 @@
             this.Button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Button20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button20.ForeColor = System.Drawing.Color.White;
             this.Button20.Location = new System.Drawing.Point(388, 342);
             this.Button20.Margin = new System.Windows.Forms.Padding(10);
@@ -242,7 +242,7 @@
             this.Button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Button19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button19.ForeColor = System.Drawing.Color.White;
             this.Button19.Location = new System.Drawing.Point(388, 259);
             this.Button19.Margin = new System.Windows.Forms.Padding(10);
@@ -257,7 +257,7 @@
             this.Button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Button18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button18.ForeColor = System.Drawing.Color.White;
             this.Button18.Location = new System.Drawing.Point(388, 176);
             this.Button18.Margin = new System.Windows.Forms.Padding(10);
@@ -272,7 +272,7 @@
             this.MedicalSummariesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.MedicalSummariesButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MedicalSummariesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MedicalSummariesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MedicalSummariesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MedicalSummariesButton.ForeColor = System.Drawing.Color.White;
             this.MedicalSummariesButton.Location = new System.Drawing.Point(388, 93);
             this.MedicalSummariesButton.Margin = new System.Windows.Forms.Padding(10);
@@ -288,7 +288,7 @@
             this.Button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Button16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button16.ForeColor = System.Drawing.Color.White;
             this.Button16.Location = new System.Drawing.Point(388, 10);
             this.Button16.Margin = new System.Windows.Forms.Padding(10);
@@ -303,7 +303,7 @@
             this.MasterTaskButton.BackColor = System.Drawing.Color.Black;
             this.MasterTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MasterTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MasterTaskButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MasterTaskButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MasterTaskButton.ForeColor = System.Drawing.Color.White;
             this.MasterTaskButton.Location = new System.Drawing.Point(199, 342);
             this.MasterTaskButton.Margin = new System.Windows.Forms.Padding(10);
@@ -319,7 +319,7 @@
             this.ImportDocumentsButton.BackColor = System.Drawing.Color.Maroon;
             this.ImportDocumentsButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ImportDocumentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ImportDocumentsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImportDocumentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImportDocumentsButton.ForeColor = System.Drawing.Color.White;
             this.ImportDocumentsButton.Location = new System.Drawing.Point(10, 342);
             this.ImportDocumentsButton.Margin = new System.Windows.Forms.Padding(10);
@@ -335,7 +335,7 @@
             this.Button13.BackColor = System.Drawing.Color.Black;
             this.Button13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button13.ForeColor = System.Drawing.Color.White;
             this.Button13.Location = new System.Drawing.Point(199, 259);
             this.Button13.Margin = new System.Windows.Forms.Padding(10);
@@ -350,7 +350,7 @@
             this.Contacts.BackColor = System.Drawing.Color.Black;
             this.Contacts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Contacts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contacts.ForeColor = System.Drawing.Color.White;
             this.Contacts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Contacts.Location = new System.Drawing.Point(199, 176);
@@ -367,7 +367,7 @@
             this.Button11.BackColor = System.Drawing.Color.Maroon;
             this.Button11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button11.ForeColor = System.Drawing.Color.White;
             this.Button11.Location = new System.Drawing.Point(10, 259);
             this.Button11.Margin = new System.Windows.Forms.Padding(10);
@@ -382,7 +382,7 @@
             this.AddNewTaskButton.BackColor = System.Drawing.Color.Black;
             this.AddNewTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddNewTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddNewTaskButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewTaskButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewTaskButton.ForeColor = System.Drawing.Color.White;
             this.AddNewTaskButton.Location = new System.Drawing.Point(199, 93);
             this.AddNewTaskButton.Margin = new System.Windows.Forms.Padding(10);
@@ -398,7 +398,7 @@
             this.CalendarButton.BackColor = System.Drawing.Color.Black;
             this.CalendarButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalendarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalendarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalendarButton.ForeColor = System.Drawing.Color.White;
             this.CalendarButton.Location = new System.Drawing.Point(199, 10);
             this.CalendarButton.Margin = new System.Windows.Forms.Padding(10);
@@ -414,7 +414,7 @@
             this.CreateDocumentsButton.BackColor = System.Drawing.Color.Maroon;
             this.CreateDocumentsButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CreateDocumentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateDocumentsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateDocumentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateDocumentsButton.ForeColor = System.Drawing.Color.White;
             this.CreateDocumentsButton.Location = new System.Drawing.Point(10, 425);
             this.CreateDocumentsButton.Margin = new System.Windows.Forms.Padding(10);
@@ -430,7 +430,7 @@
             this.PrivateFootPrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PrivateFootPrintButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PrivateFootPrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrivateFootPrintButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrivateFootPrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrivateFootPrintButton.ForeColor = System.Drawing.Color.White;
             this.PrivateFootPrintButton.Location = new System.Drawing.Point(388, 425);
             this.PrivateFootPrintButton.Margin = new System.Windows.Forms.Padding(10);
@@ -446,7 +446,7 @@
             this.DocumentTemplate.BackColor = System.Drawing.Color.Black;
             this.DocumentTemplate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DocumentTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DocumentTemplate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentTemplate.ForeColor = System.Drawing.Color.White;
             this.DocumentTemplate.Location = new System.Drawing.Point(199, 425);
             this.DocumentTemplate.Margin = new System.Windows.Forms.Padding(10);
@@ -462,7 +462,7 @@
             this.Button5.BackColor = System.Drawing.Color.Gray;
             this.Button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button5.ForeColor = System.Drawing.Color.White;
             this.Button5.Location = new System.Drawing.Point(577, 425);
             this.Button5.Margin = new System.Windows.Forms.Padding(10);
@@ -472,28 +472,27 @@
             this.Button5.Text = "POST RESOLUTION DATA";
             this.Button5.UseVisualStyleBackColor = false;
             // 
-            // ReportsButton
+            // Button6
             // 
-            this.ReportsButton.BackColor = System.Drawing.Color.DarkGray;
-            this.ReportsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReportsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportsButton.ForeColor = System.Drawing.Color.Black;
-            this.ReportsButton.Location = new System.Drawing.Point(766, 425);
-            this.ReportsButton.Margin = new System.Windows.Forms.Padding(10);
-            this.ReportsButton.Name = "ReportsButton";
-            this.ReportsButton.Size = new System.Drawing.Size(170, 64);
-            this.ReportsButton.TabIndex = 5;
-            this.ReportsButton.Text = "REPORTS";
-            this.ReportsButton.UseVisualStyleBackColor = false;
-            this.ReportsButton.Click += new System.EventHandler(this.ReportsButton_Click);
+            this.Button6.BackColor = System.Drawing.Color.DarkGray;
+            this.Button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button6.ForeColor = System.Drawing.Color.Black;
+            this.Button6.Location = new System.Drawing.Point(766, 425);
+            this.Button6.Margin = new System.Windows.Forms.Padding(10);
+            this.Button6.Name = "Button6";
+            this.Button6.Size = new System.Drawing.Size(170, 64);
+            this.Button6.TabIndex = 5;
+            this.Button6.Text = "REPORTS";
+            this.Button6.UseVisualStyleBackColor = false;
             // 
             // Button3
             // 
             this.Button3.BackColor = System.Drawing.Color.Maroon;
             this.Button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button3.ForeColor = System.Drawing.Color.White;
             this.Button3.Location = new System.Drawing.Point(10, 10);
             this.Button3.Margin = new System.Windows.Forms.Padding(10);
@@ -509,7 +508,7 @@
             this.FileManagerButton.BackColor = System.Drawing.Color.Maroon;
             this.FileManagerButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileManagerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FileManagerButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileManagerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileManagerButton.ForeColor = System.Drawing.Color.White;
             this.FileManagerButton.Location = new System.Drawing.Point(10, 176);
             this.FileManagerButton.Margin = new System.Windows.Forms.Padding(10);
@@ -557,7 +556,7 @@
             this.TableLayoutPanel1.Controls.Add(this.PrivateFootPrintButton, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.DocumentTemplate, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button5, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.ReportsButton, 0, 5);
+            this.TableLayoutPanel1.Controls.Add(this.Button6, 0, 5);
             this.TableLayoutPanel1.Controls.Add(this.Button3, 0, 0);
             this.TableLayoutPanel1.Controls.Add(this.IntakeButton, 0, 1);
             this.TableLayoutPanel1.Controls.Add(this.FileManagerButton, 0, 2);
@@ -579,7 +578,7 @@
             this.IntakeButton.BackColor = System.Drawing.Color.Maroon;
             this.IntakeButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IntakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IntakeButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntakeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IntakeButton.ForeColor = System.Drawing.Color.White;
             this.IntakeButton.Location = new System.Drawing.Point(10, 93);
             this.IntakeButton.Margin = new System.Windows.Forms.Padding(10);
@@ -689,7 +688,7 @@
         internal System.Windows.Forms.Button PrivateFootPrintButton;
         internal System.Windows.Forms.Button DocumentTemplate;
         internal System.Windows.Forms.Button Button5;
-        internal System.Windows.Forms.Button ReportsButton;
+        internal System.Windows.Forms.Button Button6;
         internal System.Windows.Forms.Button Button3;
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Button FileManagerButton;
