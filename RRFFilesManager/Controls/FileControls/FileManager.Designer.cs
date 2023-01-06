@@ -194,17 +194,17 @@
             System.Windows.Forms.Label TBoxFileCloseDateLabel;
             System.Windows.Forms.Label label111;
             System.Windows.Forms.Label label112;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label label273;
             System.Windows.Forms.Label label274;
             System.Windows.Forms.Label label275;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProjectedABSettlementValueLabel = new System.Windows.Forms.Label();
             this.ProjectedABSettlementDateLabel = new System.Windows.Forms.Label();
             this.ProjectedSettlementValueLabel = new System.Windows.Forms.Label();
@@ -566,6 +566,21 @@
             this.Action = new System.Windows.Forms.TabPage();
             this.TabControl2 = new System.Windows.Forms.TabControl();
             this.Timeline = new System.Windows.Forms.TabPage();
+            this.TrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.txtTrialDate = new System.Windows.Forms.TextBox();
+            this.label276 = new System.Windows.Forms.Label();
+            this.PreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.txtPreTrialResolutionDate = new System.Windows.Forms.TextBox();
+            this.PreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.txtPreTrialToBeServedDate = new System.Windows.Forms.TextBox();
+            this.PrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TxtPrePreTrialMeetingDate = new System.Windows.Forms.TextBox();
+            this.ResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.txtResolutionDate = new System.Windows.Forms.TextBox();
+            this.label272 = new System.Windows.Forms.Label();
+            this.MemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TxtMemoToBeServedDate = new System.Windows.Forms.TextBox();
+            this.label271 = new System.Windows.Forms.Label();
             this.TimelineSaveBtn = new System.Windows.Forms.Button();
             this.TBoxAllDefendantUndertakingRecd = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
@@ -936,21 +951,6 @@
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.FindFileButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label271 = new System.Windows.Forms.Label();
-            this.MemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TxtMemoToBeServedDate = new System.Windows.Forms.TextBox();
-            this.label272 = new System.Windows.Forms.Label();
-            this.ResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.txtResolutionDate = new System.Windows.Forms.TextBox();
-            this.PrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TxtPrePreTrialMeetingDate = new System.Windows.Forms.TextBox();
-            this.PreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.txtPreTrialToBeServedDate = new System.Windows.Forms.TextBox();
-            this.PreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.txtPreTrialResolutionDate = new System.Windows.Forms.TextBox();
-            this.label276 = new System.Windows.Forms.Label();
-            this.TrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.txtTrialDate = new System.Windows.Forms.TextBox();
             Label73 = new System.Windows.Forms.Label();
             Label74 = new System.Windows.Forms.Label();
             Label75 = new System.Windows.Forms.Label();
@@ -2735,6 +2735,33 @@
             label112.TabIndex = 147;
             label112.Text = "Sub-Type Category";
             label112.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label273
+            // 
+            label273.AutoSize = true;
+            label273.Location = new System.Drawing.Point(592, 243);
+            label273.Name = "label273";
+            label273.Size = new System.Drawing.Size(169, 16);
+            label273.TabIndex = 174;
+            label273.Text = "Pre Pre Trial Meeting Date:";
+            // 
+            // label274
+            // 
+            label274.AutoSize = true;
+            label274.Location = new System.Drawing.Point(592, 270);
+            label274.Name = "label274";
+            label274.Size = new System.Drawing.Size(181, 16);
+            label274.TabIndex = 177;
+            label274.Text = "Pre Trial To Be Served Date:";
+            // 
+            // label275
+            // 
+            label275.AutoSize = true;
+            label275.Location = new System.Drawing.Point(592, 298);
+            label275.Name = "label275";
+            label275.Size = new System.Drawing.Size(162, 16);
+            label275.TabIndex = 180;
+            label275.Text = "Pre-Trial Resolution Date:";
             // 
             // ProjectedABSettlementValueLabel
             // 
@@ -5013,8 +5040,8 @@
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.InvoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InvoicesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -5110,8 +5137,8 @@
             // PLReportsDataGridView
             // 
             this.PLReportsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.PLReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PLReportsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.PLReportsDataGridView.Name = "PLReportsDataGridView";
@@ -5178,8 +5205,8 @@
             // MedApptsDataGridView
             // 
             this.MedApptsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.MedApptsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MedApptsDataGridView.Location = new System.Drawing.Point(12, 63);
             this.MedApptsDataGridView.Name = "MedApptsDataGridView";
@@ -5369,8 +5396,8 @@
             // ClientNotesDataGridView
             // 
             this.ClientNotesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientNotesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientNotesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.ClientNotesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientNotesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClientNotesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -5815,15 +5842,15 @@
             // ActionLogDataGridView
             // 
             this.ActionLogDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle45.NullValue = null;
-            this.ActionLogDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.NullValue = null;
+            this.ActionLogDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ActionLogDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ActionLogDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ActionLogDataGridView.Location = new System.Drawing.Point(3, 74);
             this.ActionLogDataGridView.Name = "ActionLogDataGridView";
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.ActionLogDataGridView.RowTemplate.Height = 60;
             this.ActionLogDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ActionLogDataGridView.Size = new System.Drawing.Size(1431, 378);
@@ -6234,6 +6261,162 @@
             this.Timeline.TabIndex = 0;
             this.Timeline.Text = "Timeline";
             // 
+            // TrialDate
+            // 
+            this.TrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TrialDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TrialDate.CustomFormat = "\' \'";
+            this.TrialDate.Enabled = false;
+            this.TrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TrialDate.Location = new System.Drawing.Point(1075, 322);
+            this.TrialDate.Name = "TrialDate";
+            this.TrialDate.Size = new System.Drawing.Size(19, 22);
+            this.TrialDate.TabIndex = 185;
+            // 
+            // txtTrialDate
+            // 
+            this.txtTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTrialDate.Location = new System.Drawing.Point(877, 322);
+            this.txtTrialDate.Name = "txtTrialDate";
+            this.txtTrialDate.ReadOnly = true;
+            this.txtTrialDate.Size = new System.Drawing.Size(198, 22);
+            this.txtTrialDate.TabIndex = 184;
+            // 
+            // label276
+            // 
+            this.label276.AutoSize = true;
+            this.label276.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label276.Location = new System.Drawing.Point(590, 325);
+            this.label276.Name = "label276";
+            this.label276.Size = new System.Drawing.Size(77, 16);
+            this.label276.TabIndex = 183;
+            this.label276.Text = "Trial Date";
+            // 
+            // PreTrialResolutionDate
+            // 
+            this.PreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PreTrialResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PreTrialResolutionDate.CustomFormat = "\' \'";
+            this.PreTrialResolutionDate.Enabled = false;
+            this.PreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PreTrialResolutionDate.Location = new System.Drawing.Point(1075, 294);
+            this.PreTrialResolutionDate.Name = "PreTrialResolutionDate";
+            this.PreTrialResolutionDate.Size = new System.Drawing.Size(19, 22);
+            this.PreTrialResolutionDate.TabIndex = 182;
+            // 
+            // txtPreTrialResolutionDate
+            // 
+            this.txtPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(877, 294);
+            this.txtPreTrialResolutionDate.Name = "txtPreTrialResolutionDate";
+            this.txtPreTrialResolutionDate.ReadOnly = true;
+            this.txtPreTrialResolutionDate.Size = new System.Drawing.Size(198, 22);
+            this.txtPreTrialResolutionDate.TabIndex = 181;
+            // 
+            // PreTrialToBeServedDate
+            // 
+            this.PreTrialToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
+            this.PreTrialToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.PreTrialToBeServedDate.CustomFormat = "\' \'";
+            this.PreTrialToBeServedDate.Enabled = false;
+            this.PreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(1075, 266);
+            this.PreTrialToBeServedDate.Name = "PreTrialToBeServedDate";
+            this.PreTrialToBeServedDate.Size = new System.Drawing.Size(19, 22);
+            this.PreTrialToBeServedDate.TabIndex = 179;
+            // 
+            // txtPreTrialToBeServedDate
+            // 
+            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(878, 266);
+            this.txtPreTrialToBeServedDate.Name = "txtPreTrialToBeServedDate";
+            this.txtPreTrialToBeServedDate.ReadOnly = true;
+            this.txtPreTrialToBeServedDate.Size = new System.Drawing.Size(200, 22);
+            this.txtPreTrialToBeServedDate.TabIndex = 178;
+            // 
+            // PrePreTrialMeetingDate
+            // 
+            this.PrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PrePreTrialMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PrePreTrialMeetingDate.CustomFormat = "\' \'";
+            this.PrePreTrialMeetingDate.Enabled = false;
+            this.PrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(1076, 238);
+            this.PrePreTrialMeetingDate.Name = "PrePreTrialMeetingDate";
+            this.PrePreTrialMeetingDate.Size = new System.Drawing.Size(19, 22);
+            this.PrePreTrialMeetingDate.TabIndex = 176;
+            // 
+            // TxtPrePreTrialMeetingDate
+            // 
+            this.TxtPrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(878, 238);
+            this.TxtPrePreTrialMeetingDate.Name = "TxtPrePreTrialMeetingDate";
+            this.TxtPrePreTrialMeetingDate.ReadOnly = true;
+            this.TxtPrePreTrialMeetingDate.Size = new System.Drawing.Size(198, 22);
+            this.TxtPrePreTrialMeetingDate.TabIndex = 175;
+            // 
+            // ResolutionDate
+            // 
+            this.ResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ResolutionDate.CustomFormat = "\' \'";
+            this.ResolutionDate.Enabled = false;
+            this.ResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ResolutionDate.Location = new System.Drawing.Point(1075, 137);
+            this.ResolutionDate.Name = "ResolutionDate";
+            this.ResolutionDate.Size = new System.Drawing.Size(19, 22);
+            this.ResolutionDate.TabIndex = 173;
+            // 
+            // txtResolutionDate
+            // 
+            this.txtResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtResolutionDate.Location = new System.Drawing.Point(879, 137);
+            this.txtResolutionDate.Name = "txtResolutionDate";
+            this.txtResolutionDate.ReadOnly = true;
+            this.txtResolutionDate.Size = new System.Drawing.Size(196, 22);
+            this.txtResolutionDate.TabIndex = 172;
+            // 
+            // label272
+            // 
+            this.label272.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label272.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label272.Location = new System.Drawing.Point(595, 130);
+            this.label272.Name = "label272";
+            this.label272.Size = new System.Drawing.Size(500, 35);
+            this.label272.TabIndex = 171;
+            this.label272.Text = "Resolution Date:";
+            this.label272.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // MemoToBeServedDate
+            // 
+            this.MemoToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
+            this.MemoToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.MemoToBeServedDate.CustomFormat = "\' \'";
+            this.MemoToBeServedDate.Enabled = false;
+            this.MemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.MemoToBeServedDate.Location = new System.Drawing.Point(1075, 87);
+            this.MemoToBeServedDate.Name = "MemoToBeServedDate";
+            this.MemoToBeServedDate.Size = new System.Drawing.Size(19, 22);
+            this.MemoToBeServedDate.TabIndex = 170;
+            // 
+            // TxtMemoToBeServedDate
+            // 
+            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(878, 87);
+            this.TxtMemoToBeServedDate.Name = "TxtMemoToBeServedDate";
+            this.TxtMemoToBeServedDate.ReadOnly = true;
+            this.TxtMemoToBeServedDate.Size = new System.Drawing.Size(200, 22);
+            this.TxtMemoToBeServedDate.TabIndex = 169;
+            // 
+            // label271
+            // 
+            this.label271.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label271.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label271.Location = new System.Drawing.Point(595, 76);
+            this.label271.Name = "label271";
+            this.label271.Size = new System.Drawing.Size(501, 45);
+            this.label271.TabIndex = 168;
+            this.label271.Text = "Memo To Be Served Date:";
+            this.label271.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // TimelineSaveBtn
             // 
             this.TimelineSaveBtn.BackColor = System.Drawing.Color.SteelBlue;
@@ -6641,8 +6824,8 @@
             // UndertakingsDataGridView
             // 
             this.UndertakingsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.UndertakingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(15, 19);
             this.UndertakingsDataGridView.Name = "UndertakingsDataGridView";
@@ -9019,8 +9202,8 @@
             // ABDenialsDataGridView
             // 
             this.ABDenialsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.ABDenialsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ABDenialsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameofBenefit,
@@ -9992,189 +10175,6 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 142;
             this.PictureBox1.TabStop = false;
-            // 
-            // label271
-            // 
-            this.label271.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label271.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label271.Location = new System.Drawing.Point(595, 76);
-            this.label271.Name = "label271";
-            this.label271.Size = new System.Drawing.Size(501, 45);
-            this.label271.TabIndex = 168;
-            this.label271.Text = "Memo To Be Served Date:";
-            this.label271.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // MemoToBeServedDate
-            // 
-            this.MemoToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.MemoToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.MemoToBeServedDate.CustomFormat = "\' \'";
-            this.MemoToBeServedDate.Enabled = false;
-            this.MemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MemoToBeServedDate.Location = new System.Drawing.Point(1075, 87);
-            this.MemoToBeServedDate.Name = "MemoToBeServedDate";
-            this.MemoToBeServedDate.Size = new System.Drawing.Size(19, 22);
-            this.MemoToBeServedDate.TabIndex = 170;
-            // 
-            // TxtMemoToBeServedDate
-            // 
-            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(878, 87);
-            this.TxtMemoToBeServedDate.Name = "TxtMemoToBeServedDate";
-            this.TxtMemoToBeServedDate.ReadOnly = true;
-            this.TxtMemoToBeServedDate.Size = new System.Drawing.Size(200, 22);
-            this.TxtMemoToBeServedDate.TabIndex = 169;
-            // 
-            // label272
-            // 
-            this.label272.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label272.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label272.Location = new System.Drawing.Point(595, 130);
-            this.label272.Name = "label272";
-            this.label272.Size = new System.Drawing.Size(500, 35);
-            this.label272.TabIndex = 171;
-            this.label272.Text = "Resolution Date:";
-            this.label272.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ResolutionDate
-            // 
-            this.ResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ResolutionDate.CustomFormat = "\' \'";
-            this.ResolutionDate.Enabled = false;
-            this.ResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ResolutionDate.Location = new System.Drawing.Point(1075, 137);
-            this.ResolutionDate.Name = "ResolutionDate";
-            this.ResolutionDate.Size = new System.Drawing.Size(19, 22);
-            this.ResolutionDate.TabIndex = 173;
-            // 
-            // txtResolutionDate
-            // 
-            this.txtResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtResolutionDate.Location = new System.Drawing.Point(879, 137);
-            this.txtResolutionDate.Name = "txtResolutionDate";
-            this.txtResolutionDate.ReadOnly = true;
-            this.txtResolutionDate.Size = new System.Drawing.Size(196, 22);
-            this.txtResolutionDate.TabIndex = 172;
-            // 
-            // label273
-            // 
-            label273.AutoSize = true;
-            label273.Location = new System.Drawing.Point(592, 243);
-            label273.Name = "label273";
-            label273.Size = new System.Drawing.Size(169, 16);
-            label273.TabIndex = 174;
-            label273.Text = "Pre Pre Trial Meeting Date:";
-            // 
-            // PrePreTrialMeetingDate
-            // 
-            this.PrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PrePreTrialMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PrePreTrialMeetingDate.CustomFormat = "\' \'";
-            this.PrePreTrialMeetingDate.Enabled = false;
-            this.PrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(1076, 238);
-            this.PrePreTrialMeetingDate.Name = "PrePreTrialMeetingDate";
-            this.PrePreTrialMeetingDate.Size = new System.Drawing.Size(19, 22);
-            this.PrePreTrialMeetingDate.TabIndex = 176;
-            // 
-            // TxtPrePreTrialMeetingDate
-            // 
-            this.TxtPrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(878, 238);
-            this.TxtPrePreTrialMeetingDate.Name = "TxtPrePreTrialMeetingDate";
-            this.TxtPrePreTrialMeetingDate.ReadOnly = true;
-            this.TxtPrePreTrialMeetingDate.Size = new System.Drawing.Size(198, 22);
-            this.TxtPrePreTrialMeetingDate.TabIndex = 175;
-            // 
-            // label274
-            // 
-            label274.AutoSize = true;
-            label274.Location = new System.Drawing.Point(592, 270);
-            label274.Name = "label274";
-            label274.Size = new System.Drawing.Size(181, 16);
-            label274.TabIndex = 177;
-            label274.Text = "Pre Trial To Be Served Date:";
-            // 
-            // PreTrialToBeServedDate
-            // 
-            this.PreTrialToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.PreTrialToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.PreTrialToBeServedDate.CustomFormat = "\' \'";
-            this.PreTrialToBeServedDate.Enabled = false;
-            this.PreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(1075, 266);
-            this.PreTrialToBeServedDate.Name = "PreTrialToBeServedDate";
-            this.PreTrialToBeServedDate.Size = new System.Drawing.Size(19, 22);
-            this.PreTrialToBeServedDate.TabIndex = 179;
-            // 
-            // txtPreTrialToBeServedDate
-            // 
-            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(878, 266);
-            this.txtPreTrialToBeServedDate.Name = "txtPreTrialToBeServedDate";
-            this.txtPreTrialToBeServedDate.ReadOnly = true;
-            this.txtPreTrialToBeServedDate.Size = new System.Drawing.Size(200, 22);
-            this.txtPreTrialToBeServedDate.TabIndex = 178;
-            // 
-            // label275
-            // 
-            label275.AutoSize = true;
-            label275.Location = new System.Drawing.Point(592, 298);
-            label275.Name = "label275";
-            label275.Size = new System.Drawing.Size(162, 16);
-            label275.TabIndex = 180;
-            label275.Text = "Pre-Trial Resolution Date:";
-            // 
-            // PreTrialResolutionDate
-            // 
-            this.PreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PreTrialResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PreTrialResolutionDate.CustomFormat = "\' \'";
-            this.PreTrialResolutionDate.Enabled = false;
-            this.PreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialResolutionDate.Location = new System.Drawing.Point(1075, 294);
-            this.PreTrialResolutionDate.Name = "PreTrialResolutionDate";
-            this.PreTrialResolutionDate.Size = new System.Drawing.Size(19, 22);
-            this.PreTrialResolutionDate.TabIndex = 182;
-            // 
-            // txtPreTrialResolutionDate
-            // 
-            this.txtPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(877, 294);
-            this.txtPreTrialResolutionDate.Name = "txtPreTrialResolutionDate";
-            this.txtPreTrialResolutionDate.ReadOnly = true;
-            this.txtPreTrialResolutionDate.Size = new System.Drawing.Size(198, 22);
-            this.txtPreTrialResolutionDate.TabIndex = 181;
-            // 
-            // label276
-            // 
-            this.label276.AutoSize = true;
-            this.label276.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label276.Location = new System.Drawing.Point(590, 325);
-            this.label276.Name = "label276";
-            this.label276.Size = new System.Drawing.Size(77, 16);
-            this.label276.TabIndex = 183;
-            this.label276.Text = "Trial Date";
-            // 
-            // TrialDate
-            // 
-            this.TrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TrialDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TrialDate.CustomFormat = "\' \'";
-            this.TrialDate.Enabled = false;
-            this.TrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TrialDate.Location = new System.Drawing.Point(1075, 322);
-            this.TrialDate.Name = "TrialDate";
-            this.TrialDate.Size = new System.Drawing.Size(19, 22);
-            this.TrialDate.TabIndex = 185;
-            // 
-            // txtTrialDate
-            // 
-            this.txtTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtTrialDate.Location = new System.Drawing.Point(877, 322);
-            this.txtTrialDate.Name = "txtTrialDate";
-            this.txtTrialDate.ReadOnly = true;
-            this.txtTrialDate.Size = new System.Drawing.Size(198, 22);
-            this.txtTrialDate.TabIndex = 184;
             // 
             // FileManager
             // 

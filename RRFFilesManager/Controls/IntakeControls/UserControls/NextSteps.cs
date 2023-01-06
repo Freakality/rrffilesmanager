@@ -7,6 +7,8 @@ using RRFFilesManager.Logic;
 using RRFFilesManager.DataAccess.Abstractions;
 using Template = RRFFilesManager.Abstractions.Template;
 using RRFFilesManager.Controls.FileControls;
+using RRFFilesManager.DataAccess;
+using System.Collections;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -14,12 +16,20 @@ namespace RRFFilesManager.IntakeForm
     {
         public bool RefillCYADocument { get; set; }
         private readonly ITemplateRepository _templateRepository;
+        private readonly ITaskRepository _taskRepository;
+        private readonly IFileRepository _fileRepository;
+        private readonly ITaskStateRepository _taskStateRepository;
+
         private readonly ArchiveManager _archiveManager;
         private Archive Document { get; set; }
         private Archive Workbook { get; set; }
         public NextSteps()
         {
             _templateRepository = Program.GetService<ITemplateRepository>();
+            _taskRepository = Program.GetService<ITaskRepository>();
+            _fileRepository = Program.GetService<IFileRepository>();
+            _taskStateRepository = Program.GetService<ITaskStateRepository>();
+
             _archiveManager = new ArchiveManager();
             InitializeComponent();
             var typesOfTemplates = _templateRepository.List(Home.IntakeForm.Intake.File.MatterType.ID, "CYA")?.Select(s => s.TypeOfTemplate).Distinct().ToArray();
@@ -41,7 +51,7 @@ namespace RRFFilesManager.IntakeForm
             Home.IntakeForm.NextButton.Visible = false;
             MVATemplatesGroupBox.Visible = this.InvokeCYP.Checked;
             Submit.Visible = this.PAHProcess.Checked;
-            Submit.Text = "Hold and Follow-Up Process ";
+            Submit.Text = "Hold and Follow-Up Process";
         }
 
         private void TypeTemplate_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,8 +89,11 @@ namespace RRFFilesManager.IntakeForm
                     {
                         if (Count.ShowDialog() == DialogResult.OK)
                         {
+                            var _task = _taskRepository.List().Where(t => t.TaskCategory.Description == "Potential Client");
+                            _fileRepository.AddAllCategoryTasks(Home.IntakeForm.Intake.File,_task,_taskStateRepository.GetById(1),Count.days);
+                            MessageBox.Show("task assignment complete");
                             IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, true);
-                            PrintAndHold();
+                            //PrintAndHold();
                         }
                     }
                 }
@@ -95,14 +108,10 @@ namespace RRFFilesManager.IntakeForm
                 Home.IntakeForm.Show();
             }
         }
-        
-
         public void PrintAndHold()
         {
             CreateSendItemPAH();
-
         }
-        
         public void CreateSendItemPAH()
         {
             CreateOrUpdateDocument();

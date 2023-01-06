@@ -18,7 +18,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         File GetLastFile(int? clientId = null);
         void AddFileContact(File file, Contact contact);
         void RemoveFileContact(File file, Contact contact);
-        void AddTask(File file, Task task, TaskState taskState);
-        void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState);
+        void AddTask(File file, Task task, TaskState taskState,int Days = 0);
+        void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState, int Days = 0);
     }
 }
