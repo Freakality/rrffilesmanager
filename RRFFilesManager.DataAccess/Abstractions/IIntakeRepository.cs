@@ -15,5 +15,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         Intake GetById(int intakeId);
         IEnumerable<Intake> List();
         IEnumerable<Intake> Search(string searchText, bool? hold = null, int? take = null);
+        IEnumerable<Object> SearchInfoForReporting(DateTime from, DateTime to);
     }
 }

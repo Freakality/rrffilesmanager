@@ -144,7 +144,7 @@
             this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
             this.PictureBox1.Location = new System.Drawing.Point(1096, 2);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(224, 68);
+            this.PictureBox1.Size = new System.Drawing.Size(224, 58);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 145;
             this.PictureBox1.TabStop = false;

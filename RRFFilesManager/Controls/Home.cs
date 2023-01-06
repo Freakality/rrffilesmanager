@@ -25,6 +25,7 @@ using RRFFilesManager.Controls;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.FileControls;
 using RRFFilesManager.Controls.UserManagerControls;
+using RRFFilesManager.Controls.ReportsControls;
 
 namespace RRFFilesManager
 {
@@ -77,6 +78,8 @@ namespace RRFFilesManager
         public static AddTaskManager AddTaskManager { get; set; }
         public static ChangeLogView ChangeLogView { get; set; }
         public static UserManagerForm UserManagerForm { get; set; }
+
+        public static ReportsForm ReportsForm { get; set; }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -181,6 +184,11 @@ namespace RRFFilesManager
             Utils.Utils.OpenForm<PredictorCalculatorForm>(this);
         }
 
+        private void ReportsButton_Click(object sender, EventArgs e)
+        {
+            ReportsForm = Utils.Utils.OpenForm<ReportsForm>(this);
+        }
+
         private void AddNewTaskButton_Click(object sender, EventArgs e)
         {
             AddTaskManager = Utils.Utils.OpenForm<AddTaskManager>(this);
@@ -205,6 +213,11 @@ namespace RRFFilesManager
                 UserManagerForm = Utils.Utils.OpenForm<UserManagerForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
+        }
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            ReportsForm = Utils.Utils.OpenForm<ReportsForm>(this);
         }
     }
 }

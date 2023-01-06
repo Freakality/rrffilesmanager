@@ -26,6 +26,7 @@ namespace RRFFilesManager
         [STAThread]
         static void Main()
         {
+
             try
             {
                 Application.EnableVisualStyles();
@@ -38,7 +39,7 @@ namespace RRFFilesManager
                 //Application.Run(LoginUI.Instance);
                 Application.Run(Home.Instance);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }

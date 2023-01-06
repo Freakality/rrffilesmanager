@@ -25,6 +25,7 @@ namespace RRFFilesManager.IntakeForm
         public static FindIntake Instance => instance == null || instance.IsDisposed ? (instance = new FindIntake()) : instance;
         public Intake SelectedIntake { get; set; }
         private bool? OnlyHoldIntakes { get; set; }
+             
         private void SearchBox_Enter(object sender, EventArgs e)
         {
 
@@ -39,7 +40,7 @@ namespace RRFFilesManager.IntakeForm
         {
             IntakesGridView.DataSource = _intakeRepository.Search(SearchTextBox.Text, OnlyHoldIntakes, 10);
         }
-        
+
         public void SetOnlyHoldIntakes(bool value)
         {
             OnlyHoldIntakes = value;
