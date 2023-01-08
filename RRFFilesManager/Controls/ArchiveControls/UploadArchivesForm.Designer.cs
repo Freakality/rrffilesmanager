@@ -59,15 +59,15 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentType = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.DocumentFormContent = new System.Windows.Forms.Panel();
+            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ArchivesGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.PreviewPanel = new System.Windows.Forms.Panel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             this.previewArchiveUserControl = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FilesGridView)).BeginInit();
@@ -94,7 +94,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             groupBox1.Controls.Add(this.SelectFiles);
             groupBox1.Controls.Add(this.FilesGridView);
             groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             groupBox1.Location = new System.Drawing.Point(0, 0);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new System.Drawing.Size(862, 151);
@@ -145,11 +145,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.FilesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FilesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FilesGridView.Location = new System.Drawing.Point(3, 19);
+            this.FilesGridView.Location = new System.Drawing.Point(3, 18);
             this.FilesGridView.MultiSelect = false;
             this.FilesGridView.Name = "FilesGridView";
             this.FilesGridView.ReadOnly = true;
-            this.FilesGridView.Size = new System.Drawing.Size(856, 129);
+            this.FilesGridView.Size = new System.Drawing.Size(856, 130);
             this.FilesGridView.TabIndex = 0;
             this.FilesGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilesGridView_CellClick);
             this.FilesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilesGridView_CellContentClick);
@@ -506,11 +506,22 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentFormContent.Size = new System.Drawing.Size(868, 140);
             this.DocumentFormContent.TabIndex = 3;
             // 
+            // findFilePanelUserControl1
+            // 
+            this.findFilePanelUserControl1.File = null;
+            this.findFilePanelUserControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(4, 4);
+            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(860, 35);
+            this.findFilePanelUserControl1.TabIndex = 147;
+            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ArchivesGridView);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 510);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(862, 152);
@@ -523,11 +534,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.ArchivesGridView.AllowUserToAddRows = false;
             this.ArchivesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ArchivesGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ArchivesGridView.Location = new System.Drawing.Point(3, 19);
+            this.ArchivesGridView.Location = new System.Drawing.Point(3, 18);
             this.ArchivesGridView.MultiSelect = false;
             this.ArchivesGridView.Name = "ArchivesGridView";
             this.ArchivesGridView.ReadOnly = true;
-            this.ArchivesGridView.Size = new System.Drawing.Size(856, 130);
+            this.ArchivesGridView.Size = new System.Drawing.Size(856, 131);
             this.ArchivesGridView.TabIndex = 2;
             this.ArchivesGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ArchivesGridView_CellClick);
             this.ArchivesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ArchivesGridView_CellContentClick);
@@ -559,22 +570,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
             this.PreviewPanel.TabIndex = 1;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Multiselect = true;
-            // 
-            // findFilePanelUserControl1
-            // 
-            this.findFilePanelUserControl1.File = null;
-            this.findFilePanelUserControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findFilePanelUserControl1.Location = new System.Drawing.Point(4, 4);
-            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
-            this.findFilePanelUserControl1.Size = new System.Drawing.Size(860, 35);
-            this.findFilePanelUserControl1.TabIndex = 147;
-            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
-            // 
             // previewArchiveUserControl
             // 
             this.previewArchiveUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -590,6 +585,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
             this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
             this.previewArchiveUserControl1.TabIndex = 0;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Multiselect = true;
             // 
             // UploadArchivesForm
             // 
