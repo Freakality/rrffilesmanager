@@ -61,10 +61,11 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             // SearchBox
             // 
             this.SearchBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.Location = new System.Drawing.Point(1057, 10);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(329, 20);
+            this.SearchBox.Size = new System.Drawing.Size(329, 26);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
@@ -100,7 +101,7 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             this.ExportExcelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ExportExcelButton.BackColor = System.Drawing.Color.ForestGreen;
             this.ExportExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExportExcelButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.ExportExcelButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExportExcelButton.ForeColor = System.Drawing.Color.White;
             this.ExportExcelButton.Location = new System.Drawing.Point(1240, 3);
             this.ExportExcelButton.Name = "ExportExcelButton";

@@ -63,7 +63,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.DeleteTaskButton.BackColor = System.Drawing.Color.Maroon;
             this.DeleteTaskButton.Enabled = false;
             this.DeleteTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteTaskButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteTaskButton.ForeColor = System.Drawing.Color.White;
             this.DeleteTaskButton.Location = new System.Drawing.Point(1018, 548);
             this.DeleteTaskButton.Name = "DeleteTaskButton";
@@ -79,7 +79,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.EditTaskButton.BackColor = System.Drawing.Color.Maroon;
             this.EditTaskButton.Enabled = false;
             this.EditTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditTaskButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditTaskButton.ForeColor = System.Drawing.Color.White;
             this.EditTaskButton.Location = new System.Drawing.Point(860, 548);
             this.EditTaskButton.Name = "EditTaskButton";
@@ -94,7 +94,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.CreateTaskButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateTaskButton.BackColor = System.Drawing.Color.Maroon;
             this.CreateTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateTaskButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateTaskButton.ForeColor = System.Drawing.Color.White;
             this.CreateTaskButton.Location = new System.Drawing.Point(702, 548);
             this.CreateTaskButton.Name = "CreateTaskButton";
@@ -134,7 +134,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.CBoxTaskCategory.FormattingEnabled = true;
             this.CBoxTaskCategory.Location = new System.Drawing.Point(25, 154);
             this.CBoxTaskCategory.Name = "CBoxTaskCategory";
-            this.CBoxTaskCategory.Size = new System.Drawing.Size(1008, 25);
+            this.CBoxTaskCategory.Size = new System.Drawing.Size(987, 25);
             this.CBoxTaskCategory.TabIndex = 149;
             this.CBoxTaskCategory.SelectedValueChanged += new System.EventHandler(this.CBoxTaskCategory_SelectedValueChanged);
             // 
@@ -143,11 +143,11 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.AddCategoryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddCategoryButton.BackColor = System.Drawing.Color.Maroon;
             this.AddCategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddCategoryButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.AddCategoryButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddCategoryButton.ForeColor = System.Drawing.Color.White;
-            this.AddCategoryButton.Location = new System.Drawing.Point(1039, 144);
+            this.AddCategoryButton.Location = new System.Drawing.Point(1018, 144);
             this.AddCategoryButton.Name = "AddCategoryButton";
-            this.AddCategoryButton.Size = new System.Drawing.Size(122, 39);
+            this.AddCategoryButton.Size = new System.Drawing.Size(143, 39);
             this.AddCategoryButton.TabIndex = 150;
             this.AddCategoryButton.Text = "Add Category";
             this.AddCategoryButton.UseVisualStyleBackColor = false;
@@ -196,7 +196,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // 
             this.HomeButton.BackColor = System.Drawing.Color.Maroon;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.White;
             this.HomeButton.Location = new System.Drawing.Point(1018, 12);
             this.HomeButton.Name = "HomeButton";

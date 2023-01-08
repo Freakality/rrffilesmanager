@@ -73,6 +73,9 @@
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\packages\ClosedXML.0.96.0\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
@@ -1105,6 +1108,9 @@
       <Project>{029a062a-76f4-437a-a3fd-d0a12b5ad521}</Project>
       <Name>RRFFilesManager.Abstractions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -92,7 +92,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.ExportPDFButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.ExportPDFButton.BackColor = System.Drawing.Color.Firebrick;
             this.ExportPDFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExportPDFButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.ExportPDFButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExportPDFButton.ForeColor = System.Drawing.Color.White;
             this.ExportPDFButton.Location = new System.Drawing.Point(1247, 4);
             this.ExportPDFButton.Name = "ExportPDFButton";
@@ -107,7 +107,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.ExportWordButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.ExportWordButton.BackColor = System.Drawing.Color.Navy;
             this.ExportWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExportWordButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.ExportWordButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExportWordButton.ForeColor = System.Drawing.Color.White;
             this.ExportWordButton.Location = new System.Drawing.Point(1095, 4);
             this.ExportWordButton.Name = "ExportWordButton";
@@ -138,21 +138,23 @@ namespace RRFFilesManager.Controls.FileControls
             // SearchBox
             // 
             this.SearchBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.Location = new System.Drawing.Point(1057, 10);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(10);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(329, 20);
+            this.SearchBox.Size = new System.Drawing.Size(329, 26);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // DocumentTypesBox
             // 
             this.DocumentTypesBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTypesBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentTypesBox.FormattingEnabled = true;
             this.DocumentTypesBox.Location = new System.Drawing.Point(10, 10);
             this.DocumentTypesBox.Margin = new System.Windows.Forms.Padding(10);
             this.DocumentTypesBox.Name = "DocumentTypesBox";
-            this.DocumentTypesBox.Size = new System.Drawing.Size(329, 21);
+            this.DocumentTypesBox.Size = new System.Drawing.Size(329, 28);
             this.DocumentTypesBox.TabIndex = 1;
             this.DocumentTypesBox.SelectedIndexChanged += new System.EventHandler(this.DocumentTypesBox_SelectedIndexChanged);
             // 

@@ -70,10 +70,11 @@
             // 
             this.Group.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Group.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Group.FormattingEnabled = true;
             this.Group.Location = new System.Drawing.Point(93, 3);
             this.Group.Name = "Group";
-            this.Group.Size = new System.Drawing.Size(265, 21);
+            this.Group.Size = new System.Drawing.Size(265, 24);
             this.Group.TabIndex = 40;
             this.Group.SelectedIndexChanged += new System.EventHandler(this.Group_SelectedIndexChanged);
             // 
@@ -110,6 +111,7 @@
             this.FindContactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindContactButton.BackColor = System.Drawing.Color.Maroon;
             this.FindContactButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindContactButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindContactButton.ForeColor = System.Drawing.Color.White;
             this.FindContactButton.Location = new System.Drawing.Point(1226, 6);
             this.FindContactButton.Name = "FindContactButton";
@@ -137,6 +139,7 @@
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cancel.BackColor = System.Drawing.Color.Maroon;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(20, 681);
             this.Cancel.Name = "Cancel";
@@ -151,6 +154,7 @@
             this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Save.BackColor = System.Drawing.Color.Maroon;
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.Location = new System.Drawing.Point(1241, 681);
             this.Save.Name = "Save";

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GroupBox90 = new System.Windows.Forms.GroupBox();
+            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             this.TemplatesGroupBox = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Category = new System.Windows.Forms.ComboBox();
@@ -45,7 +46,6 @@
             this.EditButton = new System.Windows.Forms.Button();
             this.SaveAndCloseButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             this.GroupBox90.SuspendLayout();
             this.TemplatesGroupBox.SuspendLayout();
             this.PotentialClientInfoPanel.SuspendLayout();
@@ -65,6 +65,16 @@
             this.GroupBox90.TabIndex = 161;
             this.GroupBox90.TabStop = false;
             this.GroupBox90.Text = "File";
+            // 
+            // findFilePanelUserControl1
+            // 
+            this.findFilePanelUserControl1.File = null;
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(0, 24);
+            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(1212, 43);
+            this.findFilePanelUserControl1.TabIndex = 148;
+            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
             // 
             // TemplatesGroupBox
             // 
@@ -90,7 +100,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(141, 53);
+            this.label2.Location = new System.Drawing.Point(144, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 162;
@@ -120,7 +130,7 @@
             // 
             this.Label73.AutoSize = true;
             this.Label73.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label73.Location = new System.Drawing.Point(26, 52);
+            this.Label73.Location = new System.Drawing.Point(29, 52);
             this.Label73.Name = "Label73";
             this.Label73.Size = new System.Drawing.Size(109, 16);
             this.Label73.TabIndex = 159;
@@ -149,7 +159,7 @@
             this.CreateAndEditButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.CreateAndEditButton.BackColor = System.Drawing.Color.Maroon;
             this.CreateAndEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateAndEditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.CreateAndEditButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAndEditButton.ForeColor = System.Drawing.Color.White;
             this.CreateAndEditButton.Location = new System.Drawing.Point(615, 3);
             this.CreateAndEditButton.Name = "CreateAndEditButton";
@@ -182,6 +192,7 @@
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cancel.BackColor = System.Drawing.Color.Maroon;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(25, 501);
             this.Cancel.Name = "Cancel";
@@ -209,7 +220,7 @@
             this.SendPDFButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.SendPDFButton.BackColor = System.Drawing.Color.Red;
             this.SendPDFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SendPDFButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SendPDFButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SendPDFButton.ForeColor = System.Drawing.Color.White;
             this.SendPDFButton.Location = new System.Drawing.Point(463, 3);
             this.SendPDFButton.Name = "SendPDFButton";
@@ -225,7 +236,7 @@
             this.SendWordButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.SendWordButton.BackColor = System.Drawing.Color.Navy;
             this.SendWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SendWordButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SendWordButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SendWordButton.ForeColor = System.Drawing.Color.White;
             this.SendWordButton.Location = new System.Drawing.Point(311, 3);
             this.SendWordButton.Name = "SendWordButton";
@@ -241,7 +252,7 @@
             this.EditButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.EditButton.BackColor = System.Drawing.Color.Maroon;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.ForeColor = System.Drawing.Color.White;
             this.EditButton.Location = new System.Drawing.Point(159, 3);
             this.EditButton.Name = "EditButton";
@@ -257,7 +268,7 @@
             this.SaveAndCloseButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.SaveAndCloseButton.BackColor = System.Drawing.Color.Maroon;
             this.SaveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveAndCloseButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SaveAndCloseButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveAndCloseButton.ForeColor = System.Drawing.Color.White;
             this.SaveAndCloseButton.Location = new System.Drawing.Point(7, 3);
             this.SaveAndCloseButton.Name = "SaveAndCloseButton";
@@ -277,16 +288,6 @@
             this.label9.Size = new System.Drawing.Size(203, 26);
             this.label9.TabIndex = 2;
             this.label9.Text = "Create Document";
-            // 
-            // findFilePanelUserControl1
-            // 
-            this.findFilePanelUserControl1.File = null;
-            this.findFilePanelUserControl1.Location = new System.Drawing.Point(0, 24);
-            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
-            this.findFilePanelUserControl1.Size = new System.Drawing.Size(1212, 43);
-            this.findFilePanelUserControl1.TabIndex = 148;
-            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
             // 
             // CreateDocument
             // 

@@ -59,11 +59,12 @@ namespace RRFFilesManager.Controls.ContactControls
             // 
             this.Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name.Location = new System.Drawing.Point(128, 3);
             this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(371, 24);
+            this.Name.Size = new System.Drawing.Size(371, 26);
             this.Name.TabIndex = 45;
+            this.Name.Text = "GroupForm";
             // 
             // label16
             // 
@@ -82,7 +83,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.tableLayoutPanel8);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(514, 80);
@@ -95,6 +96,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cancel.BackColor = System.Drawing.Color.Maroon;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(12, 100);
             this.Cancel.Name = "Cancel";
@@ -109,6 +111,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Save.BackColor = System.Drawing.Color.Maroon;
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.Location = new System.Drawing.Point(429, 100);
             this.Save.Name = "Save";
@@ -127,6 +130,7 @@ namespace RRFFilesManager.Controls.ContactControls
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.groupBox1);
+
             this.Text = "GroupForm";
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();

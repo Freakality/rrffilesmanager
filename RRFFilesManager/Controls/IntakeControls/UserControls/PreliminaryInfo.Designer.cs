@@ -90,17 +90,6 @@
             DateOFCallLabel.TabIndex = 6;
             DateOFCallLabel.Text = "Date of Call:";
             // 
-            // DateOfLossLabel
-            // 
-            this.DateOfLossLabel.AutoSize = true;
-            this.DateOfLossLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfLossLabel.ForeColor = System.Drawing.Color.Black;
-            this.DateOfLossLabel.Location = new System.Drawing.Point(618, 92);
-            this.DateOfLossLabel.Name = "DateOfLossLabel";
-            this.DateOfLossLabel.Size = new System.Drawing.Size(92, 17);
-            this.DateOfLossLabel.TabIndex = 8;
-            this.DateOfLossLabel.Text = "Date Of Loss:";
-            // 
             // FileLawyerLabel
             // 
             FileLawyerLabel.AutoSize = true;
@@ -173,6 +162,17 @@
             FileNumberLabel.Size = new System.Drawing.Size(88, 17);
             FileNumberLabel.TabIndex = 2;
             FileNumberLabel.Text = "File Number:";
+            // 
+            // DateOfLossLabel
+            // 
+            this.DateOfLossLabel.AutoSize = true;
+            this.DateOfLossLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateOfLossLabel.ForeColor = System.Drawing.Color.Black;
+            this.DateOfLossLabel.Location = new System.Drawing.Point(618, 92);
+            this.DateOfLossLabel.Name = "DateOfLossLabel";
+            this.DateOfLossLabel.Size = new System.Drawing.Size(92, 17);
+            this.DateOfLossLabel.TabIndex = 8;
+            this.DateOfLossLabel.Text = "Date Of Loss:";
             // 
             // AdditionalNotesTextBox
             // 
@@ -406,10 +406,11 @@
             this.FindIntakeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindIntakeButton.BackColor = System.Drawing.Color.Maroon;
             this.FindIntakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindIntakeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindIntakeButton.ForeColor = System.Drawing.Color.White;
-            this.FindIntakeButton.Location = new System.Drawing.Point(1150, 20);
+            this.FindIntakeButton.Location = new System.Drawing.Point(1118, 20);
             this.FindIntakeButton.Name = "FindIntakeButton";
-            this.FindIntakeButton.Size = new System.Drawing.Size(97, 36);
+            this.FindIntakeButton.Size = new System.Drawing.Size(129, 36);
             this.FindIntakeButton.TabIndex = 140;
             this.FindIntakeButton.Text = "Find Intake";
             this.FindIntakeButton.UseVisualStyleBackColor = false;

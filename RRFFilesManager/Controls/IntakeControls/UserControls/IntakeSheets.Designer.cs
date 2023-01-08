@@ -301,11 +301,11 @@
             // 
             this.LiaEstimDamage.BackColor = System.Drawing.SystemColors.Window;
             this.LiaEstimDamage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaEstimDamage.Location = new System.Drawing.Point(3, 16);
+            this.LiaEstimDamage.Location = new System.Drawing.Point(3, 17);
             this.LiaEstimDamage.Multiline = true;
             this.LiaEstimDamage.Name = "LiaEstimDamage";
             this.LiaEstimDamage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaEstimDamage.Size = new System.Drawing.Size(1154, 60);
+            this.LiaEstimDamage.Size = new System.Drawing.Size(1154, 59);
             this.LiaEstimDamage.TabIndex = 1;
             // 
             // LiaInsuranceCoGroup
@@ -325,11 +325,11 @@
             // 
             this.LiaInsuranceCo.BackColor = System.Drawing.Color.White;
             this.LiaInsuranceCo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaInsuranceCo.Location = new System.Drawing.Point(3, 16);
+            this.LiaInsuranceCo.Location = new System.Drawing.Point(3, 17);
             this.LiaInsuranceCo.Multiline = true;
             this.LiaInsuranceCo.Name = "LiaInsuranceCo";
             this.LiaInsuranceCo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaInsuranceCo.Size = new System.Drawing.Size(1154, 45);
+            this.LiaInsuranceCo.Size = new System.Drawing.Size(1154, 44);
             this.LiaInsuranceCo.TabIndex = 1;
             // 
             // LiaOwnerNameGroup
@@ -350,11 +350,11 @@
             // 
             this.LiaOwnerName.BackColor = System.Drawing.Color.White;
             this.LiaOwnerName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaOwnerName.Location = new System.Drawing.Point(3, 16);
+            this.LiaOwnerName.Location = new System.Drawing.Point(3, 17);
             this.LiaOwnerName.Multiline = true;
             this.LiaOwnerName.Name = "LiaOwnerName";
             this.LiaOwnerName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaOwnerName.Size = new System.Drawing.Size(1154, 46);
+            this.LiaOwnerName.Size = new System.Drawing.Size(1154, 45);
             this.LiaOwnerName.TabIndex = 1;
             // 
             // LiaDriverNameGroup
@@ -375,11 +375,11 @@
             // 
             this.LiaDriverName.BackColor = System.Drawing.Color.White;
             this.LiaDriverName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaDriverName.Location = new System.Drawing.Point(3, 16);
+            this.LiaDriverName.Location = new System.Drawing.Point(3, 17);
             this.LiaDriverName.Multiline = true;
             this.LiaDriverName.Name = "LiaDriverName";
             this.LiaDriverName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaDriverName.Size = new System.Drawing.Size(1154, 43);
+            this.LiaDriverName.Size = new System.Drawing.Size(1154, 42);
             this.LiaDriverName.TabIndex = 1;
             // 
             // LiaYourFaultGroup
@@ -399,11 +399,11 @@
             // 
             this.LiaYourFault.BackColor = System.Drawing.SystemColors.Window;
             this.LiaYourFault.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaYourFault.Location = new System.Drawing.Point(3, 16);
+            this.LiaYourFault.Location = new System.Drawing.Point(3, 17);
             this.LiaYourFault.Multiline = true;
             this.LiaYourFault.Name = "LiaYourFault";
             this.LiaYourFault.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaYourFault.Size = new System.Drawing.Size(1154, 60);
+            this.LiaYourFault.Size = new System.Drawing.Size(1154, 59);
             this.LiaYourFault.TabIndex = 1;
             // 
             // OthersLiabilityGroup
@@ -439,11 +439,11 @@
             // 
             this.LiaHaveCopy.BackColor = System.Drawing.SystemColors.Window;
             this.LiaHaveCopy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaHaveCopy.Location = new System.Drawing.Point(3, 16);
+            this.LiaHaveCopy.Location = new System.Drawing.Point(3, 17);
             this.LiaHaveCopy.Multiline = true;
             this.LiaHaveCopy.Name = "LiaHaveCopy";
             this.LiaHaveCopy.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaHaveCopy.Size = new System.Drawing.Size(1154, 60);
+            this.LiaHaveCopy.Size = new System.Drawing.Size(1154, 59);
             this.LiaHaveCopy.TabIndex = 1;
             // 
             // LieNotifiedMunicipalityGroup
@@ -463,11 +463,11 @@
             // 
             this.LiaNotifiedMunicipality.BackColor = System.Drawing.Color.White;
             this.LiaNotifiedMunicipality.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaNotifiedMunicipality.Location = new System.Drawing.Point(3, 16);
+            this.LiaNotifiedMunicipality.Location = new System.Drawing.Point(3, 17);
             this.LiaNotifiedMunicipality.Multiline = true;
             this.LiaNotifiedMunicipality.Name = "LiaNotifiedMunicipality";
             this.LiaNotifiedMunicipality.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaNotifiedMunicipality.Size = new System.Drawing.Size(1154, 45);
+            this.LiaNotifiedMunicipality.Size = new System.Drawing.Size(1154, 44);
             this.LiaNotifiedMunicipality.TabIndex = 1;
             // 
             // GroupBox35
@@ -487,11 +487,11 @@
             // 
             this.LiaMunicipality.BackColor = System.Drawing.Color.White;
             this.LiaMunicipality.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaMunicipality.Location = new System.Drawing.Point(3, 16);
+            this.LiaMunicipality.Location = new System.Drawing.Point(3, 17);
             this.LiaMunicipality.Multiline = true;
             this.LiaMunicipality.Name = "LiaMunicipality";
             this.LiaMunicipality.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaMunicipality.Size = new System.Drawing.Size(1154, 46);
+            this.LiaMunicipality.Size = new System.Drawing.Size(1154, 45);
             this.LiaMunicipality.TabIndex = 1;
             // 
             // GroupBox36
@@ -512,11 +512,11 @@
             // 
             this.LiaFaultPerson.BackColor = System.Drawing.Color.White;
             this.LiaFaultPerson.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaFaultPerson.Location = new System.Drawing.Point(3, 16);
+            this.LiaFaultPerson.Location = new System.Drawing.Point(3, 17);
             this.LiaFaultPerson.Multiline = true;
             this.LiaFaultPerson.Name = "LiaFaultPerson";
             this.LiaFaultPerson.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaFaultPerson.Size = new System.Drawing.Size(1154, 43);
+            this.LiaFaultPerson.Size = new System.Drawing.Size(1154, 42);
             this.LiaFaultPerson.TabIndex = 1;
             // 
             // GroupBox37
@@ -536,11 +536,11 @@
             // 
             this.LiaOwnNegligence.BackColor = System.Drawing.SystemColors.Window;
             this.LiaOwnNegligence.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaOwnNegligence.Location = new System.Drawing.Point(3, 16);
+            this.LiaOwnNegligence.Location = new System.Drawing.Point(3, 17);
             this.LiaOwnNegligence.Multiline = true;
             this.LiaOwnNegligence.Name = "LiaOwnNegligence";
             this.LiaOwnNegligence.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaOwnNegligence.Size = new System.Drawing.Size(1154, 60);
+            this.LiaOwnNegligence.Size = new System.Drawing.Size(1154, 59);
             this.LiaOwnNegligence.TabIndex = 1;
             // 
             // EILT4EmployeeLabel
@@ -569,11 +569,11 @@
             // 
             this.PolSickBenefits.BackColor = System.Drawing.Color.White;
             this.PolSickBenefits.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolSickBenefits.Location = new System.Drawing.Point(3, 16);
+            this.PolSickBenefits.Location = new System.Drawing.Point(3, 17);
             this.PolSickBenefits.Multiline = true;
             this.PolSickBenefits.Name = "PolSickBenefits";
             this.PolSickBenefits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolSickBenefits.Size = new System.Drawing.Size(1154, 33);
+            this.PolSickBenefits.Size = new System.Drawing.Size(1154, 32);
             this.PolSickBenefits.TabIndex = 1;
             // 
             // Liability
@@ -581,9 +581,9 @@
             this.Liability.AutoScroll = true;
             this.Liability.BackColor = System.Drawing.Color.Transparent;
             this.Liability.Controls.Add(this.Content);
-            this.Liability.Location = new System.Drawing.Point(4, 22);
+            this.Liability.Location = new System.Drawing.Point(4, 25);
             this.Liability.Name = "Liability";
-            this.Liability.Size = new System.Drawing.Size(1342, 584);
+            this.Liability.Size = new System.Drawing.Size(1342, 581);
             this.Liability.TabIndex = 6;
             this.Liability.Text = "Liability";
             // 
@@ -602,7 +602,7 @@
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.Location = new System.Drawing.Point(0, 0);
             this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(1342, 584);
+            this.Content.Size = new System.Drawing.Size(1342, 581);
             this.Content.TabIndex = 16;
             this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.Content_Paint);
             // 
@@ -624,7 +624,7 @@
             // 
             this.LiaDate.Location = new System.Drawing.Point(8, 21);
             this.LiaDate.Name = "LiaDate";
-            this.LiaDate.Size = new System.Drawing.Size(243, 20);
+            this.LiaDate.Size = new System.Drawing.Size(243, 21);
             this.LiaDate.TabIndex = 1;
             // 
             // LiaTime
@@ -634,7 +634,7 @@
             this.LiaTime.Location = new System.Drawing.Point(274, 21);
             this.LiaTime.Name = "LiaTime";
             this.LiaTime.ShowUpDown = true;
-            this.LiaTime.Size = new System.Drawing.Size(152, 20);
+            this.LiaTime.Size = new System.Drawing.Size(152, 21);
             this.LiaTime.TabIndex = 0;
             // 
             // ReceiveCopyGroupBox
@@ -657,7 +657,7 @@
             this.LiaOtherDoc.AutoSize = true;
             this.LiaOtherDoc.Location = new System.Drawing.Point(639, 21);
             this.LiaOtherDoc.Name = "LiaOtherDoc";
-            this.LiaOtherDoc.Size = new System.Drawing.Size(52, 17);
+            this.LiaOtherDoc.Size = new System.Drawing.Size(58, 20);
             this.LiaOtherDoc.TabIndex = 3;
             this.LiaOtherDoc.Text = "Other";
             this.LiaOtherDoc.UseVisualStyleBackColor = true;
@@ -667,7 +667,7 @@
             this.LiaMVCExchange.AutoSize = true;
             this.LiaMVCExchange.Location = new System.Drawing.Point(376, 21);
             this.LiaMVCExchange.Name = "LiaMVCExchange";
-            this.LiaMVCExchange.Size = new System.Drawing.Size(180, 17);
+            this.LiaMVCExchange.Size = new System.Drawing.Size(207, 20);
             this.LiaMVCExchange.TabIndex = 2;
             this.LiaMVCExchange.Text = "MVC Information Exchange Card";
             this.LiaMVCExchange.UseVisualStyleBackColor = true;
@@ -677,7 +677,7 @@
             this.LiaReportCollision.AutoSize = true;
             this.LiaReportCollision.Location = new System.Drawing.Point(87, 21);
             this.LiaReportCollision.Name = "LiaReportCollision";
-            this.LiaReportCollision.Size = new System.Drawing.Size(205, 17);
+            this.LiaReportCollision.Size = new System.Drawing.Size(229, 20);
             this.LiaReportCollision.TabIndex = 1;
             this.LiaReportCollision.Text = "Report from Collision Reporting Centre";
             this.LiaReportCollision.UseVisualStyleBackColor = true;
@@ -687,7 +687,7 @@
             this.LiaMVR.AutoSize = true;
             this.LiaMVR.Location = new System.Drawing.Point(6, 21);
             this.LiaMVR.Name = "LiaMVR";
-            this.LiaMVR.Size = new System.Drawing.Size(50, 17);
+            this.LiaMVR.Size = new System.Drawing.Size(52, 20);
             this.LiaMVR.TabIndex = 0;
             this.LiaMVR.Text = "MVR";
             this.LiaMVR.UseVisualStyleBackColor = true;
@@ -709,11 +709,11 @@
             // 
             this.LiaWhereAccident.BackColor = System.Drawing.Color.White;
             this.LiaWhereAccident.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaWhereAccident.Location = new System.Drawing.Point(3, 16);
+            this.LiaWhereAccident.Location = new System.Drawing.Point(3, 17);
             this.LiaWhereAccident.Multiline = true;
             this.LiaWhereAccident.Name = "LiaWhereAccident";
             this.LiaWhereAccident.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaWhereAccident.Size = new System.Drawing.Size(1154, 76);
+            this.LiaWhereAccident.Size = new System.Drawing.Size(1154, 75);
             this.LiaWhereAccident.TabIndex = 1;
             this.LiaWhereAccident.TextChanged += new System.EventHandler(this.LiaWhereAccident_TextChanged);
             // 
@@ -734,11 +734,11 @@
             // 
             this.LiaExplain.BackColor = System.Drawing.Color.White;
             this.LiaExplain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaExplain.Location = new System.Drawing.Point(3, 16);
+            this.LiaExplain.Location = new System.Drawing.Point(3, 17);
             this.LiaExplain.Multiline = true;
             this.LiaExplain.Name = "LiaExplain";
             this.LiaExplain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaExplain.Size = new System.Drawing.Size(1154, 153);
+            this.LiaExplain.Size = new System.Drawing.Size(1154, 152);
             this.LiaExplain.TabIndex = 1;
             // 
             // LiaHavePhotosGroup
@@ -758,11 +758,11 @@
             // 
             this.LiaHavePhotos.BackColor = System.Drawing.Color.White;
             this.LiaHavePhotos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaHavePhotos.Location = new System.Drawing.Point(3, 16);
+            this.LiaHavePhotos.Location = new System.Drawing.Point(3, 17);
             this.LiaHavePhotos.Multiline = true;
             this.LiaHavePhotos.Name = "LiaHavePhotos";
             this.LiaHavePhotos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaHavePhotos.Size = new System.Drawing.Size(1154, 60);
+            this.LiaHavePhotos.Size = new System.Drawing.Size(1154, 59);
             this.LiaHavePhotos.TabIndex = 1;
             // 
             // LiaNotesGroup
@@ -782,11 +782,11 @@
             // 
             this.LiaNotes.BackColor = System.Drawing.Color.White;
             this.LiaNotes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LiaNotes.Location = new System.Drawing.Point(3, 16);
+            this.LiaNotes.Location = new System.Drawing.Point(3, 17);
             this.LiaNotes.Multiline = true;
             this.LiaNotes.Name = "LiaNotes";
             this.LiaNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LiaNotes.Size = new System.Drawing.Size(1154, 119);
+            this.LiaNotes.Size = new System.Drawing.Size(1154, 118);
             this.LiaNotes.TabIndex = 1;
             // 
             // GroupBox13
@@ -885,11 +885,11 @@
             // 
             this.PolLTDPrivateOrEmployerGroup.BackColor = System.Drawing.SystemColors.Window;
             this.PolLTDPrivateOrEmployerGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolLTDPrivateOrEmployerGroup.Location = new System.Drawing.Point(3, 16);
+            this.PolLTDPrivateOrEmployerGroup.Location = new System.Drawing.Point(3, 17);
             this.PolLTDPrivateOrEmployerGroup.Multiline = true;
             this.PolLTDPrivateOrEmployerGroup.Name = "PolLTDPrivateOrEmployerGroup";
             this.PolLTDPrivateOrEmployerGroup.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolLTDPrivateOrEmployerGroup.Size = new System.Drawing.Size(1137, 39);
+            this.PolLTDPrivateOrEmployerGroup.Size = new System.Drawing.Size(1120, 38);
             this.PolLTDPrivateOrEmployerGroup.TabIndex = 1;
             // 
             // GroupBox123
@@ -900,7 +900,7 @@
             this.GroupBox123.Controls.Add(this.Label116);
             this.GroupBox123.Location = new System.Drawing.Point(16, 236);
             this.GroupBox123.Name = "GroupBox123";
-            this.GroupBox123.Size = new System.Drawing.Size(672, 42);
+            this.GroupBox123.Size = new System.Drawing.Size(655, 42);
             this.GroupBox123.TabIndex = 27;
             this.GroupBox123.TabStop = false;
             // 
@@ -910,7 +910,7 @@
             this.PolCompanyDeniedBenefits.FormattingEnabled = true;
             this.PolCompanyDeniedBenefits.Location = new System.Drawing.Point(342, 11);
             this.PolCompanyDeniedBenefits.Name = "PolCompanyDeniedBenefits";
-            this.PolCompanyDeniedBenefits.Size = new System.Drawing.Size(341, 21);
+            this.PolCompanyDeniedBenefits.Size = new System.Drawing.Size(341, 24);
             this.PolCompanyDeniedBenefits.TabIndex = 20;
             this.PolCompanyDeniedBenefits.ValueMember = "Company";
             // 
@@ -932,7 +932,7 @@
             this.GroupBox102.Controls.Add(this.DeniedSTPorLTDLabel);
             this.GroupBox102.Location = new System.Drawing.Point(654, 126);
             this.GroupBox102.Name = "GroupBox102";
-            this.GroupBox102.Size = new System.Drawing.Size(503, 42);
+            this.GroupBox102.Size = new System.Drawing.Size(486, 42);
             this.GroupBox102.TabIndex = 26;
             this.GroupBox102.TabStop = false;
             // 
@@ -945,7 +945,7 @@
             "STD & LTD"});
             this.PolDeniedSTPorLTD.Location = new System.Drawing.Point(219, 10);
             this.PolDeniedSTPorLTD.Name = "PolDeniedSTPorLTD";
-            this.PolDeniedSTPorLTD.Size = new System.Drawing.Size(292, 21);
+            this.PolDeniedSTPorLTD.Size = new System.Drawing.Size(292, 24);
             this.PolDeniedSTPorLTD.TabIndex = 20;
             // 
             // DeniedSTPorLTDLabel
@@ -966,7 +966,7 @@
             this.GroupBox101.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox101.Location = new System.Drawing.Point(16, 284);
             this.GroupBox101.Name = "GroupBox101";
-            this.GroupBox101.Size = new System.Drawing.Size(1143, 58);
+            this.GroupBox101.Size = new System.Drawing.Size(1126, 58);
             this.GroupBox101.TabIndex = 28;
             this.GroupBox101.TabStop = false;
             this.GroupBox101.Text = "Is your LTD policy a private policy or an employer group policy?";
@@ -979,7 +979,7 @@
             this.GroupBox98.Controls.Add(this.Label117);
             this.GroupBox98.Location = new System.Drawing.Point(16, 126);
             this.GroupBox98.Name = "GroupBox98";
-            this.GroupBox98.Size = new System.Drawing.Size(615, 42);
+            this.GroupBox98.Size = new System.Drawing.Size(598, 42);
             this.GroupBox98.TabIndex = 24;
             this.GroupBox98.TabStop = false;
             // 
@@ -989,7 +989,7 @@
             this.PolDateLostBenefits.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.PolDateLostBenefits.Location = new System.Drawing.Point(466, 11);
             this.PolDateLostBenefits.Name = "PolDateLostBenefits";
-            this.PolDateLostBenefits.Size = new System.Drawing.Size(150, 20);
+            this.PolDateLostBenefits.Size = new System.Drawing.Size(150, 21);
             this.PolDateLostBenefits.TabIndex = 8;
             // 
             // Label117
@@ -1010,7 +1010,7 @@
             this.GroupBox93.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox93.Location = new System.Drawing.Point(14, 752);
             this.GroupBox93.Name = "GroupBox93";
-            this.GroupBox93.Size = new System.Drawing.Size(1143, 138);
+            this.GroupBox93.Size = new System.Drawing.Size(1126, 138);
             this.GroupBox93.TabIndex = 14;
             this.GroupBox93.TabStop = false;
             this.GroupBox93.Text = "Other relevant policy notes";
@@ -1019,11 +1019,11 @@
             // 
             this.PolOtherNotes.BackColor = System.Drawing.Color.White;
             this.PolOtherNotes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolOtherNotes.Location = new System.Drawing.Point(3, 16);
+            this.PolOtherNotes.Location = new System.Drawing.Point(3, 17);
             this.PolOtherNotes.Multiline = true;
             this.PolOtherNotes.Name = "PolOtherNotes";
             this.PolOtherNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolOtherNotes.Size = new System.Drawing.Size(1137, 119);
+            this.PolOtherNotes.Size = new System.Drawing.Size(1120, 118);
             this.PolOtherNotes.TabIndex = 1;
             // 
             // GroupBox97
@@ -1034,7 +1034,7 @@
             this.GroupBox97.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox97.Location = new System.Drawing.Point(17, 175);
             this.GroupBox97.Name = "GroupBox97";
-            this.GroupBox97.Size = new System.Drawing.Size(1143, 58);
+            this.GroupBox97.Size = new System.Drawing.Size(1126, 58);
             this.GroupBox97.TabIndex = 10;
             this.GroupBox97.TabStop = false;
             this.GroupBox97.Text = "How much were you being paid?";
@@ -1043,11 +1043,11 @@
             // 
             this.PolHowMuchBeingPaid.BackColor = System.Drawing.SystemColors.Window;
             this.PolHowMuchBeingPaid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolHowMuchBeingPaid.Location = new System.Drawing.Point(3, 16);
+            this.PolHowMuchBeingPaid.Location = new System.Drawing.Point(3, 17);
             this.PolHowMuchBeingPaid.Multiline = true;
             this.PolHowMuchBeingPaid.Name = "PolHowMuchBeingPaid";
             this.PolHowMuchBeingPaid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolHowMuchBeingPaid.Size = new System.Drawing.Size(1137, 39);
+            this.PolHowMuchBeingPaid.Size = new System.Drawing.Size(1120, 38);
             this.PolHowMuchBeingPaid.TabIndex = 1;
             // 
             // GroupBox99
@@ -1058,7 +1058,7 @@
             this.GroupBox99.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox99.Location = new System.Drawing.Point(16, 67);
             this.GroupBox99.Name = "GroupBox99";
-            this.GroupBox99.Size = new System.Drawing.Size(1143, 56);
+            this.GroupBox99.Size = new System.Drawing.Size(1126, 56);
             this.GroupBox99.TabIndex = 8;
             this.GroupBox99.TabStop = false;
             this.GroupBox99.Text = "Who paid those benefits to you?";
@@ -1067,11 +1067,11 @@
             // 
             this.PolWhoPaidBenefits.BackColor = System.Drawing.Color.White;
             this.PolWhoPaidBenefits.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolWhoPaidBenefits.Location = new System.Drawing.Point(3, 16);
+            this.PolWhoPaidBenefits.Location = new System.Drawing.Point(3, 17);
             this.PolWhoPaidBenefits.Multiline = true;
             this.PolWhoPaidBenefits.Name = "PolWhoPaidBenefits";
             this.PolWhoPaidBenefits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolWhoPaidBenefits.Size = new System.Drawing.Size(1137, 37);
+            this.PolWhoPaidBenefits.Size = new System.Drawing.Size(1120, 36);
             this.PolWhoPaidBenefits.TabIndex = 1;
             // 
             // PolDateSubmittedLTD
@@ -1080,7 +1080,7 @@
             this.PolDateSubmittedLTD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.PolDateSubmittedLTD.Location = new System.Drawing.Point(358, 13);
             this.PolDateSubmittedLTD.Name = "PolDateSubmittedLTD";
-            this.PolDateSubmittedLTD.Size = new System.Drawing.Size(109, 20);
+            this.PolDateSubmittedLTD.Size = new System.Drawing.Size(109, 21);
             this.PolDateSubmittedLTD.TabIndex = 8;
             // 
             // TabControl
@@ -1092,6 +1092,7 @@
             this.TabControl.Controls.Add(this.AccidentBenefits);
             this.TabControl.Controls.Add(this.OtherNotes);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControl.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl.Location = new System.Drawing.Point(0, 0);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
@@ -1118,9 +1119,9 @@
             this.Policy.Controls.Add(this.GroupBox97);
             this.Policy.Controls.Add(this.GroupBox99);
             this.Policy.Controls.Add(this.GroupBox100);
-            this.Policy.Location = new System.Drawing.Point(4, 22);
+            this.Policy.Location = new System.Drawing.Point(4, 25);
             this.Policy.Name = "Policy";
-            this.Policy.Size = new System.Drawing.Size(1342, 584);
+            this.Policy.Size = new System.Drawing.Size(1342, 581);
             this.Policy.TabIndex = 7;
             this.Policy.Text = "Policy";
             this.Policy.Click += new System.EventHandler(this.Policy_Click);
@@ -1133,7 +1134,7 @@
             this.GroupBox96.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox96.Location = new System.Drawing.Point(16, 689);
             this.GroupBox96.Name = "GroupBox96";
-            this.GroupBox96.Size = new System.Drawing.Size(1143, 58);
+            this.GroupBox96.Size = new System.Drawing.Size(1126, 58);
             this.GroupBox96.TabIndex = 36;
             this.GroupBox96.TabStop = false;
             this.GroupBox96.Text = "Was your CPP Disability benefits application ever approved?";
@@ -1142,11 +1143,11 @@
             // 
             this.PolCPPApproved.BackColor = System.Drawing.SystemColors.Window;
             this.PolCPPApproved.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolCPPApproved.Location = new System.Drawing.Point(3, 16);
+            this.PolCPPApproved.Location = new System.Drawing.Point(3, 17);
             this.PolCPPApproved.Multiline = true;
             this.PolCPPApproved.Name = "PolCPPApproved";
             this.PolCPPApproved.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolCPPApproved.Size = new System.Drawing.Size(1137, 39);
+            this.PolCPPApproved.Size = new System.Drawing.Size(1120, 38);
             this.PolCPPApproved.TabIndex = 1;
             // 
             // GroupBox95
@@ -1157,7 +1158,7 @@
             this.GroupBox95.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox95.Location = new System.Drawing.Point(16, 625);
             this.GroupBox95.Name = "GroupBox95";
-            this.GroupBox95.Size = new System.Drawing.Size(1143, 58);
+            this.GroupBox95.Size = new System.Drawing.Size(1126, 58);
             this.GroupBox95.TabIndex = 35;
             this.GroupBox95.TabStop = false;
             this.GroupBox95.Text = "Did you decided to apply for CPP Disability Benefits on you own or were you asked" +
@@ -1167,11 +1168,11 @@
             // 
             this.PolCPPOwnOrCompany.BackColor = System.Drawing.SystemColors.Window;
             this.PolCPPOwnOrCompany.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolCPPOwnOrCompany.Location = new System.Drawing.Point(3, 16);
+            this.PolCPPOwnOrCompany.Location = new System.Drawing.Point(3, 17);
             this.PolCPPOwnOrCompany.Multiline = true;
             this.PolCPPOwnOrCompany.Name = "PolCPPOwnOrCompany";
             this.PolCPPOwnOrCompany.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolCPPOwnOrCompany.Size = new System.Drawing.Size(1137, 39);
+            this.PolCPPOwnOrCompany.Size = new System.Drawing.Size(1120, 38);
             this.PolCPPOwnOrCompany.TabIndex = 1;
             // 
             // GroupBox94
@@ -1182,7 +1183,7 @@
             this.GroupBox94.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox94.Location = new System.Drawing.Point(16, 561);
             this.GroupBox94.Name = "GroupBox94";
-            this.GroupBox94.Size = new System.Drawing.Size(1143, 58);
+            this.GroupBox94.Size = new System.Drawing.Size(1126, 58);
             this.GroupBox94.TabIndex = 34;
             this.GroupBox94.TabStop = false;
             this.GroupBox94.Text = "Before being terminated from LTD benefits had you ever made an application for CP" +
@@ -1192,11 +1193,11 @@
             // 
             this.PolApplicationForCPP.BackColor = System.Drawing.SystemColors.Window;
             this.PolApplicationForCPP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolApplicationForCPP.Location = new System.Drawing.Point(3, 16);
+            this.PolApplicationForCPP.Location = new System.Drawing.Point(3, 17);
             this.PolApplicationForCPP.Multiline = true;
             this.PolApplicationForCPP.Name = "PolApplicationForCPP";
             this.PolApplicationForCPP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolApplicationForCPP.Size = new System.Drawing.Size(1137, 39);
+            this.PolApplicationForCPP.Size = new System.Drawing.Size(1120, 38);
             this.PolApplicationForCPP.TabIndex = 1;
             // 
             // GroupBox128
@@ -1208,7 +1209,7 @@
             this.GroupBox128.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox128.Location = new System.Drawing.Point(16, 460);
             this.GroupBox128.Name = "GroupBox128";
-            this.GroupBox128.Size = new System.Drawing.Size(1143, 95);
+            this.GroupBox128.Size = new System.Drawing.Size(1126, 95);
             this.GroupBox128.TabIndex = 33;
             this.GroupBox128.TabStop = false;
             this.GroupBox128.Text = "Briefly explain the reason the insurance company provided to you when it decided " +
@@ -1223,7 +1224,7 @@
             this.PolReasonTerminateLTD.Multiline = true;
             this.PolReasonTerminateLTD.Name = "PolReasonTerminateLTD";
             this.PolReasonTerminateLTD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolReasonTerminateLTD.Size = new System.Drawing.Size(1137, 74);
+            this.PolReasonTerminateLTD.Size = new System.Drawing.Size(1120, 74);
             this.PolReasonTerminateLTD.TabIndex = 1;
             // 
             // GroupBox127
@@ -1234,7 +1235,7 @@
             this.GroupBox127.Controls.Add(this.Label120);
             this.GroupBox127.Location = new System.Drawing.Point(867, 348);
             this.GroupBox127.Name = "GroupBox127";
-            this.GroupBox127.Size = new System.Drawing.Size(306, 42);
+            this.GroupBox127.Size = new System.Drawing.Size(289, 42);
             this.GroupBox127.TabIndex = 32;
             this.GroupBox127.TabStop = false;
             // 
@@ -1244,7 +1245,7 @@
             this.PolDateLastDayLTD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.PolDateLastDayLTD.Location = new System.Drawing.Point(222, 14);
             this.PolDateLastDayLTD.Name = "PolDateLastDayLTD";
-            this.PolDateLastDayLTD.Size = new System.Drawing.Size(95, 20);
+            this.PolDateLastDayLTD.Size = new System.Drawing.Size(95, 21);
             this.PolDateLastDayLTD.TabIndex = 8;
             this.PolDateLastDayLTD.ValueChanged += new System.EventHandler(this.PolDateLastDayLTD_ValueChanged);
             // 
@@ -1266,7 +1267,7 @@
             this.GroupBox126.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupBox126.Location = new System.Drawing.Point(16, 396);
             this.GroupBox126.Name = "GroupBox126";
-            this.GroupBox126.Size = new System.Drawing.Size(1143, 58);
+            this.GroupBox126.Size = new System.Drawing.Size(1126, 58);
             this.GroupBox126.TabIndex = 31;
             this.GroupBox126.TabStop = false;
             this.GroupBox126.Text = "Were your LTD benefits initially approved when you first applied for disability b" +
@@ -1276,11 +1277,11 @@
             // 
             this.PolFirstTimeLTDApproved.BackColor = System.Drawing.SystemColors.Window;
             this.PolFirstTimeLTDApproved.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolFirstTimeLTDApproved.Location = new System.Drawing.Point(3, 16);
+            this.PolFirstTimeLTDApproved.Location = new System.Drawing.Point(3, 17);
             this.PolFirstTimeLTDApproved.Multiline = true;
             this.PolFirstTimeLTDApproved.Name = "PolFirstTimeLTDApproved";
             this.PolFirstTimeLTDApproved.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PolFirstTimeLTDApproved.Size = new System.Drawing.Size(1137, 39);
+            this.PolFirstTimeLTDApproved.Size = new System.Drawing.Size(1120, 38);
             this.PolFirstTimeLTDApproved.TabIndex = 1;
             // 
             // GroupBox125
@@ -1291,7 +1292,7 @@
             this.GroupBox125.Controls.Add(this.Label119);
             this.GroupBox125.Location = new System.Drawing.Point(503, 348);
             this.GroupBox125.Name = "GroupBox125";
-            this.GroupBox125.Size = new System.Drawing.Size(344, 42);
+            this.GroupBox125.Size = new System.Drawing.Size(327, 42);
             this.GroupBox125.TabIndex = 30;
             this.GroupBox125.TabStop = false;
             // 
@@ -1301,7 +1302,7 @@
             this.PolDateStartedCollLTD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.PolDateStartedCollLTD.Location = new System.Drawing.Point(249, 13);
             this.PolDateStartedCollLTD.Name = "PolDateStartedCollLTD";
-            this.PolDateStartedCollLTD.Size = new System.Drawing.Size(106, 20);
+            this.PolDateStartedCollLTD.Size = new System.Drawing.Size(106, 21);
             this.PolDateStartedCollLTD.TabIndex = 8;
             // 
             // Label119
@@ -1322,7 +1323,7 @@
             this.GroupBox124.Controls.Add(this.Label118);
             this.GroupBox124.Location = new System.Drawing.Point(16, 348);
             this.GroupBox124.Name = "GroupBox124";
-            this.GroupBox124.Size = new System.Drawing.Size(467, 42);
+            this.GroupBox124.Size = new System.Drawing.Size(450, 42);
             this.GroupBox124.TabIndex = 29;
             this.GroupBox124.TabStop = false;
             // 
@@ -1341,10 +1342,10 @@
             this.EmploymentIncomeLoss.AutoScroll = true;
             this.EmploymentIncomeLoss.BackColor = System.Drawing.SystemColors.Menu;
             this.EmploymentIncomeLoss.Controls.Add(this.flowLayoutPanel1);
-            this.EmploymentIncomeLoss.Location = new System.Drawing.Point(4, 22);
+            this.EmploymentIncomeLoss.Location = new System.Drawing.Point(4, 25);
             this.EmploymentIncomeLoss.Name = "EmploymentIncomeLoss";
             this.EmploymentIncomeLoss.Padding = new System.Windows.Forms.Padding(3);
-            this.EmploymentIncomeLoss.Size = new System.Drawing.Size(1342, 584);
+            this.EmploymentIncomeLoss.Size = new System.Drawing.Size(1342, 581);
             this.EmploymentIncomeLoss.TabIndex = 2;
             this.EmploymentIncomeLoss.Text = "Employment/Income Loss";
             // 
@@ -1361,7 +1362,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1336, 578);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1336, 575);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
             // GroupBox16
@@ -1715,10 +1716,10 @@
             this.Damages.Controls.Add(this.DamHeadInjuriesGroupBox);
             this.Damages.Controls.Add(this.DamWentToHospitalGroupBox);
             this.Damages.Controls.Add(this.DamHitVehicleConcreteGroupBox);
-            this.Damages.Location = new System.Drawing.Point(4, 22);
+            this.Damages.Location = new System.Drawing.Point(4, 25);
             this.Damages.Name = "Damages";
             this.Damages.Padding = new System.Windows.Forms.Padding(3);
-            this.Damages.Size = new System.Drawing.Size(1342, 584);
+            this.Damages.Size = new System.Drawing.Size(1342, 581);
             this.Damages.TabIndex = 1;
             this.Damages.Text = "Damages";
             // 
@@ -2015,10 +2016,10 @@
             this.AccidentBenefits.Controls.Add(this.Label32);
             this.AccidentBenefits.Controls.Add(this.AccBenDriverPassenger);
             this.AccidentBenefits.Controls.Add(this.Label37);
-            this.AccidentBenefits.Location = new System.Drawing.Point(4, 22);
+            this.AccidentBenefits.Location = new System.Drawing.Point(4, 25);
             this.AccidentBenefits.Name = "AccidentBenefits";
             this.AccidentBenefits.Padding = new System.Windows.Forms.Padding(3);
-            this.AccidentBenefits.Size = new System.Drawing.Size(1342, 584);
+            this.AccidentBenefits.Size = new System.Drawing.Size(1342, 581);
             this.AccidentBenefits.TabIndex = 3;
             this.AccidentBenefits.Text = "Accident Benefits";
             // 
@@ -2078,7 +2079,7 @@
             "Unsure"});
             this.AccBenOCF3.Location = new System.Drawing.Point(586, 322);
             this.AccBenOCF3.Name = "AccBenOCF3";
-            this.AccBenOCF3.Size = new System.Drawing.Size(70, 21);
+            this.AccBenOCF3.Size = new System.Drawing.Size(70, 24);
             this.AccBenOCF3.TabIndex = 36;
             // 
             // Label40
@@ -2101,7 +2102,7 @@
             "Unsure"});
             this.AccBenOCF2.Location = new System.Drawing.Point(493, 287);
             this.AccBenOCF2.Name = "AccBenOCF2";
-            this.AccBenOCF2.Size = new System.Drawing.Size(70, 21);
+            this.AccBenOCF2.Size = new System.Drawing.Size(70, 24);
             this.AccBenOCF2.TabIndex = 34;
             // 
             // Label39
@@ -2123,7 +2124,7 @@
             "Unsure"});
             this.AccBenOCF1.Location = new System.Drawing.Point(417, 248);
             this.AccBenOCF1.Name = "AccBenOCF1";
-            this.AccBenOCF1.Size = new System.Drawing.Size(70, 21);
+            this.AccBenOCF1.Size = new System.Drawing.Size(70, 24);
             this.AccBenOCF1.TabIndex = 32;
             // 
             // Label38
@@ -2193,7 +2194,7 @@
             "No"});
             this.AccBenWereRegisOwner.Location = new System.Drawing.Point(442, 51);
             this.AccBenWereRegisOwner.Name = "AccBenWereRegisOwner";
-            this.AccBenWereRegisOwner.Size = new System.Drawing.Size(70, 21);
+            this.AccBenWereRegisOwner.Size = new System.Drawing.Size(70, 24);
             this.AccBenWereRegisOwner.TabIndex = 27;
             // 
             // Label35
@@ -2285,10 +2286,10 @@
             // 
             this.OtherNotes.BackColor = System.Drawing.SystemColors.Menu;
             this.OtherNotes.Controls.Add(this.Notes);
-            this.OtherNotes.Location = new System.Drawing.Point(4, 22);
+            this.OtherNotes.Location = new System.Drawing.Point(4, 25);
             this.OtherNotes.Name = "OtherNotes";
             this.OtherNotes.Padding = new System.Windows.Forms.Padding(3);
-            this.OtherNotes.Size = new System.Drawing.Size(1342, 584);
+            this.OtherNotes.Size = new System.Drawing.Size(1342, 581);
             this.OtherNotes.TabIndex = 4;
             this.OtherNotes.Text = "Other Notes";
             // 

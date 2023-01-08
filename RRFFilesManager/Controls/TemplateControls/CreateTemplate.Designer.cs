@@ -292,6 +292,7 @@
             this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.BackColor = System.Drawing.Color.Maroon;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.ForeColor = System.Drawing.Color.White;
             this.EditButton.Location = new System.Drawing.Point(906, 501);
             this.EditButton.Name = "EditButton";
@@ -307,6 +308,7 @@
             this.SaveAndEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveAndEdit.BackColor = System.Drawing.Color.Maroon;
             this.SaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveAndEdit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveAndEdit.ForeColor = System.Drawing.Color.White;
             this.SaveAndEdit.Location = new System.Drawing.Point(1112, 501);
             this.SaveAndEdit.Name = "SaveAndEdit";
@@ -321,6 +323,7 @@
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cancel.BackColor = System.Drawing.Color.Maroon;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(25, 501);
             this.Cancel.Name = "Cancel";
@@ -335,6 +338,7 @@
             this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Save.BackColor = System.Drawing.Color.Maroon;
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.Location = new System.Drawing.Point(1009, 501);
             this.Save.Name = "Save";
@@ -349,6 +353,7 @@
             this.FindTemplateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindTemplateButton.BackColor = System.Drawing.Color.Maroon;
             this.FindTemplateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindTemplateButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindTemplateButton.ForeColor = System.Drawing.Color.White;
             this.FindTemplateButton.Location = new System.Drawing.Point(1112, 4);
             this.FindTemplateButton.Name = "FindTemplateButton";

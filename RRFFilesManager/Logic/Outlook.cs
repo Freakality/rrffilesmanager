@@ -1,6 +1,8 @@
-﻿using Microsoft.Office.Interop.Outlook;
+﻿using ClosedXML.Excel;
+using Microsoft.Office.Interop.Outlook;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -19,6 +21,7 @@ namespace RRFFilesManager.Logic
         {
             try
             {
+                
                 MailItem OutlookMessage;
                 var AppOutlook = new Microsoft.Office.Interop.Outlook.Application();
                 OutlookMessage = (MailItem)AppOutlook.CreateItem(OlItemType.olMailItem);
@@ -47,6 +50,27 @@ namespace RRFFilesManager.Logic
                 return false;
             }
             return true;
+        }
+
+        public static void SentExcel()
+        {
+
+        }
+
+        public static void Excel(string sheetNombre, DataTable dt, string FileName)
+        {
+            using (SaveFileDialog sv = new SaveFileDialog())
+            {
+                sv.FileName = FileName;
+                var Wb = new XLWorkbook();
+                Wb.Worksheets.Add(dt, sheetNombre.Replace("/", "-"));
+                sv.Filter = "Excel Files | *.xlsx";
+                if (sv.ShowDialog() == DialogResult.OK)
+                {
+                    Wb.SaveAs(sv.FileName);
+                    MessageBox.Show("Archivo exportado satisfactoriamente");
+                }
+            }
         }
     }
 }

@@ -37,12 +37,12 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBox.Controls.Add(this.SearchTextBox);
+            this.SearchBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SearchBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.Location = new System.Drawing.Point(0, 0);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(797, 45);
+            this.SearchBox.Size = new System.Drawing.Size(800, 58);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Search";
@@ -50,23 +50,21 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchTextBox.Location = new System.Drawing.Point(9, 16);
+            this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SearchTextBox.Location = new System.Drawing.Point(3, 22);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(782, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(794, 26);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // ClientsGridView
             // 
-            this.ClientsGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ClientsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.ClientsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClientsGridView.Location = new System.Drawing.Point(0, 45);
+            this.ClientsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientsGridView.Location = new System.Drawing.Point(0, 58);
             this.ClientsGridView.Name = "ClientsGridView";
-            this.ClientsGridView.Size = new System.Drawing.Size(800, 406);
+            this.ClientsGridView.Size = new System.Drawing.Size(800, 392);
             this.ClientsGridView.TabIndex = 1;
             this.ClientsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientsGridView_CellClick);
             this.ClientsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientsGridView_CellContentClick);
@@ -77,8 +75,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.ClientsGridView);
+            this.Controls.Add(this.SearchBox);
             this.Name = "FindClient";
             this.Text = "FindClient";
             this.Load += new System.EventHandler(this.FindClient_Load);

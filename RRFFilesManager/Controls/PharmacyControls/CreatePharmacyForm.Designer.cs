@@ -31,7 +31,6 @@ namespace RRFFilesManager.Controls.PharmacyControls
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Address1TB = new System.Windows.Forms.TextBox();
-            this.NameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.PhoneNumber1MTB = new System.Windows.Forms.MaskedTextBox();
@@ -46,6 +45,7 @@ namespace RRFFilesManager.Controls.PharmacyControls
             this.ProvinceCB = new RRFFilesManager.Controls.ProvinceControls.CustomControls.ProvinceComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.PostalCodeTB = new System.Windows.Forms.TextBox();
+            this.NameTB = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Cancel = new System.Windows.Forms.Button();
@@ -61,7 +61,6 @@ namespace RRFFilesManager.Controls.PharmacyControls
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.Address1TB, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.NameTB, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.PhoneNumber1MTB, 1, 6);
@@ -76,6 +75,7 @@ namespace RRFFilesManager.Controls.PharmacyControls
             this.tableLayoutPanel1.Controls.Add(this.ProvinceCB, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.PostalCodeTB, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.NameTB, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -88,32 +88,26 @@ namespace RRFFilesManager.Controls.PharmacyControls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(428, 265);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(485, 329);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Address1TB
             // 
             this.Address1TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Address1TB.Location = new System.Drawing.Point(103, 36);
+            this.Address1TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address1TB.Location = new System.Drawing.Point(103, 44);
             this.Address1TB.Name = "Address1TB";
-            this.Address1TB.Size = new System.Drawing.Size(322, 20);
+            this.Address1TB.Size = new System.Drawing.Size(379, 24);
             this.Address1TB.TabIndex = 5;
-            // 
-            // NameTB
-            // 
-            this.NameTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NameTB.Location = new System.Drawing.Point(103, 3);
-            this.NameTB.Name = "NameTB";
-            this.NameTB.Size = new System.Drawing.Size(322, 20);
-            this.NameTB.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 33);
+            this.label1.Size = new System.Drawing.Size(94, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,9 +116,10 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 198);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 246);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 33);
+            this.label7.Size = new System.Drawing.Size(94, 41);
             this.label7.TabIndex = 15;
             this.label7.Text = "Phone Number 1";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -132,19 +127,21 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // PhoneNumber1MTB
             // 
             this.PhoneNumber1MTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhoneNumber1MTB.Location = new System.Drawing.Point(103, 201);
+            this.PhoneNumber1MTB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumber1MTB.Location = new System.Drawing.Point(103, 249);
             this.PhoneNumber1MTB.Mask = "(999) 000-0000";
             this.PhoneNumber1MTB.Name = "PhoneNumber1MTB";
-            this.PhoneNumber1MTB.Size = new System.Drawing.Size(322, 20);
+            this.PhoneNumber1MTB.Size = new System.Drawing.Size(379, 26);
             this.PhoneNumber1MTB.TabIndex = 30;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(3, 231);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 287);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 34);
+            this.label8.Size = new System.Drawing.Size(94, 42);
             this.label8.TabIndex = 31;
             this.label8.Text = "Phone Number 2";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,19 +149,21 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // PhoneNumber2MTB
             // 
             this.PhoneNumber2MTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhoneNumber2MTB.Location = new System.Drawing.Point(103, 234);
+            this.PhoneNumber2MTB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumber2MTB.Location = new System.Drawing.Point(103, 290);
             this.PhoneNumber2MTB.Mask = "(999) 000-0000";
             this.PhoneNumber2MTB.Name = "PhoneNumber2MTB";
-            this.PhoneNumber2MTB.Size = new System.Drawing.Size(322, 20);
+            this.PhoneNumber2MTB.Size = new System.Drawing.Size(379, 26);
             this.PhoneNumber2MTB.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 33);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 33);
+            this.label3.Size = new System.Drawing.Size(94, 41);
             this.label3.TabIndex = 4;
             this.label3.Text = "Address 1";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -173,9 +172,10 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 66);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 33);
+            this.label4.Size = new System.Drawing.Size(94, 41);
             this.label4.TabIndex = 6;
             this.label4.Text = "Address 2";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -183,18 +183,20 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // Address2TB
             // 
             this.Address2TB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Address2TB.Location = new System.Drawing.Point(103, 69);
+            this.Address2TB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address2TB.Location = new System.Drawing.Point(103, 85);
             this.Address2TB.Name = "Address2TB";
-            this.Address2TB.Size = new System.Drawing.Size(322, 20);
+            this.Address2TB.Size = new System.Drawing.Size(379, 26);
             this.Address2TB.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(3, 99);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 33);
+            this.label5.Size = new System.Drawing.Size(94, 41);
             this.label5.TabIndex = 8;
             this.label5.Text = "City";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -202,18 +204,20 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // CityTB
             // 
             this.CityTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CityTB.Location = new System.Drawing.Point(103, 102);
+            this.CityTB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityTB.Location = new System.Drawing.Point(103, 126);
             this.CityTB.Name = "CityTB";
-            this.CityTB.Size = new System.Drawing.Size(322, 20);
+            this.CityTB.Size = new System.Drawing.Size(379, 26);
             this.CityTB.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 132);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 33);
+            this.label2.Size = new System.Drawing.Size(94, 41);
             this.label2.TabIndex = 12;
             this.label2.Text = "Province";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,19 +225,21 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // ProvinceCB
             // 
             this.ProvinceCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProvinceCB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProvinceCB.FormattingEnabled = true;
-            this.ProvinceCB.Location = new System.Drawing.Point(103, 135);
+            this.ProvinceCB.Location = new System.Drawing.Point(103, 167);
             this.ProvinceCB.Name = "ProvinceCB";
-            this.ProvinceCB.Size = new System.Drawing.Size(322, 21);
+            this.ProvinceCB.Size = new System.Drawing.Size(379, 28);
             this.ProvinceCB.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 165);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 205);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 33);
+            this.label6.Size = new System.Drawing.Size(94, 41);
             this.label6.TabIndex = 14;
             this.label6.Text = "Postal Code";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,10 +247,20 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // PostalCodeTB
             // 
             this.PostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PostalCodeTB.Location = new System.Drawing.Point(103, 168);
+            this.PostalCodeTB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PostalCodeTB.Location = new System.Drawing.Point(103, 208);
             this.PostalCodeTB.Name = "PostalCodeTB";
-            this.PostalCodeTB.Size = new System.Drawing.Size(322, 20);
+            this.PostalCodeTB.Size = new System.Drawing.Size(379, 26);
             this.PostalCodeTB.TabIndex = 10;
+            // 
+            // NameTB
+            // 
+            this.NameTB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NameTB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTB.Location = new System.Drawing.Point(103, 3);
+            this.NameTB.Name = "NameTB";
+            this.NameTB.Size = new System.Drawing.Size(379, 26);
+            this.NameTB.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -258,7 +274,7 @@ namespace RRFFilesManager.Controls.PharmacyControls
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(434, 311);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(491, 375);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // panel1
@@ -267,10 +283,10 @@ namespace RRFFilesManager.Controls.PharmacyControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.Cancel);
             this.panel1.Controls.Add(this.Save);
-            this.panel1.Location = new System.Drawing.Point(20, 276);
+            this.panel1.Location = new System.Drawing.Point(20, 340);
             this.panel1.Margin = new System.Windows.Forms.Padding(20, 3, 20, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 30);
+            this.panel1.Size = new System.Drawing.Size(451, 30);
             this.panel1.TabIndex = 1;
             // 
             // Cancel
@@ -278,6 +294,7 @@ namespace RRFFilesManager.Controls.PharmacyControls
             this.Cancel.BackColor = System.Drawing.Color.Maroon;
             this.Cancel.Dock = System.Windows.Forms.DockStyle.Left;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(0, 0);
             this.Cancel.Name = "Cancel";
@@ -292,8 +309,9 @@ namespace RRFFilesManager.Controls.PharmacyControls
             this.Save.BackColor = System.Drawing.Color.Maroon;
             this.Save.Dock = System.Windows.Forms.DockStyle.Right;
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.ForeColor = System.Drawing.Color.White;
-            this.Save.Location = new System.Drawing.Point(297, 0);
+            this.Save.Location = new System.Drawing.Point(354, 0);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(97, 30);
             this.Save.TabIndex = 9;
@@ -305,7 +323,7 @@ namespace RRFFilesManager.Controls.PharmacyControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 311);
+            this.ClientSize = new System.Drawing.Size(491, 375);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "CreatePharmacyForm";
             this.Text = "Create Pharmacy";

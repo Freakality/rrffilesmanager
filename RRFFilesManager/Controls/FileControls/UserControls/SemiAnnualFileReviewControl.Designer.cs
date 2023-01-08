@@ -50,7 +50,7 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             this.ReviewDoneSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ReviewDoneSaveButton.BackColor = System.Drawing.Color.Maroon;
             this.ReviewDoneSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReviewDoneSaveButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReviewDoneSaveButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReviewDoneSaveButton.ForeColor = System.Drawing.Color.White;
             this.ReviewDoneSaveButton.Location = new System.Drawing.Point(961, 320);
             this.ReviewDoneSaveButton.Name = "ReviewDoneSaveButton";

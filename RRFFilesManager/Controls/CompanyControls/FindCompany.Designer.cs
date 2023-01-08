@@ -41,12 +41,12 @@ namespace RRFFilesManager.Controls.CompanyControls
             // 
             // SearchBox
             // 
-            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBox.Controls.Add(this.TableLayoutPanel);
+            this.SearchBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SearchBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.Location = new System.Drawing.Point(0, 0);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(797, 45);
+            this.SearchBox.Size = new System.Drawing.Size(800, 60);
             this.SearchBox.TabIndex = 4;
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Search";
@@ -58,12 +58,12 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.TableLayoutPanel.Controls.Add(this.SearchTextBox, 0, 0);
             this.TableLayoutPanel.Controls.Add(this.CreateCompanyButton, 1, 0);
-            this.TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TableLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TableLayoutPanel.Location = new System.Drawing.Point(3, 22);
             this.TableLayoutPanel.Name = "TableLayoutPanel";
             this.TableLayoutPanel.RowCount = 1;
             this.TableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayoutPanel.Size = new System.Drawing.Size(791, 26);
+            this.TableLayoutPanel.Size = new System.Drawing.Size(794, 33);
             this.TableLayoutPanel.TabIndex = 1;
             // 
             // SearchTextBox
@@ -71,17 +71,18 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.SearchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SearchTextBox.Location = new System.Drawing.Point(3, 3);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(685, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(688, 26);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // CreateCompanyButton
             // 
             this.CreateCompanyButton.BackColor = System.Drawing.SystemColors.Control;
+            this.CreateCompanyButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CreateCompanyButton.ForeColor = System.Drawing.Color.Black;
-            this.CreateCompanyButton.Location = new System.Drawing.Point(694, 3);
+            this.CreateCompanyButton.Location = new System.Drawing.Point(697, 3);
             this.CreateCompanyButton.Name = "CreateCompanyButton";
-            this.CreateCompanyButton.Size = new System.Drawing.Size(94, 20);
+            this.CreateCompanyButton.Size = new System.Drawing.Size(94, 27);
             this.CreateCompanyButton.TabIndex = 1;
             this.CreateCompanyButton.Text = "Create";
             this.CreateCompanyButton.UseVisualStyleBackColor = false;
@@ -90,14 +91,12 @@ namespace RRFFilesManager.Controls.CompanyControls
             // 
             // GridView
             // 
-            this.GridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridView.Location = new System.Drawing.Point(0, 45);
+            this.GridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridView.Location = new System.Drawing.Point(0, 60);
             this.GridView.Name = "GridView";
-            this.GridView.Size = new System.Drawing.Size(800, 406);
+            this.GridView.Size = new System.Drawing.Size(800, 390);
             this.GridView.TabIndex = 5;
             this.GridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellClick);
             this.GridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_CellContentClick);
@@ -107,8 +106,8 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.GridView);
+            this.Controls.Add(this.SearchBox);
             this.Name = "FindCompany";
             this.Text = "FindCompany";
             this.SearchBox.ResumeLayout(false);

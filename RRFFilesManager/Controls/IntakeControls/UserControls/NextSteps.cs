@@ -73,7 +73,7 @@ namespace RRFFilesManager.IntakeForm
             {
                 if (InvokeCIP.Checked)
                 {
-                    // CreateSendItem("rojascarlos82@hotmail.com",attachmentPath)
+                    //CreateSendItem("rojascarlos82@hotmail.com", attachmentPath)
                     Outlook.NewEmail("DManzano@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
                     Outlook.NewEmail("RFoisy@InjuryLawyerCanada.com", "CIP Process Testing", "CIP Process Testing");
                     IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, false);
@@ -93,7 +93,7 @@ namespace RRFFilesManager.IntakeForm
                             _fileRepository.AddAllCategoryTasks(Home.IntakeForm.Intake.File,_task,_taskStateRepository.GetById(1),Count.days);
                             MessageBox.Show("task assignment complete");
                             IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, true);
-                            //PrintAndHold();
+                            PrintAndHold();
                         }
                     }
                 }
