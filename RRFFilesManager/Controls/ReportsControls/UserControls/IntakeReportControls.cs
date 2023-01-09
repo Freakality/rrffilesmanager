@@ -50,10 +50,6 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
         }
 
 
-        struct ElnombreQueMeDeLaGana
-        {
-            int Count;
-        }
 
         private void GroupByButton_Click(object sender, EventArgs e)
         {
@@ -69,43 +65,15 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             }
             //var qfields = string.Join(", ", FieldsList.Select(x => $"it[\"{x}\"] as " + x));
             var qfields = string.Join(", ", FieldsList.Select(x => x));
-
-
-            //var GroupedInfoList = ReportingInfo
-            //    .AsEnumerable()
-            //    .AsQueryable()
-            //    .GroupBy($"new(" + qfields + ")", "it").Select("new (it as Data, Count() as Count)").ToDynamicList();
-
+         
             var GroupedInfoList = ReportingInfo
                .AsEnumerable()
                .AsQueryable()
                .GroupBy($"new(" + qfields + ")").Select("new (Key, Count() as Count)").ToDynamicList();
-            //.GroupBy($"new(" + qfields + ")").Select(x => new ElnombreQueMeDeLaGana { Count = x.Count()}).ToDynamicList();
-
-            //GroupedInfoList era q. La idea es acceder a las propiedades que estan en index.data.key; pueden ser 1 o varias depediendo
-            // de cuantas columnas seleccione el usuario para agrupar la informacion, adelas de 1 que esta cantidad de registros 
-            // que seria Count() as Count como esta justo arriba
-
-            #region pruebas
-            //var qfirst = q[0];
-
-            //var fieldlist = FieldsList.Select(x => x);
-            //foreach (string Field in fieldlist)
-            //{
-            //    //var dictval = from x in qfirst
-            //    //              where x.Data.Key.Contains(Field)
-            //    //              select x;
-
-            //    var dictval = q[0].GetType().GetProperty(Field).GetValue(q[0], null);
-            //}
-            #endregion
-
-
+                      
             GroupInfo.Rows.Clear();
             GroupInfo.Columns.Clear();
-
-            // aqui agrego las columnas seleccionadas por el usuario a un datatable vacio donde se ira ingresando la informacion
-            // luego de acceder a la misma en la lista resultante GroupedInfoList
+           
             foreach (string field in FieldsList)
             {
                 GroupInfo.Columns.Add(field,typeof(string));

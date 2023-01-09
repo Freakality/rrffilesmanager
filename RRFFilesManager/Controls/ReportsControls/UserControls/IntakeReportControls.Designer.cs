@@ -167,7 +167,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Chl_Columns.Location = new System.Drawing.Point(16, 37);
             this.Chl_Columns.MultiColumn = true;
             this.Chl_Columns.Name = "Chl_Columns";
-            this.Chl_Columns.Size = new System.Drawing.Size(194, 114);
+            this.Chl_Columns.Size = new System.Drawing.Size(315, 114);
             this.Chl_Columns.TabIndex = 0;
             // 
             // Dg_Data
