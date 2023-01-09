@@ -211,6 +211,7 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.tableLayoutPanel2.Controls.Add(this.DocumentCategoryCKB, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.DocumentCategoryCB, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.DocumentTypeCB, 1, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -377,6 +378,7 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // findFileAndArchivePanelUserControl1
             // 
             this.findFileAndArchivePanelUserControl1.Archive = null;
+            this.findFileAndArchivePanelUserControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.findFileAndArchivePanelUserControl1.File = null;
             this.findFileAndArchivePanelUserControl1.Location = new System.Drawing.Point(3, 3);
             this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";

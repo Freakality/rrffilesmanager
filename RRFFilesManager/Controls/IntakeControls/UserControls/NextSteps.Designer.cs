@@ -53,7 +53,7 @@
             this.Submit.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Submit.BackColor = System.Drawing.Color.Maroon;
             this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Submit.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Submit.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Submit.ForeColor = System.Drawing.Color.White;
             this.Submit.Location = new System.Drawing.Point(300, 313);
             this.Submit.Margin = new System.Windows.Forms.Padding(300, 30, 30, 3);
@@ -71,7 +71,7 @@
             this.Label74.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label74.Location = new System.Drawing.Point(172, 52);
             this.Label74.Name = "Label74";
-            this.Label74.Size = new System.Drawing.Size(102, 16);
+            this.Label74.Size = new System.Drawing.Size(101, 16);
             this.Label74.TabIndex = 160;
             this.Label74.Text = "Template Name";
             // 
@@ -81,7 +81,7 @@
             this.Label73.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label73.Location = new System.Drawing.Point(26, 52);
             this.Label73.Name = "Label73";
-            this.Label73.Size = new System.Drawing.Size(109, 16);
+            this.Label73.Size = new System.Drawing.Size(108, 16);
             this.Label73.TabIndex = 159;
             this.Label73.Text = "Type of Template";
             // 
@@ -222,7 +222,7 @@
             this.DocumentPreview.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.DocumentPreview.BackColor = System.Drawing.Color.DarkBlue;
             this.DocumentPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DocumentPreview.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentPreview.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentPreview.ForeColor = System.Drawing.Color.White;
             this.DocumentPreview.Location = new System.Drawing.Point(520, 440);
             this.DocumentPreview.Margin = new System.Windows.Forms.Padding(520, 70, 3, 3);

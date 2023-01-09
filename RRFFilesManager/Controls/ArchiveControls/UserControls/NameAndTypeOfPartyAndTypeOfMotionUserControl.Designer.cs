@@ -43,7 +43,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 26);
@@ -55,9 +55,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // NameOfParty
             // 
             this.NameOfParty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NameOfParty.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameOfParty.Location = new System.Drawing.Point(153, 3);
             this.NameOfParty.Name = "NameOfParty";
-            this.NameOfParty.Size = new System.Drawing.Size(278, 20);
+            this.NameOfParty.Size = new System.Drawing.Size(278, 22);
             this.NameOfParty.TabIndex = 9;
             this.NameOfParty.TextChanged += new System.EventHandler(this.NameOfParty_TextChanged);
             // 
@@ -92,7 +93,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(437, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 26);
@@ -105,7 +106,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 26);
@@ -117,18 +118,20 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // TypeOfParty
             // 
             this.TypeOfParty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TypeOfParty.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TypeOfParty.Location = new System.Drawing.Point(587, 3);
             this.TypeOfParty.Name = "TypeOfParty";
-            this.TypeOfParty.Size = new System.Drawing.Size(278, 20);
+            this.TypeOfParty.Size = new System.Drawing.Size(278, 22);
             this.TypeOfParty.TabIndex = 12;
             this.TypeOfParty.TextChanged += new System.EventHandler(this.TypeOfParty_TextChanged);
             // 
             // TypeOfMotion
             // 
             this.TypeOfMotion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TypeOfMotion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TypeOfMotion.Location = new System.Drawing.Point(153, 29);
             this.TypeOfMotion.Name = "TypeOfMotion";
-            this.TypeOfMotion.Size = new System.Drawing.Size(278, 20);
+            this.TypeOfMotion.Size = new System.Drawing.Size(278, 22);
             this.TypeOfMotion.TabIndex = 13;
             this.TypeOfMotion.TextChanged += new System.EventHandler(this.TypeOfMotion_TextChanged);
             // 

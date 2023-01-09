@@ -40,7 +40,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -66,10 +66,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 26);
+            this.label1.Size = new System.Drawing.Size(161, 26);
             this.label1.TabIndex = 10;
             this.label1.Text = "Facility Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -78,10 +78,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 26);
+            this.label2.Size = new System.Drawing.Size(161, 26);
             this.label2.TabIndex = 11;
             this.label2.Text = "Healthcare Practitioner";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -89,18 +89,20 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // FacilityName
             // 
             this.FacilityName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FacilityName.Location = new System.Drawing.Point(153, 3);
+            this.FacilityName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FacilityName.Location = new System.Drawing.Point(170, 3);
             this.FacilityName.Name = "FacilityName";
-            this.FacilityName.Size = new System.Drawing.Size(278, 20);
+            this.FacilityName.Size = new System.Drawing.Size(269, 22);
             this.FacilityName.TabIndex = 12;
             this.FacilityName.TextChanged += new System.EventHandler(this.FacilityName_TextChanged);
             // 
             // HealthcarePractitioner
             // 
             this.HealthcarePractitioner.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HealthcarePractitioner.Location = new System.Drawing.Point(153, 29);
+            this.HealthcarePractitioner.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HealthcarePractitioner.Location = new System.Drawing.Point(170, 29);
             this.HealthcarePractitioner.Name = "HealthcarePractitioner";
-            this.HealthcarePractitioner.Size = new System.Drawing.Size(278, 20);
+            this.HealthcarePractitioner.Size = new System.Drawing.Size(269, 22);
             this.HealthcarePractitioner.TabIndex = 13;
             this.HealthcarePractitioner.TextChanged += new System.EventHandler(this.HealthcarePractitioner_TextChanged);
             // 

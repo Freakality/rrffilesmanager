@@ -93,7 +93,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(3, 104);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(144, 26);
@@ -115,7 +115,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 26);
@@ -127,7 +127,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(3, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(144, 26);
@@ -139,7 +139,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(3, 52);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(144, 26);
@@ -151,7 +151,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 26);
@@ -163,7 +163,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(437, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 26);
@@ -175,7 +175,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(437, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 26);
@@ -187,7 +187,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(437, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 26);
@@ -204,9 +204,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.MRACPaidToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MRACPaidToDate.Location = new System.Drawing.Point(153, 3);
             this.MRACPaidToDate.Name = "MRACPaidToDate";
-            this.MRACPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.MRACPaidToDate.Size = new System.Drawing.Size(278, 22);
             this.MRACPaidToDate.TabIndex = 34;
             this.MRACPaidToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -219,9 +220,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.ACPaidToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ACPaidToDate.Location = new System.Drawing.Point(153, 29);
             this.ACPaidToDate.Name = "ACPaidToDate";
-            this.ACPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.ACPaidToDate.Size = new System.Drawing.Size(278, 22);
             this.ACPaidToDate.TabIndex = 35;
             this.ACPaidToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -234,9 +236,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.MRPaidToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MRPaidToDate.Location = new System.Drawing.Point(153, 55);
             this.MRPaidToDate.Name = "MRPaidToDate";
-            this.MRPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.MRPaidToDate.Size = new System.Drawing.Size(278, 22);
             this.MRPaidToDate.TabIndex = 36;
             this.MRPaidToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -249,9 +252,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.HHPaidToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HHPaidToDate.Location = new System.Drawing.Point(153, 81);
             this.HHPaidToDate.Name = "HHPaidToDate";
-            this.HHPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.HHPaidToDate.Size = new System.Drawing.Size(278, 22);
             this.HHPaidToDate.TabIndex = 37;
             this.HHPaidToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -264,9 +268,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.IEAssessPdToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IEAssessPdToDate.Location = new System.Drawing.Point(153, 107);
             this.IEAssessPdToDate.Name = "IEAssessPdToDate";
-            this.IEAssessPdToDate.Size = new System.Drawing.Size(278, 20);
+            this.IEAssessPdToDate.Size = new System.Drawing.Size(278, 22);
             this.IEAssessPdToDate.TabIndex = 38;
             this.IEAssessPdToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -279,9 +284,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.IRBPaidToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IRBPaidToDate.Location = new System.Drawing.Point(587, 3);
             this.IRBPaidToDate.Name = "IRBPaidToDate";
-            this.IRBPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.IRBPaidToDate.Size = new System.Drawing.Size(278, 22);
             this.IRBPaidToDate.TabIndex = 39;
             this.IRBPaidToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -294,9 +300,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.NonEarnerPdToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NonEarnerPdToDate.Location = new System.Drawing.Point(587, 29);
             this.NonEarnerPdToDate.Name = "NonEarnerPdToDate";
-            this.NonEarnerPdToDate.Size = new System.Drawing.Size(278, 20);
+            this.NonEarnerPdToDate.Size = new System.Drawing.Size(278, 22);
             this.NonEarnerPdToDate.TabIndex = 40;
             this.NonEarnerPdToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -309,9 +316,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0,
             0,
             0});
+            this.CGPaidToDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CGPaidToDate.Location = new System.Drawing.Point(587, 55);
             this.CGPaidToDate.Name = "CGPaidToDate";
-            this.CGPaidToDate.Size = new System.Drawing.Size(278, 20);
+            this.CGPaidToDate.Size = new System.Drawing.Size(278, 22);
             this.CGPaidToDate.TabIndex = 41;
             this.CGPaidToDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 

@@ -577,6 +577,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.previewArchiveUserControl.Name = "previewArchiveUserControl";
             this.previewArchiveUserControl.Size = new System.Drawing.Size(465, 665);
             this.previewArchiveUserControl.TabIndex = 1;
+            this.previewArchiveUserControl.Load += new System.EventHandler(this.previewArchiveUserControl_Load);
             // 
             // previewArchiveUserControl1
             // 

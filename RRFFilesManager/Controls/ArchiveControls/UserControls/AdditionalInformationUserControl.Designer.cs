@@ -62,7 +62,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 26);
@@ -74,9 +74,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // AdditionalInfo
             // 
             this.AdditionalInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdditionalInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdditionalInfo.Location = new System.Drawing.Point(153, 3);
             this.AdditionalInfo.Name = "AdditionalInfo";
-            this.AdditionalInfo.Size = new System.Drawing.Size(278, 20);
+            this.AdditionalInfo.Size = new System.Drawing.Size(278, 22);
             this.AdditionalInfo.TabIndex = 9;
             this.AdditionalInfo.TextChanged += new System.EventHandler(this.AdditionalInfo_TextChanged);
             // 

@@ -548,5 +548,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
 
         }
+
+        private void previewArchiveUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
