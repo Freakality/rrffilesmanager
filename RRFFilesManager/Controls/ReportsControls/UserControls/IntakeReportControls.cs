@@ -1,4 +1,5 @@
-﻿using RRFFilesManager.DataAccess.Abstractions;
+﻿using ClosedXML.Excel;
+using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,7 +57,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             List<string> FieldsList = new List<string>();
             if (Chl_Columns.CheckedItems.Count == 0)
             {
-                MessageBox.Show("You have to check some columns to group the information");
+                MessageBox.Show("¡You must mark at least one field by which to group the information!","Stop",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 return;
             }
             for (int i = 0; i < Chl_Columns.CheckedItems.Count; i++)
@@ -97,6 +98,39 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             Dg_Data.DataSource = null;
             Dg_Data.DataSource = GroupInfo;
 
+        }
+
+        private void ExcelExportButton_Click(object sender, EventArgs e)
+        {
+            if (Dg_Data.DataSource == null) 
+            {
+                MessageBox.Show($"¡There is no information to export!","Stop",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                return;
+            }
+            var wb = new XLWorkbook();
+            //DataTable DtExport = (DataTable)Dg_Data.DataSource;            
+            wb.Worksheets.Add((DataTable)Dg_Data.DataSource,"IntakeReport");
+            foreach (IXLWorksheet sheet in wb.Worksheets)
+            {
+                sheet.Columns().AdjustToContents();
+            }
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.FileName = "";
+                saveFileDialog.Filter = "Excel Files | *.xlsx";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wb.SaveAs(saveFileDialog.FileName);
+                    MessageBox.Show("¡successful export!", "Succes",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    Utils.Utils.OpenMicrosoftExcel(saveFileDialog.FileName);
+                }
+            }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            Dg_Data.DataSource = null;
+            Chl_Columns.Items.Clear();
         }
     }
 }
