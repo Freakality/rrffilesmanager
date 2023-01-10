@@ -678,10 +678,11 @@
             // 
             // ChangeLogViewButton
             // 
+            this.ChangeLogViewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ChangeLogViewButton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ChangeLogViewButton.FlatAppearance.BorderSize = 0;
             this.ChangeLogViewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeLogViewButton.Location = new System.Drawing.Point(22, 754);
+            this.ChangeLogViewButton.Location = new System.Drawing.Point(22, 727);
             this.ChangeLogViewButton.Name = "ChangeLogViewButton";
             this.ChangeLogViewButton.Size = new System.Drawing.Size(75, 23);
             this.ChangeLogViewButton.TabIndex = 7;

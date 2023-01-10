@@ -35,6 +35,9 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // 
             // DependencyCheckList
             // 
+            this.DependencyCheckList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DependencyCheckList.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.DependencyCheckList.FormattingEnabled = true;
             this.DependencyCheckList.Location = new System.Drawing.Point(12, 29);
@@ -44,6 +47,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // 
             // OKDependenciesButton
             // 
+            this.OKDependenciesButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.OKDependenciesButton.BackColor = System.Drawing.Color.Maroon;
             this.OKDependenciesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OKDependenciesButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

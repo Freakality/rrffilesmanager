@@ -62,7 +62,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 26);
@@ -73,6 +73,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // BenefitType
             // 
             this.BenefitType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BenefitType.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BenefitType.FormattingEnabled = true;
             this.BenefitType.Items.AddRange(new object[] {
             "IRB",
@@ -88,7 +89,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             "OCF-4 Exp"});
             this.BenefitType.Location = new System.Drawing.Point(153, 3);
             this.BenefitType.Name = "BenefitType";
-            this.BenefitType.Size = new System.Drawing.Size(278, 21);
+            this.BenefitType.Size = new System.Drawing.Size(278, 25);
             this.BenefitType.TabIndex = 2;
             this.BenefitType.SelectedIndexChanged += new System.EventHandler(this.BenefitType_SelectedIndexChanged);
             // 

@@ -20,7 +20,6 @@ namespace RRFFilesManager.Logic
         {
             try
             {
-                
                 MailItem OutlookMessage;
                 var AppOutlook = new Microsoft.Office.Interop.Outlook.Application();
                 OutlookMessage = (MailItem)AppOutlook.CreateItem(OlItemType.olMailItem);
@@ -49,7 +48,6 @@ namespace RRFFilesManager.Logic
                 return false;
             }
             return true;
-        }        
-        
+        }
     }
 }

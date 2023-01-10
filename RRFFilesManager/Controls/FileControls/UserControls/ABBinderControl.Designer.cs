@@ -114,6 +114,7 @@ namespace RRFFilesManager.Controls.FileControls
             // ExportPDFButton
             // 
             this.ExportPDFButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.ExportPDFButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ExportPDFButton.BackColor = System.Drawing.Color.Firebrick;
             this.ExportPDFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExportPDFButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,6 +130,7 @@ namespace RRFFilesManager.Controls.FileControls
             // ExportWordButton
             // 
             this.ExportWordButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.ExportWordButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ExportWordButton.BackColor = System.Drawing.Color.Navy;
             this.ExportWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExportWordButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

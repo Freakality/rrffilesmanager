@@ -428,7 +428,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             this.HomeButton.BackColor = System.Drawing.Color.Maroon;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.White;
             this.HomeButton.Location = new System.Drawing.Point(848, 67);
             this.HomeButton.Margin = new System.Windows.Forms.Padding(4);
@@ -443,7 +443,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             this.SaveButton.BackColor = System.Drawing.Color.SteelBlue;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.Color.White;
             this.SaveButton.Location = new System.Drawing.Point(335, 542);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4);
@@ -458,7 +458,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             this.NewButton.BackColor = System.Drawing.Color.SeaGreen;
             this.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewButton.ForeColor = System.Drawing.Color.White;
             this.NewButton.Location = new System.Drawing.Point(775, 542);
             this.NewButton.Margin = new System.Windows.Forms.Padding(4);
