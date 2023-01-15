@@ -514,5 +514,9 @@ namespace RRFFilesManager
                 RefreshActionLogDataGridViewDataSource();
         }
 
+        private void ABBinderTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
