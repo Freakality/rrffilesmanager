@@ -32,10 +32,10 @@ namespace RRFFilesManager
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 ConfigureServices();
-                LoginUI.Instance.FormClosing += Login_FormClosing;
-                Application.Run(LoginUI.Instance);
-                if (GetUser() is null)
-                    return;
+                //LoginUI.Instance.FormClosing += Login_FormClosing;
+                //Application.Run(LoginUI.Instance);
+                //if (GetUser() is null)
+                //    return;
                 //Application.Run(LoginUI.Instance);
                 Application.Run(Home.Instance);
             }

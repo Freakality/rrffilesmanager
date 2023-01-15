@@ -55,6 +55,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<LogItem> LogItems { get; set; }
         public DbSet<Timeline> Timelines { get; set; }
         public DbSet<LawyerTask> LawyerTasks { get; set; }
+        public DbSet<FileStatus> FileStatus { get; set; }
         public Lawyer User { get; set; }
 
 

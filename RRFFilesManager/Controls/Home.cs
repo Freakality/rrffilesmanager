@@ -57,8 +57,8 @@ namespace RRFFilesManager
              }*/
             User = Program.GetUser();
             InitializeComponent();
-            UserFullName.Text = User.Description;
-            UserName.Text = User.UserName;
+            UserFullName.Text = User?.Description;
+            UserName.Text = User?.UserName;
             //UserFullName.Text = UserManager.GetUserFullName();
             //UserName.Text = UserManager.GetFullUserName();
         }
