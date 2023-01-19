@@ -79,6 +79,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel8.Controls.Add(this.InsuranceCompany, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel2, 0, 3);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -99,7 +100,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 26);
@@ -147,10 +148,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(453, 10);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(456, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Date Paid";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -159,10 +160,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(229, 2);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(234, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 32);
+            this.label2.Size = new System.Drawing.Size(176, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "M/R A/C Good, Service or Assessment Provided";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -171,10 +172,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(81, 10);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(83, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Payee";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -183,10 +184,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(588, 10);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(589, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 0;
             this.label5.Text = "Amount";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -195,10 +196,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(706, 10);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(708, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "IE Amount";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -214,7 +215,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0});
             this.PolicyClaimLimit.Location = new System.Drawing.Point(103, 3);
             this.PolicyClaimLimit.Name = "PolicyClaimLimit";
-            this.PolicyClaimLimit.Size = new System.Drawing.Size(108, 20);
+            this.PolicyClaimLimit.Size = new System.Drawing.Size(108, 22);
             this.PolicyClaimLimit.TabIndex = 12;
             this.PolicyClaimLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.PolicyClaimLimit.TextChanged += new System.EventHandler(this.PolicyClaimLimit_TextChanged);
@@ -240,27 +241,29 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.StatementPeriodTo.CustomFormat = "MM/dd/yyyy";
             this.StatementPeriodTo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatementPeriodTo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatementPeriodTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.StatementPeriodTo.Location = new System.Drawing.Point(117, 3);
             this.StatementPeriodTo.Name = "StatementPeriodTo";
-            this.StatementPeriodTo.Size = new System.Drawing.Size(108, 20);
+            this.StatementPeriodTo.Size = new System.Drawing.Size(108, 22);
             this.StatementPeriodTo.TabIndex = 6;
             // 
             // StatementPeriodFrom
             // 
             this.StatementPeriodFrom.CustomFormat = "MM/dd/yyyy";
             this.StatementPeriodFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatementPeriodFrom.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatementPeriodFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.StatementPeriodFrom.Location = new System.Drawing.Point(3, 3);
             this.StatementPeriodFrom.Name = "StatementPeriodFrom";
-            this.StatementPeriodFrom.Size = new System.Drawing.Size(108, 20);
+            this.StatementPeriodFrom.Size = new System.Drawing.Size(108, 22);
             this.StatementPeriodFrom.TabIndex = 5;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(481, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 26);
@@ -272,7 +275,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(217, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 26);
@@ -285,7 +288,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.InsuranceCompany.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InsuranceCompany.Location = new System.Drawing.Point(367, 3);
             this.InsuranceCompany.Name = "InsuranceCompany";
-            this.InsuranceCompany.Size = new System.Drawing.Size(108, 20);
+            this.InsuranceCompany.Size = new System.Drawing.Size(108, 22);
             this.InsuranceCompany.TabIndex = 14;
             // 
             // panel2
@@ -330,9 +333,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // PayeeTB
             // 
             this.PayeeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PayeeTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PayeeTB.Location = new System.Drawing.Point(3, 3);
             this.PayeeTB.Name = "PayeeTB";
-            this.PayeeTB.Size = new System.Drawing.Size(206, 20);
+            this.PayeeTB.Size = new System.Drawing.Size(206, 22);
             this.PayeeTB.TabIndex = 1;
             // 
             // DatePaidDTP
@@ -342,15 +346,16 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DatePaidDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DatePaidDTP.Location = new System.Drawing.Point(427, 3);
             this.DatePaidDTP.Name = "DatePaidDTP";
-            this.DatePaidDTP.Size = new System.Drawing.Size(121, 20);
+            this.DatePaidDTP.Size = new System.Drawing.Size(121, 22);
             this.DatePaidDTP.TabIndex = 3;
             // 
             // MRACGSAProvidedTB
             // 
             this.MRACGSAProvidedTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MRACGSAProvidedTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MRACGSAProvidedTB.Location = new System.Drawing.Point(215, 3);
             this.MRACGSAProvidedTB.Name = "MRACGSAProvidedTB";
-            this.MRACGSAProvidedTB.Size = new System.Drawing.Size(206, 20);
+            this.MRACGSAProvidedTB.Size = new System.Drawing.Size(206, 22);
             this.MRACGSAProvidedTB.TabIndex = 2;
             // 
             // AmountTB
@@ -364,7 +369,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0});
             this.AmountTB.Location = new System.Drawing.Point(554, 3);
             this.AmountTB.Name = "AmountTB";
-            this.AmountTB.Size = new System.Drawing.Size(121, 20);
+            this.AmountTB.Size = new System.Drawing.Size(121, 22);
             this.AmountTB.TabIndex = 5;
             this.AmountTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -379,7 +384,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             0});
             this.IEAmountTB.Location = new System.Drawing.Point(681, 3);
             this.IEAmountTB.Name = "IEAmountTB";
-            this.IEAmountTB.Size = new System.Drawing.Size(121, 20);
+            this.IEAmountTB.Size = new System.Drawing.Size(121, 22);
             this.IEAmountTB.TabIndex = 6;
             this.IEAmountTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -389,11 +394,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(808, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 23);
+            this.button1.Size = new System.Drawing.Size(22, 22);
             this.button1.TabIndex = 7;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;

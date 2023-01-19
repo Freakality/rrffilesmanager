@@ -117,6 +117,7 @@ namespace RRFFilesManager.Controls.CommonControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FindFileButton.BackColor = System.Drawing.Color.Maroon;
             this.FindFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindFileButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindFileButton.ForeColor = System.Drawing.Color.White;
             this.FindFileButton.Location = new System.Drawing.Point(3, 3);
             this.FindFileButton.Name = "FindFileButton";

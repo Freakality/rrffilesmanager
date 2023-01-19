@@ -51,7 +51,7 @@ namespace RRFFilesManager.Controls.CommonControls
             // 
             label15.AutoSize = true;
             label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label15.Location = new System.Drawing.Point(512, 8);
             label15.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             label15.Name = "label15";
@@ -64,7 +64,7 @@ namespace RRFFilesManager.Controls.CommonControls
             // 
             DateOFCallLabel.AutoSize = true;
             DateOFCallLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            DateOFCallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            DateOFCallLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             DateOFCallLabel.Location = new System.Drawing.Point(153, 8);
             DateOFCallLabel.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             DateOFCallLabel.Name = "DateOFCallLabel";
@@ -77,7 +77,7 @@ namespace RRFFilesManager.Controls.CommonControls
             // 
             label1.AutoSize = true;
             label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.Location = new System.Drawing.Point(3, 8);
             label1.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             label1.Name = "label1";
@@ -114,6 +114,7 @@ namespace RRFFilesManager.Controls.CommonControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FindFileButton.BackColor = System.Drawing.Color.Maroon;
             this.FindFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindFileButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindFileButton.ForeColor = System.Drawing.Color.White;
             this.FindFileButton.Location = new System.Drawing.Point(3, 3);
             this.FindFileButton.Name = "FindFileButton";
@@ -127,32 +128,35 @@ namespace RRFFilesManager.Controls.CommonControls
             // 
             this.FileNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileNumberTextBox.Enabled = false;
+            this.FileNumberTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileNumberTextBox.Location = new System.Drawing.Point(612, 8);
             this.FileNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
             this.FileNumberTextBox.ReadOnly = true;
-            this.FileNumberTextBox.Size = new System.Drawing.Size(253, 20);
+            this.FileNumberTextBox.Size = new System.Drawing.Size(253, 21);
             this.FileNumberTextBox.TabIndex = 143;
             // 
             // ClientTB
             // 
             this.ClientTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClientTB.Enabled = false;
+            this.ClientTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientTB.Location = new System.Drawing.Point(253, 8);
             this.ClientTB.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.ClientTB.Name = "ClientTB";
             this.ClientTB.ReadOnly = true;
-            this.ClientTB.Size = new System.Drawing.Size(253, 20);
+            this.ClientTB.Size = new System.Drawing.Size(253, 21);
             this.ClientTB.TabIndex = 147;
             // 
             // ArchivesCB
             // 
             this.ArchivesCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ArchivesCB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArchivesCB.FormattingEnabled = true;
             this.ArchivesCB.Location = new System.Drawing.Point(253, 8);
             this.ArchivesCB.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.ArchivesCB.Name = "ArchivesCB";
-            this.ArchivesCB.Size = new System.Drawing.Size(612, 21);
+            this.ArchivesCB.Size = new System.Drawing.Size(612, 24);
             this.ArchivesCB.TabIndex = 147;
             this.ArchivesCB.SelectedIndexChanged += new System.EventHandler(this.ArchivesCB_SelectedIndexChanged);
             // 

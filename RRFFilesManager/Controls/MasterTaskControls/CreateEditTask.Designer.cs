@@ -77,7 +77,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.tableLayoutPanel1.Controls.Add(this.SelectDependenciesButton, 4, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -85,7 +85,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(729, 169);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(729, 163);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // CBoxCategory
@@ -93,7 +93,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.tableLayoutPanel1.SetColumnSpan(this.CBoxCategory, 4);
             this.CBoxCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CBoxCategory.FormattingEnabled = true;
-            this.CBoxCategory.Location = new System.Drawing.Point(181, 135);
+            this.CBoxCategory.Location = new System.Drawing.Point(181, 131);
             this.CBoxCategory.Name = "CBoxCategory";
             this.CBoxCategory.Size = new System.Drawing.Size(547, 25);
             this.CBoxCategory.TabIndex = 157;
@@ -103,7 +103,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.tableLayoutPanel1.SetColumnSpan(this.TBoxDependencies, 3);
             this.TBoxDependencies.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TBoxDependencies.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TBoxDependencies.Location = new System.Drawing.Point(181, 69);
+            this.TBoxDependencies.Location = new System.Drawing.Point(181, 67);
             this.TBoxDependencies.Name = "TBoxDependencies";
             this.TBoxDependencies.Size = new System.Drawing.Size(369, 23);
             this.TBoxDependencies.TabIndex = 154;
@@ -111,22 +111,22 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // NBoxDueBy
             // 
             this.NBoxDueBy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NBoxDueBy.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.NBoxDueBy.Location = new System.Drawing.Point(181, 36);
+            this.NBoxDueBy.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NBoxDueBy.Location = new System.Drawing.Point(181, 35);
             this.NBoxDueBy.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.NBoxDueBy.Name = "NBoxDueBy";
-            this.NBoxDueBy.Size = new System.Drawing.Size(166, 23);
+            this.NBoxDueBy.Size = new System.Drawing.Size(166, 26);
             this.NBoxDueBy.TabIndex = 152;
             // 
             // TBoxTaskName
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.TBoxTaskName, 4);
             this.TBoxTaskName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TBoxTaskName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TBoxTaskName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBoxTaskName.Location = new System.Drawing.Point(181, 3);
             this.TBoxTaskName.Name = "TBoxTaskName";
             this.TBoxTaskName.Size = new System.Drawing.Size(547, 23);
@@ -137,9 +137,9 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label3.Location = new System.Drawing.Point(3, 66);
+            this.label3.Location = new System.Drawing.Point(3, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 33);
+            this.label3.Size = new System.Drawing.Size(172, 32);
             this.label3.TabIndex = 8;
             this.label3.Text = "Dependencies";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -149,9 +149,9 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label1.Location = new System.Drawing.Point(3, 33);
+            this.label1.Location = new System.Drawing.Point(3, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 33);
+            this.label1.Size = new System.Drawing.Size(172, 32);
             this.label1.TabIndex = 8;
             this.label1.Text = "Due By";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -163,7 +163,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.Label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.Label2.Location = new System.Drawing.Point(3, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(172, 33);
+            this.Label2.Size = new System.Drawing.Size(172, 32);
             this.Label2.TabIndex = 7;
             this.Label2.Text = "Description*";
             this.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -173,9 +173,9 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label4.Location = new System.Drawing.Point(3, 99);
+            this.label4.Location = new System.Drawing.Point(3, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(172, 33);
+            this.label4.Size = new System.Drawing.Size(172, 32);
             this.label4.TabIndex = 9;
             this.label4.Text = "To Be Completed By*";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -185,9 +185,9 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label5.Location = new System.Drawing.Point(3, 132);
+            this.label5.Location = new System.Drawing.Point(3, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 37);
+            this.label5.Size = new System.Drawing.Size(172, 35);
             this.label5.TabIndex = 10;
             this.label5.Text = "Category*";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -197,7 +197,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.tableLayoutPanel1.SetColumnSpan(this.CBoxToBeCompletedBy, 4);
             this.CBoxToBeCompletedBy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CBoxToBeCompletedBy.FormattingEnabled = true;
-            this.CBoxToBeCompletedBy.Location = new System.Drawing.Point(181, 102);
+            this.CBoxToBeCompletedBy.Location = new System.Drawing.Point(181, 99);
             this.CBoxToBeCompletedBy.Name = "CBoxToBeCompletedBy";
             this.CBoxToBeCompletedBy.Size = new System.Drawing.Size(547, 25);
             this.CBoxToBeCompletedBy.TabIndex = 155;
@@ -205,15 +205,15 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // NBoxDeferBy
             // 
             this.NBoxDeferBy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NBoxDeferBy.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.NBoxDeferBy.Location = new System.Drawing.Point(556, 36);
+            this.NBoxDeferBy.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NBoxDeferBy.Location = new System.Drawing.Point(556, 35);
             this.NBoxDeferBy.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.NBoxDeferBy.Name = "NBoxDeferBy";
-            this.NBoxDeferBy.Size = new System.Drawing.Size(172, 23);
+            this.NBoxDeferBy.Size = new System.Drawing.Size(172, 26);
             this.NBoxDeferBy.TabIndex = 153;
             // 
             // label6
@@ -221,9 +221,9 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label6.Location = new System.Drawing.Point(473, 33);
+            this.label6.Location = new System.Drawing.Point(473, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 33);
+            this.label6.Size = new System.Drawing.Size(77, 32);
             this.label6.TabIndex = 8;
             this.label6.Text = "Defer By";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -231,9 +231,10 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // CheckLockDue
             // 
             this.CheckLockDue.AutoSize = true;
-            this.CheckLockDue.Location = new System.Drawing.Point(353, 36);
+            this.CheckLockDue.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckLockDue.Location = new System.Drawing.Point(353, 35);
             this.CheckLockDue.Name = "CheckLockDue";
-            this.CheckLockDue.Size = new System.Drawing.Size(114, 21);
+            this.CheckLockDue.Size = new System.Drawing.Size(114, 24);
             this.CheckLockDue.TabIndex = 156;
             this.CheckLockDue.Text = "Lock Due Date";
             this.CheckLockDue.UseVisualStyleBackColor = true;
@@ -242,11 +243,11 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // 
             this.SelectDependenciesButton.BackColor = System.Drawing.Color.Maroon;
             this.SelectDependenciesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SelectDependenciesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.SelectDependenciesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectDependenciesButton.ForeColor = System.Drawing.Color.White;
-            this.SelectDependenciesButton.Location = new System.Drawing.Point(556, 69);
+            this.SelectDependenciesButton.Location = new System.Drawing.Point(556, 67);
             this.SelectDependenciesButton.Name = "SelectDependenciesButton";
-            this.SelectDependenciesButton.Size = new System.Drawing.Size(172, 23);
+            this.SelectDependenciesButton.Size = new System.Drawing.Size(172, 26);
             this.SelectDependenciesButton.TabIndex = 152;
             this.SelectDependenciesButton.Text = "Select Dependencies";
             this.SelectDependenciesButton.UseVisualStyleBackColor = false;
@@ -257,7 +258,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.CancelDialogButton.BackColor = System.Drawing.Color.Maroon;
             this.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelDialogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelDialogButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelDialogButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelDialogButton.ForeColor = System.Drawing.Color.White;
             this.CancelDialogButton.Location = new System.Drawing.Point(596, 206);
             this.CancelDialogButton.Name = "CancelDialogButton";
@@ -270,7 +271,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // 
             this.AddEditTaskButton.BackColor = System.Drawing.Color.Maroon;
             this.AddEditTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEditTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddEditTaskButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddEditTaskButton.ForeColor = System.Drawing.Color.White;
             this.AddEditTaskButton.Location = new System.Drawing.Point(438, 206);
             this.AddEditTaskButton.Name = "AddEditTaskButton";
@@ -283,6 +284,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(735, 188);

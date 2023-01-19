@@ -14,11 +14,11 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void SoftDelete(int fileId);
         File GetById(int fileId);
         IEnumerable<File> List();
-        IEnumerable<File> Search(string searchText, bool? hold = null, int? take = null);
+        IEnumerable<File> Search(string searchText, FileStatus fileStatus, bool? hold = null, int? take = null);
         File GetLastFile(int? clientId = null);
         void AddFileContact(File file, Contact contact);
         void RemoveFileContact(File file, Contact contact);
-        void AddTask(File file, Task task, TaskState taskState);
-        void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState);
+        void AddTask(File file, Task task, TaskState taskState,int Days = 0);
+        void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState, int Days = 0);
     }
 }

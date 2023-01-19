@@ -20,12 +20,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         public override void ClearForm()
         {
-            Name.ResetText();
+            txtName.ResetText();
         }
 
         public override void FillArchiveInfo(Archive archive)
         {
-            archive.DocumentName = Name.Text;
+            archive.DocumentName = txtName.Text;
         }
 
         //public override string GetFileName(string text, DateTime? documentDate = null, DateTime? documentDateFrom = null, DateTime? documentDateTo = null, DocumentNameTypeEnum documentNameType = default)

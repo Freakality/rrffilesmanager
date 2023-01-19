@@ -47,7 +47,7 @@ namespace RRFFilesManager.Controls.FileControls
 
         private List<string> IndexCategories => ArchivesBinder.Select(s => s.Type.IndexCategory).Distinct().ToList();
 
-        private List<ArchiveBinder> ArchivesBinderToExport => (DataGridView.DataSource as SortableBindingList<ArchiveBinder>)?.Where(s => s.Check).ToList();
+        private List<ArchiveBinder> ArchivesBinderSelected => (DataGridView.DataSource as SortableBindingList<ArchiveBinder>)?.Where(s => s.Check).ToList();
 
         private readonly IFileRepository _fileRepository;
         private readonly IArchiveRepository _archiveRepository;
@@ -82,7 +82,6 @@ namespace RRFFilesManager.Controls.FileControls
             DataGridView.Columns["Check"].ReadOnly = false;
             DataGridView.Columns["Check"].HeaderText = "";
 
-
             if (DataGridView.Columns.Count == 0)
                 return;
             DataGridView.Columns["ID"].Visible = false;
@@ -101,7 +100,7 @@ namespace RRFFilesManager.Controls.FileControls
 
         public void ExportReport(string extension)
         {
-            if(ArchivesBinderToExport == null || ArchivesBinderToExport.Count() == 0)
+            if(ArchivesBinderSelected == null || ArchivesBinderSelected.Count() == 0)
             {
                 MessageBox.Show("You must select at least one archive");
                 return;
@@ -123,7 +122,7 @@ namespace RRFFilesManager.Controls.FileControls
                     {
                         wordApp.Visible = false;
                         wordApp.ActiveWindow.View.ReadingLayout = false;
-                        Word.FillDocumentABBReport(document, File, ArchivesBinderToExport.Select(s => s.GetArchive()));
+                        Word.FillDocumentABBReport(document, File, ArchivesBinderSelected.Select(s => s.GetArchive()));
                         if (extension == ".doc")
                             document.SaveAs(filePath);
                         else if (extension == ".pdf")
@@ -169,6 +168,20 @@ namespace RRFFilesManager.Controls.FileControls
             if (File == null)
                 return;
             DataGridView.DataSource = new SortableBindingList<ArchiveBinder>(ArchivesBinderFiltered);
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (ArchivesBinderSelected == null || ArchivesBinderSelected.Count() == 0)
+            {
+                MessageBox.Show("You must select at least one archive");
+                return;
+            }
+            foreach (var archiveBinder in ArchivesBinderSelected)
+            {
+                _archiveRepository.Delete(archiveBinder.GetArchive());
+            }
+            SetFile(File);
         }
     }
 }

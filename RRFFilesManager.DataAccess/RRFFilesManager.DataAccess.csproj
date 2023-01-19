@@ -201,6 +201,7 @@
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
     <Compile Include="Abstractions\IClientNoteRepository.cs" />
     <Compile Include="Abstractions\IFileReviewRepository.cs" />
+    <Compile Include="Abstractions\IFileStatusRepository.cs" />
     <Compile Include="Abstractions\IFileTaskRepository.cs" />
     <Compile Include="Abstractions\IGenericRepository.cs" />
     <Compile Include="Abstractions\ILawyerTaskRepository.cs" />
@@ -227,6 +228,7 @@
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
     <Compile Include="ClientNoteRepository.cs" />
+    <Compile Include="FileStatusRepository.cs" />
     <Compile Include="LawyerTaskRepository.cs" />
     <Compile Include="LoggedUser.cs" />
     <Compile Include="DrugRepository.cs" />

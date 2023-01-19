@@ -37,7 +37,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.DrugCreateButton = new System.Windows.Forms.Button();
-            this.drugComboBox1 = new RRFFilesManager.Controls.PharmacyControls.DrugComboBox();
             this.NarcoticTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.StrengthTB = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.Label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.CreatePharmacyButton = new System.Windows.Forms.Button();
-            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.RxFillDateTB = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,8 +58,10 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.label8 = new System.Windows.Forms.Label();
             this.DispenseQuantityNUD = new System.Windows.Forms.NumericUpDown();
             this.DataGridView = new System.Windows.Forms.DataGridView();
-            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
             this.PreviewPanel = new System.Windows.Forms.Panel();
+            this.drugComboBox1 = new RRFFilesManager.Controls.PharmacyControls.DrugComboBox();
+            this.pharmacyComboBox1 = new RRFFilesManager.Controls.PharmacyControls.PharmacyComboBox();
+            this.findFileAndArchivePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFileAndArchivePanelUserControl();
             this.previewArchiveUserControl1 = new RRFFilesManager.Controls.ArchiveControls.PreviewArchiveUserControl();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -139,14 +139,17 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             // DoneButton
             // 
-            this.DoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DoneButton.Location = new System.Drawing.Point(779, 3);
+            this.DoneButton.BackColor = System.Drawing.Color.Maroon;
+            this.DoneButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.DoneButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DoneButton.ForeColor = System.Drawing.Color.White;
+            this.DoneButton.Location = new System.Drawing.Point(787, 0);
             this.DoneButton.Name = "DoneButton";
             this.DoneButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DoneButton.Size = new System.Drawing.Size(81, 23);
+            this.DoneButton.Size = new System.Drawing.Size(81, 30);
             this.DoneButton.TabIndex = 0;
             this.DoneButton.Text = "Done";
-            this.DoneButton.UseVisualStyleBackColor = true;
+            this.DoneButton.UseVisualStyleBackColor = false;
             this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // tableLayoutPanel2
@@ -201,7 +204,9 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             // DrugCreateButton
             // 
+            this.DrugCreateButton.BackColor = System.Drawing.Color.Maroon;
             this.DrugCreateButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrugCreateButton.ForeColor = System.Drawing.Color.White;
             this.DrugCreateButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.DrugCreateButton.Location = new System.Drawing.Point(248, 2);
             this.DrugCreateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
@@ -210,32 +215,23 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DrugCreateButton.TabIndex = 1;
             this.DrugCreateButton.Text = "+";
             this.DrugCreateButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.DrugCreateButton.UseVisualStyleBackColor = true;
+            this.DrugCreateButton.UseVisualStyleBackColor = false;
             this.DrugCreateButton.Click += new System.EventHandler(this.DrugCreateButton_Click);
-            // 
-            // drugComboBox1
-            // 
-            this.drugComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drugComboBox1.FormattingEnabled = true;
-            this.drugComboBox1.Location = new System.Drawing.Point(3, 3);
-            this.drugComboBox1.Name = "drugComboBox1";
-            this.drugComboBox1.Size = new System.Drawing.Size(239, 21);
-            this.drugComboBox1.TabIndex = 2;
-            this.drugComboBox1.SelectedIndexChanged += new System.EventHandler(this.drugComboBox1_SelectedIndexChanged);
             // 
             // NarcoticTB
             // 
+            this.NarcoticTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NarcoticTB.Location = new System.Drawing.Point(203, 183);
             this.NarcoticTB.Name = "NarcoticTB";
             this.NarcoticTB.ReadOnly = true;
-            this.NarcoticTB.Size = new System.Drawing.Size(96, 20);
+            this.NarcoticTB.Size = new System.Drawing.Size(96, 22);
             this.NarcoticTB.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(194, 30);
@@ -245,17 +241,18 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             // StrengthTB
             // 
+            this.StrengthTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StrengthTB.Location = new System.Drawing.Point(203, 153);
             this.StrengthTB.Name = "StrengthTB";
             this.StrengthTB.ReadOnly = true;
-            this.StrengthTB.Size = new System.Drawing.Size(96, 20);
+            this.StrengthTB.Size = new System.Drawing.Size(96, 22);
             this.StrengthTB.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(194, 30);
@@ -265,17 +262,18 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             // ProductNameTB
             // 
+            this.ProductNameTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductNameTB.Location = new System.Drawing.Point(203, 123);
             this.ProductNameTB.Name = "ProductNameTB";
             this.ProductNameTB.ReadOnly = true;
-            this.ProductNameTB.Size = new System.Drawing.Size(239, 20);
+            this.ProductNameTB.Size = new System.Drawing.Size(239, 22);
             this.ProductNameTB.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(194, 30);
@@ -287,7 +285,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(194, 30);
@@ -299,7 +297,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 30);
@@ -311,7 +309,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             this.Label2.AutoSize = true;
             this.Label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(3, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(194, 30);
@@ -336,7 +334,9 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             // CreatePharmacyButton
             // 
+            this.CreatePharmacyButton.BackColor = System.Drawing.Color.Maroon;
             this.CreatePharmacyButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreatePharmacyButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CreatePharmacyButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.CreatePharmacyButton.Location = new System.Drawing.Point(371, 2);
             this.CreatePharmacyButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 3);
@@ -345,18 +345,8 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.CreatePharmacyButton.TabIndex = 1;
             this.CreatePharmacyButton.Text = "+";
             this.CreatePharmacyButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CreatePharmacyButton.UseVisualStyleBackColor = true;
+            this.CreatePharmacyButton.UseVisualStyleBackColor = false;
             this.CreatePharmacyButton.Click += new System.EventHandler(this.CreatePharmacyButton_Click);
-            // 
-            // pharmacyComboBox1
-            // 
-            this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pharmacyComboBox1.FormattingEnabled = true;
-            this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
-            this.pharmacyComboBox1.Name = "pharmacyComboBox1";
-            this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
-            this.pharmacyComboBox1.TabIndex = 2;
-            this.pharmacyComboBox1.SelectedIndexChanged += new System.EventHandler(this.pharmacyComboBox1_SelectedIndexChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -382,17 +372,18 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             this.RxFillDateTB.CustomFormat = "MMM-dd-yyyy";
             this.RxFillDateTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RxFillDateTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RxFillDateTB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.RxFillDateTB.Location = new System.Drawing.Point(23, 3);
             this.RxFillDateTB.Name = "RxFillDateTB";
-            this.RxFillDateTB.Size = new System.Drawing.Size(218, 20);
+            this.RxFillDateTB.Size = new System.Drawing.Size(218, 22);
             this.RxFillDateTB.TabIndex = 150;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(247, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 30);
@@ -419,19 +410,21 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // ClientPostalCodeTB
             // 
             this.ClientPostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientPostalCodeTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientPostalCodeTB.Location = new System.Drawing.Point(3, 3);
             this.ClientPostalCodeTB.Name = "ClientPostalCodeTB";
             this.ClientPostalCodeTB.ReadOnly = true;
-            this.ClientPostalCodeTB.Size = new System.Drawing.Size(106, 20);
+            this.ClientPostalCodeTB.Size = new System.Drawing.Size(106, 22);
             this.ClientPostalCodeTB.TabIndex = 0;
             // 
             // PharmacyPostalCodeTB
             // 
             this.PharmacyPostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PharmacyPostalCodeTB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PharmacyPostalCodeTB.Location = new System.Drawing.Point(115, 3);
             this.PharmacyPostalCodeTB.Name = "PharmacyPostalCodeTB";
             this.PharmacyPostalCodeTB.ReadOnly = true;
-            this.PharmacyPostalCodeTB.Size = new System.Drawing.Size(106, 20);
+            this.PharmacyPostalCodeTB.Size = new System.Drawing.Size(106, 22);
             this.PharmacyPostalCodeTB.TabIndex = 1;
             // 
             // KeepRxFillDate
@@ -449,7 +442,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 60);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(194, 30);
@@ -459,6 +452,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             // DispenseQuantityNUD
             // 
+            this.DispenseQuantityNUD.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DispenseQuantityNUD.Location = new System.Drawing.Point(203, 63);
             this.DispenseQuantityNUD.Maximum = new decimal(new int[] {
             10000,
@@ -466,7 +460,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             0,
             0});
             this.DispenseQuantityNUD.Name = "DispenseQuantityNUD";
-            this.DispenseQuantityNUD.Size = new System.Drawing.Size(96, 20);
+            this.DispenseQuantityNUD.Size = new System.Drawing.Size(96, 22);
             this.DispenseQuantityNUD.TabIndex = 16;
             // 
             // DataGridView
@@ -479,6 +473,35 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.DataGridView.TabIndex = 148;
             this.DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellClick);
             // 
+            // PreviewPanel
+            // 
+            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
+            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
+            this.PreviewPanel.Name = "PreviewPanel";
+            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
+            this.PreviewPanel.TabIndex = 1;
+            // 
+            // drugComboBox1
+            // 
+            this.drugComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drugComboBox1.FormattingEnabled = true;
+            this.drugComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.drugComboBox1.Name = "drugComboBox1";
+            this.drugComboBox1.Size = new System.Drawing.Size(239, 21);
+            this.drugComboBox1.TabIndex = 2;
+            this.drugComboBox1.SelectedIndexChanged += new System.EventHandler(this.drugComboBox1_SelectedIndexChanged);
+            // 
+            // pharmacyComboBox1
+            // 
+            this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pharmacyComboBox1.FormattingEnabled = true;
+            this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
+            this.pharmacyComboBox1.Name = "pharmacyComboBox1";
+            this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);
+            this.pharmacyComboBox1.TabIndex = 2;
+            this.pharmacyComboBox1.SelectedIndexChanged += new System.EventHandler(this.pharmacyComboBox1_SelectedIndexChanged);
+            // 
             // findFileAndArchivePanelUserControl1
             // 
             this.findFileAndArchivePanelUserControl1.Archive = null;
@@ -489,18 +512,10 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             this.findFileAndArchivePanelUserControl1.TabIndex = 149;
             this.findFileAndArchivePanelUserControl1.Load += new System.EventHandler(this.findFileAndArchivePanelUserControl1_Load);
             // 
-            // PreviewPanel
-            // 
-            this.PreviewPanel.Controls.Add(this.previewArchiveUserControl1);
-            this.PreviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PreviewPanel.Location = new System.Drawing.Point(879, 4);
-            this.PreviewPanel.Name = "PreviewPanel";
-            this.PreviewPanel.Size = new System.Drawing.Size(465, 665);
-            this.PreviewPanel.TabIndex = 1;
-            // 
             // previewArchiveUserControl1
             // 
             this.previewArchiveUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewArchiveUserControl1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.previewArchiveUserControl1.Location = new System.Drawing.Point(0, 0);
             this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
             this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);

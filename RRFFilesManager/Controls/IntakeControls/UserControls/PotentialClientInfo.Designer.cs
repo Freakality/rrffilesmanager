@@ -49,6 +49,7 @@
             this.FindClientButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindClientButton.BackColor = System.Drawing.Color.Maroon;
             this.FindClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindClientButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindClientButton.ForeColor = System.Drawing.Color.White;
             this.FindClientButton.Location = new System.Drawing.Point(1104, 3);
             this.FindClientButton.Name = "FindClientButton";

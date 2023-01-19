@@ -48,19 +48,30 @@ namespace RRFFilesManager.DataAccess
                 file.DateOfStatusChange = DateTime.Now;
                 file.PreviousStatus = trxFile.CurrentStatus;
             }
+            
             _context.Entry(trxFile).CurrentValues.SetValues(file);
             _context.SaveChanges();
         }
 
-        public  IEnumerable<File> Search(string searchText, bool? hold = null, int? take = null)
+        public  IEnumerable<File> Search(string searchText, FileStatus fileStatus, bool? hold = null, int? take = null)
         {
-            var query = _context.Files.Where(s =>
-                s.FileNumber.ToString().Contains(searchText) ||
-                s.Client.FirstName.Contains(searchText) ||
-                s.Client.LastName.Contains(searchText) ||
-                s.Client.Email.Contains(searchText) ||
-                s.MatterType.Description.Contains(searchText)
-            );
+            IQueryable<File> query = _context.Files;
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                query = query.Where(s =>
+                    s.FileNumber.ToString().Contains(searchText) ||
+                    s.Client.FirstName.Contains(searchText) ||
+                    s.Client.LastName.Contains(searchText) ||
+                    s.Client.Email.Contains(searchText) ||
+                    s.MatterType.Description.Contains(searchText)
+                );
+            } 
+             
+            if(fileStatus != null)
+            {
+                query = query.Where(s => s.CurrentStatus == fileStatus);
+            }
 
             if (take != null)
                 query = query.Take(take.Value);
@@ -101,32 +112,58 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public void AddTask(File file, Task task, TaskState taskState)
+        public void AddTask(File file, Task task, TaskState taskState, int Days)
         {
             var exist = _context.FileTasks.Any(s => s.File.ID == file.ID && s.Task.ID == task.ID);
             if (exist)
-                return;
-            DateTime dueDate;
-            DateTime deferUntil;
-            var fileTask = new FileTask
             {
-                File = file,
-                FileId = file.ID,
-                Task = task,
-                TaskId = task.ID,
-                DueDate = file.DateOfCall.AddDays(task.DueBy),
-                DeferUntilDate = file.DateOfCall.AddDays(task.DeferBy),
-                State = taskState
-            };
-            _context.FileTasks.Add(fileTask);
-            _context.SaveChanges(); 
+                var fileTaskPrev = _context.FileTasks.Single(t => t.TaskId == task.ID);
+                var taskexisten = _context.FileTasks.Single(t => t.TaskId == task.ID);
+                taskexisten.DueDate = DateTime.Now;
+                taskexisten.DeferUntilDate = DateTime.Now.AddDays(Days);
+                _context.Entry(fileTaskPrev).CurrentValues.SetValues(taskexisten);
+                _context.SaveChanges();
+            }  
+            else
+            {
+                var filetask = new FileTask
+                {
+                    File = file,
+                    FileId = file.ID,
+                    Task = task,
+                    TaskId = task.ID,
+                    DueDate = DateTime.Now,
+                    DeferUntilDate = DateTime.Now.AddDays(Days),
+                    State = taskState
+                };
+                _context.FileTasks.Add(filetask);
+                _context.SaveChanges();
+            }
+
+            //if (exist)
+            //    return;
+            //DateTime dueDate;
+            //DateTime deferUntil;
+            //var fileTask = new FileTask
+            //{
+            //    File = file,
+            //    FileId = file.ID,
+            //    Task = task,
+            //    TaskId = task.ID,
+            //    DueDate = file.DateOfCall.AddDays(task.DueBy),
+            //    DeferUntilDate = file.DateOfCall.AddDays(task.DeferBy),
+            //    State = taskState
+            //};
+
+            //_context.FileTasks.Add(fileTask);
+            //_context.SaveChanges(); 
         }
 
-        public void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState)
+        public void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState,int Days)
         {
             foreach(Task task in tasks)
             {
-                AddTask(file, task, taskState);
+                AddTask(file, task, taskState,Days);
             }
         }
     }

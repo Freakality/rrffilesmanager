@@ -69,18 +69,19 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // 
             this.DocumentDateDTP.CustomFormat = "MMM-dd-yyyy";
             this.DocumentDateDTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentDateDTP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DocumentDateDTP.Location = new System.Drawing.Point(652, 3);
             this.DocumentDateDTP.Name = "DocumentDateDTP";
             this.DocumentDateDTP.ShowCheckBox = true;
-            this.DocumentDateDTP.Size = new System.Drawing.Size(213, 20);
+            this.DocumentDateDTP.Size = new System.Drawing.Size(213, 22);
             this.DocumentDateDTP.TabIndex = 150;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(452, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 30);
@@ -133,18 +134,20 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // ClientPostalCodeTB
             // 
             this.ClientPostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientPostalCodeTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientPostalCodeTB.Location = new System.Drawing.Point(33, 3);
             this.ClientPostalCodeTB.Name = "ClientPostalCodeTB";
             this.ClientPostalCodeTB.ReadOnly = true;
-            this.ClientPostalCodeTB.Size = new System.Drawing.Size(73, 20);
+            this.ClientPostalCodeTB.Size = new System.Drawing.Size(73, 21);
             this.ClientPostalCodeTB.TabIndex = 0;
             // 
             // TreatmentCentrePostalCodeTB
             // 
             this.TreatmentCentrePostalCodeTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TreatmentCentrePostalCodeTB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TreatmentCentrePostalCodeTB.Location = new System.Drawing.Point(142, 3);
             this.TreatmentCentrePostalCodeTB.Name = "TreatmentCentrePostalCodeTB";
-            this.TreatmentCentrePostalCodeTB.Size = new System.Drawing.Size(74, 20);
+            this.TreatmentCentrePostalCodeTB.Size = new System.Drawing.Size(74, 21);
             this.TreatmentCentrePostalCodeTB.TabIndex = 1;
             // 
             // DataGridView
@@ -169,6 +172,7 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // previewArchiveUserControl1
             // 
             this.previewArchiveUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewArchiveUserControl1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.previewArchiveUserControl1.Location = new System.Drawing.Point(0, 0);
             this.previewArchiveUserControl1.Name = "previewArchiveUserControl1";
             this.previewArchiveUserControl1.Size = new System.Drawing.Size(465, 665);
@@ -179,7 +183,7 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(452, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 30);
@@ -207,6 +211,8 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.tableLayoutPanel2.Controls.Add(this.DocumentCategoryCKB, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.DocumentCategoryCB, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.DocumentTypeCB, 1, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -235,7 +241,7 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // 
             this.Label2.AutoSize = true;
             this.Label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(3, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(194, 30);
@@ -246,10 +252,11 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // DocumentGroupCB
             // 
             this.DocumentGroupCB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentGroupCB.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentGroupCB.FormattingEnabled = true;
             this.DocumentGroupCB.Location = new System.Drawing.Point(203, 3);
             this.DocumentGroupCB.Name = "DocumentGroupCB";
-            this.DocumentGroupCB.Size = new System.Drawing.Size(213, 21);
+            this.DocumentGroupCB.Size = new System.Drawing.Size(213, 24);
             this.DocumentGroupCB.TabIndex = 151;
             this.DocumentGroupCB.SelectedIndexChanged += new System.EventHandler(this.DocumentGroupCB_SelectedIndexChanged);
             // 
@@ -295,7 +302,7 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.DocumentCategoryCB.FormattingEnabled = true;
             this.DocumentCategoryCB.Location = new System.Drawing.Point(203, 33);
             this.DocumentCategoryCB.Name = "DocumentCategoryCB";
-            this.DocumentCategoryCB.Size = new System.Drawing.Size(213, 21);
+            this.DocumentCategoryCB.Size = new System.Drawing.Size(213, 25);
             this.DocumentCategoryCB.TabIndex = 152;
             this.DocumentCategoryCB.SelectedIndexChanged += new System.EventHandler(this.DocumentCategoryCB_SelectedIndexChanged);
             // 
@@ -305,20 +312,23 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             this.DocumentTypeCB.FormattingEnabled = true;
             this.DocumentTypeCB.Location = new System.Drawing.Point(203, 63);
             this.DocumentTypeCB.Name = "DocumentTypeCB";
-            this.DocumentTypeCB.Size = new System.Drawing.Size(213, 21);
+            this.DocumentTypeCB.Size = new System.Drawing.Size(213, 25);
             this.DocumentTypeCB.TabIndex = 153;
             this.DocumentTypeCB.SelectedIndexChanged += new System.EventHandler(this.DocumentTypeCB_SelectedIndexChanged);
             // 
             // DoneButton
             // 
-            this.DoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DoneButton.Location = new System.Drawing.Point(779, 3);
+            this.DoneButton.BackColor = System.Drawing.Color.Maroon;
+            this.DoneButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.DoneButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DoneButton.ForeColor = System.Drawing.Color.White;
+            this.DoneButton.Location = new System.Drawing.Point(787, 0);
             this.DoneButton.Name = "DoneButton";
             this.DoneButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DoneButton.Size = new System.Drawing.Size(81, 23);
+            this.DoneButton.Size = new System.Drawing.Size(81, 30);
             this.DoneButton.TabIndex = 0;
             this.DoneButton.Text = "Done";
-            this.DoneButton.UseVisualStyleBackColor = true;
+            this.DoneButton.UseVisualStyleBackColor = false;
             this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // panel2
@@ -368,6 +378,7 @@ namespace RRFFilesManager.Controls.MedicalSummariesControls
             // findFileAndArchivePanelUserControl1
             // 
             this.findFileAndArchivePanelUserControl1.Archive = null;
+            this.findFileAndArchivePanelUserControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.findFileAndArchivePanelUserControl1.File = null;
             this.findFileAndArchivePanelUserControl1.Location = new System.Drawing.Point(3, 3);
             this.findFileAndArchivePanelUserControl1.Name = "findFileAndArchivePanelUserControl1";

@@ -243,7 +243,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(437, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 30);
@@ -254,10 +254,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // DocumentCategory
             // 
             this.DocumentCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentCategory.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentCategory.FormattingEnabled = true;
             this.DocumentCategory.Location = new System.Drawing.Point(153, 33);
             this.DocumentCategory.Name = "DocumentCategory";
-            this.DocumentCategory.Size = new System.Drawing.Size(278, 21);
+            this.DocumentCategory.Size = new System.Drawing.Size(278, 24);
             this.DocumentCategory.TabIndex = 7;
             this.DocumentCategory.SelectedIndexChanged += new System.EventHandler(this.DocumentCategory_SelectedIndexChanged);
             // 
@@ -265,7 +266,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 30);
@@ -277,7 +278,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(437, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 30);
@@ -289,7 +290,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.Label2.AutoSize = true;
             this.Label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(3, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(144, 30);
@@ -300,10 +301,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // DocumentGroup
             // 
             this.DocumentGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentGroup.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentGroup.FormattingEnabled = true;
             this.DocumentGroup.Location = new System.Drawing.Point(153, 3);
             this.DocumentGroup.Name = "DocumentGroup";
-            this.DocumentGroup.Size = new System.Drawing.Size(278, 21);
+            this.DocumentGroup.Size = new System.Drawing.Size(278, 24);
             this.DocumentGroup.TabIndex = 2;
             this.DocumentGroup.SelectedIndexChanged += new System.EventHandler(this.DocumentFolder_SelectedIndexChanged);
             // 
@@ -312,11 +314,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DocumentDate.Checked = false;
             this.DocumentDate.CustomFormat = " ";
             this.DocumentDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentDate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DocumentDate.Location = new System.Drawing.Point(587, 3);
             this.DocumentDate.Name = "DocumentDate";
             this.DocumentDate.ShowCheckBox = true;
-            this.DocumentDate.Size = new System.Drawing.Size(278, 20);
+            this.DocumentDate.Size = new System.Drawing.Size(278, 21);
             this.DocumentDate.TabIndex = 4;
             this.DocumentDate.Value = new System.DateTime(2021, 3, 16, 0, 0, 0, 0);
             this.DocumentDate.ValueChanged += new System.EventHandler(this.DocumentDate_ValueChanged);
@@ -344,11 +347,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DateRangeTo.Checked = false;
             this.DateRangeTo.CustomFormat = " ";
             this.DateRangeTo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DateRangeTo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateRangeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateRangeTo.Location = new System.Drawing.Point(145, 3);
             this.DateRangeTo.Name = "DateRangeTo";
             this.DateRangeTo.ShowCheckBox = true;
-            this.DateRangeTo.Size = new System.Drawing.Size(136, 20);
+            this.DateRangeTo.Size = new System.Drawing.Size(136, 21);
             this.DateRangeTo.TabIndex = 6;
             this.DateRangeTo.Value = new System.DateTime(2021, 3, 16, 0, 0, 0, 0);
             this.DateRangeTo.ValueChanged += new System.EventHandler(this.DateRangeTo_ValueChanged);
@@ -358,11 +362,12 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.DateRangeFrom.Checked = false;
             this.DateRangeFrom.CustomFormat = " ";
             this.DateRangeFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DateRangeFrom.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateRangeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateRangeFrom.Location = new System.Drawing.Point(3, 3);
             this.DateRangeFrom.Name = "DateRangeFrom";
             this.DateRangeFrom.ShowCheckBox = true;
-            this.DateRangeFrom.Size = new System.Drawing.Size(136, 20);
+            this.DateRangeFrom.Size = new System.Drawing.Size(136, 21);
             this.DateRangeFrom.TabIndex = 5;
             this.DateRangeFrom.Value = new System.DateTime(2021, 3, 16, 0, 0, 0, 0);
             this.DateRangeFrom.ValueChanged += new System.EventHandler(this.DateRangeFrom_ValueChanged);
@@ -387,7 +392,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 40);
@@ -399,6 +404,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.DocumentName.BackColor = System.Drawing.Color.White;
             this.DocumentName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentName.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentName.Location = new System.Drawing.Point(153, 3);
             this.DocumentName.Multiline = true;
             this.DocumentName.Name = "DocumentName";
@@ -427,7 +433,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // panel2
             // 
             this.panel2.Controls.Add(this.DoneButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 170);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
@@ -436,14 +442,17 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // DoneButton
             // 
-            this.DoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DoneButton.Location = new System.Drawing.Point(779, 3);
+            this.DoneButton.BackColor = System.Drawing.Color.DarkRed;
+            this.DoneButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.DoneButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DoneButton.ForeColor = System.Drawing.Color.White;
+            this.DoneButton.Location = new System.Drawing.Point(787, 0);
             this.DoneButton.Name = "DoneButton";
             this.DoneButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DoneButton.Size = new System.Drawing.Size(81, 23);
+            this.DoneButton.Size = new System.Drawing.Size(81, 30);
             this.DoneButton.TabIndex = 0;
             this.DoneButton.Text = "Done";
-            this.DoneButton.UseVisualStyleBackColor = true;
+            this.DoneButton.UseVisualStyleBackColor = false;
             this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // tableLayoutPanel9
@@ -468,10 +477,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // DocumentType
             // 
             this.DocumentType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentType.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentType.FormattingEnabled = true;
             this.DocumentType.Location = new System.Drawing.Point(153, 3);
             this.DocumentType.Name = "DocumentType";
-            this.DocumentType.Size = new System.Drawing.Size(278, 21);
+            this.DocumentType.Size = new System.Drawing.Size(278, 24);
             this.DocumentType.TabIndex = 3;
             this.DocumentType.SelectedIndexChanged += new System.EventHandler(this.DocumentType_SelectedIndexChanged);
             // 
@@ -479,7 +489,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 30);
@@ -499,9 +509,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // findFilePanelUserControl1
             // 
             this.findFilePanelUserControl1.File = null;
-            this.findFilePanelUserControl1.Location = new System.Drawing.Point(3, 3);
+            this.findFilePanelUserControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(4, 4);
+            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
-            this.findFilePanelUserControl1.Size = new System.Drawing.Size(862, 35);
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(860, 35);
             this.findFilePanelUserControl1.TabIndex = 147;
             this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
             // 
@@ -565,6 +577,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.previewArchiveUserControl.Name = "previewArchiveUserControl";
             this.previewArchiveUserControl.Size = new System.Drawing.Size(465, 665);
             this.previewArchiveUserControl.TabIndex = 1;
+            this.previewArchiveUserControl.Load += new System.EventHandler(this.previewArchiveUserControl_Load);
             // 
             // previewArchiveUserControl1
             // 

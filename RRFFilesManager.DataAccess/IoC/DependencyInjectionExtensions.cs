@@ -54,6 +54,7 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<ITimelineRepository, TimelineRepository>();
             services.AddTransient<ILawyerTaskRepository, LawyerTaskRepository>();
             services.AddTransient<IClientNoteRepository, ClientNoteRepository>();
+            services.AddTransient<IFileStatusRepository, FileStatusRepository>();
             services.AddTransient<ILoggedUser, LoggedUser>();
             return services;
         }

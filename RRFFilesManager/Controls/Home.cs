@@ -58,8 +58,8 @@ namespace RRFFilesManager
              }*/
             User = Program.GetUser();
             InitializeComponent();
-            UserFullName.Text = User.Description;
-            UserName.Text = User.UserName;
+            UserFullName.Text = User?.Description;
+            UserName.Text = User?.UserName;
             //UserFullName.Text = UserManager.GetUserFullName();
             //UserName.Text = UserManager.GetFullUserName();
         }
@@ -92,37 +92,30 @@ namespace RRFFilesManager
         {
             IntakeForm = Utils.Utils.OpenForm<IntakeForm.IntakeForm>(this);
         }
-
         private void ConflictChecks_Click(object sender, EventArgs e)
         {
             CNSignOn.StartProcess();
         }
-
         private void FileManagerButton_Click(object sender, EventArgs e)
         {
             FileManager = Utils.Utils.OpenForm<FileManager>(this);
         }
-
         private void ClientInfoButton_Click(object sender, EventArgs e)
         {
             ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
         }
-
         private void Contacts_Click(object sender, EventArgs e)
         {
             ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
         }
-
         private void CreateDocumentsButton_Click(object sender, EventArgs e)
         {
             CreateDocument = Utils.Utils.OpenForm<CreateDocument>(this);
         }
-
         private void CreateTemplates_Click(object sender, EventArgs e)
         {
             CreateTemplate = Utils.Utils.OpenForm<CreateTemplate>(this);
         }
-
         private void CalendarButton_Click(object sender, EventArgs e)
         {
             try
@@ -142,17 +135,14 @@ namespace RRFFilesManager
             catch { }
             
         }
-
         private void PrivateFootPrintButton_Click(object sender, EventArgs e)
         {
             
         }
-
         private void ImportDocumentsButton_Click(object sender, EventArgs e)
         {
             Utils.Utils.OpenForm<UploadArchivesForm>(this);
         }
-
         private void CommisionCalculatorButton_Click(object sender, EventArgs e)
         {
             /*var authorizedUsers = new string[] { "FOISYR", "MANZANOD", "ITDEV", "FELIX" };
@@ -220,6 +210,25 @@ namespace RRFFilesManager
         private void StaffPortalButton_Click(object sender, EventArgs e)
         {
             StaffPortal = Utils.Utils.OpenForm<StaffPortal>(this);
+        }
+
+        private void ButtonMouseMove(object sender, MouseEventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button btn = new Button();
+                btn = (Button)sender;
+                btn.Font = new Font("Century Gothic",11.00f,FontStyle.Bold);
+            }
+        }
+        private void ButtonMouseLeave(object sender, EventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button btn = new Button();
+                btn = (Button)sender;
+                btn.Font = new Font("Century Gothic", 9.75f, FontStyle.Bold);
+            }
         }
     }
 }

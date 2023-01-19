@@ -90,9 +90,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(141, 53);
+            this.label2.Location = new System.Drawing.Point(144, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 162;
             this.label2.Text = "Category";
             // 
@@ -111,7 +111,7 @@
             this.Label74.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label74.Location = new System.Drawing.Point(405, 53);
             this.Label74.Name = "Label74";
-            this.Label74.Size = new System.Drawing.Size(102, 16);
+            this.Label74.Size = new System.Drawing.Size(101, 16);
             this.Label74.TabIndex = 160;
             this.Label74.Text = "Template Name";
             this.Label74.Click += new System.EventHandler(this.Label74_Click);
@@ -120,9 +120,9 @@
             // 
             this.Label73.AutoSize = true;
             this.Label73.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label73.Location = new System.Drawing.Point(26, 52);
+            this.Label73.Location = new System.Drawing.Point(29, 52);
             this.Label73.Name = "Label73";
-            this.Label73.Size = new System.Drawing.Size(109, 16);
+            this.Label73.Size = new System.Drawing.Size(108, 16);
             this.Label73.TabIndex = 159;
             this.Label73.Text = "Type of Template";
             // 
@@ -147,9 +147,10 @@
             // CreateAndEditButton
             // 
             this.CreateAndEditButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CreateAndEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateAndEditButton.BackColor = System.Drawing.Color.Maroon;
             this.CreateAndEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateAndEditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.CreateAndEditButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAndEditButton.ForeColor = System.Drawing.Color.White;
             this.CreateAndEditButton.Location = new System.Drawing.Point(615, 3);
             this.CreateAndEditButton.Name = "CreateAndEditButton";
@@ -166,11 +167,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PotentialClientInfoPanel.BackColor = System.Drawing.Color.White;
-            this.PotentialClientInfoPanel.Controls.Add(this.Cancel);
             this.PotentialClientInfoPanel.Controls.Add(this.flowLayoutPanel1);
             this.PotentialClientInfoPanel.Controls.Add(this.label9);
             this.PotentialClientInfoPanel.Controls.Add(this.GroupBox90);
             this.PotentialClientInfoPanel.Controls.Add(this.TemplatesGroupBox);
+            this.PotentialClientInfoPanel.Controls.Add(this.Cancel);
             this.PotentialClientInfoPanel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PotentialClientInfoPanel.Location = new System.Drawing.Point(34, 12);
             this.PotentialClientInfoPanel.Name = "PotentialClientInfoPanel";
@@ -182,8 +183,9 @@
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cancel.BackColor = System.Drawing.Color.Maroon;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
-            this.Cancel.Location = new System.Drawing.Point(25, 501);
+            this.Cancel.Location = new System.Drawing.Point(3, 504);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(97, 36);
             this.Cancel.TabIndex = 165;
@@ -193,6 +195,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.CreateAndEditButton);
             this.flowLayoutPanel1.Controls.Add(this.SendPDFButton);
             this.flowLayoutPanel1.Controls.Add(this.SendWordButton);
@@ -207,9 +210,10 @@
             // SendPDFButton
             // 
             this.SendPDFButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.SendPDFButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SendPDFButton.BackColor = System.Drawing.Color.Red;
             this.SendPDFButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SendPDFButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SendPDFButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SendPDFButton.ForeColor = System.Drawing.Color.White;
             this.SendPDFButton.Location = new System.Drawing.Point(463, 3);
             this.SendPDFButton.Name = "SendPDFButton";
@@ -223,9 +227,10 @@
             // SendWordButton
             // 
             this.SendWordButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.SendWordButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SendWordButton.BackColor = System.Drawing.Color.Navy;
             this.SendWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SendWordButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SendWordButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SendWordButton.ForeColor = System.Drawing.Color.White;
             this.SendWordButton.Location = new System.Drawing.Point(311, 3);
             this.SendWordButton.Name = "SendWordButton";
@@ -239,9 +244,10 @@
             // EditButton
             // 
             this.EditButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EditButton.BackColor = System.Drawing.Color.Maroon;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.EditButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditButton.ForeColor = System.Drawing.Color.White;
             this.EditButton.Location = new System.Drawing.Point(159, 3);
             this.EditButton.Name = "EditButton";
@@ -255,9 +261,10 @@
             // SaveAndCloseButton
             // 
             this.SaveAndCloseButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.SaveAndCloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveAndCloseButton.BackColor = System.Drawing.Color.Maroon;
             this.SaveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveAndCloseButton.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.SaveAndCloseButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveAndCloseButton.ForeColor = System.Drawing.Color.White;
             this.SaveAndCloseButton.Location = new System.Drawing.Point(7, 3);
             this.SaveAndCloseButton.Name = "SaveAndCloseButton";
@@ -282,7 +289,7 @@
             // 
             this.findFilePanelUserControl1.File = null;
             this.findFilePanelUserControl1.Location = new System.Drawing.Point(0, 24);
-            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4);
             this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
             this.findFilePanelUserControl1.Size = new System.Drawing.Size(1212, 43);
             this.findFilePanelUserControl1.TabIndex = 148;

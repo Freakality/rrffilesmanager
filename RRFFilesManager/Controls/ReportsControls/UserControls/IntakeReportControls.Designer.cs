@@ -36,10 +36,10 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gb_GroupBY = new System.Windows.Forms.GroupBox();
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.GroupByButton = new System.Windows.Forms.Button();
             this.Chl_Columns = new System.Windows.Forms.CheckedListBox();
             this.Dg_Data = new System.Windows.Forms.DataGridView();
-            this.GroupByButton = new System.Windows.Forms.Button();
-            this.RefreshButton = new System.Windows.Forms.Button();
             this.Gb_FindInfoControls.SuspendLayout();
             this.Gb_GroupBY.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Data)).BeginInit();
@@ -64,7 +64,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.FindInfoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindInfoButton.BackColor = System.Drawing.Color.Maroon;
             this.FindInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindInfoButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindInfoButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindInfoButton.ForeColor = System.Drawing.Color.White;
             this.FindInfoButton.Location = new System.Drawing.Point(100, 114);
             this.FindInfoButton.Name = "FindInfoButton";
@@ -129,6 +129,35 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Gb_GroupBY.TabStop = false;
             this.Gb_GroupBY.Text = "Group By";
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RefreshButton.BackColor = System.Drawing.Color.Maroon;
+            this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton.ForeColor = System.Drawing.Color.White;
+            this.RefreshButton.Location = new System.Drawing.Point(501, 37);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(111, 35);
+            this.RefreshButton.TabIndex = 156;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = false;
+            // 
+            // GroupByButton
+            // 
+            this.GroupByButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GroupByButton.BackColor = System.Drawing.Color.Maroon;
+            this.GroupByButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GroupByButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupByButton.ForeColor = System.Drawing.Color.White;
+            this.GroupByButton.Location = new System.Drawing.Point(501, 114);
+            this.GroupByButton.Name = "GroupByButton";
+            this.GroupByButton.Size = new System.Drawing.Size(111, 35);
+            this.GroupByButton.TabIndex = 155;
+            this.GroupByButton.Text = "Group Info";
+            this.GroupByButton.UseVisualStyleBackColor = false;
+            this.GroupByButton.Click += new System.EventHandler(this.GroupByButton_Click);
+            // 
             // Chl_Columns
             // 
             this.Chl_Columns.CheckOnClick = true;
@@ -157,35 +186,6 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Dg_Data.RowHeadersVisible = false;
             this.Dg_Data.Size = new System.Drawing.Size(853, 245);
             this.Dg_Data.TabIndex = 2;
-            // 
-            // GroupByButton
-            // 
-            this.GroupByButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GroupByButton.BackColor = System.Drawing.Color.Maroon;
-            this.GroupByButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GroupByButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupByButton.ForeColor = System.Drawing.Color.White;
-            this.GroupByButton.Location = new System.Drawing.Point(501, 114);
-            this.GroupByButton.Name = "GroupByButton";
-            this.GroupByButton.Size = new System.Drawing.Size(111, 35);
-            this.GroupByButton.TabIndex = 155;
-            this.GroupByButton.Text = "Group Info";
-            this.GroupByButton.UseVisualStyleBackColor = false;
-            this.GroupByButton.Click += new System.EventHandler(this.GroupByButton_Click);
-            // 
-            // RefreshButton
-            // 
-            this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RefreshButton.BackColor = System.Drawing.Color.Maroon;
-            this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton.ForeColor = System.Drawing.Color.White;
-            this.RefreshButton.Location = new System.Drawing.Point(501, 37);
-            this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(111, 35);
-            this.RefreshButton.TabIndex = 156;
-            this.RefreshButton.Text = "Refresh";
-            this.RefreshButton.UseVisualStyleBackColor = false;
             // 
             // IntakeReportControls
             // 

@@ -17,6 +17,7 @@ namespace RRFFilesManager.Controls.ContactControls
         private readonly IGroupRepository _groupRepository;
         public GroupForm()
         {
+
             _groupRepository = Program.GetService<IGroupRepository>();
             InitializeComponent();
         }

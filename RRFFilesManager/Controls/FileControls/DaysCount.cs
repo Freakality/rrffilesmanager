@@ -12,6 +12,7 @@ namespace RRFFilesManager.Controls.FileControls
 {
     public partial class DaysCount : Form
     {
+        public int days = 0;
         public DaysCount()
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace RRFFilesManager.Controls.FileControls
             }
             else
             {
-                
+                days = Convert.ToInt32(CboxSelectionDay.Text);
                 this.DialogResult = DialogResult.OK;
             }
         }

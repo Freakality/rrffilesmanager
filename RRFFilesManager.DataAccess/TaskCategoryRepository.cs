@@ -21,7 +21,6 @@ namespace RRFFilesManager.DataAccess
             var taskCategory = _context.TaskCategories.FirstOrDefault(x => x.ID == taskCategoryId);
 
             return taskCategory;
-
         }
 
         public void Insert(TaskCategory taskCategory)
@@ -43,7 +42,6 @@ namespace RRFFilesManager.DataAccess
         public void SoftDelete(int taskCategoryId)
         {
             var accountToDelete = _context.TaskCategories.Find(taskCategoryId);
-
             _context.SaveChanges();
 
         }

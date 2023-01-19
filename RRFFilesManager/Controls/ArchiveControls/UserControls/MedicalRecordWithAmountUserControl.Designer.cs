@@ -74,7 +74,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 26);
@@ -86,7 +86,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 26);
@@ -97,18 +97,20 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // FacilityName
             // 
             this.FacilityName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FacilityName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FacilityName.Location = new System.Drawing.Point(153, 3);
             this.FacilityName.Name = "FacilityName";
-            this.FacilityName.Size = new System.Drawing.Size(278, 20);
+            this.FacilityName.Size = new System.Drawing.Size(278, 22);
             this.FacilityName.TabIndex = 12;
             this.FacilityName.TextChanged += new System.EventHandler(this.FacilityName_TextChanged);
             // 
             // HealthcarePractitioner
             // 
             this.HealthcarePractitioner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HealthcarePractitioner.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HealthcarePractitioner.Location = new System.Drawing.Point(153, 29);
             this.HealthcarePractitioner.Name = "HealthcarePractitioner";
-            this.HealthcarePractitioner.Size = new System.Drawing.Size(278, 20);
+            this.HealthcarePractitioner.Size = new System.Drawing.Size(278, 22);
             this.HealthcarePractitioner.TabIndex = 13;
             this.HealthcarePractitioner.TextChanged += new System.EventHandler(this.HealthcarePractitioner_TextChanged);
             // 
@@ -116,7 +118,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 26);
@@ -128,7 +130,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 26);
@@ -139,18 +141,20 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // TypeOfAssessment
             // 
             this.TypeOfAssessment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TypeOfAssessment.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TypeOfAssessment.Location = new System.Drawing.Point(153, 55);
             this.TypeOfAssessment.Name = "TypeOfAssessment";
-            this.TypeOfAssessment.Size = new System.Drawing.Size(278, 20);
+            this.TypeOfAssessment.Size = new System.Drawing.Size(278, 22);
             this.TypeOfAssessment.TabIndex = 16;
             this.TypeOfAssessment.TextChanged += new System.EventHandler(this.TypeOfAssessment_TextChanged);
             // 
             // TreatmentAmount
             // 
             this.TreatmentAmount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TreatmentAmount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TreatmentAmount.Location = new System.Drawing.Point(153, 81);
             this.TreatmentAmount.Name = "TreatmentAmount";
-            this.TreatmentAmount.Size = new System.Drawing.Size(278, 20);
+            this.TreatmentAmount.Size = new System.Drawing.Size(278, 22);
             this.TreatmentAmount.TabIndex = 17;
             this.TreatmentAmount.TextChanged += new System.EventHandler(this.TreatmentAmount_TextChanged);
             // 

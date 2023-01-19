@@ -399,6 +399,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cancel.BackColor = System.Drawing.Color.Maroon;
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.Location = new System.Drawing.Point(32, 440);
             this.Cancel.Name = "Cancel";
@@ -413,6 +414,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Save.BackColor = System.Drawing.Color.Maroon;
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.Location = new System.Drawing.Point(908, 440);
             this.Save.Name = "Save";
@@ -427,6 +429,7 @@ namespace RRFFilesManager.Controls.CompanyControls
             this.FindCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindCompany.BackColor = System.Drawing.Color.Maroon;
             this.FindCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindCompany.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindCompany.ForeColor = System.Drawing.Color.White;
             this.FindCompany.Location = new System.Drawing.Point(879, 4);
             this.FindCompany.Name = "FindCompany";

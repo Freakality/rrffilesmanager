@@ -39,7 +39,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.CboxSelectionDay.BackColor = System.Drawing.Color.White;
             this.CboxSelectionDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboxSelectionDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CboxSelectionDay.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.CboxSelectionDay.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboxSelectionDay.FormattingEnabled = true;
             this.CboxSelectionDay.Items.AddRange(new object[] {
             "3",
@@ -55,11 +55,11 @@ namespace RRFFilesManager.Controls.FileControls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(83, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 22);
+            this.label1.Size = new System.Drawing.Size(140, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Days Selector";
             // 
@@ -67,7 +67,7 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(111, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
@@ -96,9 +96,8 @@ namespace RRFFilesManager.Controls.FileControls
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox CboxSelectionDay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.ComboBox CboxSelectionDay;
     }
 }
