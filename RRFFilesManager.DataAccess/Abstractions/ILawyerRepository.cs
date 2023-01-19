@@ -15,5 +15,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         Lawyer GetById(int lawyerId);
         IEnumerable<Lawyer> List(bool? isParalegal = null);
         Lawyer GetByUserName(string userName);
+        Lawyer GetByName(string searchText);
     }
 }

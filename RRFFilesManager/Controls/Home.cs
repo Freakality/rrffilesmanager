@@ -26,6 +26,7 @@ using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.FileControls;
 using RRFFilesManager.Controls.UserManagerControls;
 using RRFFilesManager.Controls.ReportsControls;
+using RRFFilesManager.Controls.StaffControls;
 
 namespace RRFFilesManager
 {
@@ -80,6 +81,7 @@ namespace RRFFilesManager
         public static UserManagerForm UserManagerForm { get; set; }
 
         public static ReportsForm ReportsForm { get; set; }
+        public static StaffPortal StaffPortal { get; set; }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -215,6 +217,9 @@ namespace RRFFilesManager
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
-       
+        private void StaffPortalButton_Click(object sender, EventArgs e)
+        {
+            StaffPortal = Utils.Utils.OpenForm<StaffPortal>(this);
+        }
     }
 }

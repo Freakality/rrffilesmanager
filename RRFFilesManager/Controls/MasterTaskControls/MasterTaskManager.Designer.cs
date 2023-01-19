@@ -32,7 +32,6 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.DeleteTaskButton = new System.Windows.Forms.Button();
             this.EditTaskButton = new System.Windows.Forms.Button();
             this.CreateTaskButton = new System.Windows.Forms.Button();
@@ -42,20 +41,12 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.AddCategoryButton = new System.Windows.Forms.Button();
             this.TaskGridView = new System.Windows.Forms.DataGridView();
             this.HomeButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ImportTasksButton = new System.Windows.Forms.Button();
             this.SearchBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TaskGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
-            this.PictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(224, 68);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 143;
-            this.PictureBox1.TabStop = false;
             // 
             // DeleteTaskButton
             // 
@@ -206,12 +197,38 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
+            this.PictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(224, 68);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 143;
+            this.PictureBox1.TabStop = false;
+            // 
+            // ImportTasksButton
+            // 
+            this.ImportTasksButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ImportTasksButton.BackColor = System.Drawing.Color.Maroon;
+            this.ImportTasksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImportTasksButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImportTasksButton.ForeColor = System.Drawing.Color.White;
+            this.ImportTasksButton.Location = new System.Drawing.Point(25, 548);
+            this.ImportTasksButton.Name = "ImportTasksButton";
+            this.ImportTasksButton.Size = new System.Drawing.Size(152, 37);
+            this.ImportTasksButton.TabIndex = 155;
+            this.ImportTasksButton.Text = "Import Tasks";
+            this.ImportTasksButton.UseVisualStyleBackColor = false;
+            this.ImportTasksButton.Click += new System.EventHandler(this.ImportTasksButton_Click);
+            // 
             // MasterTaskManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 597);
+            this.Controls.Add(this.ImportTasksButton);
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.TaskGridView);
             this.Controls.Add(this.AddCategoryButton);
@@ -224,10 +241,10 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             this.Name = "MasterTaskManager";
             this.Text = "Master Tasks";
             this.Load += new System.EventHandler(this.MasterTaskManager_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.SearchBox.ResumeLayout(false);
             this.SearchBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TaskGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,5 +261,6 @@ namespace RRFFilesManager.Controls.MasterTaskControls
         internal System.Windows.Forms.Button AddCategoryButton;
         private System.Windows.Forms.DataGridView TaskGridView;
         internal System.Windows.Forms.Button HomeButton;
+        internal System.Windows.Forms.Button ImportTasksButton;
     }
 }
