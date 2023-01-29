@@ -36,12 +36,13 @@ namespace RRFFilesManager
                 Application.Run(LoginUI.Instance);
                 if (GetUser() is null)
                     return;
-                Application.Run(LoginUI.Instance);
+                //Application.Run(LoginUI.Instance);
                 Application.Run(Home.Instance);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+            
             }
         }
 

@@ -216,8 +216,6 @@ namespace RRFFilesManager
             {
                 RefreshActionLogDataGridViewDataSource();
             }
-
-            
         }
 
         private void RefreshActionLogDataGridViewDataSource()
