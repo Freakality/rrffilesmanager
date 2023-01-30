@@ -1,6 +1,7 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Interop.Word;
 using RRFFilesManager.Abstractions;
+using RRFFilesManager.Utils;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -21,27 +22,25 @@ namespace RRFFilesManager.Logic
         }
         public Archive CreateAndFillTemplateDocument(Abstractions.File file, Abstractions.Template template, Archive archive = null)
         {
+            if (archive == null)
+                archive = new Archive();
+            archive.File = file;
+            archive.Name = $"{DateTime.Now:yyyyMMdd} {template.TemplateName}.doc";
+            archive.Path = Path.Combine(archive.GetArchiveFolderPath(), archive.Name);
+            archive.Template = template;
+
             var wordApp = new Microsoft.Office.Interop.Word.Application();
             wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
             var docuemntTemplatePath = GetDocumentTemplatePath(template.TemplatePath);
             if (!System.IO.File.Exists(docuemntTemplatePath))
                 throw new Exception("File not found.");
             var document = wordApp?.Documents.Open(FileName: docuemntTemplatePath, ReadOnly: true);
-            var fileName = $"{DateTime.Now:yyyyMMdd} {template.TemplateName}.doc";
-            var filePath = GetDocumentFilePath(file.FileNumber, fileName);
-
             wordApp.Visible = false;
             Word.FillDocument(document, file);
 
-            document.SaveAs(filePath);
+            document.SaveAs(archive.Path);
             document.Close();
             wordApp.Quit();
-            if (archive == null)
-                archive = new Archive();
-            archive.File = file;
-            archive.Name = fileName;
-            archive.Path = filePath;
-            archive.Template = template;
             return archive;
         }
 
@@ -56,35 +55,28 @@ namespace RRFFilesManager.Logic
             return templateDocumentPath;
         }
 
-        public string GetDocumentFilePath(int fileNumber, string fileName)
-        {
-            if (fileName == null)
-                return null;
-            var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], fileNumber.ToString());
-            Directory.CreateDirectory(path);
-            return Path.Combine(path, fileName);
-        }
-
         private Archive CreateAndFillTemplateWorkbook(Abstractions.File file, Archive archive = null)
         {
+            if (archive == null)
+                archive = new Archive();
+            archive.File = file;
+            archive.Name = $"{DateTime.Now:yyyyMMddhhmmss}_MVAIntakeReport.xlsx";
+            archive.Path = Path.Combine(archive.GetArchiveFolderPath(), archive.Name);
+
             var templatePath = GetWorkbookFilePath($"{file.MatterType.Description}.xlsx");
             var excelApp = new Microsoft.Office.Interop.Excel.Application();
             excelApp.DisplayAlerts = false;
             var workbook = excelApp?.Workbooks?.Open(templatePath);
             Worksheet worksheet = (Worksheet)workbook.Sheets[1];
             Excel.FillWorkSheet(worksheet, file);
-            var filename = $"{DateTime.Now:yyyyMMddhhmmss}_MVAIntakeReport.xlsx";
-            string filePath = GetWorkbookFilePath(filename);
-            workbook.SaveAs(Filename: filePath);
+            
+            workbook.SaveAs(Filename: archive.Path);
             workbook.Close();
             excelApp.Quit();
-            if (archive == null)
-                archive = new Archive();
-            archive.File = file;
-            archive.Name = filename;
-            archive.Path = filePath;
+            
             return archive;
         }
+
         public string GetWorkbookFilePath(string fileName)
         {
             if (fileName == null)

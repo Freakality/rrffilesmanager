@@ -20,34 +20,54 @@ namespace RRFFilesManager.Utils
             return r.Replace(text, "");
         }
 
-        public static string GetFolderPath(this RRFFilesManager.Abstractions.File file)
+        public static string GetFileFolderPath(this RRFFilesManager.Abstractions.File file)
         {
             if (file == null)
                 throw new Exception("File can not be null");
-            var path = System.IO.Path.Combine(ConfigurationManager.AppSettings["FilesPath"], file.FileNumber.ToString());
-            System.IO.Directory.CreateDirectory(path);
+            var clientFolderName = $"{file.Client.ID} - {file.Client.FirstName} {file.Client.LastName}";
+            var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], clientFolderName);
+            path = Path.Combine(path, file.FileNumber.ToString());
+            Directory.CreateDirectory(path);
             return path;
         }
-        public static string GetFolderPath(this Archive archive)
-        {
 
+        public static string GetNotRetainedFolderPath(this RRFFilesManager.Abstractions.File file)
+        {
+            if (file == null)
+                throw new Exception("File can not be null");
+            var clientFolderName = $"{file.Client.ID} - {file.Client.FirstName} {file.Client.LastName}";
+            var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], "Not Retained");
+            path = Path.Combine(path, $"CYA - {file.MatterType.Description}");
+            path = Path.Combine(path, clientFolderName);
+            Directory.CreateDirectory(path);
+            return path;
+        }
+        public static string GetArchiveFolderPath(this Archive archive)
+        {
             if (archive.File == null)
                 throw new Exception("File can not be null");
-            var archiveFolderPath = archive.File.GetFolderPath();
-            if (!string.IsNullOrWhiteSpace(archive.DocumentGroup?.Description))
-                archiveFolderPath = System.IO.Path.Combine(archiveFolderPath, archive.DocumentGroup.Description.EscapeText());
-            if (!string.IsNullOrWhiteSpace(archive.DocumentCategory?.Description))
-                archiveFolderPath = System.IO.Path.Combine(archiveFolderPath, archive.DocumentCategory.Description.EscapeText());
-            System.IO.Directory.CreateDirectory(archiveFolderPath);
+            string archiveFolderPath = null;
+            // "Not Retained" file status Id
+            if (archive.File.CurrentStatus?.ID == 4)
+            {
+                archiveFolderPath = archive.File.GetNotRetainedFolderPath();
+            }
+            else
+            {
+                archiveFolderPath = archive.File.GetFileFolderPath();
+                if (!string.IsNullOrWhiteSpace(archive.File.CurrentStatus.Description))
+                    archiveFolderPath = Path.Combine(archiveFolderPath, archive.File.CurrentStatus.Description.EscapeText());
+            }
+            Directory.CreateDirectory(archiveFolderPath);
             return archiveFolderPath;
         }
         public static void CopyToFileFolder(this Archive archive, string fileName = null)
         {
-            var fileFolderPath = archive.GetFolderPath();
+            var fileFolderPath = archive.GetArchiveFolderPath();
             if (!archive.Path.Contains(fileFolderPath))
             {
                 var archiveFileName = fileName ?? System.IO.Path.GetFileName(archive.Path);
-                var destFileName = System.IO.Path.Combine(fileFolderPath, archiveFileName);
+                var destFileName = Path.Combine(fileFolderPath, archiveFileName);
                 System.IO.File.Copy(archive.Path, destFileName, true);
                 archive.Path = destFileName;
                 archive.Name = archiveFileName;

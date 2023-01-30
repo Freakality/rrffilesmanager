@@ -21,6 +21,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly IHearAboutUsRepository _hearAboutUsRepository;
         private readonly ILawyerRepository _lawyerRepository;
         private readonly IFileRepository _fileRepository;
+        private readonly IFileStatusRepository _fileStatusRepository;
         public PreliminaryInfo()
         {
             _matterTypeRepository = Program.GetService<IMatterTypeRepository>();
@@ -28,6 +29,7 @@ namespace RRFFilesManager.IntakeForm
             _hearAboutUsRepository = Program.GetService<IHearAboutUsRepository>();
             _lawyerRepository = Program.GetService<ILawyerRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
+            _fileStatusRepository = Program.GetService<IFileStatusRepository>();
             InitializeComponent();
             Initialize();
         }
@@ -161,6 +163,7 @@ namespace RRFFilesManager.IntakeForm
             file.FileNumber = int.Parse(FileNumberTextBox.Text);
             file.StatutoryNotice = StatutoryNoticeBox.Text;
             file.AdditionalNotes = AdditionalNotesTextBox.Text;
+            file.CurrentStatus = _fileStatusRepository.GetById(1); // Intake phase
         }
 
         public void FillForm(File file)
