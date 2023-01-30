@@ -624,6 +624,15 @@
   <metadata name="Label91.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="DgColumn_DateTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DgColumn_Staff.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DgColumn_Description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="NameofBenefit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -658,7 +667,7 @@
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABCAAAAEhCAIAAAAh6kYwAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAxrNJREFUeF7svQdcFMm+9829z32fsHryOfece3bNEYxrWHd1dc266poDIDnnHARR
+        vAAADrwBlbxySQAAxrNJREFUeF7svQdcFMm+9829z32fsHryOfece3bNEYxrWHd1dc266poDIDnnHARR
         koIRCYKCARVRBMGcFQkGDIgBE4iKgiIiGRQB9/3NdDmOPTMwmRmo7+e/+5Ge6urq6uqq/68rafxOaXeU
         lJRcz7q2OTwiIix81IgRvbv36NWtOwz/6N+7T6Cff8zW6MLCQhKaQqFQKBQKhUKRH1RgtB/u3b27OTzc
         xMAQKgJaom/PXrDe3Yi64FnfHj1hCLBg7jw7a5uM9HRyPoVCoVAoFAqFIjNUYKg9tTW1KQeTbaysGOXQ

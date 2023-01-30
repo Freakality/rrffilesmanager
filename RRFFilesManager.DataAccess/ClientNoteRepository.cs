@@ -52,7 +52,7 @@ namespace RRFFilesManager.DataAccess
             var query = _context.ClientNotes.Where(s =>
                 s.File.ID == file.ID &&
                 s.Date >= date1 &&
-                s.Date <= date2
+                s.Date <= date2                
             );
 
             if (take != null)

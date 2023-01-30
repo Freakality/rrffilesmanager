@@ -144,7 +144,7 @@ namespace RRFFilesManager.IntakeForm
             Utils.Utils.SetComboBoxDataSource(HowHearComboBox, _hearAboutUsRepository.List(), nameof(HearAboutUs.Description));
             Utils.Utils.SetComboBoxDataSource(StaffInterviewerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
             Utils.Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
-            Utils.Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.NumberID != null).ToList(), nameof(Lawyer.Description));
+            Utils.Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.Number != null).ToList(), nameof(Lawyer.Description));
             DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
             DateOfLossDateTimePicker.CustomFormat = " ";
         }
