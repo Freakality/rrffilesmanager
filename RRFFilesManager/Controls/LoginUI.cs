@@ -88,7 +88,6 @@ namespace RRFFilesManager
             /*_loggedUser.SetUser(User);
             Close();*/
         }
-
         private void ChangePwBtn_Click(object sender, EventArgs e)
         {
             ChangePasswordUI = Utils.Utils.OpenFormLogIn<ChangePasswordUI>(this);

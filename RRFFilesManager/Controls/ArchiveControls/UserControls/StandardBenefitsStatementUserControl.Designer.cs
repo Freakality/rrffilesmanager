@@ -151,7 +151,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(456, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Date Paid";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -163,7 +163,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(234, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 32);
+            this.label2.Size = new System.Drawing.Size(176, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "M/R A/C Good, Service or Assessment Provided";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -173,9 +173,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 10);
+            this.label1.Location = new System.Drawing.Point(83, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Payee";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -187,7 +187,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(589, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 16);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 0;
             this.label5.Text = "Amount";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -199,7 +199,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(708, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 16);
+            this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "IE Amount";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

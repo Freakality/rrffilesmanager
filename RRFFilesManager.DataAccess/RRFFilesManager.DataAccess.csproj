@@ -199,7 +199,9 @@
     <Compile Include="Abstractions\IDocumentTypeRepository.cs" />
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
+    <Compile Include="Abstractions\IClientNoteRepository.cs" />
     <Compile Include="Abstractions\IFileReviewRepository.cs" />
+    <Compile Include="Abstractions\IFileStatusRepository.cs" />
     <Compile Include="Abstractions\IFileTaskRepository.cs" />
     <Compile Include="Abstractions\IGenericRepository.cs" />
     <Compile Include="Abstractions\ILawyerTaskRepository.cs" />
@@ -225,6 +227,8 @@
     <Compile Include="Abstractions\ITimelineRepository.cs" />
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
+    <Compile Include="ClientNoteRepository.cs" />
+    <Compile Include="FileStatusRepository.cs" />
     <Compile Include="LawyerTaskRepository.cs" />
     <Compile Include="LoggedUser.cs" />
     <Compile Include="DrugRepository.cs" />
@@ -339,6 +343,10 @@
     <Compile Include="Migrations\20221215045243_FileStatusUpdate.cs" />
     <Compile Include="Migrations\20221215045243_FileStatusUpdate.designer.cs">
       <DependentUpon>20221215045243_FileStatusUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230119044003_ClientNotesandTaskUpdates.cs" />
+    <Compile Include="Migrations\20230119044003_ClientNotesandTaskUpdates.designer.cs">
+      <DependentUpon>20230119044003_ClientNotesandTaskUpdates.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />

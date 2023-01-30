@@ -42,6 +42,7 @@ namespace RRFFilesManager
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
+            
             }
         }
 

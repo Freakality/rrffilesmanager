@@ -1,10 +1,12 @@
-﻿using RRFFilesManager.Abstractions;
+﻿using ClosedXML.Excel;
+using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +19,13 @@ namespace RRFFilesManager.Controls.MasterTaskControls
     {
         private readonly ITaskRepository _taskRepository;
         private readonly ITaskCategoryRepository _taskCategoryRepository;
+        private readonly ILawyerRepository _lawyerRepository;
         private Abstractions.Task TaskToAdd;
         public MasterTaskManager()
         { 
             _taskRepository = Program.GetService<ITaskRepository>();
             _taskCategoryRepository = Program.GetService<ITaskCategoryRepository>();
+            _lawyerRepository = Program.GetService<ILawyerRepository>();
             InitializeComponent();
             RefreshTaskCategoryCBoxDataSource();
         }
@@ -135,6 +139,127 @@ namespace RRFFilesManager.Controls.MasterTaskControls
         {
             Close();
             Home.Instance.Show();
+        }
+
+        private void ImportTasksButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openTaskDialog = new OpenFileDialog();
+
+            openTaskDialog.Filter = "Excel(*.xlsx;*.xlsm)|*.xlsx;*.xlsm";
+            try
+            {
+                if (openTaskDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (openTaskDialog.CheckFileExists)
+                    {
+                        string path = Path.GetFullPath(openTaskDialog.FileName);
+                        DataSet ds = new DataSet("Master Tasks");
+                        using (XLWorkbook workBook = new XLWorkbook(path))
+                        {
+                            foreach (IXLWorksheet sheet in workBook.Worksheets)
+                            {
+                                //Read the first Sheet from Excel file.
+                                IXLWorksheet workSheet = sheet;
+
+                                //Create a new DataTable.
+                                DataTable dt = new DataTable(sheet.Name);
+
+                                //Loop through the Worksheet rows.
+                                bool firstRow = true;
+                                foreach (IXLRow row in workSheet.Rows())
+                                {
+                                    //Use the first row to add columns to DataTable.
+                                    if (firstRow)
+                                    {
+                                        foreach (IXLCell cell in row.Cells())
+                                        {
+                                            dt.Columns.Add(cell.Value.ToString());
+                                        }
+                                        firstRow = false;
+                                    }
+                                    else
+                                    {
+                                        //Add rows to DataTable.
+                                        dt.Rows.Add();
+                                        int i = 0;
+                                        foreach (IXLCell cell in row.Cells())
+                                        {
+                                            dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
+                                            i++;
+                                        }
+                                    }
+                                }
+                                ds.Tables.Add(dt);
+                            }
+
+                        }
+                        foreach (DataTable table in ds.Tables)
+                        {
+                            if (table.TableName.ToUpper() == "INFORMATION")
+                            {
+                                continue;
+                            }
+                            TaskCategory taskCategory = new TaskCategory();
+                            var found = _taskCategoryRepository.Search(table.TableName);
+                            if (found.Count() > 0)
+                            {
+                                taskCategory = found.First();
+                            }
+                            else
+                            {
+                                taskCategory.Description = table.TableName;
+                                _taskCategoryRepository.Insert(taskCategory);
+                                taskCategory = _taskCategoryRepository.Search(taskCategory.Description).First();
+                            }
+                            foreach(DataRow row in table.Rows)
+                            {
+                                Task task = new Task();
+                                task.TaskCategory = taskCategory;
+                                task.CreatedBy = Program.GetUser();
+                                task.Description = row["Activity / Task"].ToString();
+                                task.Lawyer = _lawyerRepository.GetByName(row["Task ID"].ToString());
+                                if (row["DueBy Calc"] != null)
+                                {
+                                    if (String.IsNullOrEmpty(row["DueBy Calc"].ToString()))
+                                    {
+                                        task.DueBy = Convert.ToInt32(row["DueBy Calc"].ToString());
+                                    }
+
+                                }
+                                if (row["Defer Until Calc"] != null)
+                                {
+                                    if (String.IsNullOrEmpty(row["Defer Until Calc"].ToString()))
+                                    {
+                                        task.DeferBy = Convert.ToInt32(row["Defer Until Calc"].ToString());
+                                    }
+
+                                }
+                                task.IsMasterTask = true;
+                                if (row["Lock the Due By (Date)"].ToString() == "TRUE")
+                                {
+                                    task.LockDueDate = true;
+                                }
+                                else
+                                {
+                                    task.LockDueDate = false;
+                                }
+                                /*task.Dependencies;*/
+
+                            }
+                        }
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please upload a valid Excel file.");
+                }
+            }
+            catch (Exception ex)
+            {
+                //it will give if file is already exits..
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

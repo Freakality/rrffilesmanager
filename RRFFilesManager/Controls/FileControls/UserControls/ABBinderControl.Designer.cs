@@ -38,6 +38,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.ExportWordButton = new System.Windows.Forms.Button();
             this.DataGridView = new System.Windows.Forms.DataGridView();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -103,6 +104,7 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.DeleteButton);
             this.panel1.Controls.Add(this.ExportPDFButton);
             this.panel1.Controls.Add(this.ExportWordButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -157,6 +159,21 @@ namespace RRFFilesManager.Controls.FileControls
             this.DataGridView.TabIndex = 2;
             this.DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellContentClick);
             // 
+            // DeleteButton
+            // 
+            this.DeleteButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.DeleteButton.BackColor = System.Drawing.Color.Crimson;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteButton.Location = new System.Drawing.Point(3, 5);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(146, 36);
+            this.DeleteButton.TabIndex = 167;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
             // ABBinderControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -183,5 +200,6 @@ namespace RRFFilesManager.Controls.FileControls
         internal System.Windows.Forms.Button ExportWordButton;
         private System.Windows.Forms.DataGridView DataGridView;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        internal System.Windows.Forms.Button DeleteButton;
     }
 }

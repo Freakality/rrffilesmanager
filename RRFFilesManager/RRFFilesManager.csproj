@@ -694,6 +694,24 @@
     <Compile Include="Controls\SharedControls\CustomControls\MatterTypeComboBox.Designer.cs">
       <DependentUpon>MatterTypeComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\StaffControls\StaffPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\StaffControls\StaffPortal.Designer.cs">
+      <DependentUpon>StaffPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StaffControls\UserControls\AdminViewControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StaffControls\UserControls\AdminViewControls.Designer.cs">
+      <DependentUpon>AdminViewControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StaffControls\UserControls\StaffViewControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StaffControls\UserControls\StaffViewControls.Designer.cs">
+      <DependentUpon>StaffViewControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TemplateControls\CreateTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -988,6 +1006,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ReportsControls\UserControls\IntakeReportControls.resx">
       <DependentUpon>IntakeReportControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StaffControls\StaffPortal.resx">
+      <DependentUpon>StaffPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StaffControls\UserControls\AdminViewControls.resx">
+      <DependentUpon>AdminViewControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StaffControls\UserControls\StaffViewControls.resx">
+      <DependentUpon>StaffViewControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TemplateControls\CreateTemplate.resx">
       <DependentUpon>CreateTemplate.cs</DependentUpon>

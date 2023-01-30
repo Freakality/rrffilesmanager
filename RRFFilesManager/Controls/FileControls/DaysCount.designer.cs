@@ -36,7 +36,9 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             // CboxSelectionDay
             // 
+            this.CboxSelectionDay.BackColor = System.Drawing.Color.White;
             this.CboxSelectionDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboxSelectionDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CboxSelectionDay.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboxSelectionDay.FormattingEnabled = true;
             this.CboxSelectionDay.Items.AddRange(new object[] {
@@ -59,17 +61,19 @@ namespace RRFFilesManager.Controls.FileControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Selector Days ";
+            this.label1.Text = "Days Selector";
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(111, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
             this.button1.TabIndex = 3;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "CONFIRM";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DaysCount

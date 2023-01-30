@@ -39,6 +39,12 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
+        public Lawyer GetByName(string searchText)
+        {
+            var account = _context.Lawyers.FirstOrDefault(x => x.Description.ToString().Contains(searchText));
+
+            return account;
+        }
 
 
         public  IEnumerable<Lawyer>List(bool? isParalegal = null)

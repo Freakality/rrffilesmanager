@@ -10,6 +10,7 @@ namespace RRFFilesManager.Abstractions
     public class File
     {
         public int ID { get; set; }
+        public virtual Contact Client { get; set; }
         public int FileNumber { get; set; }
         public virtual MatterType MatterType { get; set; }
         public DateTime DateOfCall { get; set; }
@@ -24,7 +25,6 @@ namespace RRFFilesManager.Abstractions
         public string StatutoryNotice { get; set; }
         public string AdditionalNotes { get; set; }
 
-        public virtual Contact Client { get; set; }
         public virtual Intake Intake { get; set; }
         public virtual Timeline Timeline { get; set; }
         public virtual FileStatus PreviousStatus { get; set; }
@@ -35,6 +35,7 @@ namespace RRFFilesManager.Abstractions
         public virtual ICollection<OutOfPocketHealthCareExp> Prescriptions { get; set; }
         public virtual ICollection<FileReview> Reviews { get; set; }
         public virtual ICollection<FileTask> Tasks { get; set; }
+        public virtual ICollection<ClientNote> ClientNotes { get; set; }
 
         public override string ToString() => $"{FileNumber} - {Client?.FirstName} {Client?.LastName}";
     }
