@@ -158,6 +158,8 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                         {
                             foreach (IXLWorksheet sheet in workBook.Worksheets)
                             {
+                                if (sheet.Name == "Information")
+                                    continue;
                                 //Read the first Sheet from Excel file.
                                 IXLWorksheet workSheet = sheet;
 
@@ -182,7 +184,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                                         //Add rows to DataTable.
                                         dt.Rows.Add();
                                         int i = 0;
-                                        foreach (IXLCell cell in row.Cells())
+                                        foreach (IXLCell cell in row.Cells(1, dt.Columns.Count))
                                         {
                                             dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
                                             i++;
@@ -193,12 +195,13 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                             }
 
                         }
+                        List<string> DependencyStack = new List<string>();
                         foreach (DataTable table in ds.Tables)
                         {
-                            if (table.TableName.ToUpper() == "INFORMATION")
+                            /*if (table.TableName.ToUpper() == "INFORMATION")
                             {
                                 continue;
-                            }
+                            }*/
                             TaskCategory taskCategory = new TaskCategory();
                             var found = _taskCategoryRepository.Search(table.TableName);
                             if (found.Count() > 0)
@@ -213,41 +216,87 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                             }
                             foreach(DataRow row in table.Rows)
                             {
-                                Task task = new Task();
-                                task.TaskCategory = taskCategory;
-                                task.CreatedBy = Program.GetUser();
-                                task.Description = row["Activity / Task"].ToString();
-                                task.Lawyer = _lawyerRepository.GetByName(row["Task ID"].ToString());
-                                if (row["DueBy Calc"] != null)
+                                if (String.IsNullOrEmpty(row[1].ToString()))
+                                    continue;
+                                var exists = _taskRepository.GetByTaskIdNumber(row[1].ToString());
+                                if (exists == null)
                                 {
-                                    if (String.IsNullOrEmpty(row["DueBy Calc"].ToString()))
+                                    Task task = new Task();
+                                    task.TaskIDNumber = row[1].ToString();
+                                    task.TaskCategory = taskCategory;
+                                    task.CreatedBy = Program.GetUser();
+                                    task.Description = row[2].ToString();
+                                    task.Lawyer = _lawyerRepository.GetByName(row[4].ToString());
+                                    if (row[6] != null)
                                     {
-                                        task.DueBy = Convert.ToInt32(row["DueBy Calc"].ToString());
-                                    }
+                                        if (!String.IsNullOrEmpty(row[6].ToString()))
+                                        {
+                                            task.DueBy = Convert.ToInt32(row[6].ToString());
+                                        }
 
-                                }
-                                if (row["Defer Until Calc"] != null)
-                                {
-                                    if (String.IsNullOrEmpty(row["Defer Until Calc"].ToString()))
+                                    }
+                                    if (row[5] != null)
                                     {
-                                        task.DeferBy = Convert.ToInt32(row["Defer Until Calc"].ToString());
-                                    }
+                                        if (!String.IsNullOrEmpty(row[5].ToString()))
+                                        {
+                                            task.DeferBy = Convert.ToInt32(row[5].ToString());
+                                        }
 
-                                }
-                                task.IsMasterTask = true;
-                                if (row["Lock the Due By (Date)"].ToString() == "TRUE")
-                                {
-                                    task.LockDueDate = true;
-                                }
-                                else
-                                {
-                                    task.LockDueDate = false;
+                                    }
+                                    task.IsMasterTask = true;
+                                    if (row[7].ToString() == "TRUE")
+                                    {
+                                        task.LockDueDate = true;
+                                    }
+                                    else
+                                    {
+                                        task.LockDueDate = false;
+                                    }
+                                    List<Task> DependenciesToAdd = new List<Task>();
+                                    if (row[3] != null)
+                                    {
+                                        if (!String.IsNullOrEmpty(row[3].ToString()))
+                                        {
+                                            string[] dependencies = row[3].ToString().Split(' ');
+                                            foreach(string dependency in dependencies)
+                                            {
+                                                if (!String.IsNullOrEmpty(dependency))
+                                                {
+                                                    Task dependencyTask = _taskRepository.GetByTaskIdNumber(dependency);
+                                                    if (dependencyTask != null)
+                                                    {
+                                                        DependenciesToAdd.Add(dependencyTask);
+                                                    }
+                                                    else
+                                                    {
+                                                        DependencyStack.Add($"{task.TaskIDNumber},{dependency}");
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                    _taskRepository.Insert(task);
+                                    if (DependenciesToAdd.Count > 0)
+                                    {
+                                        task = _taskRepository.GetByTaskIdNumber(task.TaskIDNumber);
+                                        foreach(Task dependencyToAdd in DependenciesToAdd)
+                                        {
+                                            _taskRepository.AddTaskDependency(task, dependencyToAdd);
+                                        }
+                                    }
                                 }
                                 /*task.Dependencies;*/
 
                             }
                         }
-
+                        foreach(string taskAndDependency in DependencyStack)
+                        {
+                            string[] tasks = taskAndDependency.Split(',');
+                            var task = _taskRepository.GetByTaskIdNumber(tasks[0]);
+                            var dependency = _taskRepository.GetByTaskIdNumber(tasks[1]);
+                            _taskRepository.AddTaskDependency(task, dependency);
+                        }
                     }
                 }
                 else

@@ -15,6 +15,7 @@ namespace RRFFilesManager.Abstractions
         public bool? EarnBaseCommissionAsFileLawyer { get; set; }
         public double? ResponsibleLawyerBaseCommissionMultiplier { get; set; }
         public bool IsParalegal { get; set; }
+        public string eMailAddress { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public int ClearanceLevel { get; set; }

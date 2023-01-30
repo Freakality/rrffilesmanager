@@ -21,6 +21,11 @@ namespace RRFFilesManager.DataAccess
             var account = _context.Tasks.FirstOrDefault(x => x.ID == taskId);
             return account;
         }
+        public Task GetByTaskIdNumber(string taskIdNumber)
+        {
+            var account = _context.Tasks.FirstOrDefault(x => x.TaskIDNumber == taskIdNumber);
+            return account;
+        }
 
         public void Insert(Task task)
         {

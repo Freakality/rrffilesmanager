@@ -57,6 +57,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<LawyerTask> LawyerTasks { get; set; }
         public DbSet<ClientNote> ClientNotes { get; set; }
         public DbSet<FileStatus> FileStatus { get; set; }
+        public DbSet<LATData> LATDatas { get; set; }
         public Lawyer User { get; set; }
 
 
@@ -213,6 +214,9 @@ namespace RRFFilesManager.DataAccess
                     case "Client":
                         value = Clients.Find(n).ToString();
                         break;
+                    case "ClientNote":
+                        value = ClientNotes.Find(n).ToString();
+                        break;
                     case "ComissionCalculator":
                         value = ComissionCalculator.Find(n).ToString();
                         break;
@@ -255,8 +259,14 @@ namespace RRFFilesManager.DataAccess
                     case "Intake":
                         value = Intakes.Find(n).ToString();
                         break;
+                    case "LATData":
+                        value = LATDatas.Find(n).ToString();
+                        break;
                     case "Lawyer":
                         value = Lawyers.Find(n).ToString();
+                        break;
+                    case "LawyerTask":
+                        value = LawyerTasks.Find(n).ToString();
                         break;
                     case "MatterSubType":
                         value = MatterSubTypes.Find(n).ToString();

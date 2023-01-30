@@ -31,8 +31,8 @@
             this.GridView = new System.Windows.Forms.DataGridView();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.SearchBox = new System.Windows.Forms.GroupBox();
-            this.FileStatusComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.FileStatusComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             this.SearchBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -72,19 +72,6 @@
             this.SearchBox.Text = "Search";
             this.SearchBox.Enter += new System.EventHandler(this.SearchBox_Enter_1);
             // 
-            // FileStatusComboBox
-            // 
-            this.FileStatusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FileStatusComboBox.FormattingEnabled = true;
-            this.FileStatusComboBox.ItemHeight = 20;
-            this.FileStatusComboBox.Location = new System.Drawing.Point(3, 0);
-            this.FileStatusComboBox.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.FileStatusComboBox.Name = "FileStatusComboBox";
-            this.FileStatusComboBox.Size = new System.Drawing.Size(144, 28);
-            this.FileStatusComboBox.TabIndex = 4;
-            this.FileStatusComboBox.SelectedIndexChanged += new System.EventHandler(this.FileStatusComboBox_SelectedIndexChanged);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -100,6 +87,19 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 31);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // FileStatusComboBox
+            // 
+            this.FileStatusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FileStatusComboBox.FormattingEnabled = true;
+            this.FileStatusComboBox.ItemHeight = 20;
+            this.FileStatusComboBox.Location = new System.Drawing.Point(3, 0);
+            this.FileStatusComboBox.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.FileStatusComboBox.Name = "FileStatusComboBox";
+            this.FileStatusComboBox.Size = new System.Drawing.Size(144, 28);
+            this.FileStatusComboBox.TabIndex = 4;
+            this.FileStatusComboBox.SelectedIndexChanged += new System.EventHandler(this.FileStatusComboBox_SelectedIndexChanged);
             // 
             // FindFile
             // 

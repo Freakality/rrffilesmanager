@@ -41,7 +41,7 @@ namespace RRFFilesManager.DataAccess
 
         public Lawyer GetByName(string searchText)
         {
-            var account = _context.Lawyers.FirstOrDefault(x => x.Description.ToString().Contains(searchText));
+            var account = _context.Lawyers.FirstOrDefault(x => x.Description.Contains(searchText));
 
             return account;
         }

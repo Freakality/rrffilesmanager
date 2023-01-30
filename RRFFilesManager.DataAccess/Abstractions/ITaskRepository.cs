@@ -16,6 +16,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void Update(Task task);
         void SoftDelete(int taskId);
         Task GetById(int taskId);
+        Task GetByTaskIdNumber(string taskIdNumber);
         IEnumerable<Task> List();
         IEnumerable<Task> Search(string searchText, int taskCategoryID, bool? hold = null, int? take = null);
         Task GetLastTask(int? categoryId = null);

@@ -200,6 +200,7 @@
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
     <Compile Include="Abstractions\IClientNoteRepository.cs" />
+    <Compile Include="Abstractions\ILATDataRepository.cs" />
     <Compile Include="Abstractions\IFileReviewRepository.cs" />
     <Compile Include="Abstractions\IFileStatusRepository.cs" />
     <Compile Include="Abstractions\IFileTaskRepository.cs" />
@@ -228,6 +229,7 @@
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
     <Compile Include="ClientNoteRepository.cs" />
+    <Compile Include="LATDataRepository.cs" />
     <Compile Include="FileStatusRepository.cs" />
     <Compile Include="LawyerTaskRepository.cs" />
     <Compile Include="LoggedUser.cs" />
@@ -347,6 +349,10 @@
     <Compile Include="Migrations\20230119044003_ClientNotesandTaskUpdates.cs" />
     <Compile Include="Migrations\20230119044003_ClientNotesandTaskUpdates.designer.cs">
       <DependentUpon>20230119044003_ClientNotesandTaskUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230130163340_LAT-Implementation.cs" />
+    <Compile Include="Migrations\20230130163340_LAT-Implementation.designer.cs">
+      <DependentUpon>20230130163340_LAT-Implementation.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
