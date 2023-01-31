@@ -354,6 +354,10 @@
     <Compile Include="Migrations\20230130163340_LAT-Implementation.designer.cs">
       <DependentUpon>20230130163340_LAT-Implementation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230130223535_Lawyer_Email.cs" />
+    <Compile Include="Migrations\20230130223535_Lawyer_Email.designer.cs">
+      <DependentUpon>20230130223535_Lawyer_Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />
