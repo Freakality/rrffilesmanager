@@ -40,6 +40,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.GroupByButton = new System.Windows.Forms.Button();
             this.Chl_Columns = new System.Windows.Forms.CheckedListBox();
             this.Dg_Data = new System.Windows.Forms.DataGridView();
+            this.ExcelExportButton = new System.Windows.Forms.Button();
             this.Gb_FindInfoControls.SuspendLayout();
             this.Gb_GroupBY.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Data)).BeginInit();
@@ -55,7 +56,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Gb_FindInfoControls.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gb_FindInfoControls.Location = new System.Drawing.Point(9, 8);
             this.Gb_FindInfoControls.Name = "Gb_FindInfoControls";
-            this.Gb_FindInfoControls.Size = new System.Drawing.Size(229, 155);
+            this.Gb_FindInfoControls.Size = new System.Drawing.Size(229, 184);
             this.Gb_FindInfoControls.TabIndex = 0;
             this.Gb_FindInfoControls.TabStop = false;
             // 
@@ -66,7 +67,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.FindInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindInfoButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindInfoButton.ForeColor = System.Drawing.Color.White;
-            this.FindInfoButton.Location = new System.Drawing.Point(100, 114);
+            this.FindInfoButton.Location = new System.Drawing.Point(101, 137);
             this.FindInfoButton.Name = "FindInfoButton";
             this.FindInfoButton.Size = new System.Drawing.Size(111, 35);
             this.FindInfoButton.TabIndex = 154;
@@ -79,7 +80,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Dtp_To.CustomFormat = "dd/MM/yyyy";
             this.Dtp_To.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_To.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_To.Location = new System.Drawing.Point(82, 74);
+            this.Dtp_To.Location = new System.Drawing.Point(82, 87);
             this.Dtp_To.Name = "Dtp_To";
             this.Dtp_To.Size = new System.Drawing.Size(130, 27);
             this.Dtp_To.TabIndex = 153;
@@ -98,7 +99,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 82);
+            this.label2.Location = new System.Drawing.Point(11, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 19);
             this.label2.TabIndex = 151;
@@ -118,13 +119,14 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             // 
             this.Gb_GroupBY.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Gb_GroupBY.Controls.Add(this.ExcelExportButton);
             this.Gb_GroupBY.Controls.Add(this.RefreshButton);
             this.Gb_GroupBY.Controls.Add(this.GroupByButton);
             this.Gb_GroupBY.Controls.Add(this.Chl_Columns);
             this.Gb_GroupBY.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gb_GroupBY.Location = new System.Drawing.Point(244, 8);
             this.Gb_GroupBY.Name = "Gb_GroupBY";
-            this.Gb_GroupBY.Size = new System.Drawing.Size(618, 155);
+            this.Gb_GroupBY.Size = new System.Drawing.Size(719, 184);
             this.Gb_GroupBY.TabIndex = 1;
             this.Gb_GroupBY.TabStop = false;
             this.Gb_GroupBY.Text = "Group By";
@@ -136,12 +138,13 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RefreshButton.ForeColor = System.Drawing.Color.White;
-            this.RefreshButton.Location = new System.Drawing.Point(501, 37);
+            this.RefreshButton.Location = new System.Drawing.Point(602, 37);
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(111, 35);
             this.RefreshButton.TabIndex = 156;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = false;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // GroupByButton
             // 
@@ -150,7 +153,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.GroupByButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GroupByButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupByButton.ForeColor = System.Drawing.Color.White;
-            this.GroupByButton.Location = new System.Drawing.Point(501, 114);
+            this.GroupByButton.Location = new System.Drawing.Point(602, 87);
             this.GroupByButton.Name = "GroupByButton";
             this.GroupByButton.Size = new System.Drawing.Size(111, 35);
             this.GroupByButton.TabIndex = 155;
@@ -160,6 +163,9 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             // 
             // Chl_Columns
             // 
+            this.Chl_Columns.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Chl_Columns.CheckOnClick = true;
             this.Chl_Columns.ColumnWidth = 165;
             this.Chl_Columns.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,7 +173,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Chl_Columns.Location = new System.Drawing.Point(16, 37);
             this.Chl_Columns.MultiColumn = true;
             this.Chl_Columns.Name = "Chl_Columns";
-            this.Chl_Columns.Size = new System.Drawing.Size(194, 114);
+            this.Chl_Columns.Size = new System.Drawing.Size(580, 136);
             this.Chl_Columns.TabIndex = 0;
             // 
             // Dg_Data
@@ -180,12 +186,27 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Dg_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dg_Data.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.Dg_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dg_Data.Location = new System.Drawing.Point(9, 169);
+            this.Dg_Data.Location = new System.Drawing.Point(9, 198);
             this.Dg_Data.Name = "Dg_Data";
             this.Dg_Data.ReadOnly = true;
             this.Dg_Data.RowHeadersVisible = false;
-            this.Dg_Data.Size = new System.Drawing.Size(853, 245);
+            this.Dg_Data.Size = new System.Drawing.Size(954, 301);
             this.Dg_Data.TabIndex = 2;
+            // 
+            // ExcelExportButton
+            // 
+            this.ExcelExportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExcelExportButton.BackColor = System.Drawing.Color.Maroon;
+            this.ExcelExportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcelExportButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExcelExportButton.ForeColor = System.Drawing.Color.White;
+            this.ExcelExportButton.Location = new System.Drawing.Point(602, 137);
+            this.ExcelExportButton.Name = "ExcelExportButton";
+            this.ExcelExportButton.Size = new System.Drawing.Size(111, 35);
+            this.ExcelExportButton.TabIndex = 157;
+            this.ExcelExportButton.Text = "Export";
+            this.ExcelExportButton.UseVisualStyleBackColor = false;
+            this.ExcelExportButton.Click += new System.EventHandler(this.ExcelExportButton_Click);
             // 
             // IntakeReportControls
             // 
@@ -195,7 +216,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Controls.Add(this.Gb_GroupBY);
             this.Controls.Add(this.Gb_FindInfoControls);
             this.Name = "IntakeReportControls";
-            this.Size = new System.Drawing.Size(871, 431);
+            this.Size = new System.Drawing.Size(972, 516);
             this.Gb_FindInfoControls.ResumeLayout(false);
             this.Gb_FindInfoControls.PerformLayout();
             this.Gb_GroupBY.ResumeLayout(false);
@@ -217,5 +238,6 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
         private System.Windows.Forms.CheckedListBox Chl_Columns;
         internal System.Windows.Forms.Button RefreshButton;
         internal System.Windows.Forms.Button GroupByButton;
+        internal System.Windows.Forms.Button ExcelExportButton;
     }
 }

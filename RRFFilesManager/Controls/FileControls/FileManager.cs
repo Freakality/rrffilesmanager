@@ -34,10 +34,12 @@ namespace RRFFilesManager
         private readonly ITaskRepository _taskRepository;
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
+        private readonly IClientNoteRepository _clientNoteRepository;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAction;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAccidentBenefits;
         public TabPage SemiAnnualFileReviewTabAction = new TabPage("Semi-Annual File Review");
         public TabPage SemiAnnualFileReviewTabAccidentBenefits = new TabPage("Semi-Annual File Review");
+        public IEnumerable<ClientNote> clientNotes;
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -46,6 +48,7 @@ namespace RRFFilesManager
             _taskRepository = Program.GetService<ITaskRepository>();
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
             _fileTaskRepository = Program.GetService<IFileTaskRepository>();
+            _clientNoteRepository = Program.GetService<IClientNoteRepository>();
             InitializeComponent();
             ComboBox2.SelectedIndex = 0;
             PeopleControl = new PeopleControl();
@@ -216,6 +219,10 @@ namespace RRFFilesManager
             {
                 RefreshActionLogDataGridViewDataSource();
             }
+
+            Btn_SearchNotes.Enabled = true;
+            AddNotesRowButton.Enabled = true;
+            SaveNoteButton.Enabled = true;
         }
 
         private void RefreshActionLogDataGridViewDataSource()
@@ -515,6 +522,78 @@ namespace RRFFilesManager
         private void ABBinderTab_Click(object sender, EventArgs e)
         {
 
+        }
+        
+
+        private void Chb_Time_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Chb_Time.Checked)            
+                Gb_Times.Enabled = true;            
+            else            
+                Gb_Times.Enabled = false;            
+        }
+
+        private void AddNotesRowButton_Click(object sender, EventArgs e)
+        {
+            if (File == null) return;
+           
+
+            if (ClientNotesDataGridView.Rows.Count > 0)
+            {
+                if (ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[0].Value == null || 
+                    ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[0].Value.ToString() == "")
+                {
+                    MessageBox.Show("You must save the last added note to create a new record.","Wait",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                    return;
+                }
+            }
+
+            ClientNotesDataGridView.Rows.Add(null,null,null);
+            ClientNotesDataGridView.CurrentCell = ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index];
+            ClientNotesDataGridView.Rows[ClientNotesDataGridView.CurrentCell.RowIndex].Cells[ClientNotesDataGridView.CurrentCell.ColumnIndex].ReadOnly = false;
+            //ClientNotesDataGridView.CurrentCell.ReadOnly = false;
+            ClientNotesDataGridView.BeginEdit(false);
+        }
+
+        private void SaveNoteButton_Click(object sender, EventArgs e)
+        {
+            if (ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_DateTime.Index].Value == null && 
+                !string.IsNullOrEmpty(ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index].Value.ToString()))
+            {
+                if (MessageBox.Show("Are you sure you want to save a note?", "Wait", MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question) != DialogResult.Yes) return;
+
+                string description = ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index].Value.ToString();
+
+                ClientNote clientNote = new ClientNote();
+                clientNote.File = File;
+                clientNote.Date = DateTime.Now;
+                clientNote.Lawyer = Program.GetUser();
+                clientNote.Description = description;
+
+                _clientNoteRepository.Insert(clientNote,File);
+                MessageBox.Show("note successfully saved!","Succes",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                Btn_SearchNotes.PerformClick();
+            }
+        }
+
+        private void Btn_SearchNotes_Click(object sender, EventArgs e)
+        {
+            clientNotes =  _clientNoteRepository.Search(File,Dtp_From.Value,Dtp_To.Value);
+            UpdateClienteNotesGrid();
+        }
+
+        private void UpdateClienteNotesGrid()
+        {
+            ClientNotesDataGridView.Rows.Clear();
+            foreach (var item in clientNotes)
+            {
+                ClientNotesDataGridView.Rows.Add(
+                    item.Date,
+                    item.Lawyer,
+                    item.Description
+                    ) ;
+            }
         }
     }
 }

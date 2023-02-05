@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -188,6 +189,12 @@ namespace RRFFilesManager.Utils
             return dataTable;
         }
 
-
+        public static void OpenMicrosoftExcel(string f)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = "EXCEL.EXE";
+            startInfo.Arguments = "\"" + f + "\"";
+            Process.Start(startInfo);
+        }
     }
 }

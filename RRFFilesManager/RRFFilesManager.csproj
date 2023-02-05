@@ -792,6 +792,7 @@
     <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />
     <Compile Include="Logic\UserManager.cs" />
+    <Compile Include="Logic\XLWorkbook.cs" />
     <Compile Include="PdfAxHost .cs">
       <SubType>Component</SubType>
     </Compile>

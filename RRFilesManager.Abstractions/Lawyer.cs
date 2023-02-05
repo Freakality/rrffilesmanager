@@ -10,7 +10,7 @@ namespace RRFFilesManager.Abstractions
     {
         public int ID { get; set; }
         public string Description { get; set; }
-        public int? NumberID { get; set; }
+        public int? Number { get; set; }
         public DateTime? ContractDate { get; set; }
         public bool? EarnBaseCommissionAsFileLawyer { get; set; }
         public double? ResponsibleLawyerBaseCommissionMultiplier { get; set; }
