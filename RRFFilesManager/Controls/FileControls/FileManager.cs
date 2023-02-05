@@ -1,4 +1,5 @@
-﻿using RRFFilesManager.Abstractions;
+﻿using ClosedXML.Excel;
+using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.Components;
 using RRFFilesManager.Controls.FileControls;
 using RRFFilesManager.Controls.FileControls.UserControls;
@@ -40,6 +41,8 @@ namespace RRFFilesManager
         public TabPage SemiAnnualFileReviewTabAction = new TabPage("Semi-Annual File Review");
         public TabPage SemiAnnualFileReviewTabAccidentBenefits = new TabPage("Semi-Annual File Review");
         public IEnumerable<ClientNote> clientNotes;
+        private DataTable Notes = new DataTable();
+        private DataView FilteredNotes = new DataView();
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -76,6 +79,12 @@ namespace RRFFilesManager
             SemiAnnualFileReviewControlAccidentBenefits = new SemiAnnualFileReviewControl(1);
             Utils.Utils.SetContent(SemiAnnualFileReviewTabAccidentBenefits, SemiAnnualFileReviewControlAccidentBenefits);
             SemiAnnualFileReviewControlAccidentBenefits.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
+
+            Notes.Columns.Add("Date",typeof(DateTime));
+            Notes.Columns.Add("Lawyer",typeof(string));
+            Notes.Columns.Add("Description",typeof(string));
+            Notes.TableName = "ClientNotesDataTable";
+            FilteredNotes.Table = Notes;
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -523,15 +532,7 @@ namespace RRFFilesManager
         {
 
         }
-        
-
-        private void Chb_Time_CheckedChanged(object sender, EventArgs e)
-        {
-            if (Chb_Time.Checked)            
-                Gb_Times.Enabled = true;            
-            else            
-                Gb_Times.Enabled = false;            
-        }
+               
 
         private void AddNotesRowButton_Click(object sender, EventArgs e)
         {
@@ -558,6 +559,7 @@ namespace RRFFilesManager
         private void SaveNoteButton_Click(object sender, EventArgs e)
         {
             if (ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_DateTime.Index].Value == null && 
+                ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index].Value != null &&
                 !string.IsNullOrEmpty(ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index].Value.ToString()))
             {
                 if (MessageBox.Show("Are you sure you want to save a note?", "Wait", MessageBoxButtons.YesNoCancel,
@@ -573,7 +575,15 @@ namespace RRFFilesManager
 
                 _clientNoteRepository.Insert(clientNote,File);
                 MessageBox.Show("note successfully saved!","Succes",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                if (Cbb_Staff.Items.Count > 0)
+                {
+                    Cbb_Staff.SelectedIndex = 0;
+                }
                 Btn_SearchNotes.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("¡There is no information to save!", "No info", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -581,19 +591,156 @@ namespace RRFFilesManager
         {
             clientNotes =  _clientNoteRepository.Search(File,Dtp_From.Value,Dtp_To.Value);
             UpdateClienteNotesGrid();
+            
         }
 
         private void UpdateClienteNotesGrid()
         {
+            
             ClientNotesDataGridView.Rows.Clear();
+            Notes.Rows.Clear();
+            FilteredNotes.RowFilter = null;
+            Intake intake = File.Intake;
+            
+            //Validando notas del intake
+            if (!string.IsNullOrEmpty(intake.DamNotes))
+            {
+                Notes.Rows.Add(
+                   File.DateOfCall,
+                   intake.File.FileLawyer.Description,
+                   intake.DamNotes
+                   );
+            }
+
+            if (!string.IsNullOrEmpty(intake.EILNotes))
+            {
+                Notes.Rows.Add(
+                   File.DateOfCall,
+                   intake.File.FileLawyer.Description,
+                   intake.EILNotes
+                   );
+            }
+
+            if (!string.IsNullOrEmpty(intake.LiaNotes))
+            {
+                Notes.Rows.Add(
+                   File.DateOfCall,
+                   intake.File.FileLawyer.Description,
+                   intake.LiaNotes
+                   );
+            }
+
+            if (!string.IsNullOrEmpty(intake.AccBenNotes))
+            {
+                Notes.Rows.Add(
+                   File.DateOfCall,
+                   intake.File.FileLawyer.Description,
+                   intake.AccBenNotes
+                   );
+            }
+
+            if (!string.IsNullOrEmpty(intake.PolOtherNotes))
+            {
+                Notes.Rows.Add(
+                   File.DateOfCall,
+                   intake.File.FileLawyer.Description,
+                   intake.PolOtherNotes
+                   );
+            }
+
+            if (!string.IsNullOrEmpty(intake.Notes))
+            {
+                Notes.Rows.Add(
+                   File.DateOfCall,
+                   intake.File.FileLawyer.Description,
+                   intake.Notes
+                   );
+            }
+
             foreach (var item in clientNotes)
             {
-                ClientNotesDataGridView.Rows.Add(
+                Notes.Rows.Add(
                     item.Date,
                     item.Lawyer,
                     item.Description
                     ) ;
             }
+
+            foreach (DataRow item in Notes.Rows)
+            {
+                ClientNotesDataGridView.Rows.Add(
+                    Convert.ToDateTime(item["Date"]),
+                    item["Lawyer"].ToString(),
+                    item["Description"].ToString()
+                    );
+            }
+
+            Cbb_Staff.Items.Clear();
+            Cbb_Staff.Items.Add("");
+            var lawyers = Notes.AsEnumerable().Select(x => x.Field<string>("Lawyer")).Distinct();
+            foreach (var item in lawyers)
+            {
+                Cbb_Staff.Items.Add(item);
+            }
+            ExportToExcelButton.Enabled = true;
+        }
+
+        private void Cbb_Staff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Cbb_Staff.Text.Trim() == "")
+            {
+                UpdateClienteNotesGrid();
+            }
+            else
+            {
+                FilteredNotes.RowFilter = $"Lawyer = '{Cbb_Staff.Text.Trim()}'";
+                ClientNotesDataGridView.Rows.Clear();               
+                foreach (DataRowView item in FilteredNotes)
+                {
+                    ClientNotesDataGridView.Rows.Add(
+                    Convert.ToDateTime(item["Date"]),
+                    item["Lawyer"].ToString(),
+                    item["Description"].ToString()
+                    );
+                }
+            }
+        }
+
+        private void ExportToExcelButton_Click(object sender, EventArgs e)
+        {
+            if (ClientNotesDataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("¡There is no information to export!","No info",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
+            var wb = new ClosedXML.Excel.XLWorkbook();
+            if (Notes.Rows.Count == ClientNotesDataGridView.Rows.Count)
+            {
+                wb.Worksheets.Add(Notes, "ClientNotes");
+            }
+            else
+            {
+                wb.Worksheets.Add(FilteredNotes.ToTable(), "ClientNotes");
+            }            
+            
+            foreach (IXLWorksheet sheet in wb.Worksheets)
+            {
+                sheet.Columns().AdjustToContents();
+            }
+            
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.FileName = "";
+                saveFileDialog.Filter = "Excel Files | *.xlsx";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wb.SaveAs(saveFileDialog.FileName);
+                    MessageBox.Show("¡successful export!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Utils.Utils.OpenMicrosoftExcel(saveFileDialog.FileName);
+                }
+            }
+
         }
     }
 }
