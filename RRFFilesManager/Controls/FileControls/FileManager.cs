@@ -342,7 +342,7 @@ namespace RRFFilesManager
             if (!SettingFile && (File.SubTypeCategory != (ComissionSubType)SubTypeCategoryComboBox.SelectedItem))
             {
                 File.SubTypeCategory = (ComissionSubType)SubTypeCategoryComboBox.SelectedItem;
-                _fileRepository.Update(File);
+                _fileManager.Update(File);
                 SetSemiAnnualFileReviewTab(File);
             }
         }
