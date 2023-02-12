@@ -35,6 +35,7 @@ namespace RRFFilesManager
         private readonly ITaskRepository _taskRepository;
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
+        private readonly ILATDataRepository _latDataRepository;
         private Logic.FileManager _fileManager;
         private FileStatusManager _fileStatusManager;
         private readonly IClientNoteRepository _clientNoteRepository;
@@ -54,6 +55,7 @@ namespace RRFFilesManager
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
             _fileTaskRepository = Program.GetService<IFileTaskRepository>();
             _clientNoteRepository = Program.GetService<IClientNoteRepository>();
+            _latDataRepository = Program.GetService<ILATDataRepository>();
             InitializeComponent();
             _fileManager = new Logic.FileManager();
             _fileStatusManager = new FileStatusManager();
@@ -760,6 +762,867 @@ namespace RRFFilesManager
             {
                 File.CurrentStatus = newStatus;
                 _fileManager.Update(File);
+            }
+        }
+
+        private void TabControl5_Click(object sender, EventArgs e)
+        {
+            if (TabControl5.SelectedTab == ABLAT)
+            {
+                Busqueda();
+            }
+        }
+
+
+        private void LatFiledDtp_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void BtnSaveLatData_Click(object sender, EventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button boton = new Button();
+                boton = (Button)sender;
+
+                switch (boton.Name)
+                {
+                    case "BtnLat1":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 1");
+                        }
+                        else
+                        {
+                            SaveLat(1);
+                        }
+                        break;
+
+                    case "BtnLat2":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 2");
+                        }
+                        else
+                        {
+                            SaveLat(2);
+                        }
+                        break;
+                    case "BtnLat3":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 3");
+                        }
+                        else
+                        {
+                            SaveLat(3);
+                        }
+                        break;
+
+                    case "BtnLat4":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 4");
+                        }
+                        else
+                        {
+                            SaveLat(4);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        private void BtnUpdateLatData_Click(object sender, EventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button boton = new Button();
+                boton = (Button)sender;
+
+                switch (boton.Name)
+                {
+                    case "BtnLat1":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 1");
+
+                        }
+                        else
+                        {
+                            UpdateLat(1);
+                        }
+                        break;
+
+                    case "BtnLat2":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 2");
+                        }
+                        else
+                        {
+                            UpdateLat(2);
+                        }
+                        break;
+                    case "BtnLat3":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 3");
+                        }
+                        else
+                        {
+                            UpdateLat(3);
+                        }
+                        break;
+
+                    case "BtnLat4":
+                        if (DtpEmpty())
+                        {
+                            MessageBox.Show("Complete the data of lat 4");
+                        }
+                        else
+                        {
+                            UpdateLat(4);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        private bool DtpEmpty()
+        {
+            foreach (Control item in TabControl4.SelectedTab.Controls)
+            {
+                if (item is TextBox)
+                {
+                    TextBox Txt = new TextBox();
+                    Txt = (TextBox)item;
+                    if (String.IsNullOrEmpty(Txt.Text))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            if (TabControl4.SelectedTab == LAT1)
+            {
+                foreach (Control itemSummary in TableLayoutPanel2.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                foreach (Control itemSummary in TableLayoutPanel3.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+            }
+            if (TabControl4.SelectedTab == LAT2)
+            {
+                foreach (Control itemSummary in TableLayoutPanel9.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                foreach (Control itemSummary in TableLayoutPanel8.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            if (TabControl4.SelectedTab == LAT3)
+            {
+                foreach (Control itemSummary in TableLayoutPanel13.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                foreach (Control itemSummary in TableLayoutPanel12.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+            }
+            if (TabControl4.SelectedTab == LAT4)
+            {
+                foreach (Control itemSummary in TableLayoutPanel17.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                foreach (Control itemSummary in TableLayoutPanel16.Controls)
+                {
+                    if (itemSummary is TextBox)
+                    {
+                        TextBox Txt = new TextBox();
+                        Txt = (TextBox)itemSummary;
+                        if (String.IsNullOrEmpty(Txt.Text))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+            }
+
+            return false;
+        }
+        private void SaveLat(int latNumber)
+        {
+            try
+            {
+                LATData _LatData = new LATData();
+                if (latNumber == 1)
+                {
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 1;
+                    _LatData.LATActualDateFiled = ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberTxt.Text;
+                    _LatData.LATCaseConfDate = LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorTxt.Text;
+                    _LatData.LATAdjuster = AdjusterTxt.Text;
+                    _LatData.LATInsurer = InsurerTxt.Text;
+                    _LatData.LATInsurerCounsel = InsurerCounselTxt.Text;
+                    _LatData.LATInsurerFirm = InsurerFirmTxt.Text;
+                    _LatData.LATHearingType = HearingTypeTxt.Text;
+                    _LatData.LATHearingDate = HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorTxt.Text;
+                    _LatData.LATDateSettled = DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = string.IsNullOrEmpty(AmountSettledTxt.Text) ? 0.00 : Convert.ToDouble(AmountSettledTxt.Text);
+                    _LatData.LATIssue1 = TxtIssues1.Text;
+                    _LatData.LATIssue2 = TxtIssues2.Text;
+                    _LatData.LATIssue3 = TxtIssues3.Text;
+                    _LatData.LATIssue4 = TxtIssues4.Text;
+                    _LatData.LATIssue5 = TxtIssues5.Text;
+                    _LatData.LATIssue6 = TxtIssues6.Text;
+                    _LatData.LATIssue7 = TxtIssues7.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = DeadlineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Insert(_LatData, 1, Home.FileManager.File);
+                }
+                else if (latNumber == 2)
+                {
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 2;
+                    _LatData.LATActualDateFiled = Lat2ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberLat2.Text;
+                    _LatData.LATCaseConfDate = Lat2LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorLat2.Text;
+                    _LatData.LATAdjuster = AdjusterLat2.Text;
+                    _LatData.LATInsurer = InsurerLat2.Text;
+                    _LatData.LATInsurerCounsel = InsurerCounselLat2.Text;
+                    _LatData.LATInsurerFirm = InsureFirmLat2.Text;
+                    _LatData.LATHearingType = HearingTypeLat2.Text;
+                    _LatData.LATHearingDate = Lat2HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorLat2.Text;
+                    _LatData.LATDateSettled = Lat2DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = string.IsNullOrEmpty(AmountSettledLat2.Text) ? 0.00 : Convert.ToDouble(AmountSettledLat2.Text);
+
+                    _LatData.LATIssue1 = IssuesLat2.Text;
+                    _LatData.LATIssue2 = Issues2Lat2.Text;
+                    _LatData.LATIssue3 = Issues3Lat2.Text;
+                    _LatData.LATIssue4 = Issues4Lat2.Text;
+                    _LatData.LATIssue5 = Issues5Lat2.Text;
+                    _LatData.LATIssue6 = Issues6Lat2.Text;
+                    _LatData.LATIssue7 = Issues7Lat2.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = Lat2DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = Lat2DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = Lat2ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = Lat2ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = Lat2InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = Lat2DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = Lat2DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = Lat2DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = Lat2DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = Lat2DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = Lat2DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = Lat2DeadLineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = Lat2DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Insert(_LatData, 2, Home.FileManager.File);
+                }
+                else if (latNumber == 3)
+                {
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 3;
+                    _LatData.LATActualDateFiled = Lat3ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberLat3.Text;
+                    _LatData.LATCaseConfDate = Lat3LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorLat3.Text;
+                    _LatData.LATAdjuster = AdjusterLat3.Text;
+                    _LatData.LATInsurer = InsurerLat3.Text;
+                    _LatData.LATInsurerCounsel = InsureCounselLat3.Text;
+                    _LatData.LATInsurerFirm = InsurerFirmLat3.Text;
+                    _LatData.LATHearingType = HearingTypeLat3.Text;
+                    _LatData.LATHearingDate = Lat3HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorLat3.Text;
+                    _LatData.LATDateSettled = Lat3DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = string.IsNullOrEmpty(AmountSettledLat3.Text) ? 0.00 : Convert.ToDouble(AmountSettledLat3.Text);
+                    _LatData.LATIssue1 = IssuesLat3.Text;
+                    _LatData.LATIssue2 = Issues2Lat3.Text;
+                    _LatData.LATIssue3 = Issues3Lat3.Text;
+                    _LatData.LATIssue4 = Issues4Lat3.Text;
+                    _LatData.LATIssue5 = Issues5Lat3.Text;
+                    _LatData.LATIssue6 = Issues6Lat3.Text;
+                    _LatData.LATIssue7 = Issues7Lat3.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = Lat3DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = Lat3DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = Lat3ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = Lat3ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = Lat3InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = Lat3DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = Lat3DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = Lat3DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = Lat3DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = Lat3DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = Lat3DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = Lat3DeadLineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = Lat3DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Insert(_LatData, 3, Home.FileManager.File);
+                }
+                else if (latNumber == 4)
+                {
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 4;
+                    _LatData.LATActualDateFiled = Lat4ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberLat4.Text;
+                    _LatData.LATCaseConfDate = Lat4LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorLat4.Text;
+                    _LatData.LATAdjuster = AdjusterLat4.Text;
+                    _LatData.LATInsurer = InsurerLat4.Text;
+                    _LatData.LATInsurerCounsel = InsurerCounselLat4.Text;
+                    _LatData.LATInsurerFirm = InsurerFirmLat4.Text;
+                    _LatData.LATHearingType = HearingTypeLat4.Text;
+                    _LatData.LATHearingDate = Lat4HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorLat4.Text;
+                    _LatData.LATDateSettled = Lat4DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = string.IsNullOrEmpty(AmountSettledLat4.Text) ? 0.00 : Convert.ToDouble(AmountSettledLat4.Text);
+                    _LatData.LATIssue1 = IssuesLat4.Text;
+                    _LatData.LATIssue2 = Issues2Lat4.Text;
+                    _LatData.LATIssue3 = Issues3Lat4.Text;
+                    _LatData.LATIssue4 = Issues4Lat4.Text;
+                    _LatData.LATIssue5 = Issues5Lat4.Text;
+                    _LatData.LATIssue6 = Issues6Lat4.Text;
+                    _LatData.LATIssue7 = Issues7Lat4.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = Lat4DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = Lat4DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = Lat4ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = Lat4ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = Lat4InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = Lat4DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = Lat4DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = Lat4DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = Lat4DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = Lat4DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = Lat4DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = Lat4DeadLineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = Lat4DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Insert(_LatData, 4, Home.FileManager.File);
+                }
+
+                MessageBox.Show("Data saved successfully!");
+                ClearDataLat();
+                Busqueda();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+
+        }
+        private void UpdateLat(int latNumber)
+        {
+            try
+            {
+                LATData _LatData = new LATData();
+                if (latNumber == 1)
+                {
+                    _LatData.ID = Home.FileManager.File.LATData.ToList().Single(T => T.LATNumber == 1).ID;
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 1;
+                    _LatData.LATActualDateFiled = ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberTxt.Text;
+                    _LatData.LATCaseConfDate = LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorTxt.Text;
+                    _LatData.LATAdjuster = AdjusterTxt.Text;
+                    _LatData.LATInsurer = InsurerTxt.Text;
+                    _LatData.LATInsurerCounsel = InsurerCounselTxt.Text;
+                    _LatData.LATInsurerFirm = InsurerFirmTxt.Text;
+                    _LatData.LATHearingType = HearingTypeTxt.Text;
+                    _LatData.LATHearingDate = HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorTxt.Text;
+                    _LatData.LATDateSettled = DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = Convert.ToDouble(AmountSettledTxt.Text);
+                    _LatData.LATIssue1 = TxtIssues1.Text;
+                    _LatData.LATIssue2 = TxtIssues2.Text;
+                    _LatData.LATIssue3 = TxtIssues3.Text;
+                    _LatData.LATIssue4 = TxtIssues4.Text;
+                    _LatData.LATIssue5 = TxtIssues5.Text;
+                    _LatData.LATIssue6 = TxtIssues6.Text;
+                    _LatData.LATIssue7 = TxtIssues7.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = DeadlineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Update(_LatData);
+                }
+                else if (latNumber == 2)
+                {
+                    _LatData.ID = Home.FileManager.File.LATData.ToList().Single(T => T.LATNumber == 2).ID;
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 2;
+                    _LatData.LATActualDateFiled = Lat2ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberLat2.Text;
+                    _LatData.LATCaseConfDate = Lat2LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorLat2.Text;
+                    _LatData.LATAdjuster = AdjusterLat2.Text;
+                    _LatData.LATInsurer = InsurerLat2.Text;
+                    _LatData.LATInsurerCounsel = InsurerCounselLat2.Text;
+                    _LatData.LATInsurerFirm = InsureFirmLat2.Text;
+                    _LatData.LATHearingType = HearingTypeLat2.Text;
+                    _LatData.LATHearingDate = Lat2HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorLat2.Text;
+                    _LatData.LATDateSettled = Lat2DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = Convert.ToDouble(AmountSettledLat2.Text);
+                    _LatData.LATIssue1 = IssuesLat2.Text;
+                    _LatData.LATIssue2 = Issues2Lat2.Text;
+                    _LatData.LATIssue3 = Issues3Lat2.Text;
+                    _LatData.LATIssue4 = Issues4Lat2.Text;
+                    _LatData.LATIssue5 = Issues5Lat2.Text;
+                    _LatData.LATIssue6 = Issues6Lat2.Text;
+                    _LatData.LATIssue7 = Issues7Lat2.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = Lat2DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = Lat2DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = Lat2ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = Lat2ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = Lat2InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = Lat2DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = Lat2DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = Lat2DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = Lat2DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = Lat2DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = Lat2DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = Lat2DeadLineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = Lat2DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Update(_LatData);
+                }
+                else if (latNumber == 3)
+                {
+                    _LatData.ID = Home.FileManager.File.LATData.ToList().Single(T => T.LATNumber == 3).ID;
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 3;
+                    _LatData.LATActualDateFiled = Lat3ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberLat3.Text;
+                    _LatData.LATCaseConfDate = Lat3LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorLat3.Text;
+                    _LatData.LATAdjuster = AdjusterLat3.Text;
+                    _LatData.LATInsurer = InsurerLat3.Text;
+                    _LatData.LATInsurerCounsel = InsureCounselLat3.Text;
+                    _LatData.LATInsurerFirm = InsurerFirmLat3.Text;
+                    _LatData.LATHearingType = HearingTypeLat3.Text;
+                    _LatData.LATHearingDate = Lat3HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorLat3.Text;
+                    _LatData.LATDateSettled = Lat3DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = Convert.ToDouble(AmountSettledLat3.Text);
+                    _LatData.LATIssue1 = IssuesLat3.Text;
+                    _LatData.LATIssue2 = Issues2Lat3.Text;
+                    _LatData.LATIssue3 = Issues3Lat3.Text;
+                    _LatData.LATIssue4 = Issues4Lat3.Text;
+                    _LatData.LATIssue5 = Issues5Lat3.Text;
+                    _LatData.LATIssue6 = Issues6Lat3.Text;
+                    _LatData.LATIssue7 = Issues7Lat3.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = Lat3DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = Lat3DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = Lat3ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = Lat3ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = Lat3InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = Lat3DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = Lat3DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = Lat3DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = Lat3DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = Lat3DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = Lat3DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = Lat3DeadLineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = Lat3DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Update(_LatData);
+                }
+                else if (latNumber == 4)
+                {
+                    _LatData.ID = Home.FileManager.File.LATData.ToList().Single(T => T.LATNumber == 4).ID;
+                    _LatData.FileId = Home.FileManager.File.ID;
+                    _LatData.LATNumber = 4;
+                    _LatData.LATActualDateFiled = Lat4ActualDateLatFiledDtp.Value;
+                    _LatData.LATTribunalNumber = TribunalNumberLat4.Text;
+                    _LatData.LATCaseConfDate = Lat4LatCaseConfDateDtp.Value;
+                    _LatData.LATCaseAdjudicator = CaseAdjudicatorLat4.Text;
+                    _LatData.LATAdjuster = AdjusterLat4.Text;
+                    _LatData.LATInsurer = InsurerLat4.Text;
+                    _LatData.LATInsurerCounsel = InsurerCounselLat4.Text;
+                    _LatData.LATInsurerFirm = InsurerFirmLat4.Text;
+                    _LatData.LATHearingType = HearingTypeLat4.Text;
+                    _LatData.LATHearingDate = Lat4HearingStarDateDtp.Value;
+                    _LatData.LATHearingAdjudicator = HearingAdjudicatorLat4.Text;
+                    _LatData.LATDateSettled = Lat4DateLatSettledClosedDtp.Value;
+                    _LatData.LATAmountSettled = Convert.ToDouble(AmountSettledLat4.Text);
+                    _LatData.LATIssue1 = IssuesLat4.Text;
+                    _LatData.LATIssue2 = Issues2Lat4.Text;
+                    _LatData.LATIssue3 = Issues3Lat4.Text;
+                    _LatData.LATIssue4 = Issues4Lat4.Text;
+                    _LatData.LATIssue5 = Issues5Lat4.Text;
+                    _LatData.LATIssue6 = Issues6Lat4.Text;
+                    _LatData.LATIssue7 = Issues7Lat4.Text;
+                    _LatData.LATDueDateToDiscussPotentialLAT = Lat4DueDateToDiscussPotenctialLatApplDtp.Value;
+                    _LatData.LATDateMetWithLawyerReDenial = Lat4DateMetWithLawyerReDenialDtp.Value;
+                    _LatData.LATProposedDateToFileLAT = Lat4ProposedDateToFileLatDtp.Value;
+                    _LatData.LATActualDateLATServedOnInsurer = Lat4ActualDateLatServedOnInsurerDtp.Value;
+                    _LatData.LATInsurersResponseReceived = Lat4InsuresResponseReceivedDtp.Value;
+                    _LatData.LATDeadlineToServeFileCaseConfSummary = Lat4DeadLineToServeFileCaseConfSummaryDtp.Value;
+                    _LatData.LATDeadlineToDeliverProductionstoABCounsel = Lat4DeadLineToDeliverProductionsToABCounselDtp.Value;
+                    _LatData.LATDeadlineToReceiveABProductions = Lat4DeadLineToReceiveABProductionsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = Lat4DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = Lat4DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = Lat4DeadLineToFileHearingSubmissionsDtp.Value;
+                    _LatData.LATDeadlineToReceiveInsurerSubmissions = Lat4DeadLineToReceiveInsurerDtp.Value;
+                    _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = Lat4DeadLineForReplaySubmissionsDtp.Value;
+                    _latDataRepository.Update(_LatData);
+                }
+                MessageBox.Show("Data Updated successfully!");
+                ClearDataLat();
+                Busqueda();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+        }
+        private void ClearDataLat()
+        {
+            foreach (Control item in TabControl4.Controls)
+            {
+                if (item is TextBox)
+                {
+                    TextBox tx = new TextBox();
+                    tx = (TextBox)item;
+                    tx.Clear();
+                }
+            }
+        }
+        private void Busqueda()
+        {
+            if (Home.FileManager.File == null)
+            {
+                TabControl1.SelectedIndex = 0;
+                TabControl5.SelectedTab = ABBinderTab;
+                MessageBox.Show("You have to select a file!");
+
+                return;
+            }
+            txtLimitationDate.Text = Home.FileManager.File.LimitationPeriod;
+            if (_latDataRepository.List().Where(t => t.FileId == Home.FileManager.File.ID).ToList().Count == 0)
+            {
+                ClearDataLat();
+                MessageBox.Show("No lats available!");
+            }
+            if (_latDataRepository.Search(Home.FileManager.File, 1).ToList().Count > 0)
+            {
+                var latRepo = _latDataRepository.List().Single(t => t.FileId == Home.FileManager.File.ID && t.LATNumber == 1);
+                ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+
+                DueDateToDiscussPotenctialLatApplDtp.Value = latRepo.LATDueDateToDiscussPotentialLAT;
+                DateMetWithLawyerReDenialDtp.Value = latRepo.LATDateMetWithLawyerReDenial;
+                ProposedDateToFileLatDtp.Value = latRepo.LATProposedDateToFileLAT;
+                ActualDateLatServedOnInsurerDtp.Value = latRepo.LATActualDateLATServedOnInsurer;
+                InsuresResponseReceivedDtp.Value = latRepo.LATInsurersResponseReceived;
+                DeadLineToServeFileCaseConfSummaryDtp.Value = latRepo.LATDeadlineToServeFileCaseConfSummary;
+                DeadLineToDeliverProductionsToABCounselDtp.Value = latRepo.LATDeadlineToDeliverProductionstoABCounsel;
+                DeadLineToReceiveABProductionsDtp.Value = latRepo.LATDeadlineToReceiveABProductions;
+                DeadLineToFileAffidavitReportsDtp.Value = latRepo.LATDeadlineToFileAffidavitReportsEtc;
+                DeadLineToReceiveAffidavitReportsDtp.Value = latRepo.LATDeadlineToReceiveAffidavitReportsEtc;
+                DeadLineToFileHearingSubmissionsDtp.Value = latRepo.LATDeadlineToFileHearingSubmissionsAndOrBriefs;
+                DeadlineToReceiveInsurerDtp.Value = latRepo.LATDeadlineToReceiveInsurerSubmissions;
+                DeadLineForReplaySubmissionsDtp.Value = latRepo.LATDeadlineForReplySubmissionsOfTheApplicant;
+
+                TribunalNumberTxt.Text = latRepo.LATTribunalNumber;
+                CaseAdjudicatorTxt.Text = latRepo.LATCaseAdjudicator;
+                AdjusterTxt.Text = latRepo.LATAdjuster;
+                InsurerTxt.Text = latRepo.LATInsurer;
+                InsurerCounselTxt.Text = latRepo.LATInsurerCounsel;
+                InsurerFirmTxt.Text = latRepo.LATInsurerFirm;
+                HearingTypeTxt.Text = latRepo.LATHearingType;
+                HearingAdjudicatorTxt.Text = latRepo.LATHearingAdjudicator;
+                AmountSettledTxt.Text = latRepo.LATAmountSettled.ToString();
+                TxtIssues1.Text = latRepo.LATIssue1;
+                TxtIssues2.Text = latRepo.LATIssue2;
+                TxtIssues3.Text = latRepo.LATIssue3;
+                TxtIssues4.Text = latRepo.LATIssue4;
+                TxtIssues5.Text = latRepo.LATIssue5;
+                TxtIssues6.Text = latRepo.LATIssue6;
+                TxtIssues7.Text = latRepo.LATIssue7;
+
+                BtnLat1.Text = "Update";
+                BtnLat1.Click -= BtnSaveLatData_Click;
+                BtnLat1.Click -= BtnUpdateLatData_Click;
+                BtnLat1.Click += BtnUpdateLatData_Click;
+            }
+            else
+            {
+                BtnLat1.Text = "Save";
+                BtnLat1.Click -= BtnUpdateLatData_Click;
+                BtnLat1.Click -= BtnSaveLatData_Click; ;
+                BtnLat1.Click += BtnSaveLatData_Click;
+            }
+
+            if (_latDataRepository.Search(Home.FileManager.File, 2).ToList().Count > 0)
+            {
+                var latRepo = _latDataRepository.List().Single(t => t.FileId == Home.FileManager.File.ID && t.LATNumber == 2);
+                Lat2ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                Lat2LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                Lat2HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                Lat2DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+
+                Lat2DueDateToDiscussPotenctialLatApplDtp.Value = latRepo.LATDueDateToDiscussPotentialLAT;
+                Lat2DateMetWithLawyerReDenialDtp.Value = latRepo.LATDateMetWithLawyerReDenial;
+                Lat2ProposedDateToFileLatDtp.Value = latRepo.LATProposedDateToFileLAT;
+                Lat2ActualDateLatServedOnInsurerDtp.Value = latRepo.LATActualDateLATServedOnInsurer;
+                Lat2InsuresResponseReceivedDtp.Value = latRepo.LATInsurersResponseReceived;
+                Lat2DeadLineToServeFileCaseConfSummaryDtp.Value = latRepo.LATDeadlineToServeFileCaseConfSummary;
+                Lat2DeadLineToDeliverProductionsToABCounselDtp.Value = latRepo.LATDeadlineToDeliverProductionstoABCounsel;
+                Lat2DeadLineToReceiveABProductionsDtp.Value = latRepo.LATDeadlineToReceiveABProductions;
+                Lat2DeadLineToFileAffidavitReportsDtp.Value = latRepo.LATDeadlineToFileAffidavitReportsEtc;
+                Lat2DeadLineToReceiveAffidavitReportsDtp.Value = latRepo.LATDeadlineToReceiveAffidavitReportsEtc;
+                Lat2DeadLineToFileHearingSubmissionsDtp.Value = latRepo.LATDeadlineToFileHearingSubmissionsAndOrBriefs;
+                Lat2DeadLineToReceiveInsurerDtp.Value = latRepo.LATDeadlineToReceiveInsurerSubmissions;
+                Lat2DeadLineForReplaySubmissionsDtp.Value = latRepo.LATDeadlineForReplySubmissionsOfTheApplicant;
+
+                TribunalNumberLat2.Text = latRepo.LATTribunalNumber;
+                CaseAdjudicatorLat2.Text = latRepo.LATCaseAdjudicator;
+                AdjusterLat2.Text = latRepo.LATAdjuster;
+                InsurerLat2.Text = latRepo.LATInsurer;
+                InsurerCounselLat2.Text = latRepo.LATInsurerCounsel;
+                InsureFirmLat2.Text = latRepo.LATInsurerFirm;
+                HearingTypeLat2.Text = latRepo.LATHearingType;
+                HearingAdjudicatorLat2.Text = latRepo.LATHearingAdjudicator;
+                AmountSettledLat2.Text = latRepo.LATAmountSettled.ToString();
+                IssuesLat2.Text = latRepo.LATIssue1;
+                Issues2Lat2.Text = latRepo.LATIssue2;
+                Issues3Lat2.Text = latRepo.LATIssue3;
+                Issues4Lat2.Text = latRepo.LATIssue4;
+                Issues5Lat2.Text = latRepo.LATIssue5;
+                Issues6Lat2.Text = latRepo.LATIssue6;
+                Issues7Lat2.Text = latRepo.LATIssue7;
+
+                BtnLat2.Text = "Update";
+                BtnLat2.Click -= BtnSaveLatData_Click;
+                BtnLat2.Click -= BtnUpdateLatData_Click;
+                BtnLat2.Click += BtnUpdateLatData_Click;
+            }
+            else
+            {
+                BtnLat2.Text = "Save";
+                BtnLat2.Click -= BtnUpdateLatData_Click;
+                BtnLat2.Click -= BtnSaveLatData_Click; ;
+                BtnLat2.Click += BtnSaveLatData_Click;
+            }
+
+            if (_latDataRepository.Search(Home.FileManager.File, 3).ToList().Count > 0)
+            {
+                var latRepo = _latDataRepository.List().Single(t => t.FileId == Home.FileManager.File.ID && t.LATNumber == 3);
+                Lat3ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                Lat3LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                Lat3HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                Lat3DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+
+                Lat3DueDateToDiscussPotenctialLatApplDtp.Value = latRepo.LATDueDateToDiscussPotentialLAT;
+                Lat3DateMetWithLawyerReDenialDtp.Value = latRepo.LATDateMetWithLawyerReDenial;
+                Lat3ProposedDateToFileLatDtp.Value = latRepo.LATProposedDateToFileLAT;
+                Lat3ActualDateLatServedOnInsurerDtp.Value = latRepo.LATActualDateLATServedOnInsurer;
+                Lat3InsuresResponseReceivedDtp.Value = latRepo.LATInsurersResponseReceived;
+                Lat3DeadLineToServeFileCaseConfSummaryDtp.Value = latRepo.LATDeadlineToServeFileCaseConfSummary;
+                Lat3DeadLineToDeliverProductionsToABCounselDtp.Value = latRepo.LATDeadlineToDeliverProductionstoABCounsel;
+                Lat3DeadLineToReceiveABProductionsDtp.Value = latRepo.LATDeadlineToReceiveABProductions;
+                Lat3DeadLineToFileAffidavitReportsDtp.Value = latRepo.LATDeadlineToFileAffidavitReportsEtc;
+                Lat3DeadLineToReceiveAffidavitReportsDtp.Value = latRepo.LATDeadlineToReceiveAffidavitReportsEtc;
+                Lat3DeadLineToFileHearingSubmissionsDtp.Value = latRepo.LATDeadlineToFileHearingSubmissionsAndOrBriefs;
+                Lat3DeadLineToReceiveInsurerDtp.Value = latRepo.LATDeadlineToReceiveInsurerSubmissions;
+                Lat3DeadLineForReplaySubmissionsDtp.Value = latRepo.LATDeadlineForReplySubmissionsOfTheApplicant;
+
+                TribunalNumberLat3.Text = latRepo.LATTribunalNumber;
+                CaseAdjudicatorLat3.Text = latRepo.LATCaseAdjudicator;
+                AdjusterLat3.Text = latRepo.LATAdjuster;
+                InsurerLat3.Text = latRepo.LATInsurer;
+                InsureCounselLat3.Text = latRepo.LATInsurerCounsel;
+                InsurerFirmLat3.Text = latRepo.LATInsurerFirm;
+                HearingTypeLat3.Text = latRepo.LATHearingType;
+                HearingAdjudicatorLat3.Text = latRepo.LATHearingAdjudicator;
+                AmountSettledLat3.Text = latRepo.LATAmountSettled.ToString();
+                IssuesLat3.Text = latRepo.LATIssue1;
+                Issues2Lat3.Text = latRepo.LATIssue2;
+                Issues3Lat3.Text = latRepo.LATIssue3;
+                Issues4Lat3.Text = latRepo.LATIssue4;
+                Issues5Lat3.Text = latRepo.LATIssue5;
+                Issues6Lat3.Text = latRepo.LATIssue6;
+                Issues7Lat3.Text = latRepo.LATIssue7;
+
+                BtnLat3.Text = "Update";
+                BtnLat3.Click -= BtnSaveLatData_Click;
+                BtnLat3.Click -= BtnUpdateLatData_Click;
+                BtnLat3.Click += BtnUpdateLatData_Click;
+            }
+            else
+            {
+                BtnLat3.Text = "Save";
+                BtnLat3.Click -= BtnUpdateLatData_Click;
+                BtnLat3.Click -= BtnSaveLatData_Click; ;
+                BtnLat3.Click += BtnSaveLatData_Click;
+            }
+
+            if (_latDataRepository.Search(Home.FileManager.File, 4).ToList().Count > 0)
+            {
+                //var latRepo = _latDataRepository.Search(Home.FileManager.File, 3).ToList().Find(t => t.LATNumber == 3);
+                var latRepo = _latDataRepository.List().Single(t => t.FileId == Home.FileManager.File.ID && t.LATNumber == 4);
+                Lat4ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                Lat4LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                Lat4HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                Lat4DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+
+                Lat4DueDateToDiscussPotenctialLatApplDtp.Value = latRepo.LATDueDateToDiscussPotentialLAT;
+                Lat4DateMetWithLawyerReDenialDtp.Value = latRepo.LATDateMetWithLawyerReDenial;
+                Lat4ProposedDateToFileLatDtp.Value = latRepo.LATProposedDateToFileLAT;
+                Lat4ActualDateLatServedOnInsurerDtp.Value = latRepo.LATActualDateLATServedOnInsurer;
+                Lat4InsuresResponseReceivedDtp.Value = latRepo.LATInsurersResponseReceived;
+                Lat4DeadLineToServeFileCaseConfSummaryDtp.Value = latRepo.LATDeadlineToServeFileCaseConfSummary;
+                Lat4DeadLineToDeliverProductionsToABCounselDtp.Value = latRepo.LATDeadlineToDeliverProductionstoABCounsel;
+                Lat4DeadLineToReceiveABProductionsDtp.Value = latRepo.LATDeadlineToReceiveABProductions;
+                Lat4DeadLineToFileAffidavitReportsDtp.Value = latRepo.LATDeadlineToFileAffidavitReportsEtc;
+                Lat4DeadLineToReceiveAffidavitReportsDtp.Value = latRepo.LATDeadlineToReceiveAffidavitReportsEtc;
+                Lat4DeadLineToFileHearingSubmissionsDtp.Value = latRepo.LATDeadlineToFileHearingSubmissionsAndOrBriefs;
+                Lat4DeadLineToReceiveInsurerDtp.Value = latRepo.LATDeadlineToReceiveInsurerSubmissions;
+                Lat4DeadLineForReplaySubmissionsDtp.Value = latRepo.LATDeadlineForReplySubmissionsOfTheApplicant;
+
+                TribunalNumberLat4.Text = latRepo.LATTribunalNumber;
+                CaseAdjudicatorLat4.Text = latRepo.LATCaseAdjudicator;
+                AdjusterLat4.Text = latRepo.LATAdjuster;
+                InsurerLat4.Text = latRepo.LATInsurer;
+                InsurerCounselLat4.Text = latRepo.LATInsurerCounsel;
+                InsurerFirmLat4.Text = latRepo.LATInsurerFirm;
+                HearingTypeLat4.Text = latRepo.LATHearingType;
+                HearingAdjudicatorLat4.Text = latRepo.LATHearingAdjudicator;
+                AmountSettledLat4.Text = latRepo.LATAmountSettled.ToString();
+
+                IssuesLat4.Text = latRepo.LATIssue1;
+                Issues2Lat4.Text = latRepo.LATIssue2;
+                Issues3Lat4.Text = latRepo.LATIssue3;
+                Issues4Lat4.Text = latRepo.LATIssue4;
+                Issues5Lat4.Text = latRepo.LATIssue5;
+                Issues6Lat4.Text = latRepo.LATIssue6;
+                Issues7Lat4.Text = latRepo.LATIssue7;
+
+                BtnLat4.Text = "Update";
+                BtnLat4.Click -= BtnSaveLatData_Click;
+                BtnLat4.Click -= BtnUpdateLatData_Click;
+                BtnLat4.Click += BtnUpdateLatData_Click;
+            }
+            else
+            {
+                BtnLat4.Text = "Save";
+                BtnLat4.Click -= BtnUpdateLatData_Click;
+                BtnLat4.Click -= BtnSaveLatData_Click; ;
+                BtnLat4.Click += BtnSaveLatData_Click;
+            }
+        }
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }
