@@ -18,6 +18,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly ITemplateRepository _templateRepository;
         private readonly ITaskRepository _taskRepository;
         private readonly IFileRepository _fileRepository;
+        private readonly Logic.FileManager _fileManager;
         private readonly ITaskStateRepository _taskStateRepository;
 
         private readonly ArchiveManager _archiveManager;
@@ -28,6 +29,7 @@ namespace RRFFilesManager.IntakeForm
             _templateRepository = Program.GetService<ITemplateRepository>();
             _taskRepository = Program.GetService<ITaskRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
+            _fileManager = new Logic.FileManager();
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
 
             _archiveManager = new ArchiveManager();
@@ -80,6 +82,7 @@ namespace RRFFilesManager.IntakeForm
                 }
                 else if (InvokeCYP.Checked)
                 {
+                    _fileManager.SetCurrentFileStatus(Home.IntakeForm.Intake.File, FileStatusEnum.NotRetained);
                     CreateSendItemCYA();
                     IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, false);
                 }
