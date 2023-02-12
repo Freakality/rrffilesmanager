@@ -197,6 +197,8 @@
             System.Windows.Forms.Label Label93;
             System.Windows.Forms.Label Label92;
             System.Windows.Forms.Label Label91;
+            System.Windows.Forms.Label label272;
+            System.Windows.Forms.Label label279;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -227,14 +229,18 @@
             this.SpecialDamagesDataGridView = new System.Windows.Forms.DataGridView();
             this.ClientNotes = new System.Windows.Forms.TabPage();
             this.ClientNotesDataGridView = new System.Windows.Forms.DataGridView();
+            this.DgColumn_DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SaveNoteButton = new System.Windows.Forms.Button();
             this.AddNotesRowButton = new System.Windows.Forms.Button();
             this.Panel_ControlesDeFiltrado = new System.Windows.Forms.Panel();
+            this.label278 = new System.Windows.Forms.Label();
+            this.ExportToExcelButton = new System.Windows.Forms.Button();
             this.Dtp_To = new System.Windows.Forms.DateTimePicker();
             this.Dtp_From = new System.Windows.Forms.DateTimePicker();
             this.label277 = new System.Windows.Forms.Label();
-            this.label272 = new System.Windows.Forms.Label();
             this.Btn_SearchNotes = new System.Windows.Forms.Button();
             this.Cbb_Staff = new System.Windows.Forms.ComboBox();
             this.label280 = new System.Windows.Forms.Label();
@@ -1033,11 +1039,7 @@
             this.TBoxProposedDateIssueSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
-            this.DgColumn_DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgColumn_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExportToExcelButton = new System.Windows.Forms.Button();
-            this.label278 = new System.Windows.Forms.Label();
+            this.CurrentFileStatusComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
             TBoxActualDateSOCServedLabel = new System.Windows.Forms.Label();
             TBoxPreDiscoveryMeetingDateLabel = new System.Windows.Forms.Label();
@@ -1207,6 +1209,8 @@
             Label93 = new System.Windows.Forms.Label();
             Label92 = new System.Windows.Forms.Label();
             Label91 = new System.Windows.Forms.Label();
+            label272 = new System.Windows.Forms.Label();
+            label279 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGridView)).BeginInit();
             this.GroupBox23.SuspendLayout();
             this.ExpertsLayWitness.SuspendLayout();
@@ -1436,7 +1440,7 @@
             // 
             TBoxDateTrialRecordFiledLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDateTrialRecordFiledLabel.AutoSize = true;
-            TBoxDateTrialRecordFiledLabel.Location = new System.Drawing.Point(621, 223);
+            TBoxDateTrialRecordFiledLabel.Location = new System.Drawing.Point(587, 223);
             TBoxDateTrialRecordFiledLabel.Name = "TBoxDateTrialRecordFiledLabel";
             TBoxDateTrialRecordFiledLabel.Size = new System.Drawing.Size(155, 17);
             TBoxDateTrialRecordFiledLabel.TabIndex = 38;
@@ -1446,7 +1450,7 @@
             // 
             TBoxDateToFileTrialRecordByLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDateToFileTrialRecordByLabel.AutoSize = true;
-            TBoxDateToFileTrialRecordByLabel.Location = new System.Drawing.Point(621, 196);
+            TBoxDateToFileTrialRecordByLabel.Location = new System.Drawing.Point(587, 196);
             TBoxDateToFileTrialRecordByLabel.Name = "TBoxDateToFileTrialRecordByLabel";
             TBoxDateToFileTrialRecordByLabel.Size = new System.Drawing.Size(181, 17);
             TBoxDateToFileTrialRecordByLabel.TabIndex = 44;
@@ -1456,7 +1460,7 @@
             // 
             TBoxDatePlaintiffUndertakingCompleteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDatePlaintiffUndertakingCompleteLabel.AutoSize = true;
-            TBoxDatePlaintiffUndertakingCompleteLabel.Location = new System.Drawing.Point(621, 27);
+            TBoxDatePlaintiffUndertakingCompleteLabel.Location = new System.Drawing.Point(587, 27);
             TBoxDatePlaintiffUndertakingCompleteLabel.Name = "TBoxDatePlaintiffUndertakingCompleteLabel";
             TBoxDatePlaintiffUndertakingCompleteLabel.Size = new System.Drawing.Size(247, 17);
             TBoxDatePlaintiffUndertakingCompleteLabel.TabIndex = 40;
@@ -1466,7 +1470,7 @@
             // 
             TBoxAllDefendantUndertakingRecdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxAllDefendantUndertakingRecdLabel.AutoSize = true;
-            TBoxAllDefendantUndertakingRecdLabel.Location = new System.Drawing.Point(621, 54);
+            TBoxAllDefendantUndertakingRecdLabel.Location = new System.Drawing.Point(587, 54);
             TBoxAllDefendantUndertakingRecdLabel.Name = "TBoxAllDefendantUndertakingRecdLabel";
             TBoxAllDefendantUndertakingRecdLabel.Size = new System.Drawing.Size(219, 17);
             TBoxAllDefendantUndertakingRecdLabel.TabIndex = 42;
@@ -2151,7 +2155,7 @@
             // 
             label273.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label273.AutoSize = true;
-            label273.Location = new System.Drawing.Point(621, 252);
+            label273.Location = new System.Drawing.Point(587, 252);
             label273.Name = "label273";
             label273.Size = new System.Drawing.Size(176, 17);
             label273.TabIndex = 174;
@@ -2161,7 +2165,7 @@
             // 
             label274.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label274.AutoSize = true;
-            label274.Location = new System.Drawing.Point(621, 279);
+            label274.Location = new System.Drawing.Point(587, 279);
             label274.Name = "label274";
             label274.Size = new System.Drawing.Size(180, 17);
             label274.TabIndex = 177;
@@ -2171,7 +2175,7 @@
             // 
             label275.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label275.AutoSize = true;
-            label275.Location = new System.Drawing.Point(621, 307);
+            label275.Location = new System.Drawing.Point(587, 307);
             label275.Name = "label275";
             label275.Size = new System.Drawing.Size(166, 17);
             label275.TabIndex = 180;
@@ -2181,9 +2185,9 @@
             // 
             label112.AutoSize = true;
             label112.Dock = System.Windows.Forms.DockStyle.Fill;
-            label112.Location = new System.Drawing.Point(267, 106);
+            label112.Location = new System.Drawing.Point(267, 112);
             label112.Name = "label112";
-            label112.Size = new System.Drawing.Size(114, 54);
+            label112.Size = new System.Drawing.Size(114, 56);
             label112.TabIndex = 147;
             label112.Text = "Sub-Type Category";
             label112.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2191,7 +2195,7 @@
             // label111
             // 
             label111.AutoSize = true;
-            label111.Location = new System.Drawing.Point(3, 106);
+            label111.Location = new System.Drawing.Point(3, 112);
             label111.Name = "label111";
             label111.Size = new System.Drawing.Size(109, 17);
             label111.TabIndex = 146;
@@ -2204,7 +2208,7 @@
             TBoxFileOpenDateLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             TBoxFileOpenDateLabel1.Location = new System.Drawing.Point(531, 0);
             TBoxFileOpenDateLabel1.Name = "TBoxFileOpenDateLabel1";
-            TBoxFileOpenDateLabel1.Size = new System.Drawing.Size(114, 54);
+            TBoxFileOpenDateLabel1.Size = new System.Drawing.Size(114, 56);
             TBoxFileOpenDateLabel1.TabIndex = 132;
             TBoxFileOpenDateLabel1.Text = "File Open Date";
             TBoxFileOpenDateLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2213,9 +2217,9 @@
             // 
             TBoxFileCloseDateLabel.AutoSize = true;
             TBoxFileCloseDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            TBoxFileCloseDateLabel.Location = new System.Drawing.Point(531, 54);
+            TBoxFileCloseDateLabel.Location = new System.Drawing.Point(531, 56);
             TBoxFileCloseDateLabel.Name = "TBoxFileCloseDateLabel";
-            TBoxFileCloseDateLabel.Size = new System.Drawing.Size(114, 52);
+            TBoxFileCloseDateLabel.Size = new System.Drawing.Size(114, 56);
             TBoxFileCloseDateLabel.TabIndex = 10;
             TBoxFileCloseDateLabel.Text = "File Close Date";
             TBoxFileCloseDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2224,9 +2228,9 @@
             // 
             CBoxMatterTypeLabel.AutoSize = true;
             CBoxMatterTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            CBoxMatterTypeLabel.Location = new System.Drawing.Point(3, 54);
+            CBoxMatterTypeLabel.Location = new System.Drawing.Point(3, 56);
             CBoxMatterTypeLabel.Name = "CBoxMatterTypeLabel";
-            CBoxMatterTypeLabel.Size = new System.Drawing.Size(114, 52);
+            CBoxMatterTypeLabel.Size = new System.Drawing.Size(114, 56);
             CBoxMatterTypeLabel.TabIndex = 46;
             CBoxMatterTypeLabel.Text = "Matter Type";
             CBoxMatterTypeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2235,9 +2239,9 @@
             // 
             TBoxLimDateLabel.AutoSize = true;
             TBoxLimDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            TBoxLimDateLabel.Location = new System.Drawing.Point(531, 106);
+            TBoxLimDateLabel.Location = new System.Drawing.Point(531, 112);
             TBoxLimDateLabel.Name = "TBoxLimDateLabel";
-            TBoxLimDateLabel.Size = new System.Drawing.Size(114, 54);
+            TBoxLimDateLabel.Size = new System.Drawing.Size(114, 56);
             TBoxLimDateLabel.TabIndex = 6;
             TBoxLimDateLabel.Text = "Limitation Date";
             TBoxLimDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2899,6 +2903,27 @@
             Label91.TabIndex = 74;
             Label91.Text = "Due Date To Discuss Potential LATAppl:";
             // 
+            // label272
+            // 
+            label272.AutoSize = true;
+            label272.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label272.ForeColor = System.Drawing.Color.Black;
+            label272.Location = new System.Drawing.Point(5, 26);
+            label272.Name = "label272";
+            label272.Size = new System.Drawing.Size(48, 20);
+            label272.TabIndex = 148;
+            label272.Text = "From:";
+            // 
+            // label279
+            // 
+            label279.AutoSize = true;
+            label279.Location = new System.Drawing.Point(3, 168);
+            label279.Name = "label279";
+            label279.Size = new System.Drawing.Size(46, 17);
+            label279.TabIndex = 149;
+            label279.Text = "Status";
+            label279.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
@@ -2909,7 +2934,7 @@
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
             this.InvoicesDataGridView.Name = "InvoicesDataGridView";
             this.InvoicesDataGridView.RowTemplate.Height = 40;
-            this.InvoicesDataGridView.Size = new System.Drawing.Size(1356, 438);
+            this.InvoicesDataGridView.Size = new System.Drawing.Size(1356, 378);
             this.InvoicesDataGridView.TabIndex = 0;
             // 
             // GroupBox23
@@ -2961,7 +2986,7 @@
             this.MedicalBinderIndexTab.Location = new System.Drawing.Point(4, 26);
             this.MedicalBinderIndexTab.Name = "MedicalBinderIndexTab";
             this.MedicalBinderIndexTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalBinderIndexTab.Size = new System.Drawing.Size(1348, 408);
+            this.MedicalBinderIndexTab.Size = new System.Drawing.Size(1348, 348);
             this.MedicalBinderIndexTab.TabIndex = 1;
             this.MedicalBinderIndexTab.Text = "Medical Binder Index";
             this.MedicalBinderIndexTab.UseVisualStyleBackColor = true;
@@ -2971,7 +2996,7 @@
             this.MedicalSummaries.Location = new System.Drawing.Point(4, 26);
             this.MedicalSummaries.Name = "MedicalSummaries";
             this.MedicalSummaries.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalSummaries.Size = new System.Drawing.Size(1348, 408);
+            this.MedicalSummaries.Size = new System.Drawing.Size(1348, 348);
             this.MedicalSummaries.TabIndex = 2;
             this.MedicalSummaries.Text = "Medical Summaries";
             this.MedicalSummaries.UseVisualStyleBackColor = true;
@@ -2981,7 +3006,7 @@
             this.PrescriptionSummariesTab.Location = new System.Drawing.Point(4, 26);
             this.PrescriptionSummariesTab.Name = "PrescriptionSummariesTab";
             this.PrescriptionSummariesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PrescriptionSummariesTab.Size = new System.Drawing.Size(1348, 408);
+            this.PrescriptionSummariesTab.Size = new System.Drawing.Size(1348, 348);
             this.PrescriptionSummariesTab.TabIndex = 3;
             this.PrescriptionSummariesTab.Text = "Travel Log";
             this.PrescriptionSummariesTab.UseVisualStyleBackColor = true;
@@ -2992,7 +3017,7 @@
             this.ExpertsLayWitness.Controls.Add(this.PLReportsDataGridView);
             this.ExpertsLayWitness.Location = new System.Drawing.Point(4, 26);
             this.ExpertsLayWitness.Name = "ExpertsLayWitness";
-            this.ExpertsLayWitness.Size = new System.Drawing.Size(1362, 444);
+            this.ExpertsLayWitness.Size = new System.Drawing.Size(1362, 384);
             this.ExpertsLayWitness.TabIndex = 10;
             this.ExpertsLayWitness.Text = "Experts-Lay Witness";
             this.ExpertsLayWitness.UseVisualStyleBackColor = true;
@@ -3007,7 +3032,7 @@
             this.PLReportsDataGridView.Location = new System.Drawing.Point(0, 0);
             this.PLReportsDataGridView.Name = "PLReportsDataGridView";
             this.PLReportsDataGridView.RowTemplate.Height = 40;
-            this.PLReportsDataGridView.Size = new System.Drawing.Size(1362, 444);
+            this.PLReportsDataGridView.Size = new System.Drawing.Size(1362, 384);
             this.PLReportsDataGridView.TabIndex = 1;
             // 
             // Invoices
@@ -3016,7 +3041,7 @@
             this.Invoices.Location = new System.Drawing.Point(4, 26);
             this.Invoices.Name = "Invoices";
             this.Invoices.Padding = new System.Windows.Forms.Padding(3);
-            this.Invoices.Size = new System.Drawing.Size(1362, 444);
+            this.Invoices.Size = new System.Drawing.Size(1362, 384);
             this.Invoices.TabIndex = 7;
             this.Invoices.Text = "Invoices";
             this.Invoices.UseVisualStyleBackColor = true;
@@ -3025,7 +3050,7 @@
             // 
             this.PeopleTab.Location = new System.Drawing.Point(4, 26);
             this.PeopleTab.Name = "PeopleTab";
-            this.PeopleTab.Size = new System.Drawing.Size(1362, 444);
+            this.PeopleTab.Size = new System.Drawing.Size(1362, 384);
             this.PeopleTab.TabIndex = 9;
             this.PeopleTab.Text = "People";
             this.PeopleTab.UseVisualStyleBackColor = true;
@@ -3036,7 +3061,7 @@
             this.MedicalInfo.Location = new System.Drawing.Point(4, 26);
             this.MedicalInfo.Name = "MedicalInfo";
             this.MedicalInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalInfo.Size = new System.Drawing.Size(1362, 444);
+            this.MedicalInfo.Size = new System.Drawing.Size(1362, 384);
             this.MedicalInfo.TabIndex = 3;
             this.MedicalInfo.Text = "Medical Info";
             this.MedicalInfo.UseVisualStyleBackColor = true;
@@ -3051,7 +3076,7 @@
             this.TabControl6.Location = new System.Drawing.Point(3, 3);
             this.TabControl6.Name = "TabControl6";
             this.TabControl6.SelectedIndex = 0;
-            this.TabControl6.Size = new System.Drawing.Size(1356, 438);
+            this.TabControl6.Size = new System.Drawing.Size(1356, 378);
             this.TabControl6.TabIndex = 5;
             // 
             // MedicalAppointments
@@ -3061,7 +3086,7 @@
             this.MedicalAppointments.Location = new System.Drawing.Point(4, 26);
             this.MedicalAppointments.Name = "MedicalAppointments";
             this.MedicalAppointments.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalAppointments.Size = new System.Drawing.Size(1348, 408);
+            this.MedicalAppointments.Size = new System.Drawing.Size(1348, 348);
             this.MedicalAppointments.TabIndex = 0;
             this.MedicalAppointments.Text = "Medical Appointments";
             this.MedicalAppointments.UseVisualStyleBackColor = true;
@@ -3077,14 +3102,14 @@
             this.MedApptsDataGridView.Name = "MedApptsDataGridView";
             this.MedApptsDataGridView.RowTemplate.Height = 60;
             this.MedApptsDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MedApptsDataGridView.Size = new System.Drawing.Size(1342, 351);
+            this.MedApptsDataGridView.Size = new System.Drawing.Size(1342, 291);
             this.MedApptsDataGridView.TabIndex = 0;
             // 
             // ProtectedAccounts
             // 
             this.ProtectedAccounts.Location = new System.Drawing.Point(4, 26);
             this.ProtectedAccounts.Name = "ProtectedAccounts";
-            this.ProtectedAccounts.Size = new System.Drawing.Size(1362, 444);
+            this.ProtectedAccounts.Size = new System.Drawing.Size(1362, 384);
             this.ProtectedAccounts.TabIndex = 11;
             this.ProtectedAccounts.Text = "Protected Accounts";
             this.ProtectedAccounts.UseVisualStyleBackColor = true;
@@ -3093,7 +3118,7 @@
             // 
             this.CollateralBenefits.Location = new System.Drawing.Point(4, 26);
             this.CollateralBenefits.Name = "CollateralBenefits";
-            this.CollateralBenefits.Size = new System.Drawing.Size(1362, 444);
+            this.CollateralBenefits.Size = new System.Drawing.Size(1362, 384);
             this.CollateralBenefits.TabIndex = 12;
             this.CollateralBenefits.Text = "Collateral Benefits";
             this.CollateralBenefits.UseVisualStyleBackColor = true;
@@ -3103,7 +3128,7 @@
             this.SpecialDamages.Controls.Add(this.SpecialDamagesDataGridView);
             this.SpecialDamages.Location = new System.Drawing.Point(4, 26);
             this.SpecialDamages.Name = "SpecialDamages";
-            this.SpecialDamages.Size = new System.Drawing.Size(1362, 444);
+            this.SpecialDamages.Size = new System.Drawing.Size(1362, 384);
             this.SpecialDamages.TabIndex = 13;
             this.SpecialDamages.Text = "Special Damages";
             this.SpecialDamages.UseVisualStyleBackColor = true;
@@ -3115,7 +3140,7 @@
             this.SpecialDamagesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SpecialDamagesDataGridView.Location = new System.Drawing.Point(0, 0);
             this.SpecialDamagesDataGridView.Name = "SpecialDamagesDataGridView";
-            this.SpecialDamagesDataGridView.Size = new System.Drawing.Size(1362, 444);
+            this.SpecialDamagesDataGridView.Size = new System.Drawing.Size(1362, 384);
             this.SpecialDamagesDataGridView.TabIndex = 0;
             // 
             // ClientNotes
@@ -3126,7 +3151,7 @@
             this.ClientNotes.Location = new System.Drawing.Point(4, 26);
             this.ClientNotes.Name = "ClientNotes";
             this.ClientNotes.Padding = new System.Windows.Forms.Padding(3);
-            this.ClientNotes.Size = new System.Drawing.Size(1362, 444);
+            this.ClientNotes.Size = new System.Drawing.Size(1362, 384);
             this.ClientNotes.TabIndex = 8;
             this.ClientNotes.Text = "Client Notes";
             this.ClientNotes.UseVisualStyleBackColor = true;
@@ -3149,8 +3174,31 @@
             this.ClientNotesDataGridView.MultiSelect = false;
             this.ClientNotesDataGridView.Name = "ClientNotesDataGridView";
             this.ClientNotesDataGridView.RowHeadersVisible = false;
-            this.ClientNotesDataGridView.Size = new System.Drawing.Size(995, 393);
+            this.ClientNotesDataGridView.Size = new System.Drawing.Size(995, 333);
             this.ClientNotesDataGridView.TabIndex = 3;
+            // 
+            // DgColumn_DateTime
+            // 
+            this.DgColumn_DateTime.DataPropertyName = "Date";
+            this.DgColumn_DateTime.FillWeight = 35F;
+            this.DgColumn_DateTime.HeaderText = "DateTime";
+            this.DgColumn_DateTime.Name = "DgColumn_DateTime";
+            this.DgColumn_DateTime.ReadOnly = true;
+            // 
+            // DgColumn_Staff
+            // 
+            this.DgColumn_Staff.DataPropertyName = "Lawyer";
+            this.DgColumn_Staff.FillWeight = 35F;
+            this.DgColumn_Staff.HeaderText = "Staff";
+            this.DgColumn_Staff.Name = "DgColumn_Staff";
+            this.DgColumn_Staff.ReadOnly = true;
+            // 
+            // DgColumn_Description
+            // 
+            this.DgColumn_Description.DataPropertyName = "Description";
+            this.DgColumn_Description.HeaderText = "Description";
+            this.DgColumn_Description.Name = "DgColumn_Description";
+            this.DgColumn_Description.ReadOnly = true;
             // 
             // panel6
             // 
@@ -3159,7 +3207,7 @@
             this.panel6.Controls.Add(this.SaveNoteButton);
             this.panel6.Controls.Add(this.AddNotesRowButton);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(364, 396);
+            this.panel6.Location = new System.Drawing.Point(364, 336);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(995, 45);
             this.panel6.TabIndex = 2;
@@ -3203,15 +3251,42 @@
             this.Panel_ControlesDeFiltrado.Controls.Add(this.Dtp_To);
             this.Panel_ControlesDeFiltrado.Controls.Add(this.Dtp_From);
             this.Panel_ControlesDeFiltrado.Controls.Add(this.label277);
-            this.Panel_ControlesDeFiltrado.Controls.Add(this.label272);
+            this.Panel_ControlesDeFiltrado.Controls.Add(label272);
             this.Panel_ControlesDeFiltrado.Controls.Add(this.Btn_SearchNotes);
             this.Panel_ControlesDeFiltrado.Controls.Add(this.Cbb_Staff);
             this.Panel_ControlesDeFiltrado.Controls.Add(this.label280);
             this.Panel_ControlesDeFiltrado.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_ControlesDeFiltrado.Location = new System.Drawing.Point(3, 3);
             this.Panel_ControlesDeFiltrado.Name = "Panel_ControlesDeFiltrado";
-            this.Panel_ControlesDeFiltrado.Size = new System.Drawing.Size(361, 438);
+            this.Panel_ControlesDeFiltrado.Size = new System.Drawing.Size(361, 378);
             this.Panel_ControlesDeFiltrado.TabIndex = 1;
+            // 
+            // label278
+            // 
+            this.label278.AutoSize = true;
+            this.label278.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label278.ForeColor = System.Drawing.Color.Black;
+            this.label278.Location = new System.Drawing.Point(5, 73);
+            this.label278.Name = "label278";
+            this.label278.Size = new System.Drawing.Size(101, 19);
+            this.label278.TabIndex = 153;
+            this.label278.Text = "Filter By Staff";
+            // 
+            // ExportToExcelButton
+            // 
+            this.ExportToExcelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExportToExcelButton.BackColor = System.Drawing.Color.Maroon;
+            this.ExportToExcelButton.Enabled = false;
+            this.ExportToExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExportToExcelButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExportToExcelButton.ForeColor = System.Drawing.Color.White;
+            this.ExportToExcelButton.Location = new System.Drawing.Point(184, 333);
+            this.ExportToExcelButton.Name = "ExportToExcelButton";
+            this.ExportToExcelButton.Size = new System.Drawing.Size(152, 37);
+            this.ExportToExcelButton.TabIndex = 152;
+            this.ExportToExcelButton.Text = "Export";
+            this.ExportToExcelButton.UseVisualStyleBackColor = false;
+            this.ExportToExcelButton.Click += new System.EventHandler(this.ExportToExcelButton_Click);
             // 
             // Dtp_To
             // 
@@ -3242,17 +3317,6 @@
             this.label277.TabIndex = 149;
             this.label277.Text = "To:";
             // 
-            // label272
-            // 
-            this.label272.AutoSize = true;
-            this.label272.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label272.ForeColor = System.Drawing.Color.Black;
-            this.label272.Location = new System.Drawing.Point(5, 26);
-            this.label272.Name = "label272";
-            this.label272.Size = new System.Drawing.Size(48, 20);
-            this.label272.TabIndex = 148;
-            this.label272.Text = "From:";
-            // 
             // Btn_SearchNotes
             // 
             this.Btn_SearchNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -3261,7 +3325,7 @@
             this.Btn_SearchNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_SearchNotes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_SearchNotes.ForeColor = System.Drawing.Color.White;
-            this.Btn_SearchNotes.Location = new System.Drawing.Point(15, 393);
+            this.Btn_SearchNotes.Location = new System.Drawing.Point(15, 333);
             this.Btn_SearchNotes.Name = "Btn_SearchNotes";
             this.Btn_SearchNotes.Size = new System.Drawing.Size(152, 37);
             this.Btn_SearchNotes.TabIndex = 147;
@@ -3318,7 +3382,7 @@
             this.TaskLog.Location = new System.Drawing.Point(4, 26);
             this.TaskLog.Name = "TaskLog";
             this.TaskLog.Padding = new System.Windows.Forms.Padding(3);
-            this.TaskLog.Size = new System.Drawing.Size(1362, 444);
+            this.TaskLog.Size = new System.Drawing.Size(1362, 384);
             this.TaskLog.TabIndex = 2;
             this.TaskLog.Text = "Task Log";
             this.TaskLog.UseVisualStyleBackColor = true;
@@ -3338,7 +3402,7 @@
             this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.ActionLogDataGridView.RowTemplate.Height = 60;
             this.ActionLogDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActionLogDataGridView.Size = new System.Drawing.Size(1356, 376);
+            this.ActionLogDataGridView.Size = new System.Drawing.Size(1356, 316);
             this.ActionLogDataGridView.TabIndex = 1;
             // 
             // GroupBox22
@@ -3382,16 +3446,13 @@
             this.Action.Location = new System.Drawing.Point(4, 26);
             this.Action.Name = "Action";
             this.Action.Padding = new System.Windows.Forms.Padding(3);
-            this.Action.Size = new System.Drawing.Size(1362, 444);
+            this.Action.Size = new System.Drawing.Size(1362, 384);
             this.Action.TabIndex = 1;
             this.Action.Text = "Action";
             this.Action.UseVisualStyleBackColor = true;
             // 
             // TabControl2
             // 
-            this.TabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl2.Controls.Add(this.Timeline);
             this.TabControl2.Controls.Add(this.Liability);
             this.TabControl2.Controls.Add(this.EmploymentEconomicLoss);
@@ -3404,10 +3465,11 @@
             this.TabControl2.Controls.Add(this.CPP);
             this.TabControl2.Controls.Add(this.PostResolution);
             this.TabControl2.Controls.Add(this.tabPage2);
+            this.TabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl2.Location = new System.Drawing.Point(3, 3);
             this.TabControl2.Name = "TabControl2";
             this.TabControl2.SelectedIndex = 0;
-            this.TabControl2.Size = new System.Drawing.Size(1356, 438);
+            this.TabControl2.Size = new System.Drawing.Size(1356, 378);
             this.TabControl2.TabIndex = 172;
             // 
             // Timeline
@@ -3483,7 +3545,7 @@
             this.Timeline.Location = new System.Drawing.Point(4, 26);
             this.Timeline.Name = "Timeline";
             this.Timeline.Padding = new System.Windows.Forms.Padding(3);
-            this.Timeline.Size = new System.Drawing.Size(1348, 408);
+            this.Timeline.Size = new System.Drawing.Size(1348, 348);
             this.Timeline.TabIndex = 0;
             this.Timeline.Text = "Timeline";
             // 
@@ -3491,7 +3553,7 @@
             // 
             this.txtTrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtTrialDate.Location = new System.Drawing.Point(906, 331);
+            this.txtTrialDate.Location = new System.Drawing.Point(872, 331);
             this.txtTrialDate.Name = "txtTrialDate";
             this.txtTrialDate.ReadOnly = true;
             this.txtTrialDate.Size = new System.Drawing.Size(198, 23);
@@ -3502,7 +3564,7 @@
             this.label276.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label276.AutoSize = true;
             this.label276.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label276.Location = new System.Drawing.Point(619, 334);
+            this.label276.Location = new System.Drawing.Point(585, 334);
             this.label276.Name = "label276";
             this.label276.Size = new System.Drawing.Size(70, 16);
             this.label276.TabIndex = 183;
@@ -3512,7 +3574,7 @@
             // 
             this.txtPreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(906, 303);
+            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(872, 303);
             this.txtPreTrialResolutionDate.Name = "txtPreTrialResolutionDate";
             this.txtPreTrialResolutionDate.ReadOnly = true;
             this.txtPreTrialResolutionDate.Size = new System.Drawing.Size(198, 23);
@@ -3521,7 +3583,7 @@
             // txtPreTrialToBeServedDate
             // 
             this.txtPreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(907, 275);
+            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(873, 275);
             this.txtPreTrialToBeServedDate.Name = "txtPreTrialToBeServedDate";
             this.txtPreTrialToBeServedDate.ReadOnly = true;
             this.txtPreTrialToBeServedDate.Size = new System.Drawing.Size(200, 23);
@@ -3531,7 +3593,7 @@
             // 
             this.TxtPrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(907, 247);
+            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(873, 247);
             this.TxtPrePreTrialMeetingDate.Name = "TxtPrePreTrialMeetingDate";
             this.TxtPrePreTrialMeetingDate.ReadOnly = true;
             this.TxtPrePreTrialMeetingDate.Size = new System.Drawing.Size(198, 23);
@@ -3541,7 +3603,7 @@
             // 
             this.txtResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtResolutionDate.Location = new System.Drawing.Point(908, 146);
+            this.txtResolutionDate.Location = new System.Drawing.Point(874, 146);
             this.txtResolutionDate.Name = "txtResolutionDate";
             this.txtResolutionDate.ReadOnly = true;
             this.txtResolutionDate.Size = new System.Drawing.Size(196, 23);
@@ -3550,7 +3612,7 @@
             // TxtMemoToBeServedDate
             // 
             this.TxtMemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(907, 96);
+            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(873, 96);
             this.TxtMemoToBeServedDate.Name = "TxtMemoToBeServedDate";
             this.TxtMemoToBeServedDate.ReadOnly = true;
             this.TxtMemoToBeServedDate.Size = new System.Drawing.Size(200, 23);
@@ -3561,7 +3623,7 @@
             this.label271.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label271.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label271.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label271.Location = new System.Drawing.Point(624, 85);
+            this.label271.Location = new System.Drawing.Point(590, 85);
             this.label271.Name = "label271";
             this.label271.Size = new System.Drawing.Size(501, 45);
             this.label271.TabIndex = 168;
@@ -3576,7 +3638,7 @@
             this.TimelineSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TimelineSaveBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimelineSaveBtn.ForeColor = System.Drawing.Color.White;
-            this.TimelineSaveBtn.Location = new System.Drawing.Point(1167, 301);
+            this.TimelineSaveBtn.Location = new System.Drawing.Point(1133, 278);
             this.TimelineSaveBtn.Name = "TimelineSaveBtn";
             this.TimelineSaveBtn.Size = new System.Drawing.Size(175, 37);
             this.TimelineSaveBtn.TabIndex = 167;
@@ -3688,7 +3750,7 @@
             // TBoxDateToFileTrialRecordByTextBox
             // 
             this.TBoxDateToFileTrialRecordByTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateToFileTrialRecordByTextBox.Location = new System.Drawing.Point(908, 193);
+            this.TBoxDateToFileTrialRecordByTextBox.Location = new System.Drawing.Point(874, 193);
             this.TBoxDateToFileTrialRecordByTextBox.Name = "TBoxDateToFileTrialRecordByTextBox";
             this.TBoxDateToFileTrialRecordByTextBox.ReadOnly = true;
             this.TBoxDateToFileTrialRecordByTextBox.Size = new System.Drawing.Size(199, 23);
@@ -3697,7 +3759,7 @@
             // TBoxDateTrialRecordFiledTextBox
             // 
             this.TBoxDateTrialRecordFiledTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateTrialRecordFiledTextBox.Location = new System.Drawing.Point(908, 220);
+            this.TBoxDateTrialRecordFiledTextBox.Location = new System.Drawing.Point(874, 220);
             this.TBoxDateTrialRecordFiledTextBox.Name = "TBoxDateTrialRecordFiledTextBox";
             this.TBoxDateTrialRecordFiledTextBox.ReadOnly = true;
             this.TBoxDateTrialRecordFiledTextBox.Size = new System.Drawing.Size(200, 23);
@@ -3706,7 +3768,7 @@
             // TBoxAllDefendantUndertakingRecdTextBox
             // 
             this.TBoxAllDefendantUndertakingRecdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxAllDefendantUndertakingRecdTextBox.Location = new System.Drawing.Point(908, 51);
+            this.TBoxAllDefendantUndertakingRecdTextBox.Location = new System.Drawing.Point(874, 51);
             this.TBoxAllDefendantUndertakingRecdTextBox.Name = "TBoxAllDefendantUndertakingRecdTextBox";
             this.TBoxAllDefendantUndertakingRecdTextBox.ReadOnly = true;
             this.TBoxAllDefendantUndertakingRecdTextBox.Size = new System.Drawing.Size(200, 23);
@@ -3715,7 +3777,7 @@
             // TBoxDatePlaintiffUndertakingCompleteTextBox
             // 
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDatePlaintiffUndertakingCompleteTextBox.Location = new System.Drawing.Point(908, 24);
+            this.TBoxDatePlaintiffUndertakingCompleteTextBox.Location = new System.Drawing.Point(874, 24);
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Name = "TBoxDatePlaintiffUndertakingCompleteTextBox";
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.ReadOnly = true;
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Size = new System.Drawing.Size(200, 23);
@@ -3726,7 +3788,7 @@
             this.Liability.Location = new System.Drawing.Point(4, 26);
             this.Liability.Name = "Liability";
             this.Liability.Padding = new System.Windows.Forms.Padding(3);
-            this.Liability.Size = new System.Drawing.Size(1348, 408);
+            this.Liability.Size = new System.Drawing.Size(1348, 348);
             this.Liability.TabIndex = 5;
             this.Liability.Text = "Liability";
             this.Liability.UseVisualStyleBackColor = true;
@@ -3736,7 +3798,7 @@
             this.EmploymentEconomicLoss.Location = new System.Drawing.Point(4, 26);
             this.EmploymentEconomicLoss.Name = "EmploymentEconomicLoss";
             this.EmploymentEconomicLoss.Padding = new System.Windows.Forms.Padding(3);
-            this.EmploymentEconomicLoss.Size = new System.Drawing.Size(1348, 408);
+            this.EmploymentEconomicLoss.Size = new System.Drawing.Size(1348, 348);
             this.EmploymentEconomicLoss.TabIndex = 6;
             this.EmploymentEconomicLoss.Text = "Employment / Economic Loss";
             this.EmploymentEconomicLoss.UseVisualStyleBackColor = true;
@@ -3745,7 +3807,7 @@
             // 
             this.Pleadings.Location = new System.Drawing.Point(4, 26);
             this.Pleadings.Name = "Pleadings";
-            this.Pleadings.Size = new System.Drawing.Size(1348, 408);
+            this.Pleadings.Size = new System.Drawing.Size(1348, 348);
             this.Pleadings.TabIndex = 7;
             this.Pleadings.Text = "Pleadings";
             this.Pleadings.UseVisualStyleBackColor = true;
@@ -3754,7 +3816,7 @@
             // 
             this.Discoveries.Location = new System.Drawing.Point(4, 26);
             this.Discoveries.Name = "Discoveries";
-            this.Discoveries.Size = new System.Drawing.Size(1348, 408);
+            this.Discoveries.Size = new System.Drawing.Size(1348, 348);
             this.Discoveries.TabIndex = 8;
             this.Discoveries.Text = "Discoveries";
             this.Discoveries.UseVisualStyleBackColor = true;
@@ -3764,7 +3826,7 @@
             this.Undertakings.Controls.Add(this.UndertakingsDataGridView);
             this.Undertakings.Location = new System.Drawing.Point(4, 26);
             this.Undertakings.Name = "Undertakings";
-            this.Undertakings.Size = new System.Drawing.Size(1348, 408);
+            this.Undertakings.Size = new System.Drawing.Size(1348, 348);
             this.Undertakings.TabIndex = 9;
             this.Undertakings.Text = "Undertakings / Refusals";
             this.Undertakings.UseVisualStyleBackColor = true;
@@ -3779,7 +3841,7 @@
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(0, 0);
             this.UndertakingsDataGridView.Name = "UndertakingsDataGridView";
             this.UndertakingsDataGridView.RowTemplate.Height = 40;
-            this.UndertakingsDataGridView.Size = new System.Drawing.Size(1348, 408);
+            this.UndertakingsDataGridView.Size = new System.Drawing.Size(1348, 352);
             this.UndertakingsDataGridView.TabIndex = 1;
             // 
             // Settlement
@@ -3789,7 +3851,7 @@
             this.Settlement.Location = new System.Drawing.Point(4, 26);
             this.Settlement.Name = "Settlement";
             this.Settlement.Padding = new System.Windows.Forms.Padding(3);
-            this.Settlement.Size = new System.Drawing.Size(1348, 408);
+            this.Settlement.Size = new System.Drawing.Size(1348, 348);
             this.Settlement.TabIndex = 1;
             this.Settlement.Text = "Settlement/Mediation Resolution";
             // 
@@ -4321,7 +4383,7 @@
             this.PreTrialResolution.Location = new System.Drawing.Point(4, 26);
             this.PreTrialResolution.Name = "PreTrialResolution";
             this.PreTrialResolution.Padding = new System.Windows.Forms.Padding(3);
-            this.PreTrialResolution.Size = new System.Drawing.Size(1348, 408);
+            this.PreTrialResolution.Size = new System.Drawing.Size(1348, 348);
             this.PreTrialResolution.TabIndex = 2;
             this.PreTrialResolution.Text = "Pre-Trial Resolution";
             // 
@@ -4562,7 +4624,7 @@
             // 
             this.Trial.Location = new System.Drawing.Point(4, 26);
             this.Trial.Name = "Trial";
-            this.Trial.Size = new System.Drawing.Size(1348, 408);
+            this.Trial.Size = new System.Drawing.Size(1348, 348);
             this.Trial.TabIndex = 10;
             this.Trial.Text = "Trial";
             this.Trial.UseVisualStyleBackColor = true;
@@ -4571,7 +4633,7 @@
             // 
             this.CPP.Location = new System.Drawing.Point(4, 26);
             this.CPP.Name = "CPP";
-            this.CPP.Size = new System.Drawing.Size(1348, 408);
+            this.CPP.Size = new System.Drawing.Size(1348, 348);
             this.CPP.TabIndex = 11;
             this.CPP.Text = "CPP";
             this.CPP.UseVisualStyleBackColor = true;
@@ -4587,7 +4649,7 @@
             this.PostResolution.Location = new System.Drawing.Point(4, 26);
             this.PostResolution.Name = "PostResolution";
             this.PostResolution.Padding = new System.Windows.Forms.Padding(3);
-            this.PostResolution.Size = new System.Drawing.Size(1348, 408);
+            this.PostResolution.Size = new System.Drawing.Size(1348, 348);
             this.PostResolution.TabIndex = 3;
             this.PostResolution.Text = "Post Resolution";
             // 
@@ -4825,7 +4887,7 @@
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1348, 408);
+            this.tabPage2.Size = new System.Drawing.Size(1348, 348);
             this.tabPage2.TabIndex = 12;
             this.tabPage2.Text = "All Action Deadlines";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -4845,10 +4907,10 @@
             this.TabControl1.Controls.Add(this.ClientNotes);
             this.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabControl1.Location = new System.Drawing.Point(0, 275);
+            this.TabControl1.Location = new System.Drawing.Point(0, 335);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
-            this.TabControl1.Size = new System.Drawing.Size(1370, 474);
+            this.TabControl1.Size = new System.Drawing.Size(1370, 414);
             this.TabControl1.TabIndex = 138;
             // 
             // ABDenials
@@ -4857,7 +4919,7 @@
             this.ABDenials.Location = new System.Drawing.Point(4, 26);
             this.ABDenials.Name = "ABDenials";
             this.ABDenials.Padding = new System.Windows.Forms.Padding(3);
-            this.ABDenials.Size = new System.Drawing.Size(1362, 444);
+            this.ABDenials.Size = new System.Drawing.Size(1362, 384);
             this.ABDenials.TabIndex = 5;
             this.ABDenials.Text = "Accident Benefits ";
             this.ABDenials.UseVisualStyleBackColor = true;
@@ -4923,7 +4985,7 @@
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(1231, 362);
+            this.Btn_Save.Location = new System.Drawing.Point(1231, 370);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -5826,7 +5888,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1204, 360);
+            this.btnSave.Location = new System.Drawing.Point(1204, 368);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6180,7 +6242,7 @@
             this.ABDenialsDataGridView.Location = new System.Drawing.Point(3, 66);
             this.ABDenialsDataGridView.Name = "ABDenialsDataGridView";
             this.ABDenialsDataGridView.RowTemplate.Height = 40;
-            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1342, 339);
+            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1342, 343);
             this.ABDenialsDataGridView.TabIndex = 0;
             // 
             // NameofBenefit
@@ -6347,7 +6409,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 43);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1342, 362);
+            this.panel5.Size = new System.Drawing.Size(1342, 366);
             this.panel5.TabIndex = 59;
             // 
             // TabControl4
@@ -6361,7 +6423,7 @@
             this.TabControl4.Location = new System.Drawing.Point(0, 0);
             this.TabControl4.Name = "TabControl4";
             this.TabControl4.SelectedIndex = 0;
-            this.TabControl4.Size = new System.Drawing.Size(1342, 362);
+            this.TabControl4.Size = new System.Drawing.Size(1342, 366);
             this.TabControl4.TabIndex = 1;
             // 
             // Summary
@@ -6374,7 +6436,7 @@
             this.Summary.Location = new System.Drawing.Point(4, 26);
             this.Summary.Name = "Summary";
             this.Summary.Padding = new System.Windows.Forms.Padding(3);
-            this.Summary.Size = new System.Drawing.Size(1334, 332);
+            this.Summary.Size = new System.Drawing.Size(1334, 336);
             this.Summary.TabIndex = 4;
             this.Summary.Text = "Summary";
             this.Summary.UseVisualStyleBackColor = true;
@@ -10520,7 +10582,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 87);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1370, 188);
+            this.panel3.Size = new System.Drawing.Size(1370, 248);
             this.panel3.TabIndex = 141;
             // 
             // GroupBox1
@@ -10530,7 +10592,7 @@
             this.GroupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(1370, 188);
+            this.GroupBox1.Size = new System.Drawing.Size(1370, 248);
             this.GroupBox1.TabIndex = 140;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Info";
@@ -10578,14 +10640,17 @@
             this.tableLayoutPanel18.Controls.Add(this.LimDateTextBox, 5, 2);
             this.tableLayoutPanel18.Controls.Add(TBoxLimDateLabel, 4, 2);
             this.tableLayoutPanel18.Controls.Add(this.SubTypeCategoryComboBox, 3, 2);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel18.Controls.Add(this.CurrentFileStatusComboBox, 1, 3);
+            this.tableLayoutPanel18.Controls.Add(label279, 0, 3);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 3;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.73494F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.53012F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1364, 160);
+            this.tableLayoutPanel18.RowCount = 4;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1364, 226);
             this.tableLayoutPanel18.TabIndex = 144;
             // 
             // ClientNameTextBox
@@ -10603,7 +10668,7 @@
             this.Label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Label2.Location = new System.Drawing.Point(3, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(114, 54);
+            this.Label2.Size = new System.Drawing.Size(114, 56);
             this.Label2.TabIndex = 6;
             this.Label2.Text = "Client Name";
             this.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10612,7 +10677,7 @@
             // 
             this.ProjectedABSettlementValueTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedABSettlementValueTextBox.Enabled = false;
-            this.ProjectedABSettlementValueTextBox.Location = new System.Drawing.Point(1219, 109);
+            this.ProjectedABSettlementValueTextBox.Location = new System.Drawing.Point(1219, 115);
             this.ProjectedABSettlementValueTextBox.Name = "ProjectedABSettlementValueTextBox";
             this.ProjectedABSettlementValueTextBox.Size = new System.Drawing.Size(142, 23);
             this.ProjectedABSettlementValueTextBox.TabIndex = 141;
@@ -10620,9 +10685,9 @@
             // ProjectedABSettlementValueLabel
             // 
             this.ProjectedABSettlementValueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectedABSettlementValueLabel.Location = new System.Drawing.Point(1079, 106);
+            this.ProjectedABSettlementValueLabel.Location = new System.Drawing.Point(1079, 112);
             this.ProjectedABSettlementValueLabel.Name = "ProjectedABSettlementValueLabel";
-            this.ProjectedABSettlementValueLabel.Size = new System.Drawing.Size(134, 54);
+            this.ProjectedABSettlementValueLabel.Size = new System.Drawing.Size(134, 56);
             this.ProjectedABSettlementValueLabel.TabIndex = 140;
             this.ProjectedABSettlementValueLabel.Text = "Projected AB Settlement Value";
             this.ProjectedABSettlementValueLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10631,7 +10696,7 @@
             // 
             this.ProjectedSettlementValueTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedSettlementValueTextBox.Enabled = false;
-            this.ProjectedSettlementValueTextBox.Location = new System.Drawing.Point(935, 109);
+            this.ProjectedSettlementValueTextBox.Location = new System.Drawing.Point(935, 115);
             this.ProjectedSettlementValueTextBox.Name = "ProjectedSettlementValueTextBox";
             this.ProjectedSettlementValueTextBox.Size = new System.Drawing.Size(138, 23);
             this.ProjectedSettlementValueTextBox.TabIndex = 137;
@@ -10639,9 +10704,9 @@
             // ProjectedSettlementValueLabel
             // 
             this.ProjectedSettlementValueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectedSettlementValueLabel.Location = new System.Drawing.Point(795, 106);
+            this.ProjectedSettlementValueLabel.Location = new System.Drawing.Point(795, 112);
             this.ProjectedSettlementValueLabel.Name = "ProjectedSettlementValueLabel";
-            this.ProjectedSettlementValueLabel.Size = new System.Drawing.Size(134, 54);
+            this.ProjectedSettlementValueLabel.Size = new System.Drawing.Size(134, 56);
             this.ProjectedSettlementValueLabel.TabIndex = 136;
             this.ProjectedSettlementValueLabel.Text = "Projected Tort/Contract Settlement Value";
             this.ProjectedSettlementValueLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10650,7 +10715,7 @@
             // 
             this.ProjectedABSettlementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedABSettlementDateTextBox.Enabled = false;
-            this.ProjectedABSettlementDateTextBox.Location = new System.Drawing.Point(1219, 57);
+            this.ProjectedABSettlementDateTextBox.Location = new System.Drawing.Point(1219, 59);
             this.ProjectedABSettlementDateTextBox.Name = "ProjectedABSettlementDateTextBox";
             this.ProjectedABSettlementDateTextBox.Size = new System.Drawing.Size(142, 23);
             this.ProjectedABSettlementDateTextBox.TabIndex = 139;
@@ -10659,9 +10724,9 @@
             // ProjectedABSettlementDateLabel
             // 
             this.ProjectedABSettlementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectedABSettlementDateLabel.Location = new System.Drawing.Point(1079, 54);
+            this.ProjectedABSettlementDateLabel.Location = new System.Drawing.Point(1079, 56);
             this.ProjectedABSettlementDateLabel.Name = "ProjectedABSettlementDateLabel";
-            this.ProjectedABSettlementDateLabel.Size = new System.Drawing.Size(134, 52);
+            this.ProjectedABSettlementDateLabel.Size = new System.Drawing.Size(134, 56);
             this.ProjectedABSettlementDateLabel.TabIndex = 138;
             this.ProjectedABSettlementDateLabel.Text = "Projected AB Settlement Date";
             this.ProjectedABSettlementDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10689,7 +10754,7 @@
             // 
             this.ProjectedSettlementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectedSettlementDateTextBox.Enabled = false;
-            this.ProjectedSettlementDateTextBox.Location = new System.Drawing.Point(935, 57);
+            this.ProjectedSettlementDateTextBox.Location = new System.Drawing.Point(935, 59);
             this.ProjectedSettlementDateTextBox.Name = "ProjectedSettlementDateTextBox";
             this.ProjectedSettlementDateTextBox.Size = new System.Drawing.Size(138, 23);
             this.ProjectedSettlementDateTextBox.TabIndex = 131;
@@ -10697,9 +10762,9 @@
             // ProjectedSettlementDateLabel
             // 
             this.ProjectedSettlementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProjectedSettlementDateLabel.Location = new System.Drawing.Point(795, 54);
+            this.ProjectedSettlementDateLabel.Location = new System.Drawing.Point(795, 56);
             this.ProjectedSettlementDateLabel.Name = "ProjectedSettlementDateLabel";
-            this.ProjectedSettlementDateLabel.Size = new System.Drawing.Size(134, 52);
+            this.ProjectedSettlementDateLabel.Size = new System.Drawing.Size(134, 56);
             this.ProjectedSettlementDateLabel.TabIndex = 130;
             this.ProjectedSettlementDateLabel.Text = "Projected Tort/Contract Settlement Date";
             this.ProjectedSettlementDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10709,7 +10774,7 @@
             this.NextLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NextLabel.Location = new System.Drawing.Point(795, 0);
             this.NextLabel.Name = "NextLabel";
-            this.NextLabel.Size = new System.Drawing.Size(134, 54);
+            this.NextLabel.Size = new System.Drawing.Size(134, 56);
             this.NextLabel.TabIndex = 8;
             this.NextLabel.Text = "Next Tort/Contract Review Date";
             this.NextLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10720,7 +10785,7 @@
             this.NextReviewDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NextReviewDateLabel.Location = new System.Drawing.Point(1079, 0);
             this.NextReviewDateLabel.Name = "NextReviewDateLabel";
-            this.NextReviewDateLabel.Size = new System.Drawing.Size(134, 54);
+            this.NextReviewDateLabel.Size = new System.Drawing.Size(134, 56);
             this.NextReviewDateLabel.TabIndex = 48;
             this.NextReviewDateLabel.Text = "Next AB Review Date";
             this.NextReviewDateLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10738,7 +10803,7 @@
             // 
             this.FileCloseDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileCloseDateTextBox.Enabled = false;
-            this.FileCloseDateTextBox.Location = new System.Drawing.Point(651, 57);
+            this.FileCloseDateTextBox.Location = new System.Drawing.Point(651, 59);
             this.FileCloseDateTextBox.Name = "FileCloseDateTextBox";
             this.FileCloseDateTextBox.Size = new System.Drawing.Size(138, 23);
             this.FileCloseDateTextBox.TabIndex = 11;
@@ -10746,7 +10811,7 @@
             // MatterTypeTextBox
             // 
             this.MatterTypeTextBox.Enabled = false;
-            this.MatterTypeTextBox.Location = new System.Drawing.Point(123, 57);
+            this.MatterTypeTextBox.Location = new System.Drawing.Point(123, 59);
             this.MatterTypeTextBox.Name = "MatterTypeTextBox";
             this.MatterTypeTextBox.Size = new System.Drawing.Size(130, 23);
             this.MatterTypeTextBox.TabIndex = 47;
@@ -10755,7 +10820,7 @@
             // 
             this.DateOfLossTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DateOfLossTextBox.Enabled = false;
-            this.DateOfLossTextBox.Location = new System.Drawing.Point(387, 57);
+            this.DateOfLossTextBox.Location = new System.Drawing.Point(387, 59);
             this.DateOfLossTextBox.Name = "DateOfLossTextBox";
             this.DateOfLossTextBox.Size = new System.Drawing.Size(138, 23);
             this.DateOfLossTextBox.TabIndex = 13;
@@ -10764,9 +10829,9 @@
             // 
             this.DateOfLossLabel.AutoSize = true;
             this.DateOfLossLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DateOfLossLabel.Location = new System.Drawing.Point(267, 54);
+            this.DateOfLossLabel.Location = new System.Drawing.Point(267, 56);
             this.DateOfLossLabel.Name = "DateOfLossLabel";
-            this.DateOfLossLabel.Size = new System.Drawing.Size(114, 52);
+            this.DateOfLossLabel.Size = new System.Drawing.Size(114, 56);
             this.DateOfLossLabel.TabIndex = 12;
             this.DateOfLossLabel.Text = "Date Of Loss";
             this.DateOfLossLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10786,7 +10851,7 @@
             this.Label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Label1.Location = new System.Drawing.Point(267, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(114, 54);
+            this.Label1.Size = new System.Drawing.Size(114, 56);
             this.Label1.TabIndex = 5;
             this.Label1.Text = "File Number";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -10795,7 +10860,7 @@
             // 
             this.MatterSubTypeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MatterSubTypeTextBox.Enabled = false;
-            this.MatterSubTypeTextBox.Location = new System.Drawing.Point(123, 109);
+            this.MatterSubTypeTextBox.Location = new System.Drawing.Point(123, 115);
             this.MatterSubTypeTextBox.Name = "MatterSubTypeTextBox";
             this.MatterSubTypeTextBox.Size = new System.Drawing.Size(138, 23);
             this.MatterSubTypeTextBox.TabIndex = 147;
@@ -10804,7 +10869,7 @@
             // 
             this.LimDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LimDateTextBox.Enabled = false;
-            this.LimDateTextBox.Location = new System.Drawing.Point(651, 109);
+            this.LimDateTextBox.Location = new System.Drawing.Point(651, 115);
             this.LimDateTextBox.Name = "LimDateTextBox";
             this.LimDateTextBox.Size = new System.Drawing.Size(138, 23);
             this.LimDateTextBox.TabIndex = 7;
@@ -10817,7 +10882,7 @@
             this.TrialDate.CustomFormat = "\' \'";
             this.TrialDate.Enabled = false;
             this.TrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TrialDate.Location = new System.Drawing.Point(1104, 331);
+            this.TrialDate.Location = new System.Drawing.Point(1070, 331);
             this.TrialDate.Name = "TrialDate";
             this.TrialDate.Size = new System.Drawing.Size(19, 23);
             this.TrialDate.TabIndex = 185;
@@ -10830,7 +10895,7 @@
             this.PreTrialResolutionDate.CustomFormat = "\' \'";
             this.PreTrialResolutionDate.Enabled = false;
             this.PreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialResolutionDate.Location = new System.Drawing.Point(1104, 303);
+            this.PreTrialResolutionDate.Location = new System.Drawing.Point(1070, 303);
             this.PreTrialResolutionDate.Name = "PreTrialResolutionDate";
             this.PreTrialResolutionDate.Size = new System.Drawing.Size(19, 23);
             this.PreTrialResolutionDate.TabIndex = 182;
@@ -10843,7 +10908,7 @@
             this.PreTrialToBeServedDate.CustomFormat = "\' \'";
             this.PreTrialToBeServedDate.Enabled = false;
             this.PreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(1104, 275);
+            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(1070, 275);
             this.PreTrialToBeServedDate.Name = "PreTrialToBeServedDate";
             this.PreTrialToBeServedDate.Size = new System.Drawing.Size(19, 23);
             this.PreTrialToBeServedDate.TabIndex = 179;
@@ -10856,7 +10921,7 @@
             this.PrePreTrialMeetingDate.CustomFormat = "\' \'";
             this.PrePreTrialMeetingDate.Enabled = false;
             this.PrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(1105, 247);
+            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(1071, 247);
             this.PrePreTrialMeetingDate.Name = "PrePreTrialMeetingDate";
             this.PrePreTrialMeetingDate.Size = new System.Drawing.Size(19, 23);
             this.PrePreTrialMeetingDate.TabIndex = 176;
@@ -10869,7 +10934,7 @@
             this.ResolutionDate.CustomFormat = "\' \'";
             this.ResolutionDate.Enabled = false;
             this.ResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ResolutionDate.Location = new System.Drawing.Point(1104, 146);
+            this.ResolutionDate.Location = new System.Drawing.Point(1070, 146);
             this.ResolutionDate.Name = "ResolutionDate";
             this.ResolutionDate.Size = new System.Drawing.Size(19, 23);
             this.ResolutionDate.TabIndex = 173;
@@ -10882,7 +10947,7 @@
             this.MemoToBeServedDate.CustomFormat = "\' \'";
             this.MemoToBeServedDate.Enabled = false;
             this.MemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MemoToBeServedDate.Location = new System.Drawing.Point(1104, 96);
+            this.MemoToBeServedDate.Location = new System.Drawing.Point(1070, 96);
             this.MemoToBeServedDate.Name = "MemoToBeServedDate";
             this.MemoToBeServedDate.Size = new System.Drawing.Size(19, 23);
             this.MemoToBeServedDate.TabIndex = 170;
@@ -10895,7 +10960,7 @@
             this.TBoxAllDefendantUndertakingRecd.CustomFormat = "\' \'";
             this.TBoxAllDefendantUndertakingRecd.Enabled = false;
             this.TBoxAllDefendantUndertakingRecd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(1105, 51);
+            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(1071, 51);
             this.TBoxAllDefendantUndertakingRecd.Name = "TBoxAllDefendantUndertakingRecd";
             this.TBoxAllDefendantUndertakingRecd.Size = new System.Drawing.Size(19, 23);
             this.TBoxAllDefendantUndertakingRecd.TabIndex = 166;
@@ -10909,7 +10974,7 @@
             this.TBoxDatePlaintiffUndertakingComplete.CustomFormat = "\' \'";
             this.TBoxDatePlaintiffUndertakingComplete.Enabled = false;
             this.TBoxDatePlaintiffUndertakingComplete.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(1105, 24);
+            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(1071, 24);
             this.TBoxDatePlaintiffUndertakingComplete.Name = "TBoxDatePlaintiffUndertakingComplete";
             this.TBoxDatePlaintiffUndertakingComplete.Size = new System.Drawing.Size(19, 23);
             this.TBoxDatePlaintiffUndertakingComplete.TabIndex = 165;
@@ -10923,7 +10988,7 @@
             this.TBoxDateTrialRecordFiled.CustomFormat = "\' \'";
             this.TBoxDateTrialRecordFiled.Enabled = false;
             this.TBoxDateTrialRecordFiled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(1105, 220);
+            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(1071, 220);
             this.TBoxDateTrialRecordFiled.Name = "TBoxDateTrialRecordFiled";
             this.TBoxDateTrialRecordFiled.Size = new System.Drawing.Size(19, 23);
             this.TBoxDateTrialRecordFiled.TabIndex = 164;
@@ -11002,7 +11067,7 @@
             this.TBoxDateToFileTrialRecordBy.CustomFormat = "\' \'";
             this.TBoxDateToFileTrialRecordBy.Enabled = false;
             this.TBoxDateToFileTrialRecordBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(1106, 193);
+            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(1072, 193);
             this.TBoxDateToFileTrialRecordBy.Name = "TBoxDateToFileTrialRecordBy";
             this.TBoxDateToFileTrialRecordBy.Size = new System.Drawing.Size(19, 23);
             this.TBoxDateToFileTrialRecordBy.TabIndex = 158;
@@ -11104,61 +11169,23 @@
             this.SubTypeCategoryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SubTypeCategoryComboBox.Enabled = false;
             this.SubTypeCategoryComboBox.FormattingEnabled = true;
-            this.SubTypeCategoryComboBox.Location = new System.Drawing.Point(387, 109);
+            this.SubTypeCategoryComboBox.Location = new System.Drawing.Point(387, 115);
             this.SubTypeCategoryComboBox.MatterType = null;
             this.SubTypeCategoryComboBox.Name = "SubTypeCategoryComboBox";
             this.SubTypeCategoryComboBox.Size = new System.Drawing.Size(138, 25);
             this.SubTypeCategoryComboBox.TabIndex = 148;
             // 
-            // DgColumn_DateTime
+            // CurrentFileStatusComboBox
             // 
-            this.DgColumn_DateTime.DataPropertyName = "Date";
-            this.DgColumn_DateTime.FillWeight = 35F;
-            this.DgColumn_DateTime.HeaderText = "DateTime";
-            this.DgColumn_DateTime.Name = "DgColumn_DateTime";
-            this.DgColumn_DateTime.ReadOnly = true;
-            // 
-            // DgColumn_Staff
-            // 
-            this.DgColumn_Staff.DataPropertyName = "Lawyer";
-            this.DgColumn_Staff.FillWeight = 35F;
-            this.DgColumn_Staff.HeaderText = "Staff";
-            this.DgColumn_Staff.Name = "DgColumn_Staff";
-            this.DgColumn_Staff.ReadOnly = true;
-            // 
-            // DgColumn_Description
-            // 
-            this.DgColumn_Description.DataPropertyName = "Description";
-            this.DgColumn_Description.HeaderText = "Description";
-            this.DgColumn_Description.Name = "DgColumn_Description";
-            this.DgColumn_Description.ReadOnly = true;
-            // 
-            // ExportToExcelButton
-            // 
-            this.ExportToExcelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExportToExcelButton.BackColor = System.Drawing.Color.Maroon;
-            this.ExportToExcelButton.Enabled = false;
-            this.ExportToExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExportToExcelButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExportToExcelButton.ForeColor = System.Drawing.Color.White;
-            this.ExportToExcelButton.Location = new System.Drawing.Point(184, 393);
-            this.ExportToExcelButton.Name = "ExportToExcelButton";
-            this.ExportToExcelButton.Size = new System.Drawing.Size(152, 37);
-            this.ExportToExcelButton.TabIndex = 152;
-            this.ExportToExcelButton.Text = "Export";
-            this.ExportToExcelButton.UseVisualStyleBackColor = false;
-            this.ExportToExcelButton.Click += new System.EventHandler(this.ExportToExcelButton_Click);
-            // 
-            // label278
-            // 
-            this.label278.AutoSize = true;
-            this.label278.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label278.ForeColor = System.Drawing.Color.Black;
-            this.label278.Location = new System.Drawing.Point(5, 73);
-            this.label278.Name = "label278";
-            this.label278.Size = new System.Drawing.Size(101, 19);
-            this.label278.TabIndex = 153;
-            this.label278.Text = "Filter By Staff";
+            this.CurrentFileStatusComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CurrentFileStatusComboBox.Enabled = false;
+            this.CurrentFileStatusComboBox.FormattingEnabled = true;
+            this.CurrentFileStatusComboBox.Location = new System.Drawing.Point(123, 171);
+            this.CurrentFileStatusComboBox.MatterType = null;
+            this.CurrentFileStatusComboBox.Name = "CurrentFileStatusComboBox";
+            this.CurrentFileStatusComboBox.Size = new System.Drawing.Size(138, 25);
+            this.CurrentFileStatusComboBox.TabIndex = 150;
+            this.CurrentFileStatusComboBox.SelectedIndexChanged += new System.EventHandler(this.CurrentFileStatusComboBox_SelectedIndexChanged);
             // 
             // FileManager
             // 
@@ -12187,12 +12214,12 @@
         private System.Windows.Forms.DateTimePicker Dtp_To;
         private System.Windows.Forms.DateTimePicker Dtp_From;
         private System.Windows.Forms.Label label277;
-        private System.Windows.Forms.Label label272;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_DateTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Staff;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Description;
         private System.Windows.Forms.Label label278;
         internal System.Windows.Forms.Button ExportToExcelButton;
+        private Controls.SharedControls.CustomControls.ComissionSubTypeComboBox CurrentFileStatusComboBox;
     }
 }
 

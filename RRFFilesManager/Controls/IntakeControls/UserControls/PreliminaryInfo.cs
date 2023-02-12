@@ -163,7 +163,7 @@ namespace RRFFilesManager.IntakeForm
             file.FileNumber = int.Parse(FileNumberTextBox.Text);
             file.StatutoryNotice = StatutoryNoticeBox.Text;
             file.AdditionalNotes = AdditionalNotesTextBox.Text;
-            file.CurrentStatus = _fileStatusRepository.GetById(1); // Intake phase
+            file.CurrentStatus = _fileStatusRepository.GetById((int)FileStatusEnum.PotentialFile);
         }
 
         public void FillForm(File file)

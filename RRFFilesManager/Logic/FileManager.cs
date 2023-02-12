@@ -2,10 +2,10 @@
 using Microsoft.Office.Interop.Word;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
+using RRFFilesManager.Utils;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -16,14 +16,23 @@ namespace RRFFilesManager.Logic
     {
         private readonly ArchiveManager _archiveManager;
         private readonly IFileRepository _fileRepository;
-        FileManager()
+        public FileManager()
         {
             _archiveManager = new ArchiveManager();
             _fileRepository = Program.GetService<IFileRepository>();
         }
 
-
-        
-
+        public void Update(File file)
+        {
+            if(file.Archives != null)
+            {
+                foreach (var archive in file.Archives)
+                {
+                    archive.MoveToFileFolder();
+                    _archiveManager.Update(archive);
+                }
+            }
+            _fileRepository.Update(file);
+        }
     }
 }

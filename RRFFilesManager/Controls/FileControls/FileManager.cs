@@ -35,6 +35,8 @@ namespace RRFFilesManager
         private readonly ITaskRepository _taskRepository;
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
+        private Logic.FileManager _fileManager;
+        private FileStatusManager _fileStatusManager;
         private readonly IClientNoteRepository _clientNoteRepository;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAction;
         public SemiAnnualFileReviewControl SemiAnnualFileReviewControlAccidentBenefits;
@@ -53,6 +55,8 @@ namespace RRFFilesManager
             _fileTaskRepository = Program.GetService<IFileTaskRepository>();
             _clientNoteRepository = Program.GetService<IClientNoteRepository>();
             InitializeComponent();
+            _fileManager = new Logic.FileManager();
+            _fileStatusManager = new FileStatusManager();
             ComboBox2.SelectedIndex = 0;
             PeopleControl = new PeopleControl();
             Utils.Utils.SetContent(PeopleTab, PeopleControl);
@@ -228,10 +232,11 @@ namespace RRFFilesManager
             {
                 RefreshActionLogDataGridViewDataSource();
             }
+            CurrentFileStatusComboBox.Enabled = true;
+            var statusList = _fileStatusManager.GetValidFileStatus(file);
+            Utils.Utils.SetComboBoxDataSource(CurrentFileStatusComboBox, statusList);
+            CurrentFileStatusComboBox.SelectedItem = statusList.FirstOrDefault(x => x.ID == file.CurrentStatus.ID);
 
-            Btn_SearchNotes.Enabled = true;
-            AddNotesRowButton.Enabled = true;
-            SaveNoteButton.Enabled = true;
         }
 
         private void RefreshActionLogDataGridViewDataSource()
@@ -741,6 +746,21 @@ namespace RRFFilesManager
                 }
             }
 
+        }
+
+        private void SubTypeCategoryComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CurrentFileStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var newStatus = (FileStatus)CurrentFileStatusComboBox.SelectedValue;
+            if (newStatus != null && File.CurrentStatus != newStatus)
+            {
+                File.CurrentStatus = newStatus;
+                _fileManager.Update(File);
+            }
         }
     }
 }
