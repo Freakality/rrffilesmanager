@@ -131,6 +131,74 @@
             System.Windows.Forms.Label Label100;
             System.Windows.Forms.Label label272;
             System.Windows.Forms.Label label279;
+            System.Windows.Forms.Label Label91;
+            System.Windows.Forms.Label Label92;
+            System.Windows.Forms.Label Label93;
+            System.Windows.Forms.Label Label94;
+            System.Windows.Forms.Label Label95;
+            System.Windows.Forms.Label Label96;
+            System.Windows.Forms.Label Label97;
+            System.Windows.Forms.Label Label98;
+            System.Windows.Forms.Label Label99;
+            System.Windows.Forms.Label Label101;
+            System.Windows.Forms.Label Label102;
+            System.Windows.Forms.Label Label103;
+            System.Windows.Forms.Label Label104;
+            System.Windows.Forms.Label Label105;
+            System.Windows.Forms.Label Label106;
+            System.Windows.Forms.Label Label107;
+            System.Windows.Forms.Label Label108;
+            System.Windows.Forms.Label Label73;
+            System.Windows.Forms.Label Label74;
+            System.Windows.Forms.Label Label75;
+            System.Windows.Forms.Label Label76;
+            System.Windows.Forms.Label Label77;
+            System.Windows.Forms.Label Label78;
+            System.Windows.Forms.Label Label79;
+            System.Windows.Forms.Label Label80;
+            System.Windows.Forms.Label Label81;
+            System.Windows.Forms.Label Label83;
+            System.Windows.Forms.Label Label84;
+            System.Windows.Forms.Label Label85;
+            System.Windows.Forms.Label Label86;
+            System.Windows.Forms.Label Label87;
+            System.Windows.Forms.Label Label88;
+            System.Windows.Forms.Label Label89;
+            System.Windows.Forms.Label Label90;
+            System.Windows.Forms.Label Label55;
+            System.Windows.Forms.Label Label56;
+            System.Windows.Forms.Label Label57;
+            System.Windows.Forms.Label Label58;
+            System.Windows.Forms.Label Label59;
+            System.Windows.Forms.Label Label60;
+            System.Windows.Forms.Label Label61;
+            System.Windows.Forms.Label Label62;
+            System.Windows.Forms.Label Label63;
+            System.Windows.Forms.Label Label65;
+            System.Windows.Forms.Label Label66;
+            System.Windows.Forms.Label Label67;
+            System.Windows.Forms.Label Label68;
+            System.Windows.Forms.Label Label69;
+            System.Windows.Forms.Label Label70;
+            System.Windows.Forms.Label Label71;
+            System.Windows.Forms.Label Label72;
+            System.Windows.Forms.Label DueDateToDiscussPotentialLATApplLabel;
+            System.Windows.Forms.Label ProposedDateToFileLATLabel;
+            System.Windows.Forms.Label ActualDateLATServedOnInsurerLabel;
+            System.Windows.Forms.Label DeadlineToServeFileCaseConfSummaryLabel;
+            System.Windows.Forms.Label DeadlineToDeliverProductionsToABCounselLabel;
+            System.Windows.Forms.Label DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel;
+            System.Windows.Forms.Label DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel;
+            System.Windows.Forms.Label DeadlineForReplySubmissionsOfTheApplicantLabel;
+            System.Windows.Forms.Label DateLATSettledClosedLabel;
+            System.Windows.Forms.Label DateMetWithLawyerReDenialLabel;
+            System.Windows.Forms.Label ActualDateLATFiledLabel;
+            System.Windows.Forms.Label InsurersResponseReceivedLabel;
+            System.Windows.Forms.Label LATCaseConfDateLabel;
+            System.Windows.Forms.Label DeadlineToReceiveABProductionsLabel;
+            System.Windows.Forms.Label DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel;
+            System.Windows.Forms.Label DeadlineToReceiveInsurerSubmissionsLabel;
+            System.Windows.Forms.Label HearingStartDateLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -498,6 +566,448 @@
             this.ProductionRequests = new System.Windows.Forms.TabPage();
             this.ABLAT = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.TabControl4 = new System.Windows.Forms.TabControl();
+            this.Summary = new System.Windows.Forms.TabPage();
+            this.GroupBoxLat4 = new System.Windows.Forms.GroupBox();
+            this.GroupBox40 = new System.Windows.Forms.GroupBox();
+            this.TableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox150 = new System.Windows.Forms.TextBox();
+            this.TextBox151 = new System.Windows.Forms.TextBox();
+            this.TextBox152 = new System.Windows.Forms.TextBox();
+            this.TextBox153 = new System.Windows.Forms.TextBox();
+            this.TextBox154 = new System.Windows.Forms.TextBox();
+            this.TextBox155 = new System.Windows.Forms.TextBox();
+            this.TextBox156 = new System.Windows.Forms.TextBox();
+            this.Label200 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox157 = new System.Windows.Forms.TextBox();
+            this.Label201 = new System.Windows.Forms.Label();
+            this.TextBox158 = new System.Windows.Forms.TextBox();
+            this.Label202 = new System.Windows.Forms.Label();
+            this.Label203 = new System.Windows.Forms.Label();
+            this.TextBox159 = new System.Windows.Forms.TextBox();
+            this.TextBox160 = new System.Windows.Forms.TextBox();
+            this.Label204 = new System.Windows.Forms.Label();
+            this.TextBox161 = new System.Windows.Forms.TextBox();
+            this.Label205 = new System.Windows.Forms.Label();
+            this.Label206 = new System.Windows.Forms.Label();
+            this.TextBox162 = new System.Windows.Forms.TextBox();
+            this.TextBox163 = new System.Windows.Forms.TextBox();
+            this.Label207 = new System.Windows.Forms.Label();
+            this.TextBox164 = new System.Windows.Forms.TextBox();
+            this.Label208 = new System.Windows.Forms.Label();
+            this.TextBox165 = new System.Windows.Forms.TextBox();
+            this.Label209 = new System.Windows.Forms.Label();
+            this.TextBox166 = new System.Windows.Forms.TextBox();
+            this.Label210 = new System.Windows.Forms.Label();
+            this.Label211 = new System.Windows.Forms.Label();
+            this.Label212 = new System.Windows.Forms.Label();
+            this.TextBox167 = new System.Windows.Forms.TextBox();
+            this.TextBox168 = new System.Windows.Forms.TextBox();
+            this.Label213 = new System.Windows.Forms.Label();
+            this.TextBox169 = new System.Windows.Forms.TextBox();
+            this.TableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.Issues7Lat4 = new System.Windows.Forms.TextBox();
+            this.Issues6Lat4 = new System.Windows.Forms.TextBox();
+            this.Issues5Lat4 = new System.Windows.Forms.TextBox();
+            this.Issues4Lat4 = new System.Windows.Forms.TextBox();
+            this.Issues3Lat4 = new System.Windows.Forms.TextBox();
+            this.Issues2Lat4 = new System.Windows.Forms.TextBox();
+            this.IssuesLat4 = new System.Windows.Forms.TextBox();
+            this.Label214 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.FiledDateLat4 = new System.Windows.Forms.TextBox();
+            this.Label215 = new System.Windows.Forms.Label();
+            this.AmountSettledLat4 = new System.Windows.Forms.TextBox();
+            this.Label216 = new System.Windows.Forms.Label();
+            this.Label217 = new System.Windows.Forms.Label();
+            this.DateSettledLat4 = new System.Windows.Forms.TextBox();
+            this.CaseConfLat4 = new System.Windows.Forms.TextBox();
+            this.Label218 = new System.Windows.Forms.Label();
+            this.HearingDateLat4 = new System.Windows.Forms.TextBox();
+            this.Label219 = new System.Windows.Forms.Label();
+            this.Label220 = new System.Windows.Forms.Label();
+            this.HearingAdjudicatorLat4 = new System.Windows.Forms.TextBox();
+            this.InsurerFirmLat4 = new System.Windows.Forms.TextBox();
+            this.Label221 = new System.Windows.Forms.Label();
+            this.TribunalNumberLat4 = new System.Windows.Forms.TextBox();
+            this.Label222 = new System.Windows.Forms.Label();
+            this.InsurerLat4 = new System.Windows.Forms.TextBox();
+            this.Label223 = new System.Windows.Forms.Label();
+            this.HearingTypeLat4 = new System.Windows.Forms.TextBox();
+            this.Label224 = new System.Windows.Forms.Label();
+            this.Label225 = new System.Windows.Forms.Label();
+            this.Label226 = new System.Windows.Forms.Label();
+            this.AdjusterLat4 = new System.Windows.Forms.TextBox();
+            this.InsurerCounselLat4 = new System.Windows.Forms.TextBox();
+            this.Label227 = new System.Windows.Forms.Label();
+            this.CaseAdjudicatorLat4 = new System.Windows.Forms.TextBox();
+            this.GroupBoxLat3 = new System.Windows.Forms.GroupBox();
+            this.GroupBox38 = new System.Windows.Forms.GroupBox();
+            this.TableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox110 = new System.Windows.Forms.TextBox();
+            this.TextBox111 = new System.Windows.Forms.TextBox();
+            this.TextBox112 = new System.Windows.Forms.TextBox();
+            this.TextBox113 = new System.Windows.Forms.TextBox();
+            this.TextBox114 = new System.Windows.Forms.TextBox();
+            this.TextBox115 = new System.Windows.Forms.TextBox();
+            this.TextBox116 = new System.Windows.Forms.TextBox();
+            this.Label172 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox117 = new System.Windows.Forms.TextBox();
+            this.Label173 = new System.Windows.Forms.Label();
+            this.TextBox118 = new System.Windows.Forms.TextBox();
+            this.Label174 = new System.Windows.Forms.Label();
+            this.Label175 = new System.Windows.Forms.Label();
+            this.TextBox119 = new System.Windows.Forms.TextBox();
+            this.TextBox120 = new System.Windows.Forms.TextBox();
+            this.Label176 = new System.Windows.Forms.Label();
+            this.TextBox121 = new System.Windows.Forms.TextBox();
+            this.Label177 = new System.Windows.Forms.Label();
+            this.Label178 = new System.Windows.Forms.Label();
+            this.TextBox122 = new System.Windows.Forms.TextBox();
+            this.TextBox123 = new System.Windows.Forms.TextBox();
+            this.Label179 = new System.Windows.Forms.Label();
+            this.TextBox124 = new System.Windows.Forms.TextBox();
+            this.Label180 = new System.Windows.Forms.Label();
+            this.TextBox125 = new System.Windows.Forms.TextBox();
+            this.Label181 = new System.Windows.Forms.Label();
+            this.TextBox126 = new System.Windows.Forms.TextBox();
+            this.Label182 = new System.Windows.Forms.Label();
+            this.Label183 = new System.Windows.Forms.Label();
+            this.Label184 = new System.Windows.Forms.Label();
+            this.TextBox127 = new System.Windows.Forms.TextBox();
+            this.TextBox128 = new System.Windows.Forms.TextBox();
+            this.Label185 = new System.Windows.Forms.Label();
+            this.TextBox129 = new System.Windows.Forms.TextBox();
+            this.TableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.Issues7Lat3 = new System.Windows.Forms.TextBox();
+            this.Issues6Lat3 = new System.Windows.Forms.TextBox();
+            this.Issues5Lat3 = new System.Windows.Forms.TextBox();
+            this.Issues4Lat3 = new System.Windows.Forms.TextBox();
+            this.Issues3Lat3 = new System.Windows.Forms.TextBox();
+            this.Issues2Lat3 = new System.Windows.Forms.TextBox();
+            this.IssuesLat3 = new System.Windows.Forms.TextBox();
+            this.Label186 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.FiledDateLat3 = new System.Windows.Forms.TextBox();
+            this.Label187 = new System.Windows.Forms.Label();
+            this.AmountSettledLat3 = new System.Windows.Forms.TextBox();
+            this.Label188 = new System.Windows.Forms.Label();
+            this.Label189 = new System.Windows.Forms.Label();
+            this.DateSettledLat3 = new System.Windows.Forms.TextBox();
+            this.CaseConfLat3 = new System.Windows.Forms.TextBox();
+            this.Label190 = new System.Windows.Forms.Label();
+            this.HearingDateLat3 = new System.Windows.Forms.TextBox();
+            this.Label191 = new System.Windows.Forms.Label();
+            this.Label192 = new System.Windows.Forms.Label();
+            this.HearingAdjudicatorLat3 = new System.Windows.Forms.TextBox();
+            this.InsurerFirmLat3 = new System.Windows.Forms.TextBox();
+            this.Label193 = new System.Windows.Forms.Label();
+            this.TribunalNumberLat3 = new System.Windows.Forms.TextBox();
+            this.Label194 = new System.Windows.Forms.Label();
+            this.InsurerLat3 = new System.Windows.Forms.TextBox();
+            this.Label195 = new System.Windows.Forms.Label();
+            this.HearingTypeLat3 = new System.Windows.Forms.TextBox();
+            this.Label196 = new System.Windows.Forms.Label();
+            this.Label197 = new System.Windows.Forms.Label();
+            this.Label198 = new System.Windows.Forms.Label();
+            this.AdjusterLat3 = new System.Windows.Forms.TextBox();
+            this.InsureCounselLat3 = new System.Windows.Forms.TextBox();
+            this.Label199 = new System.Windows.Forms.Label();
+            this.CaseAdjudicatorLat3 = new System.Windows.Forms.TextBox();
+            this.GroupBoxLat2 = new System.Windows.Forms.GroupBox();
+            this.GroupBox36 = new System.Windows.Forms.GroupBox();
+            this.TableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox70 = new System.Windows.Forms.TextBox();
+            this.TextBox71 = new System.Windows.Forms.TextBox();
+            this.TextBox72 = new System.Windows.Forms.TextBox();
+            this.TextBox73 = new System.Windows.Forms.TextBox();
+            this.TextBox74 = new System.Windows.Forms.TextBox();
+            this.TextBox75 = new System.Windows.Forms.TextBox();
+            this.TextBox76 = new System.Windows.Forms.TextBox();
+            this.Label144 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox77 = new System.Windows.Forms.TextBox();
+            this.Label145 = new System.Windows.Forms.Label();
+            this.TextBox78 = new System.Windows.Forms.TextBox();
+            this.Label146 = new System.Windows.Forms.Label();
+            this.Label147 = new System.Windows.Forms.Label();
+            this.TextBox79 = new System.Windows.Forms.TextBox();
+            this.TextBox80 = new System.Windows.Forms.TextBox();
+            this.Label148 = new System.Windows.Forms.Label();
+            this.TextBox81 = new System.Windows.Forms.TextBox();
+            this.Label149 = new System.Windows.Forms.Label();
+            this.Label150 = new System.Windows.Forms.Label();
+            this.TextBox82 = new System.Windows.Forms.TextBox();
+            this.TextBox83 = new System.Windows.Forms.TextBox();
+            this.Label151 = new System.Windows.Forms.Label();
+            this.TextBox84 = new System.Windows.Forms.TextBox();
+            this.Label152 = new System.Windows.Forms.Label();
+            this.TextBox85 = new System.Windows.Forms.TextBox();
+            this.Label153 = new System.Windows.Forms.Label();
+            this.TextBox86 = new System.Windows.Forms.TextBox();
+            this.Label154 = new System.Windows.Forms.Label();
+            this.Label155 = new System.Windows.Forms.Label();
+            this.Label156 = new System.Windows.Forms.Label();
+            this.TextBox87 = new System.Windows.Forms.TextBox();
+            this.TextBox88 = new System.Windows.Forms.TextBox();
+            this.Label157 = new System.Windows.Forms.Label();
+            this.TextBox89 = new System.Windows.Forms.TextBox();
+            this.TableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.Issues7Lat2 = new System.Windows.Forms.TextBox();
+            this.Issues6Lat2 = new System.Windows.Forms.TextBox();
+            this.Issues5Lat2 = new System.Windows.Forms.TextBox();
+            this.Issues4Lat2 = new System.Windows.Forms.TextBox();
+            this.Issues3Lat2 = new System.Windows.Forms.TextBox();
+            this.Issues2Lat2 = new System.Windows.Forms.TextBox();
+            this.IssuesLat2 = new System.Windows.Forms.TextBox();
+            this.Label158 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.FiledDateLat2 = new System.Windows.Forms.TextBox();
+            this.Label159 = new System.Windows.Forms.Label();
+            this.AmountSettledLat2 = new System.Windows.Forms.TextBox();
+            this.Label160 = new System.Windows.Forms.Label();
+            this.Label161 = new System.Windows.Forms.Label();
+            this.DateSettledLat2 = new System.Windows.Forms.TextBox();
+            this.CaseConfLat2 = new System.Windows.Forms.TextBox();
+            this.Label162 = new System.Windows.Forms.Label();
+            this.HearingDateLat2 = new System.Windows.Forms.TextBox();
+            this.Label163 = new System.Windows.Forms.Label();
+            this.Label164 = new System.Windows.Forms.Label();
+            this.HearingAdjudicatorLat2 = new System.Windows.Forms.TextBox();
+            this.InsureFirmLat2 = new System.Windows.Forms.TextBox();
+            this.Label165 = new System.Windows.Forms.Label();
+            this.TribunalNumberLat2 = new System.Windows.Forms.TextBox();
+            this.Label166 = new System.Windows.Forms.Label();
+            this.InsurerLat2 = new System.Windows.Forms.TextBox();
+            this.Label167 = new System.Windows.Forms.Label();
+            this.HearingTypeLat2 = new System.Windows.Forms.TextBox();
+            this.Label168 = new System.Windows.Forms.Label();
+            this.Label169 = new System.Windows.Forms.Label();
+            this.Label170 = new System.Windows.Forms.Label();
+            this.AdjusterLat2 = new System.Windows.Forms.TextBox();
+            this.InsurerCounselLat2 = new System.Windows.Forms.TextBox();
+            this.Label171 = new System.Windows.Forms.Label();
+            this.CaseAdjudicatorLat2 = new System.Windows.Forms.TextBox();
+            this.GroupBoxLat1 = new System.Windows.Forms.GroupBox();
+            this.GroupBox34 = new System.Windows.Forms.GroupBox();
+            this.TableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox50 = new System.Windows.Forms.TextBox();
+            this.TextBox51 = new System.Windows.Forms.TextBox();
+            this.TextBox52 = new System.Windows.Forms.TextBox();
+            this.TextBox53 = new System.Windows.Forms.TextBox();
+            this.TextBox54 = new System.Windows.Forms.TextBox();
+            this.TextBox55 = new System.Windows.Forms.TextBox();
+            this.TextBox56 = new System.Windows.Forms.TextBox();
+            this.Label125 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.TextBox57 = new System.Windows.Forms.TextBox();
+            this.Label130 = new System.Windows.Forms.Label();
+            this.TextBox58 = new System.Windows.Forms.TextBox();
+            this.Label132 = new System.Windows.Forms.Label();
+            this.Label133 = new System.Windows.Forms.Label();
+            this.TextBox59 = new System.Windows.Forms.TextBox();
+            this.TextBox60 = new System.Windows.Forms.TextBox();
+            this.Label134 = new System.Windows.Forms.Label();
+            this.TextBox61 = new System.Windows.Forms.TextBox();
+            this.Label135 = new System.Windows.Forms.Label();
+            this.Label136 = new System.Windows.Forms.Label();
+            this.TextBox62 = new System.Windows.Forms.TextBox();
+            this.TextBox63 = new System.Windows.Forms.TextBox();
+            this.Label137 = new System.Windows.Forms.Label();
+            this.TextBox64 = new System.Windows.Forms.TextBox();
+            this.Label138 = new System.Windows.Forms.Label();
+            this.TextBox65 = new System.Windows.Forms.TextBox();
+            this.Label139 = new System.Windows.Forms.Label();
+            this.TextBox66 = new System.Windows.Forms.TextBox();
+            this.Label140 = new System.Windows.Forms.Label();
+            this.Label141 = new System.Windows.Forms.Label();
+            this.Label142 = new System.Windows.Forms.Label();
+            this.TextBox67 = new System.Windows.Forms.TextBox();
+            this.TextBox68 = new System.Windows.Forms.TextBox();
+            this.Label143 = new System.Windows.Forms.Label();
+            this.TextBox69 = new System.Windows.Forms.TextBox();
+            this.TableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.TxtIssues7 = new System.Windows.Forms.TextBox();
+            this.TxtIssues6 = new System.Windows.Forms.TextBox();
+            this.TxtIssues5 = new System.Windows.Forms.TextBox();
+            this.TxtIssues4 = new System.Windows.Forms.TextBox();
+            this.TxtIssues3 = new System.Windows.Forms.TextBox();
+            this.TxtIssues2 = new System.Windows.Forms.TextBox();
+            this.TxtIssues1 = new System.Windows.Forms.TextBox();
+            this.Label82 = new System.Windows.Forms.Label();
+            this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.FiledDateTxt = new System.Windows.Forms.TextBox();
+            this.Label126 = new System.Windows.Forms.Label();
+            this.AmountSettledTxt = new System.Windows.Forms.TextBox();
+            this.Label64 = new System.Windows.Forms.Label();
+            this.Label131 = new System.Windows.Forms.Label();
+            this.DateSettledTxt = new System.Windows.Forms.TextBox();
+            this.CaseConfTxt = new System.Windows.Forms.TextBox();
+            this.Label123 = new System.Windows.Forms.Label();
+            this.HearingDateTxt = new System.Windows.Forms.TextBox();
+            this.Label118 = new System.Windows.Forms.Label();
+            this.Label129 = new System.Windows.Forms.Label();
+            this.HearingAdjudicatorTxt = new System.Windows.Forms.TextBox();
+            this.InsurerFirmTxt = new System.Windows.Forms.TextBox();
+            this.Label122 = new System.Windows.Forms.Label();
+            this.TribunalNumberTxt = new System.Windows.Forms.TextBox();
+            this.Label128 = new System.Windows.Forms.Label();
+            this.InsurerTxt = new System.Windows.Forms.TextBox();
+            this.Label124 = new System.Windows.Forms.Label();
+            this.HearingTypeTxt = new System.Windows.Forms.TextBox();
+            this.Label127 = new System.Windows.Forms.Label();
+            this.Label121 = new System.Windows.Forms.Label();
+            this.Label119 = new System.Windows.Forms.Label();
+            this.AdjusterTxt = new System.Windows.Forms.TextBox();
+            this.InsurerCounselTxt = new System.Windows.Forms.TextBox();
+            this.Label120 = new System.Windows.Forms.Label();
+            this.CaseAdjudicatorTxt = new System.Windows.Forms.TextBox();
+            this.LAT1 = new System.Windows.Forms.TabPage();
+            this.BtnLat1 = new System.Windows.Forms.Button();
+            this.DateLatSettledClosedtTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
+            this.ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.HearingStarDateTxt = new System.Windows.Forms.TextBox();
+            this.DeadlineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
+            this.LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
+            this.InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
+            this.ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
+            this.DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
+            this.DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
+            this.ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
+            this.DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
+            this.ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
+            this.InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
+            this.LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadlineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.LAT2 = new System.Windows.Forms.TabPage();
+            this.BtnLat2 = new System.Windows.Forms.Button();
+            this.Lat2DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.Lat2ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat2ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.Lat2HearingStarDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat2InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
+            this.Lat2ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.LAT3 = new System.Windows.Forms.TabPage();
+            this.BtnLat3 = new System.Windows.Forms.Button();
+            this.Lat3DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.Lat3ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat3ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3HearingStarDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat3InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
+            this.Lat3ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.LAT4 = new System.Windows.Forms.TabPage();
+            this.BtnLat4 = new System.Windows.Forms.Button();
+            this.Lat4DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.Lat4ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat4ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4HearingStarDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat4InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
+            this.Lat4ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtLimitationDate = new System.Windows.Forms.TextBox();
             this.QuickABPaidToDate = new System.Windows.Forms.TabPage();
@@ -637,6 +1147,74 @@
             Label100 = new System.Windows.Forms.Label();
             label272 = new System.Windows.Forms.Label();
             label279 = new System.Windows.Forms.Label();
+            Label91 = new System.Windows.Forms.Label();
+            Label92 = new System.Windows.Forms.Label();
+            Label93 = new System.Windows.Forms.Label();
+            Label94 = new System.Windows.Forms.Label();
+            Label95 = new System.Windows.Forms.Label();
+            Label96 = new System.Windows.Forms.Label();
+            Label97 = new System.Windows.Forms.Label();
+            Label98 = new System.Windows.Forms.Label();
+            Label99 = new System.Windows.Forms.Label();
+            Label101 = new System.Windows.Forms.Label();
+            Label102 = new System.Windows.Forms.Label();
+            Label103 = new System.Windows.Forms.Label();
+            Label104 = new System.Windows.Forms.Label();
+            Label105 = new System.Windows.Forms.Label();
+            Label106 = new System.Windows.Forms.Label();
+            Label107 = new System.Windows.Forms.Label();
+            Label108 = new System.Windows.Forms.Label();
+            Label73 = new System.Windows.Forms.Label();
+            Label74 = new System.Windows.Forms.Label();
+            Label75 = new System.Windows.Forms.Label();
+            Label76 = new System.Windows.Forms.Label();
+            Label77 = new System.Windows.Forms.Label();
+            Label78 = new System.Windows.Forms.Label();
+            Label79 = new System.Windows.Forms.Label();
+            Label80 = new System.Windows.Forms.Label();
+            Label81 = new System.Windows.Forms.Label();
+            Label83 = new System.Windows.Forms.Label();
+            Label84 = new System.Windows.Forms.Label();
+            Label85 = new System.Windows.Forms.Label();
+            Label86 = new System.Windows.Forms.Label();
+            Label87 = new System.Windows.Forms.Label();
+            Label88 = new System.Windows.Forms.Label();
+            Label89 = new System.Windows.Forms.Label();
+            Label90 = new System.Windows.Forms.Label();
+            Label55 = new System.Windows.Forms.Label();
+            Label56 = new System.Windows.Forms.Label();
+            Label57 = new System.Windows.Forms.Label();
+            Label58 = new System.Windows.Forms.Label();
+            Label59 = new System.Windows.Forms.Label();
+            Label60 = new System.Windows.Forms.Label();
+            Label61 = new System.Windows.Forms.Label();
+            Label62 = new System.Windows.Forms.Label();
+            Label63 = new System.Windows.Forms.Label();
+            Label65 = new System.Windows.Forms.Label();
+            Label66 = new System.Windows.Forms.Label();
+            Label67 = new System.Windows.Forms.Label();
+            Label68 = new System.Windows.Forms.Label();
+            Label69 = new System.Windows.Forms.Label();
+            Label70 = new System.Windows.Forms.Label();
+            Label71 = new System.Windows.Forms.Label();
+            Label72 = new System.Windows.Forms.Label();
+            DueDateToDiscussPotentialLATApplLabel = new System.Windows.Forms.Label();
+            ProposedDateToFileLATLabel = new System.Windows.Forms.Label();
+            ActualDateLATServedOnInsurerLabel = new System.Windows.Forms.Label();
+            DeadlineToServeFileCaseConfSummaryLabel = new System.Windows.Forms.Label();
+            DeadlineToDeliverProductionsToABCounselLabel = new System.Windows.Forms.Label();
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel = new System.Windows.Forms.Label();
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel = new System.Windows.Forms.Label();
+            DeadlineForReplySubmissionsOfTheApplicantLabel = new System.Windows.Forms.Label();
+            DateLATSettledClosedLabel = new System.Windows.Forms.Label();
+            DateMetWithLawyerReDenialLabel = new System.Windows.Forms.Label();
+            ActualDateLATFiledLabel = new System.Windows.Forms.Label();
+            InsurersResponseReceivedLabel = new System.Windows.Forms.Label();
+            LATCaseConfDateLabel = new System.Windows.Forms.Label();
+            DeadlineToReceiveABProductionsLabel = new System.Windows.Forms.Label();
+            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel = new System.Windows.Forms.Label();
+            DeadlineToReceiveInsurerSubmissionsLabel = new System.Windows.Forms.Label();
+            HearingStartDateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGridView)).BeginInit();
             this.GroupBox23.SuspendLayout();
             this.ExpertsLayWitness.SuspendLayout();
@@ -715,6 +1293,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.ABDenialsDataGridView)).BeginInit();
             this.GroupBox31.SuspendLayout();
             this.ABLAT.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.TabControl4.SuspendLayout();
+            this.Summary.SuspendLayout();
+            this.GroupBoxLat4.SuspendLayout();
+            this.GroupBox40.SuspendLayout();
+            this.TableLayoutPanel14.SuspendLayout();
+            this.TableLayoutPanel15.SuspendLayout();
+            this.TableLayoutPanel16.SuspendLayout();
+            this.TableLayoutPanel17.SuspendLayout();
+            this.GroupBoxLat3.SuspendLayout();
+            this.GroupBox38.SuspendLayout();
+            this.TableLayoutPanel10.SuspendLayout();
+            this.TableLayoutPanel11.SuspendLayout();
+            this.TableLayoutPanel12.SuspendLayout();
+            this.TableLayoutPanel13.SuspendLayout();
+            this.GroupBoxLat2.SuspendLayout();
+            this.GroupBox36.SuspendLayout();
+            this.TableLayoutPanel6.SuspendLayout();
+            this.TableLayoutPanel7.SuspendLayout();
+            this.TableLayoutPanel8.SuspendLayout();
+            this.TableLayoutPanel9.SuspendLayout();
+            this.GroupBoxLat1.SuspendLayout();
+            this.GroupBox34.SuspendLayout();
+            this.TableLayoutPanel4.SuspendLayout();
+            this.TableLayoutPanel5.SuspendLayout();
+            this.TableLayoutPanel3.SuspendLayout();
+            this.TableLayoutPanel2.SuspendLayout();
+            this.LAT1.SuspendLayout();
+            this.LAT2.SuspendLayout();
+            this.LAT3.SuspendLayout();
+            this.LAT4.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -835,7 +1444,7 @@
             // 
             TBoxDateTrialRecordFiledLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDateTrialRecordFiledLabel.AutoSize = true;
-            TBoxDateTrialRecordFiledLabel.Location = new System.Drawing.Point(536, 223);
+            TBoxDateTrialRecordFiledLabel.Location = new System.Drawing.Point(502, 223);
             TBoxDateTrialRecordFiledLabel.Name = "TBoxDateTrialRecordFiledLabel";
             TBoxDateTrialRecordFiledLabel.Size = new System.Drawing.Size(155, 17);
             TBoxDateTrialRecordFiledLabel.TabIndex = 38;
@@ -845,7 +1454,7 @@
             // 
             TBoxDateToFileTrialRecordByLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDateToFileTrialRecordByLabel.AutoSize = true;
-            TBoxDateToFileTrialRecordByLabel.Location = new System.Drawing.Point(536, 196);
+            TBoxDateToFileTrialRecordByLabel.Location = new System.Drawing.Point(502, 196);
             TBoxDateToFileTrialRecordByLabel.Name = "TBoxDateToFileTrialRecordByLabel";
             TBoxDateToFileTrialRecordByLabel.Size = new System.Drawing.Size(181, 17);
             TBoxDateToFileTrialRecordByLabel.TabIndex = 44;
@@ -855,7 +1464,7 @@
             // 
             TBoxDatePlaintiffUndertakingCompleteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDatePlaintiffUndertakingCompleteLabel.AutoSize = true;
-            TBoxDatePlaintiffUndertakingCompleteLabel.Location = new System.Drawing.Point(536, 27);
+            TBoxDatePlaintiffUndertakingCompleteLabel.Location = new System.Drawing.Point(502, 27);
             TBoxDatePlaintiffUndertakingCompleteLabel.Name = "TBoxDatePlaintiffUndertakingCompleteLabel";
             TBoxDatePlaintiffUndertakingCompleteLabel.Size = new System.Drawing.Size(247, 17);
             TBoxDatePlaintiffUndertakingCompleteLabel.TabIndex = 40;
@@ -865,7 +1474,7 @@
             // 
             TBoxAllDefendantUndertakingRecdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxAllDefendantUndertakingRecdLabel.AutoSize = true;
-            TBoxAllDefendantUndertakingRecdLabel.Location = new System.Drawing.Point(536, 54);
+            TBoxAllDefendantUndertakingRecdLabel.Location = new System.Drawing.Point(502, 54);
             TBoxAllDefendantUndertakingRecdLabel.Name = "TBoxAllDefendantUndertakingRecdLabel";
             TBoxAllDefendantUndertakingRecdLabel.Size = new System.Drawing.Size(219, 17);
             TBoxAllDefendantUndertakingRecdLabel.TabIndex = 42;
@@ -1550,7 +2159,7 @@
             // 
             label273.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label273.AutoSize = true;
-            label273.Location = new System.Drawing.Point(536, 252);
+            label273.Location = new System.Drawing.Point(502, 252);
             label273.Name = "label273";
             label273.Size = new System.Drawing.Size(176, 17);
             label273.TabIndex = 174;
@@ -1560,7 +2169,7 @@
             // 
             label274.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label274.AutoSize = true;
-            label274.Location = new System.Drawing.Point(536, 279);
+            label274.Location = new System.Drawing.Point(502, 279);
             label274.Name = "label274";
             label274.Size = new System.Drawing.Size(180, 17);
             label274.TabIndex = 177;
@@ -1570,7 +2179,7 @@
             // 
             label275.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label275.AutoSize = true;
-            label275.Location = new System.Drawing.Point(536, 307);
+            label275.Location = new System.Drawing.Point(502, 307);
             label275.Name = "label275";
             label275.Size = new System.Drawing.Size(166, 17);
             label275.TabIndex = 180;
@@ -1670,6 +2279,654 @@
             label279.TabIndex = 149;
             label279.Text = "Status";
             label279.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // Label91
+            // 
+            Label91.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label91.AutoSize = true;
+            Label91.Location = new System.Drawing.Point(662, 21);
+            Label91.Name = "Label91";
+            Label91.Size = new System.Drawing.Size(256, 17);
+            Label91.TabIndex = 74;
+            Label91.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // Label92
+            // 
+            Label92.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label92.AutoSize = true;
+            Label92.Location = new System.Drawing.Point(662, 54);
+            Label92.Name = "Label92";
+            Label92.Size = new System.Drawing.Size(175, 17);
+            Label92.TabIndex = 76;
+            Label92.Text = "Proposed Date To File LAT:";
+            // 
+            // Label93
+            // 
+            Label93.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label93.AutoSize = true;
+            Label93.Location = new System.Drawing.Point(662, 87);
+            Label93.Name = "Label93";
+            Label93.Size = new System.Drawing.Size(224, 17);
+            Label93.TabIndex = 78;
+            Label93.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // Label94
+            // 
+            Label94.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label94.AutoSize = true;
+            Label94.Location = new System.Drawing.Point(662, 120);
+            Label94.Name = "Label94";
+            Label94.Size = new System.Drawing.Size(286, 17);
+            Label94.TabIndex = 80;
+            Label94.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // Label95
+            // 
+            Label95.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label95.AutoSize = true;
+            Label95.Location = new System.Drawing.Point(662, 153);
+            Label95.Name = "Label95";
+            Label95.Size = new System.Drawing.Size(306, 17);
+            Label95.TabIndex = 82;
+            Label95.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // Label96
+            // 
+            Label96.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label96.AutoSize = true;
+            Label96.Location = new System.Drawing.Point(662, 186);
+            Label96.Name = "Label96";
+            Label96.Size = new System.Drawing.Size(352, 17);
+            Label96.TabIndex = 84;
+            Label96.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Label97
+            // 
+            Label97.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label97.AutoSize = true;
+            Label97.Location = new System.Drawing.Point(662, 219);
+            Label97.Name = "Label97";
+            Label97.Size = new System.Drawing.Size(407, 17);
+            Label97.TabIndex = 86;
+            Label97.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // Label98
+            // 
+            Label98.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label98.AutoSize = true;
+            Label98.Location = new System.Drawing.Point(662, 252);
+            Label98.Name = "Label98";
+            Label98.Size = new System.Drawing.Size(320, 17);
+            Label98.TabIndex = 88;
+            Label98.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // Label99
+            // 
+            Label99.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label99.AutoSize = true;
+            Label99.Location = new System.Drawing.Point(662, 285);
+            Label99.Name = "Label99";
+            Label99.Size = new System.Drawing.Size(161, 17);
+            Label99.TabIndex = 90;
+            Label99.Text = "Date LATSettled Closed:";
+            // 
+            // Label101
+            // 
+            Label101.AutoSize = true;
+            Label101.Location = new System.Drawing.Point(20, 60);
+            Label101.Name = "Label101";
+            Label101.Size = new System.Drawing.Size(219, 17);
+            Label101.TabIndex = 58;
+            Label101.Text = "Date Met With Lawyer Re Denial:";
+            // 
+            // Label102
+            // 
+            Label102.AutoSize = true;
+            Label102.Location = new System.Drawing.Point(20, 93);
+            Label102.Name = "Label102";
+            Label102.Size = new System.Drawing.Size(143, 17);
+            Label102.TabIndex = 60;
+            Label102.Text = "Actual Date LATFiled:";
+            // 
+            // Label103
+            // 
+            Label103.AutoSize = true;
+            Label103.Location = new System.Drawing.Point(20, 126);
+            Label103.Name = "Label103";
+            Label103.Size = new System.Drawing.Size(185, 17);
+            Label103.TabIndex = 62;
+            Label103.Text = "Insurers Response Received:";
+            // 
+            // Label104
+            // 
+            Label104.AutoSize = true;
+            Label104.Location = new System.Drawing.Point(20, 159);
+            Label104.Name = "Label104";
+            Label104.Size = new System.Drawing.Size(137, 17);
+            Label104.TabIndex = 64;
+            Label104.Text = "LATCase Conf Date:";
+            // 
+            // Label105
+            // 
+            Label105.AutoSize = true;
+            Label105.Location = new System.Drawing.Point(20, 192);
+            Label105.Name = "Label105";
+            Label105.Size = new System.Drawing.Size(239, 17);
+            Label105.TabIndex = 66;
+            Label105.Text = "Deadline To Receive ABProductions:";
+            // 
+            // Label106
+            // 
+            Label106.AutoSize = true;
+            Label106.Location = new System.Drawing.Point(20, 225);
+            Label106.Name = "Label106";
+            Label106.Size = new System.Drawing.Size(383, 17);
+            Label106.TabIndex = 68;
+            Label106.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Label107
+            // 
+            Label107.AutoSize = true;
+            Label107.Location = new System.Drawing.Point(20, 258);
+            Label107.Name = "Label107";
+            Label107.Size = new System.Drawing.Size(265, 17);
+            Label107.TabIndex = 70;
+            Label107.Text = "Deadline To Receive Insurer Submissions:";
+            // 
+            // Label108
+            // 
+            Label108.AutoSize = true;
+            Label108.Location = new System.Drawing.Point(20, 291);
+            Label108.Name = "Label108";
+            Label108.Size = new System.Drawing.Size(131, 17);
+            Label108.TabIndex = 72;
+            Label108.Text = "Hearing Start Date:";
+            // 
+            // Label73
+            // 
+            Label73.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label73.AutoSize = true;
+            Label73.Location = new System.Drawing.Point(679, 21);
+            Label73.Name = "Label73";
+            Label73.Size = new System.Drawing.Size(256, 17);
+            Label73.TabIndex = 74;
+            Label73.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // Label74
+            // 
+            Label74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label74.AutoSize = true;
+            Label74.Location = new System.Drawing.Point(679, 54);
+            Label74.Name = "Label74";
+            Label74.Size = new System.Drawing.Size(175, 17);
+            Label74.TabIndex = 76;
+            Label74.Text = "Proposed Date To File LAT:";
+            // 
+            // Label75
+            // 
+            Label75.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label75.AutoSize = true;
+            Label75.Location = new System.Drawing.Point(679, 87);
+            Label75.Name = "Label75";
+            Label75.Size = new System.Drawing.Size(224, 17);
+            Label75.TabIndex = 78;
+            Label75.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // Label76
+            // 
+            Label76.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label76.AutoSize = true;
+            Label76.Location = new System.Drawing.Point(679, 120);
+            Label76.Name = "Label76";
+            Label76.Size = new System.Drawing.Size(286, 17);
+            Label76.TabIndex = 80;
+            Label76.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // Label77
+            // 
+            Label77.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label77.AutoSize = true;
+            Label77.Location = new System.Drawing.Point(679, 153);
+            Label77.Name = "Label77";
+            Label77.Size = new System.Drawing.Size(306, 17);
+            Label77.TabIndex = 82;
+            Label77.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // Label78
+            // 
+            Label78.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label78.AutoSize = true;
+            Label78.Location = new System.Drawing.Point(679, 186);
+            Label78.Name = "Label78";
+            Label78.Size = new System.Drawing.Size(352, 17);
+            Label78.TabIndex = 84;
+            Label78.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Label79
+            // 
+            Label79.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label79.AutoSize = true;
+            Label79.Location = new System.Drawing.Point(679, 219);
+            Label79.Name = "Label79";
+            Label79.Size = new System.Drawing.Size(407, 17);
+            Label79.TabIndex = 86;
+            Label79.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // Label80
+            // 
+            Label80.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label80.AutoSize = true;
+            Label80.Location = new System.Drawing.Point(679, 252);
+            Label80.Name = "Label80";
+            Label80.Size = new System.Drawing.Size(320, 17);
+            Label80.TabIndex = 88;
+            Label80.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // Label81
+            // 
+            Label81.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label81.AutoSize = true;
+            Label81.Location = new System.Drawing.Point(679, 285);
+            Label81.Name = "Label81";
+            Label81.Size = new System.Drawing.Size(161, 17);
+            Label81.TabIndex = 90;
+            Label81.Text = "Date LATSettled Closed:";
+            // 
+            // Label83
+            // 
+            Label83.AutoSize = true;
+            Label83.Location = new System.Drawing.Point(20, 60);
+            Label83.Name = "Label83";
+            Label83.Size = new System.Drawing.Size(219, 17);
+            Label83.TabIndex = 58;
+            Label83.Text = "Date Met With Lawyer Re Denial:";
+            // 
+            // Label84
+            // 
+            Label84.AutoSize = true;
+            Label84.Location = new System.Drawing.Point(20, 93);
+            Label84.Name = "Label84";
+            Label84.Size = new System.Drawing.Size(143, 17);
+            Label84.TabIndex = 60;
+            Label84.Text = "Actual Date LATFiled:";
+            // 
+            // Label85
+            // 
+            Label85.AutoSize = true;
+            Label85.Location = new System.Drawing.Point(20, 126);
+            Label85.Name = "Label85";
+            Label85.Size = new System.Drawing.Size(185, 17);
+            Label85.TabIndex = 62;
+            Label85.Text = "Insurers Response Received:";
+            // 
+            // Label86
+            // 
+            Label86.AutoSize = true;
+            Label86.Location = new System.Drawing.Point(20, 159);
+            Label86.Name = "Label86";
+            Label86.Size = new System.Drawing.Size(137, 17);
+            Label86.TabIndex = 64;
+            Label86.Text = "LATCase Conf Date:";
+            // 
+            // Label87
+            // 
+            Label87.AutoSize = true;
+            Label87.Location = new System.Drawing.Point(20, 192);
+            Label87.Name = "Label87";
+            Label87.Size = new System.Drawing.Size(239, 17);
+            Label87.TabIndex = 66;
+            Label87.Text = "Deadline To Receive ABProductions:";
+            // 
+            // Label88
+            // 
+            Label88.AutoSize = true;
+            Label88.Location = new System.Drawing.Point(20, 225);
+            Label88.Name = "Label88";
+            Label88.Size = new System.Drawing.Size(383, 17);
+            Label88.TabIndex = 68;
+            Label88.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Label89
+            // 
+            Label89.AutoSize = true;
+            Label89.Location = new System.Drawing.Point(20, 258);
+            Label89.Name = "Label89";
+            Label89.Size = new System.Drawing.Size(265, 17);
+            Label89.TabIndex = 70;
+            Label89.Text = "Deadline To Receive Insurer Submissions:";
+            // 
+            // Label90
+            // 
+            Label90.AutoSize = true;
+            Label90.Location = new System.Drawing.Point(20, 291);
+            Label90.Name = "Label90";
+            Label90.Size = new System.Drawing.Size(131, 17);
+            Label90.TabIndex = 72;
+            Label90.Text = "Hearing Start Date:";
+            // 
+            // Label55
+            // 
+            Label55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label55.AutoSize = true;
+            Label55.Location = new System.Drawing.Point(662, 21);
+            Label55.Name = "Label55";
+            Label55.Size = new System.Drawing.Size(256, 17);
+            Label55.TabIndex = 74;
+            Label55.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // Label56
+            // 
+            Label56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label56.AutoSize = true;
+            Label56.Location = new System.Drawing.Point(662, 54);
+            Label56.Name = "Label56";
+            Label56.Size = new System.Drawing.Size(175, 17);
+            Label56.TabIndex = 76;
+            Label56.Text = "Proposed Date To File LAT:";
+            // 
+            // Label57
+            // 
+            Label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label57.AutoSize = true;
+            Label57.Location = new System.Drawing.Point(662, 87);
+            Label57.Name = "Label57";
+            Label57.Size = new System.Drawing.Size(224, 17);
+            Label57.TabIndex = 78;
+            Label57.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // Label58
+            // 
+            Label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label58.AutoSize = true;
+            Label58.Location = new System.Drawing.Point(662, 120);
+            Label58.Name = "Label58";
+            Label58.Size = new System.Drawing.Size(286, 17);
+            Label58.TabIndex = 80;
+            Label58.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // Label59
+            // 
+            Label59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label59.AutoSize = true;
+            Label59.Location = new System.Drawing.Point(662, 153);
+            Label59.Name = "Label59";
+            Label59.Size = new System.Drawing.Size(306, 17);
+            Label59.TabIndex = 82;
+            Label59.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // Label60
+            // 
+            Label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label60.AutoSize = true;
+            Label60.Location = new System.Drawing.Point(662, 186);
+            Label60.Name = "Label60";
+            Label60.Size = new System.Drawing.Size(352, 17);
+            Label60.TabIndex = 84;
+            Label60.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Label61
+            // 
+            Label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label61.AutoSize = true;
+            Label61.Location = new System.Drawing.Point(662, 219);
+            Label61.Name = "Label61";
+            Label61.Size = new System.Drawing.Size(407, 17);
+            Label61.TabIndex = 86;
+            Label61.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // Label62
+            // 
+            Label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label62.AutoSize = true;
+            Label62.Location = new System.Drawing.Point(662, 252);
+            Label62.Name = "Label62";
+            Label62.Size = new System.Drawing.Size(320, 17);
+            Label62.TabIndex = 88;
+            Label62.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // Label63
+            // 
+            Label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            Label63.AutoSize = true;
+            Label63.Location = new System.Drawing.Point(662, 286);
+            Label63.Name = "Label63";
+            Label63.Size = new System.Drawing.Size(161, 17);
+            Label63.TabIndex = 90;
+            Label63.Text = "Date LATSettled Closed:";
+            // 
+            // Label65
+            // 
+            Label65.AutoSize = true;
+            Label65.Location = new System.Drawing.Point(20, 60);
+            Label65.Name = "Label65";
+            Label65.Size = new System.Drawing.Size(219, 17);
+            Label65.TabIndex = 58;
+            Label65.Text = "Date Met With Lawyer Re Denial:";
+            // 
+            // Label66
+            // 
+            Label66.AutoSize = true;
+            Label66.Location = new System.Drawing.Point(20, 93);
+            Label66.Name = "Label66";
+            Label66.Size = new System.Drawing.Size(143, 17);
+            Label66.TabIndex = 60;
+            Label66.Text = "Actual Date LATFiled:";
+            // 
+            // Label67
+            // 
+            Label67.AutoSize = true;
+            Label67.Location = new System.Drawing.Point(20, 126);
+            Label67.Name = "Label67";
+            Label67.Size = new System.Drawing.Size(185, 17);
+            Label67.TabIndex = 62;
+            Label67.Text = "Insurers Response Received:";
+            // 
+            // Label68
+            // 
+            Label68.AutoSize = true;
+            Label68.Location = new System.Drawing.Point(20, 159);
+            Label68.Name = "Label68";
+            Label68.Size = new System.Drawing.Size(137, 17);
+            Label68.TabIndex = 64;
+            Label68.Text = "LATCase Conf Date:";
+            // 
+            // Label69
+            // 
+            Label69.AutoSize = true;
+            Label69.Location = new System.Drawing.Point(20, 192);
+            Label69.Name = "Label69";
+            Label69.Size = new System.Drawing.Size(239, 17);
+            Label69.TabIndex = 66;
+            Label69.Text = "Deadline To Receive ABProductions:";
+            // 
+            // Label70
+            // 
+            Label70.AutoSize = true;
+            Label70.Location = new System.Drawing.Point(20, 225);
+            Label70.Name = "Label70";
+            Label70.Size = new System.Drawing.Size(383, 17);
+            Label70.TabIndex = 68;
+            Label70.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Label71
+            // 
+            Label71.AutoSize = true;
+            Label71.Location = new System.Drawing.Point(20, 258);
+            Label71.Name = "Label71";
+            Label71.Size = new System.Drawing.Size(265, 17);
+            Label71.TabIndex = 70;
+            Label71.Text = "Deadline To Receive Insurer Submissions:";
+            // 
+            // Label72
+            // 
+            Label72.AutoSize = true;
+            Label72.Location = new System.Drawing.Point(20, 291);
+            Label72.Name = "Label72";
+            Label72.Size = new System.Drawing.Size(131, 17);
+            Label72.TabIndex = 72;
+            Label72.Text = "Hearing Start Date:";
+            // 
+            // DueDateToDiscussPotentialLATApplLabel
+            // 
+            DueDateToDiscussPotentialLATApplLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            DueDateToDiscussPotentialLATApplLabel.AutoSize = true;
+            DueDateToDiscussPotentialLATApplLabel.Location = new System.Drawing.Point(679, 21);
+            DueDateToDiscussPotentialLATApplLabel.Name = "DueDateToDiscussPotentialLATApplLabel";
+            DueDateToDiscussPotentialLATApplLabel.Size = new System.Drawing.Size(256, 17);
+            DueDateToDiscussPotentialLATApplLabel.TabIndex = 38;
+            DueDateToDiscussPotentialLATApplLabel.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // ProposedDateToFileLATLabel
+            // 
+            ProposedDateToFileLATLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            ProposedDateToFileLATLabel.AutoSize = true;
+            ProposedDateToFileLATLabel.Location = new System.Drawing.Point(679, 54);
+            ProposedDateToFileLATLabel.Name = "ProposedDateToFileLATLabel";
+            ProposedDateToFileLATLabel.Size = new System.Drawing.Size(175, 17);
+            ProposedDateToFileLATLabel.TabIndex = 40;
+            ProposedDateToFileLATLabel.Text = "Proposed Date To File LAT:";
+            // 
+            // ActualDateLATServedOnInsurerLabel
+            // 
+            ActualDateLATServedOnInsurerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            ActualDateLATServedOnInsurerLabel.AutoSize = true;
+            ActualDateLATServedOnInsurerLabel.Location = new System.Drawing.Point(679, 87);
+            ActualDateLATServedOnInsurerLabel.Name = "ActualDateLATServedOnInsurerLabel";
+            ActualDateLATServedOnInsurerLabel.Size = new System.Drawing.Size(224, 17);
+            ActualDateLATServedOnInsurerLabel.TabIndex = 42;
+            ActualDateLATServedOnInsurerLabel.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // DeadlineToServeFileCaseConfSummaryLabel
+            // 
+            DeadlineToServeFileCaseConfSummaryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            DeadlineToServeFileCaseConfSummaryLabel.AutoSize = true;
+            DeadlineToServeFileCaseConfSummaryLabel.Location = new System.Drawing.Point(679, 120);
+            DeadlineToServeFileCaseConfSummaryLabel.Name = "DeadlineToServeFileCaseConfSummaryLabel";
+            DeadlineToServeFileCaseConfSummaryLabel.Size = new System.Drawing.Size(286, 17);
+            DeadlineToServeFileCaseConfSummaryLabel.TabIndex = 44;
+            DeadlineToServeFileCaseConfSummaryLabel.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // DeadlineToDeliverProductionsToABCounselLabel
+            // 
+            DeadlineToDeliverProductionsToABCounselLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            DeadlineToDeliverProductionsToABCounselLabel.AutoSize = true;
+            DeadlineToDeliverProductionsToABCounselLabel.Location = new System.Drawing.Point(679, 153);
+            DeadlineToDeliverProductionsToABCounselLabel.Name = "DeadlineToDeliverProductionsToABCounselLabel";
+            DeadlineToDeliverProductionsToABCounselLabel.Size = new System.Drawing.Size(306, 17);
+            DeadlineToDeliverProductionsToABCounselLabel.TabIndex = 46;
+            DeadlineToDeliverProductionsToABCounselLabel.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel
+            // 
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.AutoSize = true;
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Location = new System.Drawing.Point(679, 186);
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Name = "DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel";
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Size = new System.Drawing.Size(352, 17);
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.TabIndex = 48;
+            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel
+            // 
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.AutoSize = true;
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Location = new System.Drawing.Point(679, 219);
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Name = "DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel";
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Size = new System.Drawing.Size(407, 17);
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.TabIndex = 50;
+            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // DeadlineForReplySubmissionsOfTheApplicantLabel
+            // 
+            DeadlineForReplySubmissionsOfTheApplicantLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            DeadlineForReplySubmissionsOfTheApplicantLabel.AutoSize = true;
+            DeadlineForReplySubmissionsOfTheApplicantLabel.Location = new System.Drawing.Point(679, 252);
+            DeadlineForReplySubmissionsOfTheApplicantLabel.Name = "DeadlineForReplySubmissionsOfTheApplicantLabel";
+            DeadlineForReplySubmissionsOfTheApplicantLabel.Size = new System.Drawing.Size(320, 17);
+            DeadlineForReplySubmissionsOfTheApplicantLabel.TabIndex = 52;
+            DeadlineForReplySubmissionsOfTheApplicantLabel.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // DateLATSettledClosedLabel
+            // 
+            DateLATSettledClosedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            DateLATSettledClosedLabel.AutoSize = true;
+            DateLATSettledClosedLabel.Location = new System.Drawing.Point(679, 286);
+            DateLATSettledClosedLabel.Name = "DateLATSettledClosedLabel";
+            DateLATSettledClosedLabel.Size = new System.Drawing.Size(161, 17);
+            DateLATSettledClosedLabel.TabIndex = 54;
+            DateLATSettledClosedLabel.Text = "Date LATSettled Closed:";
+            // 
+            // DateMetWithLawyerReDenialLabel
+            // 
+            DateMetWithLawyerReDenialLabel.AutoSize = true;
+            DateMetWithLawyerReDenialLabel.Location = new System.Drawing.Point(20, 60);
+            DateMetWithLawyerReDenialLabel.Name = "DateMetWithLawyerReDenialLabel";
+            DateMetWithLawyerReDenialLabel.Size = new System.Drawing.Size(219, 17);
+            DateMetWithLawyerReDenialLabel.TabIndex = 4;
+            DateMetWithLawyerReDenialLabel.Text = "Date Met With Lawyer Re Denial:";
+            // 
+            // ActualDateLATFiledLabel
+            // 
+            ActualDateLATFiledLabel.AutoSize = true;
+            ActualDateLATFiledLabel.Location = new System.Drawing.Point(20, 93);
+            ActualDateLATFiledLabel.Name = "ActualDateLATFiledLabel";
+            ActualDateLATFiledLabel.Size = new System.Drawing.Size(143, 17);
+            ActualDateLATFiledLabel.TabIndex = 6;
+            ActualDateLATFiledLabel.Text = "Actual Date LATFiled:";
+            // 
+            // InsurersResponseReceivedLabel
+            // 
+            InsurersResponseReceivedLabel.AutoSize = true;
+            InsurersResponseReceivedLabel.Location = new System.Drawing.Point(20, 126);
+            InsurersResponseReceivedLabel.Name = "InsurersResponseReceivedLabel";
+            InsurersResponseReceivedLabel.Size = new System.Drawing.Size(185, 17);
+            InsurersResponseReceivedLabel.TabIndex = 8;
+            InsurersResponseReceivedLabel.Text = "Insurers Response Received:";
+            // 
+            // LATCaseConfDateLabel
+            // 
+            LATCaseConfDateLabel.AutoSize = true;
+            LATCaseConfDateLabel.Location = new System.Drawing.Point(20, 159);
+            LATCaseConfDateLabel.Name = "LATCaseConfDateLabel";
+            LATCaseConfDateLabel.Size = new System.Drawing.Size(137, 17);
+            LATCaseConfDateLabel.TabIndex = 10;
+            LATCaseConfDateLabel.Text = "LATCase Conf Date:";
+            // 
+            // DeadlineToReceiveABProductionsLabel
+            // 
+            DeadlineToReceiveABProductionsLabel.AutoSize = true;
+            DeadlineToReceiveABProductionsLabel.Location = new System.Drawing.Point(20, 192);
+            DeadlineToReceiveABProductionsLabel.Name = "DeadlineToReceiveABProductionsLabel";
+            DeadlineToReceiveABProductionsLabel.Size = new System.Drawing.Size(239, 17);
+            DeadlineToReceiveABProductionsLabel.TabIndex = 12;
+            DeadlineToReceiveABProductionsLabel.Text = "Deadline To Receive ABProductions:";
+            // 
+            // DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel
+            // 
+            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.AutoSize = true;
+            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Location = new System.Drawing.Point(20, 225);
+            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Name = "DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel";
+            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Size = new System.Drawing.Size(383, 17);
+            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.TabIndex = 14;
+            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // DeadlineToReceiveInsurerSubmissionsLabel
+            // 
+            DeadlineToReceiveInsurerSubmissionsLabel.AutoSize = true;
+            DeadlineToReceiveInsurerSubmissionsLabel.Location = new System.Drawing.Point(20, 258);
+            DeadlineToReceiveInsurerSubmissionsLabel.Name = "DeadlineToReceiveInsurerSubmissionsLabel";
+            DeadlineToReceiveInsurerSubmissionsLabel.Size = new System.Drawing.Size(265, 17);
+            DeadlineToReceiveInsurerSubmissionsLabel.TabIndex = 16;
+            DeadlineToReceiveInsurerSubmissionsLabel.Text = "Deadline To Receive Insurer Submissions:";
+            // 
+            // HearingStartDateLabel
+            // 
+            HearingStartDateLabel.AutoSize = true;
+            HearingStartDateLabel.Location = new System.Drawing.Point(20, 291);
+            HearingStartDateLabel.Name = "HearingStartDateLabel";
+            HearingStartDateLabel.Size = new System.Drawing.Size(131, 17);
+            HearingStartDateLabel.TabIndex = 18;
+            HearingStartDateLabel.Text = "Hearing Start Date:";
             // 
             // InvoicesDataGridView
             // 
@@ -2304,7 +3561,7 @@
             this.TrialDate.CustomFormat = "\' \'";
             this.TrialDate.Enabled = false;
             this.TrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TrialDate.Location = new System.Drawing.Point(1019, 331);
+            this.TrialDate.Location = new System.Drawing.Point(985, 331);
             this.TrialDate.Name = "TrialDate";
             this.TrialDate.Size = new System.Drawing.Size(19, 23);
             this.TrialDate.TabIndex = 185;
@@ -2313,7 +3570,7 @@
             // 
             this.txtTrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtTrialDate.Location = new System.Drawing.Point(821, 331);
+            this.txtTrialDate.Location = new System.Drawing.Point(787, 331);
             this.txtTrialDate.Name = "txtTrialDate";
             this.txtTrialDate.ReadOnly = true;
             this.txtTrialDate.Size = new System.Drawing.Size(198, 23);
@@ -2324,7 +3581,7 @@
             this.label276.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label276.AutoSize = true;
             this.label276.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label276.Location = new System.Drawing.Point(534, 334);
+            this.label276.Location = new System.Drawing.Point(500, 334);
             this.label276.Name = "label276";
             this.label276.Size = new System.Drawing.Size(70, 16);
             this.label276.TabIndex = 183;
@@ -2338,7 +3595,7 @@
             this.PreTrialResolutionDate.CustomFormat = "\' \'";
             this.PreTrialResolutionDate.Enabled = false;
             this.PreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialResolutionDate.Location = new System.Drawing.Point(1019, 303);
+            this.PreTrialResolutionDate.Location = new System.Drawing.Point(985, 303);
             this.PreTrialResolutionDate.Name = "PreTrialResolutionDate";
             this.PreTrialResolutionDate.Size = new System.Drawing.Size(19, 23);
             this.PreTrialResolutionDate.TabIndex = 182;
@@ -2347,7 +3604,7 @@
             // 
             this.txtPreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(821, 303);
+            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(787, 303);
             this.txtPreTrialResolutionDate.Name = "txtPreTrialResolutionDate";
             this.txtPreTrialResolutionDate.ReadOnly = true;
             this.txtPreTrialResolutionDate.Size = new System.Drawing.Size(198, 23);
@@ -2361,7 +3618,7 @@
             this.PreTrialToBeServedDate.CustomFormat = "\' \'";
             this.PreTrialToBeServedDate.Enabled = false;
             this.PreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(1019, 275);
+            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(985, 275);
             this.PreTrialToBeServedDate.Name = "PreTrialToBeServedDate";
             this.PreTrialToBeServedDate.Size = new System.Drawing.Size(19, 23);
             this.PreTrialToBeServedDate.TabIndex = 179;
@@ -2369,7 +3626,7 @@
             // txtPreTrialToBeServedDate
             // 
             this.txtPreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(822, 275);
+            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(788, 275);
             this.txtPreTrialToBeServedDate.Name = "txtPreTrialToBeServedDate";
             this.txtPreTrialToBeServedDate.ReadOnly = true;
             this.txtPreTrialToBeServedDate.Size = new System.Drawing.Size(200, 23);
@@ -2383,7 +3640,7 @@
             this.PrePreTrialMeetingDate.CustomFormat = "\' \'";
             this.PrePreTrialMeetingDate.Enabled = false;
             this.PrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(1020, 247);
+            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(986, 247);
             this.PrePreTrialMeetingDate.Name = "PrePreTrialMeetingDate";
             this.PrePreTrialMeetingDate.Size = new System.Drawing.Size(19, 23);
             this.PrePreTrialMeetingDate.TabIndex = 176;
@@ -2392,7 +3649,7 @@
             // 
             this.TxtPrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(822, 247);
+            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(788, 247);
             this.TxtPrePreTrialMeetingDate.Name = "TxtPrePreTrialMeetingDate";
             this.TxtPrePreTrialMeetingDate.ReadOnly = true;
             this.TxtPrePreTrialMeetingDate.Size = new System.Drawing.Size(198, 23);
@@ -2406,7 +3663,7 @@
             this.ResolutionDate.CustomFormat = "\' \'";
             this.ResolutionDate.Enabled = false;
             this.ResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ResolutionDate.Location = new System.Drawing.Point(1019, 146);
+            this.ResolutionDate.Location = new System.Drawing.Point(985, 146);
             this.ResolutionDate.Name = "ResolutionDate";
             this.ResolutionDate.Size = new System.Drawing.Size(19, 23);
             this.ResolutionDate.TabIndex = 173;
@@ -2415,7 +3672,7 @@
             // 
             this.txtResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtResolutionDate.Location = new System.Drawing.Point(823, 146);
+            this.txtResolutionDate.Location = new System.Drawing.Point(789, 146);
             this.txtResolutionDate.Name = "txtResolutionDate";
             this.txtResolutionDate.ReadOnly = true;
             this.txtResolutionDate.Size = new System.Drawing.Size(196, 23);
@@ -2429,7 +3686,7 @@
             this.MemoToBeServedDate.CustomFormat = "\' \'";
             this.MemoToBeServedDate.Enabled = false;
             this.MemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MemoToBeServedDate.Location = new System.Drawing.Point(1019, 96);
+            this.MemoToBeServedDate.Location = new System.Drawing.Point(985, 96);
             this.MemoToBeServedDate.Name = "MemoToBeServedDate";
             this.MemoToBeServedDate.Size = new System.Drawing.Size(19, 23);
             this.MemoToBeServedDate.TabIndex = 170;
@@ -2437,7 +3694,7 @@
             // TxtMemoToBeServedDate
             // 
             this.TxtMemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(822, 96);
+            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(788, 96);
             this.TxtMemoToBeServedDate.Name = "TxtMemoToBeServedDate";
             this.TxtMemoToBeServedDate.ReadOnly = true;
             this.TxtMemoToBeServedDate.Size = new System.Drawing.Size(200, 23);
@@ -2448,7 +3705,7 @@
             this.label271.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label271.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label271.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label271.Location = new System.Drawing.Point(539, 85);
+            this.label271.Location = new System.Drawing.Point(505, 85);
             this.label271.Name = "label271";
             this.label271.Size = new System.Drawing.Size(501, 45);
             this.label271.TabIndex = 168;
@@ -2463,7 +3720,7 @@
             this.TimelineSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TimelineSaveBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimelineSaveBtn.ForeColor = System.Drawing.Color.White;
-            this.TimelineSaveBtn.Location = new System.Drawing.Point(1082, 338);
+            this.TimelineSaveBtn.Location = new System.Drawing.Point(1048, 376);
             this.TimelineSaveBtn.Name = "TimelineSaveBtn";
             this.TimelineSaveBtn.Size = new System.Drawing.Size(175, 37);
             this.TimelineSaveBtn.TabIndex = 167;
@@ -2479,7 +3736,7 @@
             this.TBoxAllDefendantUndertakingRecd.CustomFormat = "\' \'";
             this.TBoxAllDefendantUndertakingRecd.Enabled = false;
             this.TBoxAllDefendantUndertakingRecd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(1020, 51);
+            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(986, 51);
             this.TBoxAllDefendantUndertakingRecd.Name = "TBoxAllDefendantUndertakingRecd";
             this.TBoxAllDefendantUndertakingRecd.Size = new System.Drawing.Size(19, 23);
             this.TBoxAllDefendantUndertakingRecd.TabIndex = 166;
@@ -2493,7 +3750,7 @@
             this.TBoxDatePlaintiffUndertakingComplete.CustomFormat = "\' \'";
             this.TBoxDatePlaintiffUndertakingComplete.Enabled = false;
             this.TBoxDatePlaintiffUndertakingComplete.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(1020, 24);
+            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(986, 24);
             this.TBoxDatePlaintiffUndertakingComplete.Name = "TBoxDatePlaintiffUndertakingComplete";
             this.TBoxDatePlaintiffUndertakingComplete.Size = new System.Drawing.Size(19, 23);
             this.TBoxDatePlaintiffUndertakingComplete.TabIndex = 165;
@@ -2507,7 +3764,7 @@
             this.TBoxDateTrialRecordFiled.CustomFormat = "\' \'";
             this.TBoxDateTrialRecordFiled.Enabled = false;
             this.TBoxDateTrialRecordFiled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(1020, 220);
+            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(986, 220);
             this.TBoxDateTrialRecordFiled.Name = "TBoxDateTrialRecordFiled";
             this.TBoxDateTrialRecordFiled.Size = new System.Drawing.Size(19, 23);
             this.TBoxDateTrialRecordFiled.TabIndex = 164;
@@ -2586,7 +3843,7 @@
             this.TBoxDateToFileTrialRecordBy.CustomFormat = "\' \'";
             this.TBoxDateToFileTrialRecordBy.Enabled = false;
             this.TBoxDateToFileTrialRecordBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(1021, 193);
+            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(987, 193);
             this.TBoxDateToFileTrialRecordBy.Name = "TBoxDateToFileTrialRecordBy";
             this.TBoxDateToFileTrialRecordBy.Size = new System.Drawing.Size(19, 23);
             this.TBoxDateToFileTrialRecordBy.TabIndex = 158;
@@ -2787,7 +4044,7 @@
             // TBoxDateToFileTrialRecordByTextBox
             // 
             this.TBoxDateToFileTrialRecordByTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateToFileTrialRecordByTextBox.Location = new System.Drawing.Point(823, 193);
+            this.TBoxDateToFileTrialRecordByTextBox.Location = new System.Drawing.Point(789, 193);
             this.TBoxDateToFileTrialRecordByTextBox.Name = "TBoxDateToFileTrialRecordByTextBox";
             this.TBoxDateToFileTrialRecordByTextBox.ReadOnly = true;
             this.TBoxDateToFileTrialRecordByTextBox.Size = new System.Drawing.Size(199, 23);
@@ -2796,7 +4053,7 @@
             // TBoxDateTrialRecordFiledTextBox
             // 
             this.TBoxDateTrialRecordFiledTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateTrialRecordFiledTextBox.Location = new System.Drawing.Point(823, 220);
+            this.TBoxDateTrialRecordFiledTextBox.Location = new System.Drawing.Point(789, 220);
             this.TBoxDateTrialRecordFiledTextBox.Name = "TBoxDateTrialRecordFiledTextBox";
             this.TBoxDateTrialRecordFiledTextBox.ReadOnly = true;
             this.TBoxDateTrialRecordFiledTextBox.Size = new System.Drawing.Size(200, 23);
@@ -2805,7 +4062,7 @@
             // TBoxAllDefendantUndertakingRecdTextBox
             // 
             this.TBoxAllDefendantUndertakingRecdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxAllDefendantUndertakingRecdTextBox.Location = new System.Drawing.Point(823, 51);
+            this.TBoxAllDefendantUndertakingRecdTextBox.Location = new System.Drawing.Point(789, 51);
             this.TBoxAllDefendantUndertakingRecdTextBox.Name = "TBoxAllDefendantUndertakingRecdTextBox";
             this.TBoxAllDefendantUndertakingRecdTextBox.ReadOnly = true;
             this.TBoxAllDefendantUndertakingRecdTextBox.Size = new System.Drawing.Size(200, 23);
@@ -2814,7 +4071,7 @@
             // TBoxDatePlaintiffUndertakingCompleteTextBox
             // 
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDatePlaintiffUndertakingCompleteTextBox.Location = new System.Drawing.Point(823, 24);
+            this.TBoxDatePlaintiffUndertakingCompleteTextBox.Location = new System.Drawing.Point(789, 24);
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Name = "TBoxDatePlaintiffUndertakingCompleteTextBox";
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.ReadOnly = true;
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Size = new System.Drawing.Size(200, 23);
@@ -4023,7 +5280,7 @@
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(1231, 382);
+            this.Btn_Save.Location = new System.Drawing.Point(1231, 390);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -4926,7 +6183,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1204, 380);
+            this.btnSave.Location = new System.Drawing.Point(1204, 388);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -5443,11 +6700,4281 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.TabControl4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 43);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1342, 362);
             this.panel5.TabIndex = 59;
+            // 
+            // TabControl4
+            // 
+            this.TabControl4.Controls.Add(this.Summary);
+            this.TabControl4.Controls.Add(this.LAT1);
+            this.TabControl4.Controls.Add(this.LAT2);
+            this.TabControl4.Controls.Add(this.LAT3);
+            this.TabControl4.Controls.Add(this.LAT4);
+            this.TabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControl4.Location = new System.Drawing.Point(0, 0);
+            this.TabControl4.Name = "TabControl4";
+            this.TabControl4.SelectedIndex = 0;
+            this.TabControl4.Size = new System.Drawing.Size(1342, 362);
+            this.TabControl4.TabIndex = 2;
+            // 
+            // Summary
+            // 
+            this.Summary.AutoScroll = true;
+            this.Summary.Controls.Add(this.GroupBoxLat4);
+            this.Summary.Controls.Add(this.GroupBoxLat3);
+            this.Summary.Controls.Add(this.GroupBoxLat2);
+            this.Summary.Controls.Add(this.GroupBoxLat1);
+            this.Summary.Location = new System.Drawing.Point(4, 26);
+            this.Summary.Name = "Summary";
+            this.Summary.Padding = new System.Windows.Forms.Padding(3);
+            this.Summary.Size = new System.Drawing.Size(1334, 332);
+            this.Summary.TabIndex = 4;
+            this.Summary.Text = "Summary";
+            this.Summary.UseVisualStyleBackColor = true;
+            // 
+            // GroupBoxLat4
+            // 
+            this.GroupBoxLat4.Controls.Add(this.GroupBox40);
+            this.GroupBoxLat4.Controls.Add(this.TableLayoutPanel16);
+            this.GroupBoxLat4.Controls.Add(this.TableLayoutPanel17);
+            this.GroupBoxLat4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBoxLat4.Location = new System.Drawing.Point(19, 1055);
+            this.GroupBoxLat4.Name = "GroupBoxLat4";
+            this.GroupBoxLat4.Size = new System.Drawing.Size(1291, 342);
+            this.GroupBoxLat4.TabIndex = 44;
+            this.GroupBoxLat4.TabStop = false;
+            this.GroupBoxLat4.Text = "LAT#4";
+            // 
+            // GroupBox40
+            // 
+            this.GroupBox40.Controls.Add(this.TableLayoutPanel14);
+            this.GroupBox40.Controls.Add(this.TableLayoutPanel15);
+            this.GroupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox40.Location = new System.Drawing.Point(1138, 343);
+            this.GroupBox40.Name = "GroupBox40";
+            this.GroupBox40.Size = new System.Drawing.Size(1285, 338);
+            this.GroupBox40.TabIndex = 41;
+            this.GroupBox40.TabStop = false;
+            this.GroupBox40.Text = "LAT#1";
+            // 
+            // TableLayoutPanel14
+            // 
+            this.TableLayoutPanel14.ColumnCount = 1;
+            this.TableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel14.Controls.Add(this.TextBox150, 0, 7);
+            this.TableLayoutPanel14.Controls.Add(this.TextBox151, 0, 6);
+            this.TableLayoutPanel14.Controls.Add(this.TextBox152, 0, 5);
+            this.TableLayoutPanel14.Controls.Add(this.TextBox153, 0, 4);
+            this.TableLayoutPanel14.Controls.Add(this.TextBox154, 0, 3);
+            this.TableLayoutPanel14.Controls.Add(this.TextBox155, 0, 2);
+            this.TableLayoutPanel14.Controls.Add(this.TextBox156, 0, 1);
+            this.TableLayoutPanel14.Controls.Add(this.Label200, 0, 0);
+            this.TableLayoutPanel14.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel14.Name = "TableLayoutPanel14";
+            this.TableLayoutPanel14.RowCount = 8;
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel14.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel14.TabIndex = 41;
+            // 
+            // TextBox150
+            // 
+            this.TextBox150.Location = new System.Drawing.Point(3, 262);
+            this.TextBox150.Name = "TextBox150";
+            this.TextBox150.Size = new System.Drawing.Size(166, 22);
+            this.TextBox150.TabIndex = 64;
+            // 
+            // TextBox151
+            // 
+            this.TextBox151.Location = new System.Drawing.Point(3, 225);
+            this.TextBox151.Name = "TextBox151";
+            this.TextBox151.Size = new System.Drawing.Size(166, 22);
+            this.TextBox151.TabIndex = 63;
+            // 
+            // TextBox152
+            // 
+            this.TextBox152.Location = new System.Drawing.Point(3, 188);
+            this.TextBox152.Name = "TextBox152";
+            this.TextBox152.Size = new System.Drawing.Size(166, 22);
+            this.TextBox152.TabIndex = 62;
+            // 
+            // TextBox153
+            // 
+            this.TextBox153.Location = new System.Drawing.Point(3, 151);
+            this.TextBox153.Name = "TextBox153";
+            this.TextBox153.Size = new System.Drawing.Size(166, 22);
+            this.TextBox153.TabIndex = 61;
+            // 
+            // TextBox154
+            // 
+            this.TextBox154.Location = new System.Drawing.Point(3, 114);
+            this.TextBox154.Name = "TextBox154";
+            this.TextBox154.Size = new System.Drawing.Size(166, 22);
+            this.TextBox154.TabIndex = 60;
+            // 
+            // TextBox155
+            // 
+            this.TextBox155.Location = new System.Drawing.Point(3, 77);
+            this.TextBox155.Name = "TextBox155";
+            this.TextBox155.Size = new System.Drawing.Size(166, 22);
+            this.TextBox155.TabIndex = 59;
+            // 
+            // TextBox156
+            // 
+            this.TextBox156.Location = new System.Drawing.Point(3, 40);
+            this.TextBox156.Name = "TextBox156";
+            this.TextBox156.Size = new System.Drawing.Size(166, 22);
+            this.TextBox156.TabIndex = 58;
+            // 
+            // Label200
+            // 
+            this.Label200.AutoSize = true;
+            this.Label200.Location = new System.Drawing.Point(3, 0);
+            this.Label200.Name = "Label200";
+            this.Label200.Size = new System.Drawing.Size(53, 16);
+            this.Label200.TabIndex = 0;
+            this.Label200.Text = "Issues";
+            // 
+            // TableLayoutPanel15
+            // 
+            this.TableLayoutPanel15.ColumnCount = 4;
+            this.TableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel15.Controls.Add(this.TextBox157, 1, 0);
+            this.TableLayoutPanel15.Controls.Add(this.Label201, 2, 1);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox158, 3, 6);
+            this.TableLayoutPanel15.Controls.Add(this.Label202, 0, 0);
+            this.TableLayoutPanel15.Controls.Add(this.Label203, 2, 6);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox159, 1, 6);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox160, 1, 1);
+            this.TableLayoutPanel15.Controls.Add(this.Label204, 0, 6);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox161, 3, 4);
+            this.TableLayoutPanel15.Controls.Add(this.Label205, 0, 1);
+            this.TableLayoutPanel15.Controls.Add(this.Label206, 2, 4);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox162, 1, 5);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox163, 3, 3);
+            this.TableLayoutPanel15.Controls.Add(this.Label207, 0, 5);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox164, 3, 0);
+            this.TableLayoutPanel15.Controls.Add(this.Label208, 2, 3);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox165, 3, 2);
+            this.TableLayoutPanel15.Controls.Add(this.Label209, 2, 0);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox166, 1, 4);
+            this.TableLayoutPanel15.Controls.Add(this.Label210, 2, 2);
+            this.TableLayoutPanel15.Controls.Add(this.Label211, 0, 4);
+            this.TableLayoutPanel15.Controls.Add(this.Label212, 0, 2);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox167, 1, 2);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox168, 1, 3);
+            this.TableLayoutPanel15.Controls.Add(this.Label213, 0, 3);
+            this.TableLayoutPanel15.Controls.Add(this.TextBox169, 3, 1);
+            this.TableLayoutPanel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel15.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel15.Name = "TableLayoutPanel15";
+            this.TableLayoutPanel15.RowCount = 7;
+            this.TableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel15.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel15.TabIndex = 40;
+            // 
+            // TextBox157
+            // 
+            this.TextBox157.Location = new System.Drawing.Point(180, 3);
+            this.TextBox157.Name = "TextBox157";
+            this.TextBox157.Size = new System.Drawing.Size(171, 22);
+            this.TextBox157.TabIndex = 16;
+            // 
+            // Label201
+            // 
+            this.Label201.AutoSize = true;
+            this.Label201.Location = new System.Drawing.Point(357, 43);
+            this.Label201.Name = "Label201";
+            this.Label201.Size = new System.Drawing.Size(111, 16);
+            this.Label201.TabIndex = 26;
+            this.Label201.Text = "Case Adjudicator";
+            // 
+            // TextBox158
+            // 
+            this.TextBox158.Location = new System.Drawing.Point(534, 261);
+            this.TextBox158.Name = "TextBox158";
+            this.TextBox158.Size = new System.Drawing.Size(172, 22);
+            this.TextBox158.TabIndex = 39;
+            // 
+            // Label202
+            // 
+            this.Label202.AutoSize = true;
+            this.Label202.Location = new System.Drawing.Point(3, 0);
+            this.Label202.Name = "Label202";
+            this.Label202.Size = new System.Drawing.Size(70, 16);
+            this.Label202.TabIndex = 8;
+            this.Label202.Text = "Filed Date";
+            // 
+            // Label203
+            // 
+            this.Label203.AutoSize = true;
+            this.Label203.Location = new System.Drawing.Point(357, 258);
+            this.Label203.Name = "Label203";
+            this.Label203.Size = new System.Drawing.Size(98, 16);
+            this.Label203.TabIndex = 31;
+            this.Label203.Text = "Amount Settled";
+            // 
+            // TextBox159
+            // 
+            this.TextBox159.Location = new System.Drawing.Point(180, 261);
+            this.TextBox159.Name = "TextBox159";
+            this.TextBox159.Size = new System.Drawing.Size(171, 22);
+            this.TextBox159.TabIndex = 23;
+            // 
+            // TextBox160
+            // 
+            this.TextBox160.Location = new System.Drawing.Point(180, 46);
+            this.TextBox160.Name = "TextBox160";
+            this.TextBox160.Size = new System.Drawing.Size(171, 22);
+            this.TextBox160.TabIndex = 18;
+            // 
+            // Label204
+            // 
+            this.Label204.AutoSize = true;
+            this.Label204.Location = new System.Drawing.Point(3, 258);
+            this.Label204.Name = "Label204";
+            this.Label204.Size = new System.Drawing.Size(82, 16);
+            this.Label204.TabIndex = 15;
+            this.Label204.Text = "Date Settled";
+            // 
+            // TextBox161
+            // 
+            this.TextBox161.Location = new System.Drawing.Point(534, 175);
+            this.TextBox161.Name = "TextBox161";
+            this.TextBox161.Size = new System.Drawing.Size(172, 22);
+            this.TextBox161.TabIndex = 37;
+            // 
+            // Label205
+            // 
+            this.Label205.AutoSize = true;
+            this.Label205.Location = new System.Drawing.Point(3, 43);
+            this.Label205.Name = "Label205";
+            this.Label205.Size = new System.Drawing.Size(70, 16);
+            this.Label205.TabIndex = 10;
+            this.Label205.Text = "Case Conf";
+            // 
+            // Label206
+            // 
+            this.Label206.AutoSize = true;
+            this.Label206.Location = new System.Drawing.Point(357, 172);
+            this.Label206.Name = "Label206";
+            this.Label206.Size = new System.Drawing.Size(88, 16);
+            this.Label206.TabIndex = 29;
+            this.Label206.Text = "Hearing Date";
+            // 
+            // TextBox162
+            // 
+            this.TextBox162.Location = new System.Drawing.Point(180, 218);
+            this.TextBox162.Name = "TextBox162";
+            this.TextBox162.Size = new System.Drawing.Size(171, 22);
+            this.TextBox162.TabIndex = 22;
+            // 
+            // TextBox163
+            // 
+            this.TextBox163.Location = new System.Drawing.Point(534, 132);
+            this.TextBox163.Name = "TextBox163";
+            this.TextBox163.Size = new System.Drawing.Size(172, 22);
+            this.TextBox163.TabIndex = 36;
+            // 
+            // Label207
+            // 
+            this.Label207.AutoSize = true;
+            this.Label207.Location = new System.Drawing.Point(3, 215);
+            this.Label207.Name = "Label207";
+            this.Label207.Size = new System.Drawing.Size(127, 16);
+            this.Label207.TabIndex = 14;
+            this.Label207.Text = "Hearing Adjudicator";
+            // 
+            // TextBox164
+            // 
+            this.TextBox164.Location = new System.Drawing.Point(534, 3);
+            this.TextBox164.Name = "TextBox164";
+            this.TextBox164.Size = new System.Drawing.Size(172, 22);
+            this.TextBox164.TabIndex = 32;
+            // 
+            // Label208
+            // 
+            this.Label208.AutoSize = true;
+            this.Label208.Location = new System.Drawing.Point(357, 129);
+            this.Label208.Name = "Label208";
+            this.Label208.Size = new System.Drawing.Size(77, 16);
+            this.Label208.TabIndex = 28;
+            this.Label208.Text = "Insurer Firm";
+            // 
+            // TextBox165
+            // 
+            this.TextBox165.Location = new System.Drawing.Point(534, 89);
+            this.TextBox165.Name = "TextBox165";
+            this.TextBox165.Size = new System.Drawing.Size(172, 22);
+            this.TextBox165.TabIndex = 35;
+            // 
+            // Label209
+            // 
+            this.Label209.AutoSize = true;
+            this.Label209.Location = new System.Drawing.Point(357, 0);
+            this.Label209.Name = "Label209";
+            this.Label209.Size = new System.Drawing.Size(108, 16);
+            this.Label209.TabIndex = 24;
+            this.Label209.Text = "Tribunal Number";
+            // 
+            // TextBox166
+            // 
+            this.TextBox166.Location = new System.Drawing.Point(180, 175);
+            this.TextBox166.Name = "TextBox166";
+            this.TextBox166.Size = new System.Drawing.Size(171, 22);
+            this.TextBox166.TabIndex = 21;
+            // 
+            // Label210
+            // 
+            this.Label210.AutoSize = true;
+            this.Label210.Location = new System.Drawing.Point(357, 86);
+            this.Label210.Name = "Label210";
+            this.Label210.Size = new System.Drawing.Size(48, 16);
+            this.Label210.TabIndex = 27;
+            this.Label210.Text = "Insurer";
+            // 
+            // Label211
+            // 
+            this.Label211.AutoSize = true;
+            this.Label211.Location = new System.Drawing.Point(3, 172);
+            this.Label211.Name = "Label211";
+            this.Label211.Size = new System.Drawing.Size(91, 16);
+            this.Label211.TabIndex = 13;
+            this.Label211.Text = "Hearing Type";
+            // 
+            // Label212
+            // 
+            this.Label212.AutoSize = true;
+            this.Label212.Location = new System.Drawing.Point(3, 86);
+            this.Label212.Name = "Label212";
+            this.Label212.Size = new System.Drawing.Size(57, 16);
+            this.Label212.TabIndex = 11;
+            this.Label212.Text = "Adjuster";
+            // 
+            // TextBox167
+            // 
+            this.TextBox167.Location = new System.Drawing.Point(180, 89);
+            this.TextBox167.Name = "TextBox167";
+            this.TextBox167.Size = new System.Drawing.Size(171, 22);
+            this.TextBox167.TabIndex = 19;
+            // 
+            // TextBox168
+            // 
+            this.TextBox168.Location = new System.Drawing.Point(180, 132);
+            this.TextBox168.Name = "TextBox168";
+            this.TextBox168.Size = new System.Drawing.Size(171, 22);
+            this.TextBox168.TabIndex = 20;
+            // 
+            // Label213
+            // 
+            this.Label213.AutoSize = true;
+            this.Label213.Location = new System.Drawing.Point(3, 129);
+            this.Label213.Name = "Label213";
+            this.Label213.Size = new System.Drawing.Size(100, 16);
+            this.Label213.TabIndex = 12;
+            this.Label213.Text = "Insurer Counsel";
+            // 
+            // TextBox169
+            // 
+            this.TextBox169.Location = new System.Drawing.Point(534, 46);
+            this.TextBox169.Name = "TextBox169";
+            this.TextBox169.Size = new System.Drawing.Size(172, 22);
+            this.TextBox169.TabIndex = 34;
+            // 
+            // TableLayoutPanel16
+            // 
+            this.TableLayoutPanel16.ColumnCount = 1;
+            this.TableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel16.Controls.Add(this.Issues7Lat4, 0, 7);
+            this.TableLayoutPanel16.Controls.Add(this.Issues6Lat4, 0, 6);
+            this.TableLayoutPanel16.Controls.Add(this.Issues5Lat4, 0, 5);
+            this.TableLayoutPanel16.Controls.Add(this.Issues4Lat4, 0, 4);
+            this.TableLayoutPanel16.Controls.Add(this.Issues3Lat4, 0, 3);
+            this.TableLayoutPanel16.Controls.Add(this.Issues2Lat4, 0, 2);
+            this.TableLayoutPanel16.Controls.Add(this.IssuesLat4, 0, 1);
+            this.TableLayoutPanel16.Controls.Add(this.Label214, 0, 0);
+            this.TableLayoutPanel16.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel16.Name = "TableLayoutPanel16";
+            this.TableLayoutPanel16.RowCount = 8;
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel16.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel16.TabIndex = 41;
+            // 
+            // Issues7Lat4
+            // 
+            this.Issues7Lat4.Location = new System.Drawing.Point(3, 262);
+            this.Issues7Lat4.Name = "Issues7Lat4";
+            this.Issues7Lat4.Size = new System.Drawing.Size(166, 22);
+            this.Issues7Lat4.TabIndex = 64;
+            // 
+            // Issues6Lat4
+            // 
+            this.Issues6Lat4.Location = new System.Drawing.Point(3, 225);
+            this.Issues6Lat4.Name = "Issues6Lat4";
+            this.Issues6Lat4.Size = new System.Drawing.Size(166, 22);
+            this.Issues6Lat4.TabIndex = 63;
+            // 
+            // Issues5Lat4
+            // 
+            this.Issues5Lat4.Location = new System.Drawing.Point(3, 188);
+            this.Issues5Lat4.Name = "Issues5Lat4";
+            this.Issues5Lat4.Size = new System.Drawing.Size(166, 22);
+            this.Issues5Lat4.TabIndex = 62;
+            // 
+            // Issues4Lat4
+            // 
+            this.Issues4Lat4.Location = new System.Drawing.Point(3, 151);
+            this.Issues4Lat4.Name = "Issues4Lat4";
+            this.Issues4Lat4.Size = new System.Drawing.Size(166, 22);
+            this.Issues4Lat4.TabIndex = 61;
+            // 
+            // Issues3Lat4
+            // 
+            this.Issues3Lat4.Location = new System.Drawing.Point(3, 114);
+            this.Issues3Lat4.Name = "Issues3Lat4";
+            this.Issues3Lat4.Size = new System.Drawing.Size(166, 22);
+            this.Issues3Lat4.TabIndex = 60;
+            // 
+            // Issues2Lat4
+            // 
+            this.Issues2Lat4.Location = new System.Drawing.Point(3, 77);
+            this.Issues2Lat4.Name = "Issues2Lat4";
+            this.Issues2Lat4.Size = new System.Drawing.Size(166, 22);
+            this.Issues2Lat4.TabIndex = 59;
+            // 
+            // IssuesLat4
+            // 
+            this.IssuesLat4.Location = new System.Drawing.Point(3, 40);
+            this.IssuesLat4.Name = "IssuesLat4";
+            this.IssuesLat4.Size = new System.Drawing.Size(166, 22);
+            this.IssuesLat4.TabIndex = 58;
+            // 
+            // Label214
+            // 
+            this.Label214.AutoSize = true;
+            this.Label214.Location = new System.Drawing.Point(3, 0);
+            this.Label214.Name = "Label214";
+            this.Label214.Size = new System.Drawing.Size(53, 16);
+            this.Label214.TabIndex = 0;
+            this.Label214.Text = "Issues";
+            // 
+            // TableLayoutPanel17
+            // 
+            this.TableLayoutPanel17.ColumnCount = 4;
+            this.TableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel17.Controls.Add(this.FiledDateLat4, 1, 0);
+            this.TableLayoutPanel17.Controls.Add(this.Label215, 2, 1);
+            this.TableLayoutPanel17.Controls.Add(this.AmountSettledLat4, 3, 6);
+            this.TableLayoutPanel17.Controls.Add(this.Label216, 0, 0);
+            this.TableLayoutPanel17.Controls.Add(this.Label217, 2, 6);
+            this.TableLayoutPanel17.Controls.Add(this.DateSettledLat4, 1, 6);
+            this.TableLayoutPanel17.Controls.Add(this.CaseConfLat4, 1, 1);
+            this.TableLayoutPanel17.Controls.Add(this.Label218, 0, 6);
+            this.TableLayoutPanel17.Controls.Add(this.HearingDateLat4, 3, 4);
+            this.TableLayoutPanel17.Controls.Add(this.Label219, 0, 1);
+            this.TableLayoutPanel17.Controls.Add(this.Label220, 2, 4);
+            this.TableLayoutPanel17.Controls.Add(this.HearingAdjudicatorLat4, 1, 5);
+            this.TableLayoutPanel17.Controls.Add(this.InsurerFirmLat4, 3, 3);
+            this.TableLayoutPanel17.Controls.Add(this.Label221, 0, 5);
+            this.TableLayoutPanel17.Controls.Add(this.TribunalNumberLat4, 3, 0);
+            this.TableLayoutPanel17.Controls.Add(this.Label222, 2, 3);
+            this.TableLayoutPanel17.Controls.Add(this.InsurerLat4, 3, 2);
+            this.TableLayoutPanel17.Controls.Add(this.Label223, 2, 0);
+            this.TableLayoutPanel17.Controls.Add(this.HearingTypeLat4, 1, 4);
+            this.TableLayoutPanel17.Controls.Add(this.Label224, 2, 2);
+            this.TableLayoutPanel17.Controls.Add(this.Label225, 0, 4);
+            this.TableLayoutPanel17.Controls.Add(this.Label226, 0, 2);
+            this.TableLayoutPanel17.Controls.Add(this.AdjusterLat4, 1, 2);
+            this.TableLayoutPanel17.Controls.Add(this.InsurerCounselLat4, 1, 3);
+            this.TableLayoutPanel17.Controls.Add(this.Label227, 0, 3);
+            this.TableLayoutPanel17.Controls.Add(this.CaseAdjudicatorLat4, 3, 1);
+            this.TableLayoutPanel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel17.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel17.Name = "TableLayoutPanel17";
+            this.TableLayoutPanel17.RowCount = 7;
+            this.TableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel17.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel17.TabIndex = 40;
+            // 
+            // FiledDateLat4
+            // 
+            this.FiledDateLat4.Location = new System.Drawing.Point(180, 3);
+            this.FiledDateLat4.Name = "FiledDateLat4";
+            this.FiledDateLat4.ReadOnly = true;
+            this.FiledDateLat4.Size = new System.Drawing.Size(171, 22);
+            this.FiledDateLat4.TabIndex = 16;
+            // 
+            // Label215
+            // 
+            this.Label215.AutoSize = true;
+            this.Label215.Location = new System.Drawing.Point(357, 43);
+            this.Label215.Name = "Label215";
+            this.Label215.Size = new System.Drawing.Size(111, 16);
+            this.Label215.TabIndex = 26;
+            this.Label215.Text = "Case Adjudicator";
+            // 
+            // AmountSettledLat4
+            // 
+            this.AmountSettledLat4.Location = new System.Drawing.Point(534, 261);
+            this.AmountSettledLat4.Name = "AmountSettledLat4";
+            this.AmountSettledLat4.Size = new System.Drawing.Size(172, 22);
+            this.AmountSettledLat4.TabIndex = 39;
+            this.AmountSettledLat4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // Label216
+            // 
+            this.Label216.AutoSize = true;
+            this.Label216.Location = new System.Drawing.Point(3, 0);
+            this.Label216.Name = "Label216";
+            this.Label216.Size = new System.Drawing.Size(70, 16);
+            this.Label216.TabIndex = 8;
+            this.Label216.Text = "Filed Date";
+            // 
+            // Label217
+            // 
+            this.Label217.AutoSize = true;
+            this.Label217.Location = new System.Drawing.Point(357, 258);
+            this.Label217.Name = "Label217";
+            this.Label217.Size = new System.Drawing.Size(98, 16);
+            this.Label217.TabIndex = 31;
+            this.Label217.Text = "Amount Settled";
+            // 
+            // DateSettledLat4
+            // 
+            this.DateSettledLat4.Location = new System.Drawing.Point(180, 261);
+            this.DateSettledLat4.Name = "DateSettledLat4";
+            this.DateSettledLat4.ReadOnly = true;
+            this.DateSettledLat4.Size = new System.Drawing.Size(171, 22);
+            this.DateSettledLat4.TabIndex = 23;
+            // 
+            // CaseConfLat4
+            // 
+            this.CaseConfLat4.Location = new System.Drawing.Point(180, 46);
+            this.CaseConfLat4.Name = "CaseConfLat4";
+            this.CaseConfLat4.ReadOnly = true;
+            this.CaseConfLat4.Size = new System.Drawing.Size(171, 22);
+            this.CaseConfLat4.TabIndex = 18;
+            // 
+            // Label218
+            // 
+            this.Label218.AutoSize = true;
+            this.Label218.Location = new System.Drawing.Point(3, 258);
+            this.Label218.Name = "Label218";
+            this.Label218.Size = new System.Drawing.Size(82, 16);
+            this.Label218.TabIndex = 15;
+            this.Label218.Text = "Date Settled";
+            // 
+            // HearingDateLat4
+            // 
+            this.HearingDateLat4.Location = new System.Drawing.Point(534, 175);
+            this.HearingDateLat4.Name = "HearingDateLat4";
+            this.HearingDateLat4.ReadOnly = true;
+            this.HearingDateLat4.Size = new System.Drawing.Size(172, 22);
+            this.HearingDateLat4.TabIndex = 37;
+            // 
+            // Label219
+            // 
+            this.Label219.AutoSize = true;
+            this.Label219.Location = new System.Drawing.Point(3, 43);
+            this.Label219.Name = "Label219";
+            this.Label219.Size = new System.Drawing.Size(70, 16);
+            this.Label219.TabIndex = 10;
+            this.Label219.Text = "Case Conf";
+            // 
+            // Label220
+            // 
+            this.Label220.AutoSize = true;
+            this.Label220.Location = new System.Drawing.Point(357, 172);
+            this.Label220.Name = "Label220";
+            this.Label220.Size = new System.Drawing.Size(88, 16);
+            this.Label220.TabIndex = 29;
+            this.Label220.Text = "Hearing Date";
+            // 
+            // HearingAdjudicatorLat4
+            // 
+            this.HearingAdjudicatorLat4.Location = new System.Drawing.Point(180, 218);
+            this.HearingAdjudicatorLat4.Name = "HearingAdjudicatorLat4";
+            this.HearingAdjudicatorLat4.Size = new System.Drawing.Size(171, 22);
+            this.HearingAdjudicatorLat4.TabIndex = 22;
+            // 
+            // InsurerFirmLat4
+            // 
+            this.InsurerFirmLat4.Location = new System.Drawing.Point(534, 132);
+            this.InsurerFirmLat4.Name = "InsurerFirmLat4";
+            this.InsurerFirmLat4.Size = new System.Drawing.Size(172, 22);
+            this.InsurerFirmLat4.TabIndex = 36;
+            // 
+            // Label221
+            // 
+            this.Label221.AutoSize = true;
+            this.Label221.Location = new System.Drawing.Point(3, 215);
+            this.Label221.Name = "Label221";
+            this.Label221.Size = new System.Drawing.Size(127, 16);
+            this.Label221.TabIndex = 14;
+            this.Label221.Text = "Hearing Adjudicator";
+            // 
+            // TribunalNumberLat4
+            // 
+            this.TribunalNumberLat4.Location = new System.Drawing.Point(534, 3);
+            this.TribunalNumberLat4.Name = "TribunalNumberLat4";
+            this.TribunalNumberLat4.Size = new System.Drawing.Size(172, 22);
+            this.TribunalNumberLat4.TabIndex = 32;
+            // 
+            // Label222
+            // 
+            this.Label222.AutoSize = true;
+            this.Label222.Location = new System.Drawing.Point(357, 129);
+            this.Label222.Name = "Label222";
+            this.Label222.Size = new System.Drawing.Size(77, 16);
+            this.Label222.TabIndex = 28;
+            this.Label222.Text = "Insurer Firm";
+            // 
+            // InsurerLat4
+            // 
+            this.InsurerLat4.Location = new System.Drawing.Point(534, 89);
+            this.InsurerLat4.Name = "InsurerLat4";
+            this.InsurerLat4.Size = new System.Drawing.Size(172, 22);
+            this.InsurerLat4.TabIndex = 35;
+            // 
+            // Label223
+            // 
+            this.Label223.AutoSize = true;
+            this.Label223.Location = new System.Drawing.Point(357, 0);
+            this.Label223.Name = "Label223";
+            this.Label223.Size = new System.Drawing.Size(108, 16);
+            this.Label223.TabIndex = 24;
+            this.Label223.Text = "Tribunal Number";
+            // 
+            // HearingTypeLat4
+            // 
+            this.HearingTypeLat4.Location = new System.Drawing.Point(180, 175);
+            this.HearingTypeLat4.Name = "HearingTypeLat4";
+            this.HearingTypeLat4.Size = new System.Drawing.Size(171, 22);
+            this.HearingTypeLat4.TabIndex = 21;
+            // 
+            // Label224
+            // 
+            this.Label224.AutoSize = true;
+            this.Label224.Location = new System.Drawing.Point(357, 86);
+            this.Label224.Name = "Label224";
+            this.Label224.Size = new System.Drawing.Size(48, 16);
+            this.Label224.TabIndex = 27;
+            this.Label224.Text = "Insurer";
+            // 
+            // Label225
+            // 
+            this.Label225.AutoSize = true;
+            this.Label225.Location = new System.Drawing.Point(3, 172);
+            this.Label225.Name = "Label225";
+            this.Label225.Size = new System.Drawing.Size(91, 16);
+            this.Label225.TabIndex = 13;
+            this.Label225.Text = "Hearing Type";
+            // 
+            // Label226
+            // 
+            this.Label226.AutoSize = true;
+            this.Label226.Location = new System.Drawing.Point(3, 86);
+            this.Label226.Name = "Label226";
+            this.Label226.Size = new System.Drawing.Size(57, 16);
+            this.Label226.TabIndex = 11;
+            this.Label226.Text = "Adjuster";
+            // 
+            // AdjusterLat4
+            // 
+            this.AdjusterLat4.Location = new System.Drawing.Point(180, 89);
+            this.AdjusterLat4.Name = "AdjusterLat4";
+            this.AdjusterLat4.Size = new System.Drawing.Size(171, 22);
+            this.AdjusterLat4.TabIndex = 19;
+            // 
+            // InsurerCounselLat4
+            // 
+            this.InsurerCounselLat4.Location = new System.Drawing.Point(180, 132);
+            this.InsurerCounselLat4.Name = "InsurerCounselLat4";
+            this.InsurerCounselLat4.Size = new System.Drawing.Size(171, 22);
+            this.InsurerCounselLat4.TabIndex = 20;
+            // 
+            // Label227
+            // 
+            this.Label227.AutoSize = true;
+            this.Label227.Location = new System.Drawing.Point(3, 129);
+            this.Label227.Name = "Label227";
+            this.Label227.Size = new System.Drawing.Size(100, 16);
+            this.Label227.TabIndex = 12;
+            this.Label227.Text = "Insurer Counsel";
+            // 
+            // CaseAdjudicatorLat4
+            // 
+            this.CaseAdjudicatorLat4.Location = new System.Drawing.Point(534, 46);
+            this.CaseAdjudicatorLat4.Name = "CaseAdjudicatorLat4";
+            this.CaseAdjudicatorLat4.Size = new System.Drawing.Size(172, 22);
+            this.CaseAdjudicatorLat4.TabIndex = 34;
+            // 
+            // GroupBoxLat3
+            // 
+            this.GroupBoxLat3.Controls.Add(this.GroupBox38);
+            this.GroupBoxLat3.Controls.Add(this.TableLayoutPanel12);
+            this.GroupBoxLat3.Controls.Add(this.TableLayoutPanel13);
+            this.GroupBoxLat3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBoxLat3.Location = new System.Drawing.Point(19, 707);
+            this.GroupBoxLat3.Name = "GroupBoxLat3";
+            this.GroupBoxLat3.Size = new System.Drawing.Size(1285, 342);
+            this.GroupBoxLat3.TabIndex = 43;
+            this.GroupBoxLat3.TabStop = false;
+            this.GroupBoxLat3.Text = "LAT#3";
+            // 
+            // GroupBox38
+            // 
+            this.GroupBox38.Controls.Add(this.TableLayoutPanel10);
+            this.GroupBox38.Controls.Add(this.TableLayoutPanel11);
+            this.GroupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox38.Location = new System.Drawing.Point(1138, 343);
+            this.GroupBox38.Name = "GroupBox38";
+            this.GroupBox38.Size = new System.Drawing.Size(1285, 338);
+            this.GroupBox38.TabIndex = 41;
+            this.GroupBox38.TabStop = false;
+            this.GroupBox38.Text = "LAT#1";
+            // 
+            // TableLayoutPanel10
+            // 
+            this.TableLayoutPanel10.ColumnCount = 1;
+            this.TableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel10.Controls.Add(this.TextBox110, 0, 7);
+            this.TableLayoutPanel10.Controls.Add(this.TextBox111, 0, 6);
+            this.TableLayoutPanel10.Controls.Add(this.TextBox112, 0, 5);
+            this.TableLayoutPanel10.Controls.Add(this.TextBox113, 0, 4);
+            this.TableLayoutPanel10.Controls.Add(this.TextBox114, 0, 3);
+            this.TableLayoutPanel10.Controls.Add(this.TextBox115, 0, 2);
+            this.TableLayoutPanel10.Controls.Add(this.TextBox116, 0, 1);
+            this.TableLayoutPanel10.Controls.Add(this.Label172, 0, 0);
+            this.TableLayoutPanel10.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel10.Name = "TableLayoutPanel10";
+            this.TableLayoutPanel10.RowCount = 8;
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel10.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel10.TabIndex = 41;
+            // 
+            // TextBox110
+            // 
+            this.TextBox110.Location = new System.Drawing.Point(3, 262);
+            this.TextBox110.Name = "TextBox110";
+            this.TextBox110.Size = new System.Drawing.Size(166, 22);
+            this.TextBox110.TabIndex = 64;
+            // 
+            // TextBox111
+            // 
+            this.TextBox111.Location = new System.Drawing.Point(3, 225);
+            this.TextBox111.Name = "TextBox111";
+            this.TextBox111.Size = new System.Drawing.Size(166, 22);
+            this.TextBox111.TabIndex = 63;
+            // 
+            // TextBox112
+            // 
+            this.TextBox112.Location = new System.Drawing.Point(3, 188);
+            this.TextBox112.Name = "TextBox112";
+            this.TextBox112.Size = new System.Drawing.Size(166, 22);
+            this.TextBox112.TabIndex = 62;
+            // 
+            // TextBox113
+            // 
+            this.TextBox113.Location = new System.Drawing.Point(3, 151);
+            this.TextBox113.Name = "TextBox113";
+            this.TextBox113.Size = new System.Drawing.Size(166, 22);
+            this.TextBox113.TabIndex = 61;
+            // 
+            // TextBox114
+            // 
+            this.TextBox114.Location = new System.Drawing.Point(3, 114);
+            this.TextBox114.Name = "TextBox114";
+            this.TextBox114.Size = new System.Drawing.Size(166, 22);
+            this.TextBox114.TabIndex = 60;
+            // 
+            // TextBox115
+            // 
+            this.TextBox115.Location = new System.Drawing.Point(3, 77);
+            this.TextBox115.Name = "TextBox115";
+            this.TextBox115.Size = new System.Drawing.Size(166, 22);
+            this.TextBox115.TabIndex = 59;
+            // 
+            // TextBox116
+            // 
+            this.TextBox116.Location = new System.Drawing.Point(3, 40);
+            this.TextBox116.Name = "TextBox116";
+            this.TextBox116.Size = new System.Drawing.Size(166, 22);
+            this.TextBox116.TabIndex = 58;
+            // 
+            // Label172
+            // 
+            this.Label172.AutoSize = true;
+            this.Label172.Location = new System.Drawing.Point(3, 0);
+            this.Label172.Name = "Label172";
+            this.Label172.Size = new System.Drawing.Size(53, 16);
+            this.Label172.TabIndex = 0;
+            this.Label172.Text = "Issues";
+            // 
+            // TableLayoutPanel11
+            // 
+            this.TableLayoutPanel11.ColumnCount = 4;
+            this.TableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel11.Controls.Add(this.TextBox117, 1, 0);
+            this.TableLayoutPanel11.Controls.Add(this.Label173, 2, 1);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox118, 3, 6);
+            this.TableLayoutPanel11.Controls.Add(this.Label174, 0, 0);
+            this.TableLayoutPanel11.Controls.Add(this.Label175, 2, 6);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox119, 1, 6);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox120, 1, 1);
+            this.TableLayoutPanel11.Controls.Add(this.Label176, 0, 6);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox121, 3, 4);
+            this.TableLayoutPanel11.Controls.Add(this.Label177, 0, 1);
+            this.TableLayoutPanel11.Controls.Add(this.Label178, 2, 4);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox122, 1, 5);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox123, 3, 3);
+            this.TableLayoutPanel11.Controls.Add(this.Label179, 0, 5);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox124, 3, 0);
+            this.TableLayoutPanel11.Controls.Add(this.Label180, 2, 3);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox125, 3, 2);
+            this.TableLayoutPanel11.Controls.Add(this.Label181, 2, 0);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox126, 1, 4);
+            this.TableLayoutPanel11.Controls.Add(this.Label182, 2, 2);
+            this.TableLayoutPanel11.Controls.Add(this.Label183, 0, 4);
+            this.TableLayoutPanel11.Controls.Add(this.Label184, 0, 2);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox127, 1, 2);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox128, 1, 3);
+            this.TableLayoutPanel11.Controls.Add(this.Label185, 0, 3);
+            this.TableLayoutPanel11.Controls.Add(this.TextBox129, 3, 1);
+            this.TableLayoutPanel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel11.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel11.Name = "TableLayoutPanel11";
+            this.TableLayoutPanel11.RowCount = 7;
+            this.TableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel11.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel11.TabIndex = 40;
+            // 
+            // TextBox117
+            // 
+            this.TextBox117.Location = new System.Drawing.Point(180, 3);
+            this.TextBox117.Name = "TextBox117";
+            this.TextBox117.Size = new System.Drawing.Size(171, 22);
+            this.TextBox117.TabIndex = 16;
+            // 
+            // Label173
+            // 
+            this.Label173.AutoSize = true;
+            this.Label173.Location = new System.Drawing.Point(357, 43);
+            this.Label173.Name = "Label173";
+            this.Label173.Size = new System.Drawing.Size(111, 16);
+            this.Label173.TabIndex = 26;
+            this.Label173.Text = "Case Adjudicator";
+            // 
+            // TextBox118
+            // 
+            this.TextBox118.Location = new System.Drawing.Point(534, 261);
+            this.TextBox118.Name = "TextBox118";
+            this.TextBox118.Size = new System.Drawing.Size(172, 22);
+            this.TextBox118.TabIndex = 39;
+            // 
+            // Label174
+            // 
+            this.Label174.AutoSize = true;
+            this.Label174.Location = new System.Drawing.Point(3, 0);
+            this.Label174.Name = "Label174";
+            this.Label174.Size = new System.Drawing.Size(70, 16);
+            this.Label174.TabIndex = 8;
+            this.Label174.Text = "Filed Date";
+            // 
+            // Label175
+            // 
+            this.Label175.AutoSize = true;
+            this.Label175.Location = new System.Drawing.Point(357, 258);
+            this.Label175.Name = "Label175";
+            this.Label175.Size = new System.Drawing.Size(98, 16);
+            this.Label175.TabIndex = 31;
+            this.Label175.Text = "Amount Settled";
+            // 
+            // TextBox119
+            // 
+            this.TextBox119.Location = new System.Drawing.Point(180, 261);
+            this.TextBox119.Name = "TextBox119";
+            this.TextBox119.Size = new System.Drawing.Size(171, 22);
+            this.TextBox119.TabIndex = 23;
+            // 
+            // TextBox120
+            // 
+            this.TextBox120.Location = new System.Drawing.Point(180, 46);
+            this.TextBox120.Name = "TextBox120";
+            this.TextBox120.Size = new System.Drawing.Size(171, 22);
+            this.TextBox120.TabIndex = 18;
+            // 
+            // Label176
+            // 
+            this.Label176.AutoSize = true;
+            this.Label176.Location = new System.Drawing.Point(3, 258);
+            this.Label176.Name = "Label176";
+            this.Label176.Size = new System.Drawing.Size(82, 16);
+            this.Label176.TabIndex = 15;
+            this.Label176.Text = "Date Settled";
+            // 
+            // TextBox121
+            // 
+            this.TextBox121.Location = new System.Drawing.Point(534, 175);
+            this.TextBox121.Name = "TextBox121";
+            this.TextBox121.Size = new System.Drawing.Size(172, 22);
+            this.TextBox121.TabIndex = 37;
+            // 
+            // Label177
+            // 
+            this.Label177.AutoSize = true;
+            this.Label177.Location = new System.Drawing.Point(3, 43);
+            this.Label177.Name = "Label177";
+            this.Label177.Size = new System.Drawing.Size(70, 16);
+            this.Label177.TabIndex = 10;
+            this.Label177.Text = "Case Conf";
+            // 
+            // Label178
+            // 
+            this.Label178.AutoSize = true;
+            this.Label178.Location = new System.Drawing.Point(357, 172);
+            this.Label178.Name = "Label178";
+            this.Label178.Size = new System.Drawing.Size(88, 16);
+            this.Label178.TabIndex = 29;
+            this.Label178.Text = "Hearing Date";
+            // 
+            // TextBox122
+            // 
+            this.TextBox122.Location = new System.Drawing.Point(180, 218);
+            this.TextBox122.Name = "TextBox122";
+            this.TextBox122.Size = new System.Drawing.Size(171, 22);
+            this.TextBox122.TabIndex = 22;
+            // 
+            // TextBox123
+            // 
+            this.TextBox123.Location = new System.Drawing.Point(534, 132);
+            this.TextBox123.Name = "TextBox123";
+            this.TextBox123.Size = new System.Drawing.Size(172, 22);
+            this.TextBox123.TabIndex = 36;
+            // 
+            // Label179
+            // 
+            this.Label179.AutoSize = true;
+            this.Label179.Location = new System.Drawing.Point(3, 215);
+            this.Label179.Name = "Label179";
+            this.Label179.Size = new System.Drawing.Size(127, 16);
+            this.Label179.TabIndex = 14;
+            this.Label179.Text = "Hearing Adjudicator";
+            // 
+            // TextBox124
+            // 
+            this.TextBox124.Location = new System.Drawing.Point(534, 3);
+            this.TextBox124.Name = "TextBox124";
+            this.TextBox124.Size = new System.Drawing.Size(172, 22);
+            this.TextBox124.TabIndex = 32;
+            // 
+            // Label180
+            // 
+            this.Label180.AutoSize = true;
+            this.Label180.Location = new System.Drawing.Point(357, 129);
+            this.Label180.Name = "Label180";
+            this.Label180.Size = new System.Drawing.Size(77, 16);
+            this.Label180.TabIndex = 28;
+            this.Label180.Text = "Insurer Firm";
+            // 
+            // TextBox125
+            // 
+            this.TextBox125.Location = new System.Drawing.Point(534, 89);
+            this.TextBox125.Name = "TextBox125";
+            this.TextBox125.Size = new System.Drawing.Size(172, 22);
+            this.TextBox125.TabIndex = 35;
+            // 
+            // Label181
+            // 
+            this.Label181.AutoSize = true;
+            this.Label181.Location = new System.Drawing.Point(357, 0);
+            this.Label181.Name = "Label181";
+            this.Label181.Size = new System.Drawing.Size(108, 16);
+            this.Label181.TabIndex = 24;
+            this.Label181.Text = "Tribunal Number";
+            // 
+            // TextBox126
+            // 
+            this.TextBox126.Location = new System.Drawing.Point(180, 175);
+            this.TextBox126.Name = "TextBox126";
+            this.TextBox126.Size = new System.Drawing.Size(171, 22);
+            this.TextBox126.TabIndex = 21;
+            // 
+            // Label182
+            // 
+            this.Label182.AutoSize = true;
+            this.Label182.Location = new System.Drawing.Point(357, 86);
+            this.Label182.Name = "Label182";
+            this.Label182.Size = new System.Drawing.Size(48, 16);
+            this.Label182.TabIndex = 27;
+            this.Label182.Text = "Insurer";
+            // 
+            // Label183
+            // 
+            this.Label183.AutoSize = true;
+            this.Label183.Location = new System.Drawing.Point(3, 172);
+            this.Label183.Name = "Label183";
+            this.Label183.Size = new System.Drawing.Size(91, 16);
+            this.Label183.TabIndex = 13;
+            this.Label183.Text = "Hearing Type";
+            // 
+            // Label184
+            // 
+            this.Label184.AutoSize = true;
+            this.Label184.Location = new System.Drawing.Point(3, 86);
+            this.Label184.Name = "Label184";
+            this.Label184.Size = new System.Drawing.Size(57, 16);
+            this.Label184.TabIndex = 11;
+            this.Label184.Text = "Adjuster";
+            // 
+            // TextBox127
+            // 
+            this.TextBox127.Location = new System.Drawing.Point(180, 89);
+            this.TextBox127.Name = "TextBox127";
+            this.TextBox127.Size = new System.Drawing.Size(171, 22);
+            this.TextBox127.TabIndex = 19;
+            // 
+            // TextBox128
+            // 
+            this.TextBox128.Location = new System.Drawing.Point(180, 132);
+            this.TextBox128.Name = "TextBox128";
+            this.TextBox128.Size = new System.Drawing.Size(171, 22);
+            this.TextBox128.TabIndex = 20;
+            // 
+            // Label185
+            // 
+            this.Label185.AutoSize = true;
+            this.Label185.Location = new System.Drawing.Point(3, 129);
+            this.Label185.Name = "Label185";
+            this.Label185.Size = new System.Drawing.Size(100, 16);
+            this.Label185.TabIndex = 12;
+            this.Label185.Text = "Insurer Counsel";
+            // 
+            // TextBox129
+            // 
+            this.TextBox129.Location = new System.Drawing.Point(534, 46);
+            this.TextBox129.Name = "TextBox129";
+            this.TextBox129.Size = new System.Drawing.Size(172, 22);
+            this.TextBox129.TabIndex = 34;
+            // 
+            // TableLayoutPanel12
+            // 
+            this.TableLayoutPanel12.ColumnCount = 1;
+            this.TableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel12.Controls.Add(this.Issues7Lat3, 0, 7);
+            this.TableLayoutPanel12.Controls.Add(this.Issues6Lat3, 0, 6);
+            this.TableLayoutPanel12.Controls.Add(this.Issues5Lat3, 0, 5);
+            this.TableLayoutPanel12.Controls.Add(this.Issues4Lat3, 0, 4);
+            this.TableLayoutPanel12.Controls.Add(this.Issues3Lat3, 0, 3);
+            this.TableLayoutPanel12.Controls.Add(this.Issues2Lat3, 0, 2);
+            this.TableLayoutPanel12.Controls.Add(this.IssuesLat3, 0, 1);
+            this.TableLayoutPanel12.Controls.Add(this.Label186, 0, 0);
+            this.TableLayoutPanel12.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel12.Name = "TableLayoutPanel12";
+            this.TableLayoutPanel12.RowCount = 8;
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel12.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel12.TabIndex = 41;
+            // 
+            // Issues7Lat3
+            // 
+            this.Issues7Lat3.Location = new System.Drawing.Point(3, 262);
+            this.Issues7Lat3.Name = "Issues7Lat3";
+            this.Issues7Lat3.Size = new System.Drawing.Size(166, 22);
+            this.Issues7Lat3.TabIndex = 64;
+            // 
+            // Issues6Lat3
+            // 
+            this.Issues6Lat3.Location = new System.Drawing.Point(3, 225);
+            this.Issues6Lat3.Name = "Issues6Lat3";
+            this.Issues6Lat3.Size = new System.Drawing.Size(166, 22);
+            this.Issues6Lat3.TabIndex = 63;
+            // 
+            // Issues5Lat3
+            // 
+            this.Issues5Lat3.Location = new System.Drawing.Point(3, 188);
+            this.Issues5Lat3.Name = "Issues5Lat3";
+            this.Issues5Lat3.Size = new System.Drawing.Size(166, 22);
+            this.Issues5Lat3.TabIndex = 62;
+            // 
+            // Issues4Lat3
+            // 
+            this.Issues4Lat3.Location = new System.Drawing.Point(3, 151);
+            this.Issues4Lat3.Name = "Issues4Lat3";
+            this.Issues4Lat3.Size = new System.Drawing.Size(166, 22);
+            this.Issues4Lat3.TabIndex = 61;
+            // 
+            // Issues3Lat3
+            // 
+            this.Issues3Lat3.Location = new System.Drawing.Point(3, 114);
+            this.Issues3Lat3.Name = "Issues3Lat3";
+            this.Issues3Lat3.Size = new System.Drawing.Size(166, 22);
+            this.Issues3Lat3.TabIndex = 60;
+            // 
+            // Issues2Lat3
+            // 
+            this.Issues2Lat3.Location = new System.Drawing.Point(3, 77);
+            this.Issues2Lat3.Name = "Issues2Lat3";
+            this.Issues2Lat3.Size = new System.Drawing.Size(166, 22);
+            this.Issues2Lat3.TabIndex = 59;
+            // 
+            // IssuesLat3
+            // 
+            this.IssuesLat3.Location = new System.Drawing.Point(3, 40);
+            this.IssuesLat3.Name = "IssuesLat3";
+            this.IssuesLat3.Size = new System.Drawing.Size(166, 22);
+            this.IssuesLat3.TabIndex = 58;
+            // 
+            // Label186
+            // 
+            this.Label186.AutoSize = true;
+            this.Label186.Location = new System.Drawing.Point(3, 0);
+            this.Label186.Name = "Label186";
+            this.Label186.Size = new System.Drawing.Size(53, 16);
+            this.Label186.TabIndex = 0;
+            this.Label186.Text = "Issues";
+            // 
+            // TableLayoutPanel13
+            // 
+            this.TableLayoutPanel13.ColumnCount = 4;
+            this.TableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel13.Controls.Add(this.FiledDateLat3, 1, 0);
+            this.TableLayoutPanel13.Controls.Add(this.Label187, 2, 1);
+            this.TableLayoutPanel13.Controls.Add(this.AmountSettledLat3, 3, 6);
+            this.TableLayoutPanel13.Controls.Add(this.Label188, 0, 0);
+            this.TableLayoutPanel13.Controls.Add(this.Label189, 2, 6);
+            this.TableLayoutPanel13.Controls.Add(this.DateSettledLat3, 1, 6);
+            this.TableLayoutPanel13.Controls.Add(this.CaseConfLat3, 1, 1);
+            this.TableLayoutPanel13.Controls.Add(this.Label190, 0, 6);
+            this.TableLayoutPanel13.Controls.Add(this.HearingDateLat3, 3, 4);
+            this.TableLayoutPanel13.Controls.Add(this.Label191, 0, 1);
+            this.TableLayoutPanel13.Controls.Add(this.Label192, 2, 4);
+            this.TableLayoutPanel13.Controls.Add(this.HearingAdjudicatorLat3, 1, 5);
+            this.TableLayoutPanel13.Controls.Add(this.InsurerFirmLat3, 3, 3);
+            this.TableLayoutPanel13.Controls.Add(this.Label193, 0, 5);
+            this.TableLayoutPanel13.Controls.Add(this.TribunalNumberLat3, 3, 0);
+            this.TableLayoutPanel13.Controls.Add(this.Label194, 2, 3);
+            this.TableLayoutPanel13.Controls.Add(this.InsurerLat3, 3, 2);
+            this.TableLayoutPanel13.Controls.Add(this.Label195, 2, 0);
+            this.TableLayoutPanel13.Controls.Add(this.HearingTypeLat3, 1, 4);
+            this.TableLayoutPanel13.Controls.Add(this.Label196, 2, 2);
+            this.TableLayoutPanel13.Controls.Add(this.Label197, 0, 4);
+            this.TableLayoutPanel13.Controls.Add(this.Label198, 0, 2);
+            this.TableLayoutPanel13.Controls.Add(this.AdjusterLat3, 1, 2);
+            this.TableLayoutPanel13.Controls.Add(this.InsureCounselLat3, 1, 3);
+            this.TableLayoutPanel13.Controls.Add(this.Label199, 0, 3);
+            this.TableLayoutPanel13.Controls.Add(this.CaseAdjudicatorLat3, 3, 1);
+            this.TableLayoutPanel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel13.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel13.Name = "TableLayoutPanel13";
+            this.TableLayoutPanel13.RowCount = 7;
+            this.TableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel13.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel13.TabIndex = 40;
+            // 
+            // FiledDateLat3
+            // 
+            this.FiledDateLat3.Location = new System.Drawing.Point(180, 3);
+            this.FiledDateLat3.Name = "FiledDateLat3";
+            this.FiledDateLat3.ReadOnly = true;
+            this.FiledDateLat3.Size = new System.Drawing.Size(171, 22);
+            this.FiledDateLat3.TabIndex = 16;
+            // 
+            // Label187
+            // 
+            this.Label187.AutoSize = true;
+            this.Label187.Location = new System.Drawing.Point(357, 43);
+            this.Label187.Name = "Label187";
+            this.Label187.Size = new System.Drawing.Size(111, 16);
+            this.Label187.TabIndex = 26;
+            this.Label187.Text = "Case Adjudicator";
+            // 
+            // AmountSettledLat3
+            // 
+            this.AmountSettledLat3.Location = new System.Drawing.Point(534, 261);
+            this.AmountSettledLat3.Name = "AmountSettledLat3";
+            this.AmountSettledLat3.Size = new System.Drawing.Size(172, 22);
+            this.AmountSettledLat3.TabIndex = 39;
+            this.AmountSettledLat3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // Label188
+            // 
+            this.Label188.AutoSize = true;
+            this.Label188.Location = new System.Drawing.Point(3, 0);
+            this.Label188.Name = "Label188";
+            this.Label188.Size = new System.Drawing.Size(70, 16);
+            this.Label188.TabIndex = 8;
+            this.Label188.Text = "Filed Date";
+            // 
+            // Label189
+            // 
+            this.Label189.AutoSize = true;
+            this.Label189.Location = new System.Drawing.Point(357, 258);
+            this.Label189.Name = "Label189";
+            this.Label189.Size = new System.Drawing.Size(98, 16);
+            this.Label189.TabIndex = 31;
+            this.Label189.Text = "Amount Settled";
+            // 
+            // DateSettledLat3
+            // 
+            this.DateSettledLat3.Location = new System.Drawing.Point(180, 261);
+            this.DateSettledLat3.Name = "DateSettledLat3";
+            this.DateSettledLat3.ReadOnly = true;
+            this.DateSettledLat3.Size = new System.Drawing.Size(171, 22);
+            this.DateSettledLat3.TabIndex = 23;
+            // 
+            // CaseConfLat3
+            // 
+            this.CaseConfLat3.Location = new System.Drawing.Point(180, 46);
+            this.CaseConfLat3.Name = "CaseConfLat3";
+            this.CaseConfLat3.ReadOnly = true;
+            this.CaseConfLat3.Size = new System.Drawing.Size(171, 22);
+            this.CaseConfLat3.TabIndex = 18;
+            // 
+            // Label190
+            // 
+            this.Label190.AutoSize = true;
+            this.Label190.Location = new System.Drawing.Point(3, 258);
+            this.Label190.Name = "Label190";
+            this.Label190.Size = new System.Drawing.Size(82, 16);
+            this.Label190.TabIndex = 15;
+            this.Label190.Text = "Date Settled";
+            // 
+            // HearingDateLat3
+            // 
+            this.HearingDateLat3.Location = new System.Drawing.Point(534, 175);
+            this.HearingDateLat3.Name = "HearingDateLat3";
+            this.HearingDateLat3.ReadOnly = true;
+            this.HearingDateLat3.Size = new System.Drawing.Size(172, 22);
+            this.HearingDateLat3.TabIndex = 37;
+            // 
+            // Label191
+            // 
+            this.Label191.AutoSize = true;
+            this.Label191.Location = new System.Drawing.Point(3, 43);
+            this.Label191.Name = "Label191";
+            this.Label191.Size = new System.Drawing.Size(70, 16);
+            this.Label191.TabIndex = 10;
+            this.Label191.Text = "Case Conf";
+            // 
+            // Label192
+            // 
+            this.Label192.AutoSize = true;
+            this.Label192.Location = new System.Drawing.Point(357, 172);
+            this.Label192.Name = "Label192";
+            this.Label192.Size = new System.Drawing.Size(88, 16);
+            this.Label192.TabIndex = 29;
+            this.Label192.Text = "Hearing Date";
+            // 
+            // HearingAdjudicatorLat3
+            // 
+            this.HearingAdjudicatorLat3.Location = new System.Drawing.Point(180, 218);
+            this.HearingAdjudicatorLat3.Name = "HearingAdjudicatorLat3";
+            this.HearingAdjudicatorLat3.Size = new System.Drawing.Size(171, 22);
+            this.HearingAdjudicatorLat3.TabIndex = 22;
+            // 
+            // InsurerFirmLat3
+            // 
+            this.InsurerFirmLat3.Location = new System.Drawing.Point(534, 132);
+            this.InsurerFirmLat3.Name = "InsurerFirmLat3";
+            this.InsurerFirmLat3.Size = new System.Drawing.Size(172, 22);
+            this.InsurerFirmLat3.TabIndex = 36;
+            // 
+            // Label193
+            // 
+            this.Label193.AutoSize = true;
+            this.Label193.Location = new System.Drawing.Point(3, 215);
+            this.Label193.Name = "Label193";
+            this.Label193.Size = new System.Drawing.Size(127, 16);
+            this.Label193.TabIndex = 14;
+            this.Label193.Text = "Hearing Adjudicator";
+            // 
+            // TribunalNumberLat3
+            // 
+            this.TribunalNumberLat3.Location = new System.Drawing.Point(534, 3);
+            this.TribunalNumberLat3.Name = "TribunalNumberLat3";
+            this.TribunalNumberLat3.Size = new System.Drawing.Size(172, 22);
+            this.TribunalNumberLat3.TabIndex = 32;
+            // 
+            // Label194
+            // 
+            this.Label194.AutoSize = true;
+            this.Label194.Location = new System.Drawing.Point(357, 129);
+            this.Label194.Name = "Label194";
+            this.Label194.Size = new System.Drawing.Size(77, 16);
+            this.Label194.TabIndex = 28;
+            this.Label194.Text = "Insurer Firm";
+            // 
+            // InsurerLat3
+            // 
+            this.InsurerLat3.Location = new System.Drawing.Point(534, 89);
+            this.InsurerLat3.Name = "InsurerLat3";
+            this.InsurerLat3.Size = new System.Drawing.Size(172, 22);
+            this.InsurerLat3.TabIndex = 35;
+            // 
+            // Label195
+            // 
+            this.Label195.AutoSize = true;
+            this.Label195.Location = new System.Drawing.Point(357, 0);
+            this.Label195.Name = "Label195";
+            this.Label195.Size = new System.Drawing.Size(108, 16);
+            this.Label195.TabIndex = 24;
+            this.Label195.Text = "Tribunal Number";
+            // 
+            // HearingTypeLat3
+            // 
+            this.HearingTypeLat3.Location = new System.Drawing.Point(180, 175);
+            this.HearingTypeLat3.Name = "HearingTypeLat3";
+            this.HearingTypeLat3.Size = new System.Drawing.Size(171, 22);
+            this.HearingTypeLat3.TabIndex = 21;
+            // 
+            // Label196
+            // 
+            this.Label196.AutoSize = true;
+            this.Label196.Location = new System.Drawing.Point(357, 86);
+            this.Label196.Name = "Label196";
+            this.Label196.Size = new System.Drawing.Size(48, 16);
+            this.Label196.TabIndex = 27;
+            this.Label196.Text = "Insurer";
+            // 
+            // Label197
+            // 
+            this.Label197.AutoSize = true;
+            this.Label197.Location = new System.Drawing.Point(3, 172);
+            this.Label197.Name = "Label197";
+            this.Label197.Size = new System.Drawing.Size(91, 16);
+            this.Label197.TabIndex = 13;
+            this.Label197.Text = "Hearing Type";
+            // 
+            // Label198
+            // 
+            this.Label198.AutoSize = true;
+            this.Label198.Location = new System.Drawing.Point(3, 86);
+            this.Label198.Name = "Label198";
+            this.Label198.Size = new System.Drawing.Size(57, 16);
+            this.Label198.TabIndex = 11;
+            this.Label198.Text = "Adjuster";
+            // 
+            // AdjusterLat3
+            // 
+            this.AdjusterLat3.Location = new System.Drawing.Point(180, 89);
+            this.AdjusterLat3.Name = "AdjusterLat3";
+            this.AdjusterLat3.Size = new System.Drawing.Size(171, 22);
+            this.AdjusterLat3.TabIndex = 19;
+            // 
+            // InsureCounselLat3
+            // 
+            this.InsureCounselLat3.Location = new System.Drawing.Point(180, 132);
+            this.InsureCounselLat3.Name = "InsureCounselLat3";
+            this.InsureCounselLat3.Size = new System.Drawing.Size(171, 22);
+            this.InsureCounselLat3.TabIndex = 20;
+            // 
+            // Label199
+            // 
+            this.Label199.AutoSize = true;
+            this.Label199.Location = new System.Drawing.Point(3, 129);
+            this.Label199.Name = "Label199";
+            this.Label199.Size = new System.Drawing.Size(100, 16);
+            this.Label199.TabIndex = 12;
+            this.Label199.Text = "Insurer Counsel";
+            // 
+            // CaseAdjudicatorLat3
+            // 
+            this.CaseAdjudicatorLat3.Location = new System.Drawing.Point(534, 46);
+            this.CaseAdjudicatorLat3.Name = "CaseAdjudicatorLat3";
+            this.CaseAdjudicatorLat3.Size = new System.Drawing.Size(172, 22);
+            this.CaseAdjudicatorLat3.TabIndex = 34;
+            // 
+            // GroupBoxLat2
+            // 
+            this.GroupBoxLat2.Controls.Add(this.GroupBox36);
+            this.GroupBoxLat2.Controls.Add(this.TableLayoutPanel8);
+            this.GroupBoxLat2.Controls.Add(this.TableLayoutPanel9);
+            this.GroupBoxLat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBoxLat2.Location = new System.Drawing.Point(19, 354);
+            this.GroupBoxLat2.Name = "GroupBoxLat2";
+            this.GroupBoxLat2.Size = new System.Drawing.Size(1285, 342);
+            this.GroupBoxLat2.TabIndex = 42;
+            this.GroupBoxLat2.TabStop = false;
+            this.GroupBoxLat2.Text = "LAT#2";
+            // 
+            // GroupBox36
+            // 
+            this.GroupBox36.Controls.Add(this.TableLayoutPanel6);
+            this.GroupBox36.Controls.Add(this.TableLayoutPanel7);
+            this.GroupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox36.Location = new System.Drawing.Point(1138, 343);
+            this.GroupBox36.Name = "GroupBox36";
+            this.GroupBox36.Size = new System.Drawing.Size(1285, 338);
+            this.GroupBox36.TabIndex = 41;
+            this.GroupBox36.TabStop = false;
+            this.GroupBox36.Text = "LAT#1";
+            // 
+            // TableLayoutPanel6
+            // 
+            this.TableLayoutPanel6.ColumnCount = 1;
+            this.TableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel6.Controls.Add(this.TextBox70, 0, 7);
+            this.TableLayoutPanel6.Controls.Add(this.TextBox71, 0, 6);
+            this.TableLayoutPanel6.Controls.Add(this.TextBox72, 0, 5);
+            this.TableLayoutPanel6.Controls.Add(this.TextBox73, 0, 4);
+            this.TableLayoutPanel6.Controls.Add(this.TextBox74, 0, 3);
+            this.TableLayoutPanel6.Controls.Add(this.TextBox75, 0, 2);
+            this.TableLayoutPanel6.Controls.Add(this.TextBox76, 0, 1);
+            this.TableLayoutPanel6.Controls.Add(this.Label144, 0, 0);
+            this.TableLayoutPanel6.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel6.Name = "TableLayoutPanel6";
+            this.TableLayoutPanel6.RowCount = 8;
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel6.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel6.TabIndex = 41;
+            // 
+            // TextBox70
+            // 
+            this.TextBox70.Location = new System.Drawing.Point(3, 262);
+            this.TextBox70.Name = "TextBox70";
+            this.TextBox70.Size = new System.Drawing.Size(166, 22);
+            this.TextBox70.TabIndex = 64;
+            // 
+            // TextBox71
+            // 
+            this.TextBox71.Location = new System.Drawing.Point(3, 225);
+            this.TextBox71.Name = "TextBox71";
+            this.TextBox71.Size = new System.Drawing.Size(166, 22);
+            this.TextBox71.TabIndex = 63;
+            // 
+            // TextBox72
+            // 
+            this.TextBox72.Location = new System.Drawing.Point(3, 188);
+            this.TextBox72.Name = "TextBox72";
+            this.TextBox72.Size = new System.Drawing.Size(166, 22);
+            this.TextBox72.TabIndex = 62;
+            // 
+            // TextBox73
+            // 
+            this.TextBox73.Location = new System.Drawing.Point(3, 151);
+            this.TextBox73.Name = "TextBox73";
+            this.TextBox73.Size = new System.Drawing.Size(166, 22);
+            this.TextBox73.TabIndex = 61;
+            // 
+            // TextBox74
+            // 
+            this.TextBox74.Location = new System.Drawing.Point(3, 114);
+            this.TextBox74.Name = "TextBox74";
+            this.TextBox74.Size = new System.Drawing.Size(166, 22);
+            this.TextBox74.TabIndex = 60;
+            // 
+            // TextBox75
+            // 
+            this.TextBox75.Location = new System.Drawing.Point(3, 77);
+            this.TextBox75.Name = "TextBox75";
+            this.TextBox75.Size = new System.Drawing.Size(166, 22);
+            this.TextBox75.TabIndex = 59;
+            // 
+            // TextBox76
+            // 
+            this.TextBox76.Location = new System.Drawing.Point(3, 40);
+            this.TextBox76.Name = "TextBox76";
+            this.TextBox76.Size = new System.Drawing.Size(166, 22);
+            this.TextBox76.TabIndex = 58;
+            // 
+            // Label144
+            // 
+            this.Label144.AutoSize = true;
+            this.Label144.Location = new System.Drawing.Point(3, 0);
+            this.Label144.Name = "Label144";
+            this.Label144.Size = new System.Drawing.Size(53, 16);
+            this.Label144.TabIndex = 0;
+            this.Label144.Text = "Issues";
+            // 
+            // TableLayoutPanel7
+            // 
+            this.TableLayoutPanel7.ColumnCount = 4;
+            this.TableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel7.Controls.Add(this.TextBox77, 1, 0);
+            this.TableLayoutPanel7.Controls.Add(this.Label145, 2, 1);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox78, 3, 6);
+            this.TableLayoutPanel7.Controls.Add(this.Label146, 0, 0);
+            this.TableLayoutPanel7.Controls.Add(this.Label147, 2, 6);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox79, 1, 6);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox80, 1, 1);
+            this.TableLayoutPanel7.Controls.Add(this.Label148, 0, 6);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox81, 3, 4);
+            this.TableLayoutPanel7.Controls.Add(this.Label149, 0, 1);
+            this.TableLayoutPanel7.Controls.Add(this.Label150, 2, 4);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox82, 1, 5);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox83, 3, 3);
+            this.TableLayoutPanel7.Controls.Add(this.Label151, 0, 5);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox84, 3, 0);
+            this.TableLayoutPanel7.Controls.Add(this.Label152, 2, 3);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox85, 3, 2);
+            this.TableLayoutPanel7.Controls.Add(this.Label153, 2, 0);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox86, 1, 4);
+            this.TableLayoutPanel7.Controls.Add(this.Label154, 2, 2);
+            this.TableLayoutPanel7.Controls.Add(this.Label155, 0, 4);
+            this.TableLayoutPanel7.Controls.Add(this.Label156, 0, 2);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox87, 1, 2);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox88, 1, 3);
+            this.TableLayoutPanel7.Controls.Add(this.Label157, 0, 3);
+            this.TableLayoutPanel7.Controls.Add(this.TextBox89, 3, 1);
+            this.TableLayoutPanel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel7.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel7.Name = "TableLayoutPanel7";
+            this.TableLayoutPanel7.RowCount = 7;
+            this.TableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel7.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel7.TabIndex = 40;
+            // 
+            // TextBox77
+            // 
+            this.TextBox77.Location = new System.Drawing.Point(180, 3);
+            this.TextBox77.Name = "TextBox77";
+            this.TextBox77.Size = new System.Drawing.Size(171, 22);
+            this.TextBox77.TabIndex = 16;
+            // 
+            // Label145
+            // 
+            this.Label145.AutoSize = true;
+            this.Label145.Location = new System.Drawing.Point(357, 43);
+            this.Label145.Name = "Label145";
+            this.Label145.Size = new System.Drawing.Size(111, 16);
+            this.Label145.TabIndex = 26;
+            this.Label145.Text = "Case Adjudicator";
+            // 
+            // TextBox78
+            // 
+            this.TextBox78.Location = new System.Drawing.Point(534, 261);
+            this.TextBox78.Name = "TextBox78";
+            this.TextBox78.Size = new System.Drawing.Size(172, 22);
+            this.TextBox78.TabIndex = 39;
+            // 
+            // Label146
+            // 
+            this.Label146.AutoSize = true;
+            this.Label146.Location = new System.Drawing.Point(3, 0);
+            this.Label146.Name = "Label146";
+            this.Label146.Size = new System.Drawing.Size(70, 16);
+            this.Label146.TabIndex = 8;
+            this.Label146.Text = "Filed Date";
+            // 
+            // Label147
+            // 
+            this.Label147.AutoSize = true;
+            this.Label147.Location = new System.Drawing.Point(357, 258);
+            this.Label147.Name = "Label147";
+            this.Label147.Size = new System.Drawing.Size(98, 16);
+            this.Label147.TabIndex = 31;
+            this.Label147.Text = "Amount Settled";
+            // 
+            // TextBox79
+            // 
+            this.TextBox79.Location = new System.Drawing.Point(180, 261);
+            this.TextBox79.Name = "TextBox79";
+            this.TextBox79.Size = new System.Drawing.Size(171, 22);
+            this.TextBox79.TabIndex = 23;
+            // 
+            // TextBox80
+            // 
+            this.TextBox80.Location = new System.Drawing.Point(180, 46);
+            this.TextBox80.Name = "TextBox80";
+            this.TextBox80.Size = new System.Drawing.Size(171, 22);
+            this.TextBox80.TabIndex = 18;
+            // 
+            // Label148
+            // 
+            this.Label148.AutoSize = true;
+            this.Label148.Location = new System.Drawing.Point(3, 258);
+            this.Label148.Name = "Label148";
+            this.Label148.Size = new System.Drawing.Size(82, 16);
+            this.Label148.TabIndex = 15;
+            this.Label148.Text = "Date Settled";
+            // 
+            // TextBox81
+            // 
+            this.TextBox81.Location = new System.Drawing.Point(534, 175);
+            this.TextBox81.Name = "TextBox81";
+            this.TextBox81.Size = new System.Drawing.Size(172, 22);
+            this.TextBox81.TabIndex = 37;
+            // 
+            // Label149
+            // 
+            this.Label149.AutoSize = true;
+            this.Label149.Location = new System.Drawing.Point(3, 43);
+            this.Label149.Name = "Label149";
+            this.Label149.Size = new System.Drawing.Size(70, 16);
+            this.Label149.TabIndex = 10;
+            this.Label149.Text = "Case Conf";
+            // 
+            // Label150
+            // 
+            this.Label150.AutoSize = true;
+            this.Label150.Location = new System.Drawing.Point(357, 172);
+            this.Label150.Name = "Label150";
+            this.Label150.Size = new System.Drawing.Size(88, 16);
+            this.Label150.TabIndex = 29;
+            this.Label150.Text = "Hearing Date";
+            // 
+            // TextBox82
+            // 
+            this.TextBox82.Location = new System.Drawing.Point(180, 218);
+            this.TextBox82.Name = "TextBox82";
+            this.TextBox82.Size = new System.Drawing.Size(171, 22);
+            this.TextBox82.TabIndex = 22;
+            // 
+            // TextBox83
+            // 
+            this.TextBox83.Location = new System.Drawing.Point(534, 132);
+            this.TextBox83.Name = "TextBox83";
+            this.TextBox83.Size = new System.Drawing.Size(172, 22);
+            this.TextBox83.TabIndex = 36;
+            // 
+            // Label151
+            // 
+            this.Label151.AutoSize = true;
+            this.Label151.Location = new System.Drawing.Point(3, 215);
+            this.Label151.Name = "Label151";
+            this.Label151.Size = new System.Drawing.Size(127, 16);
+            this.Label151.TabIndex = 14;
+            this.Label151.Text = "Hearing Adjudicator";
+            // 
+            // TextBox84
+            // 
+            this.TextBox84.Location = new System.Drawing.Point(534, 3);
+            this.TextBox84.Name = "TextBox84";
+            this.TextBox84.Size = new System.Drawing.Size(172, 22);
+            this.TextBox84.TabIndex = 32;
+            // 
+            // Label152
+            // 
+            this.Label152.AutoSize = true;
+            this.Label152.Location = new System.Drawing.Point(357, 129);
+            this.Label152.Name = "Label152";
+            this.Label152.Size = new System.Drawing.Size(77, 16);
+            this.Label152.TabIndex = 28;
+            this.Label152.Text = "Insurer Firm";
+            // 
+            // TextBox85
+            // 
+            this.TextBox85.Location = new System.Drawing.Point(534, 89);
+            this.TextBox85.Name = "TextBox85";
+            this.TextBox85.Size = new System.Drawing.Size(172, 22);
+            this.TextBox85.TabIndex = 35;
+            // 
+            // Label153
+            // 
+            this.Label153.AutoSize = true;
+            this.Label153.Location = new System.Drawing.Point(357, 0);
+            this.Label153.Name = "Label153";
+            this.Label153.Size = new System.Drawing.Size(108, 16);
+            this.Label153.TabIndex = 24;
+            this.Label153.Text = "Tribunal Number";
+            // 
+            // TextBox86
+            // 
+            this.TextBox86.Location = new System.Drawing.Point(180, 175);
+            this.TextBox86.Name = "TextBox86";
+            this.TextBox86.Size = new System.Drawing.Size(171, 22);
+            this.TextBox86.TabIndex = 21;
+            // 
+            // Label154
+            // 
+            this.Label154.AutoSize = true;
+            this.Label154.Location = new System.Drawing.Point(357, 86);
+            this.Label154.Name = "Label154";
+            this.Label154.Size = new System.Drawing.Size(48, 16);
+            this.Label154.TabIndex = 27;
+            this.Label154.Text = "Insurer";
+            // 
+            // Label155
+            // 
+            this.Label155.AutoSize = true;
+            this.Label155.Location = new System.Drawing.Point(3, 172);
+            this.Label155.Name = "Label155";
+            this.Label155.Size = new System.Drawing.Size(91, 16);
+            this.Label155.TabIndex = 13;
+            this.Label155.Text = "Hearing Type";
+            // 
+            // Label156
+            // 
+            this.Label156.AutoSize = true;
+            this.Label156.Location = new System.Drawing.Point(3, 86);
+            this.Label156.Name = "Label156";
+            this.Label156.Size = new System.Drawing.Size(57, 16);
+            this.Label156.TabIndex = 11;
+            this.Label156.Text = "Adjuster";
+            // 
+            // TextBox87
+            // 
+            this.TextBox87.Location = new System.Drawing.Point(180, 89);
+            this.TextBox87.Name = "TextBox87";
+            this.TextBox87.Size = new System.Drawing.Size(171, 22);
+            this.TextBox87.TabIndex = 19;
+            // 
+            // TextBox88
+            // 
+            this.TextBox88.Location = new System.Drawing.Point(180, 132);
+            this.TextBox88.Name = "TextBox88";
+            this.TextBox88.Size = new System.Drawing.Size(171, 22);
+            this.TextBox88.TabIndex = 20;
+            // 
+            // Label157
+            // 
+            this.Label157.AutoSize = true;
+            this.Label157.Location = new System.Drawing.Point(3, 129);
+            this.Label157.Name = "Label157";
+            this.Label157.Size = new System.Drawing.Size(100, 16);
+            this.Label157.TabIndex = 12;
+            this.Label157.Text = "Insurer Counsel";
+            // 
+            // TextBox89
+            // 
+            this.TextBox89.Location = new System.Drawing.Point(534, 46);
+            this.TextBox89.Name = "TextBox89";
+            this.TextBox89.Size = new System.Drawing.Size(172, 22);
+            this.TextBox89.TabIndex = 34;
+            // 
+            // TableLayoutPanel8
+            // 
+            this.TableLayoutPanel8.ColumnCount = 1;
+            this.TableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel8.Controls.Add(this.Issues7Lat2, 0, 7);
+            this.TableLayoutPanel8.Controls.Add(this.Issues6Lat2, 0, 6);
+            this.TableLayoutPanel8.Controls.Add(this.Issues5Lat2, 0, 5);
+            this.TableLayoutPanel8.Controls.Add(this.Issues4Lat2, 0, 4);
+            this.TableLayoutPanel8.Controls.Add(this.Issues3Lat2, 0, 3);
+            this.TableLayoutPanel8.Controls.Add(this.Issues2Lat2, 0, 2);
+            this.TableLayoutPanel8.Controls.Add(this.IssuesLat2, 0, 1);
+            this.TableLayoutPanel8.Controls.Add(this.Label158, 0, 0);
+            this.TableLayoutPanel8.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel8.Name = "TableLayoutPanel8";
+            this.TableLayoutPanel8.RowCount = 8;
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel8.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel8.TabIndex = 41;
+            // 
+            // Issues7Lat2
+            // 
+            this.Issues7Lat2.Location = new System.Drawing.Point(3, 262);
+            this.Issues7Lat2.Name = "Issues7Lat2";
+            this.Issues7Lat2.Size = new System.Drawing.Size(166, 22);
+            this.Issues7Lat2.TabIndex = 64;
+            // 
+            // Issues6Lat2
+            // 
+            this.Issues6Lat2.Location = new System.Drawing.Point(3, 225);
+            this.Issues6Lat2.Name = "Issues6Lat2";
+            this.Issues6Lat2.Size = new System.Drawing.Size(166, 22);
+            this.Issues6Lat2.TabIndex = 63;
+            // 
+            // Issues5Lat2
+            // 
+            this.Issues5Lat2.Location = new System.Drawing.Point(3, 188);
+            this.Issues5Lat2.Name = "Issues5Lat2";
+            this.Issues5Lat2.Size = new System.Drawing.Size(166, 22);
+            this.Issues5Lat2.TabIndex = 62;
+            // 
+            // Issues4Lat2
+            // 
+            this.Issues4Lat2.Location = new System.Drawing.Point(3, 151);
+            this.Issues4Lat2.Name = "Issues4Lat2";
+            this.Issues4Lat2.Size = new System.Drawing.Size(166, 22);
+            this.Issues4Lat2.TabIndex = 61;
+            // 
+            // Issues3Lat2
+            // 
+            this.Issues3Lat2.Location = new System.Drawing.Point(3, 114);
+            this.Issues3Lat2.Name = "Issues3Lat2";
+            this.Issues3Lat2.Size = new System.Drawing.Size(166, 22);
+            this.Issues3Lat2.TabIndex = 60;
+            // 
+            // Issues2Lat2
+            // 
+            this.Issues2Lat2.Location = new System.Drawing.Point(3, 77);
+            this.Issues2Lat2.Name = "Issues2Lat2";
+            this.Issues2Lat2.Size = new System.Drawing.Size(166, 22);
+            this.Issues2Lat2.TabIndex = 59;
+            // 
+            // IssuesLat2
+            // 
+            this.IssuesLat2.Location = new System.Drawing.Point(3, 40);
+            this.IssuesLat2.Name = "IssuesLat2";
+            this.IssuesLat2.Size = new System.Drawing.Size(166, 22);
+            this.IssuesLat2.TabIndex = 58;
+            // 
+            // Label158
+            // 
+            this.Label158.AutoSize = true;
+            this.Label158.Location = new System.Drawing.Point(3, 0);
+            this.Label158.Name = "Label158";
+            this.Label158.Size = new System.Drawing.Size(53, 16);
+            this.Label158.TabIndex = 0;
+            this.Label158.Text = "Issues";
+            // 
+            // TableLayoutPanel9
+            // 
+            this.TableLayoutPanel9.ColumnCount = 4;
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel9.Controls.Add(this.FiledDateLat2, 1, 0);
+            this.TableLayoutPanel9.Controls.Add(this.Label159, 2, 1);
+            this.TableLayoutPanel9.Controls.Add(this.AmountSettledLat2, 3, 6);
+            this.TableLayoutPanel9.Controls.Add(this.Label160, 0, 0);
+            this.TableLayoutPanel9.Controls.Add(this.Label161, 2, 6);
+            this.TableLayoutPanel9.Controls.Add(this.DateSettledLat2, 1, 6);
+            this.TableLayoutPanel9.Controls.Add(this.CaseConfLat2, 1, 1);
+            this.TableLayoutPanel9.Controls.Add(this.Label162, 0, 6);
+            this.TableLayoutPanel9.Controls.Add(this.HearingDateLat2, 3, 4);
+            this.TableLayoutPanel9.Controls.Add(this.Label163, 0, 1);
+            this.TableLayoutPanel9.Controls.Add(this.Label164, 2, 4);
+            this.TableLayoutPanel9.Controls.Add(this.HearingAdjudicatorLat2, 1, 5);
+            this.TableLayoutPanel9.Controls.Add(this.InsureFirmLat2, 3, 3);
+            this.TableLayoutPanel9.Controls.Add(this.Label165, 0, 5);
+            this.TableLayoutPanel9.Controls.Add(this.TribunalNumberLat2, 3, 0);
+            this.TableLayoutPanel9.Controls.Add(this.Label166, 2, 3);
+            this.TableLayoutPanel9.Controls.Add(this.InsurerLat2, 3, 2);
+            this.TableLayoutPanel9.Controls.Add(this.Label167, 2, 0);
+            this.TableLayoutPanel9.Controls.Add(this.HearingTypeLat2, 1, 4);
+            this.TableLayoutPanel9.Controls.Add(this.Label168, 2, 2);
+            this.TableLayoutPanel9.Controls.Add(this.Label169, 0, 4);
+            this.TableLayoutPanel9.Controls.Add(this.Label170, 0, 2);
+            this.TableLayoutPanel9.Controls.Add(this.AdjusterLat2, 1, 2);
+            this.TableLayoutPanel9.Controls.Add(this.InsurerCounselLat2, 1, 3);
+            this.TableLayoutPanel9.Controls.Add(this.Label171, 0, 3);
+            this.TableLayoutPanel9.Controls.Add(this.CaseAdjudicatorLat2, 3, 1);
+            this.TableLayoutPanel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel9.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel9.Name = "TableLayoutPanel9";
+            this.TableLayoutPanel9.RowCount = 7;
+            this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel9.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel9.TabIndex = 40;
+            // 
+            // FiledDateLat2
+            // 
+            this.FiledDateLat2.Location = new System.Drawing.Point(180, 3);
+            this.FiledDateLat2.Name = "FiledDateLat2";
+            this.FiledDateLat2.ReadOnly = true;
+            this.FiledDateLat2.Size = new System.Drawing.Size(171, 22);
+            this.FiledDateLat2.TabIndex = 16;
+            // 
+            // Label159
+            // 
+            this.Label159.AutoSize = true;
+            this.Label159.Location = new System.Drawing.Point(357, 43);
+            this.Label159.Name = "Label159";
+            this.Label159.Size = new System.Drawing.Size(111, 16);
+            this.Label159.TabIndex = 26;
+            this.Label159.Text = "Case Adjudicator";
+            // 
+            // AmountSettledLat2
+            // 
+            this.AmountSettledLat2.Location = new System.Drawing.Point(534, 261);
+            this.AmountSettledLat2.Name = "AmountSettledLat2";
+            this.AmountSettledLat2.Size = new System.Drawing.Size(172, 22);
+            this.AmountSettledLat2.TabIndex = 39;
+            this.AmountSettledLat2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // Label160
+            // 
+            this.Label160.AutoSize = true;
+            this.Label160.Location = new System.Drawing.Point(3, 0);
+            this.Label160.Name = "Label160";
+            this.Label160.Size = new System.Drawing.Size(70, 16);
+            this.Label160.TabIndex = 8;
+            this.Label160.Text = "Filed Date";
+            // 
+            // Label161
+            // 
+            this.Label161.AutoSize = true;
+            this.Label161.Location = new System.Drawing.Point(357, 258);
+            this.Label161.Name = "Label161";
+            this.Label161.Size = new System.Drawing.Size(98, 16);
+            this.Label161.TabIndex = 31;
+            this.Label161.Text = "Amount Settled";
+            // 
+            // DateSettledLat2
+            // 
+            this.DateSettledLat2.Location = new System.Drawing.Point(180, 261);
+            this.DateSettledLat2.Name = "DateSettledLat2";
+            this.DateSettledLat2.ReadOnly = true;
+            this.DateSettledLat2.Size = new System.Drawing.Size(171, 22);
+            this.DateSettledLat2.TabIndex = 23;
+            // 
+            // CaseConfLat2
+            // 
+            this.CaseConfLat2.Location = new System.Drawing.Point(180, 46);
+            this.CaseConfLat2.Name = "CaseConfLat2";
+            this.CaseConfLat2.ReadOnly = true;
+            this.CaseConfLat2.Size = new System.Drawing.Size(171, 22);
+            this.CaseConfLat2.TabIndex = 18;
+            // 
+            // Label162
+            // 
+            this.Label162.AutoSize = true;
+            this.Label162.Location = new System.Drawing.Point(3, 258);
+            this.Label162.Name = "Label162";
+            this.Label162.Size = new System.Drawing.Size(82, 16);
+            this.Label162.TabIndex = 15;
+            this.Label162.Text = "Date Settled";
+            // 
+            // HearingDateLat2
+            // 
+            this.HearingDateLat2.Location = new System.Drawing.Point(534, 175);
+            this.HearingDateLat2.Name = "HearingDateLat2";
+            this.HearingDateLat2.ReadOnly = true;
+            this.HearingDateLat2.Size = new System.Drawing.Size(172, 22);
+            this.HearingDateLat2.TabIndex = 37;
+            // 
+            // Label163
+            // 
+            this.Label163.AutoSize = true;
+            this.Label163.Location = new System.Drawing.Point(3, 43);
+            this.Label163.Name = "Label163";
+            this.Label163.Size = new System.Drawing.Size(70, 16);
+            this.Label163.TabIndex = 10;
+            this.Label163.Text = "Case Conf";
+            // 
+            // Label164
+            // 
+            this.Label164.AutoSize = true;
+            this.Label164.Location = new System.Drawing.Point(357, 172);
+            this.Label164.Name = "Label164";
+            this.Label164.Size = new System.Drawing.Size(88, 16);
+            this.Label164.TabIndex = 29;
+            this.Label164.Text = "Hearing Date";
+            // 
+            // HearingAdjudicatorLat2
+            // 
+            this.HearingAdjudicatorLat2.Location = new System.Drawing.Point(180, 218);
+            this.HearingAdjudicatorLat2.Name = "HearingAdjudicatorLat2";
+            this.HearingAdjudicatorLat2.Size = new System.Drawing.Size(171, 22);
+            this.HearingAdjudicatorLat2.TabIndex = 22;
+            // 
+            // InsureFirmLat2
+            // 
+            this.InsureFirmLat2.Location = new System.Drawing.Point(534, 132);
+            this.InsureFirmLat2.Name = "InsureFirmLat2";
+            this.InsureFirmLat2.Size = new System.Drawing.Size(172, 22);
+            this.InsureFirmLat2.TabIndex = 36;
+            // 
+            // Label165
+            // 
+            this.Label165.AutoSize = true;
+            this.Label165.Location = new System.Drawing.Point(3, 215);
+            this.Label165.Name = "Label165";
+            this.Label165.Size = new System.Drawing.Size(127, 16);
+            this.Label165.TabIndex = 14;
+            this.Label165.Text = "Hearing Adjudicator";
+            // 
+            // TribunalNumberLat2
+            // 
+            this.TribunalNumberLat2.Location = new System.Drawing.Point(534, 3);
+            this.TribunalNumberLat2.Name = "TribunalNumberLat2";
+            this.TribunalNumberLat2.Size = new System.Drawing.Size(172, 22);
+            this.TribunalNumberLat2.TabIndex = 32;
+            // 
+            // Label166
+            // 
+            this.Label166.AutoSize = true;
+            this.Label166.Location = new System.Drawing.Point(357, 129);
+            this.Label166.Name = "Label166";
+            this.Label166.Size = new System.Drawing.Size(77, 16);
+            this.Label166.TabIndex = 28;
+            this.Label166.Text = "Insurer Firm";
+            // 
+            // InsurerLat2
+            // 
+            this.InsurerLat2.Location = new System.Drawing.Point(534, 89);
+            this.InsurerLat2.Name = "InsurerLat2";
+            this.InsurerLat2.Size = new System.Drawing.Size(172, 22);
+            this.InsurerLat2.TabIndex = 35;
+            // 
+            // Label167
+            // 
+            this.Label167.AutoSize = true;
+            this.Label167.Location = new System.Drawing.Point(357, 0);
+            this.Label167.Name = "Label167";
+            this.Label167.Size = new System.Drawing.Size(108, 16);
+            this.Label167.TabIndex = 24;
+            this.Label167.Text = "Tribunal Number";
+            // 
+            // HearingTypeLat2
+            // 
+            this.HearingTypeLat2.Location = new System.Drawing.Point(180, 175);
+            this.HearingTypeLat2.Name = "HearingTypeLat2";
+            this.HearingTypeLat2.Size = new System.Drawing.Size(171, 22);
+            this.HearingTypeLat2.TabIndex = 21;
+            // 
+            // Label168
+            // 
+            this.Label168.AutoSize = true;
+            this.Label168.Location = new System.Drawing.Point(357, 86);
+            this.Label168.Name = "Label168";
+            this.Label168.Size = new System.Drawing.Size(48, 16);
+            this.Label168.TabIndex = 27;
+            this.Label168.Text = "Insurer";
+            // 
+            // Label169
+            // 
+            this.Label169.AutoSize = true;
+            this.Label169.Location = new System.Drawing.Point(3, 172);
+            this.Label169.Name = "Label169";
+            this.Label169.Size = new System.Drawing.Size(91, 16);
+            this.Label169.TabIndex = 13;
+            this.Label169.Text = "Hearing Type";
+            // 
+            // Label170
+            // 
+            this.Label170.AutoSize = true;
+            this.Label170.Location = new System.Drawing.Point(3, 86);
+            this.Label170.Name = "Label170";
+            this.Label170.Size = new System.Drawing.Size(57, 16);
+            this.Label170.TabIndex = 11;
+            this.Label170.Text = "Adjuster";
+            // 
+            // AdjusterLat2
+            // 
+            this.AdjusterLat2.Location = new System.Drawing.Point(180, 89);
+            this.AdjusterLat2.Name = "AdjusterLat2";
+            this.AdjusterLat2.Size = new System.Drawing.Size(171, 22);
+            this.AdjusterLat2.TabIndex = 19;
+            // 
+            // InsurerCounselLat2
+            // 
+            this.InsurerCounselLat2.Location = new System.Drawing.Point(180, 132);
+            this.InsurerCounselLat2.Name = "InsurerCounselLat2";
+            this.InsurerCounselLat2.Size = new System.Drawing.Size(171, 22);
+            this.InsurerCounselLat2.TabIndex = 20;
+            // 
+            // Label171
+            // 
+            this.Label171.AutoSize = true;
+            this.Label171.Location = new System.Drawing.Point(3, 129);
+            this.Label171.Name = "Label171";
+            this.Label171.Size = new System.Drawing.Size(100, 16);
+            this.Label171.TabIndex = 12;
+            this.Label171.Text = "Insurer Counsel";
+            // 
+            // CaseAdjudicatorLat2
+            // 
+            this.CaseAdjudicatorLat2.Location = new System.Drawing.Point(534, 46);
+            this.CaseAdjudicatorLat2.Name = "CaseAdjudicatorLat2";
+            this.CaseAdjudicatorLat2.Size = new System.Drawing.Size(172, 22);
+            this.CaseAdjudicatorLat2.TabIndex = 34;
+            // 
+            // GroupBoxLat1
+            // 
+            this.GroupBoxLat1.Controls.Add(this.GroupBox34);
+            this.GroupBoxLat1.Controls.Add(this.TableLayoutPanel3);
+            this.GroupBoxLat1.Controls.Add(this.TableLayoutPanel2);
+            this.GroupBoxLat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBoxLat1.Location = new System.Drawing.Point(19, 6);
+            this.GroupBoxLat1.Name = "GroupBoxLat1";
+            this.GroupBoxLat1.Size = new System.Drawing.Size(1285, 342);
+            this.GroupBoxLat1.TabIndex = 41;
+            this.GroupBoxLat1.TabStop = false;
+            this.GroupBoxLat1.Text = "LAT#1";
+            // 
+            // GroupBox34
+            // 
+            this.GroupBox34.Controls.Add(this.TableLayoutPanel4);
+            this.GroupBox34.Controls.Add(this.TableLayoutPanel5);
+            this.GroupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox34.Location = new System.Drawing.Point(1138, 343);
+            this.GroupBox34.Name = "GroupBox34";
+            this.GroupBox34.Size = new System.Drawing.Size(1285, 338);
+            this.GroupBox34.TabIndex = 41;
+            this.GroupBox34.TabStop = false;
+            this.GroupBox34.Text = "LAT#1";
+            // 
+            // TableLayoutPanel4
+            // 
+            this.TableLayoutPanel4.ColumnCount = 1;
+            this.TableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel4.Controls.Add(this.TextBox50, 0, 7);
+            this.TableLayoutPanel4.Controls.Add(this.TextBox51, 0, 6);
+            this.TableLayoutPanel4.Controls.Add(this.TextBox52, 0, 5);
+            this.TableLayoutPanel4.Controls.Add(this.TextBox53, 0, 4);
+            this.TableLayoutPanel4.Controls.Add(this.TextBox54, 0, 3);
+            this.TableLayoutPanel4.Controls.Add(this.TextBox55, 0, 2);
+            this.TableLayoutPanel4.Controls.Add(this.TextBox56, 0, 1);
+            this.TableLayoutPanel4.Controls.Add(this.Label125, 0, 0);
+            this.TableLayoutPanel4.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel4.Name = "TableLayoutPanel4";
+            this.TableLayoutPanel4.RowCount = 8;
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel4.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel4.TabIndex = 41;
+            // 
+            // TextBox50
+            // 
+            this.TextBox50.Location = new System.Drawing.Point(3, 262);
+            this.TextBox50.Name = "TextBox50";
+            this.TextBox50.Size = new System.Drawing.Size(166, 22);
+            this.TextBox50.TabIndex = 64;
+            // 
+            // TextBox51
+            // 
+            this.TextBox51.Location = new System.Drawing.Point(3, 225);
+            this.TextBox51.Name = "TextBox51";
+            this.TextBox51.Size = new System.Drawing.Size(166, 22);
+            this.TextBox51.TabIndex = 63;
+            // 
+            // TextBox52
+            // 
+            this.TextBox52.Location = new System.Drawing.Point(3, 188);
+            this.TextBox52.Name = "TextBox52";
+            this.TextBox52.Size = new System.Drawing.Size(166, 22);
+            this.TextBox52.TabIndex = 62;
+            // 
+            // TextBox53
+            // 
+            this.TextBox53.Location = new System.Drawing.Point(3, 151);
+            this.TextBox53.Name = "TextBox53";
+            this.TextBox53.Size = new System.Drawing.Size(166, 22);
+            this.TextBox53.TabIndex = 61;
+            // 
+            // TextBox54
+            // 
+            this.TextBox54.Location = new System.Drawing.Point(3, 114);
+            this.TextBox54.Name = "TextBox54";
+            this.TextBox54.Size = new System.Drawing.Size(166, 22);
+            this.TextBox54.TabIndex = 60;
+            // 
+            // TextBox55
+            // 
+            this.TextBox55.Location = new System.Drawing.Point(3, 77);
+            this.TextBox55.Name = "TextBox55";
+            this.TextBox55.Size = new System.Drawing.Size(166, 22);
+            this.TextBox55.TabIndex = 59;
+            // 
+            // TextBox56
+            // 
+            this.TextBox56.Location = new System.Drawing.Point(3, 40);
+            this.TextBox56.Name = "TextBox56";
+            this.TextBox56.Size = new System.Drawing.Size(166, 22);
+            this.TextBox56.TabIndex = 58;
+            // 
+            // Label125
+            // 
+            this.Label125.AutoSize = true;
+            this.Label125.Location = new System.Drawing.Point(3, 0);
+            this.Label125.Name = "Label125";
+            this.Label125.Size = new System.Drawing.Size(53, 16);
+            this.Label125.TabIndex = 0;
+            this.Label125.Text = "Issues";
+            // 
+            // TableLayoutPanel5
+            // 
+            this.TableLayoutPanel5.ColumnCount = 4;
+            this.TableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel5.Controls.Add(this.TextBox57, 1, 0);
+            this.TableLayoutPanel5.Controls.Add(this.Label130, 2, 1);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox58, 3, 6);
+            this.TableLayoutPanel5.Controls.Add(this.Label132, 0, 0);
+            this.TableLayoutPanel5.Controls.Add(this.Label133, 2, 6);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox59, 1, 6);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox60, 1, 1);
+            this.TableLayoutPanel5.Controls.Add(this.Label134, 0, 6);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox61, 3, 4);
+            this.TableLayoutPanel5.Controls.Add(this.Label135, 0, 1);
+            this.TableLayoutPanel5.Controls.Add(this.Label136, 2, 4);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox62, 1, 5);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox63, 3, 3);
+            this.TableLayoutPanel5.Controls.Add(this.Label137, 0, 5);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox64, 3, 0);
+            this.TableLayoutPanel5.Controls.Add(this.Label138, 2, 3);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox65, 3, 2);
+            this.TableLayoutPanel5.Controls.Add(this.Label139, 2, 0);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox66, 1, 4);
+            this.TableLayoutPanel5.Controls.Add(this.Label140, 2, 2);
+            this.TableLayoutPanel5.Controls.Add(this.Label141, 0, 4);
+            this.TableLayoutPanel5.Controls.Add(this.Label142, 0, 2);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox67, 1, 2);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox68, 1, 3);
+            this.TableLayoutPanel5.Controls.Add(this.Label143, 0, 3);
+            this.TableLayoutPanel5.Controls.Add(this.TextBox69, 3, 1);
+            this.TableLayoutPanel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel5.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel5.Name = "TableLayoutPanel5";
+            this.TableLayoutPanel5.RowCount = 7;
+            this.TableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel5.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel5.TabIndex = 40;
+            // 
+            // TextBox57
+            // 
+            this.TextBox57.Location = new System.Drawing.Point(180, 3);
+            this.TextBox57.Name = "TextBox57";
+            this.TextBox57.Size = new System.Drawing.Size(171, 22);
+            this.TextBox57.TabIndex = 16;
+            // 
+            // Label130
+            // 
+            this.Label130.AutoSize = true;
+            this.Label130.Location = new System.Drawing.Point(357, 43);
+            this.Label130.Name = "Label130";
+            this.Label130.Size = new System.Drawing.Size(111, 16);
+            this.Label130.TabIndex = 26;
+            this.Label130.Text = "Case Adjudicator";
+            // 
+            // TextBox58
+            // 
+            this.TextBox58.Location = new System.Drawing.Point(534, 261);
+            this.TextBox58.Name = "TextBox58";
+            this.TextBox58.Size = new System.Drawing.Size(172, 22);
+            this.TextBox58.TabIndex = 39;
+            // 
+            // Label132
+            // 
+            this.Label132.AutoSize = true;
+            this.Label132.Location = new System.Drawing.Point(3, 0);
+            this.Label132.Name = "Label132";
+            this.Label132.Size = new System.Drawing.Size(70, 16);
+            this.Label132.TabIndex = 8;
+            this.Label132.Text = "Filed Date";
+            // 
+            // Label133
+            // 
+            this.Label133.AutoSize = true;
+            this.Label133.Location = new System.Drawing.Point(357, 258);
+            this.Label133.Name = "Label133";
+            this.Label133.Size = new System.Drawing.Size(98, 16);
+            this.Label133.TabIndex = 31;
+            this.Label133.Text = "Amount Settled";
+            // 
+            // TextBox59
+            // 
+            this.TextBox59.Location = new System.Drawing.Point(180, 261);
+            this.TextBox59.Name = "TextBox59";
+            this.TextBox59.Size = new System.Drawing.Size(171, 22);
+            this.TextBox59.TabIndex = 23;
+            // 
+            // TextBox60
+            // 
+            this.TextBox60.Location = new System.Drawing.Point(180, 46);
+            this.TextBox60.Name = "TextBox60";
+            this.TextBox60.Size = new System.Drawing.Size(171, 22);
+            this.TextBox60.TabIndex = 18;
+            // 
+            // Label134
+            // 
+            this.Label134.AutoSize = true;
+            this.Label134.Location = new System.Drawing.Point(3, 258);
+            this.Label134.Name = "Label134";
+            this.Label134.Size = new System.Drawing.Size(82, 16);
+            this.Label134.TabIndex = 15;
+            this.Label134.Text = "Date Settled";
+            // 
+            // TextBox61
+            // 
+            this.TextBox61.Location = new System.Drawing.Point(534, 175);
+            this.TextBox61.Name = "TextBox61";
+            this.TextBox61.Size = new System.Drawing.Size(172, 22);
+            this.TextBox61.TabIndex = 37;
+            // 
+            // Label135
+            // 
+            this.Label135.AutoSize = true;
+            this.Label135.Location = new System.Drawing.Point(3, 43);
+            this.Label135.Name = "Label135";
+            this.Label135.Size = new System.Drawing.Size(70, 16);
+            this.Label135.TabIndex = 10;
+            this.Label135.Text = "Case Conf";
+            // 
+            // Label136
+            // 
+            this.Label136.AutoSize = true;
+            this.Label136.Location = new System.Drawing.Point(357, 172);
+            this.Label136.Name = "Label136";
+            this.Label136.Size = new System.Drawing.Size(88, 16);
+            this.Label136.TabIndex = 29;
+            this.Label136.Text = "Hearing Date";
+            // 
+            // TextBox62
+            // 
+            this.TextBox62.Location = new System.Drawing.Point(180, 218);
+            this.TextBox62.Name = "TextBox62";
+            this.TextBox62.Size = new System.Drawing.Size(171, 22);
+            this.TextBox62.TabIndex = 22;
+            // 
+            // TextBox63
+            // 
+            this.TextBox63.Location = new System.Drawing.Point(534, 132);
+            this.TextBox63.Name = "TextBox63";
+            this.TextBox63.Size = new System.Drawing.Size(172, 22);
+            this.TextBox63.TabIndex = 36;
+            // 
+            // Label137
+            // 
+            this.Label137.AutoSize = true;
+            this.Label137.Location = new System.Drawing.Point(3, 215);
+            this.Label137.Name = "Label137";
+            this.Label137.Size = new System.Drawing.Size(127, 16);
+            this.Label137.TabIndex = 14;
+            this.Label137.Text = "Hearing Adjudicator";
+            // 
+            // TextBox64
+            // 
+            this.TextBox64.Location = new System.Drawing.Point(534, 3);
+            this.TextBox64.Name = "TextBox64";
+            this.TextBox64.Size = new System.Drawing.Size(172, 22);
+            this.TextBox64.TabIndex = 32;
+            // 
+            // Label138
+            // 
+            this.Label138.AutoSize = true;
+            this.Label138.Location = new System.Drawing.Point(357, 129);
+            this.Label138.Name = "Label138";
+            this.Label138.Size = new System.Drawing.Size(77, 16);
+            this.Label138.TabIndex = 28;
+            this.Label138.Text = "Insurer Firm";
+            // 
+            // TextBox65
+            // 
+            this.TextBox65.Location = new System.Drawing.Point(534, 89);
+            this.TextBox65.Name = "TextBox65";
+            this.TextBox65.Size = new System.Drawing.Size(172, 22);
+            this.TextBox65.TabIndex = 35;
+            // 
+            // Label139
+            // 
+            this.Label139.AutoSize = true;
+            this.Label139.Location = new System.Drawing.Point(357, 0);
+            this.Label139.Name = "Label139";
+            this.Label139.Size = new System.Drawing.Size(108, 16);
+            this.Label139.TabIndex = 24;
+            this.Label139.Text = "Tribunal Number";
+            // 
+            // TextBox66
+            // 
+            this.TextBox66.Location = new System.Drawing.Point(180, 175);
+            this.TextBox66.Name = "TextBox66";
+            this.TextBox66.Size = new System.Drawing.Size(171, 22);
+            this.TextBox66.TabIndex = 21;
+            // 
+            // Label140
+            // 
+            this.Label140.AutoSize = true;
+            this.Label140.Location = new System.Drawing.Point(357, 86);
+            this.Label140.Name = "Label140";
+            this.Label140.Size = new System.Drawing.Size(48, 16);
+            this.Label140.TabIndex = 27;
+            this.Label140.Text = "Insurer";
+            // 
+            // Label141
+            // 
+            this.Label141.AutoSize = true;
+            this.Label141.Location = new System.Drawing.Point(3, 172);
+            this.Label141.Name = "Label141";
+            this.Label141.Size = new System.Drawing.Size(91, 16);
+            this.Label141.TabIndex = 13;
+            this.Label141.Text = "Hearing Type";
+            // 
+            // Label142
+            // 
+            this.Label142.AutoSize = true;
+            this.Label142.Location = new System.Drawing.Point(3, 86);
+            this.Label142.Name = "Label142";
+            this.Label142.Size = new System.Drawing.Size(57, 16);
+            this.Label142.TabIndex = 11;
+            this.Label142.Text = "Adjuster";
+            // 
+            // TextBox67
+            // 
+            this.TextBox67.Location = new System.Drawing.Point(180, 89);
+            this.TextBox67.Name = "TextBox67";
+            this.TextBox67.Size = new System.Drawing.Size(171, 22);
+            this.TextBox67.TabIndex = 19;
+            // 
+            // TextBox68
+            // 
+            this.TextBox68.Location = new System.Drawing.Point(180, 132);
+            this.TextBox68.Name = "TextBox68";
+            this.TextBox68.Size = new System.Drawing.Size(171, 22);
+            this.TextBox68.TabIndex = 20;
+            // 
+            // Label143
+            // 
+            this.Label143.AutoSize = true;
+            this.Label143.Location = new System.Drawing.Point(3, 129);
+            this.Label143.Name = "Label143";
+            this.Label143.Size = new System.Drawing.Size(100, 16);
+            this.Label143.TabIndex = 12;
+            this.Label143.Text = "Insurer Counsel";
+            // 
+            // TextBox69
+            // 
+            this.TextBox69.Location = new System.Drawing.Point(534, 46);
+            this.TextBox69.Name = "TextBox69";
+            this.TextBox69.Size = new System.Drawing.Size(172, 22);
+            this.TextBox69.TabIndex = 34;
+            // 
+            // TableLayoutPanel3
+            // 
+            this.TableLayoutPanel3.ColumnCount = 1;
+            this.TableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel3.Controls.Add(this.TxtIssues7, 0, 7);
+            this.TableLayoutPanel3.Controls.Add(this.TxtIssues6, 0, 6);
+            this.TableLayoutPanel3.Controls.Add(this.TxtIssues5, 0, 5);
+            this.TableLayoutPanel3.Controls.Add(this.TxtIssues4, 0, 4);
+            this.TableLayoutPanel3.Controls.Add(this.TxtIssues3, 0, 3);
+            this.TableLayoutPanel3.Controls.Add(this.TxtIssues2, 0, 2);
+            this.TableLayoutPanel3.Controls.Add(this.TxtIssues1, 0, 1);
+            this.TableLayoutPanel3.Controls.Add(this.Label82, 0, 0);
+            this.TableLayoutPanel3.Location = new System.Drawing.Point(784, 22);
+            this.TableLayoutPanel3.Name = "TableLayoutPanel3";
+            this.TableLayoutPanel3.RowCount = 8;
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel3.Size = new System.Drawing.Size(200, 302);
+            this.TableLayoutPanel3.TabIndex = 41;
+            // 
+            // TxtIssues7
+            // 
+            this.TxtIssues7.Location = new System.Drawing.Point(3, 262);
+            this.TxtIssues7.Name = "TxtIssues7";
+            this.TxtIssues7.Size = new System.Drawing.Size(166, 22);
+            this.TxtIssues7.TabIndex = 64;
+            // 
+            // TxtIssues6
+            // 
+            this.TxtIssues6.Location = new System.Drawing.Point(3, 225);
+            this.TxtIssues6.Name = "TxtIssues6";
+            this.TxtIssues6.Size = new System.Drawing.Size(166, 22);
+            this.TxtIssues6.TabIndex = 63;
+            // 
+            // TxtIssues5
+            // 
+            this.TxtIssues5.Location = new System.Drawing.Point(3, 188);
+            this.TxtIssues5.Name = "TxtIssues5";
+            this.TxtIssues5.Size = new System.Drawing.Size(166, 22);
+            this.TxtIssues5.TabIndex = 62;
+            // 
+            // TxtIssues4
+            // 
+            this.TxtIssues4.Location = new System.Drawing.Point(3, 151);
+            this.TxtIssues4.Name = "TxtIssues4";
+            this.TxtIssues4.Size = new System.Drawing.Size(166, 22);
+            this.TxtIssues4.TabIndex = 61;
+            // 
+            // TxtIssues3
+            // 
+            this.TxtIssues3.Location = new System.Drawing.Point(3, 114);
+            this.TxtIssues3.Name = "TxtIssues3";
+            this.TxtIssues3.Size = new System.Drawing.Size(166, 22);
+            this.TxtIssues3.TabIndex = 60;
+            // 
+            // TxtIssues2
+            // 
+            this.TxtIssues2.Location = new System.Drawing.Point(3, 77);
+            this.TxtIssues2.Name = "TxtIssues2";
+            this.TxtIssues2.Size = new System.Drawing.Size(166, 22);
+            this.TxtIssues2.TabIndex = 59;
+            // 
+            // TxtIssues1
+            // 
+            this.TxtIssues1.Location = new System.Drawing.Point(3, 40);
+            this.TxtIssues1.Name = "TxtIssues1";
+            this.TxtIssues1.Size = new System.Drawing.Size(166, 22);
+            this.TxtIssues1.TabIndex = 58;
+            // 
+            // Label82
+            // 
+            this.Label82.AutoSize = true;
+            this.Label82.Location = new System.Drawing.Point(3, 0);
+            this.Label82.Name = "Label82";
+            this.Label82.Size = new System.Drawing.Size(53, 16);
+            this.Label82.TabIndex = 0;
+            this.Label82.Text = "Issues";
+            // 
+            // TableLayoutPanel2
+            // 
+            this.TableLayoutPanel2.ColumnCount = 4;
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayoutPanel2.Controls.Add(this.FiledDateTxt, 1, 0);
+            this.TableLayoutPanel2.Controls.Add(this.Label126, 2, 1);
+            this.TableLayoutPanel2.Controls.Add(this.AmountSettledTxt, 3, 6);
+            this.TableLayoutPanel2.Controls.Add(this.Label64, 0, 0);
+            this.TableLayoutPanel2.Controls.Add(this.Label131, 2, 6);
+            this.TableLayoutPanel2.Controls.Add(this.DateSettledTxt, 1, 6);
+            this.TableLayoutPanel2.Controls.Add(this.CaseConfTxt, 1, 1);
+            this.TableLayoutPanel2.Controls.Add(this.Label123, 0, 6);
+            this.TableLayoutPanel2.Controls.Add(this.HearingDateTxt, 3, 4);
+            this.TableLayoutPanel2.Controls.Add(this.Label118, 0, 1);
+            this.TableLayoutPanel2.Controls.Add(this.Label129, 2, 4);
+            this.TableLayoutPanel2.Controls.Add(this.HearingAdjudicatorTxt, 1, 5);
+            this.TableLayoutPanel2.Controls.Add(this.InsurerFirmTxt, 3, 3);
+            this.TableLayoutPanel2.Controls.Add(this.Label122, 0, 5);
+            this.TableLayoutPanel2.Controls.Add(this.TribunalNumberTxt, 3, 0);
+            this.TableLayoutPanel2.Controls.Add(this.Label128, 2, 3);
+            this.TableLayoutPanel2.Controls.Add(this.InsurerTxt, 3, 2);
+            this.TableLayoutPanel2.Controls.Add(this.Label124, 2, 0);
+            this.TableLayoutPanel2.Controls.Add(this.HearingTypeTxt, 1, 4);
+            this.TableLayoutPanel2.Controls.Add(this.Label127, 2, 2);
+            this.TableLayoutPanel2.Controls.Add(this.Label121, 0, 4);
+            this.TableLayoutPanel2.Controls.Add(this.Label119, 0, 2);
+            this.TableLayoutPanel2.Controls.Add(this.AdjusterTxt, 1, 2);
+            this.TableLayoutPanel2.Controls.Add(this.InsurerCounselTxt, 1, 3);
+            this.TableLayoutPanel2.Controls.Add(this.Label120, 0, 3);
+            this.TableLayoutPanel2.Controls.Add(this.CaseAdjudicatorTxt, 3, 1);
+            this.TableLayoutPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLayoutPanel2.Location = new System.Drawing.Point(28, 22);
+            this.TableLayoutPanel2.Name = "TableLayoutPanel2";
+            this.TableLayoutPanel2.RowCount = 7;
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.TableLayoutPanel2.Size = new System.Drawing.Size(709, 302);
+            this.TableLayoutPanel2.TabIndex = 40;
+            // 
+            // FiledDateTxt
+            // 
+            this.FiledDateTxt.Location = new System.Drawing.Point(180, 3);
+            this.FiledDateTxt.Name = "FiledDateTxt";
+            this.FiledDateTxt.ReadOnly = true;
+            this.FiledDateTxt.Size = new System.Drawing.Size(171, 22);
+            this.FiledDateTxt.TabIndex = 16;
+            // 
+            // Label126
+            // 
+            this.Label126.AutoSize = true;
+            this.Label126.Location = new System.Drawing.Point(357, 43);
+            this.Label126.Name = "Label126";
+            this.Label126.Size = new System.Drawing.Size(111, 16);
+            this.Label126.TabIndex = 26;
+            this.Label126.Text = "Case Adjudicator";
+            // 
+            // AmountSettledTxt
+            // 
+            this.AmountSettledTxt.Location = new System.Drawing.Point(534, 261);
+            this.AmountSettledTxt.Name = "AmountSettledTxt";
+            this.AmountSettledTxt.Size = new System.Drawing.Size(172, 22);
+            this.AmountSettledTxt.TabIndex = 39;
+            this.AmountSettledTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // Label64
+            // 
+            this.Label64.AutoSize = true;
+            this.Label64.Location = new System.Drawing.Point(3, 0);
+            this.Label64.Name = "Label64";
+            this.Label64.Size = new System.Drawing.Size(70, 16);
+            this.Label64.TabIndex = 8;
+            this.Label64.Text = "Filed Date";
+            // 
+            // Label131
+            // 
+            this.Label131.AutoSize = true;
+            this.Label131.Location = new System.Drawing.Point(357, 258);
+            this.Label131.Name = "Label131";
+            this.Label131.Size = new System.Drawing.Size(98, 16);
+            this.Label131.TabIndex = 31;
+            this.Label131.Text = "Amount Settled";
+            // 
+            // DateSettledTxt
+            // 
+            this.DateSettledTxt.Location = new System.Drawing.Point(180, 261);
+            this.DateSettledTxt.Name = "DateSettledTxt";
+            this.DateSettledTxt.ReadOnly = true;
+            this.DateSettledTxt.Size = new System.Drawing.Size(171, 22);
+            this.DateSettledTxt.TabIndex = 23;
+            // 
+            // CaseConfTxt
+            // 
+            this.CaseConfTxt.Location = new System.Drawing.Point(180, 46);
+            this.CaseConfTxt.Name = "CaseConfTxt";
+            this.CaseConfTxt.ReadOnly = true;
+            this.CaseConfTxt.Size = new System.Drawing.Size(171, 22);
+            this.CaseConfTxt.TabIndex = 18;
+            // 
+            // Label123
+            // 
+            this.Label123.AutoSize = true;
+            this.Label123.Location = new System.Drawing.Point(3, 258);
+            this.Label123.Name = "Label123";
+            this.Label123.Size = new System.Drawing.Size(82, 16);
+            this.Label123.TabIndex = 15;
+            this.Label123.Text = "Date Settled";
+            // 
+            // HearingDateTxt
+            // 
+            this.HearingDateTxt.Location = new System.Drawing.Point(534, 175);
+            this.HearingDateTxt.Name = "HearingDateTxt";
+            this.HearingDateTxt.ReadOnly = true;
+            this.HearingDateTxt.Size = new System.Drawing.Size(172, 22);
+            this.HearingDateTxt.TabIndex = 37;
+            // 
+            // Label118
+            // 
+            this.Label118.AutoSize = true;
+            this.Label118.Location = new System.Drawing.Point(3, 43);
+            this.Label118.Name = "Label118";
+            this.Label118.Size = new System.Drawing.Size(70, 16);
+            this.Label118.TabIndex = 10;
+            this.Label118.Text = "Case Conf";
+            // 
+            // Label129
+            // 
+            this.Label129.AutoSize = true;
+            this.Label129.Location = new System.Drawing.Point(357, 172);
+            this.Label129.Name = "Label129";
+            this.Label129.Size = new System.Drawing.Size(88, 16);
+            this.Label129.TabIndex = 29;
+            this.Label129.Text = "Hearing Date";
+            // 
+            // HearingAdjudicatorTxt
+            // 
+            this.HearingAdjudicatorTxt.Location = new System.Drawing.Point(180, 218);
+            this.HearingAdjudicatorTxt.Name = "HearingAdjudicatorTxt";
+            this.HearingAdjudicatorTxt.Size = new System.Drawing.Size(171, 22);
+            this.HearingAdjudicatorTxt.TabIndex = 22;
+            // 
+            // InsurerFirmTxt
+            // 
+            this.InsurerFirmTxt.Location = new System.Drawing.Point(534, 132);
+            this.InsurerFirmTxt.Name = "InsurerFirmTxt";
+            this.InsurerFirmTxt.Size = new System.Drawing.Size(172, 22);
+            this.InsurerFirmTxt.TabIndex = 36;
+            // 
+            // Label122
+            // 
+            this.Label122.AutoSize = true;
+            this.Label122.Location = new System.Drawing.Point(3, 215);
+            this.Label122.Name = "Label122";
+            this.Label122.Size = new System.Drawing.Size(127, 16);
+            this.Label122.TabIndex = 14;
+            this.Label122.Text = "Hearing Adjudicator";
+            // 
+            // TribunalNumberTxt
+            // 
+            this.TribunalNumberTxt.Location = new System.Drawing.Point(534, 3);
+            this.TribunalNumberTxt.Name = "TribunalNumberTxt";
+            this.TribunalNumberTxt.Size = new System.Drawing.Size(172, 22);
+            this.TribunalNumberTxt.TabIndex = 32;
+            // 
+            // Label128
+            // 
+            this.Label128.AutoSize = true;
+            this.Label128.Location = new System.Drawing.Point(357, 129);
+            this.Label128.Name = "Label128";
+            this.Label128.Size = new System.Drawing.Size(77, 16);
+            this.Label128.TabIndex = 28;
+            this.Label128.Text = "Insurer Firm";
+            // 
+            // InsurerTxt
+            // 
+            this.InsurerTxt.Location = new System.Drawing.Point(534, 89);
+            this.InsurerTxt.Name = "InsurerTxt";
+            this.InsurerTxt.Size = new System.Drawing.Size(172, 22);
+            this.InsurerTxt.TabIndex = 35;
+            // 
+            // Label124
+            // 
+            this.Label124.AutoSize = true;
+            this.Label124.Location = new System.Drawing.Point(357, 0);
+            this.Label124.Name = "Label124";
+            this.Label124.Size = new System.Drawing.Size(108, 16);
+            this.Label124.TabIndex = 24;
+            this.Label124.Text = "Tribunal Number";
+            // 
+            // HearingTypeTxt
+            // 
+            this.HearingTypeTxt.Location = new System.Drawing.Point(180, 175);
+            this.HearingTypeTxt.Name = "HearingTypeTxt";
+            this.HearingTypeTxt.Size = new System.Drawing.Size(171, 22);
+            this.HearingTypeTxt.TabIndex = 21;
+            // 
+            // Label127
+            // 
+            this.Label127.AutoSize = true;
+            this.Label127.Location = new System.Drawing.Point(357, 86);
+            this.Label127.Name = "Label127";
+            this.Label127.Size = new System.Drawing.Size(48, 16);
+            this.Label127.TabIndex = 27;
+            this.Label127.Text = "Insurer";
+            // 
+            // Label121
+            // 
+            this.Label121.AutoSize = true;
+            this.Label121.Location = new System.Drawing.Point(3, 172);
+            this.Label121.Name = "Label121";
+            this.Label121.Size = new System.Drawing.Size(91, 16);
+            this.Label121.TabIndex = 13;
+            this.Label121.Text = "Hearing Type";
+            // 
+            // Label119
+            // 
+            this.Label119.AutoSize = true;
+            this.Label119.Location = new System.Drawing.Point(3, 86);
+            this.Label119.Name = "Label119";
+            this.Label119.Size = new System.Drawing.Size(57, 16);
+            this.Label119.TabIndex = 11;
+            this.Label119.Text = "Adjuster";
+            // 
+            // AdjusterTxt
+            // 
+            this.AdjusterTxt.Location = new System.Drawing.Point(180, 89);
+            this.AdjusterTxt.Name = "AdjusterTxt";
+            this.AdjusterTxt.Size = new System.Drawing.Size(171, 22);
+            this.AdjusterTxt.TabIndex = 19;
+            // 
+            // InsurerCounselTxt
+            // 
+            this.InsurerCounselTxt.Location = new System.Drawing.Point(180, 132);
+            this.InsurerCounselTxt.Name = "InsurerCounselTxt";
+            this.InsurerCounselTxt.Size = new System.Drawing.Size(171, 22);
+            this.InsurerCounselTxt.TabIndex = 20;
+            // 
+            // Label120
+            // 
+            this.Label120.AutoSize = true;
+            this.Label120.Location = new System.Drawing.Point(3, 129);
+            this.Label120.Name = "Label120";
+            this.Label120.Size = new System.Drawing.Size(100, 16);
+            this.Label120.TabIndex = 12;
+            this.Label120.Text = "Insurer Counsel";
+            // 
+            // CaseAdjudicatorTxt
+            // 
+            this.CaseAdjudicatorTxt.Location = new System.Drawing.Point(534, 46);
+            this.CaseAdjudicatorTxt.Name = "CaseAdjudicatorTxt";
+            this.CaseAdjudicatorTxt.Size = new System.Drawing.Size(172, 22);
+            this.CaseAdjudicatorTxt.TabIndex = 34;
+            // 
+            // LAT1
+            // 
+            this.LAT1.AutoScroll = true;
+            this.LAT1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.LAT1.Controls.Add(this.BtnLat1);
+            this.LAT1.Controls.Add(this.DateLatSettledClosedtTxt);
+            this.LAT1.Controls.Add(this.DeadLineForReplaySubmissionsTxt);
+            this.LAT1.Controls.Add(this.DeadLineToFileHearingSubmissionsTxt);
+            this.LAT1.Controls.Add(this.DeadLineToFileAffidavitReportsTxt);
+            this.LAT1.Controls.Add(this.DeadLineToDeliverProductionsToABCounselTxt);
+            this.LAT1.Controls.Add(this.DeadLineToServeFileCaseConfSummaryTxt);
+            this.LAT1.Controls.Add(this.ActualDateLatServedOnInsurerTxt);
+            this.LAT1.Controls.Add(this.ProposedDateToFileLatTxt);
+            this.LAT1.Controls.Add(this.DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT1.Controls.Add(this.HearingStarDateTxt);
+            this.LAT1.Controls.Add(this.DeadlineToReceiveInsurerTxt);
+            this.LAT1.Controls.Add(this.DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT1.Controls.Add(this.DeadLineToReceiveABProductionsTxt);
+            this.LAT1.Controls.Add(this.LatCaseConfDateTxt);
+            this.LAT1.Controls.Add(this.InsuresResponseReceivedTxt);
+            this.LAT1.Controls.Add(this.ActualDateLatFiledTxt);
+            this.LAT1.Controls.Add(this.DateMetWithLawyerReDenialTxt);
+            this.LAT1.Controls.Add(Label91);
+            this.LAT1.Controls.Add(this.DueDateToDiscussPotenctialLatApplDtp);
+            this.LAT1.Controls.Add(Label92);
+            this.LAT1.Controls.Add(this.ProposedDateToFileLatDtp);
+            this.LAT1.Controls.Add(Label93);
+            this.LAT1.Controls.Add(this.ActualDateLatServedOnInsurerDtp);
+            this.LAT1.Controls.Add(Label94);
+            this.LAT1.Controls.Add(this.DeadLineToServeFileCaseConfSummaryDtp);
+            this.LAT1.Controls.Add(Label95);
+            this.LAT1.Controls.Add(this.DeadLineToDeliverProductionsToABCounselDtp);
+            this.LAT1.Controls.Add(Label96);
+            this.LAT1.Controls.Add(this.DeadLineToFileAffidavitReportsDtp);
+            this.LAT1.Controls.Add(Label97);
+            this.LAT1.Controls.Add(this.DeadLineToFileHearingSubmissionsDtp);
+            this.LAT1.Controls.Add(Label98);
+            this.LAT1.Controls.Add(this.DeadLineForReplaySubmissionsDtp);
+            this.LAT1.Controls.Add(Label99);
+            this.LAT1.Controls.Add(this.DateLatSettledClosedDtp);
+            this.LAT1.Controls.Add(Label101);
+            this.LAT1.Controls.Add(this.DateMetWithLawyerReDenialDtp);
+            this.LAT1.Controls.Add(Label102);
+            this.LAT1.Controls.Add(this.ActualDateLatFiledDtp);
+            this.LAT1.Controls.Add(Label103);
+            this.LAT1.Controls.Add(this.InsuresResponseReceivedDtp);
+            this.LAT1.Controls.Add(Label104);
+            this.LAT1.Controls.Add(this.LatCaseConfDateDtp);
+            this.LAT1.Controls.Add(Label105);
+            this.LAT1.Controls.Add(this.DeadLineToReceiveABProductionsDtp);
+            this.LAT1.Controls.Add(Label106);
+            this.LAT1.Controls.Add(this.DeadLineToReceiveAffidavitReportsDtp);
+            this.LAT1.Controls.Add(Label107);
+            this.LAT1.Controls.Add(this.DeadlineToReceiveInsurerDtp);
+            this.LAT1.Controls.Add(Label108);
+            this.LAT1.Controls.Add(this.HearingStarDateDtp);
+            this.LAT1.Location = new System.Drawing.Point(4, 26);
+            this.LAT1.Name = "LAT1";
+            this.LAT1.Padding = new System.Windows.Forms.Padding(3);
+            this.LAT1.Size = new System.Drawing.Size(1334, 332);
+            this.LAT1.TabIndex = 0;
+            this.LAT1.Text = "LAT 1";
+            // 
+            // BtnLat1
+            // 
+            this.BtnLat1.Location = new System.Drawing.Point(1225, 308);
+            this.BtnLat1.Name = "BtnLat1";
+            this.BtnLat1.Size = new System.Drawing.Size(85, 23);
+            this.BtnLat1.TabIndex = 136;
+            this.BtnLat1.Text = "Operation";
+            this.BtnLat1.UseVisualStyleBackColor = true;
+            // 
+            // DateLatSettledClosedtTxt
+            // 
+            this.DateLatSettledClosedtTxt.Location = new System.Drawing.Point(1111, 281);
+            this.DateLatSettledClosedtTxt.Name = "DateLatSettledClosedtTxt";
+            this.DateLatSettledClosedtTxt.ReadOnly = true;
+            this.DateLatSettledClosedtTxt.Size = new System.Drawing.Size(166, 23);
+            this.DateLatSettledClosedtTxt.TabIndex = 108;
+            // 
+            // DeadLineForReplaySubmissionsTxt
+            // 
+            this.DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1111, 248);
+            this.DeadLineForReplaySubmissionsTxt.Name = "DeadLineForReplaySubmissionsTxt";
+            this.DeadLineForReplaySubmissionsTxt.ReadOnly = true;
+            this.DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(166, 23);
+            this.DeadLineForReplaySubmissionsTxt.TabIndex = 107;
+            // 
+            // DeadLineToFileHearingSubmissionsTxt
+            // 
+            this.DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1111, 215);
+            this.DeadLineToFileHearingSubmissionsTxt.Name = "DeadLineToFileHearingSubmissionsTxt";
+            this.DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(166, 23);
+            this.DeadLineToFileHearingSubmissionsTxt.TabIndex = 106;
+            // 
+            // DeadLineToFileAffidavitReportsTxt
+            // 
+            this.DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1111, 182);
+            this.DeadLineToFileAffidavitReportsTxt.Name = "DeadLineToFileAffidavitReportsTxt";
+            this.DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(166, 23);
+            this.DeadLineToFileAffidavitReportsTxt.TabIndex = 105;
+            // 
+            // DeadLineToDeliverProductionsToABCounselTxt
+            // 
+            this.DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1111, 149);
+            this.DeadLineToDeliverProductionsToABCounselTxt.Name = "DeadLineToDeliverProductionsToABCounselTxt";
+            this.DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(166, 23);
+            this.DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 104;
+            // 
+            // DeadLineToServeFileCaseConfSummaryTxt
+            // 
+            this.DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1111, 116);
+            this.DeadLineToServeFileCaseConfSummaryTxt.Name = "DeadLineToServeFileCaseConfSummaryTxt";
+            this.DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(166, 23);
+            this.DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 103;
+            // 
+            // ActualDateLatServedOnInsurerTxt
+            // 
+            this.ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1111, 83);
+            this.ActualDateLatServedOnInsurerTxt.Name = "ActualDateLatServedOnInsurerTxt";
+            this.ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(166, 23);
+            this.ActualDateLatServedOnInsurerTxt.TabIndex = 102;
+            // 
+            // ProposedDateToFileLatTxt
+            // 
+            this.ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1111, 50);
+            this.ProposedDateToFileLatTxt.Name = "ProposedDateToFileLatTxt";
+            this.ProposedDateToFileLatTxt.ReadOnly = true;
+            this.ProposedDateToFileLatTxt.Size = new System.Drawing.Size(166, 23);
+            this.ProposedDateToFileLatTxt.TabIndex = 101;
+            // 
+            // DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1111, 17);
+            this.DueDateToDiscussPotenctialLatApplTxt.Name = "DueDateToDiscussPotenctialLatApplTxt";
+            this.DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(166, 23);
+            this.DueDateToDiscussPotenctialLatApplTxt.TabIndex = 100;
+            // 
+            // HearingStarDateTxt
+            // 
+            this.HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
+            this.HearingStarDateTxt.Name = "HearingStarDateTxt";
+            this.HearingStarDateTxt.ReadOnly = true;
+            this.HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
+            this.HearingStarDateTxt.TabIndex = 99;
+            // 
+            // DeadlineToReceiveInsurerTxt
+            // 
+            this.DeadlineToReceiveInsurerTxt.Location = new System.Drawing.Point(431, 254);
+            this.DeadlineToReceiveInsurerTxt.Name = "DeadlineToReceiveInsurerTxt";
+            this.DeadlineToReceiveInsurerTxt.ReadOnly = true;
+            this.DeadlineToReceiveInsurerTxt.Size = new System.Drawing.Size(188, 23);
+            this.DeadlineToReceiveInsurerTxt.TabIndex = 98;
+            // 
+            // DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(431, 221);
+            this.DeadLineToReceiveAffidavitReportsTxt.Name = "DeadLineToReceiveAffidavitReportsTxt";
+            this.DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(188, 23);
+            this.DeadLineToReceiveAffidavitReportsTxt.TabIndex = 97;
+            // 
+            // DeadLineToReceiveABProductionsTxt
+            // 
+            this.DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(431, 188);
+            this.DeadLineToReceiveABProductionsTxt.Name = "DeadLineToReceiveABProductionsTxt";
+            this.DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(188, 23);
+            this.DeadLineToReceiveABProductionsTxt.TabIndex = 96;
+            // 
+            // LatCaseConfDateTxt
+            // 
+            this.LatCaseConfDateTxt.Location = new System.Drawing.Point(431, 155);
+            this.LatCaseConfDateTxt.Name = "LatCaseConfDateTxt";
+            this.LatCaseConfDateTxt.ReadOnly = true;
+            this.LatCaseConfDateTxt.Size = new System.Drawing.Size(188, 23);
+            this.LatCaseConfDateTxt.TabIndex = 95;
+            // 
+            // InsuresResponseReceivedTxt
+            // 
+            this.InsuresResponseReceivedTxt.Location = new System.Drawing.Point(431, 122);
+            this.InsuresResponseReceivedTxt.Name = "InsuresResponseReceivedTxt";
+            this.InsuresResponseReceivedTxt.ReadOnly = true;
+            this.InsuresResponseReceivedTxt.Size = new System.Drawing.Size(188, 23);
+            this.InsuresResponseReceivedTxt.TabIndex = 94;
+            // 
+            // ActualDateLatFiledTxt
+            // 
+            this.ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
+            this.ActualDateLatFiledTxt.Name = "ActualDateLatFiledTxt";
+            this.ActualDateLatFiledTxt.ReadOnly = true;
+            this.ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
+            this.ActualDateLatFiledTxt.TabIndex = 93;
+            // 
+            // DateMetWithLawyerReDenialTxt
+            // 
+            this.DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
+            this.DateMetWithLawyerReDenialTxt.Name = "DateMetWithLawyerReDenialTxt";
+            this.DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
+            this.DateMetWithLawyerReDenialTxt.TabIndex = 92;
+            // 
+            // DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.DueDateToDiscussPotenctialLatApplDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1278, 17);
+            this.DueDateToDiscussPotenctialLatApplDtp.Name = "DueDateToDiscussPotenctialLatApplDtp";
+            this.DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.DueDateToDiscussPotenctialLatApplDtp.TabIndex = 75;
+            this.DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // ProposedDateToFileLatDtp
+            // 
+            this.ProposedDateToFileLatDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1278, 50);
+            this.ProposedDateToFileLatDtp.Name = "ProposedDateToFileLatDtp";
+            this.ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.ProposedDateToFileLatDtp.TabIndex = 77;
+            this.ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // ActualDateLatServedOnInsurerDtp
+            // 
+            this.ActualDateLatServedOnInsurerDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1278, 83);
+            this.ActualDateLatServedOnInsurerDtp.Name = "ActualDateLatServedOnInsurerDtp";
+            this.ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.ActualDateLatServedOnInsurerDtp.TabIndex = 79;
+            this.ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadLineToServeFileCaseConfSummaryDtp
+            // 
+            this.DeadLineToServeFileCaseConfSummaryDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1278, 116);
+            this.DeadLineToServeFileCaseConfSummaryDtp.Name = "DeadLineToServeFileCaseConfSummaryDtp";
+            this.DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 81;
+            this.DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadLineToDeliverProductionsToABCounselDtp
+            // 
+            this.DeadLineToDeliverProductionsToABCounselDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1278, 149);
+            this.DeadLineToDeliverProductionsToABCounselDtp.Name = "DeadLineToDeliverProductionsToABCounselDtp";
+            this.DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 83;
+            this.DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadLineToFileAffidavitReportsDtp
+            // 
+            this.DeadLineToFileAffidavitReportsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1278, 182);
+            this.DeadLineToFileAffidavitReportsDtp.Name = "DeadLineToFileAffidavitReportsDtp";
+            this.DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToFileAffidavitReportsDtp.TabIndex = 85;
+            this.DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.DeadLineToFileHearingSubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1278, 215);
+            this.DeadLineToFileHearingSubmissionsDtp.Name = "DeadLineToFileHearingSubmissionsDtp";
+            this.DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToFileHearingSubmissionsDtp.TabIndex = 87;
+            this.DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadLineForReplaySubmissionsDtp
+            // 
+            this.DeadLineForReplaySubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1278, 248);
+            this.DeadLineForReplaySubmissionsDtp.Name = "DeadLineForReplaySubmissionsDtp";
+            this.DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineForReplaySubmissionsDtp.TabIndex = 89;
+            this.DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DateLatSettledClosedDtp
+            // 
+            this.DateLatSettledClosedDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateLatSettledClosedDtp.Location = new System.Drawing.Point(1279, 281);
+            this.DateLatSettledClosedDtp.Name = "DateLatSettledClosedDtp";
+            this.DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
+            this.DateLatSettledClosedDtp.TabIndex = 91;
+            this.DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DateMetWithLawyerReDenialDtp
+            // 
+            this.DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
+            this.DateMetWithLawyerReDenialDtp.Name = "DateMetWithLawyerReDenialDtp";
+            this.DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.DateMetWithLawyerReDenialDtp.TabIndex = 59;
+            this.DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // ActualDateLatFiledDtp
+            // 
+            this.ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
+            this.ActualDateLatFiledDtp.Name = "ActualDateLatFiledDtp";
+            this.ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.ActualDateLatFiledDtp.TabIndex = 61;
+            this.ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // InsuresResponseReceivedDtp
+            // 
+            this.InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
+            this.InsuresResponseReceivedDtp.Name = "InsuresResponseReceivedDtp";
+            this.InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.InsuresResponseReceivedDtp.TabIndex = 63;
+            this.InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // LatCaseConfDateDtp
+            // 
+            this.LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
+            this.LatCaseConfDateDtp.Name = "LatCaseConfDateDtp";
+            this.LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.LatCaseConfDateDtp.TabIndex = 65;
+            this.LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadLineToReceiveABProductionsDtp
+            // 
+            this.DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
+            this.DeadLineToReceiveABProductionsDtp.Name = "DeadLineToReceiveABProductionsDtp";
+            this.DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToReceiveABProductionsDtp.TabIndex = 67;
+            this.DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
+            this.DeadLineToReceiveAffidavitReportsDtp.Name = "DeadLineToReceiveAffidavitReportsDtp";
+            this.DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToReceiveAffidavitReportsDtp.TabIndex = 69;
+            this.DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // DeadlineToReceiveInsurerDtp
+            // 
+            this.DeadlineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
+            this.DeadlineToReceiveInsurerDtp.Name = "DeadlineToReceiveInsurerDtp";
+            this.DeadlineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadlineToReceiveInsurerDtp.TabIndex = 71;
+            this.DeadlineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // HearingStarDateDtp
+            // 
+            this.HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
+            this.HearingStarDateDtp.Name = "HearingStarDateDtp";
+            this.HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.HearingStarDateDtp.TabIndex = 73;
+            // 
+            // LAT2
+            // 
+            this.LAT2.AutoScroll = true;
+            this.LAT2.BackColor = System.Drawing.Color.Linen;
+            this.LAT2.Controls.Add(this.BtnLat2);
+            this.LAT2.Controls.Add(this.Lat2DateLatSettledClosedTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineForReplaySubmissionsTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToFileHearingSubmissionsTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToFileAffidavitReportsTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToDeliverProductionsToABCounselTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToServeFileCaseConfSummaryTxt);
+            this.LAT2.Controls.Add(this.Lat2ActualDateLatServedOnInsurerTxt);
+            this.LAT2.Controls.Add(this.Lat2ProposedDateToFileLatTxt);
+            this.LAT2.Controls.Add(this.Lat2DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT2.Controls.Add(this.Lat2HearingStarDateTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveInsurerTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveABProductionsTxt);
+            this.LAT2.Controls.Add(this.Lat2LatCaseConfDateTxt);
+            this.LAT2.Controls.Add(this.Lat2InsuresResponseReceivedTxt);
+            this.LAT2.Controls.Add(this.Lat2ActualDateLatFiledTxt);
+            this.LAT2.Controls.Add(this.Lat2DateMetWithLawyerReDenialTxt);
+            this.LAT2.Controls.Add(Label73);
+            this.LAT2.Controls.Add(this.Lat2DueDateToDiscussPotenctialLatApplDtp);
+            this.LAT2.Controls.Add(Label74);
+            this.LAT2.Controls.Add(this.Lat2ProposedDateToFileLatDtp);
+            this.LAT2.Controls.Add(Label75);
+            this.LAT2.Controls.Add(this.Lat2ActualDateLatServedOnInsurerDtp);
+            this.LAT2.Controls.Add(Label76);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToServeFileCaseConfSummaryDtp);
+            this.LAT2.Controls.Add(Label77);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToDeliverProductionsToABCounselDtp);
+            this.LAT2.Controls.Add(Label78);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToFileAffidavitReportsDtp);
+            this.LAT2.Controls.Add(Label79);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToFileHearingSubmissionsDtp);
+            this.LAT2.Controls.Add(Label80);
+            this.LAT2.Controls.Add(this.Lat2DeadLineForReplaySubmissionsDtp);
+            this.LAT2.Controls.Add(Label81);
+            this.LAT2.Controls.Add(this.Lat2DateLatSettledClosedDtp);
+            this.LAT2.Controls.Add(Label83);
+            this.LAT2.Controls.Add(this.Lat2DateMetWithLawyerReDenialDtp);
+            this.LAT2.Controls.Add(Label84);
+            this.LAT2.Controls.Add(this.Lat2ActualDateLatFiledDtp);
+            this.LAT2.Controls.Add(Label85);
+            this.LAT2.Controls.Add(this.Lat2InsuresResponseReceivedDtp);
+            this.LAT2.Controls.Add(Label86);
+            this.LAT2.Controls.Add(this.Lat2LatCaseConfDateDtp);
+            this.LAT2.Controls.Add(Label87);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveABProductionsDtp);
+            this.LAT2.Controls.Add(Label88);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveAffidavitReportsDtp);
+            this.LAT2.Controls.Add(Label89);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveInsurerDtp);
+            this.LAT2.Controls.Add(Label90);
+            this.LAT2.Controls.Add(this.Lat2HearingStarDateDtp);
+            this.LAT2.Location = new System.Drawing.Point(4, 26);
+            this.LAT2.Name = "LAT2";
+            this.LAT2.Padding = new System.Windows.Forms.Padding(3);
+            this.LAT2.Size = new System.Drawing.Size(1334, 332);
+            this.LAT2.TabIndex = 1;
+            this.LAT2.Text = "LAT 2";
+            // 
+            // BtnLat2
+            // 
+            this.BtnLat2.Location = new System.Drawing.Point(1225, 306);
+            this.BtnLat2.Name = "BtnLat2";
+            this.BtnLat2.Size = new System.Drawing.Size(85, 23);
+            this.BtnLat2.TabIndex = 136;
+            this.BtnLat2.Text = "Operation";
+            this.BtnLat2.UseVisualStyleBackColor = true;
+            // 
+            // Lat2DateLatSettledClosedTxt
+            // 
+            this.Lat2DateLatSettledClosedTxt.Location = new System.Drawing.Point(1110, 281);
+            this.Lat2DateLatSettledClosedTxt.Name = "Lat2DateLatSettledClosedTxt";
+            this.Lat2DateLatSettledClosedTxt.ReadOnly = true;
+            this.Lat2DateLatSettledClosedTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DateLatSettledClosedTxt.TabIndex = 109;
+            // 
+            // Lat2DeadLineForReplaySubmissionsTxt
+            // 
+            this.Lat2DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1110, 248);
+            this.Lat2DeadLineForReplaySubmissionsTxt.Name = "Lat2DeadLineForReplaySubmissionsTxt";
+            this.Lat2DeadLineForReplaySubmissionsTxt.ReadOnly = true;
+            this.Lat2DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineForReplaySubmissionsTxt.TabIndex = 108;
+            // 
+            // Lat2DeadLineToFileHearingSubmissionsTxt
+            // 
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1110, 215);
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.Name = "Lat2DeadLineToFileHearingSubmissionsTxt";
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.TabIndex = 107;
+            // 
+            // Lat2DeadLineToFileAffidavitReportsTxt
+            // 
+            this.Lat2DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1110, 182);
+            this.Lat2DeadLineToFileAffidavitReportsTxt.Name = "Lat2DeadLineToFileAffidavitReportsTxt";
+            this.Lat2DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.Lat2DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineToFileAffidavitReportsTxt.TabIndex = 106;
+            // 
+            // Lat2DeadLineToDeliverProductionsToABCounselTxt
+            // 
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1110, 149);
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat2DeadLineToDeliverProductionsToABCounselTxt";
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 105;
+            // 
+            // Lat2DeadLineToServeFileCaseConfSummaryTxt
+            // 
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1110, 116);
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat2DeadLineToServeFileCaseConfSummaryTxt";
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 104;
+            // 
+            // Lat2ActualDateLatServedOnInsurerTxt
+            // 
+            this.Lat2ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1110, 83);
+            this.Lat2ActualDateLatServedOnInsurerTxt.Name = "Lat2ActualDateLatServedOnInsurerTxt";
+            this.Lat2ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.Lat2ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2ActualDateLatServedOnInsurerTxt.TabIndex = 103;
+            // 
+            // Lat2ProposedDateToFileLatTxt
+            // 
+            this.Lat2ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1110, 50);
+            this.Lat2ProposedDateToFileLatTxt.Name = "Lat2ProposedDateToFileLatTxt";
+            this.Lat2ProposedDateToFileLatTxt.ReadOnly = true;
+            this.Lat2ProposedDateToFileLatTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2ProposedDateToFileLatTxt.TabIndex = 102;
+            // 
+            // Lat2DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1110, 17);
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Name = "Lat2DueDateToDiscussPotenctialLatApplTxt";
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.TabIndex = 101;
+            // 
+            // Lat2HearingStarDateTxt
+            // 
+            this.Lat2HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
+            this.Lat2HearingStarDateTxt.Name = "Lat2HearingStarDateTxt";
+            this.Lat2HearingStarDateTxt.ReadOnly = true;
+            this.Lat2HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2HearingStarDateTxt.TabIndex = 100;
+            // 
+            // Lat2DeadLineToReceiveInsurerTxt
+            // 
+            this.Lat2DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(430, 254);
+            this.Lat2DeadLineToReceiveInsurerTxt.Name = "Lat2DeadLineToReceiveInsurerTxt";
+            this.Lat2DeadLineToReceiveInsurerTxt.ReadOnly = true;
+            this.Lat2DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineToReceiveInsurerTxt.TabIndex = 99;
+            // 
+            // Lat2DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(430, 221);
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Name = "Lat2DeadLineToReceiveAffidavitReportsTxt";
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.TabIndex = 98;
+            // 
+            // Lat2DeadLineToReceiveABProductionsTxt
+            // 
+            this.Lat2DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(430, 188);
+            this.Lat2DeadLineToReceiveABProductionsTxt.Name = "Lat2DeadLineToReceiveABProductionsTxt";
+            this.Lat2DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.Lat2DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DeadLineToReceiveABProductionsTxt.TabIndex = 97;
+            // 
+            // Lat2LatCaseConfDateTxt
+            // 
+            this.Lat2LatCaseConfDateTxt.Location = new System.Drawing.Point(430, 155);
+            this.Lat2LatCaseConfDateTxt.Name = "Lat2LatCaseConfDateTxt";
+            this.Lat2LatCaseConfDateTxt.ReadOnly = true;
+            this.Lat2LatCaseConfDateTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2LatCaseConfDateTxt.TabIndex = 96;
+            // 
+            // Lat2InsuresResponseReceivedTxt
+            // 
+            this.Lat2InsuresResponseReceivedTxt.Location = new System.Drawing.Point(430, 122);
+            this.Lat2InsuresResponseReceivedTxt.Name = "Lat2InsuresResponseReceivedTxt";
+            this.Lat2InsuresResponseReceivedTxt.ReadOnly = true;
+            this.Lat2InsuresResponseReceivedTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2InsuresResponseReceivedTxt.TabIndex = 95;
+            // 
+            // Lat2ActualDateLatFiledTxt
+            // 
+            this.Lat2ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
+            this.Lat2ActualDateLatFiledTxt.Name = "Lat2ActualDateLatFiledTxt";
+            this.Lat2ActualDateLatFiledTxt.ReadOnly = true;
+            this.Lat2ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2ActualDateLatFiledTxt.TabIndex = 94;
+            // 
+            // Lat2DateMetWithLawyerReDenialTxt
+            // 
+            this.Lat2DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
+            this.Lat2DateMetWithLawyerReDenialTxt.Name = "Lat2DateMetWithLawyerReDenialTxt";
+            this.Lat2DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.Lat2DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat2DateMetWithLawyerReDenialTxt.TabIndex = 93;
+            // 
+            // Lat2DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1300, 17);
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Name = "Lat2DueDateToDiscussPotenctialLatApplDtp";
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.TabIndex = 75;
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2ProposedDateToFileLatDtp
+            // 
+            this.Lat2ProposedDateToFileLatDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1300, 50);
+            this.Lat2ProposedDateToFileLatDtp.Name = "Lat2ProposedDateToFileLatDtp";
+            this.Lat2ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2ProposedDateToFileLatDtp.TabIndex = 77;
+            this.Lat2ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2ActualDateLatServedOnInsurerDtp
+            // 
+            this.Lat2ActualDateLatServedOnInsurerDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1300, 83);
+            this.Lat2ActualDateLatServedOnInsurerDtp.Name = "Lat2ActualDateLatServedOnInsurerDtp";
+            this.Lat2ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2ActualDateLatServedOnInsurerDtp.TabIndex = 79;
+            this.Lat2ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineToServeFileCaseConfSummaryDtp
+            // 
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1300, 116);
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat2DeadLineToServeFileCaseConfSummaryDtp";
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 81;
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineToDeliverProductionsToABCounselDtp
+            // 
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1300, 149);
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat2DeadLineToDeliverProductionsToABCounselDtp";
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 83;
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineToFileAffidavitReportsDtp
+            // 
+            this.Lat2DeadLineToFileAffidavitReportsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1300, 182);
+            this.Lat2DeadLineToFileAffidavitReportsDtp.Name = "Lat2DeadLineToFileAffidavitReportsDtp";
+            this.Lat2DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToFileAffidavitReportsDtp.TabIndex = 85;
+            this.Lat2DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1300, 215);
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.Name = "Lat2DeadLineToFileHearingSubmissionsDtp";
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.TabIndex = 87;
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineForReplaySubmissionsDtp
+            // 
+            this.Lat2DeadLineForReplaySubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1300, 248);
+            this.Lat2DeadLineForReplaySubmissionsDtp.Name = "Lat2DeadLineForReplaySubmissionsDtp";
+            this.Lat2DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineForReplaySubmissionsDtp.TabIndex = 89;
+            this.Lat2DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DateLatSettledClosedDtp
+            // 
+            this.Lat2DateLatSettledClosedDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat2DateLatSettledClosedDtp.Location = new System.Drawing.Point(1300, 281);
+            this.Lat2DateLatSettledClosedDtp.Name = "Lat2DateLatSettledClosedDtp";
+            this.Lat2DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DateLatSettledClosedDtp.TabIndex = 91;
+            this.Lat2DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DateMetWithLawyerReDenialDtp
+            // 
+            this.Lat2DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
+            this.Lat2DateMetWithLawyerReDenialDtp.Name = "Lat2DateMetWithLawyerReDenialDtp";
+            this.Lat2DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DateMetWithLawyerReDenialDtp.TabIndex = 59;
+            this.Lat2DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2ActualDateLatFiledDtp
+            // 
+            this.Lat2ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
+            this.Lat2ActualDateLatFiledDtp.Name = "Lat2ActualDateLatFiledDtp";
+            this.Lat2ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2ActualDateLatFiledDtp.TabIndex = 61;
+            this.Lat2ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2InsuresResponseReceivedDtp
+            // 
+            this.Lat2InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
+            this.Lat2InsuresResponseReceivedDtp.Name = "Lat2InsuresResponseReceivedDtp";
+            this.Lat2InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2InsuresResponseReceivedDtp.TabIndex = 63;
+            this.Lat2InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2LatCaseConfDateDtp
+            // 
+            this.Lat2LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
+            this.Lat2LatCaseConfDateDtp.Name = "Lat2LatCaseConfDateDtp";
+            this.Lat2LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2LatCaseConfDateDtp.TabIndex = 65;
+            this.Lat2LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineToReceiveABProductionsDtp
+            // 
+            this.Lat2DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
+            this.Lat2DeadLineToReceiveABProductionsDtp.Name = "Lat2DeadLineToReceiveABProductionsDtp";
+            this.Lat2DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToReceiveABProductionsDtp.TabIndex = 67;
+            this.Lat2DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Name = "Lat2DeadLineToReceiveAffidavitReportsDtp";
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.TabIndex = 69;
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2DeadLineToReceiveInsurerDtp
+            // 
+            this.Lat2DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
+            this.Lat2DeadLineToReceiveInsurerDtp.Name = "Lat2DeadLineToReceiveInsurerDtp";
+            this.Lat2DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToReceiveInsurerDtp.TabIndex = 71;
+            this.Lat2DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat2HearingStarDateDtp
+            // 
+            this.Lat2HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
+            this.Lat2HearingStarDateDtp.Name = "Lat2HearingStarDateDtp";
+            this.Lat2HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2HearingStarDateDtp.TabIndex = 73;
+            // 
+            // LAT3
+            // 
+            this.LAT3.AutoScroll = true;
+            this.LAT3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.LAT3.Controls.Add(this.BtnLat3);
+            this.LAT3.Controls.Add(this.Lat3DateLatSettledClosedTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineForReplaySubmissionsTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToFileHearingSubmissionsTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToFileAffidavitReportsTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToDeliverProductionsToABCounselTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToServeFileCaseConfSummaryTxt);
+            this.LAT3.Controls.Add(this.Lat3ActualDateLatServedOnInsurerTxt);
+            this.LAT3.Controls.Add(this.Lat3ProposedDateToFileLatTxt);
+            this.LAT3.Controls.Add(this.Lat3DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT3.Controls.Add(this.Lat3DueDateToDiscussPotenctialLatApplDtp);
+            this.LAT3.Controls.Add(this.Lat3ProposedDateToFileLatDtp);
+            this.LAT3.Controls.Add(this.Lat3ActualDateLatServedOnInsurerDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToServeFileCaseConfSummaryDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToDeliverProductionsToABCounselDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToFileAffidavitReportsDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToFileHearingSubmissionsDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineForReplaySubmissionsDtp);
+            this.LAT3.Controls.Add(this.Lat3DateLatSettledClosedDtp);
+            this.LAT3.Controls.Add(this.Lat3HearingStarDateTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveInsurerTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveABProductionsTxt);
+            this.LAT3.Controls.Add(this.Lat3LatCaseConfDateTxt);
+            this.LAT3.Controls.Add(this.Lat3InsuresResponseReceivedTxt);
+            this.LAT3.Controls.Add(this.Lat3ActualDateLatFiledTxt);
+            this.LAT3.Controls.Add(this.Lat3DateMetWithLawyerReDenialTxt);
+            this.LAT3.Controls.Add(this.Lat3DateMetWithLawyerReDenialDtp);
+            this.LAT3.Controls.Add(this.Lat3ActualDateLatFiledDtp);
+            this.LAT3.Controls.Add(this.Lat3InsuresResponseReceivedDtp);
+            this.LAT3.Controls.Add(this.Lat3LatCaseConfDateDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveABProductionsDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveAffidavitReportsDtp);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveInsurerDtp);
+            this.LAT3.Controls.Add(this.Lat3HearingStarDateDtp);
+            this.LAT3.Controls.Add(Label55);
+            this.LAT3.Controls.Add(Label56);
+            this.LAT3.Controls.Add(Label57);
+            this.LAT3.Controls.Add(Label58);
+            this.LAT3.Controls.Add(Label59);
+            this.LAT3.Controls.Add(Label60);
+            this.LAT3.Controls.Add(Label61);
+            this.LAT3.Controls.Add(Label62);
+            this.LAT3.Controls.Add(Label63);
+            this.LAT3.Controls.Add(Label65);
+            this.LAT3.Controls.Add(Label66);
+            this.LAT3.Controls.Add(Label67);
+            this.LAT3.Controls.Add(Label68);
+            this.LAT3.Controls.Add(Label69);
+            this.LAT3.Controls.Add(Label70);
+            this.LAT3.Controls.Add(Label71);
+            this.LAT3.Controls.Add(Label72);
+            this.LAT3.Location = new System.Drawing.Point(4, 26);
+            this.LAT3.Name = "LAT3";
+            this.LAT3.Padding = new System.Windows.Forms.Padding(3);
+            this.LAT3.Size = new System.Drawing.Size(1334, 332);
+            this.LAT3.TabIndex = 2;
+            this.LAT3.Text = "LAT 3";
+            // 
+            // BtnLat3
+            // 
+            this.BtnLat3.Location = new System.Drawing.Point(1225, 308);
+            this.BtnLat3.Name = "BtnLat3";
+            this.BtnLat3.Size = new System.Drawing.Size(85, 23);
+            this.BtnLat3.TabIndex = 135;
+            this.BtnLat3.Text = "Operation";
+            this.BtnLat3.UseVisualStyleBackColor = true;
+            // 
+            // Lat3DateLatSettledClosedTxt
+            // 
+            this.Lat3DateLatSettledClosedTxt.Location = new System.Drawing.Point(1110, 281);
+            this.Lat3DateLatSettledClosedTxt.Name = "Lat3DateLatSettledClosedTxt";
+            this.Lat3DateLatSettledClosedTxt.ReadOnly = true;
+            this.Lat3DateLatSettledClosedTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3DateLatSettledClosedTxt.TabIndex = 134;
+            // 
+            // Lat3DeadLineForReplaySubmissionsTxt
+            // 
+            this.Lat3DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1110, 248);
+            this.Lat3DeadLineForReplaySubmissionsTxt.Name = "Lat3DeadLineForReplaySubmissionsTxt";
+            this.Lat3DeadLineForReplaySubmissionsTxt.ReadOnly = true;
+            this.Lat3DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3DeadLineForReplaySubmissionsTxt.TabIndex = 133;
+            // 
+            // Lat3DeadLineToFileHearingSubmissionsTxt
+            // 
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1110, 215);
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.Name = "Lat3DeadLineToFileHearingSubmissionsTxt";
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.TabIndex = 132;
+            // 
+            // Lat3DeadLineToFileAffidavitReportsTxt
+            // 
+            this.Lat3DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1110, 182);
+            this.Lat3DeadLineToFileAffidavitReportsTxt.Name = "Lat3DeadLineToFileAffidavitReportsTxt";
+            this.Lat3DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.Lat3DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3DeadLineToFileAffidavitReportsTxt.TabIndex = 131;
+            // 
+            // Lat3DeadLineToDeliverProductionsToABCounselTxt
+            // 
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1110, 149);
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat3DeadLineToDeliverProductionsToABCounselTxt";
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 130;
+            // 
+            // Lat3DeadLineToServeFileCaseConfSummaryTxt
+            // 
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1110, 116);
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat3DeadLineToServeFileCaseConfSummaryTxt";
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 129;
+            // 
+            // Lat3ActualDateLatServedOnInsurerTxt
+            // 
+            this.Lat3ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1110, 83);
+            this.Lat3ActualDateLatServedOnInsurerTxt.Name = "Lat3ActualDateLatServedOnInsurerTxt";
+            this.Lat3ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.Lat3ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3ActualDateLatServedOnInsurerTxt.TabIndex = 128;
+            // 
+            // Lat3ProposedDateToFileLatTxt
+            // 
+            this.Lat3ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1110, 50);
+            this.Lat3ProposedDateToFileLatTxt.Name = "Lat3ProposedDateToFileLatTxt";
+            this.Lat3ProposedDateToFileLatTxt.ReadOnly = true;
+            this.Lat3ProposedDateToFileLatTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3ProposedDateToFileLatTxt.TabIndex = 127;
+            // 
+            // Lat3DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1110, 17);
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Name = "Lat3DueDateToDiscussPotenctialLatApplTxt";
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(172, 23);
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.TabIndex = 126;
+            // 
+            // Lat3DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1283, 17);
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Name = "Lat3DueDateToDiscussPotenctialLatApplDtp";
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.TabIndex = 117;
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3ProposedDateToFileLatDtp
+            // 
+            this.Lat3ProposedDateToFileLatDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1283, 50);
+            this.Lat3ProposedDateToFileLatDtp.Name = "Lat3ProposedDateToFileLatDtp";
+            this.Lat3ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3ProposedDateToFileLatDtp.TabIndex = 118;
+            this.Lat3ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3ActualDateLatServedOnInsurerDtp
+            // 
+            this.Lat3ActualDateLatServedOnInsurerDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1283, 83);
+            this.Lat3ActualDateLatServedOnInsurerDtp.Name = "Lat3ActualDateLatServedOnInsurerDtp";
+            this.Lat3ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3ActualDateLatServedOnInsurerDtp.TabIndex = 119;
+            this.Lat3ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineToServeFileCaseConfSummaryDtp
+            // 
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1283, 116);
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat3DeadLineToServeFileCaseConfSummaryDtp";
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 120;
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineToDeliverProductionsToABCounselDtp
+            // 
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1283, 149);
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat3DeadLineToDeliverProductionsToABCounselDtp";
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 121;
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineToFileAffidavitReportsDtp
+            // 
+            this.Lat3DeadLineToFileAffidavitReportsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1283, 182);
+            this.Lat3DeadLineToFileAffidavitReportsDtp.Name = "Lat3DeadLineToFileAffidavitReportsDtp";
+            this.Lat3DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToFileAffidavitReportsDtp.TabIndex = 122;
+            this.Lat3DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1283, 215);
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.Name = "Lat3DeadLineToFileHearingSubmissionsDtp";
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.TabIndex = 123;
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineForReplaySubmissionsDtp
+            // 
+            this.Lat3DeadLineForReplaySubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1283, 248);
+            this.Lat3DeadLineForReplaySubmissionsDtp.Name = "Lat3DeadLineForReplaySubmissionsDtp";
+            this.Lat3DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineForReplaySubmissionsDtp.TabIndex = 124;
+            this.Lat3DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DateLatSettledClosedDtp
+            // 
+            this.Lat3DateLatSettledClosedDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat3DateLatSettledClosedDtp.Location = new System.Drawing.Point(1283, 281);
+            this.Lat3DateLatSettledClosedDtp.Name = "Lat3DateLatSettledClosedDtp";
+            this.Lat3DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DateLatSettledClosedDtp.TabIndex = 125;
+            this.Lat3DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3HearingStarDateTxt
+            // 
+            this.Lat3HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
+            this.Lat3HearingStarDateTxt.Name = "Lat3HearingStarDateTxt";
+            this.Lat3HearingStarDateTxt.ReadOnly = true;
+            this.Lat3HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3HearingStarDateTxt.TabIndex = 116;
+            // 
+            // Lat3DeadLineToReceiveInsurerTxt
+            // 
+            this.Lat3DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(430, 254);
+            this.Lat3DeadLineToReceiveInsurerTxt.Name = "Lat3DeadLineToReceiveInsurerTxt";
+            this.Lat3DeadLineToReceiveInsurerTxt.ReadOnly = true;
+            this.Lat3DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3DeadLineToReceiveInsurerTxt.TabIndex = 115;
+            // 
+            // Lat3DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(430, 221);
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Name = "Lat3DeadLineToReceiveAffidavitReportsTxt";
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.TabIndex = 114;
+            // 
+            // Lat3DeadLineToReceiveABProductionsTxt
+            // 
+            this.Lat3DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(430, 188);
+            this.Lat3DeadLineToReceiveABProductionsTxt.Name = "Lat3DeadLineToReceiveABProductionsTxt";
+            this.Lat3DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.Lat3DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3DeadLineToReceiveABProductionsTxt.TabIndex = 113;
+            // 
+            // Lat3LatCaseConfDateTxt
+            // 
+            this.Lat3LatCaseConfDateTxt.Location = new System.Drawing.Point(430, 155);
+            this.Lat3LatCaseConfDateTxt.Name = "Lat3LatCaseConfDateTxt";
+            this.Lat3LatCaseConfDateTxt.ReadOnly = true;
+            this.Lat3LatCaseConfDateTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3LatCaseConfDateTxt.TabIndex = 112;
+            // 
+            // Lat3InsuresResponseReceivedTxt
+            // 
+            this.Lat3InsuresResponseReceivedTxt.Location = new System.Drawing.Point(430, 122);
+            this.Lat3InsuresResponseReceivedTxt.Name = "Lat3InsuresResponseReceivedTxt";
+            this.Lat3InsuresResponseReceivedTxt.ReadOnly = true;
+            this.Lat3InsuresResponseReceivedTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3InsuresResponseReceivedTxt.TabIndex = 111;
+            // 
+            // Lat3ActualDateLatFiledTxt
+            // 
+            this.Lat3ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
+            this.Lat3ActualDateLatFiledTxt.Name = "Lat3ActualDateLatFiledTxt";
+            this.Lat3ActualDateLatFiledTxt.ReadOnly = true;
+            this.Lat3ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3ActualDateLatFiledTxt.TabIndex = 110;
+            // 
+            // Lat3DateMetWithLawyerReDenialTxt
+            // 
+            this.Lat3DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
+            this.Lat3DateMetWithLawyerReDenialTxt.Name = "Lat3DateMetWithLawyerReDenialTxt";
+            this.Lat3DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.Lat3DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat3DateMetWithLawyerReDenialTxt.TabIndex = 109;
+            // 
+            // Lat3DateMetWithLawyerReDenialDtp
+            // 
+            this.Lat3DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
+            this.Lat3DateMetWithLawyerReDenialDtp.Name = "Lat3DateMetWithLawyerReDenialDtp";
+            this.Lat3DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DateMetWithLawyerReDenialDtp.TabIndex = 101;
+            this.Lat3DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3ActualDateLatFiledDtp
+            // 
+            this.Lat3ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
+            this.Lat3ActualDateLatFiledDtp.Name = "Lat3ActualDateLatFiledDtp";
+            this.Lat3ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3ActualDateLatFiledDtp.TabIndex = 102;
+            this.Lat3ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3InsuresResponseReceivedDtp
+            // 
+            this.Lat3InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
+            this.Lat3InsuresResponseReceivedDtp.Name = "Lat3InsuresResponseReceivedDtp";
+            this.Lat3InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3InsuresResponseReceivedDtp.TabIndex = 103;
+            this.Lat3InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3LatCaseConfDateDtp
+            // 
+            this.Lat3LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
+            this.Lat3LatCaseConfDateDtp.Name = "Lat3LatCaseConfDateDtp";
+            this.Lat3LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3LatCaseConfDateDtp.TabIndex = 104;
+            this.Lat3LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineToReceiveABProductionsDtp
+            // 
+            this.Lat3DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
+            this.Lat3DeadLineToReceiveABProductionsDtp.Name = "Lat3DeadLineToReceiveABProductionsDtp";
+            this.Lat3DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToReceiveABProductionsDtp.TabIndex = 105;
+            this.Lat3DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Name = "Lat3DeadLineToReceiveAffidavitReportsDtp";
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.TabIndex = 106;
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3DeadLineToReceiveInsurerDtp
+            // 
+            this.Lat3DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
+            this.Lat3DeadLineToReceiveInsurerDtp.Name = "Lat3DeadLineToReceiveInsurerDtp";
+            this.Lat3DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToReceiveInsurerDtp.TabIndex = 107;
+            this.Lat3DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat3HearingStarDateDtp
+            // 
+            this.Lat3HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
+            this.Lat3HearingStarDateDtp.Name = "Lat3HearingStarDateDtp";
+            this.Lat3HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3HearingStarDateDtp.TabIndex = 108;
+            // 
+            // LAT4
+            // 
+            this.LAT4.AutoScroll = true;
+            this.LAT4.BackColor = System.Drawing.Color.Khaki;
+            this.LAT4.Controls.Add(this.BtnLat4);
+            this.LAT4.Controls.Add(this.Lat4DateLatSettledClosedTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineForReplaySubmissionsTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToFileHearingSubmissionsTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToFileAffidavitReportsTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToDeliverProductionsToABCounselTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToServeFileCaseConfSummaryTxt);
+            this.LAT4.Controls.Add(this.Lat4ActualDateLatServedOnInsurerTxt);
+            this.LAT4.Controls.Add(this.Lat4ProposedDateToFileLatTxt);
+            this.LAT4.Controls.Add(this.Lat4DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT4.Controls.Add(this.Lat4DueDateToDiscussPotenctialLatApplDtp);
+            this.LAT4.Controls.Add(this.Lat4ProposedDateToFileLatDtp);
+            this.LAT4.Controls.Add(this.Lat4ActualDateLatServedOnInsurerDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToServeFileCaseConfSummaryDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToDeliverProductionsToABCounselDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToFileAffidavitReportsDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToFileHearingSubmissionsDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineForReplaySubmissionsDtp);
+            this.LAT4.Controls.Add(this.Lat4DateLatSettledClosedDtp);
+            this.LAT4.Controls.Add(this.Lat4HearingStarDateTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveInsurerTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveABProductionsTxt);
+            this.LAT4.Controls.Add(this.Lat4LatCaseConfDateTxt);
+            this.LAT4.Controls.Add(this.Lat4InsuresResponseReceivedTxt);
+            this.LAT4.Controls.Add(this.Lat4ActualDateLatFiledTxt);
+            this.LAT4.Controls.Add(this.Lat4DateMetWithLawyerReDenialTxt);
+            this.LAT4.Controls.Add(this.Lat4DateMetWithLawyerReDenialDtp);
+            this.LAT4.Controls.Add(this.Lat4ActualDateLatFiledDtp);
+            this.LAT4.Controls.Add(this.Lat4InsuresResponseReceivedDtp);
+            this.LAT4.Controls.Add(this.Lat4LatCaseConfDateDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveABProductionsDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveAffidavitReportsDtp);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveInsurerDtp);
+            this.LAT4.Controls.Add(this.Lat4HearingStarDateDtp);
+            this.LAT4.Controls.Add(DueDateToDiscussPotentialLATApplLabel);
+            this.LAT4.Controls.Add(ProposedDateToFileLATLabel);
+            this.LAT4.Controls.Add(ActualDateLATServedOnInsurerLabel);
+            this.LAT4.Controls.Add(DeadlineToServeFileCaseConfSummaryLabel);
+            this.LAT4.Controls.Add(DeadlineToDeliverProductionsToABCounselLabel);
+            this.LAT4.Controls.Add(DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel);
+            this.LAT4.Controls.Add(DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel);
+            this.LAT4.Controls.Add(DeadlineForReplySubmissionsOfTheApplicantLabel);
+            this.LAT4.Controls.Add(DateLATSettledClosedLabel);
+            this.LAT4.Controls.Add(DateMetWithLawyerReDenialLabel);
+            this.LAT4.Controls.Add(ActualDateLATFiledLabel);
+            this.LAT4.Controls.Add(InsurersResponseReceivedLabel);
+            this.LAT4.Controls.Add(LATCaseConfDateLabel);
+            this.LAT4.Controls.Add(DeadlineToReceiveABProductionsLabel);
+            this.LAT4.Controls.Add(DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel);
+            this.LAT4.Controls.Add(DeadlineToReceiveInsurerSubmissionsLabel);
+            this.LAT4.Controls.Add(HearingStartDateLabel);
+            this.LAT4.Location = new System.Drawing.Point(4, 26);
+            this.LAT4.Name = "LAT4";
+            this.LAT4.Padding = new System.Windows.Forms.Padding(3);
+            this.LAT4.Size = new System.Drawing.Size(1334, 332);
+            this.LAT4.TabIndex = 3;
+            this.LAT4.Text = "LAT 4";
+            // 
+            // BtnLat4
+            // 
+            this.BtnLat4.Location = new System.Drawing.Point(1225, 306);
+            this.BtnLat4.Name = "BtnLat4";
+            this.BtnLat4.Size = new System.Drawing.Size(85, 23);
+            this.BtnLat4.TabIndex = 153;
+            this.BtnLat4.Text = "Operation";
+            this.BtnLat4.UseVisualStyleBackColor = true;
+            // 
+            // Lat4DateLatSettledClosedTxt
+            // 
+            this.Lat4DateLatSettledClosedTxt.Location = new System.Drawing.Point(1110, 281);
+            this.Lat4DateLatSettledClosedTxt.Name = "Lat4DateLatSettledClosedTxt";
+            this.Lat4DateLatSettledClosedTxt.ReadOnly = true;
+            this.Lat4DateLatSettledClosedTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DateLatSettledClosedTxt.TabIndex = 152;
+            // 
+            // Lat4DeadLineForReplaySubmissionsTxt
+            // 
+            this.Lat4DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1110, 248);
+            this.Lat4DeadLineForReplaySubmissionsTxt.Name = "Lat4DeadLineForReplaySubmissionsTxt";
+            this.Lat4DeadLineForReplaySubmissionsTxt.ReadOnly = true;
+            this.Lat4DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineForReplaySubmissionsTxt.TabIndex = 151;
+            // 
+            // Lat4DeadLineToFileHearingSubmissionsTxt
+            // 
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1110, 215);
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.Name = "Lat4DeadLineToFileHearingSubmissionsTxt";
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.TabIndex = 150;
+            // 
+            // Lat4DeadLineToFileAffidavitReportsTxt
+            // 
+            this.Lat4DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1110, 182);
+            this.Lat4DeadLineToFileAffidavitReportsTxt.Name = "Lat4DeadLineToFileAffidavitReportsTxt";
+            this.Lat4DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.Lat4DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineToFileAffidavitReportsTxt.TabIndex = 149;
+            // 
+            // Lat4DeadLineToDeliverProductionsToABCounselTxt
+            // 
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1110, 149);
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat4DeadLineToDeliverProductionsToABCounselTxt";
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 148;
+            // 
+            // Lat4DeadLineToServeFileCaseConfSummaryTxt
+            // 
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1110, 116);
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat4DeadLineToServeFileCaseConfSummaryTxt";
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 147;
+            // 
+            // Lat4ActualDateLatServedOnInsurerTxt
+            // 
+            this.Lat4ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1110, 83);
+            this.Lat4ActualDateLatServedOnInsurerTxt.Name = "Lat4ActualDateLatServedOnInsurerTxt";
+            this.Lat4ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.Lat4ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4ActualDateLatServedOnInsurerTxt.TabIndex = 146;
+            // 
+            // Lat4ProposedDateToFileLatTxt
+            // 
+            this.Lat4ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1110, 50);
+            this.Lat4ProposedDateToFileLatTxt.Name = "Lat4ProposedDateToFileLatTxt";
+            this.Lat4ProposedDateToFileLatTxt.ReadOnly = true;
+            this.Lat4ProposedDateToFileLatTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4ProposedDateToFileLatTxt.TabIndex = 145;
+            // 
+            // Lat4DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1110, 17);
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Name = "Lat4DueDateToDiscussPotenctialLatApplTxt";
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.TabIndex = 144;
+            // 
+            // Lat4DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1300, 17);
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Name = "Lat4DueDateToDiscussPotenctialLatApplDtp";
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.TabIndex = 135;
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4ProposedDateToFileLatDtp
+            // 
+            this.Lat4ProposedDateToFileLatDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1300, 50);
+            this.Lat4ProposedDateToFileLatDtp.Name = "Lat4ProposedDateToFileLatDtp";
+            this.Lat4ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4ProposedDateToFileLatDtp.TabIndex = 136;
+            this.Lat4ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4ActualDateLatServedOnInsurerDtp
+            // 
+            this.Lat4ActualDateLatServedOnInsurerDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1300, 83);
+            this.Lat4ActualDateLatServedOnInsurerDtp.Name = "Lat4ActualDateLatServedOnInsurerDtp";
+            this.Lat4ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4ActualDateLatServedOnInsurerDtp.TabIndex = 137;
+            this.Lat4ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineToServeFileCaseConfSummaryDtp
+            // 
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1300, 116);
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat4DeadLineToServeFileCaseConfSummaryDtp";
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 138;
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineToDeliverProductionsToABCounselDtp
+            // 
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1300, 149);
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat4DeadLineToDeliverProductionsToABCounselDtp";
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 139;
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineToFileAffidavitReportsDtp
+            // 
+            this.Lat4DeadLineToFileAffidavitReportsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1300, 182);
+            this.Lat4DeadLineToFileAffidavitReportsDtp.Name = "Lat4DeadLineToFileAffidavitReportsDtp";
+            this.Lat4DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToFileAffidavitReportsDtp.TabIndex = 140;
+            this.Lat4DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1300, 215);
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.Name = "Lat4DeadLineToFileHearingSubmissionsDtp";
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.TabIndex = 141;
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineForReplaySubmissionsDtp
+            // 
+            this.Lat4DeadLineForReplaySubmissionsDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1300, 248);
+            this.Lat4DeadLineForReplaySubmissionsDtp.Name = "Lat4DeadLineForReplaySubmissionsDtp";
+            this.Lat4DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineForReplaySubmissionsDtp.TabIndex = 142;
+            this.Lat4DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DateLatSettledClosedDtp
+            // 
+            this.Lat4DateLatSettledClosedDtp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lat4DateLatSettledClosedDtp.Location = new System.Drawing.Point(1300, 281);
+            this.Lat4DateLatSettledClosedDtp.Name = "Lat4DateLatSettledClosedDtp";
+            this.Lat4DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DateLatSettledClosedDtp.TabIndex = 143;
+            this.Lat4DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4HearingStarDateTxt
+            // 
+            this.Lat4HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
+            this.Lat4HearingStarDateTxt.Name = "Lat4HearingStarDateTxt";
+            this.Lat4HearingStarDateTxt.ReadOnly = true;
+            this.Lat4HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4HearingStarDateTxt.TabIndex = 132;
+            // 
+            // Lat4DeadLineToReceiveInsurerTxt
+            // 
+            this.Lat4DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(430, 254);
+            this.Lat4DeadLineToReceiveInsurerTxt.Name = "Lat4DeadLineToReceiveInsurerTxt";
+            this.Lat4DeadLineToReceiveInsurerTxt.ReadOnly = true;
+            this.Lat4DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineToReceiveInsurerTxt.TabIndex = 131;
+            // 
+            // Lat4DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(430, 221);
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Name = "Lat4DeadLineToReceiveAffidavitReportsTxt";
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.TabIndex = 130;
+            // 
+            // Lat4DeadLineToReceiveABProductionsTxt
+            // 
+            this.Lat4DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(430, 188);
+            this.Lat4DeadLineToReceiveABProductionsTxt.Name = "Lat4DeadLineToReceiveABProductionsTxt";
+            this.Lat4DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.Lat4DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DeadLineToReceiveABProductionsTxt.TabIndex = 129;
+            // 
+            // Lat4LatCaseConfDateTxt
+            // 
+            this.Lat4LatCaseConfDateTxt.Location = new System.Drawing.Point(430, 155);
+            this.Lat4LatCaseConfDateTxt.Name = "Lat4LatCaseConfDateTxt";
+            this.Lat4LatCaseConfDateTxt.ReadOnly = true;
+            this.Lat4LatCaseConfDateTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4LatCaseConfDateTxt.TabIndex = 128;
+            // 
+            // Lat4InsuresResponseReceivedTxt
+            // 
+            this.Lat4InsuresResponseReceivedTxt.Location = new System.Drawing.Point(430, 122);
+            this.Lat4InsuresResponseReceivedTxt.Name = "Lat4InsuresResponseReceivedTxt";
+            this.Lat4InsuresResponseReceivedTxt.ReadOnly = true;
+            this.Lat4InsuresResponseReceivedTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4InsuresResponseReceivedTxt.TabIndex = 127;
+            // 
+            // Lat4ActualDateLatFiledTxt
+            // 
+            this.Lat4ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
+            this.Lat4ActualDateLatFiledTxt.Name = "Lat4ActualDateLatFiledTxt";
+            this.Lat4ActualDateLatFiledTxt.ReadOnly = true;
+            this.Lat4ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4ActualDateLatFiledTxt.TabIndex = 126;
+            // 
+            // Lat4DateMetWithLawyerReDenialTxt
+            // 
+            this.Lat4DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
+            this.Lat4DateMetWithLawyerReDenialTxt.Name = "Lat4DateMetWithLawyerReDenialTxt";
+            this.Lat4DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.Lat4DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
+            this.Lat4DateMetWithLawyerReDenialTxt.TabIndex = 125;
+            // 
+            // Lat4DateMetWithLawyerReDenialDtp
+            // 
+            this.Lat4DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
+            this.Lat4DateMetWithLawyerReDenialDtp.Name = "Lat4DateMetWithLawyerReDenialDtp";
+            this.Lat4DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DateMetWithLawyerReDenialDtp.TabIndex = 117;
+            this.Lat4DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4ActualDateLatFiledDtp
+            // 
+            this.Lat4ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
+            this.Lat4ActualDateLatFiledDtp.Name = "Lat4ActualDateLatFiledDtp";
+            this.Lat4ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4ActualDateLatFiledDtp.TabIndex = 118;
+            this.Lat4ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4InsuresResponseReceivedDtp
+            // 
+            this.Lat4InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
+            this.Lat4InsuresResponseReceivedDtp.Name = "Lat4InsuresResponseReceivedDtp";
+            this.Lat4InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4InsuresResponseReceivedDtp.TabIndex = 119;
+            this.Lat4InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4LatCaseConfDateDtp
+            // 
+            this.Lat4LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
+            this.Lat4LatCaseConfDateDtp.Name = "Lat4LatCaseConfDateDtp";
+            this.Lat4LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4LatCaseConfDateDtp.TabIndex = 120;
+            this.Lat4LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineToReceiveABProductionsDtp
+            // 
+            this.Lat4DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
+            this.Lat4DeadLineToReceiveABProductionsDtp.Name = "Lat4DeadLineToReceiveABProductionsDtp";
+            this.Lat4DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToReceiveABProductionsDtp.TabIndex = 121;
+            this.Lat4DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Name = "Lat4DeadLineToReceiveAffidavitReportsDtp";
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.TabIndex = 122;
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4DeadLineToReceiveInsurerDtp
+            // 
+            this.Lat4DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
+            this.Lat4DeadLineToReceiveInsurerDtp.Name = "Lat4DeadLineToReceiveInsurerDtp";
+            this.Lat4DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToReceiveInsurerDtp.TabIndex = 123;
+            this.Lat4DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // Lat4HearingStarDateDtp
+            // 
+            this.Lat4HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
+            this.Lat4HearingStarDateDtp.Name = "Lat4HearingStarDateDtp";
+            this.Lat4HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4HearingStarDateDtp.TabIndex = 124;
             // 
             // panel4
             // 
@@ -5463,6 +10990,7 @@
             // 
             this.txtLimitationDate.Location = new System.Drawing.Point(157, 8);
             this.txtLimitationDate.Name = "txtLimitationDate";
+            this.txtLimitationDate.ReadOnly = true;
             this.txtLimitationDate.Size = new System.Drawing.Size(166, 23);
             this.txtLimitationDate.TabIndex = 59;
             // 
@@ -5993,6 +11521,57 @@
             this.GroupBox31.ResumeLayout(false);
             this.GroupBox31.PerformLayout();
             this.ABLAT.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.TabControl4.ResumeLayout(false);
+            this.Summary.ResumeLayout(false);
+            this.GroupBoxLat4.ResumeLayout(false);
+            this.GroupBox40.ResumeLayout(false);
+            this.TableLayoutPanel14.ResumeLayout(false);
+            this.TableLayoutPanel14.PerformLayout();
+            this.TableLayoutPanel15.ResumeLayout(false);
+            this.TableLayoutPanel15.PerformLayout();
+            this.TableLayoutPanel16.ResumeLayout(false);
+            this.TableLayoutPanel16.PerformLayout();
+            this.TableLayoutPanel17.ResumeLayout(false);
+            this.TableLayoutPanel17.PerformLayout();
+            this.GroupBoxLat3.ResumeLayout(false);
+            this.GroupBox38.ResumeLayout(false);
+            this.TableLayoutPanel10.ResumeLayout(false);
+            this.TableLayoutPanel10.PerformLayout();
+            this.TableLayoutPanel11.ResumeLayout(false);
+            this.TableLayoutPanel11.PerformLayout();
+            this.TableLayoutPanel12.ResumeLayout(false);
+            this.TableLayoutPanel12.PerformLayout();
+            this.TableLayoutPanel13.ResumeLayout(false);
+            this.TableLayoutPanel13.PerformLayout();
+            this.GroupBoxLat2.ResumeLayout(false);
+            this.GroupBox36.ResumeLayout(false);
+            this.TableLayoutPanel6.ResumeLayout(false);
+            this.TableLayoutPanel6.PerformLayout();
+            this.TableLayoutPanel7.ResumeLayout(false);
+            this.TableLayoutPanel7.PerformLayout();
+            this.TableLayoutPanel8.ResumeLayout(false);
+            this.TableLayoutPanel8.PerformLayout();
+            this.TableLayoutPanel9.ResumeLayout(false);
+            this.TableLayoutPanel9.PerformLayout();
+            this.GroupBoxLat1.ResumeLayout(false);
+            this.GroupBox34.ResumeLayout(false);
+            this.TableLayoutPanel4.ResumeLayout(false);
+            this.TableLayoutPanel4.PerformLayout();
+            this.TableLayoutPanel5.ResumeLayout(false);
+            this.TableLayoutPanel5.PerformLayout();
+            this.TableLayoutPanel3.ResumeLayout(false);
+            this.TableLayoutPanel3.PerformLayout();
+            this.TableLayoutPanel2.ResumeLayout(false);
+            this.TableLayoutPanel2.PerformLayout();
+            this.LAT1.ResumeLayout(false);
+            this.LAT1.PerformLayout();
+            this.LAT2.ResumeLayout(false);
+            this.LAT2.PerformLayout();
+            this.LAT3.ResumeLayout(false);
+            this.LAT3.PerformLayout();
+            this.LAT4.ResumeLayout(false);
+            this.LAT4.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -6401,6 +11980,448 @@
         private System.Windows.Forms.Label label278;
         internal System.Windows.Forms.Button ExportToExcelButton;
         private Controls.SharedControls.CustomControls.ComissionSubTypeComboBox CurrentFileStatusComboBox;
+        internal System.Windows.Forms.TabControl TabControl4;
+        internal System.Windows.Forms.TabPage Summary;
+        internal System.Windows.Forms.GroupBox GroupBoxLat4;
+        internal System.Windows.Forms.GroupBox GroupBox40;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel14;
+        internal System.Windows.Forms.TextBox TextBox150;
+        internal System.Windows.Forms.TextBox TextBox151;
+        internal System.Windows.Forms.TextBox TextBox152;
+        internal System.Windows.Forms.TextBox TextBox153;
+        internal System.Windows.Forms.TextBox TextBox154;
+        internal System.Windows.Forms.TextBox TextBox155;
+        internal System.Windows.Forms.TextBox TextBox156;
+        internal System.Windows.Forms.Label Label200;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel15;
+        internal System.Windows.Forms.TextBox TextBox157;
+        internal System.Windows.Forms.Label Label201;
+        internal System.Windows.Forms.TextBox TextBox158;
+        internal System.Windows.Forms.Label Label202;
+        internal System.Windows.Forms.Label Label203;
+        internal System.Windows.Forms.TextBox TextBox159;
+        internal System.Windows.Forms.TextBox TextBox160;
+        internal System.Windows.Forms.Label Label204;
+        internal System.Windows.Forms.TextBox TextBox161;
+        internal System.Windows.Forms.Label Label205;
+        internal System.Windows.Forms.Label Label206;
+        internal System.Windows.Forms.TextBox TextBox162;
+        internal System.Windows.Forms.TextBox TextBox163;
+        internal System.Windows.Forms.Label Label207;
+        internal System.Windows.Forms.TextBox TextBox164;
+        internal System.Windows.Forms.Label Label208;
+        internal System.Windows.Forms.TextBox TextBox165;
+        internal System.Windows.Forms.Label Label209;
+        internal System.Windows.Forms.TextBox TextBox166;
+        internal System.Windows.Forms.Label Label210;
+        internal System.Windows.Forms.Label Label211;
+        internal System.Windows.Forms.Label Label212;
+        internal System.Windows.Forms.TextBox TextBox167;
+        internal System.Windows.Forms.TextBox TextBox168;
+        internal System.Windows.Forms.Label Label213;
+        internal System.Windows.Forms.TextBox TextBox169;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel16;
+        internal System.Windows.Forms.TextBox Issues7Lat4;
+        internal System.Windows.Forms.TextBox Issues6Lat4;
+        internal System.Windows.Forms.TextBox Issues5Lat4;
+        internal System.Windows.Forms.TextBox Issues4Lat4;
+        internal System.Windows.Forms.TextBox Issues3Lat4;
+        internal System.Windows.Forms.TextBox Issues2Lat4;
+        internal System.Windows.Forms.TextBox IssuesLat4;
+        internal System.Windows.Forms.Label Label214;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel17;
+        internal System.Windows.Forms.TextBox FiledDateLat4;
+        internal System.Windows.Forms.Label Label215;
+        internal System.Windows.Forms.TextBox AmountSettledLat4;
+        internal System.Windows.Forms.Label Label216;
+        internal System.Windows.Forms.Label Label217;
+        internal System.Windows.Forms.TextBox DateSettledLat4;
+        internal System.Windows.Forms.TextBox CaseConfLat4;
+        internal System.Windows.Forms.Label Label218;
+        internal System.Windows.Forms.TextBox HearingDateLat4;
+        internal System.Windows.Forms.Label Label219;
+        internal System.Windows.Forms.Label Label220;
+        internal System.Windows.Forms.TextBox HearingAdjudicatorLat4;
+        internal System.Windows.Forms.TextBox InsurerFirmLat4;
+        internal System.Windows.Forms.Label Label221;
+        internal System.Windows.Forms.TextBox TribunalNumberLat4;
+        internal System.Windows.Forms.Label Label222;
+        internal System.Windows.Forms.TextBox InsurerLat4;
+        internal System.Windows.Forms.Label Label223;
+        internal System.Windows.Forms.TextBox HearingTypeLat4;
+        internal System.Windows.Forms.Label Label224;
+        internal System.Windows.Forms.Label Label225;
+        internal System.Windows.Forms.Label Label226;
+        internal System.Windows.Forms.TextBox AdjusterLat4;
+        internal System.Windows.Forms.TextBox InsurerCounselLat4;
+        internal System.Windows.Forms.Label Label227;
+        internal System.Windows.Forms.TextBox CaseAdjudicatorLat4;
+        internal System.Windows.Forms.GroupBox GroupBoxLat3;
+        internal System.Windows.Forms.GroupBox GroupBox38;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel10;
+        internal System.Windows.Forms.TextBox TextBox110;
+        internal System.Windows.Forms.TextBox TextBox111;
+        internal System.Windows.Forms.TextBox TextBox112;
+        internal System.Windows.Forms.TextBox TextBox113;
+        internal System.Windows.Forms.TextBox TextBox114;
+        internal System.Windows.Forms.TextBox TextBox115;
+        internal System.Windows.Forms.TextBox TextBox116;
+        internal System.Windows.Forms.Label Label172;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel11;
+        internal System.Windows.Forms.TextBox TextBox117;
+        internal System.Windows.Forms.Label Label173;
+        internal System.Windows.Forms.TextBox TextBox118;
+        internal System.Windows.Forms.Label Label174;
+        internal System.Windows.Forms.Label Label175;
+        internal System.Windows.Forms.TextBox TextBox119;
+        internal System.Windows.Forms.TextBox TextBox120;
+        internal System.Windows.Forms.Label Label176;
+        internal System.Windows.Forms.TextBox TextBox121;
+        internal System.Windows.Forms.Label Label177;
+        internal System.Windows.Forms.Label Label178;
+        internal System.Windows.Forms.TextBox TextBox122;
+        internal System.Windows.Forms.TextBox TextBox123;
+        internal System.Windows.Forms.Label Label179;
+        internal System.Windows.Forms.TextBox TextBox124;
+        internal System.Windows.Forms.Label Label180;
+        internal System.Windows.Forms.TextBox TextBox125;
+        internal System.Windows.Forms.Label Label181;
+        internal System.Windows.Forms.TextBox TextBox126;
+        internal System.Windows.Forms.Label Label182;
+        internal System.Windows.Forms.Label Label183;
+        internal System.Windows.Forms.Label Label184;
+        internal System.Windows.Forms.TextBox TextBox127;
+        internal System.Windows.Forms.TextBox TextBox128;
+        internal System.Windows.Forms.Label Label185;
+        internal System.Windows.Forms.TextBox TextBox129;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel12;
+        internal System.Windows.Forms.TextBox Issues7Lat3;
+        internal System.Windows.Forms.TextBox Issues6Lat3;
+        internal System.Windows.Forms.TextBox Issues5Lat3;
+        internal System.Windows.Forms.TextBox Issues4Lat3;
+        internal System.Windows.Forms.TextBox Issues3Lat3;
+        internal System.Windows.Forms.TextBox Issues2Lat3;
+        internal System.Windows.Forms.TextBox IssuesLat3;
+        internal System.Windows.Forms.Label Label186;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel13;
+        internal System.Windows.Forms.TextBox FiledDateLat3;
+        internal System.Windows.Forms.Label Label187;
+        internal System.Windows.Forms.TextBox AmountSettledLat3;
+        internal System.Windows.Forms.Label Label188;
+        internal System.Windows.Forms.Label Label189;
+        internal System.Windows.Forms.TextBox DateSettledLat3;
+        internal System.Windows.Forms.TextBox CaseConfLat3;
+        internal System.Windows.Forms.Label Label190;
+        internal System.Windows.Forms.TextBox HearingDateLat3;
+        internal System.Windows.Forms.Label Label191;
+        internal System.Windows.Forms.Label Label192;
+        internal System.Windows.Forms.TextBox HearingAdjudicatorLat3;
+        internal System.Windows.Forms.TextBox InsurerFirmLat3;
+        internal System.Windows.Forms.Label Label193;
+        internal System.Windows.Forms.TextBox TribunalNumberLat3;
+        internal System.Windows.Forms.Label Label194;
+        internal System.Windows.Forms.TextBox InsurerLat3;
+        internal System.Windows.Forms.Label Label195;
+        internal System.Windows.Forms.TextBox HearingTypeLat3;
+        internal System.Windows.Forms.Label Label196;
+        internal System.Windows.Forms.Label Label197;
+        internal System.Windows.Forms.Label Label198;
+        internal System.Windows.Forms.TextBox AdjusterLat3;
+        internal System.Windows.Forms.TextBox InsureCounselLat3;
+        internal System.Windows.Forms.Label Label199;
+        internal System.Windows.Forms.TextBox CaseAdjudicatorLat3;
+        internal System.Windows.Forms.GroupBox GroupBoxLat2;
+        internal System.Windows.Forms.GroupBox GroupBox36;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel6;
+        internal System.Windows.Forms.TextBox TextBox70;
+        internal System.Windows.Forms.TextBox TextBox71;
+        internal System.Windows.Forms.TextBox TextBox72;
+        internal System.Windows.Forms.TextBox TextBox73;
+        internal System.Windows.Forms.TextBox TextBox74;
+        internal System.Windows.Forms.TextBox TextBox75;
+        internal System.Windows.Forms.TextBox TextBox76;
+        internal System.Windows.Forms.Label Label144;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel7;
+        internal System.Windows.Forms.TextBox TextBox77;
+        internal System.Windows.Forms.Label Label145;
+        internal System.Windows.Forms.TextBox TextBox78;
+        internal System.Windows.Forms.Label Label146;
+        internal System.Windows.Forms.Label Label147;
+        internal System.Windows.Forms.TextBox TextBox79;
+        internal System.Windows.Forms.TextBox TextBox80;
+        internal System.Windows.Forms.Label Label148;
+        internal System.Windows.Forms.TextBox TextBox81;
+        internal System.Windows.Forms.Label Label149;
+        internal System.Windows.Forms.Label Label150;
+        internal System.Windows.Forms.TextBox TextBox82;
+        internal System.Windows.Forms.TextBox TextBox83;
+        internal System.Windows.Forms.Label Label151;
+        internal System.Windows.Forms.TextBox TextBox84;
+        internal System.Windows.Forms.Label Label152;
+        internal System.Windows.Forms.TextBox TextBox85;
+        internal System.Windows.Forms.Label Label153;
+        internal System.Windows.Forms.TextBox TextBox86;
+        internal System.Windows.Forms.Label Label154;
+        internal System.Windows.Forms.Label Label155;
+        internal System.Windows.Forms.Label Label156;
+        internal System.Windows.Forms.TextBox TextBox87;
+        internal System.Windows.Forms.TextBox TextBox88;
+        internal System.Windows.Forms.Label Label157;
+        internal System.Windows.Forms.TextBox TextBox89;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel8;
+        internal System.Windows.Forms.TextBox Issues7Lat2;
+        internal System.Windows.Forms.TextBox Issues6Lat2;
+        internal System.Windows.Forms.TextBox Issues5Lat2;
+        internal System.Windows.Forms.TextBox Issues4Lat2;
+        internal System.Windows.Forms.TextBox Issues3Lat2;
+        internal System.Windows.Forms.TextBox Issues2Lat2;
+        internal System.Windows.Forms.TextBox IssuesLat2;
+        internal System.Windows.Forms.Label Label158;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel9;
+        internal System.Windows.Forms.TextBox FiledDateLat2;
+        internal System.Windows.Forms.Label Label159;
+        internal System.Windows.Forms.TextBox AmountSettledLat2;
+        internal System.Windows.Forms.Label Label160;
+        internal System.Windows.Forms.Label Label161;
+        internal System.Windows.Forms.TextBox DateSettledLat2;
+        internal System.Windows.Forms.TextBox CaseConfLat2;
+        internal System.Windows.Forms.Label Label162;
+        internal System.Windows.Forms.TextBox HearingDateLat2;
+        internal System.Windows.Forms.Label Label163;
+        internal System.Windows.Forms.Label Label164;
+        internal System.Windows.Forms.TextBox HearingAdjudicatorLat2;
+        internal System.Windows.Forms.TextBox InsureFirmLat2;
+        internal System.Windows.Forms.Label Label165;
+        internal System.Windows.Forms.TextBox TribunalNumberLat2;
+        internal System.Windows.Forms.Label Label166;
+        internal System.Windows.Forms.TextBox InsurerLat2;
+        internal System.Windows.Forms.Label Label167;
+        internal System.Windows.Forms.TextBox HearingTypeLat2;
+        internal System.Windows.Forms.Label Label168;
+        internal System.Windows.Forms.Label Label169;
+        internal System.Windows.Forms.Label Label170;
+        internal System.Windows.Forms.TextBox AdjusterLat2;
+        internal System.Windows.Forms.TextBox InsurerCounselLat2;
+        internal System.Windows.Forms.Label Label171;
+        internal System.Windows.Forms.TextBox CaseAdjudicatorLat2;
+        internal System.Windows.Forms.GroupBox GroupBoxLat1;
+        internal System.Windows.Forms.GroupBox GroupBox34;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel4;
+        internal System.Windows.Forms.TextBox TextBox50;
+        internal System.Windows.Forms.TextBox TextBox51;
+        internal System.Windows.Forms.TextBox TextBox52;
+        internal System.Windows.Forms.TextBox TextBox53;
+        internal System.Windows.Forms.TextBox TextBox54;
+        internal System.Windows.Forms.TextBox TextBox55;
+        internal System.Windows.Forms.TextBox TextBox56;
+        internal System.Windows.Forms.Label Label125;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel5;
+        internal System.Windows.Forms.TextBox TextBox57;
+        internal System.Windows.Forms.Label Label130;
+        internal System.Windows.Forms.TextBox TextBox58;
+        internal System.Windows.Forms.Label Label132;
+        internal System.Windows.Forms.Label Label133;
+        internal System.Windows.Forms.TextBox TextBox59;
+        internal System.Windows.Forms.TextBox TextBox60;
+        internal System.Windows.Forms.Label Label134;
+        internal System.Windows.Forms.TextBox TextBox61;
+        internal System.Windows.Forms.Label Label135;
+        internal System.Windows.Forms.Label Label136;
+        internal System.Windows.Forms.TextBox TextBox62;
+        internal System.Windows.Forms.TextBox TextBox63;
+        internal System.Windows.Forms.Label Label137;
+        internal System.Windows.Forms.TextBox TextBox64;
+        internal System.Windows.Forms.Label Label138;
+        internal System.Windows.Forms.TextBox TextBox65;
+        internal System.Windows.Forms.Label Label139;
+        internal System.Windows.Forms.TextBox TextBox66;
+        internal System.Windows.Forms.Label Label140;
+        internal System.Windows.Forms.Label Label141;
+        internal System.Windows.Forms.Label Label142;
+        internal System.Windows.Forms.TextBox TextBox67;
+        internal System.Windows.Forms.TextBox TextBox68;
+        internal System.Windows.Forms.Label Label143;
+        internal System.Windows.Forms.TextBox TextBox69;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel3;
+        internal System.Windows.Forms.TextBox TxtIssues7;
+        internal System.Windows.Forms.TextBox TxtIssues6;
+        internal System.Windows.Forms.TextBox TxtIssues5;
+        internal System.Windows.Forms.TextBox TxtIssues4;
+        internal System.Windows.Forms.TextBox TxtIssues3;
+        internal System.Windows.Forms.TextBox TxtIssues2;
+        internal System.Windows.Forms.TextBox TxtIssues1;
+        internal System.Windows.Forms.Label Label82;
+        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel2;
+        internal System.Windows.Forms.TextBox FiledDateTxt;
+        internal System.Windows.Forms.Label Label126;
+        internal System.Windows.Forms.TextBox AmountSettledTxt;
+        internal System.Windows.Forms.Label Label64;
+        internal System.Windows.Forms.Label Label131;
+        internal System.Windows.Forms.TextBox DateSettledTxt;
+        internal System.Windows.Forms.TextBox CaseConfTxt;
+        internal System.Windows.Forms.Label Label123;
+        internal System.Windows.Forms.TextBox HearingDateTxt;
+        internal System.Windows.Forms.Label Label118;
+        internal System.Windows.Forms.Label Label129;
+        internal System.Windows.Forms.TextBox HearingAdjudicatorTxt;
+        internal System.Windows.Forms.TextBox InsurerFirmTxt;
+        internal System.Windows.Forms.Label Label122;
+        internal System.Windows.Forms.TextBox TribunalNumberTxt;
+        internal System.Windows.Forms.Label Label128;
+        internal System.Windows.Forms.TextBox InsurerTxt;
+        internal System.Windows.Forms.Label Label124;
+        internal System.Windows.Forms.TextBox HearingTypeTxt;
+        internal System.Windows.Forms.Label Label127;
+        internal System.Windows.Forms.Label Label121;
+        internal System.Windows.Forms.Label Label119;
+        internal System.Windows.Forms.TextBox AdjusterTxt;
+        internal System.Windows.Forms.TextBox InsurerCounselTxt;
+        internal System.Windows.Forms.Label Label120;
+        internal System.Windows.Forms.TextBox CaseAdjudicatorTxt;
+        internal System.Windows.Forms.TabPage LAT1;
+        private System.Windows.Forms.Button BtnLat1;
+        private System.Windows.Forms.TextBox DateLatSettledClosedtTxt;
+        private System.Windows.Forms.TextBox DeadLineForReplaySubmissionsTxt;
+        private System.Windows.Forms.TextBox DeadLineToFileHearingSubmissionsTxt;
+        private System.Windows.Forms.TextBox DeadLineToFileAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox DeadLineToDeliverProductionsToABCounselTxt;
+        private System.Windows.Forms.TextBox DeadLineToServeFileCaseConfSummaryTxt;
+        private System.Windows.Forms.TextBox ActualDateLatServedOnInsurerTxt;
+        private System.Windows.Forms.TextBox ProposedDateToFileLatTxt;
+        private System.Windows.Forms.TextBox DueDateToDiscussPotenctialLatApplTxt;
+        private System.Windows.Forms.TextBox HearingStarDateTxt;
+        private System.Windows.Forms.TextBox DeadlineToReceiveInsurerTxt;
+        private System.Windows.Forms.TextBox DeadLineToReceiveAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox DeadLineToReceiveABProductionsTxt;
+        private System.Windows.Forms.TextBox LatCaseConfDateTxt;
+        private System.Windows.Forms.TextBox InsuresResponseReceivedTxt;
+        private System.Windows.Forms.TextBox ActualDateLatFiledTxt;
+        private System.Windows.Forms.TextBox DateMetWithLawyerReDenialTxt;
+        internal System.Windows.Forms.DateTimePicker DueDateToDiscussPotenctialLatApplDtp;
+        internal System.Windows.Forms.DateTimePicker ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker ActualDateLatServedOnInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToServeFileCaseConfSummaryDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToDeliverProductionsToABCounselDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToFileAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToFileHearingSubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker DateLatSettledClosedDtp;
+        internal System.Windows.Forms.DateTimePicker DateMetWithLawyerReDenialDtp;
+        internal System.Windows.Forms.DateTimePicker ActualDateLatFiledDtp;
+        internal System.Windows.Forms.DateTimePicker InsuresResponseReceivedDtp;
+        internal System.Windows.Forms.DateTimePicker LatCaseConfDateDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToReceiveABProductionsDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToReceiveAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker DeadlineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker HearingStarDateDtp;
+        internal System.Windows.Forms.TabPage LAT2;
+        private System.Windows.Forms.Button BtnLat2;
+        private System.Windows.Forms.TextBox Lat2DateLatSettledClosedTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineForReplaySubmissionsTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineToFileHearingSubmissionsTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineToFileAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineToDeliverProductionsToABCounselTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineToServeFileCaseConfSummaryTxt;
+        private System.Windows.Forms.TextBox Lat2ActualDateLatServedOnInsurerTxt;
+        private System.Windows.Forms.TextBox Lat2ProposedDateToFileLatTxt;
+        private System.Windows.Forms.TextBox Lat2DueDateToDiscussPotenctialLatApplTxt;
+        private System.Windows.Forms.TextBox Lat2HearingStarDateTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineToReceiveInsurerTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineToReceiveAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox Lat2DeadLineToReceiveABProductionsTxt;
+        private System.Windows.Forms.TextBox Lat2LatCaseConfDateTxt;
+        private System.Windows.Forms.TextBox Lat2InsuresResponseReceivedTxt;
+        private System.Windows.Forms.TextBox Lat2ActualDateLatFiledTxt;
+        private System.Windows.Forms.TextBox Lat2DateMetWithLawyerReDenialTxt;
+        internal System.Windows.Forms.DateTimePicker Lat2DueDateToDiscussPotenctialLatApplDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2ActualDateLatServedOnInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToServeFileCaseConfSummaryDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToDeliverProductionsToABCounselDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToFileAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToFileHearingSubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DateLatSettledClosedDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DateMetWithLawyerReDenialDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2ActualDateLatFiledDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2InsuresResponseReceivedDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2LatCaseConfDateDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveABProductionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2HearingStarDateDtp;
+        internal System.Windows.Forms.TabPage LAT3;
+        private System.Windows.Forms.Button BtnLat3;
+        private System.Windows.Forms.TextBox Lat3DateLatSettledClosedTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineForReplaySubmissionsTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineToFileHearingSubmissionsTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineToFileAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineToDeliverProductionsToABCounselTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineToServeFileCaseConfSummaryTxt;
+        private System.Windows.Forms.TextBox Lat3ActualDateLatServedOnInsurerTxt;
+        private System.Windows.Forms.TextBox Lat3ProposedDateToFileLatTxt;
+        private System.Windows.Forms.TextBox Lat3DueDateToDiscussPotenctialLatApplTxt;
+        internal System.Windows.Forms.DateTimePicker Lat3DueDateToDiscussPotenctialLatApplDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3ActualDateLatServedOnInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToServeFileCaseConfSummaryDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToDeliverProductionsToABCounselDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToFileAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToFileHearingSubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DateLatSettledClosedDtp;
+        private System.Windows.Forms.TextBox Lat3HearingStarDateTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineToReceiveInsurerTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineToReceiveAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox Lat3DeadLineToReceiveABProductionsTxt;
+        private System.Windows.Forms.TextBox Lat3LatCaseConfDateTxt;
+        private System.Windows.Forms.TextBox Lat3InsuresResponseReceivedTxt;
+        private System.Windows.Forms.TextBox Lat3ActualDateLatFiledTxt;
+        private System.Windows.Forms.TextBox Lat3DateMetWithLawyerReDenialTxt;
+        internal System.Windows.Forms.DateTimePicker Lat3DateMetWithLawyerReDenialDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3ActualDateLatFiledDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3InsuresResponseReceivedDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3LatCaseConfDateDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveABProductionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3HearingStarDateDtp;
+        internal System.Windows.Forms.TabPage LAT4;
+        private System.Windows.Forms.Button BtnLat4;
+        private System.Windows.Forms.TextBox Lat4DateLatSettledClosedTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineForReplaySubmissionsTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineToFileHearingSubmissionsTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineToFileAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineToDeliverProductionsToABCounselTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineToServeFileCaseConfSummaryTxt;
+        private System.Windows.Forms.TextBox Lat4ActualDateLatServedOnInsurerTxt;
+        private System.Windows.Forms.TextBox Lat4ProposedDateToFileLatTxt;
+        private System.Windows.Forms.TextBox Lat4DueDateToDiscussPotenctialLatApplTxt;
+        internal System.Windows.Forms.DateTimePicker Lat4DueDateToDiscussPotenctialLatApplDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4ActualDateLatServedOnInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToServeFileCaseConfSummaryDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToDeliverProductionsToABCounselDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToFileAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToFileHearingSubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DateLatSettledClosedDtp;
+        private System.Windows.Forms.TextBox Lat4HearingStarDateTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineToReceiveInsurerTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineToReceiveAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox Lat4DeadLineToReceiveABProductionsTxt;
+        private System.Windows.Forms.TextBox Lat4LatCaseConfDateTxt;
+        private System.Windows.Forms.TextBox Lat4InsuresResponseReceivedTxt;
+        private System.Windows.Forms.TextBox Lat4ActualDateLatFiledTxt;
+        private System.Windows.Forms.TextBox Lat4DateMetWithLawyerReDenialTxt;
+        internal System.Windows.Forms.DateTimePicker Lat4DateMetWithLawyerReDenialDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4ActualDateLatFiledDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4InsuresResponseReceivedDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4LatCaseConfDateDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveABProductionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4HearingStarDateDtp;
     }
 }
 

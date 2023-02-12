@@ -42,8 +42,5 @@ namespace RRFFilesManager.Logic
             result.Add(file.CurrentStatus);
             return result;
         }
-
-        
-
     }
 }

@@ -773,11 +773,6 @@ namespace RRFFilesManager
             }
         }
 
-
-        private void LatFiledDtp_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         private void BtnSaveLatData_Click(object sender, EventArgs e)
         {
             if (sender is Button)
@@ -1625,5 +1620,6 @@ namespace RRFFilesManager
                 e.Handled = true;
             }
         }
+
     }
 }
