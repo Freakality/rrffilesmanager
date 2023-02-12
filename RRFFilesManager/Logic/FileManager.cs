@@ -16,10 +16,18 @@ namespace RRFFilesManager.Logic
     {
         private readonly ArchiveManager _archiveManager;
         private readonly IFileRepository _fileRepository;
+        private readonly IFileStatusRepository _fileStatusRepository;
         public FileManager()
         {
             _archiveManager = new ArchiveManager();
             _fileRepository = Program.GetService<IFileRepository>();
+            _fileStatusRepository = Program.GetService<IFileStatusRepository>();
+        }
+
+        public void SetCurrentFileStatus(File file, FileStatusEnum fileStatus)
+        {
+            file.CurrentStatus = _fileStatusRepository.GetById((int)fileStatus);
+            Update(file);
         }
 
         public void Update(File file)
@@ -29,10 +37,21 @@ namespace RRFFilesManager.Logic
                 foreach (var archive in file.Archives)
                 {
                     archive.MoveToFileFolder();
-                    _archiveManager.Update(archive);
                 }
             }
             _fileRepository.Update(file);
+        }
+
+        public void Insert(File file)
+        {
+            if (file.Archives != null)
+            {
+                foreach (var archive in file.Archives)
+                {
+                    archive.CopyToFileFolder();
+                }
+            }
+            _fileRepository.Insert(file);
         }
     }
 }
