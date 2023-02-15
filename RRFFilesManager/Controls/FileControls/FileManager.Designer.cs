@@ -232,7 +232,7 @@
             this.DgColumn_DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgColumn_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel6 = new System.Windows.Forms.Panel();rialDate
+            this.panel6 = new System.Windows.Forms.Panel();
             this.SaveNoteButton = new System.Windows.Forms.Button();
             this.AddNotesRowButton = new System.Windows.Forms.Button();
             this.Panel_ControlesDeFiltrado = new System.Windows.Forms.Panel();
@@ -12476,23 +12476,7 @@
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveAffidavitReportsDtp;
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveInsurerDtp;
         internal System.Windows.Forms.DateTimePicker Lat4HearingStarDateDtp;
-        private System.Windows.Forms.Panel Panel_ControlesDeFiltrado;
-        internal System.Windows.Forms.Button Btn_SearchNotes;
-        private System.Windows.Forms.ComboBox Cbb_Staff;
-        private System.Windows.Forms.Label label280;
-        private System.Windows.Forms.DataGridView ClientNotesDataGridView;
-        private System.Windows.Forms.Panel panel6;
-        internal System.Windows.Forms.Button AddNotesRowButton;
-        internal System.Windows.Forms.Button SaveNoteButton;
-        private System.Windows.Forms.DateTimePicker Dtp_To;
-        private System.Windows.Forms.DateTimePicker Dtp_From;
-        private System.Windows.Forms.Label label277;
         private System.Windows.Forms.Label label272;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_DateTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Staff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Description;
-        private System.Windows.Forms.Label label278;
-        internal System.Windows.Forms.Button ExportToExcelButton;
         internal System.Windows.Forms.DataGridView ActionLogDataGridView;
         private System.Windows.Forms.Panel panel7;
         internal System.Windows.Forms.Button Btn_AddTask;

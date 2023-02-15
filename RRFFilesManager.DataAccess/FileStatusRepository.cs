@@ -45,5 +45,11 @@ namespace RRFFilesManager.DataAccess
             _context.Entry(trxContact).CurrentValues.SetValues(fileTask);
             _context.SaveChanges();
         }
+
+        public FileStatus GetByDescription(string description)
+        {
+            var result = _context.FileStatus.FirstOrDefault(x => x.Description == description);
+            return result;
+        }
     }
 }
