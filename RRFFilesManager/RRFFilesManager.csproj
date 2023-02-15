@@ -794,6 +794,7 @@
     <Compile Include="Logic\CNSignOn.cs" />
     <Compile Include="Logic\Excel.cs" />
     <Compile Include="Logic\Extensions.cs" />
+    <Compile Include="Logic\FileStatusManager.cs" />
     <Compile Include="Logic\FileManager.cs" />
     <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />

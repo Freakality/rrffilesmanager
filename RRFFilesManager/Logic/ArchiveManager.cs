@@ -34,6 +34,12 @@ namespace RRFFilesManager.Logic
             _archiveRepository.Update(archive);
             return archive;
         }
+        public Archive Update(Archive archive)
+        {
+            _archiveRepository.Update(archive);
+            return archive;
+        }
+
 
         public Archive Insert(Abstractions.File file, Archive archive, string fileName = null)
         {
