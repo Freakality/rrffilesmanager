@@ -16,11 +16,31 @@ namespace RRFFilesManager.Logic
             _fileStatusRepository = Program.GetService<IFileStatusRepository>();
         }
 
-
+        private void StatusCheck(string fileStatusDescription)
+        {
+            if (_fileStatusRepository.GetByDescription(fileStatusDescription) is null)
+            {
+                FileStatus status = new FileStatus();
+                status.Description = fileStatusDescription;
+                _fileStatusRepository.Insert(status);
+            }
+        }
+        private void FillStatus()
+        {
+            StatusCheck("Potential File");
+            StatusCheck("Open File");
+            StatusCheck("Closed Files");
+            StatusCheck("Not Retained");
+        }
         public IEnumerable<FileStatus> GetValidFileStatus(File file)
         {
+            FillStatus();
             var fileStatus = _fileStatusRepository.List();
             List<FileStatus> result;
+            if (file.CurrentStatus is null)
+            {
+                file.CurrentStatus = _fileStatusRepository.GetByDescription("Potential File");
+            }
             switch (file.CurrentStatus.ID)
             {
                 case (int)FileStatusEnum.PotentialFile:

@@ -1044,6 +1044,31 @@
             this.LimDateTextBox = new System.Windows.Forms.TextBox();
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.CurrentFileStatusComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Btn_AddTask = new System.Windows.Forms.Button();
+            this.TrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.PreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.PreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.PrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.ResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.MemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxAllDefendantUndertakingRecd = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateTrialRecordFiled = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateOfDefendantDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxPlaintiffAODSent = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateOfPlaintiffDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDefendantAODRequest = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxPreDiscoveryMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateToFileTrialRecordBy = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxActualDateSOCServed = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxProposedDateToServeSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxMedicalSummariesPreDiscDueDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxActualDateSOCIssued = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxPrePleadingsMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxProposedDateIssueSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
             TBoxActualDateSOCServedLabel = new System.Windows.Forms.Label();
             TBoxPreDiscoveryMeetingDateLabel = new System.Windows.Forms.Label();
@@ -3156,7 +3181,7 @@
             this.ClientNotes.Location = new System.Drawing.Point(4, 26);
             this.ClientNotes.Name = "ClientNotes";
             this.ClientNotes.Padding = new System.Windows.Forms.Padding(3);
-            this.ClientNotes.Size = new System.Drawing.Size(1362, 384);
+            this.ClientNotes.Size = new System.Drawing.Size(1089, 290);
             this.ClientNotes.TabIndex = 8;
             this.ClientNotes.Text = "Client Notes";
             this.ClientNotes.UseVisualStyleBackColor = true;
@@ -3179,7 +3204,7 @@
             this.ClientNotesDataGridView.MultiSelect = false;
             this.ClientNotesDataGridView.Name = "ClientNotesDataGridView";
             this.ClientNotesDataGridView.RowHeadersVisible = false;
-            this.ClientNotesDataGridView.Size = new System.Drawing.Size(995, 333);
+            this.ClientNotesDataGridView.Size = new System.Drawing.Size(722, 239);
             this.ClientNotesDataGridView.TabIndex = 3;
             // 
             // DgColumn_DateTime
@@ -3263,7 +3288,7 @@
             this.Panel_ControlesDeFiltrado.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_ControlesDeFiltrado.Location = new System.Drawing.Point(3, 3);
             this.Panel_ControlesDeFiltrado.Name = "Panel_ControlesDeFiltrado";
-            this.Panel_ControlesDeFiltrado.Size = new System.Drawing.Size(361, 378);
+            this.Panel_ControlesDeFiltrado.Size = new System.Drawing.Size(361, 284);
             this.Panel_ControlesDeFiltrado.TabIndex = 1;
             // 
             // label278
@@ -3285,7 +3310,7 @@
             this.ExportToExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExportToExcelButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExportToExcelButton.ForeColor = System.Drawing.Color.White;
-            this.ExportToExcelButton.Location = new System.Drawing.Point(184, 333);
+            this.ExportToExcelButton.Location = new System.Drawing.Point(184, 239);
             this.ExportToExcelButton.Name = "ExportToExcelButton";
             this.ExportToExcelButton.Size = new System.Drawing.Size(152, 37);
             this.ExportToExcelButton.TabIndex = 152;
@@ -3330,7 +3355,7 @@
             this.Btn_SearchNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_SearchNotes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_SearchNotes.ForeColor = System.Drawing.Color.White;
-            this.Btn_SearchNotes.Location = new System.Drawing.Point(15, 333);
+            this.Btn_SearchNotes.Location = new System.Drawing.Point(15, 239);
             this.Btn_SearchNotes.Name = "Btn_SearchNotes";
             this.Btn_SearchNotes.Size = new System.Drawing.Size(152, 37);
             this.Btn_SearchNotes.TabIndex = 147;
@@ -3388,7 +3413,7 @@
             this.TaskLog.Location = new System.Drawing.Point(4, 26);
             this.TaskLog.Name = "TaskLog";
             this.TaskLog.Padding = new System.Windows.Forms.Padding(3);
-            this.TaskLog.Size = new System.Drawing.Size(1362, 384);
+            this.TaskLog.Size = new System.Drawing.Size(1089, 290);
             this.TaskLog.TabIndex = 2;
             this.TaskLog.Text = "Task Log";
             this.TaskLog.UseVisualStyleBackColor = true;
@@ -3409,8 +3434,8 @@
             this.ActionLogDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ActionLogDataGridView.RowTemplate.Height = 60;
             this.ActionLogDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActionLogDataGridView.Size = new System.Drawing.Size(1356, 316);
-            this.ActionLogDataGridView.TabIndex = 1;
+            this.ActionLogDataGridView.Size = new System.Drawing.Size(1083, 159);
+            this.ActionLogDataGridView.TabIndex = 5;
             // 
             // panel7
             // 
@@ -11364,7 +11389,33 @@
             this.LimDateTextBox.Name = "LimDateTextBox";
             this.LimDateTextBox.Size = new System.Drawing.Size(84, 23);
             this.LimDateTextBox.TabIndex = 7;
+            
             // 
+            // Btn_AddTask
+            // 
+            this.Btn_AddTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Btn_AddTask.BackColor = System.Drawing.Color.Maroon;
+            this.Btn_AddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_AddTask.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_AddTask.ForeColor = System.Drawing.Color.White;
+            this.Btn_AddTask.Location = new System.Drawing.Point(17, 14);
+            this.Btn_AddTask.Name = "Btn_AddTask";
+            this.Btn_AddTask.Size = new System.Drawing.Size(152, 37);
+            this.Btn_AddTask.TabIndex = 147;
+            this.Btn_AddTask.Text = "Add Task";
+            this.Btn_AddTask.UseVisualStyleBackColor = false;
+            this.Btn_AddTask.Click += new System.EventHandler(this.Btn_AddTask_Click);
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(9, 12);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(224, 68);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 145;
+            this.PictureBox1.TabStop = false;
+            //
             // SubTypeCategoryComboBox
             // 
             this.SubTypeCategoryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -12425,6 +12476,10 @@
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveAffidavitReportsDtp;
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveInsurerDtp;
         internal System.Windows.Forms.DateTimePicker Lat4HearingStarDateDtp;
+        private System.Windows.Forms.Label label272;
+        internal System.Windows.Forms.DataGridView ActionLogDataGridView;
+        private System.Windows.Forms.Panel panel7;
+        internal System.Windows.Forms.Button Btn_AddTask;
     }
 }
 
