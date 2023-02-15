@@ -742,5 +742,20 @@ namespace RRFFilesManager
             }
 
         }
+
+        private void Btn_AddTask_Click(object sender, EventArgs e)
+        {
+            if (File == null) 
+            {
+                MessageBox.Show($"You have to search a file to add a task","Wait",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                return;
+            }
+
+            using (TaskManager taskManager = new TaskManager())
+            {
+                taskManager.ShowDialog();
+            }
+
+        }
     }
 }

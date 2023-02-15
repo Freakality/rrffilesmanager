@@ -459,6 +459,12 @@
       <DependentUpon>FileManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileControls\Models\Prescription.cs" />
+    <Compile Include="Controls\FileControls\TaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\TaskManager.Designer.cs">
+      <DependentUpon>TaskManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FileControls\UserControls\FileReviewTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -909,6 +915,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\FileManager.resx">
       <DependentUpon>FileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\TaskManager.resx">
+      <DependentUpon>TaskManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\UserControls\FileReviewTabControl.resx">
       <DependentUpon>FileReviewTabControl.cs</DependentUpon>
