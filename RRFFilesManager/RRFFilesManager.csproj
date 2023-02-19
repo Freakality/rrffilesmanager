@@ -462,7 +462,7 @@
     <Compile Include="Controls\FileControls\TaskManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\FileControls\TaskManager.Designer.cs">
+    <Compile Include="Controls\FileControls\TaskManager.designer.cs">
       <DependentUpon>TaskManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\FileControls\UserControls\FileReviewTabControl.cs">

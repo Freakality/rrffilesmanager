@@ -44,6 +44,7 @@ namespace RRFFilesManager
         public TabPage SemiAnnualFileReviewTabAction = new TabPage("Semi-Annual File Review");
         public TabPage SemiAnnualFileReviewTabAccidentBenefits = new TabPage("Semi-Annual File Review");
         public IEnumerable<ClientNote> clientNotes;
+        public IEnumerable<FileTask> fileTasks;
         private DataTable Notes = new DataTable();
         private DataView FilteredNotes = new DataView();
         public FileManager()
@@ -254,13 +255,40 @@ namespace RRFFilesManager
             bool setup = true;
             if (ActionLogDataGridView.DataSource != null)
                 setup = false;
-            ActionLogDataGridView.DataSource = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
+            fileTasks = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
+            var filetasks = fileTasks.Select( x => new
+            {
+                ID = x?.ID,
+                FileID = x?.FileId,
+                StatusId = x?.State?.ID,
+                StatusDescription = x?.State?.Description,
+                TaskID = x?.TaskId,
+                TasIDNumber = x?.Task?.TaskIDNumber ?? "N/A",
+                TaskDescription = x?.Task?.Description,
+                BusinessProcess = x?.Task?.TaskCategory?.Description ?? "N/A",
+                ResponsibleLawyer = x.Task?.Lawyer?.Description,
+                DueDate = x?.DueDate.ToString("dd-MM-yyyy"),
+                DeferUntilDate = x?.DeferUntilDate.ToString("dd-MM-yyyy") ?? "",
+                TaskStartedDate = x?.TaskStartedDate,
+                WorkedOnDate1 = x?.WorkedOnDate1,
+                WorkedOnDate2 = x?.WorkedOnDate2,
+                WorkedOnDate3 = x?.WorkedOnDate3,
+                NotifiedRRFDate = x?.NotifiedRRFDate,                
+                CompletedDate = x?.CompletedDate,
+                Notes = x?.Notes
+            });
+
+            //ActionLogDataGridView.DataSource = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
+            ActionLogDataGridView.DataSource = filetasks.ToList();
             if (setup)
             {
                 ActionLogDataGridView.Columns["ID"].Visible = false;
-                ActionLogDataGridView.Columns["File"].Visible = false;
+                //ActionLogDataGridView.Columns["File"].Visible = false;
                 ActionLogDataGridView.Columns["FileId"].Visible = false;
                 ActionLogDataGridView.Columns["TaskId"].Visible = false;
+                ActionLogDataGridView.Columns["StatusId"].Visible = false;
+                ActionLogDataGridView.Columns["TasIDNumber"].HeaderText = "Task ID";
+                ActionLogDataGridView.Columns["BusinessProcess"].HeaderText = "Business Process";
                 ActionLogDataGridView.Columns["DueDate"].HeaderText = "Due Date";
                 ActionLogDataGridView.Columns["DeferUntilDate"].HeaderText = "Defer Until Date";
                 ActionLogDataGridView.Columns["TaskStartedDate"].HeaderText = "Started Date";
@@ -268,6 +296,7 @@ namespace RRFFilesManager
                 ActionLogDataGridView.Columns["WorkedOnDate2"].HeaderText = "Worked On Date 2";
                 ActionLogDataGridView.Columns["WorkedOnDate3"].HeaderText = "Worked On Date 3";
                 ActionLogDataGridView.Columns["NotifiedRRFDate"].HeaderText = "Notified RRF Date";
+                ActionLogDataGridView.Columns["StatusDescription"].HeaderText = "Status";
                 ActionLogDataGridView.Columns["CompletedDate"].HeaderText = "Completed Date";
 
             }
@@ -1631,9 +1660,12 @@ namespace RRFFilesManager
                 return;
             }
 
-            using (TaskManager taskManager = new TaskManager())
+            using (TaskManager taskManager = new TaskManager(File))
             {
-                taskManager.ShowDialog();
+                if (taskManager.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshActionLogDataGridViewDataSource();
+                }
             }
 
         }
