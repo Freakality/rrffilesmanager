@@ -129,7 +129,7 @@ namespace RRFFilesManager
 
             ClientNameTextBox.Text = file.Client.ToString();
             MatterTypeTextBox.Text = file.MatterType.ToString();
-            MatterSubTypeTextBox.Text = file.MatterSubType.ToString();
+            MatterSubTypeTextBox.Text = file?.MatterSubType?.ToString();
             FileNumberTextBox.Text = file.FileNumber.ToString();
             DateOfLossTextBox.Text = file.DateOFLoss.ToString("MMM-dd-yyyy");
             LimDateTextBox.Text = file.LimitationPeriod;
@@ -443,6 +443,259 @@ namespace RRFFilesManager
         private void ReviewDoneSaveButton_Click2(object sender, EventArgs e)
         {
             SetProjections();   
+        }
+
+        private void LatFiledDtp_ValueChanged(object sender, EventArgs e)
+        {
+            if (sender is DateTimePicker)
+            {
+                DateTimePicker dtp = new DateTimePicker();
+                dtp = (DateTimePicker)sender;
+                switch (dtp.Name)
+                {
+                    // Campos Primarios LAT1
+                    case "ActualDateLatFiledDtp":
+                        ActualDateLatFiledTxt.Text = ActualDateLatFiledDtp.Value.ToShortDateString();
+                        FiledDateTxt.Text = ActualDateLatFiledDtp.Value.ToShortDateString();
+                        break;
+                    case "LatCaseConfDateDtp":
+                        LatCaseConfDateTxt.Text = LatCaseConfDateDtp.Value.ToShortDateString();
+                        CaseConfTxt.Text = LatCaseConfDateDtp.Value.ToShortDateString();
+                        break;
+                    case "HearingStarDateDtp":
+                        HearingStarDateTxt.Text = HearingStarDateDtp.Value.ToShortDateString();
+                        HearingDateTxt.Text = HearingStarDateDtp.Value.ToShortDateString();
+                        break;
+                    case "DateLatSettledClosedDtp":
+                        DateLatSettledClosedtTxt.Text = DateLatSettledClosedDtp.Value.ToShortDateString();
+                        DateSettledTxt.Text = DateLatSettledClosedDtp.Value.ToShortDateString();
+                        break;
+
+                    // Campos Primarios LAT2
+                    case "Lat2ActualDateLatFiledDtp":
+                        Lat2ActualDateLatFiledTxt.Text = Lat2ActualDateLatFiledDtp.Value.ToShortDateString();
+                        FiledDateLat2.Text = Lat2ActualDateLatFiledDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2LatCaseConfDateDtp":
+                        Lat2LatCaseConfDateTxt.Text = Lat2LatCaseConfDateDtp.Value.ToShortDateString();
+                        CaseConfLat2.Text = Lat2LatCaseConfDateDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2HearingStarDateDtp":
+                        Lat2HearingStarDateTxt.Text = Lat2HearingStarDateDtp.Value.ToShortDateString();
+                        HearingDateLat2.Text = Lat2HearingStarDateDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DateLatSettledClosedDtp":
+                        Lat2DateLatSettledClosedTxt.Text = Lat2DateLatSettledClosedDtp.Value.ToShortDateString();
+                        DateSettledLat2.Text = Lat2DateLatSettledClosedDtp.Value.ToShortDateString();
+                        break;
+
+                    // Campos Primarios LAT3
+                    case "Lat3ActualDateLatFiledDtp":
+                        Lat3ActualDateLatFiledTxt.Text = Lat3ActualDateLatFiledDtp.Value.ToShortDateString();
+                        FiledDateLat3.Text = Lat3ActualDateLatFiledDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3LatCaseConfDateDtp":
+                        Lat3LatCaseConfDateTxt.Text = Lat3LatCaseConfDateDtp.Value.ToShortDateString();
+                        CaseConfLat3.Text = Lat3LatCaseConfDateDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3HearingStarDateDtp":
+                        Lat3HearingStarDateTxt.Text = Lat3HearingStarDateDtp.Value.ToShortDateString();
+                        HearingDateLat3.Text = Lat3HearingStarDateDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DateLatSettledClosedDtp":
+                        Lat3DateLatSettledClosedTxt.Text = Lat3DateLatSettledClosedDtp.Value.ToShortDateString();
+                        DateSettledLat3.Text = Lat3DateLatSettledClosedDtp.Value.ToShortDateString();
+                        break;
+
+                    // Campos Primarios LAT4
+
+                    case "Lat4ActualDateLatFiledDtp":
+                        Lat4ActualDateLatFiledTxt.Text = Lat4ActualDateLatFiledDtp.Value.ToShortDateString();
+                        FiledDateLat4.Text = Lat4ActualDateLatFiledDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4LatCaseConfDateDtp":
+                        Lat4LatCaseConfDateTxt.Text = Lat4LatCaseConfDateDtp.Value.ToShortDateString();
+                        CaseConfLat4.Text = Lat4LatCaseConfDateDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4HearingStarDateDtp":
+                        Lat4HearingStarDateTxt.Text = Lat4HearingStarDateDtp.Value.ToShortDateString();
+                        HearingDateLat4.Text = Lat4HearingStarDateDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DateLatSettledClosedDtp":
+                        Lat4DateLatSettledClosedTxt.Text = Lat4DateLatSettledClosedDtp.Value.ToShortDateString();
+                        DateSettledLat4.Text = Lat4DateLatSettledClosedDtp.Value.ToShortDateString();
+                        break;
+
+                    // Campos secundarios LAT1
+                    case "DateMetWithLawyerReDenialDtp":
+                        DateMetWithLawyerReDenialTxt.Text = DateMetWithLawyerReDenialDtp.Value.ToShortDateString();
+                        break;
+                    case "InsuresResponseReceivedDtp":
+                        InsuresResponseReceivedTxt.Text = InsuresResponseReceivedDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadLineToReceiveABProductionsDtp":
+                        DeadLineToReceiveABProductionsTxt.Text = DeadLineToReceiveABProductionsDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadLineToReceiveAffidavitReportsDtp":
+                        DeadLineToReceiveAffidavitReportsTxt.Text = DeadLineToReceiveAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadlineToReceiveInsurerDtp":
+                        DeadlineToReceiveInsurerTxt.Text = DeadlineToReceiveInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "DueDateToDiscussPotenctialLatApplDtp":
+                        DueDateToDiscussPotenctialLatApplTxt.Text = DueDateToDiscussPotenctialLatApplDtp.Value.ToShortDateString();
+                        break;
+                    case "ProposedDateToFileLatDtp":
+                        ProposedDateToFileLatTxt.Text = ProposedDateToFileLatDtp.Value.ToShortDateString();
+                        break;
+                    case "ActualDateLatServedOnInsurerDtp":
+                        ActualDateLatServedOnInsurerTxt.Text = ActualDateLatServedOnInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadLineToServeFileCaseConfSummaryDtp":
+                        DeadLineToServeFileCaseConfSummaryTxt.Text = DeadLineToServeFileCaseConfSummaryDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadLineToDeliverProductionsToABCounselDtp":
+                        DeadLineToDeliverProductionsToABCounselTxt.Text = DeadLineToDeliverProductionsToABCounselDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadLineToFileAffidavitReportsDtp":
+                        DeadLineToFileAffidavitReportsTxt.Text = DeadLineToFileAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadLineToFileHearingSubmissionsDtp":
+                        DeadLineToFileHearingSubmissionsTxt.Text = DeadLineToFileHearingSubmissionsDtp.Value.ToShortDateString();
+                        break;
+                    case "DeadLineForReplaySubmissionsDtp":
+                        DeadLineForReplaySubmissionsTxt.Text = DeadLineForReplaySubmissionsDtp.Value.ToShortDateString();
+                        break;
+
+                    // Campos secundarios LAT2
+                    case "Lat2DateMetWithLawyerReDenialDtp":
+                        Lat2DateMetWithLawyerReDenialTxt.Text = Lat2DateMetWithLawyerReDenialDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2InsuresResponseReceivedDtp":
+                        Lat2InsuresResponseReceivedTxt.Text = Lat2InsuresResponseReceivedDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineToReceiveABProductionsDtp":
+                        Lat2DeadLineToReceiveABProductionsTxt.Text = Lat2DeadLineToReceiveABProductionsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineToReceiveAffidavitReportsDtp":
+                        Lat2DeadLineToReceiveAffidavitReportsTxt.Text = Lat2DeadLineToReceiveAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineToReceiveInsurerDtp":
+                        Lat2DeadLineToReceiveInsurerTxt.Text = Lat2DeadLineToReceiveInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DueDateToDiscussPotenctialLatApplDtp":
+                        Lat2DueDateToDiscussPotenctialLatApplTxt.Text = Lat2DueDateToDiscussPotenctialLatApplDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2ProposedDateToFileLatDtp":
+                        Lat2ProposedDateToFileLatTxt.Text = Lat2ProposedDateToFileLatDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2ActualDateLatServedOnInsurerDtp":
+                        Lat2ActualDateLatServedOnInsurerTxt.Text = Lat2ActualDateLatServedOnInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineToServeFileCaseConfSummaryDtp":
+                        Lat2DeadLineToServeFileCaseConfSummaryTxt.Text = Lat2DeadLineToServeFileCaseConfSummaryDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineToDeliverProductionsToABCounselDtp":
+                        Lat2DeadLineToDeliverProductionsToABCounselTxt.Text = Lat2DeadLineToDeliverProductionsToABCounselDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineToFileAffidavitReportsDtp":
+                        Lat2DeadLineToFileAffidavitReportsTxt.Text = Lat2DeadLineToFileAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineToFileHearingSubmissionsDtp":
+                        Lat2DeadLineToFileHearingSubmissionsTxt.Text = Lat2DeadLineToFileHearingSubmissionsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat2DeadLineForReplaySubmissionsDtp":
+                        Lat2DeadLineForReplaySubmissionsTxt.Text = Lat2DeadLineForReplaySubmissionsDtp.Value.ToShortDateString();
+                        break;
+
+                    // Campos secundarios LAT3
+
+                    case "Lat3DateMetWithLawyerReDenialDtp":
+                        Lat3DateMetWithLawyerReDenialTxt.Text = Lat3DateMetWithLawyerReDenialDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3InsuresResponseReceivedDtp":
+                        Lat3InsuresResponseReceivedTxt.Text = Lat3InsuresResponseReceivedDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineToReceiveABProductionsDtp":
+                        Lat3DeadLineToReceiveABProductionsTxt.Text = Lat3DeadLineToReceiveABProductionsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineToReceiveAffidavitReportsDtp":
+                        Lat3DeadLineToReceiveAffidavitReportsTxt.Text = Lat3DeadLineToReceiveAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineToReceiveInsurerDtp":
+                        Lat3DeadLineToReceiveInsurerTxt.Text = Lat3DeadLineToReceiveInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DueDateToDiscussPotenctialLatApplDtp":
+                        Lat3DueDateToDiscussPotenctialLatApplTxt.Text = Lat3DueDateToDiscussPotenctialLatApplDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3ProposedDateToFileLatDtp":
+                        Lat3ProposedDateToFileLatTxt.Text = Lat3ProposedDateToFileLatDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3ActualDateLatServedOnInsurerDtp":
+                        Lat3ActualDateLatServedOnInsurerTxt.Text = Lat3ActualDateLatServedOnInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineToServeFileCaseConfSummaryDtp":
+                        Lat3DeadLineToServeFileCaseConfSummaryTxt.Text = Lat3DeadLineToServeFileCaseConfSummaryDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineToDeliverProductionsToABCounselDtp":
+                        Lat3DeadLineToDeliverProductionsToABCounselTxt.Text = Lat3DeadLineToDeliverProductionsToABCounselDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineToFileAffidavitReportsDtp":
+                        Lat3DeadLineToFileAffidavitReportsTxt.Text = Lat3DeadLineToFileAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineToFileHearingSubmissionsDtp":
+                        Lat3DeadLineToFileHearingSubmissionsTxt.Text = Lat3DeadLineToFileHearingSubmissionsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat3DeadLineForReplaySubmissionsDtp":
+                        Lat3DeadLineForReplaySubmissionsTxt.Text = Lat3DeadLineForReplaySubmissionsDtp.Value.ToShortDateString();
+                        break;
+
+                    // Campos secundarios LAT4
+
+                    case "Lat4DateMetWithLawyerReDenialDtp":
+                        Lat4DateMetWithLawyerReDenialTxt.Text = Lat4DateMetWithLawyerReDenialDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4InsuresResponseReceivedDtp":
+                        Lat4InsuresResponseReceivedTxt.Text = Lat4InsuresResponseReceivedDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineToReceiveABProductionsDtp":
+                        Lat4DeadLineToReceiveABProductionsTxt.Text = Lat4DeadLineToReceiveABProductionsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineToReceiveAffidavitReportsDtp":
+                        Lat4DeadLineToReceiveAffidavitReportsTxt.Text = Lat4DeadLineToReceiveAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineToReceiveInsurerDtp":
+                        Lat4DeadLineToReceiveInsurerTxt.Text = Lat4DeadLineToReceiveInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DueDateToDiscussPotenctialLatApplDtp":
+                        Lat4DueDateToDiscussPotenctialLatApplTxt.Text = Lat4DueDateToDiscussPotenctialLatApplDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4ProposedDateToFileLatDtp":
+                        Lat4ProposedDateToFileLatTxt.Text = Lat4ProposedDateToFileLatDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4ActualDateLatServedOnInsurerDtp":
+                        Lat4ActualDateLatServedOnInsurerTxt.Text = Lat4ActualDateLatServedOnInsurerDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineToServeFileCaseConfSummaryDtp":
+                        Lat4DeadLineToServeFileCaseConfSummaryTxt.Text = Lat4DeadLineToServeFileCaseConfSummaryDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineToDeliverProductionsToABCounselDtp":
+                        Lat4DeadLineToDeliverProductionsToABCounselTxt.Text = Lat4DeadLineToDeliverProductionsToABCounselDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineToFileAffidavitReportsDtp":
+                        Lat4DeadLineToFileAffidavitReportsTxt.Text = Lat4DeadLineToFileAffidavitReportsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineToFileHearingSubmissionsDtp":
+                        Lat4DeadLineToFileHearingSubmissionsTxt.Text = Lat4DeadLineToFileHearingSubmissionsDtp.Value.ToShortDateString();
+                        break;
+                    case "Lat4DeadLineForReplaySubmissionsDtp":
+                        Lat4DeadLineForReplaySubmissionsTxt.Text = Lat4DeadLineForReplaySubmissionsDtp.Value.ToShortDateString();
+                        break;
+
+                    default:
+                        break;
+                }
+            }
         }
 
         private void DTP_ValueChanged(object sender, EventArgs e)
@@ -1413,11 +1666,15 @@ namespace RRFFilesManager
         {
             if (Home.FileManager.File == null)
             {
+                TabControl4.Enabled = false;
                 TabControl1.SelectedIndex = 0;
                 TabControl5.SelectedTab = ABBinderTab;
                 MessageBox.Show("You have to select a file!");
-
                 return;
+            }
+            else
+            {
+                TabControl4.Enabled = true;
             }
             txtLimitationDate.Text = Home.FileManager.File.LimitationPeriod;
             if (_latDataRepository.List().Where(t => t.FileId == Home.FileManager.File.ID).ToList().Count == 0)
@@ -1649,7 +1906,6 @@ namespace RRFFilesManager
                 e.Handled = true;
             }
         }
-
         private void Btn_AddTask_Click(object sender, EventArgs e)
         {
             if (File == null) 

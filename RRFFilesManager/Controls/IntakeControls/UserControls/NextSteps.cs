@@ -120,7 +120,7 @@ namespace RRFFilesManager.IntakeForm
             CreateOrUpdateDocument();
             var attachmentPath = Document.Path;
             string clientFullName = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
-            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com", Program.GetUser().eMailAddress };
+            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com", Program.GetUser().eMailAddress};
             var subject = $"Print and Hold Process - {clientFullName}";
             var body = "";
             Outlook.NewEmail(to, subject, body, new[] { attachmentPath });

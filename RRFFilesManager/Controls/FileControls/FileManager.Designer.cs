@@ -131,6 +131,14 @@
             System.Windows.Forms.Label Label100;
             System.Windows.Forms.Label label272;
             System.Windows.Forms.Label label279;
+            System.Windows.Forms.Label DateMetWithLawyerReDenialTLbl;
+            System.Windows.Forms.Label Label102;
+            System.Windows.Forms.Label Label103;
+            System.Windows.Forms.Label Label104;
+            System.Windows.Forms.Label Label105;
+            System.Windows.Forms.Label Label106;
+            System.Windows.Forms.Label Label107;
+            System.Windows.Forms.Label Label108;
             System.Windows.Forms.Label Label91;
             System.Windows.Forms.Label Label92;
             System.Windows.Forms.Label Label93;
@@ -140,71 +148,63 @@
             System.Windows.Forms.Label Label97;
             System.Windows.Forms.Label Label98;
             System.Windows.Forms.Label Label99;
-            System.Windows.Forms.Label Label101;
-            System.Windows.Forms.Label Label102;
-            System.Windows.Forms.Label Label103;
-            System.Windows.Forms.Label Label104;
-            System.Windows.Forms.Label Label105;
-            System.Windows.Forms.Label Label106;
-            System.Windows.Forms.Label Label107;
-            System.Windows.Forms.Label Label108;
-            System.Windows.Forms.Label Label73;
-            System.Windows.Forms.Label Label74;
-            System.Windows.Forms.Label Label75;
-            System.Windows.Forms.Label Label76;
-            System.Windows.Forms.Label Label77;
-            System.Windows.Forms.Label Label78;
-            System.Windows.Forms.Label Label79;
-            System.Windows.Forms.Label Label80;
-            System.Windows.Forms.Label Label81;
-            System.Windows.Forms.Label Label83;
-            System.Windows.Forms.Label Label84;
-            System.Windows.Forms.Label Label85;
-            System.Windows.Forms.Label Label86;
-            System.Windows.Forms.Label Label87;
-            System.Windows.Forms.Label Label88;
-            System.Windows.Forms.Label Label89;
-            System.Windows.Forms.Label Label90;
-            System.Windows.Forms.Label Label55;
-            System.Windows.Forms.Label Label56;
-            System.Windows.Forms.Label Label57;
-            System.Windows.Forms.Label Label58;
-            System.Windows.Forms.Label Label59;
-            System.Windows.Forms.Label Label60;
-            System.Windows.Forms.Label Label61;
-            System.Windows.Forms.Label Label62;
-            System.Windows.Forms.Label Label63;
-            System.Windows.Forms.Label Label65;
-            System.Windows.Forms.Label Label66;
-            System.Windows.Forms.Label Label67;
-            System.Windows.Forms.Label Label68;
-            System.Windows.Forms.Label Label69;
-            System.Windows.Forms.Label Label70;
-            System.Windows.Forms.Label Label71;
-            System.Windows.Forms.Label Label72;
-            System.Windows.Forms.Label DueDateToDiscussPotentialLATApplLabel;
-            System.Windows.Forms.Label ProposedDateToFileLATLabel;
-            System.Windows.Forms.Label ActualDateLATServedOnInsurerLabel;
-            System.Windows.Forms.Label DeadlineToServeFileCaseConfSummaryLabel;
-            System.Windows.Forms.Label DeadlineToDeliverProductionsToABCounselLabel;
-            System.Windows.Forms.Label DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel;
-            System.Windows.Forms.Label DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel;
-            System.Windows.Forms.Label DeadlineForReplySubmissionsOfTheApplicantLabel;
-            System.Windows.Forms.Label DateLATSettledClosedLabel;
-            System.Windows.Forms.Label DateMetWithLawyerReDenialLabel;
-            System.Windows.Forms.Label ActualDateLATFiledLabel;
-            System.Windows.Forms.Label InsurersResponseReceivedLabel;
-            System.Windows.Forms.Label LATCaseConfDateLabel;
-            System.Windows.Forms.Label DeadlineToReceiveABProductionsLabel;
-            System.Windows.Forms.Label DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel;
-            System.Windows.Forms.Label DeadlineToReceiveInsurerSubmissionsLabel;
-            System.Windows.Forms.Label HearingStartDateLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileManager));
+            System.Windows.Forms.Label label73;
+            System.Windows.Forms.Label label74;
+            System.Windows.Forms.Label label75;
+            System.Windows.Forms.Label label76;
+            System.Windows.Forms.Label label77;
+            System.Windows.Forms.Label label78;
+            System.Windows.Forms.Label label79;
+            System.Windows.Forms.Label label80;
+            System.Windows.Forms.Label label81;
+            System.Windows.Forms.Label label83;
+            System.Windows.Forms.Label label84;
+            System.Windows.Forms.Label label85;
+            System.Windows.Forms.Label label86;
+            System.Windows.Forms.Label label87;
+            System.Windows.Forms.Label label88;
+            System.Windows.Forms.Label label89;
+            System.Windows.Forms.Label label90;
+            System.Windows.Forms.Label label55;
+            System.Windows.Forms.Label label56;
+            System.Windows.Forms.Label label57;
+            System.Windows.Forms.Label label58;
+            System.Windows.Forms.Label label59;
+            System.Windows.Forms.Label label60;
+            System.Windows.Forms.Label label61;
+            System.Windows.Forms.Label label62;
+            System.Windows.Forms.Label label63;
+            System.Windows.Forms.Label label65;
+            System.Windows.Forms.Label label66;
+            System.Windows.Forms.Label label67;
+            System.Windows.Forms.Label label68;
+            System.Windows.Forms.Label label69;
+            System.Windows.Forms.Label label70;
+            System.Windows.Forms.Label label71;
+            System.Windows.Forms.Label label72;
+            System.Windows.Forms.Label label101;
+            System.Windows.Forms.Label label281;
+            System.Windows.Forms.Label label282;
+            System.Windows.Forms.Label label283;
+            System.Windows.Forms.Label label284;
+            System.Windows.Forms.Label label285;
+            System.Windows.Forms.Label label286;
+            System.Windows.Forms.Label label287;
+            System.Windows.Forms.Label label288;
+            System.Windows.Forms.Label label289;
+            System.Windows.Forms.Label label290;
+            System.Windows.Forms.Label label291;
+            System.Windows.Forms.Label label292;
+            System.Windows.Forms.Label label293;
+            System.Windows.Forms.Label label294;
+            System.Windows.Forms.Label label295;
+            System.Windows.Forms.Label label296;
             this.InvoicesDataGridView = new System.Windows.Forms.DataGridView();
             this.GroupBox23 = new System.Windows.Forms.GroupBox();
             this.Button2 = new System.Windows.Forms.Button();
@@ -254,37 +254,15 @@
             this.Action = new System.Windows.Forms.TabPage();
             this.TabControl2 = new System.Windows.Forms.TabControl();
             this.Timeline = new System.Windows.Forms.TabPage();
-            this.TrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.txtTrialDate = new System.Windows.Forms.TextBox();
             this.label276 = new System.Windows.Forms.Label();
-            this.PreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.txtPreTrialResolutionDate = new System.Windows.Forms.TextBox();
-            this.PreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.txtPreTrialToBeServedDate = new System.Windows.Forms.TextBox();
-            this.PrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TxtPrePreTrialMeetingDate = new System.Windows.Forms.TextBox();
-            this.ResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.txtResolutionDate = new System.Windows.Forms.TextBox();
-            this.MemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TxtMemoToBeServedDate = new System.Windows.Forms.TextBox();
             this.label271 = new System.Windows.Forms.Label();
             this.TimelineSaveBtn = new System.Windows.Forms.Button();
-            this.TBoxAllDefendantUndertakingRecd = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateTrialRecordFiled = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateOfDefendantDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPlaintiffAODSent = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateOfPlaintiffDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDefendantAODRequest = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPreDiscoveryMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateToFileTrialRecordBy = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxActualDateSOCServed = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxProposedDateToServeSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxMedicalSummariesPreDiscDueDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxActualDateSOCIssued = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPrePleadingsMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxProposedDateIssueSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxActualDateSOCServedTextBox = new System.Windows.Forms.TextBox();
             this.TBoxProposedDateToServeSOCTextBox = new System.Windows.Forms.TextBox();
             this.TBoxLiabilityMeetingDateTextBox = new System.Windows.Forms.TextBox();
@@ -868,146 +846,41 @@
             this.BtnLat1 = new System.Windows.Forms.Button();
             this.DateLatSettledClosedtTxt = new System.Windows.Forms.TextBox();
             this.DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
             this.DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
             this.DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
             this.DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
             this.DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
             this.ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
             this.ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
             this.DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
             this.HearingStarDateTxt = new System.Windows.Forms.TextBox();
             this.DeadlineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.DeadlineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
             this.DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
             this.DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
             this.LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
             this.InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
             this.ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
             this.DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
-            this.DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
-            this.ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
-            this.ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
-            this.DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
-            this.DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
             this.DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
             this.ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
             this.InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
             this.LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
             this.DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.DeadlineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
             this.LAT2 = new System.Windows.Forms.TabPage();
-            this.BtnLat2 = new System.Windows.Forms.Button();
-            this.Lat2DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
-            this.Lat2ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
-            this.Lat2ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
-            this.Lat2HearingStarDateTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat2LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
-            this.Lat2InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
-            this.Lat2ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
-            this.Lat2DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat2HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
             this.LAT3 = new System.Windows.Forms.TabPage();
-            this.Lat3DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
-            this.BtnLat3 = new System.Windows.Forms.Button();
-            this.Lat3DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
-            this.Lat3ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
-            this.Lat3ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3HearingStarDateTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat3LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
-            this.Lat3InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
-            this.Lat3ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
-            this.Lat3DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat3HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
             this.LAT4 = new System.Windows.Forms.TabPage();
-            this.BtnLat4 = new System.Windows.Forms.Button();
-            this.Lat4DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
-            this.Lat4ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
-            this.Lat4ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4HearingStarDateTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
-            this.Lat4LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
-            this.Lat4InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
-            this.Lat4ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
-            this.Lat4DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
-            this.Lat4HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtLimitationDate = new System.Windows.Forms.TextBox();
             this.QuickABPaidToDate = new System.Windows.Forms.TabPage();
@@ -1042,6 +915,133 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
             this.LimDateTextBox = new System.Windows.Forms.TextBox();
+            this.BtnLat2 = new System.Windows.Forms.Button();
+            this.Lat2DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat2ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.Lat2ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2HearingStarDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat2LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat2InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
+            this.Lat2ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
+            this.Lat2DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat2DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.BtnLat3 = new System.Windows.Forms.Button();
+            this.Lat3DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat3ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.Lat3ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3HearingStarDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat3LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat3InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
+            this.Lat3ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
+            this.Lat3DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat3DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.BtnLat4 = new System.Windows.Forms.Button();
+            this.Lat4DateLatSettledClosedTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineForReplaySubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineForReplaySubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DateLatSettledClosedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToFileHearingSubmissionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToFileAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToFileAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToFileHearingSubmissionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4ActualDateLatServedOnInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat4ProposedDateToFileLatTxt = new System.Windows.Forms.TextBox();
+            this.Lat4ProposedDateToFileLatDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4ActualDateLatServedOnInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4HearingStarDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToReceiveInsurerTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToReceiveInsurerDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4HearingStarDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToReceiveABProductionsTxt = new System.Windows.Forms.TextBox();
+            this.Lat4LatCaseConfDateTxt = new System.Windows.Forms.TextBox();
+            this.Lat4InsuresResponseReceivedTxt = new System.Windows.Forms.TextBox();
+            this.Lat4ActualDateLatFiledTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DateMetWithLawyerReDenialTxt = new System.Windows.Forms.TextBox();
+            this.Lat4DateMetWithLawyerReDenialDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4ActualDateLatFiledDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4InsuresResponseReceivedDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4LatCaseConfDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.Lat4DeadLineToReceiveABProductionsDtp = new System.Windows.Forms.DateTimePicker();
+            this.TrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.PreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.PreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.PrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.ResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.MemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxAllDefendantUndertakingRecd = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateTrialRecordFiled = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateOfDefendantDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxPlaintiffAODSent = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateOfPlaintiffDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDefendantAODRequest = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxPreDiscoveryMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateToFileTrialRecordBy = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxActualDateSOCServed = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxProposedDateToServeSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxMedicalSummariesPreDiscDueDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxActualDateSOCIssued = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxPrePleadingsMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxProposedDateIssueSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.CurrentFileStatusComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
@@ -1147,6 +1147,14 @@
             Label100 = new System.Windows.Forms.Label();
             label272 = new System.Windows.Forms.Label();
             label279 = new System.Windows.Forms.Label();
+            DateMetWithLawyerReDenialTLbl = new System.Windows.Forms.Label();
+            Label102 = new System.Windows.Forms.Label();
+            Label103 = new System.Windows.Forms.Label();
+            Label104 = new System.Windows.Forms.Label();
+            Label105 = new System.Windows.Forms.Label();
+            Label106 = new System.Windows.Forms.Label();
+            Label107 = new System.Windows.Forms.Label();
+            Label108 = new System.Windows.Forms.Label();
             Label91 = new System.Windows.Forms.Label();
             Label92 = new System.Windows.Forms.Label();
             Label93 = new System.Windows.Forms.Label();
@@ -1156,65 +1164,57 @@
             Label97 = new System.Windows.Forms.Label();
             Label98 = new System.Windows.Forms.Label();
             Label99 = new System.Windows.Forms.Label();
-            Label101 = new System.Windows.Forms.Label();
-            Label102 = new System.Windows.Forms.Label();
-            Label103 = new System.Windows.Forms.Label();
-            Label104 = new System.Windows.Forms.Label();
-            Label105 = new System.Windows.Forms.Label();
-            Label106 = new System.Windows.Forms.Label();
-            Label107 = new System.Windows.Forms.Label();
-            Label108 = new System.Windows.Forms.Label();
-            Label73 = new System.Windows.Forms.Label();
-            Label74 = new System.Windows.Forms.Label();
-            Label75 = new System.Windows.Forms.Label();
-            Label76 = new System.Windows.Forms.Label();
-            Label77 = new System.Windows.Forms.Label();
-            Label78 = new System.Windows.Forms.Label();
-            Label79 = new System.Windows.Forms.Label();
-            Label80 = new System.Windows.Forms.Label();
-            Label81 = new System.Windows.Forms.Label();
-            Label83 = new System.Windows.Forms.Label();
-            Label84 = new System.Windows.Forms.Label();
-            Label85 = new System.Windows.Forms.Label();
-            Label86 = new System.Windows.Forms.Label();
-            Label87 = new System.Windows.Forms.Label();
-            Label88 = new System.Windows.Forms.Label();
-            Label89 = new System.Windows.Forms.Label();
-            Label90 = new System.Windows.Forms.Label();
-            Label55 = new System.Windows.Forms.Label();
-            Label56 = new System.Windows.Forms.Label();
-            Label57 = new System.Windows.Forms.Label();
-            Label58 = new System.Windows.Forms.Label();
-            Label59 = new System.Windows.Forms.Label();
-            Label60 = new System.Windows.Forms.Label();
-            Label61 = new System.Windows.Forms.Label();
-            Label62 = new System.Windows.Forms.Label();
-            Label63 = new System.Windows.Forms.Label();
-            Label65 = new System.Windows.Forms.Label();
-            Label66 = new System.Windows.Forms.Label();
-            Label67 = new System.Windows.Forms.Label();
-            Label68 = new System.Windows.Forms.Label();
-            Label69 = new System.Windows.Forms.Label();
-            Label70 = new System.Windows.Forms.Label();
-            Label71 = new System.Windows.Forms.Label();
-            Label72 = new System.Windows.Forms.Label();
-            DueDateToDiscussPotentialLATApplLabel = new System.Windows.Forms.Label();
-            ProposedDateToFileLATLabel = new System.Windows.Forms.Label();
-            ActualDateLATServedOnInsurerLabel = new System.Windows.Forms.Label();
-            DeadlineToServeFileCaseConfSummaryLabel = new System.Windows.Forms.Label();
-            DeadlineToDeliverProductionsToABCounselLabel = new System.Windows.Forms.Label();
-            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel = new System.Windows.Forms.Label();
-            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel = new System.Windows.Forms.Label();
-            DeadlineForReplySubmissionsOfTheApplicantLabel = new System.Windows.Forms.Label();
-            DateLATSettledClosedLabel = new System.Windows.Forms.Label();
-            DateMetWithLawyerReDenialLabel = new System.Windows.Forms.Label();
-            ActualDateLATFiledLabel = new System.Windows.Forms.Label();
-            InsurersResponseReceivedLabel = new System.Windows.Forms.Label();
-            LATCaseConfDateLabel = new System.Windows.Forms.Label();
-            DeadlineToReceiveABProductionsLabel = new System.Windows.Forms.Label();
-            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel = new System.Windows.Forms.Label();
-            DeadlineToReceiveInsurerSubmissionsLabel = new System.Windows.Forms.Label();
-            HearingStartDateLabel = new System.Windows.Forms.Label();
+            label73 = new System.Windows.Forms.Label();
+            label74 = new System.Windows.Forms.Label();
+            label75 = new System.Windows.Forms.Label();
+            label76 = new System.Windows.Forms.Label();
+            label77 = new System.Windows.Forms.Label();
+            label78 = new System.Windows.Forms.Label();
+            label79 = new System.Windows.Forms.Label();
+            label80 = new System.Windows.Forms.Label();
+            label81 = new System.Windows.Forms.Label();
+            label83 = new System.Windows.Forms.Label();
+            label84 = new System.Windows.Forms.Label();
+            label85 = new System.Windows.Forms.Label();
+            label86 = new System.Windows.Forms.Label();
+            label87 = new System.Windows.Forms.Label();
+            label88 = new System.Windows.Forms.Label();
+            label89 = new System.Windows.Forms.Label();
+            label90 = new System.Windows.Forms.Label();
+            label55 = new System.Windows.Forms.Label();
+            label56 = new System.Windows.Forms.Label();
+            label57 = new System.Windows.Forms.Label();
+            label58 = new System.Windows.Forms.Label();
+            label59 = new System.Windows.Forms.Label();
+            label60 = new System.Windows.Forms.Label();
+            label61 = new System.Windows.Forms.Label();
+            label62 = new System.Windows.Forms.Label();
+            label63 = new System.Windows.Forms.Label();
+            label65 = new System.Windows.Forms.Label();
+            label66 = new System.Windows.Forms.Label();
+            label67 = new System.Windows.Forms.Label();
+            label68 = new System.Windows.Forms.Label();
+            label69 = new System.Windows.Forms.Label();
+            label70 = new System.Windows.Forms.Label();
+            label71 = new System.Windows.Forms.Label();
+            label72 = new System.Windows.Forms.Label();
+            label101 = new System.Windows.Forms.Label();
+            label281 = new System.Windows.Forms.Label();
+            label282 = new System.Windows.Forms.Label();
+            label283 = new System.Windows.Forms.Label();
+            label284 = new System.Windows.Forms.Label();
+            label285 = new System.Windows.Forms.Label();
+            label286 = new System.Windows.Forms.Label();
+            label287 = new System.Windows.Forms.Label();
+            label288 = new System.Windows.Forms.Label();
+            label289 = new System.Windows.Forms.Label();
+            label290 = new System.Windows.Forms.Label();
+            label291 = new System.Windows.Forms.Label();
+            label292 = new System.Windows.Forms.Label();
+            label293 = new System.Windows.Forms.Label();
+            label294 = new System.Windows.Forms.Label();
+            label295 = new System.Windows.Forms.Label();
+            label296 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGridView)).BeginInit();
             this.GroupBox23.SuspendLayout();
             this.ExpertsLayWitness.SuspendLayout();
@@ -1445,7 +1445,7 @@
             // 
             TBoxDateTrialRecordFiledLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDateTrialRecordFiledLabel.AutoSize = true;
-            TBoxDateTrialRecordFiledLabel.Location = new System.Drawing.Point(561, 211);
+            TBoxDateTrialRecordFiledLabel.Location = new System.Drawing.Point(459, 211);
             TBoxDateTrialRecordFiledLabel.Name = "TBoxDateTrialRecordFiledLabel";
             TBoxDateTrialRecordFiledLabel.Size = new System.Drawing.Size(155, 17);
             TBoxDateTrialRecordFiledLabel.TabIndex = 38;
@@ -1455,7 +1455,7 @@
             // 
             TBoxDateToFileTrialRecordByLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDateToFileTrialRecordByLabel.AutoSize = true;
-            TBoxDateToFileTrialRecordByLabel.Location = new System.Drawing.Point(561, 184);
+            TBoxDateToFileTrialRecordByLabel.Location = new System.Drawing.Point(459, 184);
             TBoxDateToFileTrialRecordByLabel.Name = "TBoxDateToFileTrialRecordByLabel";
             TBoxDateToFileTrialRecordByLabel.Size = new System.Drawing.Size(181, 17);
             TBoxDateToFileTrialRecordByLabel.TabIndex = 44;
@@ -1465,7 +1465,7 @@
             // 
             TBoxDatePlaintiffUndertakingCompleteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxDatePlaintiffUndertakingCompleteLabel.AutoSize = true;
-            TBoxDatePlaintiffUndertakingCompleteLabel.Location = new System.Drawing.Point(561, 15);
+            TBoxDatePlaintiffUndertakingCompleteLabel.Location = new System.Drawing.Point(459, 15);
             TBoxDatePlaintiffUndertakingCompleteLabel.Name = "TBoxDatePlaintiffUndertakingCompleteLabel";
             TBoxDatePlaintiffUndertakingCompleteLabel.Size = new System.Drawing.Size(247, 17);
             TBoxDatePlaintiffUndertakingCompleteLabel.TabIndex = 40;
@@ -1475,7 +1475,7 @@
             // 
             TBoxAllDefendantUndertakingRecdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             TBoxAllDefendantUndertakingRecdLabel.AutoSize = true;
-            TBoxAllDefendantUndertakingRecdLabel.Location = new System.Drawing.Point(561, 42);
+            TBoxAllDefendantUndertakingRecdLabel.Location = new System.Drawing.Point(459, 42);
             TBoxAllDefendantUndertakingRecdLabel.Name = "TBoxAllDefendantUndertakingRecdLabel";
             TBoxAllDefendantUndertakingRecdLabel.Size = new System.Drawing.Size(219, 17);
             TBoxAllDefendantUndertakingRecdLabel.TabIndex = 42;
@@ -2160,7 +2160,7 @@
             // 
             label273.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label273.AutoSize = true;
-            label273.Location = new System.Drawing.Point(561, 240);
+            label273.Location = new System.Drawing.Point(459, 240);
             label273.Name = "label273";
             label273.Size = new System.Drawing.Size(176, 17);
             label273.TabIndex = 174;
@@ -2170,7 +2170,7 @@
             // 
             label274.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label274.AutoSize = true;
-            label274.Location = new System.Drawing.Point(561, 267);
+            label274.Location = new System.Drawing.Point(459, 267);
             label274.Name = "label274";
             label274.Size = new System.Drawing.Size(180, 17);
             label274.TabIndex = 177;
@@ -2180,7 +2180,7 @@
             // 
             label275.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             label275.AutoSize = true;
-            label275.Location = new System.Drawing.Point(561, 295);
+            label275.Location = new System.Drawing.Point(459, 295);
             label275.Name = "label275";
             label275.Size = new System.Drawing.Size(166, 17);
             label275.TabIndex = 180;
@@ -2281,617 +2281,158 @@
             label279.Text = "Status";
             label279.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // Label91
+            // DateMetWithLawyerReDenialTLbl
             // 
-            Label91.AutoSize = true;
-            Label91.Location = new System.Drawing.Point(678, 22);
-            Label91.Name = "Label91";
-            Label91.Size = new System.Drawing.Size(256, 17);
-            Label91.TabIndex = 74;
-            Label91.Text = "Due Date To Discuss Potential LATAppl:";
-            // 
-            // Label92
-            // 
-            Label92.AutoSize = true;
-            Label92.Location = new System.Drawing.Point(678, 55);
-            Label92.Name = "Label92";
-            Label92.Size = new System.Drawing.Size(175, 17);
-            Label92.TabIndex = 76;
-            Label92.Text = "Proposed Date To File LAT:";
-            // 
-            // Label93
-            // 
-            Label93.AutoSize = true;
-            Label93.Location = new System.Drawing.Point(678, 88);
-            Label93.Name = "Label93";
-            Label93.Size = new System.Drawing.Size(224, 17);
-            Label93.TabIndex = 78;
-            Label93.Text = "Actual Date LATServed On Insurer:";
-            // 
-            // Label94
-            // 
-            Label94.AutoSize = true;
-            Label94.Location = new System.Drawing.Point(678, 121);
-            Label94.Name = "Label94";
-            Label94.Size = new System.Drawing.Size(286, 17);
-            Label94.TabIndex = 80;
-            Label94.Text = "Deadline To Serve File Case Conf Summary:";
-            // 
-            // Label95
-            // 
-            Label95.AutoSize = true;
-            Label95.Location = new System.Drawing.Point(678, 154);
-            Label95.Name = "Label95";
-            Label95.Size = new System.Drawing.Size(306, 17);
-            Label95.TabIndex = 82;
-            Label95.Text = "Deadline To Deliver Productions To ABCounsel:";
-            // 
-            // Label96
-            // 
-            Label96.AutoSize = true;
-            Label96.Location = new System.Drawing.Point(678, 187);
-            Label96.Name = "Label96";
-            Label96.Size = new System.Drawing.Size(352, 17);
-            Label96.TabIndex = 84;
-            Label96.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
-            // 
-            // Label97
-            // 
-            Label97.AutoSize = true;
-            Label97.Location = new System.Drawing.Point(678, 223);
-            Label97.Name = "Label97";
-            Label97.Size = new System.Drawing.Size(407, 17);
-            Label97.TabIndex = 86;
-            Label97.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
-            // 
-            // Label98
-            // 
-            Label98.AutoSize = true;
-            Label98.Location = new System.Drawing.Point(678, 256);
-            Label98.Name = "Label98";
-            Label98.Size = new System.Drawing.Size(320, 17);
-            Label98.TabIndex = 88;
-            Label98.Text = "Deadline For Reply Submissions Of The Applicant:";
-            // 
-            // Label99
-            // 
-            Label99.AutoSize = true;
-            Label99.Location = new System.Drawing.Point(678, 289);
-            Label99.Name = "Label99";
-            Label99.Size = new System.Drawing.Size(161, 17);
-            Label99.TabIndex = 90;
-            Label99.Text = "Date LATSettled Closed:";
-            // 
-            // Label101
-            // 
-            Label101.AutoSize = true;
-            Label101.Location = new System.Drawing.Point(20, 60);
-            Label101.Name = "Label101";
-            Label101.Size = new System.Drawing.Size(219, 17);
-            Label101.TabIndex = 58;
-            Label101.Text = "Date Met With Lawyer Re Denial:";
+            DateMetWithLawyerReDenialTLbl.AutoSize = true;
+            DateMetWithLawyerReDenialTLbl.Location = new System.Drawing.Point(6, 12);
+            DateMetWithLawyerReDenialTLbl.Name = "DateMetWithLawyerReDenialTLbl";
+            DateMetWithLawyerReDenialTLbl.Size = new System.Drawing.Size(219, 17);
+            DateMetWithLawyerReDenialTLbl.TabIndex = 97;
+            DateMetWithLawyerReDenialTLbl.Text = "Date Met With Lawyer Re Denial:";
             // 
             // Label102
             // 
             Label102.AutoSize = true;
-            Label102.Location = new System.Drawing.Point(20, 93);
+            Label102.Location = new System.Drawing.Point(6, 37);
             Label102.Name = "Label102";
             Label102.Size = new System.Drawing.Size(143, 17);
-            Label102.TabIndex = 60;
+            Label102.TabIndex = 99;
             Label102.Text = "Actual Date LATFiled:";
             // 
             // Label103
             // 
             Label103.AutoSize = true;
-            Label103.Location = new System.Drawing.Point(20, 126);
+            Label103.Location = new System.Drawing.Point(6, 65);
             Label103.Name = "Label103";
             Label103.Size = new System.Drawing.Size(185, 17);
-            Label103.TabIndex = 62;
+            Label103.TabIndex = 101;
             Label103.Text = "Insurers Response Received:";
             // 
             // Label104
             // 
             Label104.AutoSize = true;
-            Label104.Location = new System.Drawing.Point(20, 159);
+            Label104.Location = new System.Drawing.Point(7, 91);
             Label104.Name = "Label104";
             Label104.Size = new System.Drawing.Size(137, 17);
-            Label104.TabIndex = 64;
+            Label104.TabIndex = 103;
             Label104.Text = "LATCase Conf Date:";
             // 
             // Label105
             // 
             Label105.AutoSize = true;
-            Label105.Location = new System.Drawing.Point(20, 192);
+            Label105.Location = new System.Drawing.Point(6, 117);
             Label105.Name = "Label105";
             Label105.Size = new System.Drawing.Size(239, 17);
-            Label105.TabIndex = 66;
+            Label105.TabIndex = 105;
             Label105.Text = "Deadline To Receive ABProductions:";
             // 
             // Label106
             // 
             Label106.AutoSize = true;
-            Label106.Location = new System.Drawing.Point(20, 225);
+            Label106.Location = new System.Drawing.Point(6, 144);
             Label106.Name = "Label106";
             Label106.Size = new System.Drawing.Size(383, 17);
-            Label106.TabIndex = 68;
+            Label106.TabIndex = 112;
             Label106.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
             // 
             // Label107
             // 
             Label107.AutoSize = true;
-            Label107.Location = new System.Drawing.Point(20, 258);
+            Label107.Location = new System.Drawing.Point(8, 171);
             Label107.Name = "Label107";
             Label107.Size = new System.Drawing.Size(265, 17);
-            Label107.TabIndex = 70;
+            Label107.TabIndex = 115;
             Label107.Text = "Deadline To Receive Insurer Submissions:";
             // 
             // Label108
             // 
             Label108.AutoSize = true;
-            Label108.Location = new System.Drawing.Point(20, 291);
+            Label108.Location = new System.Drawing.Point(8, 199);
             Label108.Name = "Label108";
             Label108.Size = new System.Drawing.Size(131, 17);
-            Label108.TabIndex = 72;
+            Label108.TabIndex = 117;
             Label108.Text = "Hearing Start Date:";
             // 
-            // Label73
-            // 
-            Label73.AutoSize = true;
-            Label73.Location = new System.Drawing.Point(663, 27);
-            Label73.Name = "Label73";
-            Label73.Size = new System.Drawing.Size(256, 17);
-            Label73.TabIndex = 74;
-            Label73.Text = "Due Date To Discuss Potential LATAppl:";
-            // 
-            // Label74
-            // 
-            Label74.AutoSize = true;
-            Label74.Location = new System.Drawing.Point(663, 60);
-            Label74.Name = "Label74";
-            Label74.Size = new System.Drawing.Size(175, 17);
-            Label74.TabIndex = 76;
-            Label74.Text = "Proposed Date To File LAT:";
-            // 
-            // Label75
-            // 
-            Label75.AutoSize = true;
-            Label75.Location = new System.Drawing.Point(663, 93);
-            Label75.Name = "Label75";
-            Label75.Size = new System.Drawing.Size(224, 17);
-            Label75.TabIndex = 78;
-            Label75.Text = "Actual Date LATServed On Insurer:";
-            // 
-            // Label76
-            // 
-            Label76.AutoSize = true;
-            Label76.Location = new System.Drawing.Point(663, 126);
-            Label76.Name = "Label76";
-            Label76.Size = new System.Drawing.Size(286, 17);
-            Label76.TabIndex = 80;
-            Label76.Text = "Deadline To Serve File Case Conf Summary:";
-            // 
-            // Label77
-            // 
-            Label77.AutoSize = true;
-            Label77.Location = new System.Drawing.Point(663, 159);
-            Label77.Name = "Label77";
-            Label77.Size = new System.Drawing.Size(306, 17);
-            Label77.TabIndex = 82;
-            Label77.Text = "Deadline To Deliver Productions To ABCounsel:";
-            // 
-            // Label78
-            // 
-            Label78.AutoSize = true;
-            Label78.Location = new System.Drawing.Point(663, 192);
-            Label78.Name = "Label78";
-            Label78.Size = new System.Drawing.Size(352, 17);
-            Label78.TabIndex = 84;
-            Label78.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
-            // 
-            // Label79
-            // 
-            Label79.AutoSize = true;
-            Label79.Location = new System.Drawing.Point(663, 225);
-            Label79.Name = "Label79";
-            Label79.Size = new System.Drawing.Size(407, 17);
-            Label79.TabIndex = 86;
-            Label79.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
-            // 
-            // Label80
-            // 
-            Label80.AutoSize = true;
-            Label80.Location = new System.Drawing.Point(663, 260);
-            Label80.Name = "Label80";
-            Label80.Size = new System.Drawing.Size(320, 17);
-            Label80.TabIndex = 88;
-            Label80.Text = "Deadline For Reply Submissions Of The Applicant:";
-            // 
-            // Label81
-            // 
-            Label81.AutoSize = true;
-            Label81.Location = new System.Drawing.Point(663, 293);
-            Label81.Name = "Label81";
-            Label81.Size = new System.Drawing.Size(161, 17);
-            Label81.TabIndex = 90;
-            Label81.Text = "Date LATSettled Closed:";
-            // 
-            // Label83
-            // 
-            Label83.AutoSize = true;
-            Label83.Location = new System.Drawing.Point(20, 60);
-            Label83.Name = "Label83";
-            Label83.Size = new System.Drawing.Size(219, 17);
-            Label83.TabIndex = 58;
-            Label83.Text = "Date Met With Lawyer Re Denial:";
-            // 
-            // Label84
-            // 
-            Label84.AutoSize = true;
-            Label84.Location = new System.Drawing.Point(20, 93);
-            Label84.Name = "Label84";
-            Label84.Size = new System.Drawing.Size(143, 17);
-            Label84.TabIndex = 60;
-            Label84.Text = "Actual Date LATFiled:";
-            // 
-            // Label85
-            // 
-            Label85.AutoSize = true;
-            Label85.Location = new System.Drawing.Point(20, 126);
-            Label85.Name = "Label85";
-            Label85.Size = new System.Drawing.Size(185, 17);
-            Label85.TabIndex = 62;
-            Label85.Text = "Insurers Response Received:";
-            // 
-            // Label86
-            // 
-            Label86.AutoSize = true;
-            Label86.Location = new System.Drawing.Point(20, 159);
-            Label86.Name = "Label86";
-            Label86.Size = new System.Drawing.Size(137, 17);
-            Label86.TabIndex = 64;
-            Label86.Text = "LATCase Conf Date:";
-            // 
-            // Label87
-            // 
-            Label87.AutoSize = true;
-            Label87.Location = new System.Drawing.Point(20, 192);
-            Label87.Name = "Label87";
-            Label87.Size = new System.Drawing.Size(239, 17);
-            Label87.TabIndex = 66;
-            Label87.Text = "Deadline To Receive ABProductions:";
-            // 
-            // Label88
-            // 
-            Label88.AutoSize = true;
-            Label88.Location = new System.Drawing.Point(20, 225);
-            Label88.Name = "Label88";
-            Label88.Size = new System.Drawing.Size(383, 17);
-            Label88.TabIndex = 68;
-            Label88.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
-            // 
-            // Label89
-            // 
-            Label89.AutoSize = true;
-            Label89.Location = new System.Drawing.Point(20, 258);
-            Label89.Name = "Label89";
-            Label89.Size = new System.Drawing.Size(265, 17);
-            Label89.TabIndex = 70;
-            Label89.Text = "Deadline To Receive Insurer Submissions:";
-            // 
-            // Label90
-            // 
-            Label90.AutoSize = true;
-            Label90.Location = new System.Drawing.Point(20, 291);
-            Label90.Name = "Label90";
-            Label90.Size = new System.Drawing.Size(131, 17);
-            Label90.TabIndex = 72;
-            Label90.Text = "Hearing Start Date:";
-            // 
-            // Label55
-            // 
-            Label55.AutoSize = true;
-            Label55.Location = new System.Drawing.Point(677, 17);
-            Label55.Name = "Label55";
-            Label55.Size = new System.Drawing.Size(256, 17);
-            Label55.TabIndex = 74;
-            Label55.Text = "Due Date To Discuss Potential LATAppl:";
-            // 
-            // Label56
-            // 
-            Label56.AutoSize = true;
-            Label56.Location = new System.Drawing.Point(677, 50);
-            Label56.Name = "Label56";
-            Label56.Size = new System.Drawing.Size(175, 17);
-            Label56.TabIndex = 76;
-            Label56.Text = "Proposed Date To File LAT:";
-            // 
-            // Label57
-            // 
-            Label57.AutoSize = true;
-            Label57.Location = new System.Drawing.Point(677, 83);
-            Label57.Name = "Label57";
-            Label57.Size = new System.Drawing.Size(224, 17);
-            Label57.TabIndex = 78;
-            Label57.Text = "Actual Date LATServed On Insurer:";
-            // 
-            // Label58
-            // 
-            Label58.AutoSize = true;
-            Label58.Location = new System.Drawing.Point(677, 116);
-            Label58.Name = "Label58";
-            Label58.Size = new System.Drawing.Size(286, 17);
-            Label58.TabIndex = 80;
-            Label58.Text = "Deadline To Serve File Case Conf Summary:";
-            // 
-            // Label59
-            // 
-            Label59.AutoSize = true;
-            Label59.Location = new System.Drawing.Point(677, 149);
-            Label59.Name = "Label59";
-            Label59.Size = new System.Drawing.Size(306, 17);
-            Label59.TabIndex = 82;
-            Label59.Text = "Deadline To Deliver Productions To ABCounsel:";
-            // 
-            // Label60
-            // 
-            Label60.AutoSize = true;
-            Label60.Location = new System.Drawing.Point(677, 182);
-            Label60.Name = "Label60";
-            Label60.Size = new System.Drawing.Size(352, 17);
-            Label60.TabIndex = 84;
-            Label60.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
-            // 
-            // Label61
-            // 
-            Label61.AutoSize = true;
-            Label61.Location = new System.Drawing.Point(677, 215);
-            Label61.Name = "Label61";
-            Label61.Size = new System.Drawing.Size(407, 17);
-            Label61.TabIndex = 86;
-            Label61.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
-            // 
-            // Label62
-            // 
-            Label62.AutoSize = true;
-            Label62.Location = new System.Drawing.Point(677, 251);
-            Label62.Name = "Label62";
-            Label62.Size = new System.Drawing.Size(320, 17);
-            Label62.TabIndex = 88;
-            Label62.Text = "Deadline For Reply Submissions Of The Applicant:";
-            // 
-            // Label63
-            // 
-            Label63.AutoSize = true;
-            Label63.Location = new System.Drawing.Point(677, 285);
-            Label63.Name = "Label63";
-            Label63.Size = new System.Drawing.Size(161, 17);
-            Label63.TabIndex = 90;
-            Label63.Text = "Date LATSettled Closed:";
-            // 
-            // Label65
-            // 
-            Label65.AutoSize = true;
-            Label65.Location = new System.Drawing.Point(20, 60);
-            Label65.Name = "Label65";
-            Label65.Size = new System.Drawing.Size(219, 17);
-            Label65.TabIndex = 58;
-            Label65.Text = "Date Met With Lawyer Re Denial:";
-            // 
-            // Label66
-            // 
-            Label66.AutoSize = true;
-            Label66.Location = new System.Drawing.Point(20, 93);
-            Label66.Name = "Label66";
-            Label66.Size = new System.Drawing.Size(143, 17);
-            Label66.TabIndex = 60;
-            Label66.Text = "Actual Date LATFiled:";
-            // 
-            // Label67
-            // 
-            Label67.AutoSize = true;
-            Label67.Location = new System.Drawing.Point(20, 126);
-            Label67.Name = "Label67";
-            Label67.Size = new System.Drawing.Size(185, 17);
-            Label67.TabIndex = 62;
-            Label67.Text = "Insurers Response Received:";
-            // 
-            // Label68
-            // 
-            Label68.AutoSize = true;
-            Label68.Location = new System.Drawing.Point(20, 159);
-            Label68.Name = "Label68";
-            Label68.Size = new System.Drawing.Size(137, 17);
-            Label68.TabIndex = 64;
-            Label68.Text = "LATCase Conf Date:";
-            // 
-            // Label69
-            // 
-            Label69.AutoSize = true;
-            Label69.Location = new System.Drawing.Point(20, 192);
-            Label69.Name = "Label69";
-            Label69.Size = new System.Drawing.Size(239, 17);
-            Label69.TabIndex = 66;
-            Label69.Text = "Deadline To Receive ABProductions:";
-            // 
-            // Label70
-            // 
-            Label70.AutoSize = true;
-            Label70.Location = new System.Drawing.Point(20, 225);
-            Label70.Name = "Label70";
-            Label70.Size = new System.Drawing.Size(383, 17);
-            Label70.TabIndex = 68;
-            Label70.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
-            // 
-            // Label71
-            // 
-            Label71.AutoSize = true;
-            Label71.Location = new System.Drawing.Point(20, 258);
-            Label71.Name = "Label71";
-            Label71.Size = new System.Drawing.Size(265, 17);
-            Label71.TabIndex = 70;
-            Label71.Text = "Deadline To Receive Insurer Submissions:";
-            // 
-            // Label72
-            // 
-            Label72.AutoSize = true;
-            Label72.Location = new System.Drawing.Point(20, 291);
-            Label72.Name = "Label72";
-            Label72.Size = new System.Drawing.Size(131, 17);
-            Label72.TabIndex = 72;
-            Label72.Text = "Hearing Start Date:";
-            // 
-            // DueDateToDiscussPotentialLATApplLabel
-            // 
-            DueDateToDiscussPotentialLATApplLabel.AutoSize = true;
-            DueDateToDiscussPotentialLATApplLabel.Location = new System.Drawing.Point(655, 26);
-            DueDateToDiscussPotentialLATApplLabel.Name = "DueDateToDiscussPotentialLATApplLabel";
-            DueDateToDiscussPotentialLATApplLabel.Size = new System.Drawing.Size(256, 17);
-            DueDateToDiscussPotentialLATApplLabel.TabIndex = 38;
-            DueDateToDiscussPotentialLATApplLabel.Text = "Due Date To Discuss Potential LATAppl:";
-            // 
-            // ProposedDateToFileLATLabel
-            // 
-            ProposedDateToFileLATLabel.AutoSize = true;
-            ProposedDateToFileLATLabel.Location = new System.Drawing.Point(655, 59);
-            ProposedDateToFileLATLabel.Name = "ProposedDateToFileLATLabel";
-            ProposedDateToFileLATLabel.Size = new System.Drawing.Size(175, 17);
-            ProposedDateToFileLATLabel.TabIndex = 40;
-            ProposedDateToFileLATLabel.Text = "Proposed Date To File LAT:";
-            // 
-            // ActualDateLATServedOnInsurerLabel
-            // 
-            ActualDateLATServedOnInsurerLabel.AutoSize = true;
-            ActualDateLATServedOnInsurerLabel.Location = new System.Drawing.Point(652, 92);
-            ActualDateLATServedOnInsurerLabel.Name = "ActualDateLATServedOnInsurerLabel";
-            ActualDateLATServedOnInsurerLabel.Size = new System.Drawing.Size(224, 17);
-            ActualDateLATServedOnInsurerLabel.TabIndex = 42;
-            ActualDateLATServedOnInsurerLabel.Text = "Actual Date LATServed On Insurer:";
-            // 
-            // DeadlineToServeFileCaseConfSummaryLabel
-            // 
-            DeadlineToServeFileCaseConfSummaryLabel.AutoSize = true;
-            DeadlineToServeFileCaseConfSummaryLabel.Location = new System.Drawing.Point(655, 125);
-            DeadlineToServeFileCaseConfSummaryLabel.Name = "DeadlineToServeFileCaseConfSummaryLabel";
-            DeadlineToServeFileCaseConfSummaryLabel.Size = new System.Drawing.Size(286, 17);
-            DeadlineToServeFileCaseConfSummaryLabel.TabIndex = 44;
-            DeadlineToServeFileCaseConfSummaryLabel.Text = "Deadline To Serve File Case Conf Summary:";
-            // 
-            // DeadlineToDeliverProductionsToABCounselLabel
-            // 
-            DeadlineToDeliverProductionsToABCounselLabel.AutoSize = true;
-            DeadlineToDeliverProductionsToABCounselLabel.Location = new System.Drawing.Point(655, 158);
-            DeadlineToDeliverProductionsToABCounselLabel.Name = "DeadlineToDeliverProductionsToABCounselLabel";
-            DeadlineToDeliverProductionsToABCounselLabel.Size = new System.Drawing.Size(306, 17);
-            DeadlineToDeliverProductionsToABCounselLabel.TabIndex = 46;
-            DeadlineToDeliverProductionsToABCounselLabel.Text = "Deadline To Deliver Productions To ABCounsel:";
-            // 
-            // DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel
-            // 
-            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.AutoSize = true;
-            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Location = new System.Drawing.Point(655, 191);
-            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Name = "DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel";
-            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Size = new System.Drawing.Size(352, 17);
-            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.TabIndex = 48;
-            DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
-            // 
-            // DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel
-            // 
-            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.AutoSize = true;
-            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Location = new System.Drawing.Point(655, 224);
-            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Name = "DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel";
-            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Size = new System.Drawing.Size(407, 17);
-            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.TabIndex = 50;
-            DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
-            // 
-            // DeadlineForReplySubmissionsOfTheApplicantLabel
-            // 
-            DeadlineForReplySubmissionsOfTheApplicantLabel.AutoSize = true;
-            DeadlineForReplySubmissionsOfTheApplicantLabel.Location = new System.Drawing.Point(655, 254);
-            DeadlineForReplySubmissionsOfTheApplicantLabel.Name = "DeadlineForReplySubmissionsOfTheApplicantLabel";
-            DeadlineForReplySubmissionsOfTheApplicantLabel.Size = new System.Drawing.Size(320, 17);
-            DeadlineForReplySubmissionsOfTheApplicantLabel.TabIndex = 52;
-            DeadlineForReplySubmissionsOfTheApplicantLabel.Text = "Deadline For Reply Submissions Of The Applicant:";
-            // 
-            // DateLATSettledClosedLabel
-            // 
-            DateLATSettledClosedLabel.AutoSize = true;
-            DateLATSettledClosedLabel.Location = new System.Drawing.Point(655, 288);
-            DateLATSettledClosedLabel.Name = "DateLATSettledClosedLabel";
-            DateLATSettledClosedLabel.Size = new System.Drawing.Size(161, 17);
-            DateLATSettledClosedLabel.TabIndex = 54;
-            DateLATSettledClosedLabel.Text = "Date LATSettled Closed:";
-            // 
-            // DateMetWithLawyerReDenialLabel
-            // 
-            DateMetWithLawyerReDenialLabel.AutoSize = true;
-            DateMetWithLawyerReDenialLabel.Location = new System.Drawing.Point(20, 60);
-            DateMetWithLawyerReDenialLabel.Name = "DateMetWithLawyerReDenialLabel";
-            DateMetWithLawyerReDenialLabel.Size = new System.Drawing.Size(219, 17);
-            DateMetWithLawyerReDenialLabel.TabIndex = 4;
-            DateMetWithLawyerReDenialLabel.Text = "Date Met With Lawyer Re Denial:";
-            // 
-            // ActualDateLATFiledLabel
-            // 
-            ActualDateLATFiledLabel.AutoSize = true;
-            ActualDateLATFiledLabel.Location = new System.Drawing.Point(20, 93);
-            ActualDateLATFiledLabel.Name = "ActualDateLATFiledLabel";
-            ActualDateLATFiledLabel.Size = new System.Drawing.Size(143, 17);
-            ActualDateLATFiledLabel.TabIndex = 6;
-            ActualDateLATFiledLabel.Text = "Actual Date LATFiled:";
-            // 
-            // InsurersResponseReceivedLabel
-            // 
-            InsurersResponseReceivedLabel.AutoSize = true;
-            InsurersResponseReceivedLabel.Location = new System.Drawing.Point(20, 126);
-            InsurersResponseReceivedLabel.Name = "InsurersResponseReceivedLabel";
-            InsurersResponseReceivedLabel.Size = new System.Drawing.Size(185, 17);
-            InsurersResponseReceivedLabel.TabIndex = 8;
-            InsurersResponseReceivedLabel.Text = "Insurers Response Received:";
-            // 
-            // LATCaseConfDateLabel
-            // 
-            LATCaseConfDateLabel.AutoSize = true;
-            LATCaseConfDateLabel.Location = new System.Drawing.Point(20, 159);
-            LATCaseConfDateLabel.Name = "LATCaseConfDateLabel";
-            LATCaseConfDateLabel.Size = new System.Drawing.Size(137, 17);
-            LATCaseConfDateLabel.TabIndex = 10;
-            LATCaseConfDateLabel.Text = "LATCase Conf Date:";
-            // 
-            // DeadlineToReceiveABProductionsLabel
-            // 
-            DeadlineToReceiveABProductionsLabel.AutoSize = true;
-            DeadlineToReceiveABProductionsLabel.Location = new System.Drawing.Point(20, 192);
-            DeadlineToReceiveABProductionsLabel.Name = "DeadlineToReceiveABProductionsLabel";
-            DeadlineToReceiveABProductionsLabel.Size = new System.Drawing.Size(239, 17);
-            DeadlineToReceiveABProductionsLabel.TabIndex = 12;
-            DeadlineToReceiveABProductionsLabel.Text = "Deadline To Receive ABProductions:";
-            // 
-            // DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel
-            // 
-            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.AutoSize = true;
-            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Location = new System.Drawing.Point(20, 225);
-            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Name = "DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel";
-            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Size = new System.Drawing.Size(383, 17);
-            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.TabIndex = 14;
-            DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
-            // 
-            // DeadlineToReceiveInsurerSubmissionsLabel
-            // 
-            DeadlineToReceiveInsurerSubmissionsLabel.AutoSize = true;
-            DeadlineToReceiveInsurerSubmissionsLabel.Location = new System.Drawing.Point(20, 258);
-            DeadlineToReceiveInsurerSubmissionsLabel.Name = "DeadlineToReceiveInsurerSubmissionsLabel";
-            DeadlineToReceiveInsurerSubmissionsLabel.Size = new System.Drawing.Size(265, 17);
-            DeadlineToReceiveInsurerSubmissionsLabel.TabIndex = 16;
-            DeadlineToReceiveInsurerSubmissionsLabel.Text = "Deadline To Receive Insurer Submissions:";
-            // 
-            // HearingStartDateLabel
-            // 
-            HearingStartDateLabel.AutoSize = true;
-            HearingStartDateLabel.Location = new System.Drawing.Point(20, 291);
-            HearingStartDateLabel.Name = "HearingStartDateLabel";
-            HearingStartDateLabel.Size = new System.Drawing.Size(131, 17);
-            HearingStartDateLabel.TabIndex = 18;
-            HearingStartDateLabel.Text = "Hearing Start Date:";
+            // Label91
+            // 
+            Label91.AutoSize = true;
+            Label91.Location = new System.Drawing.Point(7, 224);
+            Label91.Name = "Label91";
+            Label91.Size = new System.Drawing.Size(256, 17);
+            Label91.TabIndex = 121;
+            Label91.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // Label92
+            // 
+            Label92.AutoSize = true;
+            Label92.Location = new System.Drawing.Point(562, 12);
+            Label92.Name = "Label92";
+            Label92.Size = new System.Drawing.Size(175, 17);
+            Label92.TabIndex = 124;
+            Label92.Text = "Proposed Date To File LAT:";
+            // 
+            // Label93
+            // 
+            Label93.AutoSize = true;
+            Label93.Location = new System.Drawing.Point(562, 39);
+            Label93.Name = "Label93";
+            Label93.Size = new System.Drawing.Size(224, 17);
+            Label93.TabIndex = 126;
+            Label93.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // Label94
+            // 
+            Label94.AutoSize = true;
+            Label94.Location = new System.Drawing.Point(562, 64);
+            Label94.Name = "Label94";
+            Label94.Size = new System.Drawing.Size(286, 17);
+            Label94.TabIndex = 130;
+            Label94.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // Label95
+            // 
+            Label95.AutoSize = true;
+            Label95.Location = new System.Drawing.Point(562, 88);
+            Label95.Name = "Label95";
+            Label95.Size = new System.Drawing.Size(306, 17);
+            Label95.TabIndex = 132;
+            Label95.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // Label96
+            // 
+            Label96.AutoSize = true;
+            Label96.Location = new System.Drawing.Point(562, 115);
+            Label96.Name = "Label96";
+            Label96.Size = new System.Drawing.Size(352, 17);
+            Label96.TabIndex = 134;
+            Label96.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Label97
+            // 
+            Label97.AutoSize = true;
+            Label97.Location = new System.Drawing.Point(562, 142);
+            Label97.Name = "Label97";
+            Label97.Size = new System.Drawing.Size(407, 17);
+            Label97.TabIndex = 136;
+            Label97.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // Label98
+            // 
+            Label98.AutoSize = true;
+            Label98.Location = new System.Drawing.Point(562, 170);
+            Label98.Name = "Label98";
+            Label98.Size = new System.Drawing.Size(320, 17);
+            Label98.TabIndex = 142;
+            Label98.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // Label99
+            // 
+            Label99.AutoSize = true;
+            Label99.Location = new System.Drawing.Point(562, 194);
+            Label99.Name = "Label99";
+            Label99.Size = new System.Drawing.Size(161, 17);
+            Label99.TabIndex = 144;
+            Label99.Text = "Date LATSettled Closed:";
             // 
             // InvoicesDataGridView
             // 
@@ -2955,7 +2496,7 @@
             this.MedicalBinderIndexTab.Location = new System.Drawing.Point(4, 26);
             this.MedicalBinderIndexTab.Name = "MedicalBinderIndexTab";
             this.MedicalBinderIndexTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalBinderIndexTab.Size = new System.Drawing.Size(1075, 194);
+            this.MedicalBinderIndexTab.Size = new System.Drawing.Size(1119, 328);
             this.MedicalBinderIndexTab.TabIndex = 1;
             this.MedicalBinderIndexTab.Text = "Medical Binder Index";
             this.MedicalBinderIndexTab.UseVisualStyleBackColor = true;
@@ -2965,7 +2506,7 @@
             this.MedicalSummaries.Location = new System.Drawing.Point(4, 26);
             this.MedicalSummaries.Name = "MedicalSummaries";
             this.MedicalSummaries.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicalSummaries.Size = new System.Drawing.Size(1075, 194);
+            this.MedicalSummaries.Size = new System.Drawing.Size(1119, 328);
             this.MedicalSummaries.TabIndex = 2;
             this.MedicalSummaries.Text = "Medical Summaries";
             this.MedicalSummaries.UseVisualStyleBackColor = true;
@@ -2975,7 +2516,7 @@
             this.PrescriptionSummariesTab.Location = new System.Drawing.Point(4, 26);
             this.PrescriptionSummariesTab.Name = "PrescriptionSummariesTab";
             this.PrescriptionSummariesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PrescriptionSummariesTab.Size = new System.Drawing.Size(1075, 194);
+            this.PrescriptionSummariesTab.Size = new System.Drawing.Size(1119, 328);
             this.PrescriptionSummariesTab.TabIndex = 3;
             this.PrescriptionSummariesTab.Text = "Travel Log";
             this.PrescriptionSummariesTab.UseVisualStyleBackColor = true;
@@ -3545,24 +3086,11 @@
             this.Timeline.TabIndex = 0;
             this.Timeline.Text = "Timeline";
             // 
-            // TrialDate
-            // 
-            this.TrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TrialDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TrialDate.CustomFormat = "\' \'";
-            this.TrialDate.Enabled = false;
-            this.TrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TrialDate.Location = new System.Drawing.Point(1045, 319);
-            this.TrialDate.Name = "TrialDate";
-            this.TrialDate.Size = new System.Drawing.Size(19, 23);
-            this.TrialDate.TabIndex = 185;
-            // 
             // txtTrialDate
             // 
             this.txtTrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtTrialDate.Location = new System.Drawing.Point(847, 319);
+            this.txtTrialDate.Location = new System.Drawing.Point(745, 319);
             this.txtTrialDate.Name = "txtTrialDate";
             this.txtTrialDate.ReadOnly = true;
             this.txtTrialDate.Size = new System.Drawing.Size(198, 23);
@@ -3573,120 +3101,55 @@
             this.label276.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label276.AutoSize = true;
             this.label276.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label276.Location = new System.Drawing.Point(560, 322);
+            this.label276.Location = new System.Drawing.Point(458, 322);
             this.label276.Name = "label276";
-            this.label276.Size = new System.Drawing.Size(70, 16);
+            this.label276.Size = new System.Drawing.Size(69, 16);
             this.label276.TabIndex = 183;
             this.label276.Text = "Trial Date";
-            // 
-            // PreTrialResolutionDate
-            // 
-            this.PreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PreTrialResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PreTrialResolutionDate.CustomFormat = "\' \'";
-            this.PreTrialResolutionDate.Enabled = false;
-            this.PreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialResolutionDate.Location = new System.Drawing.Point(1044, 291);
-            this.PreTrialResolutionDate.Name = "PreTrialResolutionDate";
-            this.PreTrialResolutionDate.Size = new System.Drawing.Size(19, 23);
-            this.PreTrialResolutionDate.TabIndex = 182;
             // 
             // txtPreTrialResolutionDate
             // 
             this.txtPreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(846, 291);
+            this.txtPreTrialResolutionDate.Location = new System.Drawing.Point(744, 291);
             this.txtPreTrialResolutionDate.Name = "txtPreTrialResolutionDate";
             this.txtPreTrialResolutionDate.ReadOnly = true;
             this.txtPreTrialResolutionDate.Size = new System.Drawing.Size(198, 23);
             this.txtPreTrialResolutionDate.TabIndex = 181;
             // 
-            // PreTrialToBeServedDate
-            // 
-            this.PreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PreTrialToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.PreTrialToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.PreTrialToBeServedDate.CustomFormat = "\' \'";
-            this.PreTrialToBeServedDate.Enabled = false;
-            this.PreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(1044, 263);
-            this.PreTrialToBeServedDate.Name = "PreTrialToBeServedDate";
-            this.PreTrialToBeServedDate.Size = new System.Drawing.Size(19, 23);
-            this.PreTrialToBeServedDate.TabIndex = 179;
-            // 
             // txtPreTrialToBeServedDate
             // 
             this.txtPreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(847, 263);
+            this.txtPreTrialToBeServedDate.Location = new System.Drawing.Point(745, 263);
             this.txtPreTrialToBeServedDate.Name = "txtPreTrialToBeServedDate";
             this.txtPreTrialToBeServedDate.ReadOnly = true;
             this.txtPreTrialToBeServedDate.Size = new System.Drawing.Size(200, 23);
             this.txtPreTrialToBeServedDate.TabIndex = 178;
             // 
-            // PrePreTrialMeetingDate
-            // 
-            this.PrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PrePreTrialMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PrePreTrialMeetingDate.CustomFormat = "\' \'";
-            this.PrePreTrialMeetingDate.Enabled = false;
-            this.PrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(1045, 235);
-            this.PrePreTrialMeetingDate.Name = "PrePreTrialMeetingDate";
-            this.PrePreTrialMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.PrePreTrialMeetingDate.TabIndex = 176;
-            // 
             // TxtPrePreTrialMeetingDate
             // 
             this.TxtPrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(847, 235);
+            this.TxtPrePreTrialMeetingDate.Location = new System.Drawing.Point(745, 235);
             this.TxtPrePreTrialMeetingDate.Name = "TxtPrePreTrialMeetingDate";
             this.TxtPrePreTrialMeetingDate.ReadOnly = true;
             this.TxtPrePreTrialMeetingDate.Size = new System.Drawing.Size(198, 23);
             this.TxtPrePreTrialMeetingDate.TabIndex = 175;
             // 
-            // ResolutionDate
-            // 
-            this.ResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ResolutionDate.CustomFormat = "\' \'";
-            this.ResolutionDate.Enabled = false;
-            this.ResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ResolutionDate.Location = new System.Drawing.Point(1044, 134);
-            this.ResolutionDate.Name = "ResolutionDate";
-            this.ResolutionDate.Size = new System.Drawing.Size(19, 23);
-            this.ResolutionDate.TabIndex = 173;
-            // 
             // txtResolutionDate
             // 
             this.txtResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtResolutionDate.Location = new System.Drawing.Point(848, 134);
+            this.txtResolutionDate.Location = new System.Drawing.Point(746, 134);
             this.txtResolutionDate.Name = "txtResolutionDate";
             this.txtResolutionDate.ReadOnly = true;
             this.txtResolutionDate.Size = new System.Drawing.Size(196, 23);
             this.txtResolutionDate.TabIndex = 172;
             // 
-            // MemoToBeServedDate
-            // 
-            this.MemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MemoToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.MemoToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.MemoToBeServedDate.CustomFormat = "\' \'";
-            this.MemoToBeServedDate.Enabled = false;
-            this.MemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.MemoToBeServedDate.Location = new System.Drawing.Point(1044, 84);
-            this.MemoToBeServedDate.Name = "MemoToBeServedDate";
-            this.MemoToBeServedDate.Size = new System.Drawing.Size(19, 23);
-            this.MemoToBeServedDate.TabIndex = 170;
-            // 
             // TxtMemoToBeServedDate
             // 
             this.TxtMemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(847, 84);
+            this.TxtMemoToBeServedDate.Location = new System.Drawing.Point(745, 84);
             this.TxtMemoToBeServedDate.Name = "TxtMemoToBeServedDate";
             this.TxtMemoToBeServedDate.ReadOnly = true;
             this.TxtMemoToBeServedDate.Size = new System.Drawing.Size(200, 23);
@@ -3697,7 +3160,7 @@
             this.label271.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label271.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label271.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label271.Location = new System.Drawing.Point(564, 73);
+            this.label271.Location = new System.Drawing.Point(462, 73);
             this.label271.Name = "label271";
             this.label271.Size = new System.Drawing.Size(501, 45);
             this.label271.TabIndex = 168;
@@ -3712,225 +3175,13 @@
             this.TimelineSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TimelineSaveBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimelineSaveBtn.ForeColor = System.Drawing.Color.White;
-            this.TimelineSaveBtn.Location = new System.Drawing.Point(1041, 607);
+            this.TimelineSaveBtn.Location = new System.Drawing.Point(939, 847);
             this.TimelineSaveBtn.Name = "TimelineSaveBtn";
             this.TimelineSaveBtn.Size = new System.Drawing.Size(175, 37);
             this.TimelineSaveBtn.TabIndex = 167;
             this.TimelineSaveBtn.Text = "Save Timeline";
             this.TimelineSaveBtn.UseVisualStyleBackColor = false;
             this.TimelineSaveBtn.Click += new System.EventHandler(this.TimelineSaveBtn_Click);
-            // 
-            // TBoxAllDefendantUndertakingRecd
-            // 
-            this.TBoxAllDefendantUndertakingRecd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxAllDefendantUndertakingRecd.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxAllDefendantUndertakingRecd.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxAllDefendantUndertakingRecd.CustomFormat = "\' \'";
-            this.TBoxAllDefendantUndertakingRecd.Enabled = false;
-            this.TBoxAllDefendantUndertakingRecd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(1045, 39);
-            this.TBoxAllDefendantUndertakingRecd.Name = "TBoxAllDefendantUndertakingRecd";
-            this.TBoxAllDefendantUndertakingRecd.Size = new System.Drawing.Size(19, 23);
-            this.TBoxAllDefendantUndertakingRecd.TabIndex = 166;
-            this.TBoxAllDefendantUndertakingRecd.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDatePlaintiffUndertakingComplete
-            // 
-            this.TBoxDatePlaintiffUndertakingComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDatePlaintiffUndertakingComplete.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDatePlaintiffUndertakingComplete.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDatePlaintiffUndertakingComplete.CustomFormat = "\' \'";
-            this.TBoxDatePlaintiffUndertakingComplete.Enabled = false;
-            this.TBoxDatePlaintiffUndertakingComplete.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(1045, 12);
-            this.TBoxDatePlaintiffUndertakingComplete.Name = "TBoxDatePlaintiffUndertakingComplete";
-            this.TBoxDatePlaintiffUndertakingComplete.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDatePlaintiffUndertakingComplete.TabIndex = 165;
-            this.TBoxDatePlaintiffUndertakingComplete.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateTrialRecordFiled
-            // 
-            this.TBoxDateTrialRecordFiled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateTrialRecordFiled.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateTrialRecordFiled.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateTrialRecordFiled.CustomFormat = "\' \'";
-            this.TBoxDateTrialRecordFiled.Enabled = false;
-            this.TBoxDateTrialRecordFiled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(1045, 208);
-            this.TBoxDateTrialRecordFiled.Name = "TBoxDateTrialRecordFiled";
-            this.TBoxDateTrialRecordFiled.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateTrialRecordFiled.TabIndex = 164;
-            this.TBoxDateTrialRecordFiled.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateOfDefendantDiscovery
-            // 
-            this.TBoxDateOfDefendantDiscovery.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateOfDefendantDiscovery.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateOfDefendantDiscovery.CustomFormat = "\' \'";
-            this.TBoxDateOfDefendantDiscovery.Enabled = false;
-            this.TBoxDateOfDefendantDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateOfDefendantDiscovery.Location = new System.Drawing.Point(493, 344);
-            this.TBoxDateOfDefendantDiscovery.Name = "TBoxDateOfDefendantDiscovery";
-            this.TBoxDateOfDefendantDiscovery.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateOfDefendantDiscovery.TabIndex = 163;
-            this.TBoxDateOfDefendantDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPlaintiffAODSent
-            // 
-            this.TBoxPlaintiffAODSent.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxPlaintiffAODSent.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxPlaintiffAODSent.CustomFormat = "\' \'";
-            this.TBoxPlaintiffAODSent.Enabled = false;
-            this.TBoxPlaintiffAODSent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPlaintiffAODSent.Location = new System.Drawing.Point(493, 199);
-            this.TBoxPlaintiffAODSent.Name = "TBoxPlaintiffAODSent";
-            this.TBoxPlaintiffAODSent.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPlaintiffAODSent.TabIndex = 162;
-            this.TBoxPlaintiffAODSent.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateOfPlaintiffDiscovery
-            // 
-            this.TBoxDateOfPlaintiffDiscovery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxDateOfPlaintiffDiscovery.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxDateOfPlaintiffDiscovery.CustomFormat = "\' \'";
-            this.TBoxDateOfPlaintiffDiscovery.Enabled = false;
-            this.TBoxDateOfPlaintiffDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateOfPlaintiffDiscovery.Location = new System.Drawing.Point(493, 313);
-            this.TBoxDateOfPlaintiffDiscovery.Name = "TBoxDateOfPlaintiffDiscovery";
-            this.TBoxDateOfPlaintiffDiscovery.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateOfPlaintiffDiscovery.TabIndex = 161;
-            this.TBoxDateOfPlaintiffDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDefendantAODRequest
-            // 
-            this.TBoxDefendantAODRequest.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDefendantAODRequest.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDefendantAODRequest.CustomFormat = "\' \'";
-            this.TBoxDefendantAODRequest.Enabled = false;
-            this.TBoxDefendantAODRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDefendantAODRequest.Location = new System.Drawing.Point(493, 286);
-            this.TBoxDefendantAODRequest.Name = "TBoxDefendantAODRequest";
-            this.TBoxDefendantAODRequest.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDefendantAODRequest.TabIndex = 160;
-            this.TBoxDefendantAODRequest.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPreDiscoveryMeetingDate
-            // 
-            this.TBoxPreDiscoveryMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreDiscoveryMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreDiscoveryMeetingDate.CustomFormat = "\' \'";
-            this.TBoxPreDiscoveryMeetingDate.Enabled = false;
-            this.TBoxPreDiscoveryMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPreDiscoveryMeetingDate.Location = new System.Drawing.Point(494, 257);
-            this.TBoxPreDiscoveryMeetingDate.Name = "TBoxPreDiscoveryMeetingDate";
-            this.TBoxPreDiscoveryMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPreDiscoveryMeetingDate.TabIndex = 159;
-            this.TBoxPreDiscoveryMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateToFileTrialRecordBy
-            // 
-            this.TBoxDateToFileTrialRecordBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateToFileTrialRecordBy.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateToFileTrialRecordBy.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateToFileTrialRecordBy.CustomFormat = "\' \'";
-            this.TBoxDateToFileTrialRecordBy.Enabled = false;
-            this.TBoxDateToFileTrialRecordBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(1046, 181);
-            this.TBoxDateToFileTrialRecordBy.Name = "TBoxDateToFileTrialRecordBy";
-            this.TBoxDateToFileTrialRecordBy.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateToFileTrialRecordBy.TabIndex = 158;
-            this.TBoxDateToFileTrialRecordBy.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxActualDateSOCServed
-            // 
-            this.TBoxActualDateSOCServed.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxActualDateSOCServed.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxActualDateSOCServed.CustomFormat = "\' \'";
-            this.TBoxActualDateSOCServed.Enabled = false;
-            this.TBoxActualDateSOCServed.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxActualDateSOCServed.Location = new System.Drawing.Point(493, 170);
-            this.TBoxActualDateSOCServed.Name = "TBoxActualDateSOCServed";
-            this.TBoxActualDateSOCServed.Size = new System.Drawing.Size(19, 23);
-            this.TBoxActualDateSOCServed.TabIndex = 157;
-            this.TBoxActualDateSOCServed.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxProposedDateToServeSOC
-            // 
-            this.TBoxProposedDateToServeSOC.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateToServeSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateToServeSOC.CustomFormat = "\' \'";
-            this.TBoxProposedDateToServeSOC.Enabled = false;
-            this.TBoxProposedDateToServeSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxProposedDateToServeSOC.Location = new System.Drawing.Point(493, 142);
-            this.TBoxProposedDateToServeSOC.Name = "TBoxProposedDateToServeSOC";
-            this.TBoxProposedDateToServeSOC.Size = new System.Drawing.Size(19, 23);
-            this.TBoxProposedDateToServeSOC.TabIndex = 156;
-            this.TBoxProposedDateToServeSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxMedicalSummariesPreDiscDueDate
-            // 
-            this.TBoxMedicalSummariesPreDiscDueDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxMedicalSummariesPreDiscDueDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxMedicalSummariesPreDiscDueDate.CustomFormat = "\' \'";
-            this.TBoxMedicalSummariesPreDiscDueDate.Enabled = false;
-            this.TBoxMedicalSummariesPreDiscDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxMedicalSummariesPreDiscDueDate.Location = new System.Drawing.Point(494, 228);
-            this.TBoxMedicalSummariesPreDiscDueDate.Name = "TBoxMedicalSummariesPreDiscDueDate";
-            this.TBoxMedicalSummariesPreDiscDueDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxMedicalSummariesPreDiscDueDate.TabIndex = 155;
-            this.TBoxMedicalSummariesPreDiscDueDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxActualDateSOCIssued
-            // 
-            this.TBoxActualDateSOCIssued.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxActualDateSOCIssued.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxActualDateSOCIssued.CustomFormat = "\' \'";
-            this.TBoxActualDateSOCIssued.Enabled = false;
-            this.TBoxActualDateSOCIssued.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxActualDateSOCIssued.Location = new System.Drawing.Point(493, 113);
-            this.TBoxActualDateSOCIssued.Name = "TBoxActualDateSOCIssued";
-            this.TBoxActualDateSOCIssued.Size = new System.Drawing.Size(19, 23);
-            this.TBoxActualDateSOCIssued.TabIndex = 154;
-            this.TBoxActualDateSOCIssued.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPrePleadingsMeetingDate
-            // 
-            this.TBoxPrePleadingsMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPrePleadingsMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPrePleadingsMeetingDate.CustomFormat = "\' \'";
-            this.TBoxPrePleadingsMeetingDate.Enabled = false;
-            this.TBoxPrePleadingsMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPrePleadingsMeetingDate.Location = new System.Drawing.Point(493, 85);
-            this.TBoxPrePleadingsMeetingDate.Name = "TBoxPrePleadingsMeetingDate";
-            this.TBoxPrePleadingsMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPrePleadingsMeetingDate.TabIndex = 153;
-            this.TBoxPrePleadingsMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxProposedDateIssueSOC
-            // 
-            this.TBoxProposedDateIssueSOC.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateIssueSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateIssueSOC.CustomFormat = "\' \'";
-            this.TBoxProposedDateIssueSOC.Enabled = false;
-            this.TBoxProposedDateIssueSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxProposedDateIssueSOC.Location = new System.Drawing.Point(493, 56);
-            this.TBoxProposedDateIssueSOC.Name = "TBoxProposedDateIssueSOC";
-            this.TBoxProposedDateIssueSOC.Size = new System.Drawing.Size(19, 23);
-            this.TBoxProposedDateIssueSOC.TabIndex = 152;
-            this.TBoxProposedDateIssueSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxLiabilityMeetingDate
-            // 
-            this.TBoxLiabilityMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxLiabilityMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxLiabilityMeetingDate.CustomFormat = "\' \'";
-            this.TBoxLiabilityMeetingDate.Enabled = false;
-            this.TBoxLiabilityMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxLiabilityMeetingDate.Location = new System.Drawing.Point(493, 27);
-            this.TBoxLiabilityMeetingDate.Name = "TBoxLiabilityMeetingDate";
-            this.TBoxLiabilityMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxLiabilityMeetingDate.TabIndex = 151;
-            this.TBoxLiabilityMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxActualDateSOCServedTextBox
             // 
@@ -4036,7 +3287,7 @@
             // TBoxDateToFileTrialRecordByTextBox
             // 
             this.TBoxDateToFileTrialRecordByTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateToFileTrialRecordByTextBox.Location = new System.Drawing.Point(848, 181);
+            this.TBoxDateToFileTrialRecordByTextBox.Location = new System.Drawing.Point(746, 181);
             this.TBoxDateToFileTrialRecordByTextBox.Name = "TBoxDateToFileTrialRecordByTextBox";
             this.TBoxDateToFileTrialRecordByTextBox.ReadOnly = true;
             this.TBoxDateToFileTrialRecordByTextBox.Size = new System.Drawing.Size(199, 23);
@@ -4045,7 +3296,7 @@
             // TBoxDateTrialRecordFiledTextBox
             // 
             this.TBoxDateTrialRecordFiledTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateTrialRecordFiledTextBox.Location = new System.Drawing.Point(848, 208);
+            this.TBoxDateTrialRecordFiledTextBox.Location = new System.Drawing.Point(746, 208);
             this.TBoxDateTrialRecordFiledTextBox.Name = "TBoxDateTrialRecordFiledTextBox";
             this.TBoxDateTrialRecordFiledTextBox.ReadOnly = true;
             this.TBoxDateTrialRecordFiledTextBox.Size = new System.Drawing.Size(200, 23);
@@ -4054,7 +3305,7 @@
             // TBoxAllDefendantUndertakingRecdTextBox
             // 
             this.TBoxAllDefendantUndertakingRecdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxAllDefendantUndertakingRecdTextBox.Location = new System.Drawing.Point(848, 39);
+            this.TBoxAllDefendantUndertakingRecdTextBox.Location = new System.Drawing.Point(746, 39);
             this.TBoxAllDefendantUndertakingRecdTextBox.Name = "TBoxAllDefendantUndertakingRecdTextBox";
             this.TBoxAllDefendantUndertakingRecdTextBox.ReadOnly = true;
             this.TBoxAllDefendantUndertakingRecdTextBox.Size = new System.Drawing.Size(200, 23);
@@ -4063,7 +3314,7 @@
             // TBoxDatePlaintiffUndertakingCompleteTextBox
             // 
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDatePlaintiffUndertakingCompleteTextBox.Location = new System.Drawing.Point(848, 12);
+            this.TBoxDatePlaintiffUndertakingCompleteTextBox.Location = new System.Drawing.Point(746, 12);
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Name = "TBoxDatePlaintiffUndertakingCompleteTextBox";
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.ReadOnly = true;
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Size = new System.Drawing.Size(200, 23);
@@ -4127,7 +3378,7 @@
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(0, 0);
             this.UndertakingsDataGridView.Name = "UndertakingsDataGridView";
             this.UndertakingsDataGridView.RowTemplate.Height = 40;
-            this.UndertakingsDataGridView.Size = new System.Drawing.Size(1119, 328);
+            this.UndertakingsDataGridView.Size = new System.Drawing.Size(1119, 332);
             this.UndertakingsDataGridView.TabIndex = 1;
             // 
             // Settlement
@@ -5270,7 +4521,7 @@
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(1719, 554);
+            this.Btn_Save.Location = new System.Drawing.Point(3057, 818);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -5879,7 +5130,7 @@
             this.label248.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label248.Location = new System.Drawing.Point(1133, 3);
             this.label248.Name = "label248";
-            this.label248.Size = new System.Drawing.Size(196, 32);
+            this.label248.Size = new System.Drawing.Size(195, 32);
             this.label248.TabIndex = 2;
             this.label248.Text = "AB OVERVIEW";
             // 
@@ -6173,7 +5424,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1248, 474);
+            this.btnSave.Location = new System.Drawing.Point(1248, 498);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6435,7 +5686,7 @@
             this.label116.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label116.Location = new System.Drawing.Point(245, 60);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(22, 16);
+            this.label116.Size = new System.Drawing.Size(21, 16);
             this.label116.TabIndex = 7;
             this.label116.Text = "To";
             // 
@@ -6527,7 +5778,7 @@
             this.ABDenialsDataGridView.Location = new System.Drawing.Point(3, 66);
             this.ABDenialsDataGridView.Name = "ABDenialsDataGridView";
             this.ABDenialsDataGridView.RowTemplate.Height = 40;
-            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1113, 259);
+            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1113, 263);
             this.ABDenialsDataGridView.TabIndex = 0;
             // 
             // NameofBenefit
@@ -6731,10 +5982,11 @@
             this.GroupBoxLat4.Controls.Add(this.GroupBox40);
             this.GroupBoxLat4.Controls.Add(this.TableLayoutPanel16);
             this.GroupBoxLat4.Controls.Add(this.TableLayoutPanel17);
+            this.GroupBoxLat4.Dock = System.Windows.Forms.DockStyle.Top;
             this.GroupBoxLat4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxLat4.Location = new System.Drawing.Point(19, 1055);
+            this.GroupBoxLat4.Location = new System.Drawing.Point(3, 1011);
             this.GroupBoxLat4.Name = "GroupBoxLat4";
-            this.GroupBoxLat4.Size = new System.Drawing.Size(1291, 342);
+            this.GroupBoxLat4.Size = new System.Drawing.Size(1082, 309);
             this.GroupBoxLat4.TabIndex = 44;
             this.GroupBoxLat4.TabStop = false;
             this.GroupBoxLat4.Text = "LAT#4";
@@ -6831,7 +6083,7 @@
             this.Label200.AutoSize = true;
             this.Label200.Location = new System.Drawing.Point(3, 0);
             this.Label200.Name = "Label200";
-            this.Label200.Size = new System.Drawing.Size(53, 16);
+            this.Label200.Size = new System.Drawing.Size(52, 16);
             this.Label200.TabIndex = 0;
             this.Label200.Text = "Issues";
             // 
@@ -6894,7 +6146,7 @@
             this.Label201.AutoSize = true;
             this.Label201.Location = new System.Drawing.Point(357, 43);
             this.Label201.Name = "Label201";
-            this.Label201.Size = new System.Drawing.Size(111, 16);
+            this.Label201.Size = new System.Drawing.Size(110, 16);
             this.Label201.TabIndex = 26;
             this.Label201.Text = "Case Adjudicator";
             // 
@@ -6910,7 +6162,7 @@
             this.Label202.AutoSize = true;
             this.Label202.Location = new System.Drawing.Point(3, 0);
             this.Label202.Name = "Label202";
-            this.Label202.Size = new System.Drawing.Size(70, 16);
+            this.Label202.Size = new System.Drawing.Size(69, 16);
             this.Label202.TabIndex = 8;
             this.Label202.Text = "Filed Date";
             // 
@@ -6919,7 +6171,7 @@
             this.Label203.AutoSize = true;
             this.Label203.Location = new System.Drawing.Point(357, 258);
             this.Label203.Name = "Label203";
-            this.Label203.Size = new System.Drawing.Size(98, 16);
+            this.Label203.Size = new System.Drawing.Size(97, 16);
             this.Label203.TabIndex = 31;
             this.Label203.Text = "Amount Settled";
             // 
@@ -6942,7 +6194,7 @@
             this.Label204.AutoSize = true;
             this.Label204.Location = new System.Drawing.Point(3, 258);
             this.Label204.Name = "Label204";
-            this.Label204.Size = new System.Drawing.Size(82, 16);
+            this.Label204.Size = new System.Drawing.Size(81, 16);
             this.Label204.TabIndex = 15;
             this.Label204.Text = "Date Settled";
             // 
@@ -6958,7 +6210,7 @@
             this.Label205.AutoSize = true;
             this.Label205.Location = new System.Drawing.Point(3, 43);
             this.Label205.Name = "Label205";
-            this.Label205.Size = new System.Drawing.Size(70, 16);
+            this.Label205.Size = new System.Drawing.Size(69, 16);
             this.Label205.TabIndex = 10;
             this.Label205.Text = "Case Conf";
             // 
@@ -6967,7 +6219,7 @@
             this.Label206.AutoSize = true;
             this.Label206.Location = new System.Drawing.Point(357, 172);
             this.Label206.Name = "Label206";
-            this.Label206.Size = new System.Drawing.Size(88, 16);
+            this.Label206.Size = new System.Drawing.Size(87, 16);
             this.Label206.TabIndex = 29;
             this.Label206.Text = "Hearing Date";
             // 
@@ -6990,7 +6242,7 @@
             this.Label207.AutoSize = true;
             this.Label207.Location = new System.Drawing.Point(3, 215);
             this.Label207.Name = "Label207";
-            this.Label207.Size = new System.Drawing.Size(127, 16);
+            this.Label207.Size = new System.Drawing.Size(126, 16);
             this.Label207.TabIndex = 14;
             this.Label207.Text = "Hearing Adjudicator";
             // 
@@ -7006,7 +6258,7 @@
             this.Label208.AutoSize = true;
             this.Label208.Location = new System.Drawing.Point(357, 129);
             this.Label208.Name = "Label208";
-            this.Label208.Size = new System.Drawing.Size(77, 16);
+            this.Label208.Size = new System.Drawing.Size(76, 16);
             this.Label208.TabIndex = 28;
             this.Label208.Text = "Insurer Firm";
             // 
@@ -7022,7 +6274,7 @@
             this.Label209.AutoSize = true;
             this.Label209.Location = new System.Drawing.Point(357, 0);
             this.Label209.Name = "Label209";
-            this.Label209.Size = new System.Drawing.Size(108, 16);
+            this.Label209.Size = new System.Drawing.Size(107, 16);
             this.Label209.TabIndex = 24;
             this.Label209.Text = "Tribunal Number";
             // 
@@ -7038,7 +6290,7 @@
             this.Label210.AutoSize = true;
             this.Label210.Location = new System.Drawing.Point(357, 86);
             this.Label210.Name = "Label210";
-            this.Label210.Size = new System.Drawing.Size(48, 16);
+            this.Label210.Size = new System.Drawing.Size(47, 16);
             this.Label210.TabIndex = 27;
             this.Label210.Text = "Insurer";
             // 
@@ -7047,7 +6299,7 @@
             this.Label211.AutoSize = true;
             this.Label211.Location = new System.Drawing.Point(3, 172);
             this.Label211.Name = "Label211";
-            this.Label211.Size = new System.Drawing.Size(91, 16);
+            this.Label211.Size = new System.Drawing.Size(90, 16);
             this.Label211.TabIndex = 13;
             this.Label211.Text = "Hearing Type";
             // 
@@ -7056,7 +6308,7 @@
             this.Label212.AutoSize = true;
             this.Label212.Location = new System.Drawing.Point(3, 86);
             this.Label212.Name = "Label212";
-            this.Label212.Size = new System.Drawing.Size(57, 16);
+            this.Label212.Size = new System.Drawing.Size(56, 16);
             this.Label212.TabIndex = 11;
             this.Label212.Text = "Adjuster";
             // 
@@ -7079,7 +6331,7 @@
             this.Label213.AutoSize = true;
             this.Label213.Location = new System.Drawing.Point(3, 129);
             this.Label213.Name = "Label213";
-            this.Label213.Size = new System.Drawing.Size(100, 16);
+            this.Label213.Size = new System.Drawing.Size(99, 16);
             this.Label213.TabIndex = 12;
             this.Label213.Text = "Insurer Counsel";
             // 
@@ -7170,7 +6422,7 @@
             this.Label214.AutoSize = true;
             this.Label214.Location = new System.Drawing.Point(3, 0);
             this.Label214.Name = "Label214";
-            this.Label214.Size = new System.Drawing.Size(53, 16);
+            this.Label214.Size = new System.Drawing.Size(52, 16);
             this.Label214.TabIndex = 0;
             this.Label214.Text = "Issues";
             // 
@@ -7234,7 +6486,7 @@
             this.Label215.AutoSize = true;
             this.Label215.Location = new System.Drawing.Point(357, 43);
             this.Label215.Name = "Label215";
-            this.Label215.Size = new System.Drawing.Size(111, 16);
+            this.Label215.Size = new System.Drawing.Size(110, 16);
             this.Label215.TabIndex = 26;
             this.Label215.Text = "Case Adjudicator";
             // 
@@ -7251,7 +6503,7 @@
             this.Label216.AutoSize = true;
             this.Label216.Location = new System.Drawing.Point(3, 0);
             this.Label216.Name = "Label216";
-            this.Label216.Size = new System.Drawing.Size(70, 16);
+            this.Label216.Size = new System.Drawing.Size(69, 16);
             this.Label216.TabIndex = 8;
             this.Label216.Text = "Filed Date";
             // 
@@ -7260,7 +6512,7 @@
             this.Label217.AutoSize = true;
             this.Label217.Location = new System.Drawing.Point(357, 258);
             this.Label217.Name = "Label217";
-            this.Label217.Size = new System.Drawing.Size(98, 16);
+            this.Label217.Size = new System.Drawing.Size(97, 16);
             this.Label217.TabIndex = 31;
             this.Label217.Text = "Amount Settled";
             // 
@@ -7285,7 +6537,7 @@
             this.Label218.AutoSize = true;
             this.Label218.Location = new System.Drawing.Point(3, 258);
             this.Label218.Name = "Label218";
-            this.Label218.Size = new System.Drawing.Size(82, 16);
+            this.Label218.Size = new System.Drawing.Size(81, 16);
             this.Label218.TabIndex = 15;
             this.Label218.Text = "Date Settled";
             // 
@@ -7302,7 +6554,7 @@
             this.Label219.AutoSize = true;
             this.Label219.Location = new System.Drawing.Point(3, 43);
             this.Label219.Name = "Label219";
-            this.Label219.Size = new System.Drawing.Size(70, 16);
+            this.Label219.Size = new System.Drawing.Size(69, 16);
             this.Label219.TabIndex = 10;
             this.Label219.Text = "Case Conf";
             // 
@@ -7311,7 +6563,7 @@
             this.Label220.AutoSize = true;
             this.Label220.Location = new System.Drawing.Point(357, 172);
             this.Label220.Name = "Label220";
-            this.Label220.Size = new System.Drawing.Size(88, 16);
+            this.Label220.Size = new System.Drawing.Size(87, 16);
             this.Label220.TabIndex = 29;
             this.Label220.Text = "Hearing Date";
             // 
@@ -7334,7 +6586,7 @@
             this.Label221.AutoSize = true;
             this.Label221.Location = new System.Drawing.Point(3, 215);
             this.Label221.Name = "Label221";
-            this.Label221.Size = new System.Drawing.Size(127, 16);
+            this.Label221.Size = new System.Drawing.Size(126, 16);
             this.Label221.TabIndex = 14;
             this.Label221.Text = "Hearing Adjudicator";
             // 
@@ -7350,7 +6602,7 @@
             this.Label222.AutoSize = true;
             this.Label222.Location = new System.Drawing.Point(357, 129);
             this.Label222.Name = "Label222";
-            this.Label222.Size = new System.Drawing.Size(77, 16);
+            this.Label222.Size = new System.Drawing.Size(76, 16);
             this.Label222.TabIndex = 28;
             this.Label222.Text = "Insurer Firm";
             // 
@@ -7366,7 +6618,7 @@
             this.Label223.AutoSize = true;
             this.Label223.Location = new System.Drawing.Point(357, 0);
             this.Label223.Name = "Label223";
-            this.Label223.Size = new System.Drawing.Size(108, 16);
+            this.Label223.Size = new System.Drawing.Size(107, 16);
             this.Label223.TabIndex = 24;
             this.Label223.Text = "Tribunal Number";
             // 
@@ -7382,7 +6634,7 @@
             this.Label224.AutoSize = true;
             this.Label224.Location = new System.Drawing.Point(357, 86);
             this.Label224.Name = "Label224";
-            this.Label224.Size = new System.Drawing.Size(48, 16);
+            this.Label224.Size = new System.Drawing.Size(47, 16);
             this.Label224.TabIndex = 27;
             this.Label224.Text = "Insurer";
             // 
@@ -7391,7 +6643,7 @@
             this.Label225.AutoSize = true;
             this.Label225.Location = new System.Drawing.Point(3, 172);
             this.Label225.Name = "Label225";
-            this.Label225.Size = new System.Drawing.Size(91, 16);
+            this.Label225.Size = new System.Drawing.Size(90, 16);
             this.Label225.TabIndex = 13;
             this.Label225.Text = "Hearing Type";
             // 
@@ -7400,7 +6652,7 @@
             this.Label226.AutoSize = true;
             this.Label226.Location = new System.Drawing.Point(3, 86);
             this.Label226.Name = "Label226";
-            this.Label226.Size = new System.Drawing.Size(57, 16);
+            this.Label226.Size = new System.Drawing.Size(56, 16);
             this.Label226.TabIndex = 11;
             this.Label226.Text = "Adjuster";
             // 
@@ -7423,7 +6675,7 @@
             this.Label227.AutoSize = true;
             this.Label227.Location = new System.Drawing.Point(3, 129);
             this.Label227.Name = "Label227";
-            this.Label227.Size = new System.Drawing.Size(100, 16);
+            this.Label227.Size = new System.Drawing.Size(99, 16);
             this.Label227.TabIndex = 12;
             this.Label227.Text = "Insurer Counsel";
             // 
@@ -7439,10 +6691,11 @@
             this.GroupBoxLat3.Controls.Add(this.GroupBox38);
             this.GroupBoxLat3.Controls.Add(this.TableLayoutPanel12);
             this.GroupBoxLat3.Controls.Add(this.TableLayoutPanel13);
+            this.GroupBoxLat3.Dock = System.Windows.Forms.DockStyle.Top;
             this.GroupBoxLat3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxLat3.Location = new System.Drawing.Point(19, 707);
+            this.GroupBoxLat3.Location = new System.Drawing.Point(3, 670);
             this.GroupBoxLat3.Name = "GroupBoxLat3";
-            this.GroupBoxLat3.Size = new System.Drawing.Size(1285, 342);
+            this.GroupBoxLat3.Size = new System.Drawing.Size(1082, 341);
             this.GroupBoxLat3.TabIndex = 43;
             this.GroupBoxLat3.TabStop = false;
             this.GroupBoxLat3.Text = "LAT#3";
@@ -7539,7 +6792,7 @@
             this.Label172.AutoSize = true;
             this.Label172.Location = new System.Drawing.Point(3, 0);
             this.Label172.Name = "Label172";
-            this.Label172.Size = new System.Drawing.Size(53, 16);
+            this.Label172.Size = new System.Drawing.Size(52, 16);
             this.Label172.TabIndex = 0;
             this.Label172.Text = "Issues";
             // 
@@ -7602,7 +6855,7 @@
             this.Label173.AutoSize = true;
             this.Label173.Location = new System.Drawing.Point(357, 43);
             this.Label173.Name = "Label173";
-            this.Label173.Size = new System.Drawing.Size(111, 16);
+            this.Label173.Size = new System.Drawing.Size(110, 16);
             this.Label173.TabIndex = 26;
             this.Label173.Text = "Case Adjudicator";
             // 
@@ -7618,7 +6871,7 @@
             this.Label174.AutoSize = true;
             this.Label174.Location = new System.Drawing.Point(3, 0);
             this.Label174.Name = "Label174";
-            this.Label174.Size = new System.Drawing.Size(70, 16);
+            this.Label174.Size = new System.Drawing.Size(69, 16);
             this.Label174.TabIndex = 8;
             this.Label174.Text = "Filed Date";
             // 
@@ -7627,7 +6880,7 @@
             this.Label175.AutoSize = true;
             this.Label175.Location = new System.Drawing.Point(357, 258);
             this.Label175.Name = "Label175";
-            this.Label175.Size = new System.Drawing.Size(98, 16);
+            this.Label175.Size = new System.Drawing.Size(97, 16);
             this.Label175.TabIndex = 31;
             this.Label175.Text = "Amount Settled";
             // 
@@ -7650,7 +6903,7 @@
             this.Label176.AutoSize = true;
             this.Label176.Location = new System.Drawing.Point(3, 258);
             this.Label176.Name = "Label176";
-            this.Label176.Size = new System.Drawing.Size(82, 16);
+            this.Label176.Size = new System.Drawing.Size(81, 16);
             this.Label176.TabIndex = 15;
             this.Label176.Text = "Date Settled";
             // 
@@ -7666,7 +6919,7 @@
             this.Label177.AutoSize = true;
             this.Label177.Location = new System.Drawing.Point(3, 43);
             this.Label177.Name = "Label177";
-            this.Label177.Size = new System.Drawing.Size(70, 16);
+            this.Label177.Size = new System.Drawing.Size(69, 16);
             this.Label177.TabIndex = 10;
             this.Label177.Text = "Case Conf";
             // 
@@ -7675,7 +6928,7 @@
             this.Label178.AutoSize = true;
             this.Label178.Location = new System.Drawing.Point(357, 172);
             this.Label178.Name = "Label178";
-            this.Label178.Size = new System.Drawing.Size(88, 16);
+            this.Label178.Size = new System.Drawing.Size(87, 16);
             this.Label178.TabIndex = 29;
             this.Label178.Text = "Hearing Date";
             // 
@@ -7698,7 +6951,7 @@
             this.Label179.AutoSize = true;
             this.Label179.Location = new System.Drawing.Point(3, 215);
             this.Label179.Name = "Label179";
-            this.Label179.Size = new System.Drawing.Size(127, 16);
+            this.Label179.Size = new System.Drawing.Size(126, 16);
             this.Label179.TabIndex = 14;
             this.Label179.Text = "Hearing Adjudicator";
             // 
@@ -7714,7 +6967,7 @@
             this.Label180.AutoSize = true;
             this.Label180.Location = new System.Drawing.Point(357, 129);
             this.Label180.Name = "Label180";
-            this.Label180.Size = new System.Drawing.Size(77, 16);
+            this.Label180.Size = new System.Drawing.Size(76, 16);
             this.Label180.TabIndex = 28;
             this.Label180.Text = "Insurer Firm";
             // 
@@ -7730,7 +6983,7 @@
             this.Label181.AutoSize = true;
             this.Label181.Location = new System.Drawing.Point(357, 0);
             this.Label181.Name = "Label181";
-            this.Label181.Size = new System.Drawing.Size(108, 16);
+            this.Label181.Size = new System.Drawing.Size(107, 16);
             this.Label181.TabIndex = 24;
             this.Label181.Text = "Tribunal Number";
             // 
@@ -7746,7 +6999,7 @@
             this.Label182.AutoSize = true;
             this.Label182.Location = new System.Drawing.Point(357, 86);
             this.Label182.Name = "Label182";
-            this.Label182.Size = new System.Drawing.Size(48, 16);
+            this.Label182.Size = new System.Drawing.Size(47, 16);
             this.Label182.TabIndex = 27;
             this.Label182.Text = "Insurer";
             // 
@@ -7755,7 +7008,7 @@
             this.Label183.AutoSize = true;
             this.Label183.Location = new System.Drawing.Point(3, 172);
             this.Label183.Name = "Label183";
-            this.Label183.Size = new System.Drawing.Size(91, 16);
+            this.Label183.Size = new System.Drawing.Size(90, 16);
             this.Label183.TabIndex = 13;
             this.Label183.Text = "Hearing Type";
             // 
@@ -7764,7 +7017,7 @@
             this.Label184.AutoSize = true;
             this.Label184.Location = new System.Drawing.Point(3, 86);
             this.Label184.Name = "Label184";
-            this.Label184.Size = new System.Drawing.Size(57, 16);
+            this.Label184.Size = new System.Drawing.Size(56, 16);
             this.Label184.TabIndex = 11;
             this.Label184.Text = "Adjuster";
             // 
@@ -7787,7 +7040,7 @@
             this.Label185.AutoSize = true;
             this.Label185.Location = new System.Drawing.Point(3, 129);
             this.Label185.Name = "Label185";
-            this.Label185.Size = new System.Drawing.Size(100, 16);
+            this.Label185.Size = new System.Drawing.Size(99, 16);
             this.Label185.TabIndex = 12;
             this.Label185.Text = "Insurer Counsel";
             // 
@@ -7878,7 +7131,7 @@
             this.Label186.AutoSize = true;
             this.Label186.Location = new System.Drawing.Point(3, 0);
             this.Label186.Name = "Label186";
-            this.Label186.Size = new System.Drawing.Size(53, 16);
+            this.Label186.Size = new System.Drawing.Size(52, 16);
             this.Label186.TabIndex = 0;
             this.Label186.Text = "Issues";
             // 
@@ -7942,7 +7195,7 @@
             this.Label187.AutoSize = true;
             this.Label187.Location = new System.Drawing.Point(357, 43);
             this.Label187.Name = "Label187";
-            this.Label187.Size = new System.Drawing.Size(111, 16);
+            this.Label187.Size = new System.Drawing.Size(110, 16);
             this.Label187.TabIndex = 26;
             this.Label187.Text = "Case Adjudicator";
             // 
@@ -7959,7 +7212,7 @@
             this.Label188.AutoSize = true;
             this.Label188.Location = new System.Drawing.Point(3, 0);
             this.Label188.Name = "Label188";
-            this.Label188.Size = new System.Drawing.Size(70, 16);
+            this.Label188.Size = new System.Drawing.Size(69, 16);
             this.Label188.TabIndex = 8;
             this.Label188.Text = "Filed Date";
             // 
@@ -7968,7 +7221,7 @@
             this.Label189.AutoSize = true;
             this.Label189.Location = new System.Drawing.Point(357, 258);
             this.Label189.Name = "Label189";
-            this.Label189.Size = new System.Drawing.Size(98, 16);
+            this.Label189.Size = new System.Drawing.Size(97, 16);
             this.Label189.TabIndex = 31;
             this.Label189.Text = "Amount Settled";
             // 
@@ -7993,7 +7246,7 @@
             this.Label190.AutoSize = true;
             this.Label190.Location = new System.Drawing.Point(3, 258);
             this.Label190.Name = "Label190";
-            this.Label190.Size = new System.Drawing.Size(82, 16);
+            this.Label190.Size = new System.Drawing.Size(81, 16);
             this.Label190.TabIndex = 15;
             this.Label190.Text = "Date Settled";
             // 
@@ -8010,7 +7263,7 @@
             this.Label191.AutoSize = true;
             this.Label191.Location = new System.Drawing.Point(3, 43);
             this.Label191.Name = "Label191";
-            this.Label191.Size = new System.Drawing.Size(70, 16);
+            this.Label191.Size = new System.Drawing.Size(69, 16);
             this.Label191.TabIndex = 10;
             this.Label191.Text = "Case Conf";
             // 
@@ -8019,7 +7272,7 @@
             this.Label192.AutoSize = true;
             this.Label192.Location = new System.Drawing.Point(357, 172);
             this.Label192.Name = "Label192";
-            this.Label192.Size = new System.Drawing.Size(88, 16);
+            this.Label192.Size = new System.Drawing.Size(87, 16);
             this.Label192.TabIndex = 29;
             this.Label192.Text = "Hearing Date";
             // 
@@ -8042,7 +7295,7 @@
             this.Label193.AutoSize = true;
             this.Label193.Location = new System.Drawing.Point(3, 215);
             this.Label193.Name = "Label193";
-            this.Label193.Size = new System.Drawing.Size(127, 16);
+            this.Label193.Size = new System.Drawing.Size(126, 16);
             this.Label193.TabIndex = 14;
             this.Label193.Text = "Hearing Adjudicator";
             // 
@@ -8058,7 +7311,7 @@
             this.Label194.AutoSize = true;
             this.Label194.Location = new System.Drawing.Point(357, 129);
             this.Label194.Name = "Label194";
-            this.Label194.Size = new System.Drawing.Size(77, 16);
+            this.Label194.Size = new System.Drawing.Size(76, 16);
             this.Label194.TabIndex = 28;
             this.Label194.Text = "Insurer Firm";
             // 
@@ -8074,7 +7327,7 @@
             this.Label195.AutoSize = true;
             this.Label195.Location = new System.Drawing.Point(357, 0);
             this.Label195.Name = "Label195";
-            this.Label195.Size = new System.Drawing.Size(108, 16);
+            this.Label195.Size = new System.Drawing.Size(107, 16);
             this.Label195.TabIndex = 24;
             this.Label195.Text = "Tribunal Number";
             // 
@@ -8090,7 +7343,7 @@
             this.Label196.AutoSize = true;
             this.Label196.Location = new System.Drawing.Point(357, 86);
             this.Label196.Name = "Label196";
-            this.Label196.Size = new System.Drawing.Size(48, 16);
+            this.Label196.Size = new System.Drawing.Size(47, 16);
             this.Label196.TabIndex = 27;
             this.Label196.Text = "Insurer";
             // 
@@ -8099,7 +7352,7 @@
             this.Label197.AutoSize = true;
             this.Label197.Location = new System.Drawing.Point(3, 172);
             this.Label197.Name = "Label197";
-            this.Label197.Size = new System.Drawing.Size(91, 16);
+            this.Label197.Size = new System.Drawing.Size(90, 16);
             this.Label197.TabIndex = 13;
             this.Label197.Text = "Hearing Type";
             // 
@@ -8108,7 +7361,7 @@
             this.Label198.AutoSize = true;
             this.Label198.Location = new System.Drawing.Point(3, 86);
             this.Label198.Name = "Label198";
-            this.Label198.Size = new System.Drawing.Size(57, 16);
+            this.Label198.Size = new System.Drawing.Size(56, 16);
             this.Label198.TabIndex = 11;
             this.Label198.Text = "Adjuster";
             // 
@@ -8131,7 +7384,7 @@
             this.Label199.AutoSize = true;
             this.Label199.Location = new System.Drawing.Point(3, 129);
             this.Label199.Name = "Label199";
-            this.Label199.Size = new System.Drawing.Size(100, 16);
+            this.Label199.Size = new System.Drawing.Size(99, 16);
             this.Label199.TabIndex = 12;
             this.Label199.Text = "Insurer Counsel";
             // 
@@ -8147,10 +7400,11 @@
             this.GroupBoxLat2.Controls.Add(this.GroupBox36);
             this.GroupBoxLat2.Controls.Add(this.TableLayoutPanel8);
             this.GroupBoxLat2.Controls.Add(this.TableLayoutPanel9);
+            this.GroupBoxLat2.Dock = System.Windows.Forms.DockStyle.Top;
             this.GroupBoxLat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxLat2.Location = new System.Drawing.Point(19, 354);
+            this.GroupBoxLat2.Location = new System.Drawing.Point(3, 336);
             this.GroupBoxLat2.Name = "GroupBoxLat2";
-            this.GroupBoxLat2.Size = new System.Drawing.Size(1285, 342);
+            this.GroupBoxLat2.Size = new System.Drawing.Size(1082, 334);
             this.GroupBoxLat2.TabIndex = 42;
             this.GroupBoxLat2.TabStop = false;
             this.GroupBoxLat2.Text = "LAT#2";
@@ -8247,7 +7501,7 @@
             this.Label144.AutoSize = true;
             this.Label144.Location = new System.Drawing.Point(3, 0);
             this.Label144.Name = "Label144";
-            this.Label144.Size = new System.Drawing.Size(53, 16);
+            this.Label144.Size = new System.Drawing.Size(52, 16);
             this.Label144.TabIndex = 0;
             this.Label144.Text = "Issues";
             // 
@@ -8310,7 +7564,7 @@
             this.Label145.AutoSize = true;
             this.Label145.Location = new System.Drawing.Point(357, 43);
             this.Label145.Name = "Label145";
-            this.Label145.Size = new System.Drawing.Size(111, 16);
+            this.Label145.Size = new System.Drawing.Size(110, 16);
             this.Label145.TabIndex = 26;
             this.Label145.Text = "Case Adjudicator";
             // 
@@ -8326,7 +7580,7 @@
             this.Label146.AutoSize = true;
             this.Label146.Location = new System.Drawing.Point(3, 0);
             this.Label146.Name = "Label146";
-            this.Label146.Size = new System.Drawing.Size(70, 16);
+            this.Label146.Size = new System.Drawing.Size(69, 16);
             this.Label146.TabIndex = 8;
             this.Label146.Text = "Filed Date";
             // 
@@ -8335,7 +7589,7 @@
             this.Label147.AutoSize = true;
             this.Label147.Location = new System.Drawing.Point(357, 258);
             this.Label147.Name = "Label147";
-            this.Label147.Size = new System.Drawing.Size(98, 16);
+            this.Label147.Size = new System.Drawing.Size(97, 16);
             this.Label147.TabIndex = 31;
             this.Label147.Text = "Amount Settled";
             // 
@@ -8358,7 +7612,7 @@
             this.Label148.AutoSize = true;
             this.Label148.Location = new System.Drawing.Point(3, 258);
             this.Label148.Name = "Label148";
-            this.Label148.Size = new System.Drawing.Size(82, 16);
+            this.Label148.Size = new System.Drawing.Size(81, 16);
             this.Label148.TabIndex = 15;
             this.Label148.Text = "Date Settled";
             // 
@@ -8374,7 +7628,7 @@
             this.Label149.AutoSize = true;
             this.Label149.Location = new System.Drawing.Point(3, 43);
             this.Label149.Name = "Label149";
-            this.Label149.Size = new System.Drawing.Size(70, 16);
+            this.Label149.Size = new System.Drawing.Size(69, 16);
             this.Label149.TabIndex = 10;
             this.Label149.Text = "Case Conf";
             // 
@@ -8383,7 +7637,7 @@
             this.Label150.AutoSize = true;
             this.Label150.Location = new System.Drawing.Point(357, 172);
             this.Label150.Name = "Label150";
-            this.Label150.Size = new System.Drawing.Size(88, 16);
+            this.Label150.Size = new System.Drawing.Size(87, 16);
             this.Label150.TabIndex = 29;
             this.Label150.Text = "Hearing Date";
             // 
@@ -8406,7 +7660,7 @@
             this.Label151.AutoSize = true;
             this.Label151.Location = new System.Drawing.Point(3, 215);
             this.Label151.Name = "Label151";
-            this.Label151.Size = new System.Drawing.Size(127, 16);
+            this.Label151.Size = new System.Drawing.Size(126, 16);
             this.Label151.TabIndex = 14;
             this.Label151.Text = "Hearing Adjudicator";
             // 
@@ -8422,7 +7676,7 @@
             this.Label152.AutoSize = true;
             this.Label152.Location = new System.Drawing.Point(357, 129);
             this.Label152.Name = "Label152";
-            this.Label152.Size = new System.Drawing.Size(77, 16);
+            this.Label152.Size = new System.Drawing.Size(76, 16);
             this.Label152.TabIndex = 28;
             this.Label152.Text = "Insurer Firm";
             // 
@@ -8438,7 +7692,7 @@
             this.Label153.AutoSize = true;
             this.Label153.Location = new System.Drawing.Point(357, 0);
             this.Label153.Name = "Label153";
-            this.Label153.Size = new System.Drawing.Size(108, 16);
+            this.Label153.Size = new System.Drawing.Size(107, 16);
             this.Label153.TabIndex = 24;
             this.Label153.Text = "Tribunal Number";
             // 
@@ -8454,7 +7708,7 @@
             this.Label154.AutoSize = true;
             this.Label154.Location = new System.Drawing.Point(357, 86);
             this.Label154.Name = "Label154";
-            this.Label154.Size = new System.Drawing.Size(48, 16);
+            this.Label154.Size = new System.Drawing.Size(47, 16);
             this.Label154.TabIndex = 27;
             this.Label154.Text = "Insurer";
             // 
@@ -8463,7 +7717,7 @@
             this.Label155.AutoSize = true;
             this.Label155.Location = new System.Drawing.Point(3, 172);
             this.Label155.Name = "Label155";
-            this.Label155.Size = new System.Drawing.Size(91, 16);
+            this.Label155.Size = new System.Drawing.Size(90, 16);
             this.Label155.TabIndex = 13;
             this.Label155.Text = "Hearing Type";
             // 
@@ -8472,7 +7726,7 @@
             this.Label156.AutoSize = true;
             this.Label156.Location = new System.Drawing.Point(3, 86);
             this.Label156.Name = "Label156";
-            this.Label156.Size = new System.Drawing.Size(57, 16);
+            this.Label156.Size = new System.Drawing.Size(56, 16);
             this.Label156.TabIndex = 11;
             this.Label156.Text = "Adjuster";
             // 
@@ -8495,7 +7749,7 @@
             this.Label157.AutoSize = true;
             this.Label157.Location = new System.Drawing.Point(3, 129);
             this.Label157.Name = "Label157";
-            this.Label157.Size = new System.Drawing.Size(100, 16);
+            this.Label157.Size = new System.Drawing.Size(99, 16);
             this.Label157.TabIndex = 12;
             this.Label157.Text = "Insurer Counsel";
             // 
@@ -8586,7 +7840,7 @@
             this.Label158.AutoSize = true;
             this.Label158.Location = new System.Drawing.Point(3, 0);
             this.Label158.Name = "Label158";
-            this.Label158.Size = new System.Drawing.Size(53, 16);
+            this.Label158.Size = new System.Drawing.Size(52, 16);
             this.Label158.TabIndex = 0;
             this.Label158.Text = "Issues";
             // 
@@ -8650,7 +7904,7 @@
             this.Label159.AutoSize = true;
             this.Label159.Location = new System.Drawing.Point(357, 43);
             this.Label159.Name = "Label159";
-            this.Label159.Size = new System.Drawing.Size(111, 16);
+            this.Label159.Size = new System.Drawing.Size(110, 16);
             this.Label159.TabIndex = 26;
             this.Label159.Text = "Case Adjudicator";
             // 
@@ -8667,7 +7921,7 @@
             this.Label160.AutoSize = true;
             this.Label160.Location = new System.Drawing.Point(3, 0);
             this.Label160.Name = "Label160";
-            this.Label160.Size = new System.Drawing.Size(70, 16);
+            this.Label160.Size = new System.Drawing.Size(69, 16);
             this.Label160.TabIndex = 8;
             this.Label160.Text = "Filed Date";
             // 
@@ -8676,7 +7930,7 @@
             this.Label161.AutoSize = true;
             this.Label161.Location = new System.Drawing.Point(357, 258);
             this.Label161.Name = "Label161";
-            this.Label161.Size = new System.Drawing.Size(98, 16);
+            this.Label161.Size = new System.Drawing.Size(97, 16);
             this.Label161.TabIndex = 31;
             this.Label161.Text = "Amount Settled";
             // 
@@ -8701,7 +7955,7 @@
             this.Label162.AutoSize = true;
             this.Label162.Location = new System.Drawing.Point(3, 258);
             this.Label162.Name = "Label162";
-            this.Label162.Size = new System.Drawing.Size(82, 16);
+            this.Label162.Size = new System.Drawing.Size(81, 16);
             this.Label162.TabIndex = 15;
             this.Label162.Text = "Date Settled";
             // 
@@ -8718,7 +7972,7 @@
             this.Label163.AutoSize = true;
             this.Label163.Location = new System.Drawing.Point(3, 43);
             this.Label163.Name = "Label163";
-            this.Label163.Size = new System.Drawing.Size(70, 16);
+            this.Label163.Size = new System.Drawing.Size(69, 16);
             this.Label163.TabIndex = 10;
             this.Label163.Text = "Case Conf";
             // 
@@ -8727,7 +7981,7 @@
             this.Label164.AutoSize = true;
             this.Label164.Location = new System.Drawing.Point(357, 172);
             this.Label164.Name = "Label164";
-            this.Label164.Size = new System.Drawing.Size(88, 16);
+            this.Label164.Size = new System.Drawing.Size(87, 16);
             this.Label164.TabIndex = 29;
             this.Label164.Text = "Hearing Date";
             // 
@@ -8750,7 +8004,7 @@
             this.Label165.AutoSize = true;
             this.Label165.Location = new System.Drawing.Point(3, 215);
             this.Label165.Name = "Label165";
-            this.Label165.Size = new System.Drawing.Size(127, 16);
+            this.Label165.Size = new System.Drawing.Size(126, 16);
             this.Label165.TabIndex = 14;
             this.Label165.Text = "Hearing Adjudicator";
             // 
@@ -8766,7 +8020,7 @@
             this.Label166.AutoSize = true;
             this.Label166.Location = new System.Drawing.Point(357, 129);
             this.Label166.Name = "Label166";
-            this.Label166.Size = new System.Drawing.Size(77, 16);
+            this.Label166.Size = new System.Drawing.Size(76, 16);
             this.Label166.TabIndex = 28;
             this.Label166.Text = "Insurer Firm";
             // 
@@ -8782,7 +8036,7 @@
             this.Label167.AutoSize = true;
             this.Label167.Location = new System.Drawing.Point(357, 0);
             this.Label167.Name = "Label167";
-            this.Label167.Size = new System.Drawing.Size(108, 16);
+            this.Label167.Size = new System.Drawing.Size(107, 16);
             this.Label167.TabIndex = 24;
             this.Label167.Text = "Tribunal Number";
             // 
@@ -8798,7 +8052,7 @@
             this.Label168.AutoSize = true;
             this.Label168.Location = new System.Drawing.Point(357, 86);
             this.Label168.Name = "Label168";
-            this.Label168.Size = new System.Drawing.Size(48, 16);
+            this.Label168.Size = new System.Drawing.Size(47, 16);
             this.Label168.TabIndex = 27;
             this.Label168.Text = "Insurer";
             // 
@@ -8807,7 +8061,7 @@
             this.Label169.AutoSize = true;
             this.Label169.Location = new System.Drawing.Point(3, 172);
             this.Label169.Name = "Label169";
-            this.Label169.Size = new System.Drawing.Size(91, 16);
+            this.Label169.Size = new System.Drawing.Size(90, 16);
             this.Label169.TabIndex = 13;
             this.Label169.Text = "Hearing Type";
             // 
@@ -8816,7 +8070,7 @@
             this.Label170.AutoSize = true;
             this.Label170.Location = new System.Drawing.Point(3, 86);
             this.Label170.Name = "Label170";
-            this.Label170.Size = new System.Drawing.Size(57, 16);
+            this.Label170.Size = new System.Drawing.Size(56, 16);
             this.Label170.TabIndex = 11;
             this.Label170.Text = "Adjuster";
             // 
@@ -8839,7 +8093,7 @@
             this.Label171.AutoSize = true;
             this.Label171.Location = new System.Drawing.Point(3, 129);
             this.Label171.Name = "Label171";
-            this.Label171.Size = new System.Drawing.Size(100, 16);
+            this.Label171.Size = new System.Drawing.Size(99, 16);
             this.Label171.TabIndex = 12;
             this.Label171.Text = "Insurer Counsel";
             // 
@@ -8855,10 +8109,11 @@
             this.GroupBoxLat1.Controls.Add(this.GroupBox34);
             this.GroupBoxLat1.Controls.Add(this.TableLayoutPanel3);
             this.GroupBoxLat1.Controls.Add(this.TableLayoutPanel2);
+            this.GroupBoxLat1.Dock = System.Windows.Forms.DockStyle.Top;
             this.GroupBoxLat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxLat1.Location = new System.Drawing.Point(19, 6);
+            this.GroupBoxLat1.Location = new System.Drawing.Point(3, 3);
             this.GroupBoxLat1.Name = "GroupBoxLat1";
-            this.GroupBoxLat1.Size = new System.Drawing.Size(1285, 342);
+            this.GroupBoxLat1.Size = new System.Drawing.Size(1082, 333);
             this.GroupBoxLat1.TabIndex = 41;
             this.GroupBoxLat1.TabStop = false;
             this.GroupBoxLat1.Text = "LAT#1";
@@ -8955,7 +8210,7 @@
             this.Label125.AutoSize = true;
             this.Label125.Location = new System.Drawing.Point(3, 0);
             this.Label125.Name = "Label125";
-            this.Label125.Size = new System.Drawing.Size(53, 16);
+            this.Label125.Size = new System.Drawing.Size(52, 16);
             this.Label125.TabIndex = 0;
             this.Label125.Text = "Issues";
             // 
@@ -9018,7 +8273,7 @@
             this.Label130.AutoSize = true;
             this.Label130.Location = new System.Drawing.Point(357, 43);
             this.Label130.Name = "Label130";
-            this.Label130.Size = new System.Drawing.Size(111, 16);
+            this.Label130.Size = new System.Drawing.Size(110, 16);
             this.Label130.TabIndex = 26;
             this.Label130.Text = "Case Adjudicator";
             // 
@@ -9034,7 +8289,7 @@
             this.Label132.AutoSize = true;
             this.Label132.Location = new System.Drawing.Point(3, 0);
             this.Label132.Name = "Label132";
-            this.Label132.Size = new System.Drawing.Size(70, 16);
+            this.Label132.Size = new System.Drawing.Size(69, 16);
             this.Label132.TabIndex = 8;
             this.Label132.Text = "Filed Date";
             // 
@@ -9043,7 +8298,7 @@
             this.Label133.AutoSize = true;
             this.Label133.Location = new System.Drawing.Point(357, 258);
             this.Label133.Name = "Label133";
-            this.Label133.Size = new System.Drawing.Size(98, 16);
+            this.Label133.Size = new System.Drawing.Size(97, 16);
             this.Label133.TabIndex = 31;
             this.Label133.Text = "Amount Settled";
             // 
@@ -9066,7 +8321,7 @@
             this.Label134.AutoSize = true;
             this.Label134.Location = new System.Drawing.Point(3, 258);
             this.Label134.Name = "Label134";
-            this.Label134.Size = new System.Drawing.Size(82, 16);
+            this.Label134.Size = new System.Drawing.Size(81, 16);
             this.Label134.TabIndex = 15;
             this.Label134.Text = "Date Settled";
             // 
@@ -9082,7 +8337,7 @@
             this.Label135.AutoSize = true;
             this.Label135.Location = new System.Drawing.Point(3, 43);
             this.Label135.Name = "Label135";
-            this.Label135.Size = new System.Drawing.Size(70, 16);
+            this.Label135.Size = new System.Drawing.Size(69, 16);
             this.Label135.TabIndex = 10;
             this.Label135.Text = "Case Conf";
             // 
@@ -9091,7 +8346,7 @@
             this.Label136.AutoSize = true;
             this.Label136.Location = new System.Drawing.Point(357, 172);
             this.Label136.Name = "Label136";
-            this.Label136.Size = new System.Drawing.Size(88, 16);
+            this.Label136.Size = new System.Drawing.Size(87, 16);
             this.Label136.TabIndex = 29;
             this.Label136.Text = "Hearing Date";
             // 
@@ -9114,7 +8369,7 @@
             this.Label137.AutoSize = true;
             this.Label137.Location = new System.Drawing.Point(3, 215);
             this.Label137.Name = "Label137";
-            this.Label137.Size = new System.Drawing.Size(127, 16);
+            this.Label137.Size = new System.Drawing.Size(126, 16);
             this.Label137.TabIndex = 14;
             this.Label137.Text = "Hearing Adjudicator";
             // 
@@ -9130,7 +8385,7 @@
             this.Label138.AutoSize = true;
             this.Label138.Location = new System.Drawing.Point(357, 129);
             this.Label138.Name = "Label138";
-            this.Label138.Size = new System.Drawing.Size(77, 16);
+            this.Label138.Size = new System.Drawing.Size(76, 16);
             this.Label138.TabIndex = 28;
             this.Label138.Text = "Insurer Firm";
             // 
@@ -9146,7 +8401,7 @@
             this.Label139.AutoSize = true;
             this.Label139.Location = new System.Drawing.Point(357, 0);
             this.Label139.Name = "Label139";
-            this.Label139.Size = new System.Drawing.Size(108, 16);
+            this.Label139.Size = new System.Drawing.Size(107, 16);
             this.Label139.TabIndex = 24;
             this.Label139.Text = "Tribunal Number";
             // 
@@ -9162,7 +8417,7 @@
             this.Label140.AutoSize = true;
             this.Label140.Location = new System.Drawing.Point(357, 86);
             this.Label140.Name = "Label140";
-            this.Label140.Size = new System.Drawing.Size(48, 16);
+            this.Label140.Size = new System.Drawing.Size(47, 16);
             this.Label140.TabIndex = 27;
             this.Label140.Text = "Insurer";
             // 
@@ -9171,7 +8426,7 @@
             this.Label141.AutoSize = true;
             this.Label141.Location = new System.Drawing.Point(3, 172);
             this.Label141.Name = "Label141";
-            this.Label141.Size = new System.Drawing.Size(91, 16);
+            this.Label141.Size = new System.Drawing.Size(90, 16);
             this.Label141.TabIndex = 13;
             this.Label141.Text = "Hearing Type";
             // 
@@ -9180,7 +8435,7 @@
             this.Label142.AutoSize = true;
             this.Label142.Location = new System.Drawing.Point(3, 86);
             this.Label142.Name = "Label142";
-            this.Label142.Size = new System.Drawing.Size(57, 16);
+            this.Label142.Size = new System.Drawing.Size(56, 16);
             this.Label142.TabIndex = 11;
             this.Label142.Text = "Adjuster";
             // 
@@ -9203,7 +8458,7 @@
             this.Label143.AutoSize = true;
             this.Label143.Location = new System.Drawing.Point(3, 129);
             this.Label143.Name = "Label143";
-            this.Label143.Size = new System.Drawing.Size(100, 16);
+            this.Label143.Size = new System.Drawing.Size(99, 16);
             this.Label143.TabIndex = 12;
             this.Label143.Text = "Insurer Counsel";
             // 
@@ -9294,7 +8549,7 @@
             this.Label82.AutoSize = true;
             this.Label82.Location = new System.Drawing.Point(3, 0);
             this.Label82.Name = "Label82";
-            this.Label82.Size = new System.Drawing.Size(53, 16);
+            this.Label82.Size = new System.Drawing.Size(52, 16);
             this.Label82.TabIndex = 0;
             this.Label82.Text = "Issues";
             // 
@@ -9358,7 +8613,7 @@
             this.Label126.AutoSize = true;
             this.Label126.Location = new System.Drawing.Point(357, 43);
             this.Label126.Name = "Label126";
-            this.Label126.Size = new System.Drawing.Size(111, 16);
+            this.Label126.Size = new System.Drawing.Size(110, 16);
             this.Label126.TabIndex = 26;
             this.Label126.Text = "Case Adjudicator";
             // 
@@ -9375,7 +8630,7 @@
             this.Label64.AutoSize = true;
             this.Label64.Location = new System.Drawing.Point(3, 0);
             this.Label64.Name = "Label64";
-            this.Label64.Size = new System.Drawing.Size(70, 16);
+            this.Label64.Size = new System.Drawing.Size(69, 16);
             this.Label64.TabIndex = 8;
             this.Label64.Text = "Filed Date";
             // 
@@ -9384,7 +8639,7 @@
             this.Label131.AutoSize = true;
             this.Label131.Location = new System.Drawing.Point(357, 258);
             this.Label131.Name = "Label131";
-            this.Label131.Size = new System.Drawing.Size(98, 16);
+            this.Label131.Size = new System.Drawing.Size(97, 16);
             this.Label131.TabIndex = 31;
             this.Label131.Text = "Amount Settled";
             // 
@@ -9409,7 +8664,7 @@
             this.Label123.AutoSize = true;
             this.Label123.Location = new System.Drawing.Point(3, 258);
             this.Label123.Name = "Label123";
-            this.Label123.Size = new System.Drawing.Size(82, 16);
+            this.Label123.Size = new System.Drawing.Size(81, 16);
             this.Label123.TabIndex = 15;
             this.Label123.Text = "Date Settled";
             // 
@@ -9426,7 +8681,7 @@
             this.Label118.AutoSize = true;
             this.Label118.Location = new System.Drawing.Point(3, 43);
             this.Label118.Name = "Label118";
-            this.Label118.Size = new System.Drawing.Size(70, 16);
+            this.Label118.Size = new System.Drawing.Size(69, 16);
             this.Label118.TabIndex = 10;
             this.Label118.Text = "Case Conf";
             // 
@@ -9435,7 +8690,7 @@
             this.Label129.AutoSize = true;
             this.Label129.Location = new System.Drawing.Point(357, 172);
             this.Label129.Name = "Label129";
-            this.Label129.Size = new System.Drawing.Size(88, 16);
+            this.Label129.Size = new System.Drawing.Size(87, 16);
             this.Label129.TabIndex = 29;
             this.Label129.Text = "Hearing Date";
             // 
@@ -9458,7 +8713,7 @@
             this.Label122.AutoSize = true;
             this.Label122.Location = new System.Drawing.Point(3, 215);
             this.Label122.Name = "Label122";
-            this.Label122.Size = new System.Drawing.Size(127, 16);
+            this.Label122.Size = new System.Drawing.Size(126, 16);
             this.Label122.TabIndex = 14;
             this.Label122.Text = "Hearing Adjudicator";
             // 
@@ -9474,7 +8729,7 @@
             this.Label128.AutoSize = true;
             this.Label128.Location = new System.Drawing.Point(357, 129);
             this.Label128.Name = "Label128";
-            this.Label128.Size = new System.Drawing.Size(77, 16);
+            this.Label128.Size = new System.Drawing.Size(76, 16);
             this.Label128.TabIndex = 28;
             this.Label128.Text = "Insurer Firm";
             // 
@@ -9490,7 +8745,7 @@
             this.Label124.AutoSize = true;
             this.Label124.Location = new System.Drawing.Point(357, 0);
             this.Label124.Name = "Label124";
-            this.Label124.Size = new System.Drawing.Size(108, 16);
+            this.Label124.Size = new System.Drawing.Size(107, 16);
             this.Label124.TabIndex = 24;
             this.Label124.Text = "Tribunal Number";
             // 
@@ -9506,7 +8761,7 @@
             this.Label127.AutoSize = true;
             this.Label127.Location = new System.Drawing.Point(357, 86);
             this.Label127.Name = "Label127";
-            this.Label127.Size = new System.Drawing.Size(48, 16);
+            this.Label127.Size = new System.Drawing.Size(47, 16);
             this.Label127.TabIndex = 27;
             this.Label127.Text = "Insurer";
             // 
@@ -9515,7 +8770,7 @@
             this.Label121.AutoSize = true;
             this.Label121.Location = new System.Drawing.Point(3, 172);
             this.Label121.Name = "Label121";
-            this.Label121.Size = new System.Drawing.Size(91, 16);
+            this.Label121.Size = new System.Drawing.Size(90, 16);
             this.Label121.TabIndex = 13;
             this.Label121.Text = "Hearing Type";
             // 
@@ -9524,7 +8779,7 @@
             this.Label119.AutoSize = true;
             this.Label119.Location = new System.Drawing.Point(3, 86);
             this.Label119.Name = "Label119";
-            this.Label119.Size = new System.Drawing.Size(57, 16);
+            this.Label119.Size = new System.Drawing.Size(56, 16);
             this.Label119.TabIndex = 11;
             this.Label119.Text = "Adjuster";
             // 
@@ -9547,7 +8802,7 @@
             this.Label120.AutoSize = true;
             this.Label120.Location = new System.Drawing.Point(3, 129);
             this.Label120.Name = "Label120";
-            this.Label120.Size = new System.Drawing.Size(100, 16);
+            this.Label120.Size = new System.Drawing.Size(99, 16);
             this.Label120.TabIndex = 12;
             this.Label120.Text = "Insurer Counsel";
             // 
@@ -9565,27 +8820,14 @@
             this.LAT1.Controls.Add(this.BtnLat1);
             this.LAT1.Controls.Add(this.DateLatSettledClosedtTxt);
             this.LAT1.Controls.Add(this.DeadLineForReplaySubmissionsTxt);
+            this.LAT1.Controls.Add(Label98);
+            this.LAT1.Controls.Add(this.DeadLineForReplaySubmissionsDtp);
+            this.LAT1.Controls.Add(Label99);
+            this.LAT1.Controls.Add(this.DateLatSettledClosedDtp);
             this.LAT1.Controls.Add(this.DeadLineToFileHearingSubmissionsTxt);
             this.LAT1.Controls.Add(this.DeadLineToFileAffidavitReportsTxt);
             this.LAT1.Controls.Add(this.DeadLineToDeliverProductionsToABCounselTxt);
             this.LAT1.Controls.Add(this.DeadLineToServeFileCaseConfSummaryTxt);
-            this.LAT1.Controls.Add(this.ActualDateLatServedOnInsurerTxt);
-            this.LAT1.Controls.Add(this.ProposedDateToFileLatTxt);
-            this.LAT1.Controls.Add(this.DueDateToDiscussPotenctialLatApplTxt);
-            this.LAT1.Controls.Add(this.HearingStarDateTxt);
-            this.LAT1.Controls.Add(this.DeadlineToReceiveInsurerTxt);
-            this.LAT1.Controls.Add(this.DeadLineToReceiveAffidavitReportsTxt);
-            this.LAT1.Controls.Add(this.DeadLineToReceiveABProductionsTxt);
-            this.LAT1.Controls.Add(this.LatCaseConfDateTxt);
-            this.LAT1.Controls.Add(this.InsuresResponseReceivedTxt);
-            this.LAT1.Controls.Add(this.ActualDateLatFiledTxt);
-            this.LAT1.Controls.Add(this.DateMetWithLawyerReDenialTxt);
-            this.LAT1.Controls.Add(Label91);
-            this.LAT1.Controls.Add(this.DueDateToDiscussPotenctialLatApplDtp);
-            this.LAT1.Controls.Add(Label92);
-            this.LAT1.Controls.Add(this.ProposedDateToFileLatDtp);
-            this.LAT1.Controls.Add(Label93);
-            this.LAT1.Controls.Add(this.ActualDateLatServedOnInsurerDtp);
             this.LAT1.Controls.Add(Label94);
             this.LAT1.Controls.Add(this.DeadLineToServeFileCaseConfSummaryDtp);
             this.LAT1.Controls.Add(Label95);
@@ -9594,11 +8836,30 @@
             this.LAT1.Controls.Add(this.DeadLineToFileAffidavitReportsDtp);
             this.LAT1.Controls.Add(Label97);
             this.LAT1.Controls.Add(this.DeadLineToFileHearingSubmissionsDtp);
-            this.LAT1.Controls.Add(Label98);
-            this.LAT1.Controls.Add(this.DeadLineForReplaySubmissionsDtp);
-            this.LAT1.Controls.Add(Label99);
-            this.LAT1.Controls.Add(this.DateLatSettledClosedDtp);
-            this.LAT1.Controls.Add(Label101);
+            this.LAT1.Controls.Add(this.ActualDateLatServedOnInsurerTxt);
+            this.LAT1.Controls.Add(this.ProposedDateToFileLatTxt);
+            this.LAT1.Controls.Add(Label92);
+            this.LAT1.Controls.Add(this.ProposedDateToFileLatDtp);
+            this.LAT1.Controls.Add(Label93);
+            this.LAT1.Controls.Add(this.ActualDateLatServedOnInsurerDtp);
+            this.LAT1.Controls.Add(this.DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT1.Controls.Add(Label91);
+            this.LAT1.Controls.Add(this.DueDateToDiscussPotenctialLatApplDtp);
+            this.LAT1.Controls.Add(this.HearingStarDateTxt);
+            this.LAT1.Controls.Add(this.DeadlineToReceiveInsurerTxt);
+            this.LAT1.Controls.Add(Label107);
+            this.LAT1.Controls.Add(this.DeadlineToReceiveInsurerDtp);
+            this.LAT1.Controls.Add(Label108);
+            this.LAT1.Controls.Add(this.HearingStarDateDtp);
+            this.LAT1.Controls.Add(this.DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT1.Controls.Add(Label106);
+            this.LAT1.Controls.Add(this.DeadLineToReceiveAffidavitReportsDtp);
+            this.LAT1.Controls.Add(this.DeadLineToReceiveABProductionsTxt);
+            this.LAT1.Controls.Add(this.LatCaseConfDateTxt);
+            this.LAT1.Controls.Add(this.InsuresResponseReceivedTxt);
+            this.LAT1.Controls.Add(this.ActualDateLatFiledTxt);
+            this.LAT1.Controls.Add(this.DateMetWithLawyerReDenialTxt);
+            this.LAT1.Controls.Add(DateMetWithLawyerReDenialTLbl);
             this.LAT1.Controls.Add(this.DateMetWithLawyerReDenialDtp);
             this.LAT1.Controls.Add(Label102);
             this.LAT1.Controls.Add(this.ActualDateLatFiledDtp);
@@ -9608,298 +8869,293 @@
             this.LAT1.Controls.Add(this.LatCaseConfDateDtp);
             this.LAT1.Controls.Add(Label105);
             this.LAT1.Controls.Add(this.DeadLineToReceiveABProductionsDtp);
-            this.LAT1.Controls.Add(Label106);
-            this.LAT1.Controls.Add(this.DeadLineToReceiveAffidavitReportsDtp);
-            this.LAT1.Controls.Add(Label107);
-            this.LAT1.Controls.Add(this.DeadlineToReceiveInsurerDtp);
-            this.LAT1.Controls.Add(Label108);
-            this.LAT1.Controls.Add(this.HearingStarDateDtp);
             this.LAT1.Location = new System.Drawing.Point(4, 26);
             this.LAT1.Name = "LAT1";
             this.LAT1.Padding = new System.Windows.Forms.Padding(3);
-            this.LAT1.Size = new System.Drawing.Size(1105, 252);
+            this.LAT1.Size = new System.Drawing.Size(1105, 256);
             this.LAT1.TabIndex = 0;
             this.LAT1.Text = "LAT 1";
             // 
             // BtnLat1
             // 
-            this.BtnLat1.Location = new System.Drawing.Point(1225, 308);
+            this.BtnLat1.Location = new System.Drawing.Point(1013, 224);
             this.BtnLat1.Name = "BtnLat1";
             this.BtnLat1.Size = new System.Drawing.Size(85, 23);
-            this.BtnLat1.TabIndex = 136;
+            this.BtnLat1.TabIndex = 148;
             this.BtnLat1.Text = "Operation";
             this.BtnLat1.UseVisualStyleBackColor = true;
             // 
             // DateLatSettledClosedtTxt
             // 
-            this.DateLatSettledClosedtTxt.Location = new System.Drawing.Point(1100, 283);
+            this.DateLatSettledClosedtTxt.Location = new System.Drawing.Point(999, 191);
             this.DateLatSettledClosedtTxt.Name = "DateLatSettledClosedtTxt";
             this.DateLatSettledClosedtTxt.ReadOnly = true;
-            this.DateLatSettledClosedtTxt.Size = new System.Drawing.Size(166, 23);
-            this.DateLatSettledClosedtTxt.TabIndex = 108;
+            this.DateLatSettledClosedtTxt.Size = new System.Drawing.Size(86, 23);
+            this.DateLatSettledClosedtTxt.TabIndex = 147;
             // 
             // DeadLineForReplaySubmissionsTxt
             // 
-            this.DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1100, 250);
+            this.DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(999, 165);
             this.DeadLineForReplaySubmissionsTxt.Name = "DeadLineForReplaySubmissionsTxt";
             this.DeadLineForReplaySubmissionsTxt.ReadOnly = true;
-            this.DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(166, 23);
-            this.DeadLineForReplaySubmissionsTxt.TabIndex = 107;
-            // 
-            // DeadLineToFileHearingSubmissionsTxt
-            // 
-            this.DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1100, 217);
-            this.DeadLineToFileHearingSubmissionsTxt.Name = "DeadLineToFileHearingSubmissionsTxt";
-            this.DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
-            this.DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(166, 23);
-            this.DeadLineToFileHearingSubmissionsTxt.TabIndex = 106;
-            // 
-            // DeadLineToFileAffidavitReportsTxt
-            // 
-            this.DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1100, 181);
-            this.DeadLineToFileAffidavitReportsTxt.Name = "DeadLineToFileAffidavitReportsTxt";
-            this.DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
-            this.DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(166, 23);
-            this.DeadLineToFileAffidavitReportsTxt.TabIndex = 105;
-            // 
-            // DeadLineToDeliverProductionsToABCounselTxt
-            // 
-            this.DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1100, 148);
-            this.DeadLineToDeliverProductionsToABCounselTxt.Name = "DeadLineToDeliverProductionsToABCounselTxt";
-            this.DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
-            this.DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(166, 23);
-            this.DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 104;
-            // 
-            // DeadLineToServeFileCaseConfSummaryTxt
-            // 
-            this.DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1100, 115);
-            this.DeadLineToServeFileCaseConfSummaryTxt.Name = "DeadLineToServeFileCaseConfSummaryTxt";
-            this.DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
-            this.DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(166, 23);
-            this.DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 103;
-            // 
-            // ActualDateLatServedOnInsurerTxt
-            // 
-            this.ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1100, 88);
-            this.ActualDateLatServedOnInsurerTxt.Name = "ActualDateLatServedOnInsurerTxt";
-            this.ActualDateLatServedOnInsurerTxt.ReadOnly = true;
-            this.ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(166, 23);
-            this.ActualDateLatServedOnInsurerTxt.TabIndex = 102;
-            // 
-            // ProposedDateToFileLatTxt
-            // 
-            this.ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1100, 55);
-            this.ProposedDateToFileLatTxt.Name = "ProposedDateToFileLatTxt";
-            this.ProposedDateToFileLatTxt.ReadOnly = true;
-            this.ProposedDateToFileLatTxt.Size = new System.Drawing.Size(166, 23);
-            this.ProposedDateToFileLatTxt.TabIndex = 101;
-            // 
-            // DueDateToDiscussPotenctialLatApplTxt
-            // 
-            this.DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1100, 22);
-            this.DueDateToDiscussPotenctialLatApplTxt.Name = "DueDateToDiscussPotenctialLatApplTxt";
-            this.DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
-            this.DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(166, 23);
-            this.DueDateToDiscussPotenctialLatApplTxt.TabIndex = 100;
-            // 
-            // HearingStarDateTxt
-            // 
-            this.HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
-            this.HearingStarDateTxt.Name = "HearingStarDateTxt";
-            this.HearingStarDateTxt.ReadOnly = true;
-            this.HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
-            this.HearingStarDateTxt.TabIndex = 99;
-            // 
-            // DeadlineToReceiveInsurerTxt
-            // 
-            this.DeadlineToReceiveInsurerTxt.Location = new System.Drawing.Point(431, 254);
-            this.DeadlineToReceiveInsurerTxt.Name = "DeadlineToReceiveInsurerTxt";
-            this.DeadlineToReceiveInsurerTxt.ReadOnly = true;
-            this.DeadlineToReceiveInsurerTxt.Size = new System.Drawing.Size(188, 23);
-            this.DeadlineToReceiveInsurerTxt.TabIndex = 98;
-            // 
-            // DeadLineToReceiveAffidavitReportsTxt
-            // 
-            this.DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(431, 221);
-            this.DeadLineToReceiveAffidavitReportsTxt.Name = "DeadLineToReceiveAffidavitReportsTxt";
-            this.DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
-            this.DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(188, 23);
-            this.DeadLineToReceiveAffidavitReportsTxt.TabIndex = 97;
-            // 
-            // DeadLineToReceiveABProductionsTxt
-            // 
-            this.DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(431, 188);
-            this.DeadLineToReceiveABProductionsTxt.Name = "DeadLineToReceiveABProductionsTxt";
-            this.DeadLineToReceiveABProductionsTxt.ReadOnly = true;
-            this.DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(188, 23);
-            this.DeadLineToReceiveABProductionsTxt.TabIndex = 96;
-            // 
-            // LatCaseConfDateTxt
-            // 
-            this.LatCaseConfDateTxt.Location = new System.Drawing.Point(431, 155);
-            this.LatCaseConfDateTxt.Name = "LatCaseConfDateTxt";
-            this.LatCaseConfDateTxt.ReadOnly = true;
-            this.LatCaseConfDateTxt.Size = new System.Drawing.Size(188, 23);
-            this.LatCaseConfDateTxt.TabIndex = 95;
-            // 
-            // InsuresResponseReceivedTxt
-            // 
-            this.InsuresResponseReceivedTxt.Location = new System.Drawing.Point(431, 122);
-            this.InsuresResponseReceivedTxt.Name = "InsuresResponseReceivedTxt";
-            this.InsuresResponseReceivedTxt.ReadOnly = true;
-            this.InsuresResponseReceivedTxt.Size = new System.Drawing.Size(188, 23);
-            this.InsuresResponseReceivedTxt.TabIndex = 94;
-            // 
-            // ActualDateLatFiledTxt
-            // 
-            this.ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
-            this.ActualDateLatFiledTxt.Name = "ActualDateLatFiledTxt";
-            this.ActualDateLatFiledTxt.ReadOnly = true;
-            this.ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
-            this.ActualDateLatFiledTxt.TabIndex = 93;
-            // 
-            // DateMetWithLawyerReDenialTxt
-            // 
-            this.DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
-            this.DateMetWithLawyerReDenialTxt.Name = "DateMetWithLawyerReDenialTxt";
-            this.DateMetWithLawyerReDenialTxt.ReadOnly = true;
-            this.DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
-            this.DateMetWithLawyerReDenialTxt.TabIndex = 92;
-            // 
-            // DueDateToDiscussPotenctialLatApplDtp
-            // 
-            this.DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1270, 22);
-            this.DueDateToDiscussPotenctialLatApplDtp.Name = "DueDateToDiscussPotenctialLatApplDtp";
-            this.DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
-            this.DueDateToDiscussPotenctialLatApplDtp.TabIndex = 75;
-            this.DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // ProposedDateToFileLatDtp
-            // 
-            this.ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1270, 50);
-            this.ProposedDateToFileLatDtp.Name = "ProposedDateToFileLatDtp";
-            this.ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
-            this.ProposedDateToFileLatDtp.TabIndex = 77;
-            this.ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // ActualDateLatServedOnInsurerDtp
-            // 
-            this.ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1270, 83);
-            this.ActualDateLatServedOnInsurerDtp.Name = "ActualDateLatServedOnInsurerDtp";
-            this.ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.ActualDateLatServedOnInsurerDtp.TabIndex = 79;
-            this.ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // DeadLineToServeFileCaseConfSummaryDtp
-            // 
-            this.DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1270, 116);
-            this.DeadLineToServeFileCaseConfSummaryDtp.Name = "DeadLineToServeFileCaseConfSummaryDtp";
-            this.DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 81;
-            this.DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // DeadLineToDeliverProductionsToABCounselDtp
-            // 
-            this.DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1270, 149);
-            this.DeadLineToDeliverProductionsToABCounselDtp.Name = "DeadLineToDeliverProductionsToABCounselDtp";
-            this.DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 83;
-            this.DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // DeadLineToFileAffidavitReportsDtp
-            // 
-            this.DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1270, 182);
-            this.DeadLineToFileAffidavitReportsDtp.Name = "DeadLineToFileAffidavitReportsDtp";
-            this.DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadLineToFileAffidavitReportsDtp.TabIndex = 85;
-            this.DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // DeadLineToFileHearingSubmissionsDtp
-            // 
-            this.DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1270, 217);
-            this.DeadLineToFileHearingSubmissionsDtp.Name = "DeadLineToFileHearingSubmissionsDtp";
-            this.DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadLineToFileHearingSubmissionsDtp.TabIndex = 87;
-            this.DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.DeadLineForReplaySubmissionsTxt.TabIndex = 146;
             // 
             // DeadLineForReplaySubmissionsDtp
             // 
-            this.DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1270, 251);
+            this.DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1086, 165);
             this.DeadLineForReplaySubmissionsDtp.Name = "DeadLineForReplaySubmissionsDtp";
             this.DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadLineForReplaySubmissionsDtp.TabIndex = 89;
-            this.DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineForReplaySubmissionsDtp.TabIndex = 143;
+            this.DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
             // 
             // DateLatSettledClosedDtp
             // 
-            this.DateLatSettledClosedDtp.Location = new System.Drawing.Point(1270, 284);
+            this.DateLatSettledClosedDtp.Location = new System.Drawing.Point(1087, 191);
             this.DateLatSettledClosedDtp.Name = "DateLatSettledClosedDtp";
             this.DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
-            this.DateLatSettledClosedDtp.TabIndex = 91;
-            this.DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DateLatSettledClosedDtp.TabIndex = 145;
+            this.DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
             // 
-            // DateMetWithLawyerReDenialDtp
+            // DeadLineToFileHearingSubmissionsTxt
             // 
-            this.DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
-            this.DateMetWithLawyerReDenialDtp.Name = "DateMetWithLawyerReDenialDtp";
-            this.DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
-            this.DateMetWithLawyerReDenialDtp.TabIndex = 59;
-            this.DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(999, 139);
+            this.DeadLineToFileHearingSubmissionsTxt.Name = "DeadLineToFileHearingSubmissionsTxt";
+            this.DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.DeadLineToFileHearingSubmissionsTxt.TabIndex = 141;
             // 
-            // ActualDateLatFiledDtp
+            // DeadLineToFileAffidavitReportsTxt
             // 
-            this.ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
-            this.ActualDateLatFiledDtp.Name = "ActualDateLatFiledDtp";
-            this.ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
-            this.ActualDateLatFiledDtp.TabIndex = 61;
-            this.ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(999, 113);
+            this.DeadLineToFileAffidavitReportsTxt.Name = "DeadLineToFileAffidavitReportsTxt";
+            this.DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(86, 23);
+            this.DeadLineToFileAffidavitReportsTxt.TabIndex = 140;
             // 
-            // InsuresResponseReceivedDtp
+            // DeadLineToDeliverProductionsToABCounselTxt
             // 
-            this.InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
-            this.InsuresResponseReceivedDtp.Name = "InsuresResponseReceivedDtp";
-            this.InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
-            this.InsuresResponseReceivedDtp.TabIndex = 63;
-            this.InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(999, 87);
+            this.DeadLineToDeliverProductionsToABCounselTxt.Name = "DeadLineToDeliverProductionsToABCounselTxt";
+            this.DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(86, 23);
+            this.DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 139;
             // 
-            // LatCaseConfDateDtp
+            // DeadLineToServeFileCaseConfSummaryTxt
             // 
-            this.LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
-            this.LatCaseConfDateDtp.Name = "LatCaseConfDateDtp";
-            this.LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.LatCaseConfDateDtp.TabIndex = 65;
-            this.LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(999, 61);
+            this.DeadLineToServeFileCaseConfSummaryTxt.Name = "DeadLineToServeFileCaseConfSummaryTxt";
+            this.DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(86, 23);
+            this.DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 138;
             // 
-            // DeadLineToReceiveABProductionsDtp
+            // DeadLineToServeFileCaseConfSummaryDtp
             // 
-            this.DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
-            this.DeadLineToReceiveABProductionsDtp.Name = "DeadLineToReceiveABProductionsDtp";
-            this.DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadLineToReceiveABProductionsDtp.TabIndex = 67;
-            this.DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1086, 61);
+            this.DeadLineToServeFileCaseConfSummaryDtp.Name = "DeadLineToServeFileCaseConfSummaryDtp";
+            this.DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 131;
+            this.DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
             // 
-            // DeadLineToReceiveAffidavitReportsDtp
+            // DeadLineToDeliverProductionsToABCounselDtp
             // 
-            this.DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
-            this.DeadLineToReceiveAffidavitReportsDtp.Name = "DeadLineToReceiveAffidavitReportsDtp";
-            this.DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadLineToReceiveAffidavitReportsDtp.TabIndex = 69;
-            this.DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1086, 87);
+            this.DeadLineToDeliverProductionsToABCounselDtp.Name = "DeadLineToDeliverProductionsToABCounselDtp";
+            this.DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 133;
+            this.DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // DeadLineToFileAffidavitReportsDtp
+            // 
+            this.DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1086, 113);
+            this.DeadLineToFileAffidavitReportsDtp.Name = "DeadLineToFileAffidavitReportsDtp";
+            this.DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToFileAffidavitReportsDtp.TabIndex = 135;
+            this.DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1086, 139);
+            this.DeadLineToFileHearingSubmissionsDtp.Name = "DeadLineToFileHearingSubmissionsDtp";
+            this.DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToFileHearingSubmissionsDtp.TabIndex = 137;
+            this.DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // ActualDateLatServedOnInsurerTxt
+            // 
+            this.ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(999, 36);
+            this.ActualDateLatServedOnInsurerTxt.Name = "ActualDateLatServedOnInsurerTxt";
+            this.ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(85, 23);
+            this.ActualDateLatServedOnInsurerTxt.TabIndex = 129;
+            // 
+            // ProposedDateToFileLatTxt
+            // 
+            this.ProposedDateToFileLatTxt.Location = new System.Drawing.Point(999, 10);
+            this.ProposedDateToFileLatTxt.Name = "ProposedDateToFileLatTxt";
+            this.ProposedDateToFileLatTxt.ReadOnly = true;
+            this.ProposedDateToFileLatTxt.Size = new System.Drawing.Size(85, 23);
+            this.ProposedDateToFileLatTxt.TabIndex = 128;
+            // 
+            // ProposedDateToFileLatDtp
+            // 
+            this.ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1085, 10);
+            this.ProposedDateToFileLatDtp.Name = "ProposedDateToFileLatDtp";
+            this.ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.ProposedDateToFileLatDtp.TabIndex = 125;
+            this.ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // ActualDateLatServedOnInsurerDtp
+            // 
+            this.ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1085, 36);
+            this.ActualDateLatServedOnInsurerDtp.Name = "ActualDateLatServedOnInsurerDtp";
+            this.ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.ActualDateLatServedOnInsurerDtp.TabIndex = 127;
+            this.ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(395, 221);
+            this.DueDateToDiscussPotenctialLatApplTxt.Name = "DueDateToDiscussPotenctialLatApplTxt";
+            this.DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(93, 23);
+            this.DueDateToDiscussPotenctialLatApplTxt.TabIndex = 123;
+            // 
+            // DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(489, 221);
+            this.DueDateToDiscussPotenctialLatApplDtp.Name = "DueDateToDiscussPotenctialLatApplDtp";
+            this.DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.DueDateToDiscussPotenctialLatApplDtp.TabIndex = 122;
+            this.DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // HearingStarDateTxt
+            // 
+            this.HearingStarDateTxt.Location = new System.Drawing.Point(395, 192);
+            this.HearingStarDateTxt.Name = "HearingStarDateTxt";
+            this.HearingStarDateTxt.ReadOnly = true;
+            this.HearingStarDateTxt.Size = new System.Drawing.Size(92, 23);
+            this.HearingStarDateTxt.TabIndex = 120;
+            // 
+            // DeadlineToReceiveInsurerTxt
+            // 
+            this.DeadlineToReceiveInsurerTxt.Location = new System.Drawing.Point(395, 165);
+            this.DeadlineToReceiveInsurerTxt.Name = "DeadlineToReceiveInsurerTxt";
+            this.DeadlineToReceiveInsurerTxt.ReadOnly = true;
+            this.DeadlineToReceiveInsurerTxt.Size = new System.Drawing.Size(92, 23);
+            this.DeadlineToReceiveInsurerTxt.TabIndex = 119;
             // 
             // DeadlineToReceiveInsurerDtp
             // 
-            this.DeadlineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
+            this.DeadlineToReceiveInsurerDtp.Location = new System.Drawing.Point(489, 165);
             this.DeadlineToReceiveInsurerDtp.Name = "DeadlineToReceiveInsurerDtp";
             this.DeadlineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.DeadlineToReceiveInsurerDtp.TabIndex = 71;
-            this.DeadlineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            this.DeadlineToReceiveInsurerDtp.TabIndex = 116;
+            this.DeadlineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
             // 
             // HearingStarDateDtp
             // 
-            this.HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
+            this.HearingStarDateDtp.Location = new System.Drawing.Point(489, 192);
             this.HearingStarDateDtp.Name = "HearingStarDateDtp";
             this.HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.HearingStarDateDtp.TabIndex = 73;
+            this.HearingStarDateDtp.TabIndex = 118;
+            this.HearingStarDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(395, 138);
+            this.DeadLineToReceiveAffidavitReportsTxt.Name = "DeadLineToReceiveAffidavitReportsTxt";
+            this.DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(93, 23);
+            this.DeadLineToReceiveAffidavitReportsTxt.TabIndex = 114;
+            // 
+            // DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(489, 138);
+            this.DeadLineToReceiveAffidavitReportsDtp.Name = "DeadLineToReceiveAffidavitReportsDtp";
+            this.DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToReceiveAffidavitReportsDtp.TabIndex = 113;
+            this.DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // DeadLineToReceiveABProductionsTxt
+            // 
+            this.DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(395, 111);
+            this.DeadLineToReceiveABProductionsTxt.Name = "DeadLineToReceiveABProductionsTxt";
+            this.DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(93, 23);
+            this.DeadLineToReceiveABProductionsTxt.TabIndex = 111;
+            // 
+            // LatCaseConfDateTxt
+            // 
+            this.LatCaseConfDateTxt.Location = new System.Drawing.Point(395, 85);
+            this.LatCaseConfDateTxt.Name = "LatCaseConfDateTxt";
+            this.LatCaseConfDateTxt.ReadOnly = true;
+            this.LatCaseConfDateTxt.Size = new System.Drawing.Size(93, 23);
+            this.LatCaseConfDateTxt.TabIndex = 110;
+            // 
+            // InsuresResponseReceivedTxt
+            // 
+            this.InsuresResponseReceivedTxt.Location = new System.Drawing.Point(395, 59);
+            this.InsuresResponseReceivedTxt.Name = "InsuresResponseReceivedTxt";
+            this.InsuresResponseReceivedTxt.ReadOnly = true;
+            this.InsuresResponseReceivedTxt.Size = new System.Drawing.Size(92, 23);
+            this.InsuresResponseReceivedTxt.TabIndex = 109;
+            // 
+            // ActualDateLatFiledTxt
+            // 
+            this.ActualDateLatFiledTxt.Location = new System.Drawing.Point(395, 34);
+            this.ActualDateLatFiledTxt.Name = "ActualDateLatFiledTxt";
+            this.ActualDateLatFiledTxt.ReadOnly = true;
+            this.ActualDateLatFiledTxt.Size = new System.Drawing.Size(93, 23);
+            this.ActualDateLatFiledTxt.TabIndex = 108;
+            // 
+            // DateMetWithLawyerReDenialTxt
+            // 
+            this.DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(395, 9);
+            this.DateMetWithLawyerReDenialTxt.Name = "DateMetWithLawyerReDenialTxt";
+            this.DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(93, 23);
+            this.DateMetWithLawyerReDenialTxt.TabIndex = 107;
+            // 
+            // DateMetWithLawyerReDenialDtp
+            // 
+            this.DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(489, 9);
+            this.DateMetWithLawyerReDenialDtp.Name = "DateMetWithLawyerReDenialDtp";
+            this.DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.DateMetWithLawyerReDenialDtp.TabIndex = 98;
+            this.DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // ActualDateLatFiledDtp
+            // 
+            this.ActualDateLatFiledDtp.Location = new System.Drawing.Point(489, 34);
+            this.ActualDateLatFiledDtp.Name = "ActualDateLatFiledDtp";
+            this.ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.ActualDateLatFiledDtp.TabIndex = 100;
+            this.ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // InsuresResponseReceivedDtp
+            // 
+            this.InsuresResponseReceivedDtp.Location = new System.Drawing.Point(489, 59);
+            this.InsuresResponseReceivedDtp.Name = "InsuresResponseReceivedDtp";
+            this.InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.InsuresResponseReceivedDtp.TabIndex = 102;
+            this.InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // LatCaseConfDateDtp
+            // 
+            this.LatCaseConfDateDtp.Location = new System.Drawing.Point(489, 85);
+            this.LatCaseConfDateDtp.Name = "LatCaseConfDateDtp";
+            this.LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.LatCaseConfDateDtp.TabIndex = 104;
+            this.LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // DeadLineToReceiveABProductionsDtp
+            // 
+            this.DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(489, 111);
+            this.DeadLineToReceiveABProductionsDtp.Name = "DeadLineToReceiveABProductionsDtp";
+            this.DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.DeadLineToReceiveABProductionsDtp.TabIndex = 106;
+            this.DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
             // 
             // LAT2
             // 
@@ -9908,684 +9164,124 @@
             this.LAT2.Controls.Add(this.BtnLat2);
             this.LAT2.Controls.Add(this.Lat2DateLatSettledClosedTxt);
             this.LAT2.Controls.Add(this.Lat2DeadLineForReplaySubmissionsTxt);
+            this.LAT2.Controls.Add(label73);
+            this.LAT2.Controls.Add(this.Lat2DeadLineForReplaySubmissionsDtp);
+            this.LAT2.Controls.Add(label74);
+            this.LAT2.Controls.Add(this.Lat2DateLatSettledClosedDtp);
             this.LAT2.Controls.Add(this.Lat2DeadLineToFileHearingSubmissionsTxt);
             this.LAT2.Controls.Add(this.Lat2DeadLineToFileAffidavitReportsTxt);
             this.LAT2.Controls.Add(this.Lat2DeadLineToDeliverProductionsToABCounselTxt);
             this.LAT2.Controls.Add(this.Lat2DeadLineToServeFileCaseConfSummaryTxt);
+            this.LAT2.Controls.Add(label75);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToServeFileCaseConfSummaryDtp);
+            this.LAT2.Controls.Add(label76);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToDeliverProductionsToABCounselDtp);
+            this.LAT2.Controls.Add(label77);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToFileAffidavitReportsDtp);
+            this.LAT2.Controls.Add(label78);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToFileHearingSubmissionsDtp);
             this.LAT2.Controls.Add(this.Lat2ActualDateLatServedOnInsurerTxt);
             this.LAT2.Controls.Add(this.Lat2ProposedDateToFileLatTxt);
+            this.LAT2.Controls.Add(label79);
+            this.LAT2.Controls.Add(this.Lat2ProposedDateToFileLatDtp);
+            this.LAT2.Controls.Add(label80);
+            this.LAT2.Controls.Add(this.Lat2ActualDateLatServedOnInsurerDtp);
             this.LAT2.Controls.Add(this.Lat2DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT2.Controls.Add(label81);
+            this.LAT2.Controls.Add(this.Lat2DueDateToDiscussPotenctialLatApplDtp);
             this.LAT2.Controls.Add(this.Lat2HearingStarDateTxt);
             this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveInsurerTxt);
+            this.LAT2.Controls.Add(label83);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveInsurerDtp);
+            this.LAT2.Controls.Add(label84);
+            this.LAT2.Controls.Add(this.Lat2HearingStarDateDtp);
             this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT2.Controls.Add(label85);
+            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveAffidavitReportsDtp);
             this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveABProductionsTxt);
             this.LAT2.Controls.Add(this.Lat2LatCaseConfDateTxt);
             this.LAT2.Controls.Add(this.Lat2InsuresResponseReceivedTxt);
             this.LAT2.Controls.Add(this.Lat2ActualDateLatFiledTxt);
             this.LAT2.Controls.Add(this.Lat2DateMetWithLawyerReDenialTxt);
-            this.LAT2.Controls.Add(Label73);
-            this.LAT2.Controls.Add(this.Lat2DueDateToDiscussPotenctialLatApplDtp);
-            this.LAT2.Controls.Add(Label74);
-            this.LAT2.Controls.Add(this.Lat2ProposedDateToFileLatDtp);
-            this.LAT2.Controls.Add(Label75);
-            this.LAT2.Controls.Add(this.Lat2ActualDateLatServedOnInsurerDtp);
-            this.LAT2.Controls.Add(Label76);
-            this.LAT2.Controls.Add(this.Lat2DeadLineToServeFileCaseConfSummaryDtp);
-            this.LAT2.Controls.Add(Label77);
-            this.LAT2.Controls.Add(this.Lat2DeadLineToDeliverProductionsToABCounselDtp);
-            this.LAT2.Controls.Add(Label78);
-            this.LAT2.Controls.Add(this.Lat2DeadLineToFileAffidavitReportsDtp);
-            this.LAT2.Controls.Add(Label79);
-            this.LAT2.Controls.Add(this.Lat2DeadLineToFileHearingSubmissionsDtp);
-            this.LAT2.Controls.Add(Label80);
-            this.LAT2.Controls.Add(this.Lat2DeadLineForReplaySubmissionsDtp);
-            this.LAT2.Controls.Add(Label81);
-            this.LAT2.Controls.Add(this.Lat2DateLatSettledClosedDtp);
-            this.LAT2.Controls.Add(Label83);
+            this.LAT2.Controls.Add(label86);
             this.LAT2.Controls.Add(this.Lat2DateMetWithLawyerReDenialDtp);
-            this.LAT2.Controls.Add(Label84);
+            this.LAT2.Controls.Add(label87);
             this.LAT2.Controls.Add(this.Lat2ActualDateLatFiledDtp);
-            this.LAT2.Controls.Add(Label85);
+            this.LAT2.Controls.Add(label88);
             this.LAT2.Controls.Add(this.Lat2InsuresResponseReceivedDtp);
-            this.LAT2.Controls.Add(Label86);
+            this.LAT2.Controls.Add(label89);
             this.LAT2.Controls.Add(this.Lat2LatCaseConfDateDtp);
-            this.LAT2.Controls.Add(Label87);
+            this.LAT2.Controls.Add(label90);
             this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveABProductionsDtp);
-            this.LAT2.Controls.Add(Label88);
-            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveAffidavitReportsDtp);
-            this.LAT2.Controls.Add(Label89);
-            this.LAT2.Controls.Add(this.Lat2DeadLineToReceiveInsurerDtp);
-            this.LAT2.Controls.Add(Label90);
-            this.LAT2.Controls.Add(this.Lat2HearingStarDateDtp);
             this.LAT2.Location = new System.Drawing.Point(4, 26);
             this.LAT2.Name = "LAT2";
             this.LAT2.Padding = new System.Windows.Forms.Padding(3);
-            this.LAT2.Size = new System.Drawing.Size(1105, 256);
+            this.LAT2.Size = new System.Drawing.Size(1105, 252);
             this.LAT2.TabIndex = 1;
             this.LAT2.Text = "LAT 2";
-            // 
-            // BtnLat2
-            // 
-            this.BtnLat2.Location = new System.Drawing.Point(1225, 306);
-            this.BtnLat2.Name = "BtnLat2";
-            this.BtnLat2.Size = new System.Drawing.Size(85, 23);
-            this.BtnLat2.TabIndex = 136;
-            this.BtnLat2.Text = "Operation";
-            this.BtnLat2.UseVisualStyleBackColor = true;
-            // 
-            // Lat2DateLatSettledClosedTxt
-            // 
-            this.Lat2DateLatSettledClosedTxt.Location = new System.Drawing.Point(1081, 280);
-            this.Lat2DateLatSettledClosedTxt.Name = "Lat2DateLatSettledClosedTxt";
-            this.Lat2DateLatSettledClosedTxt.ReadOnly = true;
-            this.Lat2DateLatSettledClosedTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DateLatSettledClosedTxt.TabIndex = 109;
-            // 
-            // Lat2DeadLineForReplaySubmissionsTxt
-            // 
-            this.Lat2DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1081, 247);
-            this.Lat2DeadLineForReplaySubmissionsTxt.Name = "Lat2DeadLineForReplaySubmissionsTxt";
-            this.Lat2DeadLineForReplaySubmissionsTxt.ReadOnly = true;
-            this.Lat2DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineForReplaySubmissionsTxt.TabIndex = 108;
-            // 
-            // Lat2DeadLineToFileHearingSubmissionsTxt
-            // 
-            this.Lat2DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1081, 214);
-            this.Lat2DeadLineToFileHearingSubmissionsTxt.Name = "Lat2DeadLineToFileHearingSubmissionsTxt";
-            this.Lat2DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
-            this.Lat2DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineToFileHearingSubmissionsTxt.TabIndex = 107;
-            // 
-            // Lat2DeadLineToFileAffidavitReportsTxt
-            // 
-            this.Lat2DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1081, 181);
-            this.Lat2DeadLineToFileAffidavitReportsTxt.Name = "Lat2DeadLineToFileAffidavitReportsTxt";
-            this.Lat2DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
-            this.Lat2DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineToFileAffidavitReportsTxt.TabIndex = 106;
-            // 
-            // Lat2DeadLineToDeliverProductionsToABCounselTxt
-            // 
-            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1081, 148);
-            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat2DeadLineToDeliverProductionsToABCounselTxt";
-            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
-            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 105;
-            // 
-            // Lat2DeadLineToServeFileCaseConfSummaryTxt
-            // 
-            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1081, 115);
-            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat2DeadLineToServeFileCaseConfSummaryTxt";
-            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
-            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 104;
-            // 
-            // Lat2ActualDateLatServedOnInsurerTxt
-            // 
-            this.Lat2ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1081, 83);
-            this.Lat2ActualDateLatServedOnInsurerTxt.Name = "Lat2ActualDateLatServedOnInsurerTxt";
-            this.Lat2ActualDateLatServedOnInsurerTxt.ReadOnly = true;
-            this.Lat2ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2ActualDateLatServedOnInsurerTxt.TabIndex = 103;
-            // 
-            // Lat2ProposedDateToFileLatTxt
-            // 
-            this.Lat2ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1081, 50);
-            this.Lat2ProposedDateToFileLatTxt.Name = "Lat2ProposedDateToFileLatTxt";
-            this.Lat2ProposedDateToFileLatTxt.ReadOnly = true;
-            this.Lat2ProposedDateToFileLatTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2ProposedDateToFileLatTxt.TabIndex = 102;
-            // 
-            // Lat2DueDateToDiscussPotenctialLatApplTxt
-            // 
-            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1081, 17);
-            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Name = "Lat2DueDateToDiscussPotenctialLatApplTxt";
-            this.Lat2DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
-            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DueDateToDiscussPotenctialLatApplTxt.TabIndex = 101;
-            // 
-            // Lat2HearingStarDateTxt
-            // 
-            this.Lat2HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
-            this.Lat2HearingStarDateTxt.Name = "Lat2HearingStarDateTxt";
-            this.Lat2HearingStarDateTxt.ReadOnly = true;
-            this.Lat2HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2HearingStarDateTxt.TabIndex = 100;
-            // 
-            // Lat2DeadLineToReceiveInsurerTxt
-            // 
-            this.Lat2DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(430, 254);
-            this.Lat2DeadLineToReceiveInsurerTxt.Name = "Lat2DeadLineToReceiveInsurerTxt";
-            this.Lat2DeadLineToReceiveInsurerTxt.ReadOnly = true;
-            this.Lat2DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineToReceiveInsurerTxt.TabIndex = 99;
-            // 
-            // Lat2DeadLineToReceiveAffidavitReportsTxt
-            // 
-            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(430, 221);
-            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Name = "Lat2DeadLineToReceiveAffidavitReportsTxt";
-            this.Lat2DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
-            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineToReceiveAffidavitReportsTxt.TabIndex = 98;
-            // 
-            // Lat2DeadLineToReceiveABProductionsTxt
-            // 
-            this.Lat2DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(430, 188);
-            this.Lat2DeadLineToReceiveABProductionsTxt.Name = "Lat2DeadLineToReceiveABProductionsTxt";
-            this.Lat2DeadLineToReceiveABProductionsTxt.ReadOnly = true;
-            this.Lat2DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DeadLineToReceiveABProductionsTxt.TabIndex = 97;
-            // 
-            // Lat2LatCaseConfDateTxt
-            // 
-            this.Lat2LatCaseConfDateTxt.Location = new System.Drawing.Point(430, 155);
-            this.Lat2LatCaseConfDateTxt.Name = "Lat2LatCaseConfDateTxt";
-            this.Lat2LatCaseConfDateTxt.ReadOnly = true;
-            this.Lat2LatCaseConfDateTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2LatCaseConfDateTxt.TabIndex = 96;
-            // 
-            // Lat2InsuresResponseReceivedTxt
-            // 
-            this.Lat2InsuresResponseReceivedTxt.Location = new System.Drawing.Point(430, 122);
-            this.Lat2InsuresResponseReceivedTxt.Name = "Lat2InsuresResponseReceivedTxt";
-            this.Lat2InsuresResponseReceivedTxt.ReadOnly = true;
-            this.Lat2InsuresResponseReceivedTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2InsuresResponseReceivedTxt.TabIndex = 95;
-            // 
-            // Lat2ActualDateLatFiledTxt
-            // 
-            this.Lat2ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
-            this.Lat2ActualDateLatFiledTxt.Name = "Lat2ActualDateLatFiledTxt";
-            this.Lat2ActualDateLatFiledTxt.ReadOnly = true;
-            this.Lat2ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2ActualDateLatFiledTxt.TabIndex = 94;
-            // 
-            // Lat2DateMetWithLawyerReDenialTxt
-            // 
-            this.Lat2DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
-            this.Lat2DateMetWithLawyerReDenialTxt.Name = "Lat2DateMetWithLawyerReDenialTxt";
-            this.Lat2DateMetWithLawyerReDenialTxt.ReadOnly = true;
-            this.Lat2DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat2DateMetWithLawyerReDenialTxt.TabIndex = 93;
-            // 
-            // Lat2DueDateToDiscussPotenctialLatApplDtp
-            // 
-            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1275, 17);
-            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Name = "Lat2DueDateToDiscussPotenctialLatApplDtp";
-            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DueDateToDiscussPotenctialLatApplDtp.TabIndex = 75;
-            this.Lat2DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2ProposedDateToFileLatDtp
-            // 
-            this.Lat2ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1275, 50);
-            this.Lat2ProposedDateToFileLatDtp.Name = "Lat2ProposedDateToFileLatDtp";
-            this.Lat2ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2ProposedDateToFileLatDtp.TabIndex = 77;
-            this.Lat2ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2ActualDateLatServedOnInsurerDtp
-            // 
-            this.Lat2ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1275, 83);
-            this.Lat2ActualDateLatServedOnInsurerDtp.Name = "Lat2ActualDateLatServedOnInsurerDtp";
-            this.Lat2ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2ActualDateLatServedOnInsurerDtp.TabIndex = 79;
-            this.Lat2ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineToServeFileCaseConfSummaryDtp
-            // 
-            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1275, 116);
-            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat2DeadLineToServeFileCaseConfSummaryDtp";
-            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 81;
-            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineToDeliverProductionsToABCounselDtp
-            // 
-            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1275, 149);
-            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat2DeadLineToDeliverProductionsToABCounselDtp";
-            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 83;
-            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineToFileAffidavitReportsDtp
-            // 
-            this.Lat2DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1275, 182);
-            this.Lat2DeadLineToFileAffidavitReportsDtp.Name = "Lat2DeadLineToFileAffidavitReportsDtp";
-            this.Lat2DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineToFileAffidavitReportsDtp.TabIndex = 85;
-            this.Lat2DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineToFileHearingSubmissionsDtp
-            // 
-            this.Lat2DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1275, 215);
-            this.Lat2DeadLineToFileHearingSubmissionsDtp.Name = "Lat2DeadLineToFileHearingSubmissionsDtp";
-            this.Lat2DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineToFileHearingSubmissionsDtp.TabIndex = 87;
-            this.Lat2DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineForReplaySubmissionsDtp
-            // 
-            this.Lat2DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1275, 248);
-            this.Lat2DeadLineForReplaySubmissionsDtp.Name = "Lat2DeadLineForReplaySubmissionsDtp";
-            this.Lat2DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineForReplaySubmissionsDtp.TabIndex = 89;
-            this.Lat2DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DateLatSettledClosedDtp
-            // 
-            this.Lat2DateLatSettledClosedDtp.Location = new System.Drawing.Point(1275, 281);
-            this.Lat2DateLatSettledClosedDtp.Name = "Lat2DateLatSettledClosedDtp";
-            this.Lat2DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DateLatSettledClosedDtp.TabIndex = 91;
-            this.Lat2DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DateMetWithLawyerReDenialDtp
-            // 
-            this.Lat2DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
-            this.Lat2DateMetWithLawyerReDenialDtp.Name = "Lat2DateMetWithLawyerReDenialDtp";
-            this.Lat2DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DateMetWithLawyerReDenialDtp.TabIndex = 59;
-            this.Lat2DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2ActualDateLatFiledDtp
-            // 
-            this.Lat2ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
-            this.Lat2ActualDateLatFiledDtp.Name = "Lat2ActualDateLatFiledDtp";
-            this.Lat2ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2ActualDateLatFiledDtp.TabIndex = 61;
-            this.Lat2ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2InsuresResponseReceivedDtp
-            // 
-            this.Lat2InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
-            this.Lat2InsuresResponseReceivedDtp.Name = "Lat2InsuresResponseReceivedDtp";
-            this.Lat2InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2InsuresResponseReceivedDtp.TabIndex = 63;
-            this.Lat2InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2LatCaseConfDateDtp
-            // 
-            this.Lat2LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
-            this.Lat2LatCaseConfDateDtp.Name = "Lat2LatCaseConfDateDtp";
-            this.Lat2LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2LatCaseConfDateDtp.TabIndex = 65;
-            this.Lat2LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineToReceiveABProductionsDtp
-            // 
-            this.Lat2DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
-            this.Lat2DeadLineToReceiveABProductionsDtp.Name = "Lat2DeadLineToReceiveABProductionsDtp";
-            this.Lat2DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineToReceiveABProductionsDtp.TabIndex = 67;
-            this.Lat2DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineToReceiveAffidavitReportsDtp
-            // 
-            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
-            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Name = "Lat2DeadLineToReceiveAffidavitReportsDtp";
-            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineToReceiveAffidavitReportsDtp.TabIndex = 69;
-            this.Lat2DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2DeadLineToReceiveInsurerDtp
-            // 
-            this.Lat2DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
-            this.Lat2DeadLineToReceiveInsurerDtp.Name = "Lat2DeadLineToReceiveInsurerDtp";
-            this.Lat2DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2DeadLineToReceiveInsurerDtp.TabIndex = 71;
-            this.Lat2DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat2HearingStarDateDtp
-            // 
-            this.Lat2HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
-            this.Lat2HearingStarDateDtp.Name = "Lat2HearingStarDateDtp";
-            this.Lat2HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat2HearingStarDateDtp.TabIndex = 73;
             // 
             // LAT3
             // 
             this.LAT3.AutoScroll = true;
             this.LAT3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.LAT3.Controls.Add(this.Lat3DeadLineToServeFileCaseConfSummaryDtp);
             this.LAT3.Controls.Add(this.BtnLat3);
             this.LAT3.Controls.Add(this.Lat3DateLatSettledClosedTxt);
             this.LAT3.Controls.Add(this.Lat3DeadLineForReplaySubmissionsTxt);
+            this.LAT3.Controls.Add(label55);
+            this.LAT3.Controls.Add(this.Lat3DeadLineForReplaySubmissionsDtp);
+            this.LAT3.Controls.Add(label56);
+            this.LAT3.Controls.Add(this.Lat3DateLatSettledClosedDtp);
             this.LAT3.Controls.Add(this.Lat3DeadLineToFileHearingSubmissionsTxt);
             this.LAT3.Controls.Add(this.Lat3DeadLineToFileAffidavitReportsTxt);
             this.LAT3.Controls.Add(this.Lat3DeadLineToDeliverProductionsToABCounselTxt);
             this.LAT3.Controls.Add(this.Lat3DeadLineToServeFileCaseConfSummaryTxt);
+            this.LAT3.Controls.Add(label57);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToServeFileCaseConfSummaryDtp);
+            this.LAT3.Controls.Add(label58);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToDeliverProductionsToABCounselDtp);
+            this.LAT3.Controls.Add(label59);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToFileAffidavitReportsDtp);
+            this.LAT3.Controls.Add(label60);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToFileHearingSubmissionsDtp);
             this.LAT3.Controls.Add(this.Lat3ActualDateLatServedOnInsurerTxt);
             this.LAT3.Controls.Add(this.Lat3ProposedDateToFileLatTxt);
-            this.LAT3.Controls.Add(this.Lat3DueDateToDiscussPotenctialLatApplTxt);
-            this.LAT3.Controls.Add(this.Lat3DueDateToDiscussPotenctialLatApplDtp);
+            this.LAT3.Controls.Add(label61);
             this.LAT3.Controls.Add(this.Lat3ProposedDateToFileLatDtp);
+            this.LAT3.Controls.Add(label62);
             this.LAT3.Controls.Add(this.Lat3ActualDateLatServedOnInsurerDtp);
-            this.LAT3.Controls.Add(this.Lat3DeadLineToDeliverProductionsToABCounselDtp);
-            this.LAT3.Controls.Add(this.Lat3DeadLineToFileAffidavitReportsDtp);
-            this.LAT3.Controls.Add(this.Lat3DeadLineToFileHearingSubmissionsDtp);
-            this.LAT3.Controls.Add(this.Lat3DeadLineForReplaySubmissionsDtp);
-            this.LAT3.Controls.Add(this.Lat3DateLatSettledClosedDtp);
+            this.LAT3.Controls.Add(this.Lat3DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT3.Controls.Add(label63);
+            this.LAT3.Controls.Add(this.Lat3DueDateToDiscussPotenctialLatApplDtp);
             this.LAT3.Controls.Add(this.Lat3HearingStarDateTxt);
             this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveInsurerTxt);
+            this.LAT3.Controls.Add(label65);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveInsurerDtp);
+            this.LAT3.Controls.Add(label66);
+            this.LAT3.Controls.Add(this.Lat3HearingStarDateDtp);
             this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT3.Controls.Add(label67);
+            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveAffidavitReportsDtp);
             this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveABProductionsTxt);
             this.LAT3.Controls.Add(this.Lat3LatCaseConfDateTxt);
             this.LAT3.Controls.Add(this.Lat3InsuresResponseReceivedTxt);
             this.LAT3.Controls.Add(this.Lat3ActualDateLatFiledTxt);
             this.LAT3.Controls.Add(this.Lat3DateMetWithLawyerReDenialTxt);
+            this.LAT3.Controls.Add(label68);
             this.LAT3.Controls.Add(this.Lat3DateMetWithLawyerReDenialDtp);
+            this.LAT3.Controls.Add(label69);
             this.LAT3.Controls.Add(this.Lat3ActualDateLatFiledDtp);
+            this.LAT3.Controls.Add(label70);
             this.LAT3.Controls.Add(this.Lat3InsuresResponseReceivedDtp);
+            this.LAT3.Controls.Add(label71);
             this.LAT3.Controls.Add(this.Lat3LatCaseConfDateDtp);
+            this.LAT3.Controls.Add(label72);
             this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveABProductionsDtp);
-            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveAffidavitReportsDtp);
-            this.LAT3.Controls.Add(this.Lat3DeadLineToReceiveInsurerDtp);
-            this.LAT3.Controls.Add(this.Lat3HearingStarDateDtp);
-            this.LAT3.Controls.Add(Label55);
-            this.LAT3.Controls.Add(Label56);
-            this.LAT3.Controls.Add(Label57);
-            this.LAT3.Controls.Add(Label58);
-            this.LAT3.Controls.Add(Label59);
-            this.LAT3.Controls.Add(Label60);
-            this.LAT3.Controls.Add(Label61);
-            this.LAT3.Controls.Add(Label62);
-            this.LAT3.Controls.Add(Label63);
-            this.LAT3.Controls.Add(Label65);
-            this.LAT3.Controls.Add(Label66);
-            this.LAT3.Controls.Add(Label67);
-            this.LAT3.Controls.Add(Label68);
-            this.LAT3.Controls.Add(Label69);
-            this.LAT3.Controls.Add(Label70);
-            this.LAT3.Controls.Add(Label71);
-            this.LAT3.Controls.Add(Label72);
             this.LAT3.Location = new System.Drawing.Point(4, 26);
             this.LAT3.Name = "LAT3";
             this.LAT3.Padding = new System.Windows.Forms.Padding(3);
-            this.LAT3.Size = new System.Drawing.Size(1105, 256);
+            this.LAT3.Size = new System.Drawing.Size(1105, 252);
             this.LAT3.TabIndex = 2;
             this.LAT3.Text = "LAT 3";
-            // 
-            // Lat3DeadLineToServeFileCaseConfSummaryDtp
-            // 
-            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1263, 116);
-            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat3DeadLineToServeFileCaseConfSummaryDtp";
-            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 120;
-            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // BtnLat3
-            // 
-            this.BtnLat3.Location = new System.Drawing.Point(1225, 308);
-            this.BtnLat3.Name = "BtnLat3";
-            this.BtnLat3.Size = new System.Drawing.Size(85, 23);
-            this.BtnLat3.TabIndex = 135;
-            this.BtnLat3.Text = "Operation";
-            this.BtnLat3.UseVisualStyleBackColor = true;
-            // 
-            // Lat3DateLatSettledClosedTxt
-            // 
-            this.Lat3DateLatSettledClosedTxt.Location = new System.Drawing.Point(1086, 281);
-            this.Lat3DateLatSettledClosedTxt.Name = "Lat3DateLatSettledClosedTxt";
-            this.Lat3DateLatSettledClosedTxt.ReadOnly = true;
-            this.Lat3DateLatSettledClosedTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3DateLatSettledClosedTxt.TabIndex = 134;
-            // 
-            // Lat3DeadLineForReplaySubmissionsTxt
-            // 
-            this.Lat3DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1086, 248);
-            this.Lat3DeadLineForReplaySubmissionsTxt.Name = "Lat3DeadLineForReplaySubmissionsTxt";
-            this.Lat3DeadLineForReplaySubmissionsTxt.ReadOnly = true;
-            this.Lat3DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3DeadLineForReplaySubmissionsTxt.TabIndex = 133;
-            // 
-            // Lat3DeadLineToFileHearingSubmissionsTxt
-            // 
-            this.Lat3DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1086, 215);
-            this.Lat3DeadLineToFileHearingSubmissionsTxt.Name = "Lat3DeadLineToFileHearingSubmissionsTxt";
-            this.Lat3DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
-            this.Lat3DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3DeadLineToFileHearingSubmissionsTxt.TabIndex = 132;
-            // 
-            // Lat3DeadLineToFileAffidavitReportsTxt
-            // 
-            this.Lat3DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1086, 182);
-            this.Lat3DeadLineToFileAffidavitReportsTxt.Name = "Lat3DeadLineToFileAffidavitReportsTxt";
-            this.Lat3DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
-            this.Lat3DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3DeadLineToFileAffidavitReportsTxt.TabIndex = 131;
-            // 
-            // Lat3DeadLineToDeliverProductionsToABCounselTxt
-            // 
-            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1086, 149);
-            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat3DeadLineToDeliverProductionsToABCounselTxt";
-            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
-            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 130;
-            // 
-            // Lat3DeadLineToServeFileCaseConfSummaryTxt
-            // 
-            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1086, 116);
-            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat3DeadLineToServeFileCaseConfSummaryTxt";
-            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
-            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 129;
-            // 
-            // Lat3ActualDateLatServedOnInsurerTxt
-            // 
-            this.Lat3ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1086, 83);
-            this.Lat3ActualDateLatServedOnInsurerTxt.Name = "Lat3ActualDateLatServedOnInsurerTxt";
-            this.Lat3ActualDateLatServedOnInsurerTxt.ReadOnly = true;
-            this.Lat3ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3ActualDateLatServedOnInsurerTxt.TabIndex = 128;
-            // 
-            // Lat3ProposedDateToFileLatTxt
-            // 
-            this.Lat3ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1086, 50);
-            this.Lat3ProposedDateToFileLatTxt.Name = "Lat3ProposedDateToFileLatTxt";
-            this.Lat3ProposedDateToFileLatTxt.ReadOnly = true;
-            this.Lat3ProposedDateToFileLatTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3ProposedDateToFileLatTxt.TabIndex = 127;
-            // 
-            // Lat3DueDateToDiscussPotenctialLatApplTxt
-            // 
-            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1086, 17);
-            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Name = "Lat3DueDateToDiscussPotenctialLatApplTxt";
-            this.Lat3DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
-            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(172, 23);
-            this.Lat3DueDateToDiscussPotenctialLatApplTxt.TabIndex = 126;
-            // 
-            // Lat3DueDateToDiscussPotenctialLatApplDtp
-            // 
-            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1260, 17);
-            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Name = "Lat3DueDateToDiscussPotenctialLatApplDtp";
-            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DueDateToDiscussPotenctialLatApplDtp.TabIndex = 117;
-            this.Lat3DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3ProposedDateToFileLatDtp
-            // 
-            this.Lat3ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1263, 50);
-            this.Lat3ProposedDateToFileLatDtp.Name = "Lat3ProposedDateToFileLatDtp";
-            this.Lat3ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3ProposedDateToFileLatDtp.TabIndex = 118;
-            this.Lat3ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3ActualDateLatServedOnInsurerDtp
-            // 
-            this.Lat3ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1263, 83);
-            this.Lat3ActualDateLatServedOnInsurerDtp.Name = "Lat3ActualDateLatServedOnInsurerDtp";
-            this.Lat3ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3ActualDateLatServedOnInsurerDtp.TabIndex = 119;
-            this.Lat3ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DeadLineToDeliverProductionsToABCounselDtp
-            // 
-            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1263, 149);
-            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat3DeadLineToDeliverProductionsToABCounselDtp";
-            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 121;
-            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DeadLineToFileAffidavitReportsDtp
-            // 
-            this.Lat3DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1263, 182);
-            this.Lat3DeadLineToFileAffidavitReportsDtp.Name = "Lat3DeadLineToFileAffidavitReportsDtp";
-            this.Lat3DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineToFileAffidavitReportsDtp.TabIndex = 122;
-            this.Lat3DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DeadLineToFileHearingSubmissionsDtp
-            // 
-            this.Lat3DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1263, 215);
-            this.Lat3DeadLineToFileHearingSubmissionsDtp.Name = "Lat3DeadLineToFileHearingSubmissionsDtp";
-            this.Lat3DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineToFileHearingSubmissionsDtp.TabIndex = 123;
-            this.Lat3DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DeadLineForReplaySubmissionsDtp
-            // 
-            this.Lat3DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1263, 248);
-            this.Lat3DeadLineForReplaySubmissionsDtp.Name = "Lat3DeadLineForReplaySubmissionsDtp";
-            this.Lat3DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineForReplaySubmissionsDtp.TabIndex = 124;
-            this.Lat3DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DateLatSettledClosedDtp
-            // 
-            this.Lat3DateLatSettledClosedDtp.Location = new System.Drawing.Point(1263, 281);
-            this.Lat3DateLatSettledClosedDtp.Name = "Lat3DateLatSettledClosedDtp";
-            this.Lat3DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DateLatSettledClosedDtp.TabIndex = 125;
-            this.Lat3DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3HearingStarDateTxt
-            // 
-            this.Lat3HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
-            this.Lat3HearingStarDateTxt.Name = "Lat3HearingStarDateTxt";
-            this.Lat3HearingStarDateTxt.ReadOnly = true;
-            this.Lat3HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3HearingStarDateTxt.TabIndex = 116;
-            // 
-            // Lat3DeadLineToReceiveInsurerTxt
-            // 
-            this.Lat3DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(430, 254);
-            this.Lat3DeadLineToReceiveInsurerTxt.Name = "Lat3DeadLineToReceiveInsurerTxt";
-            this.Lat3DeadLineToReceiveInsurerTxt.ReadOnly = true;
-            this.Lat3DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3DeadLineToReceiveInsurerTxt.TabIndex = 115;
-            // 
-            // Lat3DeadLineToReceiveAffidavitReportsTxt
-            // 
-            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(430, 221);
-            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Name = "Lat3DeadLineToReceiveAffidavitReportsTxt";
-            this.Lat3DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
-            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3DeadLineToReceiveAffidavitReportsTxt.TabIndex = 114;
-            // 
-            // Lat3DeadLineToReceiveABProductionsTxt
-            // 
-            this.Lat3DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(430, 188);
-            this.Lat3DeadLineToReceiveABProductionsTxt.Name = "Lat3DeadLineToReceiveABProductionsTxt";
-            this.Lat3DeadLineToReceiveABProductionsTxt.ReadOnly = true;
-            this.Lat3DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3DeadLineToReceiveABProductionsTxt.TabIndex = 113;
-            // 
-            // Lat3LatCaseConfDateTxt
-            // 
-            this.Lat3LatCaseConfDateTxt.Location = new System.Drawing.Point(430, 155);
-            this.Lat3LatCaseConfDateTxt.Name = "Lat3LatCaseConfDateTxt";
-            this.Lat3LatCaseConfDateTxt.ReadOnly = true;
-            this.Lat3LatCaseConfDateTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3LatCaseConfDateTxt.TabIndex = 112;
-            // 
-            // Lat3InsuresResponseReceivedTxt
-            // 
-            this.Lat3InsuresResponseReceivedTxt.Location = new System.Drawing.Point(430, 122);
-            this.Lat3InsuresResponseReceivedTxt.Name = "Lat3InsuresResponseReceivedTxt";
-            this.Lat3InsuresResponseReceivedTxt.ReadOnly = true;
-            this.Lat3InsuresResponseReceivedTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3InsuresResponseReceivedTxt.TabIndex = 111;
-            // 
-            // Lat3ActualDateLatFiledTxt
-            // 
-            this.Lat3ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
-            this.Lat3ActualDateLatFiledTxt.Name = "Lat3ActualDateLatFiledTxt";
-            this.Lat3ActualDateLatFiledTxt.ReadOnly = true;
-            this.Lat3ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3ActualDateLatFiledTxt.TabIndex = 110;
-            // 
-            // Lat3DateMetWithLawyerReDenialTxt
-            // 
-            this.Lat3DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
-            this.Lat3DateMetWithLawyerReDenialTxt.Name = "Lat3DateMetWithLawyerReDenialTxt";
-            this.Lat3DateMetWithLawyerReDenialTxt.ReadOnly = true;
-            this.Lat3DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat3DateMetWithLawyerReDenialTxt.TabIndex = 109;
-            // 
-            // Lat3DateMetWithLawyerReDenialDtp
-            // 
-            this.Lat3DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
-            this.Lat3DateMetWithLawyerReDenialDtp.Name = "Lat3DateMetWithLawyerReDenialDtp";
-            this.Lat3DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DateMetWithLawyerReDenialDtp.TabIndex = 101;
-            this.Lat3DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3ActualDateLatFiledDtp
-            // 
-            this.Lat3ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
-            this.Lat3ActualDateLatFiledDtp.Name = "Lat3ActualDateLatFiledDtp";
-            this.Lat3ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3ActualDateLatFiledDtp.TabIndex = 102;
-            this.Lat3ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3InsuresResponseReceivedDtp
-            // 
-            this.Lat3InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
-            this.Lat3InsuresResponseReceivedDtp.Name = "Lat3InsuresResponseReceivedDtp";
-            this.Lat3InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3InsuresResponseReceivedDtp.TabIndex = 103;
-            this.Lat3InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3LatCaseConfDateDtp
-            // 
-            this.Lat3LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
-            this.Lat3LatCaseConfDateDtp.Name = "Lat3LatCaseConfDateDtp";
-            this.Lat3LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3LatCaseConfDateDtp.TabIndex = 104;
-            this.Lat3LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DeadLineToReceiveABProductionsDtp
-            // 
-            this.Lat3DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
-            this.Lat3DeadLineToReceiveABProductionsDtp.Name = "Lat3DeadLineToReceiveABProductionsDtp";
-            this.Lat3DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineToReceiveABProductionsDtp.TabIndex = 105;
-            this.Lat3DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DeadLineToReceiveAffidavitReportsDtp
-            // 
-            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
-            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Name = "Lat3DeadLineToReceiveAffidavitReportsDtp";
-            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineToReceiveAffidavitReportsDtp.TabIndex = 106;
-            this.Lat3DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3DeadLineToReceiveInsurerDtp
-            // 
-            this.Lat3DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
-            this.Lat3DeadLineToReceiveInsurerDtp.Name = "Lat3DeadLineToReceiveInsurerDtp";
-            this.Lat3DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3DeadLineToReceiveInsurerDtp.TabIndex = 107;
-            this.Lat3DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat3HearingStarDateDtp
-            // 
-            this.Lat3HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
-            this.Lat3HearingStarDateDtp.Name = "Lat3HearingStarDateDtp";
-            this.Lat3HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat3HearingStarDateDtp.TabIndex = 108;
             // 
             // LAT4
             // 
@@ -10594,341 +9290,61 @@
             this.LAT4.Controls.Add(this.BtnLat4);
             this.LAT4.Controls.Add(this.Lat4DateLatSettledClosedTxt);
             this.LAT4.Controls.Add(this.Lat4DeadLineForReplaySubmissionsTxt);
+            this.LAT4.Controls.Add(label101);
+            this.LAT4.Controls.Add(this.Lat4DeadLineForReplaySubmissionsDtp);
+            this.LAT4.Controls.Add(label281);
+            this.LAT4.Controls.Add(this.Lat4DateLatSettledClosedDtp);
             this.LAT4.Controls.Add(this.Lat4DeadLineToFileHearingSubmissionsTxt);
             this.LAT4.Controls.Add(this.Lat4DeadLineToFileAffidavitReportsTxt);
             this.LAT4.Controls.Add(this.Lat4DeadLineToDeliverProductionsToABCounselTxt);
             this.LAT4.Controls.Add(this.Lat4DeadLineToServeFileCaseConfSummaryTxt);
+            this.LAT4.Controls.Add(label282);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToServeFileCaseConfSummaryDtp);
+            this.LAT4.Controls.Add(label283);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToDeliverProductionsToABCounselDtp);
+            this.LAT4.Controls.Add(label284);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToFileAffidavitReportsDtp);
+            this.LAT4.Controls.Add(label285);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToFileHearingSubmissionsDtp);
             this.LAT4.Controls.Add(this.Lat4ActualDateLatServedOnInsurerTxt);
             this.LAT4.Controls.Add(this.Lat4ProposedDateToFileLatTxt);
-            this.LAT4.Controls.Add(this.Lat4DueDateToDiscussPotenctialLatApplTxt);
-            this.LAT4.Controls.Add(this.Lat4DueDateToDiscussPotenctialLatApplDtp);
+            this.LAT4.Controls.Add(label286);
             this.LAT4.Controls.Add(this.Lat4ProposedDateToFileLatDtp);
+            this.LAT4.Controls.Add(label287);
             this.LAT4.Controls.Add(this.Lat4ActualDateLatServedOnInsurerDtp);
-            this.LAT4.Controls.Add(this.Lat4DeadLineToServeFileCaseConfSummaryDtp);
-            this.LAT4.Controls.Add(this.Lat4DeadLineToDeliverProductionsToABCounselDtp);
-            this.LAT4.Controls.Add(this.Lat4DeadLineToFileAffidavitReportsDtp);
-            this.LAT4.Controls.Add(this.Lat4DeadLineToFileHearingSubmissionsDtp);
-            this.LAT4.Controls.Add(this.Lat4DeadLineForReplaySubmissionsDtp);
-            this.LAT4.Controls.Add(this.Lat4DateLatSettledClosedDtp);
+            this.LAT4.Controls.Add(this.Lat4DueDateToDiscussPotenctialLatApplTxt);
+            this.LAT4.Controls.Add(label288);
+            this.LAT4.Controls.Add(this.Lat4DueDateToDiscussPotenctialLatApplDtp);
             this.LAT4.Controls.Add(this.Lat4HearingStarDateTxt);
             this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveInsurerTxt);
+            this.LAT4.Controls.Add(label289);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveInsurerDtp);
+            this.LAT4.Controls.Add(label290);
+            this.LAT4.Controls.Add(this.Lat4HearingStarDateDtp);
             this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveAffidavitReportsTxt);
+            this.LAT4.Controls.Add(label291);
+            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveAffidavitReportsDtp);
             this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveABProductionsTxt);
             this.LAT4.Controls.Add(this.Lat4LatCaseConfDateTxt);
             this.LAT4.Controls.Add(this.Lat4InsuresResponseReceivedTxt);
             this.LAT4.Controls.Add(this.Lat4ActualDateLatFiledTxt);
             this.LAT4.Controls.Add(this.Lat4DateMetWithLawyerReDenialTxt);
+            this.LAT4.Controls.Add(label292);
             this.LAT4.Controls.Add(this.Lat4DateMetWithLawyerReDenialDtp);
+            this.LAT4.Controls.Add(label293);
             this.LAT4.Controls.Add(this.Lat4ActualDateLatFiledDtp);
+            this.LAT4.Controls.Add(label294);
             this.LAT4.Controls.Add(this.Lat4InsuresResponseReceivedDtp);
+            this.LAT4.Controls.Add(label295);
             this.LAT4.Controls.Add(this.Lat4LatCaseConfDateDtp);
+            this.LAT4.Controls.Add(label296);
             this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveABProductionsDtp);
-            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveAffidavitReportsDtp);
-            this.LAT4.Controls.Add(this.Lat4DeadLineToReceiveInsurerDtp);
-            this.LAT4.Controls.Add(this.Lat4HearingStarDateDtp);
-            this.LAT4.Controls.Add(DueDateToDiscussPotentialLATApplLabel);
-            this.LAT4.Controls.Add(ProposedDateToFileLATLabel);
-            this.LAT4.Controls.Add(ActualDateLATServedOnInsurerLabel);
-            this.LAT4.Controls.Add(DeadlineToServeFileCaseConfSummaryLabel);
-            this.LAT4.Controls.Add(DeadlineToDeliverProductionsToABCounselLabel);
-            this.LAT4.Controls.Add(DeadlineToFileAffidavitReportsListOfWitnessesEtcLabel);
-            this.LAT4.Controls.Add(DeadlineToFileHearing_SubmissionsAndOrBriefsWithPartiesLabel);
-            this.LAT4.Controls.Add(DeadlineForReplySubmissionsOfTheApplicantLabel);
-            this.LAT4.Controls.Add(DateLATSettledClosedLabel);
-            this.LAT4.Controls.Add(DateMetWithLawyerReDenialLabel);
-            this.LAT4.Controls.Add(ActualDateLATFiledLabel);
-            this.LAT4.Controls.Add(InsurersResponseReceivedLabel);
-            this.LAT4.Controls.Add(LATCaseConfDateLabel);
-            this.LAT4.Controls.Add(DeadlineToReceiveABProductionsLabel);
-            this.LAT4.Controls.Add(DeadlineToReceiveAffidavitReportsListOfWitnessesEtcLabel);
-            this.LAT4.Controls.Add(DeadlineToReceiveInsurerSubmissionsLabel);
-            this.LAT4.Controls.Add(HearingStartDateLabel);
             this.LAT4.Location = new System.Drawing.Point(4, 26);
             this.LAT4.Name = "LAT4";
             this.LAT4.Padding = new System.Windows.Forms.Padding(3);
-            this.LAT4.Size = new System.Drawing.Size(1105, 256);
+            this.LAT4.Size = new System.Drawing.Size(1105, 252);
             this.LAT4.TabIndex = 3;
             this.LAT4.Text = "LAT 4";
-            // 
-            // BtnLat4
-            // 
-            this.BtnLat4.Location = new System.Drawing.Point(1225, 306);
-            this.BtnLat4.Name = "BtnLat4";
-            this.BtnLat4.Size = new System.Drawing.Size(85, 23);
-            this.BtnLat4.TabIndex = 153;
-            this.BtnLat4.Text = "Operation";
-            this.BtnLat4.UseVisualStyleBackColor = true;
-            // 
-            // Lat4DateLatSettledClosedTxt
-            // 
-            this.Lat4DateLatSettledClosedTxt.Location = new System.Drawing.Point(1092, 281);
-            this.Lat4DateLatSettledClosedTxt.Name = "Lat4DateLatSettledClosedTxt";
-            this.Lat4DateLatSettledClosedTxt.ReadOnly = true;
-            this.Lat4DateLatSettledClosedTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DateLatSettledClosedTxt.TabIndex = 152;
-            // 
-            // Lat4DeadLineForReplaySubmissionsTxt
-            // 
-            this.Lat4DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(1092, 248);
-            this.Lat4DeadLineForReplaySubmissionsTxt.Name = "Lat4DeadLineForReplaySubmissionsTxt";
-            this.Lat4DeadLineForReplaySubmissionsTxt.ReadOnly = true;
-            this.Lat4DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineForReplaySubmissionsTxt.TabIndex = 151;
-            // 
-            // Lat4DeadLineToFileHearingSubmissionsTxt
-            // 
-            this.Lat4DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(1092, 215);
-            this.Lat4DeadLineToFileHearingSubmissionsTxt.Name = "Lat4DeadLineToFileHearingSubmissionsTxt";
-            this.Lat4DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
-            this.Lat4DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineToFileHearingSubmissionsTxt.TabIndex = 150;
-            // 
-            // Lat4DeadLineToFileAffidavitReportsTxt
-            // 
-            this.Lat4DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(1092, 182);
-            this.Lat4DeadLineToFileAffidavitReportsTxt.Name = "Lat4DeadLineToFileAffidavitReportsTxt";
-            this.Lat4DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
-            this.Lat4DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineToFileAffidavitReportsTxt.TabIndex = 149;
-            // 
-            // Lat4DeadLineToDeliverProductionsToABCounselTxt
-            // 
-            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(1092, 149);
-            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat4DeadLineToDeliverProductionsToABCounselTxt";
-            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
-            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 148;
-            // 
-            // Lat4DeadLineToServeFileCaseConfSummaryTxt
-            // 
-            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(1092, 116);
-            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat4DeadLineToServeFileCaseConfSummaryTxt";
-            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
-            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 147;
-            // 
-            // Lat4ActualDateLatServedOnInsurerTxt
-            // 
-            this.Lat4ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(1092, 83);
-            this.Lat4ActualDateLatServedOnInsurerTxt.Name = "Lat4ActualDateLatServedOnInsurerTxt";
-            this.Lat4ActualDateLatServedOnInsurerTxt.ReadOnly = true;
-            this.Lat4ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4ActualDateLatServedOnInsurerTxt.TabIndex = 146;
-            // 
-            // Lat4ProposedDateToFileLatTxt
-            // 
-            this.Lat4ProposedDateToFileLatTxt.Location = new System.Drawing.Point(1092, 50);
-            this.Lat4ProposedDateToFileLatTxt.Name = "Lat4ProposedDateToFileLatTxt";
-            this.Lat4ProposedDateToFileLatTxt.ReadOnly = true;
-            this.Lat4ProposedDateToFileLatTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4ProposedDateToFileLatTxt.TabIndex = 145;
-            // 
-            // Lat4DueDateToDiscussPotenctialLatApplTxt
-            // 
-            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(1092, 17);
-            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Name = "Lat4DueDateToDiscussPotenctialLatApplTxt";
-            this.Lat4DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
-            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DueDateToDiscussPotenctialLatApplTxt.TabIndex = 144;
-            // 
-            // Lat4DueDateToDiscussPotenctialLatApplDtp
-            // 
-            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(1285, 17);
-            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Name = "Lat4DueDateToDiscussPotenctialLatApplDtp";
-            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DueDateToDiscussPotenctialLatApplDtp.TabIndex = 135;
-            this.Lat4DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4ProposedDateToFileLatDtp
-            // 
-            this.Lat4ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1285, 50);
-            this.Lat4ProposedDateToFileLatDtp.Name = "Lat4ProposedDateToFileLatDtp";
-            this.Lat4ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4ProposedDateToFileLatDtp.TabIndex = 136;
-            this.Lat4ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4ActualDateLatServedOnInsurerDtp
-            // 
-            this.Lat4ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1285, 83);
-            this.Lat4ActualDateLatServedOnInsurerDtp.Name = "Lat4ActualDateLatServedOnInsurerDtp";
-            this.Lat4ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4ActualDateLatServedOnInsurerDtp.TabIndex = 137;
-            this.Lat4ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineToServeFileCaseConfSummaryDtp
-            // 
-            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1285, 116);
-            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat4DeadLineToServeFileCaseConfSummaryDtp";
-            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 138;
-            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineToDeliverProductionsToABCounselDtp
-            // 
-            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1285, 149);
-            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat4DeadLineToDeliverProductionsToABCounselDtp";
-            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 139;
-            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineToFileAffidavitReportsDtp
-            // 
-            this.Lat4DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1285, 182);
-            this.Lat4DeadLineToFileAffidavitReportsDtp.Name = "Lat4DeadLineToFileAffidavitReportsDtp";
-            this.Lat4DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineToFileAffidavitReportsDtp.TabIndex = 140;
-            this.Lat4DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineToFileHearingSubmissionsDtp
-            // 
-            this.Lat4DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1285, 215);
-            this.Lat4DeadLineToFileHearingSubmissionsDtp.Name = "Lat4DeadLineToFileHearingSubmissionsDtp";
-            this.Lat4DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineToFileHearingSubmissionsDtp.TabIndex = 141;
-            this.Lat4DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineForReplaySubmissionsDtp
-            // 
-            this.Lat4DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1285, 248);
-            this.Lat4DeadLineForReplaySubmissionsDtp.Name = "Lat4DeadLineForReplaySubmissionsDtp";
-            this.Lat4DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineForReplaySubmissionsDtp.TabIndex = 142;
-            this.Lat4DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DateLatSettledClosedDtp
-            // 
-            this.Lat4DateLatSettledClosedDtp.Location = new System.Drawing.Point(1285, 281);
-            this.Lat4DateLatSettledClosedDtp.Name = "Lat4DateLatSettledClosedDtp";
-            this.Lat4DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DateLatSettledClosedDtp.TabIndex = 143;
-            this.Lat4DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4HearingStarDateTxt
-            // 
-            this.Lat4HearingStarDateTxt.Location = new System.Drawing.Point(430, 287);
-            this.Lat4HearingStarDateTxt.Name = "Lat4HearingStarDateTxt";
-            this.Lat4HearingStarDateTxt.ReadOnly = true;
-            this.Lat4HearingStarDateTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4HearingStarDateTxt.TabIndex = 132;
-            // 
-            // Lat4DeadLineToReceiveInsurerTxt
-            // 
-            this.Lat4DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(430, 254);
-            this.Lat4DeadLineToReceiveInsurerTxt.Name = "Lat4DeadLineToReceiveInsurerTxt";
-            this.Lat4DeadLineToReceiveInsurerTxt.ReadOnly = true;
-            this.Lat4DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineToReceiveInsurerTxt.TabIndex = 131;
-            // 
-            // Lat4DeadLineToReceiveAffidavitReportsTxt
-            // 
-            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(430, 221);
-            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Name = "Lat4DeadLineToReceiveAffidavitReportsTxt";
-            this.Lat4DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
-            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineToReceiveAffidavitReportsTxt.TabIndex = 130;
-            // 
-            // Lat4DeadLineToReceiveABProductionsTxt
-            // 
-            this.Lat4DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(430, 188);
-            this.Lat4DeadLineToReceiveABProductionsTxt.Name = "Lat4DeadLineToReceiveABProductionsTxt";
-            this.Lat4DeadLineToReceiveABProductionsTxt.ReadOnly = true;
-            this.Lat4DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DeadLineToReceiveABProductionsTxt.TabIndex = 129;
-            // 
-            // Lat4LatCaseConfDateTxt
-            // 
-            this.Lat4LatCaseConfDateTxt.Location = new System.Drawing.Point(430, 155);
-            this.Lat4LatCaseConfDateTxt.Name = "Lat4LatCaseConfDateTxt";
-            this.Lat4LatCaseConfDateTxt.ReadOnly = true;
-            this.Lat4LatCaseConfDateTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4LatCaseConfDateTxt.TabIndex = 128;
-            // 
-            // Lat4InsuresResponseReceivedTxt
-            // 
-            this.Lat4InsuresResponseReceivedTxt.Location = new System.Drawing.Point(430, 122);
-            this.Lat4InsuresResponseReceivedTxt.Name = "Lat4InsuresResponseReceivedTxt";
-            this.Lat4InsuresResponseReceivedTxt.ReadOnly = true;
-            this.Lat4InsuresResponseReceivedTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4InsuresResponseReceivedTxt.TabIndex = 127;
-            // 
-            // Lat4ActualDateLatFiledTxt
-            // 
-            this.Lat4ActualDateLatFiledTxt.Location = new System.Drawing.Point(430, 89);
-            this.Lat4ActualDateLatFiledTxt.Name = "Lat4ActualDateLatFiledTxt";
-            this.Lat4ActualDateLatFiledTxt.ReadOnly = true;
-            this.Lat4ActualDateLatFiledTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4ActualDateLatFiledTxt.TabIndex = 126;
-            // 
-            // Lat4DateMetWithLawyerReDenialTxt
-            // 
-            this.Lat4DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(430, 55);
-            this.Lat4DateMetWithLawyerReDenialTxt.Name = "Lat4DateMetWithLawyerReDenialTxt";
-            this.Lat4DateMetWithLawyerReDenialTxt.ReadOnly = true;
-            this.Lat4DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(189, 23);
-            this.Lat4DateMetWithLawyerReDenialTxt.TabIndex = 125;
-            // 
-            // Lat4DateMetWithLawyerReDenialDtp
-            // 
-            this.Lat4DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(620, 55);
-            this.Lat4DateMetWithLawyerReDenialDtp.Name = "Lat4DateMetWithLawyerReDenialDtp";
-            this.Lat4DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DateMetWithLawyerReDenialDtp.TabIndex = 117;
-            this.Lat4DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4ActualDateLatFiledDtp
-            // 
-            this.Lat4ActualDateLatFiledDtp.Location = new System.Drawing.Point(620, 89);
-            this.Lat4ActualDateLatFiledDtp.Name = "Lat4ActualDateLatFiledDtp";
-            this.Lat4ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4ActualDateLatFiledDtp.TabIndex = 118;
-            this.Lat4ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4InsuresResponseReceivedDtp
-            // 
-            this.Lat4InsuresResponseReceivedDtp.Location = new System.Drawing.Point(620, 122);
-            this.Lat4InsuresResponseReceivedDtp.Name = "Lat4InsuresResponseReceivedDtp";
-            this.Lat4InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4InsuresResponseReceivedDtp.TabIndex = 119;
-            this.Lat4InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4LatCaseConfDateDtp
-            // 
-            this.Lat4LatCaseConfDateDtp.Location = new System.Drawing.Point(620, 155);
-            this.Lat4LatCaseConfDateDtp.Name = "Lat4LatCaseConfDateDtp";
-            this.Lat4LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4LatCaseConfDateDtp.TabIndex = 120;
-            this.Lat4LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineToReceiveABProductionsDtp
-            // 
-            this.Lat4DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(620, 188);
-            this.Lat4DeadLineToReceiveABProductionsDtp.Name = "Lat4DeadLineToReceiveABProductionsDtp";
-            this.Lat4DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineToReceiveABProductionsDtp.TabIndex = 121;
-            this.Lat4DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineToReceiveAffidavitReportsDtp
-            // 
-            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(620, 221);
-            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Name = "Lat4DeadLineToReceiveAffidavitReportsDtp";
-            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineToReceiveAffidavitReportsDtp.TabIndex = 122;
-            this.Lat4DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4DeadLineToReceiveInsurerDtp
-            // 
-            this.Lat4DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(620, 254);
-            this.Lat4DeadLineToReceiveInsurerDtp.Name = "Lat4DeadLineToReceiveInsurerDtp";
-            this.Lat4DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4DeadLineToReceiveInsurerDtp.TabIndex = 123;
-            this.Lat4DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // Lat4HearingStarDateDtp
-            // 
-            this.Lat4HearingStarDateDtp.Location = new System.Drawing.Point(620, 287);
-            this.Lat4HearingStarDateDtp.Name = "Lat4HearingStarDateDtp";
-            this.Lat4HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
-            this.Lat4HearingStarDateDtp.TabIndex = 124;
             // 
             // panel4
             // 
@@ -11315,6 +9731,1598 @@
             this.LimDateTextBox.Name = "LimDateTextBox";
             this.LimDateTextBox.Size = new System.Drawing.Size(93, 23);
             this.LimDateTextBox.TabIndex = 7;
+            // 
+            // BtnLat2
+            // 
+            this.BtnLat2.Location = new System.Drawing.Point(1013, 222);
+            this.BtnLat2.Name = "BtnLat2";
+            this.BtnLat2.Size = new System.Drawing.Size(85, 23);
+            this.BtnLat2.TabIndex = 200;
+            this.BtnLat2.Text = "Operation";
+            this.BtnLat2.UseVisualStyleBackColor = true;
+            // 
+            // Lat2DateLatSettledClosedTxt
+            // 
+            this.Lat2DateLatSettledClosedTxt.Location = new System.Drawing.Point(999, 189);
+            this.Lat2DateLatSettledClosedTxt.Name = "Lat2DateLatSettledClosedTxt";
+            this.Lat2DateLatSettledClosedTxt.ReadOnly = true;
+            this.Lat2DateLatSettledClosedTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat2DateLatSettledClosedTxt.TabIndex = 199;
+            // 
+            // Lat2DeadLineForReplaySubmissionsTxt
+            // 
+            this.Lat2DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(999, 163);
+            this.Lat2DeadLineForReplaySubmissionsTxt.Name = "Lat2DeadLineForReplaySubmissionsTxt";
+            this.Lat2DeadLineForReplaySubmissionsTxt.ReadOnly = true;
+            this.Lat2DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat2DeadLineForReplaySubmissionsTxt.TabIndex = 198;
+            // 
+            // label73
+            // 
+            label73.AutoSize = true;
+            label73.Location = new System.Drawing.Point(562, 168);
+            label73.Name = "label73";
+            label73.Size = new System.Drawing.Size(320, 17);
+            label73.TabIndex = 194;
+            label73.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // Lat2DeadLineForReplaySubmissionsDtp
+            // 
+            this.Lat2DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1086, 163);
+            this.Lat2DeadLineForReplaySubmissionsDtp.Name = "Lat2DeadLineForReplaySubmissionsDtp";
+            this.Lat2DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineForReplaySubmissionsDtp.TabIndex = 195;
+            this.Lat2DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label74
+            // 
+            label74.AutoSize = true;
+            label74.Location = new System.Drawing.Point(562, 192);
+            label74.Name = "label74";
+            label74.Size = new System.Drawing.Size(161, 17);
+            label74.TabIndex = 196;
+            label74.Text = "Date LATSettled Closed:";
+            // 
+            // Lat2DateLatSettledClosedDtp
+            // 
+            this.Lat2DateLatSettledClosedDtp.Location = new System.Drawing.Point(1087, 189);
+            this.Lat2DateLatSettledClosedDtp.Name = "Lat2DateLatSettledClosedDtp";
+            this.Lat2DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DateLatSettledClosedDtp.TabIndex = 197;
+            this.Lat2DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat2DeadLineToFileHearingSubmissionsTxt
+            // 
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(999, 137);
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.Name = "Lat2DeadLineToFileHearingSubmissionsTxt";
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat2DeadLineToFileHearingSubmissionsTxt.TabIndex = 193;
+            // 
+            // Lat2DeadLineToFileAffidavitReportsTxt
+            // 
+            this.Lat2DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(999, 111);
+            this.Lat2DeadLineToFileAffidavitReportsTxt.Name = "Lat2DeadLineToFileAffidavitReportsTxt";
+            this.Lat2DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.Lat2DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat2DeadLineToFileAffidavitReportsTxt.TabIndex = 192;
+            // 
+            // Lat2DeadLineToDeliverProductionsToABCounselTxt
+            // 
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(999, 85);
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat2DeadLineToDeliverProductionsToABCounselTxt";
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat2DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 191;
+            // 
+            // Lat2DeadLineToServeFileCaseConfSummaryTxt
+            // 
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(999, 59);
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat2DeadLineToServeFileCaseConfSummaryTxt";
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat2DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 190;
+            // 
+            // label75
+            // 
+            label75.AutoSize = true;
+            label75.Location = new System.Drawing.Point(562, 62);
+            label75.Name = "label75";
+            label75.Size = new System.Drawing.Size(286, 17);
+            label75.TabIndex = 182;
+            label75.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // Lat2DeadLineToServeFileCaseConfSummaryDtp
+            // 
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1086, 59);
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat2DeadLineToServeFileCaseConfSummaryDtp";
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 183;
+            this.Lat2DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label76
+            // 
+            label76.AutoSize = true;
+            label76.Location = new System.Drawing.Point(562, 86);
+            label76.Name = "label76";
+            label76.Size = new System.Drawing.Size(306, 17);
+            label76.TabIndex = 184;
+            label76.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // Lat2DeadLineToDeliverProductionsToABCounselDtp
+            // 
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1086, 85);
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat2DeadLineToDeliverProductionsToABCounselDtp";
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 185;
+            this.Lat2DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label77
+            // 
+            label77.AutoSize = true;
+            label77.Location = new System.Drawing.Point(562, 113);
+            label77.Name = "label77";
+            label77.Size = new System.Drawing.Size(352, 17);
+            label77.TabIndex = 186;
+            label77.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Lat2DeadLineToFileAffidavitReportsDtp
+            // 
+            this.Lat2DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1086, 111);
+            this.Lat2DeadLineToFileAffidavitReportsDtp.Name = "Lat2DeadLineToFileAffidavitReportsDtp";
+            this.Lat2DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToFileAffidavitReportsDtp.TabIndex = 187;
+            this.Lat2DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label78
+            // 
+            label78.AutoSize = true;
+            label78.Location = new System.Drawing.Point(562, 140);
+            label78.Name = "label78";
+            label78.Size = new System.Drawing.Size(407, 17);
+            label78.TabIndex = 188;
+            label78.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // Lat2DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1086, 137);
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.Name = "Lat2DeadLineToFileHearingSubmissionsDtp";
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.TabIndex = 189;
+            this.Lat2DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat2ActualDateLatServedOnInsurerTxt
+            // 
+            this.Lat2ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(999, 34);
+            this.Lat2ActualDateLatServedOnInsurerTxt.Name = "Lat2ActualDateLatServedOnInsurerTxt";
+            this.Lat2ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.Lat2ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(85, 23);
+            this.Lat2ActualDateLatServedOnInsurerTxt.TabIndex = 181;
+            // 
+            // Lat2ProposedDateToFileLatTxt
+            // 
+            this.Lat2ProposedDateToFileLatTxt.Location = new System.Drawing.Point(999, 8);
+            this.Lat2ProposedDateToFileLatTxt.Name = "Lat2ProposedDateToFileLatTxt";
+            this.Lat2ProposedDateToFileLatTxt.ReadOnly = true;
+            this.Lat2ProposedDateToFileLatTxt.Size = new System.Drawing.Size(85, 23);
+            this.Lat2ProposedDateToFileLatTxt.TabIndex = 180;
+            // 
+            // label79
+            // 
+            label79.AutoSize = true;
+            label79.Location = new System.Drawing.Point(562, 10);
+            label79.Name = "label79";
+            label79.Size = new System.Drawing.Size(175, 17);
+            label79.TabIndex = 176;
+            label79.Text = "Proposed Date To File LAT:";
+            // 
+            // Lat2ProposedDateToFileLatDtp
+            // 
+            this.Lat2ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1085, 8);
+            this.Lat2ProposedDateToFileLatDtp.Name = "Lat2ProposedDateToFileLatDtp";
+            this.Lat2ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2ProposedDateToFileLatDtp.TabIndex = 177;
+            this.Lat2ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label80
+            // 
+            label80.AutoSize = true;
+            label80.Location = new System.Drawing.Point(562, 37);
+            label80.Name = "label80";
+            label80.Size = new System.Drawing.Size(224, 17);
+            label80.TabIndex = 178;
+            label80.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // Lat2ActualDateLatServedOnInsurerDtp
+            // 
+            this.Lat2ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1085, 34);
+            this.Lat2ActualDateLatServedOnInsurerDtp.Name = "Lat2ActualDateLatServedOnInsurerDtp";
+            this.Lat2ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2ActualDateLatServedOnInsurerDtp.TabIndex = 179;
+            this.Lat2ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat2DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(395, 219);
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Name = "Lat2DueDateToDiscussPotenctialLatApplTxt";
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat2DueDateToDiscussPotenctialLatApplTxt.TabIndex = 175;
+            // 
+            // label81
+            // 
+            label81.AutoSize = true;
+            label81.Location = new System.Drawing.Point(7, 222);
+            label81.Name = "label81";
+            label81.Size = new System.Drawing.Size(256, 17);
+            label81.TabIndex = 173;
+            label81.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // Lat2DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(489, 219);
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Name = "Lat2DueDateToDiscussPotenctialLatApplDtp";
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.TabIndex = 174;
+            this.Lat2DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat2HearingStarDateTxt
+            // 
+            this.Lat2HearingStarDateTxt.Location = new System.Drawing.Point(395, 190);
+            this.Lat2HearingStarDateTxt.Name = "Lat2HearingStarDateTxt";
+            this.Lat2HearingStarDateTxt.ReadOnly = true;
+            this.Lat2HearingStarDateTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat2HearingStarDateTxt.TabIndex = 172;
+            // 
+            // Lat2DeadLineToReceiveInsurerTxt
+            // 
+            this.Lat2DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(395, 163);
+            this.Lat2DeadLineToReceiveInsurerTxt.Name = "Lat2DeadLineToReceiveInsurerTxt";
+            this.Lat2DeadLineToReceiveInsurerTxt.ReadOnly = true;
+            this.Lat2DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat2DeadLineToReceiveInsurerTxt.TabIndex = 171;
+            // 
+            // label83
+            // 
+            label83.AutoSize = true;
+            label83.Location = new System.Drawing.Point(8, 169);
+            label83.Name = "label83";
+            label83.Size = new System.Drawing.Size(265, 17);
+            label83.TabIndex = 167;
+            label83.Text = "Deadline To Receive Insurer Submissions:";
+            // 
+            // Lat2DeadLineToReceiveInsurerDtp
+            // 
+            this.Lat2DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(489, 163);
+            this.Lat2DeadLineToReceiveInsurerDtp.Name = "Lat2DeadLineToReceiveInsurerDtp";
+            this.Lat2DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToReceiveInsurerDtp.TabIndex = 168;
+            this.Lat2DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label84
+            // 
+            label84.AutoSize = true;
+            label84.Location = new System.Drawing.Point(8, 197);
+            label84.Name = "label84";
+            label84.Size = new System.Drawing.Size(131, 17);
+            label84.TabIndex = 169;
+            label84.Text = "Hearing Start Date:";
+            // 
+            // Lat2HearingStarDateDtp
+            // 
+            this.Lat2HearingStarDateDtp.Location = new System.Drawing.Point(489, 190);
+            this.Lat2HearingStarDateDtp.Name = "Lat2HearingStarDateDtp";
+            this.Lat2HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2HearingStarDateDtp.TabIndex = 170;
+            this.Lat2HearingStarDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat2DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(395, 136);
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Name = "Lat2DeadLineToReceiveAffidavitReportsTxt";
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat2DeadLineToReceiveAffidavitReportsTxt.TabIndex = 166;
+            // 
+            // label85
+            // 
+            label85.AutoSize = true;
+            label85.Location = new System.Drawing.Point(6, 142);
+            label85.Name = "label85";
+            label85.Size = new System.Drawing.Size(383, 17);
+            label85.TabIndex = 164;
+            label85.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Lat2DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(489, 136);
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Name = "Lat2DeadLineToReceiveAffidavitReportsDtp";
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.TabIndex = 165;
+            this.Lat2DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat2DeadLineToReceiveABProductionsTxt
+            // 
+            this.Lat2DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(395, 109);
+            this.Lat2DeadLineToReceiveABProductionsTxt.Name = "Lat2DeadLineToReceiveABProductionsTxt";
+            this.Lat2DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.Lat2DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat2DeadLineToReceiveABProductionsTxt.TabIndex = 163;
+            // 
+            // Lat2LatCaseConfDateTxt
+            // 
+            this.Lat2LatCaseConfDateTxt.Location = new System.Drawing.Point(395, 83);
+            this.Lat2LatCaseConfDateTxt.Name = "Lat2LatCaseConfDateTxt";
+            this.Lat2LatCaseConfDateTxt.ReadOnly = true;
+            this.Lat2LatCaseConfDateTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat2LatCaseConfDateTxt.TabIndex = 162;
+            // 
+            // Lat2InsuresResponseReceivedTxt
+            // 
+            this.Lat2InsuresResponseReceivedTxt.Location = new System.Drawing.Point(395, 57);
+            this.Lat2InsuresResponseReceivedTxt.Name = "Lat2InsuresResponseReceivedTxt";
+            this.Lat2InsuresResponseReceivedTxt.ReadOnly = true;
+            this.Lat2InsuresResponseReceivedTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat2InsuresResponseReceivedTxt.TabIndex = 161;
+            // 
+            // Lat2ActualDateLatFiledTxt
+            // 
+            this.Lat2ActualDateLatFiledTxt.Location = new System.Drawing.Point(395, 32);
+            this.Lat2ActualDateLatFiledTxt.Name = "Lat2ActualDateLatFiledTxt";
+            this.Lat2ActualDateLatFiledTxt.ReadOnly = true;
+            this.Lat2ActualDateLatFiledTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat2ActualDateLatFiledTxt.TabIndex = 160;
+            // 
+            // Lat2DateMetWithLawyerReDenialTxt
+            // 
+            this.Lat2DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(395, 7);
+            this.Lat2DateMetWithLawyerReDenialTxt.Name = "Lat2DateMetWithLawyerReDenialTxt";
+            this.Lat2DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.Lat2DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat2DateMetWithLawyerReDenialTxt.TabIndex = 159;
+            // 
+            // label86
+            // 
+            label86.AutoSize = true;
+            label86.Location = new System.Drawing.Point(6, 10);
+            label86.Name = "label86";
+            label86.Size = new System.Drawing.Size(219, 17);
+            label86.TabIndex = 149;
+            label86.Text = "Date Met With Lawyer Re Denial:";
+            // 
+            // Lat2DateMetWithLawyerReDenialDtp
+            // 
+            this.Lat2DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(489, 6);
+            this.Lat2DateMetWithLawyerReDenialDtp.Name = "Lat2DateMetWithLawyerReDenialDtp";
+            this.Lat2DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DateMetWithLawyerReDenialDtp.TabIndex = 150;
+            this.Lat2DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label87
+            // 
+            label87.AutoSize = true;
+            label87.Location = new System.Drawing.Point(6, 35);
+            label87.Name = "label87";
+            label87.Size = new System.Drawing.Size(143, 17);
+            label87.TabIndex = 151;
+            label87.Text = "Actual Date LATFiled:";
+            // 
+            // Lat2ActualDateLatFiledDtp
+            // 
+            this.Lat2ActualDateLatFiledDtp.Location = new System.Drawing.Point(489, 32);
+            this.Lat2ActualDateLatFiledDtp.Name = "Lat2ActualDateLatFiledDtp";
+            this.Lat2ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2ActualDateLatFiledDtp.TabIndex = 152;
+            this.Lat2ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label88
+            // 
+            label88.AutoSize = true;
+            label88.Location = new System.Drawing.Point(6, 63);
+            label88.Name = "label88";
+            label88.Size = new System.Drawing.Size(185, 17);
+            label88.TabIndex = 153;
+            label88.Text = "Insurers Response Received:";
+            // 
+            // Lat2InsuresResponseReceivedDtp
+            // 
+            this.Lat2InsuresResponseReceivedDtp.Location = new System.Drawing.Point(489, 57);
+            this.Lat2InsuresResponseReceivedDtp.Name = "Lat2InsuresResponseReceivedDtp";
+            this.Lat2InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2InsuresResponseReceivedDtp.TabIndex = 154;
+            this.Lat2InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label89
+            // 
+            label89.AutoSize = true;
+            label89.Location = new System.Drawing.Point(7, 89);
+            label89.Name = "label89";
+            label89.Size = new System.Drawing.Size(137, 17);
+            label89.TabIndex = 155;
+            label89.Text = "LATCase Conf Date:";
+            // 
+            // Lat2LatCaseConfDateDtp
+            // 
+            this.Lat2LatCaseConfDateDtp.Location = new System.Drawing.Point(489, 83);
+            this.Lat2LatCaseConfDateDtp.Name = "Lat2LatCaseConfDateDtp";
+            this.Lat2LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2LatCaseConfDateDtp.TabIndex = 156;
+            this.Lat2LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label90
+            // 
+            label90.AutoSize = true;
+            label90.Location = new System.Drawing.Point(6, 115);
+            label90.Name = "label90";
+            label90.Size = new System.Drawing.Size(239, 17);
+            label90.TabIndex = 157;
+            label90.Text = "Deadline To Receive ABProductions:";
+            // 
+            // Lat2DeadLineToReceiveABProductionsDtp
+            // 
+            this.Lat2DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(489, 109);
+            this.Lat2DeadLineToReceiveABProductionsDtp.Name = "Lat2DeadLineToReceiveABProductionsDtp";
+            this.Lat2DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat2DeadLineToReceiveABProductionsDtp.TabIndex = 158;
+            this.Lat2DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // BtnLat3
+            // 
+            this.BtnLat3.Location = new System.Drawing.Point(1013, 223);
+            this.BtnLat3.Name = "BtnLat3";
+            this.BtnLat3.Size = new System.Drawing.Size(85, 23);
+            this.BtnLat3.TabIndex = 252;
+            this.BtnLat3.Text = "Operation";
+            this.BtnLat3.UseVisualStyleBackColor = true;
+            // 
+            // Lat3DateLatSettledClosedTxt
+            // 
+            this.Lat3DateLatSettledClosedTxt.Location = new System.Drawing.Point(999, 190);
+            this.Lat3DateLatSettledClosedTxt.Name = "Lat3DateLatSettledClosedTxt";
+            this.Lat3DateLatSettledClosedTxt.ReadOnly = true;
+            this.Lat3DateLatSettledClosedTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat3DateLatSettledClosedTxt.TabIndex = 251;
+            // 
+            // Lat3DeadLineForReplaySubmissionsTxt
+            // 
+            this.Lat3DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(999, 164);
+            this.Lat3DeadLineForReplaySubmissionsTxt.Name = "Lat3DeadLineForReplaySubmissionsTxt";
+            this.Lat3DeadLineForReplaySubmissionsTxt.ReadOnly = true;
+            this.Lat3DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat3DeadLineForReplaySubmissionsTxt.TabIndex = 250;
+            // 
+            // label55
+            // 
+            label55.AutoSize = true;
+            label55.Location = new System.Drawing.Point(562, 169);
+            label55.Name = "label55";
+            label55.Size = new System.Drawing.Size(320, 17);
+            label55.TabIndex = 246;
+            label55.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // Lat3DeadLineForReplaySubmissionsDtp
+            // 
+            this.Lat3DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1086, 164);
+            this.Lat3DeadLineForReplaySubmissionsDtp.Name = "Lat3DeadLineForReplaySubmissionsDtp";
+            this.Lat3DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineForReplaySubmissionsDtp.TabIndex = 247;
+            this.Lat3DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Location = new System.Drawing.Point(562, 193);
+            label56.Name = "label56";
+            label56.Size = new System.Drawing.Size(161, 17);
+            label56.TabIndex = 248;
+            label56.Text = "Date LATSettled Closed:";
+            // 
+            // Lat3DateLatSettledClosedDtp
+            // 
+            this.Lat3DateLatSettledClosedDtp.Location = new System.Drawing.Point(1087, 190);
+            this.Lat3DateLatSettledClosedDtp.Name = "Lat3DateLatSettledClosedDtp";
+            this.Lat3DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DateLatSettledClosedDtp.TabIndex = 249;
+            this.Lat3DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat3DeadLineToFileHearingSubmissionsTxt
+            // 
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(999, 138);
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.Name = "Lat3DeadLineToFileHearingSubmissionsTxt";
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat3DeadLineToFileHearingSubmissionsTxt.TabIndex = 245;
+            // 
+            // Lat3DeadLineToFileAffidavitReportsTxt
+            // 
+            this.Lat3DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(999, 112);
+            this.Lat3DeadLineToFileAffidavitReportsTxt.Name = "Lat3DeadLineToFileAffidavitReportsTxt";
+            this.Lat3DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.Lat3DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat3DeadLineToFileAffidavitReportsTxt.TabIndex = 244;
+            // 
+            // Lat3DeadLineToDeliverProductionsToABCounselTxt
+            // 
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(999, 86);
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat3DeadLineToDeliverProductionsToABCounselTxt";
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat3DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 243;
+            // 
+            // Lat3DeadLineToServeFileCaseConfSummaryTxt
+            // 
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(999, 60);
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat3DeadLineToServeFileCaseConfSummaryTxt";
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat3DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 242;
+            // 
+            // label57
+            // 
+            label57.AutoSize = true;
+            label57.Location = new System.Drawing.Point(562, 63);
+            label57.Name = "label57";
+            label57.Size = new System.Drawing.Size(286, 17);
+            label57.TabIndex = 234;
+            label57.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // Lat3DeadLineToServeFileCaseConfSummaryDtp
+            // 
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1086, 60);
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat3DeadLineToServeFileCaseConfSummaryDtp";
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 235;
+            this.Lat3DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label58
+            // 
+            label58.AutoSize = true;
+            label58.Location = new System.Drawing.Point(562, 87);
+            label58.Name = "label58";
+            label58.Size = new System.Drawing.Size(306, 17);
+            label58.TabIndex = 236;
+            label58.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // Lat3DeadLineToDeliverProductionsToABCounselDtp
+            // 
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1086, 86);
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat3DeadLineToDeliverProductionsToABCounselDtp";
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 237;
+            this.Lat3DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label59
+            // 
+            label59.AutoSize = true;
+            label59.Location = new System.Drawing.Point(562, 114);
+            label59.Name = "label59";
+            label59.Size = new System.Drawing.Size(352, 17);
+            label59.TabIndex = 238;
+            label59.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Lat3DeadLineToFileAffidavitReportsDtp
+            // 
+            this.Lat3DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1086, 112);
+            this.Lat3DeadLineToFileAffidavitReportsDtp.Name = "Lat3DeadLineToFileAffidavitReportsDtp";
+            this.Lat3DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToFileAffidavitReportsDtp.TabIndex = 239;
+            this.Lat3DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label60
+            // 
+            label60.AutoSize = true;
+            label60.Location = new System.Drawing.Point(562, 141);
+            label60.Name = "label60";
+            label60.Size = new System.Drawing.Size(407, 17);
+            label60.TabIndex = 240;
+            label60.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // Lat3DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1086, 138);
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.Name = "Lat3DeadLineToFileHearingSubmissionsDtp";
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.TabIndex = 241;
+            this.Lat3DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat3ActualDateLatServedOnInsurerTxt
+            // 
+            this.Lat3ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(999, 35);
+            this.Lat3ActualDateLatServedOnInsurerTxt.Name = "Lat3ActualDateLatServedOnInsurerTxt";
+            this.Lat3ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.Lat3ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(85, 23);
+            this.Lat3ActualDateLatServedOnInsurerTxt.TabIndex = 233;
+            // 
+            // Lat3ProposedDateToFileLatTxt
+            // 
+            this.Lat3ProposedDateToFileLatTxt.Location = new System.Drawing.Point(999, 9);
+            this.Lat3ProposedDateToFileLatTxt.Name = "Lat3ProposedDateToFileLatTxt";
+            this.Lat3ProposedDateToFileLatTxt.ReadOnly = true;
+            this.Lat3ProposedDateToFileLatTxt.Size = new System.Drawing.Size(85, 23);
+            this.Lat3ProposedDateToFileLatTxt.TabIndex = 232;
+            // 
+            // label61
+            // 
+            label61.AutoSize = true;
+            label61.Location = new System.Drawing.Point(562, 11);
+            label61.Name = "label61";
+            label61.Size = new System.Drawing.Size(175, 17);
+            label61.TabIndex = 228;
+            label61.Text = "Proposed Date To File LAT:";
+            // 
+            // Lat3ProposedDateToFileLatDtp
+            // 
+            this.Lat3ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1085, 9);
+            this.Lat3ProposedDateToFileLatDtp.Name = "Lat3ProposedDateToFileLatDtp";
+            this.Lat3ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3ProposedDateToFileLatDtp.TabIndex = 229;
+            this.Lat3ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label62
+            // 
+            label62.AutoSize = true;
+            label62.Location = new System.Drawing.Point(562, 38);
+            label62.Name = "label62";
+            label62.Size = new System.Drawing.Size(224, 17);
+            label62.TabIndex = 230;
+            label62.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // Lat3ActualDateLatServedOnInsurerDtp
+            // 
+            this.Lat3ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1085, 35);
+            this.Lat3ActualDateLatServedOnInsurerDtp.Name = "Lat3ActualDateLatServedOnInsurerDtp";
+            this.Lat3ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3ActualDateLatServedOnInsurerDtp.TabIndex = 231;
+            this.Lat3ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat3DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(395, 220);
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Name = "Lat3DueDateToDiscussPotenctialLatApplTxt";
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat3DueDateToDiscussPotenctialLatApplTxt.TabIndex = 227;
+            // 
+            // label63
+            // 
+            label63.AutoSize = true;
+            label63.Location = new System.Drawing.Point(7, 223);
+            label63.Name = "label63";
+            label63.Size = new System.Drawing.Size(256, 17);
+            label63.TabIndex = 225;
+            label63.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // Lat3DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(489, 220);
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Name = "Lat3DueDateToDiscussPotenctialLatApplDtp";
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.TabIndex = 226;
+            this.Lat3DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat3HearingStarDateTxt
+            // 
+            this.Lat3HearingStarDateTxt.Location = new System.Drawing.Point(395, 191);
+            this.Lat3HearingStarDateTxt.Name = "Lat3HearingStarDateTxt";
+            this.Lat3HearingStarDateTxt.ReadOnly = true;
+            this.Lat3HearingStarDateTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat3HearingStarDateTxt.TabIndex = 224;
+            // 
+            // Lat3DeadLineToReceiveInsurerTxt
+            // 
+            this.Lat3DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(395, 164);
+            this.Lat3DeadLineToReceiveInsurerTxt.Name = "Lat3DeadLineToReceiveInsurerTxt";
+            this.Lat3DeadLineToReceiveInsurerTxt.ReadOnly = true;
+            this.Lat3DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat3DeadLineToReceiveInsurerTxt.TabIndex = 223;
+            // 
+            // label65
+            // 
+            label65.AutoSize = true;
+            label65.Location = new System.Drawing.Point(8, 170);
+            label65.Name = "label65";
+            label65.Size = new System.Drawing.Size(265, 17);
+            label65.TabIndex = 219;
+            label65.Text = "Deadline To Receive Insurer Submissions:";
+            // 
+            // Lat3DeadLineToReceiveInsurerDtp
+            // 
+            this.Lat3DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(489, 164);
+            this.Lat3DeadLineToReceiveInsurerDtp.Name = "Lat3DeadLineToReceiveInsurerDtp";
+            this.Lat3DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToReceiveInsurerDtp.TabIndex = 220;
+            this.Lat3DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label66
+            // 
+            label66.AutoSize = true;
+            label66.Location = new System.Drawing.Point(8, 198);
+            label66.Name = "label66";
+            label66.Size = new System.Drawing.Size(131, 17);
+            label66.TabIndex = 221;
+            label66.Text = "Hearing Start Date:";
+            // 
+            // Lat3HearingStarDateDtp
+            // 
+            this.Lat3HearingStarDateDtp.Location = new System.Drawing.Point(489, 191);
+            this.Lat3HearingStarDateDtp.Name = "Lat3HearingStarDateDtp";
+            this.Lat3HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3HearingStarDateDtp.TabIndex = 222;
+            this.Lat3HearingStarDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat3DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(395, 137);
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Name = "Lat3DeadLineToReceiveAffidavitReportsTxt";
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat3DeadLineToReceiveAffidavitReportsTxt.TabIndex = 218;
+            // 
+            // label67
+            // 
+            label67.AutoSize = true;
+            label67.Location = new System.Drawing.Point(6, 143);
+            label67.Name = "label67";
+            label67.Size = new System.Drawing.Size(383, 17);
+            label67.TabIndex = 216;
+            label67.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Lat3DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(489, 137);
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Name = "Lat3DeadLineToReceiveAffidavitReportsDtp";
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.TabIndex = 217;
+            this.Lat3DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat3DeadLineToReceiveABProductionsTxt
+            // 
+            this.Lat3DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(395, 110);
+            this.Lat3DeadLineToReceiveABProductionsTxt.Name = "Lat3DeadLineToReceiveABProductionsTxt";
+            this.Lat3DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.Lat3DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat3DeadLineToReceiveABProductionsTxt.TabIndex = 215;
+            // 
+            // Lat3LatCaseConfDateTxt
+            // 
+            this.Lat3LatCaseConfDateTxt.Location = new System.Drawing.Point(395, 84);
+            this.Lat3LatCaseConfDateTxt.Name = "Lat3LatCaseConfDateTxt";
+            this.Lat3LatCaseConfDateTxt.ReadOnly = true;
+            this.Lat3LatCaseConfDateTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat3LatCaseConfDateTxt.TabIndex = 214;
+            // 
+            // Lat3InsuresResponseReceivedTxt
+            // 
+            this.Lat3InsuresResponseReceivedTxt.Location = new System.Drawing.Point(395, 58);
+            this.Lat3InsuresResponseReceivedTxt.Name = "Lat3InsuresResponseReceivedTxt";
+            this.Lat3InsuresResponseReceivedTxt.ReadOnly = true;
+            this.Lat3InsuresResponseReceivedTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat3InsuresResponseReceivedTxt.TabIndex = 213;
+            // 
+            // Lat3ActualDateLatFiledTxt
+            // 
+            this.Lat3ActualDateLatFiledTxt.Location = new System.Drawing.Point(395, 33);
+            this.Lat3ActualDateLatFiledTxt.Name = "Lat3ActualDateLatFiledTxt";
+            this.Lat3ActualDateLatFiledTxt.ReadOnly = true;
+            this.Lat3ActualDateLatFiledTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat3ActualDateLatFiledTxt.TabIndex = 212;
+            // 
+            // Lat3DateMetWithLawyerReDenialTxt
+            // 
+            this.Lat3DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(395, 8);
+            this.Lat3DateMetWithLawyerReDenialTxt.Name = "Lat3DateMetWithLawyerReDenialTxt";
+            this.Lat3DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.Lat3DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat3DateMetWithLawyerReDenialTxt.TabIndex = 211;
+            // 
+            // label68
+            // 
+            label68.AutoSize = true;
+            label68.Location = new System.Drawing.Point(6, 11);
+            label68.Name = "label68";
+            label68.Size = new System.Drawing.Size(219, 17);
+            label68.TabIndex = 201;
+            label68.Text = "Date Met With Lawyer Re Denial:";
+            // 
+            // Lat3DateMetWithLawyerReDenialDtp
+            // 
+            this.Lat3DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(489, 7);
+            this.Lat3DateMetWithLawyerReDenialDtp.Name = "Lat3DateMetWithLawyerReDenialDtp";
+            this.Lat3DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DateMetWithLawyerReDenialDtp.TabIndex = 202;
+            this.Lat3DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label69
+            // 
+            label69.AutoSize = true;
+            label69.Location = new System.Drawing.Point(6, 36);
+            label69.Name = "label69";
+            label69.Size = new System.Drawing.Size(143, 17);
+            label69.TabIndex = 203;
+            label69.Text = "Actual Date LATFiled:";
+            // 
+            // Lat3ActualDateLatFiledDtp
+            // 
+            this.Lat3ActualDateLatFiledDtp.Location = new System.Drawing.Point(489, 33);
+            this.Lat3ActualDateLatFiledDtp.Name = "Lat3ActualDateLatFiledDtp";
+            this.Lat3ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3ActualDateLatFiledDtp.TabIndex = 204;
+            this.Lat3ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label70
+            // 
+            label70.AutoSize = true;
+            label70.Location = new System.Drawing.Point(6, 64);
+            label70.Name = "label70";
+            label70.Size = new System.Drawing.Size(185, 17);
+            label70.TabIndex = 205;
+            label70.Text = "Insurers Response Received:";
+            // 
+            // Lat3InsuresResponseReceivedDtp
+            // 
+            this.Lat3InsuresResponseReceivedDtp.Location = new System.Drawing.Point(489, 58);
+            this.Lat3InsuresResponseReceivedDtp.Name = "Lat3InsuresResponseReceivedDtp";
+            this.Lat3InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3InsuresResponseReceivedDtp.TabIndex = 206;
+            this.Lat3InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label71
+            // 
+            label71.AutoSize = true;
+            label71.Location = new System.Drawing.Point(7, 90);
+            label71.Name = "label71";
+            label71.Size = new System.Drawing.Size(137, 17);
+            label71.TabIndex = 207;
+            label71.Text = "LATCase Conf Date:";
+            // 
+            // Lat3LatCaseConfDateDtp
+            // 
+            this.Lat3LatCaseConfDateDtp.Location = new System.Drawing.Point(489, 84);
+            this.Lat3LatCaseConfDateDtp.Name = "Lat3LatCaseConfDateDtp";
+            this.Lat3LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3LatCaseConfDateDtp.TabIndex = 208;
+            this.Lat3LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label72
+            // 
+            label72.AutoSize = true;
+            label72.Location = new System.Drawing.Point(6, 116);
+            label72.Name = "label72";
+            label72.Size = new System.Drawing.Size(239, 17);
+            label72.TabIndex = 209;
+            label72.Text = "Deadline To Receive ABProductions:";
+            // 
+            // Lat3DeadLineToReceiveABProductionsDtp
+            // 
+            this.Lat3DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(489, 110);
+            this.Lat3DeadLineToReceiveABProductionsDtp.Name = "Lat3DeadLineToReceiveABProductionsDtp";
+            this.Lat3DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat3DeadLineToReceiveABProductionsDtp.TabIndex = 210;
+            this.Lat3DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // BtnLat4
+            // 
+            this.BtnLat4.Location = new System.Drawing.Point(1013, 223);
+            this.BtnLat4.Name = "BtnLat4";
+            this.BtnLat4.Size = new System.Drawing.Size(85, 23);
+            this.BtnLat4.TabIndex = 304;
+            this.BtnLat4.Text = "Operation";
+            this.BtnLat4.UseVisualStyleBackColor = true;
+            // 
+            // Lat4DateLatSettledClosedTxt
+            // 
+            this.Lat4DateLatSettledClosedTxt.Location = new System.Drawing.Point(999, 190);
+            this.Lat4DateLatSettledClosedTxt.Name = "Lat4DateLatSettledClosedTxt";
+            this.Lat4DateLatSettledClosedTxt.ReadOnly = true;
+            this.Lat4DateLatSettledClosedTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat4DateLatSettledClosedTxt.TabIndex = 303;
+            // 
+            // Lat4DeadLineForReplaySubmissionsTxt
+            // 
+            this.Lat4DeadLineForReplaySubmissionsTxt.Location = new System.Drawing.Point(999, 164);
+            this.Lat4DeadLineForReplaySubmissionsTxt.Name = "Lat4DeadLineForReplaySubmissionsTxt";
+            this.Lat4DeadLineForReplaySubmissionsTxt.ReadOnly = true;
+            this.Lat4DeadLineForReplaySubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat4DeadLineForReplaySubmissionsTxt.TabIndex = 302;
+            // 
+            // label101
+            // 
+            label101.AutoSize = true;
+            label101.Location = new System.Drawing.Point(562, 169);
+            label101.Name = "label101";
+            label101.Size = new System.Drawing.Size(320, 17);
+            label101.TabIndex = 298;
+            label101.Text = "Deadline For Reply Submissions Of The Applicant:";
+            // 
+            // Lat4DeadLineForReplaySubmissionsDtp
+            // 
+            this.Lat4DeadLineForReplaySubmissionsDtp.Location = new System.Drawing.Point(1086, 164);
+            this.Lat4DeadLineForReplaySubmissionsDtp.Name = "Lat4DeadLineForReplaySubmissionsDtp";
+            this.Lat4DeadLineForReplaySubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineForReplaySubmissionsDtp.TabIndex = 299;
+            this.Lat4DeadLineForReplaySubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label281
+            // 
+            label281.AutoSize = true;
+            label281.Location = new System.Drawing.Point(562, 193);
+            label281.Name = "label281";
+            label281.Size = new System.Drawing.Size(161, 17);
+            label281.TabIndex = 300;
+            label281.Text = "Date LATSettled Closed:";
+            // 
+            // Lat4DateLatSettledClosedDtp
+            // 
+            this.Lat4DateLatSettledClosedDtp.Location = new System.Drawing.Point(1087, 190);
+            this.Lat4DateLatSettledClosedDtp.Name = "Lat4DateLatSettledClosedDtp";
+            this.Lat4DateLatSettledClosedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DateLatSettledClosedDtp.TabIndex = 301;
+            this.Lat4DateLatSettledClosedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat4DeadLineToFileHearingSubmissionsTxt
+            // 
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.Location = new System.Drawing.Point(999, 138);
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.Name = "Lat4DeadLineToFileHearingSubmissionsTxt";
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.ReadOnly = true;
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat4DeadLineToFileHearingSubmissionsTxt.TabIndex = 297;
+            // 
+            // Lat4DeadLineToFileAffidavitReportsTxt
+            // 
+            this.Lat4DeadLineToFileAffidavitReportsTxt.Location = new System.Drawing.Point(999, 112);
+            this.Lat4DeadLineToFileAffidavitReportsTxt.Name = "Lat4DeadLineToFileAffidavitReportsTxt";
+            this.Lat4DeadLineToFileAffidavitReportsTxt.ReadOnly = true;
+            this.Lat4DeadLineToFileAffidavitReportsTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat4DeadLineToFileAffidavitReportsTxt.TabIndex = 296;
+            // 
+            // Lat4DeadLineToDeliverProductionsToABCounselTxt
+            // 
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Location = new System.Drawing.Point(999, 86);
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Name = "Lat4DeadLineToDeliverProductionsToABCounselTxt";
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.ReadOnly = true;
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat4DeadLineToDeliverProductionsToABCounselTxt.TabIndex = 295;
+            // 
+            // Lat4DeadLineToServeFileCaseConfSummaryTxt
+            // 
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Location = new System.Drawing.Point(999, 60);
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Name = "Lat4DeadLineToServeFileCaseConfSummaryTxt";
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.ReadOnly = true;
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.Size = new System.Drawing.Size(86, 23);
+            this.Lat4DeadLineToServeFileCaseConfSummaryTxt.TabIndex = 294;
+            // 
+            // label282
+            // 
+            label282.AutoSize = true;
+            label282.Location = new System.Drawing.Point(562, 63);
+            label282.Name = "label282";
+            label282.Size = new System.Drawing.Size(286, 17);
+            label282.TabIndex = 286;
+            label282.Text = "Deadline To Serve File Case Conf Summary:";
+            // 
+            // Lat4DeadLineToServeFileCaseConfSummaryDtp
+            // 
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Location = new System.Drawing.Point(1086, 60);
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Name = "Lat4DeadLineToServeFileCaseConfSummaryDtp";
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.TabIndex = 287;
+            this.Lat4DeadLineToServeFileCaseConfSummaryDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label283
+            // 
+            label283.AutoSize = true;
+            label283.Location = new System.Drawing.Point(562, 87);
+            label283.Name = "label283";
+            label283.Size = new System.Drawing.Size(306, 17);
+            label283.TabIndex = 288;
+            label283.Text = "Deadline To Deliver Productions To ABCounsel:";
+            // 
+            // Lat4DeadLineToDeliverProductionsToABCounselDtp
+            // 
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Location = new System.Drawing.Point(1086, 86);
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Name = "Lat4DeadLineToDeliverProductionsToABCounselDtp";
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.TabIndex = 289;
+            this.Lat4DeadLineToDeliverProductionsToABCounselDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label284
+            // 
+            label284.AutoSize = true;
+            label284.Location = new System.Drawing.Point(562, 114);
+            label284.Name = "label284";
+            label284.Size = new System.Drawing.Size(352, 17);
+            label284.TabIndex = 290;
+            label284.Text = "Deadline To File Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Lat4DeadLineToFileAffidavitReportsDtp
+            // 
+            this.Lat4DeadLineToFileAffidavitReportsDtp.Location = new System.Drawing.Point(1086, 112);
+            this.Lat4DeadLineToFileAffidavitReportsDtp.Name = "Lat4DeadLineToFileAffidavitReportsDtp";
+            this.Lat4DeadLineToFileAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToFileAffidavitReportsDtp.TabIndex = 291;
+            this.Lat4DeadLineToFileAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label285
+            // 
+            label285.AutoSize = true;
+            label285.Location = new System.Drawing.Point(562, 141);
+            label285.Name = "label285";
+            label285.Size = new System.Drawing.Size(407, 17);
+            label285.TabIndex = 292;
+            label285.Text = "Deadline To File Hearing Submissions And Or Briefs With Parties:";
+            // 
+            // Lat4DeadLineToFileHearingSubmissionsDtp
+            // 
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.Location = new System.Drawing.Point(1086, 138);
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.Name = "Lat4DeadLineToFileHearingSubmissionsDtp";
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.TabIndex = 293;
+            this.Lat4DeadLineToFileHearingSubmissionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat4ActualDateLatServedOnInsurerTxt
+            // 
+            this.Lat4ActualDateLatServedOnInsurerTxt.Location = new System.Drawing.Point(999, 35);
+            this.Lat4ActualDateLatServedOnInsurerTxt.Name = "Lat4ActualDateLatServedOnInsurerTxt";
+            this.Lat4ActualDateLatServedOnInsurerTxt.ReadOnly = true;
+            this.Lat4ActualDateLatServedOnInsurerTxt.Size = new System.Drawing.Size(85, 23);
+            this.Lat4ActualDateLatServedOnInsurerTxt.TabIndex = 285;
+            // 
+            // Lat4ProposedDateToFileLatTxt
+            // 
+            this.Lat4ProposedDateToFileLatTxt.Location = new System.Drawing.Point(999, 9);
+            this.Lat4ProposedDateToFileLatTxt.Name = "Lat4ProposedDateToFileLatTxt";
+            this.Lat4ProposedDateToFileLatTxt.ReadOnly = true;
+            this.Lat4ProposedDateToFileLatTxt.Size = new System.Drawing.Size(85, 23);
+            this.Lat4ProposedDateToFileLatTxt.TabIndex = 284;
+            // 
+            // label286
+            // 
+            label286.AutoSize = true;
+            label286.Location = new System.Drawing.Point(562, 11);
+            label286.Name = "label286";
+            label286.Size = new System.Drawing.Size(175, 17);
+            label286.TabIndex = 280;
+            label286.Text = "Proposed Date To File LAT:";
+            // 
+            // Lat4ProposedDateToFileLatDtp
+            // 
+            this.Lat4ProposedDateToFileLatDtp.Location = new System.Drawing.Point(1085, 9);
+            this.Lat4ProposedDateToFileLatDtp.Name = "Lat4ProposedDateToFileLatDtp";
+            this.Lat4ProposedDateToFileLatDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4ProposedDateToFileLatDtp.TabIndex = 281;
+            this.Lat4ProposedDateToFileLatDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label287
+            // 
+            label287.AutoSize = true;
+            label287.Location = new System.Drawing.Point(562, 38);
+            label287.Name = "label287";
+            label287.Size = new System.Drawing.Size(224, 17);
+            label287.TabIndex = 282;
+            label287.Text = "Actual Date LATServed On Insurer:";
+            // 
+            // Lat4ActualDateLatServedOnInsurerDtp
+            // 
+            this.Lat4ActualDateLatServedOnInsurerDtp.Location = new System.Drawing.Point(1085, 35);
+            this.Lat4ActualDateLatServedOnInsurerDtp.Name = "Lat4ActualDateLatServedOnInsurerDtp";
+            this.Lat4ActualDateLatServedOnInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4ActualDateLatServedOnInsurerDtp.TabIndex = 283;
+            this.Lat4ActualDateLatServedOnInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat4DueDateToDiscussPotenctialLatApplTxt
+            // 
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Location = new System.Drawing.Point(395, 220);
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Name = "Lat4DueDateToDiscussPotenctialLatApplTxt";
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.ReadOnly = true;
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat4DueDateToDiscussPotenctialLatApplTxt.TabIndex = 279;
+            // 
+            // label288
+            // 
+            label288.AutoSize = true;
+            label288.Location = new System.Drawing.Point(7, 223);
+            label288.Name = "label288";
+            label288.Size = new System.Drawing.Size(256, 17);
+            label288.TabIndex = 277;
+            label288.Text = "Due Date To Discuss Potential LATAppl:";
+            // 
+            // Lat4DueDateToDiscussPotenctialLatApplDtp
+            // 
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Location = new System.Drawing.Point(489, 220);
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Name = "Lat4DueDateToDiscussPotenctialLatApplDtp";
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.TabIndex = 278;
+            this.Lat4DueDateToDiscussPotenctialLatApplDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat4HearingStarDateTxt
+            // 
+            this.Lat4HearingStarDateTxt.Location = new System.Drawing.Point(395, 191);
+            this.Lat4HearingStarDateTxt.Name = "Lat4HearingStarDateTxt";
+            this.Lat4HearingStarDateTxt.ReadOnly = true;
+            this.Lat4HearingStarDateTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat4HearingStarDateTxt.TabIndex = 276;
+            // 
+            // Lat4DeadLineToReceiveInsurerTxt
+            // 
+            this.Lat4DeadLineToReceiveInsurerTxt.Location = new System.Drawing.Point(395, 164);
+            this.Lat4DeadLineToReceiveInsurerTxt.Name = "Lat4DeadLineToReceiveInsurerTxt";
+            this.Lat4DeadLineToReceiveInsurerTxt.ReadOnly = true;
+            this.Lat4DeadLineToReceiveInsurerTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat4DeadLineToReceiveInsurerTxt.TabIndex = 275;
+            // 
+            // label289
+            // 
+            label289.AutoSize = true;
+            label289.Location = new System.Drawing.Point(8, 170);
+            label289.Name = "label289";
+            label289.Size = new System.Drawing.Size(265, 17);
+            label289.TabIndex = 271;
+            label289.Text = "Deadline To Receive Insurer Submissions:";
+            // 
+            // Lat4DeadLineToReceiveInsurerDtp
+            // 
+            this.Lat4DeadLineToReceiveInsurerDtp.Location = new System.Drawing.Point(489, 164);
+            this.Lat4DeadLineToReceiveInsurerDtp.Name = "Lat4DeadLineToReceiveInsurerDtp";
+            this.Lat4DeadLineToReceiveInsurerDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToReceiveInsurerDtp.TabIndex = 272;
+            this.Lat4DeadLineToReceiveInsurerDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label290
+            // 
+            label290.AutoSize = true;
+            label290.Location = new System.Drawing.Point(8, 198);
+            label290.Name = "label290";
+            label290.Size = new System.Drawing.Size(131, 17);
+            label290.TabIndex = 273;
+            label290.Text = "Hearing Start Date:";
+            // 
+            // Lat4HearingStarDateDtp
+            // 
+            this.Lat4HearingStarDateDtp.Location = new System.Drawing.Point(489, 191);
+            this.Lat4HearingStarDateDtp.Name = "Lat4HearingStarDateDtp";
+            this.Lat4HearingStarDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4HearingStarDateDtp.TabIndex = 274;
+            this.Lat4HearingStarDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat4DeadLineToReceiveAffidavitReportsTxt
+            // 
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Location = new System.Drawing.Point(395, 137);
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Name = "Lat4DeadLineToReceiveAffidavitReportsTxt";
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.ReadOnly = true;
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat4DeadLineToReceiveAffidavitReportsTxt.TabIndex = 270;
+            // 
+            // label291
+            // 
+            label291.AutoSize = true;
+            label291.Location = new System.Drawing.Point(6, 143);
+            label291.Name = "label291";
+            label291.Size = new System.Drawing.Size(383, 17);
+            label291.TabIndex = 268;
+            label291.Text = "Deadline To Receive Affidavit Reports List Of Witnesses Etc:";
+            // 
+            // Lat4DeadLineToReceiveAffidavitReportsDtp
+            // 
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Location = new System.Drawing.Point(489, 137);
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Name = "Lat4DeadLineToReceiveAffidavitReportsDtp";
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.TabIndex = 269;
+            this.Lat4DeadLineToReceiveAffidavitReportsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // Lat4DeadLineToReceiveABProductionsTxt
+            // 
+            this.Lat4DeadLineToReceiveABProductionsTxt.Location = new System.Drawing.Point(395, 110);
+            this.Lat4DeadLineToReceiveABProductionsTxt.Name = "Lat4DeadLineToReceiveABProductionsTxt";
+            this.Lat4DeadLineToReceiveABProductionsTxt.ReadOnly = true;
+            this.Lat4DeadLineToReceiveABProductionsTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat4DeadLineToReceiveABProductionsTxt.TabIndex = 267;
+            // 
+            // Lat4LatCaseConfDateTxt
+            // 
+            this.Lat4LatCaseConfDateTxt.Location = new System.Drawing.Point(395, 84);
+            this.Lat4LatCaseConfDateTxt.Name = "Lat4LatCaseConfDateTxt";
+            this.Lat4LatCaseConfDateTxt.ReadOnly = true;
+            this.Lat4LatCaseConfDateTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat4LatCaseConfDateTxt.TabIndex = 266;
+            // 
+            // Lat4InsuresResponseReceivedTxt
+            // 
+            this.Lat4InsuresResponseReceivedTxt.Location = new System.Drawing.Point(395, 58);
+            this.Lat4InsuresResponseReceivedTxt.Name = "Lat4InsuresResponseReceivedTxt";
+            this.Lat4InsuresResponseReceivedTxt.ReadOnly = true;
+            this.Lat4InsuresResponseReceivedTxt.Size = new System.Drawing.Size(92, 23);
+            this.Lat4InsuresResponseReceivedTxt.TabIndex = 265;
+            // 
+            // Lat4ActualDateLatFiledTxt
+            // 
+            this.Lat4ActualDateLatFiledTxt.Location = new System.Drawing.Point(395, 33);
+            this.Lat4ActualDateLatFiledTxt.Name = "Lat4ActualDateLatFiledTxt";
+            this.Lat4ActualDateLatFiledTxt.ReadOnly = true;
+            this.Lat4ActualDateLatFiledTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat4ActualDateLatFiledTxt.TabIndex = 264;
+            // 
+            // Lat4DateMetWithLawyerReDenialTxt
+            // 
+            this.Lat4DateMetWithLawyerReDenialTxt.Location = new System.Drawing.Point(395, 8);
+            this.Lat4DateMetWithLawyerReDenialTxt.Name = "Lat4DateMetWithLawyerReDenialTxt";
+            this.Lat4DateMetWithLawyerReDenialTxt.ReadOnly = true;
+            this.Lat4DateMetWithLawyerReDenialTxt.Size = new System.Drawing.Size(93, 23);
+            this.Lat4DateMetWithLawyerReDenialTxt.TabIndex = 263;
+            // 
+            // label292
+            // 
+            label292.AutoSize = true;
+            label292.Location = new System.Drawing.Point(6, 11);
+            label292.Name = "label292";
+            label292.Size = new System.Drawing.Size(219, 17);
+            label292.TabIndex = 253;
+            label292.Text = "Date Met With Lawyer Re Denial:";
+            // 
+            // Lat4DateMetWithLawyerReDenialDtp
+            // 
+            this.Lat4DateMetWithLawyerReDenialDtp.Location = new System.Drawing.Point(489, 7);
+            this.Lat4DateMetWithLawyerReDenialDtp.Name = "Lat4DateMetWithLawyerReDenialDtp";
+            this.Lat4DateMetWithLawyerReDenialDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DateMetWithLawyerReDenialDtp.TabIndex = 254;
+            this.Lat4DateMetWithLawyerReDenialDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label293
+            // 
+            label293.AutoSize = true;
+            label293.Location = new System.Drawing.Point(6, 36);
+            label293.Name = "label293";
+            label293.Size = new System.Drawing.Size(143, 17);
+            label293.TabIndex = 255;
+            label293.Text = "Actual Date LATFiled:";
+            // 
+            // Lat4ActualDateLatFiledDtp
+            // 
+            this.Lat4ActualDateLatFiledDtp.Location = new System.Drawing.Point(489, 33);
+            this.Lat4ActualDateLatFiledDtp.Name = "Lat4ActualDateLatFiledDtp";
+            this.Lat4ActualDateLatFiledDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4ActualDateLatFiledDtp.TabIndex = 256;
+            this.Lat4ActualDateLatFiledDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label294
+            // 
+            label294.AutoSize = true;
+            label294.Location = new System.Drawing.Point(6, 64);
+            label294.Name = "label294";
+            label294.Size = new System.Drawing.Size(185, 17);
+            label294.TabIndex = 257;
+            label294.Text = "Insurers Response Received:";
+            // 
+            // Lat4InsuresResponseReceivedDtp
+            // 
+            this.Lat4InsuresResponseReceivedDtp.Location = new System.Drawing.Point(489, 58);
+            this.Lat4InsuresResponseReceivedDtp.Name = "Lat4InsuresResponseReceivedDtp";
+            this.Lat4InsuresResponseReceivedDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4InsuresResponseReceivedDtp.TabIndex = 258;
+            this.Lat4InsuresResponseReceivedDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label295
+            // 
+            label295.AutoSize = true;
+            label295.Location = new System.Drawing.Point(7, 90);
+            label295.Name = "label295";
+            label295.Size = new System.Drawing.Size(137, 17);
+            label295.TabIndex = 259;
+            label295.Text = "LATCase Conf Date:";
+            // 
+            // Lat4LatCaseConfDateDtp
+            // 
+            this.Lat4LatCaseConfDateDtp.Location = new System.Drawing.Point(489, 84);
+            this.Lat4LatCaseConfDateDtp.Name = "Lat4LatCaseConfDateDtp";
+            this.Lat4LatCaseConfDateDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4LatCaseConfDateDtp.TabIndex = 260;
+            this.Lat4LatCaseConfDateDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // label296
+            // 
+            label296.AutoSize = true;
+            label296.Location = new System.Drawing.Point(6, 116);
+            label296.Name = "label296";
+            label296.Size = new System.Drawing.Size(239, 17);
+            label296.TabIndex = 261;
+            label296.Text = "Deadline To Receive ABProductions:";
+            // 
+            // Lat4DeadLineToReceiveABProductionsDtp
+            // 
+            this.Lat4DeadLineToReceiveABProductionsDtp.Location = new System.Drawing.Point(489, 110);
+            this.Lat4DeadLineToReceiveABProductionsDtp.Name = "Lat4DeadLineToReceiveABProductionsDtp";
+            this.Lat4DeadLineToReceiveABProductionsDtp.Size = new System.Drawing.Size(10, 23);
+            this.Lat4DeadLineToReceiveABProductionsDtp.TabIndex = 262;
+            this.Lat4DeadLineToReceiveABProductionsDtp.ValueChanged += new System.EventHandler(this.LatFiledDtp_ValueChanged);
+            // 
+            // TrialDate
+            // 
+            this.TrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TrialDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TrialDate.CustomFormat = "\' \'";
+            this.TrialDate.Enabled = false;
+            this.TrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TrialDate.Location = new System.Drawing.Point(943, 319);
+            this.TrialDate.Name = "TrialDate";
+            this.TrialDate.Size = new System.Drawing.Size(19, 23);
+            this.TrialDate.TabIndex = 185;
+            // 
+            // PreTrialResolutionDate
+            // 
+            this.PreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PreTrialResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PreTrialResolutionDate.CustomFormat = "\' \'";
+            this.PreTrialResolutionDate.Enabled = false;
+            this.PreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PreTrialResolutionDate.Location = new System.Drawing.Point(942, 291);
+            this.PreTrialResolutionDate.Name = "PreTrialResolutionDate";
+            this.PreTrialResolutionDate.Size = new System.Drawing.Size(19, 23);
+            this.PreTrialResolutionDate.TabIndex = 182;
+            // 
+            // PreTrialToBeServedDate
+            // 
+            this.PreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PreTrialToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
+            this.PreTrialToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.PreTrialToBeServedDate.CustomFormat = "\' \'";
+            this.PreTrialToBeServedDate.Enabled = false;
+            this.PreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PreTrialToBeServedDate.Location = new System.Drawing.Point(942, 263);
+            this.PreTrialToBeServedDate.Name = "PreTrialToBeServedDate";
+            this.PreTrialToBeServedDate.Size = new System.Drawing.Size(19, 23);
+            this.PreTrialToBeServedDate.TabIndex = 179;
+            // 
+            // PrePreTrialMeetingDate
+            // 
+            this.PrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PrePreTrialMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PrePreTrialMeetingDate.CustomFormat = "\' \'";
+            this.PrePreTrialMeetingDate.Enabled = false;
+            this.PrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.PrePreTrialMeetingDate.Location = new System.Drawing.Point(943, 235);
+            this.PrePreTrialMeetingDate.Name = "PrePreTrialMeetingDate";
+            this.PrePreTrialMeetingDate.Size = new System.Drawing.Size(19, 23);
+            this.PrePreTrialMeetingDate.TabIndex = 176;
+            // 
+            // ResolutionDate
+            // 
+            this.ResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ResolutionDate.CustomFormat = "\' \'";
+            this.ResolutionDate.Enabled = false;
+            this.ResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ResolutionDate.Location = new System.Drawing.Point(942, 134);
+            this.ResolutionDate.Name = "ResolutionDate";
+            this.ResolutionDate.Size = new System.Drawing.Size(19, 23);
+            this.ResolutionDate.TabIndex = 173;
+            // 
+            // MemoToBeServedDate
+            // 
+            this.MemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MemoToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
+            this.MemoToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.MemoToBeServedDate.CustomFormat = "\' \'";
+            this.MemoToBeServedDate.Enabled = false;
+            this.MemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.MemoToBeServedDate.Location = new System.Drawing.Point(942, 84);
+            this.MemoToBeServedDate.Name = "MemoToBeServedDate";
+            this.MemoToBeServedDate.Size = new System.Drawing.Size(19, 23);
+            this.MemoToBeServedDate.TabIndex = 170;
+            // 
+            // TBoxAllDefendantUndertakingRecd
+            // 
+            this.TBoxAllDefendantUndertakingRecd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxAllDefendantUndertakingRecd.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxAllDefendantUndertakingRecd.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxAllDefendantUndertakingRecd.CustomFormat = "\' \'";
+            this.TBoxAllDefendantUndertakingRecd.Enabled = false;
+            this.TBoxAllDefendantUndertakingRecd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(943, 39);
+            this.TBoxAllDefendantUndertakingRecd.Name = "TBoxAllDefendantUndertakingRecd";
+            this.TBoxAllDefendantUndertakingRecd.Size = new System.Drawing.Size(19, 23);
+            this.TBoxAllDefendantUndertakingRecd.TabIndex = 166;
+            this.TBoxAllDefendantUndertakingRecd.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDatePlaintiffUndertakingComplete
+            // 
+            this.TBoxDatePlaintiffUndertakingComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxDatePlaintiffUndertakingComplete.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDatePlaintiffUndertakingComplete.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDatePlaintiffUndertakingComplete.CustomFormat = "\' \'";
+            this.TBoxDatePlaintiffUndertakingComplete.Enabled = false;
+            this.TBoxDatePlaintiffUndertakingComplete.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(943, 12);
+            this.TBoxDatePlaintiffUndertakingComplete.Name = "TBoxDatePlaintiffUndertakingComplete";
+            this.TBoxDatePlaintiffUndertakingComplete.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDatePlaintiffUndertakingComplete.TabIndex = 165;
+            this.TBoxDatePlaintiffUndertakingComplete.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDateTrialRecordFiled
+            // 
+            this.TBoxDateTrialRecordFiled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxDateTrialRecordFiled.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateTrialRecordFiled.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateTrialRecordFiled.CustomFormat = "\' \'";
+            this.TBoxDateTrialRecordFiled.Enabled = false;
+            this.TBoxDateTrialRecordFiled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(943, 208);
+            this.TBoxDateTrialRecordFiled.Name = "TBoxDateTrialRecordFiled";
+            this.TBoxDateTrialRecordFiled.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateTrialRecordFiled.TabIndex = 164;
+            this.TBoxDateTrialRecordFiled.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDateOfDefendantDiscovery
+            // 
+            this.TBoxDateOfDefendantDiscovery.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateOfDefendantDiscovery.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateOfDefendantDiscovery.CustomFormat = "\' \'";
+            this.TBoxDateOfDefendantDiscovery.Enabled = false;
+            this.TBoxDateOfDefendantDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateOfDefendantDiscovery.Location = new System.Drawing.Point(493, 344);
+            this.TBoxDateOfDefendantDiscovery.Name = "TBoxDateOfDefendantDiscovery";
+            this.TBoxDateOfDefendantDiscovery.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateOfDefendantDiscovery.TabIndex = 163;
+            this.TBoxDateOfDefendantDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxPlaintiffAODSent
+            // 
+            this.TBoxPlaintiffAODSent.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxPlaintiffAODSent.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxPlaintiffAODSent.CustomFormat = "\' \'";
+            this.TBoxPlaintiffAODSent.Enabled = false;
+            this.TBoxPlaintiffAODSent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPlaintiffAODSent.Location = new System.Drawing.Point(493, 199);
+            this.TBoxPlaintiffAODSent.Name = "TBoxPlaintiffAODSent";
+            this.TBoxPlaintiffAODSent.Size = new System.Drawing.Size(19, 23);
+            this.TBoxPlaintiffAODSent.TabIndex = 162;
+            this.TBoxPlaintiffAODSent.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDateOfPlaintiffDiscovery
+            // 
+            this.TBoxDateOfPlaintiffDiscovery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxDateOfPlaintiffDiscovery.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxDateOfPlaintiffDiscovery.CustomFormat = "\' \'";
+            this.TBoxDateOfPlaintiffDiscovery.Enabled = false;
+            this.TBoxDateOfPlaintiffDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateOfPlaintiffDiscovery.Location = new System.Drawing.Point(493, 313);
+            this.TBoxDateOfPlaintiffDiscovery.Name = "TBoxDateOfPlaintiffDiscovery";
+            this.TBoxDateOfPlaintiffDiscovery.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateOfPlaintiffDiscovery.TabIndex = 161;
+            this.TBoxDateOfPlaintiffDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDefendantAODRequest
+            // 
+            this.TBoxDefendantAODRequest.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDefendantAODRequest.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDefendantAODRequest.CustomFormat = "\' \'";
+            this.TBoxDefendantAODRequest.Enabled = false;
+            this.TBoxDefendantAODRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDefendantAODRequest.Location = new System.Drawing.Point(493, 286);
+            this.TBoxDefendantAODRequest.Name = "TBoxDefendantAODRequest";
+            this.TBoxDefendantAODRequest.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDefendantAODRequest.TabIndex = 160;
+            this.TBoxDefendantAODRequest.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxPreDiscoveryMeetingDate
+            // 
+            this.TBoxPreDiscoveryMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPreDiscoveryMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPreDiscoveryMeetingDate.CustomFormat = "\' \'";
+            this.TBoxPreDiscoveryMeetingDate.Enabled = false;
+            this.TBoxPreDiscoveryMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPreDiscoveryMeetingDate.Location = new System.Drawing.Point(494, 257);
+            this.TBoxPreDiscoveryMeetingDate.Name = "TBoxPreDiscoveryMeetingDate";
+            this.TBoxPreDiscoveryMeetingDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxPreDiscoveryMeetingDate.TabIndex = 159;
+            this.TBoxPreDiscoveryMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDateToFileTrialRecordBy
+            // 
+            this.TBoxDateToFileTrialRecordBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxDateToFileTrialRecordBy.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateToFileTrialRecordBy.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateToFileTrialRecordBy.CustomFormat = "\' \'";
+            this.TBoxDateToFileTrialRecordBy.Enabled = false;
+            this.TBoxDateToFileTrialRecordBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(944, 181);
+            this.TBoxDateToFileTrialRecordBy.Name = "TBoxDateToFileTrialRecordBy";
+            this.TBoxDateToFileTrialRecordBy.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateToFileTrialRecordBy.TabIndex = 158;
+            this.TBoxDateToFileTrialRecordBy.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxActualDateSOCServed
+            // 
+            this.TBoxActualDateSOCServed.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxActualDateSOCServed.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxActualDateSOCServed.CustomFormat = "\' \'";
+            this.TBoxActualDateSOCServed.Enabled = false;
+            this.TBoxActualDateSOCServed.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxActualDateSOCServed.Location = new System.Drawing.Point(493, 170);
+            this.TBoxActualDateSOCServed.Name = "TBoxActualDateSOCServed";
+            this.TBoxActualDateSOCServed.Size = new System.Drawing.Size(19, 23);
+            this.TBoxActualDateSOCServed.TabIndex = 157;
+            this.TBoxActualDateSOCServed.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxProposedDateToServeSOC
+            // 
+            this.TBoxProposedDateToServeSOC.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateToServeSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateToServeSOC.CustomFormat = "\' \'";
+            this.TBoxProposedDateToServeSOC.Enabled = false;
+            this.TBoxProposedDateToServeSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxProposedDateToServeSOC.Location = new System.Drawing.Point(493, 142);
+            this.TBoxProposedDateToServeSOC.Name = "TBoxProposedDateToServeSOC";
+            this.TBoxProposedDateToServeSOC.Size = new System.Drawing.Size(19, 23);
+            this.TBoxProposedDateToServeSOC.TabIndex = 156;
+            this.TBoxProposedDateToServeSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxMedicalSummariesPreDiscDueDate
+            // 
+            this.TBoxMedicalSummariesPreDiscDueDate.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxMedicalSummariesPreDiscDueDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxMedicalSummariesPreDiscDueDate.CustomFormat = "\' \'";
+            this.TBoxMedicalSummariesPreDiscDueDate.Enabled = false;
+            this.TBoxMedicalSummariesPreDiscDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxMedicalSummariesPreDiscDueDate.Location = new System.Drawing.Point(494, 228);
+            this.TBoxMedicalSummariesPreDiscDueDate.Name = "TBoxMedicalSummariesPreDiscDueDate";
+            this.TBoxMedicalSummariesPreDiscDueDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxMedicalSummariesPreDiscDueDate.TabIndex = 155;
+            this.TBoxMedicalSummariesPreDiscDueDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxActualDateSOCIssued
+            // 
+            this.TBoxActualDateSOCIssued.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxActualDateSOCIssued.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxActualDateSOCIssued.CustomFormat = "\' \'";
+            this.TBoxActualDateSOCIssued.Enabled = false;
+            this.TBoxActualDateSOCIssued.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxActualDateSOCIssued.Location = new System.Drawing.Point(493, 113);
+            this.TBoxActualDateSOCIssued.Name = "TBoxActualDateSOCIssued";
+            this.TBoxActualDateSOCIssued.Size = new System.Drawing.Size(19, 23);
+            this.TBoxActualDateSOCIssued.TabIndex = 154;
+            this.TBoxActualDateSOCIssued.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxPrePleadingsMeetingDate
+            // 
+            this.TBoxPrePleadingsMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPrePleadingsMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPrePleadingsMeetingDate.CustomFormat = "\' \'";
+            this.TBoxPrePleadingsMeetingDate.Enabled = false;
+            this.TBoxPrePleadingsMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPrePleadingsMeetingDate.Location = new System.Drawing.Point(493, 85);
+            this.TBoxPrePleadingsMeetingDate.Name = "TBoxPrePleadingsMeetingDate";
+            this.TBoxPrePleadingsMeetingDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxPrePleadingsMeetingDate.TabIndex = 153;
+            this.TBoxPrePleadingsMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxProposedDateIssueSOC
+            // 
+            this.TBoxProposedDateIssueSOC.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateIssueSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateIssueSOC.CustomFormat = "\' \'";
+            this.TBoxProposedDateIssueSOC.Enabled = false;
+            this.TBoxProposedDateIssueSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxProposedDateIssueSOC.Location = new System.Drawing.Point(493, 56);
+            this.TBoxProposedDateIssueSOC.Name = "TBoxProposedDateIssueSOC";
+            this.TBoxProposedDateIssueSOC.Size = new System.Drawing.Size(19, 23);
+            this.TBoxProposedDateIssueSOC.TabIndex = 152;
+            this.TBoxProposedDateIssueSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxLiabilityMeetingDate
+            // 
+            this.TBoxLiabilityMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxLiabilityMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxLiabilityMeetingDate.CustomFormat = "\' \'";
+            this.TBoxLiabilityMeetingDate.Enabled = false;
+            this.TBoxLiabilityMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxLiabilityMeetingDate.Location = new System.Drawing.Point(493, 27);
+            this.TBoxLiabilityMeetingDate.Name = "TBoxLiabilityMeetingDate";
+            this.TBoxLiabilityMeetingDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxLiabilityMeetingDate.TabIndex = 151;
+            this.TBoxLiabilityMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // SubTypeCategoryComboBox
             // 
@@ -12233,100 +12241,107 @@
         internal System.Windows.Forms.Label Label120;
         internal System.Windows.Forms.TextBox CaseAdjudicatorTxt;
         internal System.Windows.Forms.TabPage LAT1;
-        private System.Windows.Forms.Button BtnLat1;
-        private System.Windows.Forms.TextBox DateLatSettledClosedtTxt;
-        private System.Windows.Forms.TextBox DeadLineForReplaySubmissionsTxt;
-        private System.Windows.Forms.TextBox DeadLineToFileHearingSubmissionsTxt;
-        private System.Windows.Forms.TextBox DeadLineToFileAffidavitReportsTxt;
-        private System.Windows.Forms.TextBox DeadLineToDeliverProductionsToABCounselTxt;
-        private System.Windows.Forms.TextBox DeadLineToServeFileCaseConfSummaryTxt;
-        private System.Windows.Forms.TextBox ActualDateLatServedOnInsurerTxt;
-        private System.Windows.Forms.TextBox ProposedDateToFileLatTxt;
+        internal System.Windows.Forms.TabPage LAT2;
+        internal System.Windows.Forms.TabPage LAT3;
+        internal System.Windows.Forms.TabPage LAT4;
+        internal System.Windows.Forms.DataGridView ActionLogDataGridView;
+        private System.Windows.Forms.Panel panel7;
+        internal System.Windows.Forms.Button Btn_AddTask;
         private System.Windows.Forms.TextBox DueDateToDiscussPotenctialLatApplTxt;
+        internal System.Windows.Forms.DateTimePicker DueDateToDiscussPotenctialLatApplDtp;
         private System.Windows.Forms.TextBox HearingStarDateTxt;
         private System.Windows.Forms.TextBox DeadlineToReceiveInsurerTxt;
+        internal System.Windows.Forms.DateTimePicker DeadlineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker HearingStarDateDtp;
         private System.Windows.Forms.TextBox DeadLineToReceiveAffidavitReportsTxt;
+        internal System.Windows.Forms.DateTimePicker DeadLineToReceiveAffidavitReportsDtp;
         private System.Windows.Forms.TextBox DeadLineToReceiveABProductionsTxt;
         private System.Windows.Forms.TextBox LatCaseConfDateTxt;
         private System.Windows.Forms.TextBox InsuresResponseReceivedTxt;
         private System.Windows.Forms.TextBox ActualDateLatFiledTxt;
         private System.Windows.Forms.TextBox DateMetWithLawyerReDenialTxt;
-        internal System.Windows.Forms.DateTimePicker DueDateToDiscussPotenctialLatApplDtp;
-        internal System.Windows.Forms.DateTimePicker ProposedDateToFileLatDtp;
-        internal System.Windows.Forms.DateTimePicker ActualDateLatServedOnInsurerDtp;
-        internal System.Windows.Forms.DateTimePicker DeadLineToServeFileCaseConfSummaryDtp;
-        internal System.Windows.Forms.DateTimePicker DeadLineToDeliverProductionsToABCounselDtp;
-        internal System.Windows.Forms.DateTimePicker DeadLineToFileAffidavitReportsDtp;
-        internal System.Windows.Forms.DateTimePicker DeadLineToFileHearingSubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker DeadLineForReplaySubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker DateLatSettledClosedDtp;
         internal System.Windows.Forms.DateTimePicker DateMetWithLawyerReDenialDtp;
         internal System.Windows.Forms.DateTimePicker ActualDateLatFiledDtp;
         internal System.Windows.Forms.DateTimePicker InsuresResponseReceivedDtp;
         internal System.Windows.Forms.DateTimePicker LatCaseConfDateDtp;
         internal System.Windows.Forms.DateTimePicker DeadLineToReceiveABProductionsDtp;
-        internal System.Windows.Forms.DateTimePicker DeadLineToReceiveAffidavitReportsDtp;
-        internal System.Windows.Forms.DateTimePicker DeadlineToReceiveInsurerDtp;
-        internal System.Windows.Forms.DateTimePicker HearingStarDateDtp;
-        internal System.Windows.Forms.TabPage LAT2;
+        private System.Windows.Forms.TextBox DeadLineToFileHearingSubmissionsTxt;
+        private System.Windows.Forms.TextBox DeadLineToFileAffidavitReportsTxt;
+        private System.Windows.Forms.TextBox DeadLineToDeliverProductionsToABCounselTxt;
+        private System.Windows.Forms.TextBox DeadLineToServeFileCaseConfSummaryTxt;
+        internal System.Windows.Forms.DateTimePicker DeadLineToServeFileCaseConfSummaryDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToDeliverProductionsToABCounselDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToFileAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker DeadLineToFileHearingSubmissionsDtp;
+        private System.Windows.Forms.TextBox ActualDateLatServedOnInsurerTxt;
+        private System.Windows.Forms.TextBox ProposedDateToFileLatTxt;
+        internal System.Windows.Forms.DateTimePicker ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker ActualDateLatServedOnInsurerDtp;
+        private System.Windows.Forms.TextBox DateLatSettledClosedtTxt;
+        private System.Windows.Forms.TextBox DeadLineForReplaySubmissionsTxt;
+        internal System.Windows.Forms.DateTimePicker DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker DateLatSettledClosedDtp;
+        private System.Windows.Forms.Button BtnLat1;
         private System.Windows.Forms.Button BtnLat2;
         private System.Windows.Forms.TextBox Lat2DateLatSettledClosedTxt;
         private System.Windows.Forms.TextBox Lat2DeadLineForReplaySubmissionsTxt;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DateLatSettledClosedDtp;
         private System.Windows.Forms.TextBox Lat2DeadLineToFileHearingSubmissionsTxt;
         private System.Windows.Forms.TextBox Lat2DeadLineToFileAffidavitReportsTxt;
         private System.Windows.Forms.TextBox Lat2DeadLineToDeliverProductionsToABCounselTxt;
         private System.Windows.Forms.TextBox Lat2DeadLineToServeFileCaseConfSummaryTxt;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToServeFileCaseConfSummaryDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToDeliverProductionsToABCounselDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToFileAffidavitReportsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToFileHearingSubmissionsDtp;
         private System.Windows.Forms.TextBox Lat2ActualDateLatServedOnInsurerTxt;
         private System.Windows.Forms.TextBox Lat2ProposedDateToFileLatTxt;
+        internal System.Windows.Forms.DateTimePicker Lat2ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2ActualDateLatServedOnInsurerDtp;
         private System.Windows.Forms.TextBox Lat2DueDateToDiscussPotenctialLatApplTxt;
+        internal System.Windows.Forms.DateTimePicker Lat2DueDateToDiscussPotenctialLatApplDtp;
         private System.Windows.Forms.TextBox Lat2HearingStarDateTxt;
         private System.Windows.Forms.TextBox Lat2DeadLineToReceiveInsurerTxt;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat2HearingStarDateDtp;
         private System.Windows.Forms.TextBox Lat2DeadLineToReceiveAffidavitReportsTxt;
+        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveAffidavitReportsDtp;
         private System.Windows.Forms.TextBox Lat2DeadLineToReceiveABProductionsTxt;
         private System.Windows.Forms.TextBox Lat2LatCaseConfDateTxt;
         private System.Windows.Forms.TextBox Lat2InsuresResponseReceivedTxt;
         private System.Windows.Forms.TextBox Lat2ActualDateLatFiledTxt;
         private System.Windows.Forms.TextBox Lat2DateMetWithLawyerReDenialTxt;
-        internal System.Windows.Forms.DateTimePicker Lat2DueDateToDiscussPotenctialLatApplDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2ProposedDateToFileLatDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2ActualDateLatServedOnInsurerDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToServeFileCaseConfSummaryDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToDeliverProductionsToABCounselDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToFileAffidavitReportsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToFileHearingSubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DeadLineForReplaySubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DateLatSettledClosedDtp;
         internal System.Windows.Forms.DateTimePicker Lat2DateMetWithLawyerReDenialDtp;
         internal System.Windows.Forms.DateTimePicker Lat2ActualDateLatFiledDtp;
         internal System.Windows.Forms.DateTimePicker Lat2InsuresResponseReceivedDtp;
         internal System.Windows.Forms.DateTimePicker Lat2LatCaseConfDateDtp;
         internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveABProductionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveAffidavitReportsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2DeadLineToReceiveInsurerDtp;
-        internal System.Windows.Forms.DateTimePicker Lat2HearingStarDateDtp;
-        internal System.Windows.Forms.TabPage LAT3;
         private System.Windows.Forms.Button BtnLat3;
         private System.Windows.Forms.TextBox Lat3DateLatSettledClosedTxt;
         private System.Windows.Forms.TextBox Lat3DeadLineForReplaySubmissionsTxt;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3DateLatSettledClosedDtp;
         private System.Windows.Forms.TextBox Lat3DeadLineToFileHearingSubmissionsTxt;
         private System.Windows.Forms.TextBox Lat3DeadLineToFileAffidavitReportsTxt;
         private System.Windows.Forms.TextBox Lat3DeadLineToDeliverProductionsToABCounselTxt;
         private System.Windows.Forms.TextBox Lat3DeadLineToServeFileCaseConfSummaryTxt;
-        private System.Windows.Forms.TextBox Lat3ActualDateLatServedOnInsurerTxt;
-        private System.Windows.Forms.TextBox Lat3ProposedDateToFileLatTxt;
-        private System.Windows.Forms.TextBox Lat3DueDateToDiscussPotenctialLatApplTxt;
-        internal System.Windows.Forms.DateTimePicker Lat3DueDateToDiscussPotenctialLatApplDtp;
-        internal System.Windows.Forms.DateTimePicker Lat3ProposedDateToFileLatDtp;
-        internal System.Windows.Forms.DateTimePicker Lat3ActualDateLatServedOnInsurerDtp;
         internal System.Windows.Forms.DateTimePicker Lat3DeadLineToServeFileCaseConfSummaryDtp;
         internal System.Windows.Forms.DateTimePicker Lat3DeadLineToDeliverProductionsToABCounselDtp;
         internal System.Windows.Forms.DateTimePicker Lat3DeadLineToFileAffidavitReportsDtp;
         internal System.Windows.Forms.DateTimePicker Lat3DeadLineToFileHearingSubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat3DeadLineForReplaySubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat3DateLatSettledClosedDtp;
+        private System.Windows.Forms.TextBox Lat3ActualDateLatServedOnInsurerTxt;
+        private System.Windows.Forms.TextBox Lat3ProposedDateToFileLatTxt;
+        internal System.Windows.Forms.DateTimePicker Lat3ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3ActualDateLatServedOnInsurerDtp;
+        private System.Windows.Forms.TextBox Lat3DueDateToDiscussPotenctialLatApplTxt;
+        internal System.Windows.Forms.DateTimePicker Lat3DueDateToDiscussPotenctialLatApplDtp;
         private System.Windows.Forms.TextBox Lat3HearingStarDateTxt;
         private System.Windows.Forms.TextBox Lat3DeadLineToReceiveInsurerTxt;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat3HearingStarDateDtp;
         private System.Windows.Forms.TextBox Lat3DeadLineToReceiveAffidavitReportsTxt;
+        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveAffidavitReportsDtp;
         private System.Windows.Forms.TextBox Lat3DeadLineToReceiveABProductionsTxt;
         private System.Windows.Forms.TextBox Lat3LatCaseConfDateTxt;
         private System.Windows.Forms.TextBox Lat3InsuresResponseReceivedTxt;
@@ -12337,32 +12352,31 @@
         internal System.Windows.Forms.DateTimePicker Lat3InsuresResponseReceivedDtp;
         internal System.Windows.Forms.DateTimePicker Lat3LatCaseConfDateDtp;
         internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveABProductionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveAffidavitReportsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat3DeadLineToReceiveInsurerDtp;
-        internal System.Windows.Forms.DateTimePicker Lat3HearingStarDateDtp;
-        internal System.Windows.Forms.TabPage LAT4;
         private System.Windows.Forms.Button BtnLat4;
         private System.Windows.Forms.TextBox Lat4DateLatSettledClosedTxt;
         private System.Windows.Forms.TextBox Lat4DeadLineForReplaySubmissionsTxt;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineForReplaySubmissionsDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4DateLatSettledClosedDtp;
         private System.Windows.Forms.TextBox Lat4DeadLineToFileHearingSubmissionsTxt;
         private System.Windows.Forms.TextBox Lat4DeadLineToFileAffidavitReportsTxt;
         private System.Windows.Forms.TextBox Lat4DeadLineToDeliverProductionsToABCounselTxt;
         private System.Windows.Forms.TextBox Lat4DeadLineToServeFileCaseConfSummaryTxt;
-        private System.Windows.Forms.TextBox Lat4ActualDateLatServedOnInsurerTxt;
-        private System.Windows.Forms.TextBox Lat4ProposedDateToFileLatTxt;
-        private System.Windows.Forms.TextBox Lat4DueDateToDiscussPotenctialLatApplTxt;
-        internal System.Windows.Forms.DateTimePicker Lat4DueDateToDiscussPotenctialLatApplDtp;
-        internal System.Windows.Forms.DateTimePicker Lat4ProposedDateToFileLatDtp;
-        internal System.Windows.Forms.DateTimePicker Lat4ActualDateLatServedOnInsurerDtp;
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToServeFileCaseConfSummaryDtp;
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToDeliverProductionsToABCounselDtp;
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToFileAffidavitReportsDtp;
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToFileHearingSubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat4DeadLineForReplaySubmissionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat4DateLatSettledClosedDtp;
+        private System.Windows.Forms.TextBox Lat4ActualDateLatServedOnInsurerTxt;
+        private System.Windows.Forms.TextBox Lat4ProposedDateToFileLatTxt;
+        internal System.Windows.Forms.DateTimePicker Lat4ProposedDateToFileLatDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4ActualDateLatServedOnInsurerDtp;
+        private System.Windows.Forms.TextBox Lat4DueDateToDiscussPotenctialLatApplTxt;
+        internal System.Windows.Forms.DateTimePicker Lat4DueDateToDiscussPotenctialLatApplDtp;
         private System.Windows.Forms.TextBox Lat4HearingStarDateTxt;
         private System.Windows.Forms.TextBox Lat4DeadLineToReceiveInsurerTxt;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveInsurerDtp;
+        internal System.Windows.Forms.DateTimePicker Lat4HearingStarDateDtp;
         private System.Windows.Forms.TextBox Lat4DeadLineToReceiveAffidavitReportsTxt;
+        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveAffidavitReportsDtp;
         private System.Windows.Forms.TextBox Lat4DeadLineToReceiveABProductionsTxt;
         private System.Windows.Forms.TextBox Lat4LatCaseConfDateTxt;
         private System.Windows.Forms.TextBox Lat4InsuresResponseReceivedTxt;
@@ -12373,12 +12387,6 @@
         internal System.Windows.Forms.DateTimePicker Lat4InsuresResponseReceivedDtp;
         internal System.Windows.Forms.DateTimePicker Lat4LatCaseConfDateDtp;
         internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveABProductionsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveAffidavitReportsDtp;
-        internal System.Windows.Forms.DateTimePicker Lat4DeadLineToReceiveInsurerDtp;
-        internal System.Windows.Forms.DateTimePicker Lat4HearingStarDateDtp;
-        internal System.Windows.Forms.DataGridView ActionLogDataGridView;
-        private System.Windows.Forms.Panel panel7;
-        internal System.Windows.Forms.Button Btn_AddTask;
     }
 }
 
