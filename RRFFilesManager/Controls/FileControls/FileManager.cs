@@ -1413,13 +1413,11 @@ namespace RRFFilesManager
         {
             if (Home.FileManager.File == null)
             {
-                TabControl4.Enabled = false;
+                TabControl1.SelectedIndex = 0;
+                TabControl5.SelectedTab = ABBinderTab;
                 MessageBox.Show("You have to select a file!");
+
                 return;
-            }
-            else
-            {
-                TabControl4.Enabled = true;
             }
             txtLimitationDate.Text = Home.FileManager.File.LimitationPeriod;
             if (_latDataRepository.List().Where(t => t.FileId == Home.FileManager.File.ID).ToList().Count == 0)
