@@ -267,7 +267,7 @@ namespace RRFFilesManager.IntakeForm
                         {
                             path = Excel.XLSXConvert(path);
                         }
-                        using (XLWorkbook workBook = new XLWorkbook(path))
+                        using (ClosedXML.Excel.XLWorkbook workBook = new ClosedXML.Excel.XLWorkbook(path))
                         {
                             foreach (IXLWorksheet sheet in workBook.Worksheets)
                             {

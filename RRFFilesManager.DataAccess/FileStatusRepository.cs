@@ -21,11 +21,6 @@ namespace RRFFilesManager.DataAccess
             var result = _context.FileStatus.FirstOrDefault(x => x.ID == fileStatusId);
             return result;
         }
-        public FileStatus GetByDescription(string fileStatusDescription)
-        {
-            var result = _context.FileStatus.FirstOrDefault(x => x.Description == fileStatusDescription);
-            return result;
-        }
 
         public void Insert(FileStatus fileTask)
         {
