@@ -23,6 +23,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly IHearAboutUsRepository _hearAboutUsRepository;
         private readonly ILawyerRepository _lawyerRepository;
         private readonly IFileRepository _fileRepository;
+        private readonly Logic.FileManager _fileManager;
         private readonly IFileStatusRepository _fileStatusRepository;
         public PreliminaryInfo()
         {
@@ -32,6 +33,7 @@ namespace RRFFilesManager.IntakeForm
             _lawyerRepository = Program.GetService<ILawyerRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
             _fileStatusRepository = Program.GetService<IFileStatusRepository>();
+            _fileManager = new Logic.FileManager();
             InitializeComponent();
             Initialize();
         }
@@ -146,7 +148,7 @@ namespace RRFFilesManager.IntakeForm
             Utils.Utils.SetComboBoxDataSource(HowHearComboBox, _hearAboutUsRepository.List(), nameof(HearAboutUs.Description));
             Utils.Utils.SetComboBoxDataSource(StaffInterviewerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
             Utils.Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
-            Utils.Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.NumberID != null).ToList(), nameof(Lawyer.Description));
+            Utils.Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.Number != null).ToList(), nameof(Lawyer.Description));
             DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
             DateOfLossDateTimePicker.CustomFormat = " ";
         }
@@ -165,7 +167,7 @@ namespace RRFFilesManager.IntakeForm
             file.FileNumber = int.Parse(FileNumberTextBox.Text);
             file.StatutoryNotice = StatutoryNoticeBox.Text;
             file.AdditionalNotes = AdditionalNotesTextBox.Text;
-            file.CurrentStatus = _fileStatusRepository.GetById(1); // Intake phase
+            file.CurrentStatus = _fileStatusRepository.GetById((int)FileStatusEnum.PotentialFile);
         }
 
         public void FillForm(Abstractions.File file)
@@ -195,9 +197,9 @@ namespace RRFFilesManager.IntakeForm
                 Home.IntakeForm.Intake.File = new Abstractions.File();
             FillFile(Home.IntakeForm.Intake.File);
             if (Home.IntakeForm.Intake.File.ID == default)
-                _fileRepository.Insert(Home.IntakeForm.Intake.File);
+                _fileManager.Insert(Home.IntakeForm.Intake.File);
             else
-                _fileRepository.Update(Home.IntakeForm.Intake.File);
+                _fileManager.Update(Home.IntakeForm.Intake.File);
         }
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)

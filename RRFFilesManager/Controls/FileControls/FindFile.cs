@@ -21,7 +21,7 @@ namespace RRFFilesManager.FileControls
             _fileStatusRepository = Program.GetService<IFileStatusRepository>();
             InitializeComponent();
             Utils.Utils.SetComboBoxDataSource(FileStatusComboBox, _fileStatusRepository.List());
-            FileStatusComboBox.SelectedIndex = 1;
+            //FileStatusComboBox.SelectedIndex = 1;
         }
 
         private static FindFile instance;

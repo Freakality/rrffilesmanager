@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RRFFilesManager.Utils
 {
@@ -48,14 +49,14 @@ namespace RRFFilesManager.Utils
                 throw new Exception("File can not be null");
             string archiveFolderPath = null;
             // "Not Retained" file status Id
-            if (archive.File.CurrentStatus?.ID == 4)
+            if (archive.File.CurrentStatus?.ID == (int)FileStatusEnum.NotRetained)
             {
                 archiveFolderPath = archive.File.GetNotRetainedFolderPath();
             }
             else
             {
                 archiveFolderPath = archive.File.GetFileFolderPath();
-                if (!string.IsNullOrWhiteSpace(archive.File.CurrentStatus.Description))
+                if (!string.IsNullOrWhiteSpace(archive.File.CurrentStatus?.Description))
                     archiveFolderPath = Path.Combine(archiveFolderPath, archive.File.CurrentStatus.Description.EscapeText());
             }
             Directory.CreateDirectory(archiveFolderPath);
@@ -64,14 +65,94 @@ namespace RRFFilesManager.Utils
         public static void CopyToFileFolder(this Archive archive, string fileName = null)
         {
             var fileFolderPath = archive.GetArchiveFolderPath();
-            if (!archive.Path.Contains(fileFolderPath))
+            var sourcePath = archive.Path;
+            if (!sourcePath.Contains(fileFolderPath))
             {
-                var archiveFileName = fileName ?? System.IO.Path.GetFileName(archive.Path);
-                var destFileName = Path.Combine(fileFolderPath, archiveFileName);
-                System.IO.File.Copy(archive.Path, destFileName, true);
-                archive.Path = destFileName;
-                archive.Name = archiveFileName;
+                var archiveFileName = fileName ?? Path.GetFileName(archive.Path);
+                var destPath = Path.Combine(fileFolderPath, archiveFileName);
+                if (System.IO.File.Exists(sourcePath))
+                {
+                    System.IO.File.Copy(sourcePath, destPath, true);
+                }
+                else
+                {
+                    sourcePath = GetFileNameFromUser(sourcePath);
+                    if (sourcePath != null)
+                    {
+                        System.IO.File.Copy(sourcePath, destPath, true);
+                    }
+                }
+
+                if (sourcePath != null)
+                {
+                    archive.Path = destPath;
+                    archive.Name = archiveFileName;
+                }
             }
+        }
+
+        public static void MoveToFileFolder(this Archive archive, string fileName = null)
+        {
+            var fileFolderPath = archive.GetArchiveFolderPath();
+            var sourcePath = archive.Path;
+            if (!sourcePath.Contains(fileFolderPath))
+            {
+                var archiveFileName = fileName ?? Path.GetFileName(archive.Path);
+                var destPath = Path.Combine(fileFolderPath, archiveFileName);
+                if(System.IO.File.Exists(sourcePath))
+                {
+                    try
+                    {
+                        System.IO.File.Move(sourcePath, destPath);
+                    } catch(Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                    
+                }
+                else
+                {
+                    sourcePath = GetFileNameFromUser(sourcePath);
+                    if (sourcePath != null)
+                    {
+                        System.IO.File.Copy(sourcePath, destPath, true);
+                    }
+                }
+
+                if (sourcePath != null)
+                {
+                    archive.Path = destPath;
+                    archive.Name = archiveFileName;
+                }
+            }
+        }
+
+        public static string GetFileNameFromUser(string sourcePath)
+        {
+            var result = MessageBox.Show(
+                        $"File not found: {sourcePath}.\n" +
+                        $"Do you want to manually find the location of the file?\n" +
+                        "Select \"Yes\" to manually browse the file location or \"No\" to skip.",
+                        "File not found",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+            if (result == DialogResult.Yes)
+            {
+                var newSourceFileName = GetFileNameFromFindFileDialog();
+                return newSourceFileName;
+            }
+            return null;
+        }
+        public static string GetFileNameFromFindFileDialog()
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                return openFileDialog1.FileName;
+            }
+            return null;
         }
 
         public static string GetExtension(this Archive archive)

@@ -14,5 +14,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         FileStatus GetById(int fileStatusId);
         FileStatus GetByDescription(string fileStatusDescription);
         IEnumerable<FileStatus> List();
+        FileStatus GetByDescription(string description);
     }
 }

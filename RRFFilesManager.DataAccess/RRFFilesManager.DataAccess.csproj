@@ -350,6 +350,10 @@
     <Compile Include="Migrations\20230119044003_ClientNotesandTaskUpdates.designer.cs">
       <DependentUpon>20230119044003_ClientNotesandTaskUpdates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230130221810_Lawyer_NumberID.cs" />
+    <Compile Include="Migrations\20230130221810_Lawyer_NumberID.designer.cs">
+      <DependentUpon>20230130221810_Lawyer_NumberID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\20230130163340_LAT-Implementation.cs" />
     <Compile Include="Migrations\20230130163340_LAT-Implementation.designer.cs">
       <DependentUpon>20230130163340_LAT-Implementation.cs</DependentUpon>

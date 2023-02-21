@@ -117,8 +117,8 @@ namespace RRFFilesManager.DataAccess
             var exist = _context.FileTasks.Any(s => s.File.ID == file.ID && s.Task.ID == task.ID);
             if (exist)
             {
-                var fileTaskPrev = _context.FileTasks.Single(t => t.TaskId == task.ID);
-                var taskexisten = _context.FileTasks.Single(t => t.TaskId == task.ID);
+                var fileTaskPrev = _context.FileTasks.Single(t => t.TaskId == task.ID && t.FileId == file.ID);
+                var taskexisten = _context.FileTasks.Single(t => t.TaskId == task.ID && t.FileId == file.ID);
                 taskexisten.DueDate = DateTime.Now;
                 taskexisten.DeferUntilDate = DateTime.Now.AddDays(Days);
                 _context.Entry(fileTaskPrev).CurrentValues.SetValues(taskexisten);

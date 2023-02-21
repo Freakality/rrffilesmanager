@@ -35,7 +35,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
         private void FillLawyerFields(Lawyer lawyer)
         {
             TBoxDescriptionTextBox.Text = lawyer.Description;
-            NUDNumberIDNUpDown.Value = Convert.ToDecimal(lawyer.NumberID);
+            NUDNumberIDNUpDown.Value = Convert.ToDecimal(lawyer.Number);
             if (lawyer.ContractDate != null)
                 DTPContractDateDateTime.Value = (DateTime)lawyer.ContractDate;
             else
@@ -74,7 +74,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
         private void FillLawyer(Lawyer lawyer)
         {
             lawyer.Description = TBoxDescriptionTextBox.Text;
-            lawyer.NumberID = (int?)NUDNumberIDNUpDown.Value;
+            lawyer.Number = (int?)NUDNumberIDNUpDown.Value;
             if (DTPContractDateDateTime.Value != DTPContractDateDateTime.MinDate)
                 lawyer.ContractDate = DTPContractDateDateTime.Value;
             lawyer.EarnBaseCommissionAsFileLawyer = CBoxBaseComissionCheckBox.Checked;

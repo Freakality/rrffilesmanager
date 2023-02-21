@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230130221810_Lawyer_NumberID")]
+    partial class Lawyer_NumberID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -861,9 +863,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<int>("FileId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("LawyerID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
 
@@ -893,8 +892,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasIndex("AddedByID");
 
                     b.HasIndex("FileId");
-
-                    b.HasIndex("LawyerID");
 
                     b.HasIndex("StateID");
 
@@ -1175,125 +1172,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.ToTable("Intakes");
                 });
 
-            modelBuilder.Entity("RRFFilesManager.Abstractions.LATData", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("FileId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("LATActualDateFiled")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATActualDateLATServedOnInsurer")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LATAdjuster")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("LATAmountSettled")
-                        .HasColumnType("float");
-
-                    b.Property<string>("LATCaseAdjudicator")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("LATCaseConfDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDateMetWithLawyerReDenial")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDateSettled")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineForReplySubmissionsOfTheApplicant")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineToDeliverProductionstoABCounsel")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineToFileAffidavitReportsEtc")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineToFileHearingSubmissionsAndOrBriefs")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineToReceiveABProductions")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineToReceiveAffidavitReportsEtc")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineToReceiveInsurerSubmissions")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDeadlineToServeFileCaseConfSummary")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LATDueDateToDiscussPotentialLAT")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LATHearingAdjudicator")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("LATHearingDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LATHearingType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATInsurer")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATInsurerCounsel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATInsurerFirm")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("LATInsurersResponseReceived")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LATIssue1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATIssue2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATIssue3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATIssue4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATIssue5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATIssue6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LATIssue7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("LATNumber")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("LATProposedDateToFileLAT")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LATTribunalNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("FileId");
-
-                    b.ToTable("LATDatas");
-                });
-
             modelBuilder.Entity("RRFFilesManager.Abstractions.Lawyer", b =>
                 {
                     b.Property<int>("ID")
@@ -1326,9 +1204,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("eMailAddress")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -2098,10 +1973,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RRFFilesManager.Abstractions.Lawyer", "Lawyer")
-                        .WithMany()
-                        .HasForeignKey("LawyerID");
-
                     b.HasOne("RRFFilesManager.Abstractions.TaskState", "State")
                         .WithMany()
                         .HasForeignKey("StateID");
@@ -2124,15 +1995,6 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.HasOne("RRFFilesManager.Abstractions.DisabilityInsuranceCompany", "PolCompanyDeniedBenefits")
                         .WithMany()
                         .HasForeignKey("PolCompanyDeniedBenefitsID");
-                });
-
-            modelBuilder.Entity("RRFFilesManager.Abstractions.LATData", b =>
-                {
-                    b.HasOne("RRFFilesManager.Abstractions.File", "File")
-                        .WithMany("LATData")
-                        .HasForeignKey("FileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("RRFFilesManager.Abstractions.LawyerTask", b =>

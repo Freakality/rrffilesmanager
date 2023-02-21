@@ -18,6 +18,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly ITemplateRepository _templateRepository;
         private readonly ITaskRepository _taskRepository;
         private readonly IFileRepository _fileRepository;
+        private readonly Logic.FileManager _fileManager;
         private readonly ITaskStateRepository _taskStateRepository;
 
         private readonly ArchiveManager _archiveManager;
@@ -28,6 +29,7 @@ namespace RRFFilesManager.IntakeForm
             _templateRepository = Program.GetService<ITemplateRepository>();
             _taskRepository = Program.GetService<ITaskRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
+            _fileManager = new Logic.FileManager();
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
 
             _archiveManager = new ArchiveManager();
@@ -80,6 +82,7 @@ namespace RRFFilesManager.IntakeForm
                 }
                 else if (InvokeCYP.Checked)
                 {
+                    _fileManager.SetCurrentFileStatus(Home.IntakeForm.Intake.File, FileStatusEnum.NotRetained);
                     CreateSendItemCYA();
                     IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, false);
                 }
@@ -117,7 +120,7 @@ namespace RRFFilesManager.IntakeForm
             CreateOrUpdateDocument();
             var attachmentPath = Document.Path;
             string clientFullName = $"{Home.IntakeForm.Intake.File.Client?.LastName}, {Home.IntakeForm.Intake.File.Client?.FirstName}";
-            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com" };
+            string[] to = new string[] { "DManzano@InjuryLawyerCanada.com", "RFoisy@InjuryLawyerCanada.com", Program.GetUser().eMailAddress};
             var subject = $"Print and Hold Process - {clientFullName}";
             var body = "";
             Outlook.NewEmail(to, subject, body, new[] { attachmentPath });

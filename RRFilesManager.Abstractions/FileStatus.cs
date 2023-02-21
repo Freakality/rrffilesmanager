@@ -10,4 +10,12 @@ namespace RRFFilesManager.Abstractions
         public string Description { get; set; }
         public override string ToString() => Description;
     }
+
+    public enum FileStatusEnum
+    {
+        PotentialFile = 1,
+        OpenFile = 2,
+        ClosedFile = 3,
+        NotRetained = 4,
+    }
 }

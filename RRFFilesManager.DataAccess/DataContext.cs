@@ -310,6 +310,9 @@ namespace RRFFilesManager.DataAccess
                     case "UploadArchiveSettings":
                         value = UploadArchivesSettings.Find(n).ToString();
                         break;
+                    case "ClientNotes":
+                        value = ClientNotes.Find(n).ToString();
+                        break;
 
                 }
                 if (value.Contains("\r\n"))
