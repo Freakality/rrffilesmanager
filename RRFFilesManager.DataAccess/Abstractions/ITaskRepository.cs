@@ -22,6 +22,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         Task GetLastTask(int? categoryId = null);
         void AddTaskDependency(Task task, Task dependency);
         void RemoveTaskDependency(Task task, Task dependency);
+        void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer);
 
     }
 }

@@ -12,6 +12,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void Update(FileStatus fileStatus);
         void SoftDelete(int fileStatusId);
         FileStatus GetById(int fileStatusId);
+        FileStatus GetByDescription(string fileStatusDescription);
         IEnumerable<FileStatus> List();
     }
 }

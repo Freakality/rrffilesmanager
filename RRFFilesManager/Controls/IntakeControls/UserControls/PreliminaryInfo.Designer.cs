@@ -57,6 +57,7 @@
             this.FindIntakeButton = new System.Windows.Forms.Button();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
             this.MatterTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.PrelimInfoQuestionnaireButton = new System.Windows.Forms.Button();
             AdditionalNotesLabel = new System.Windows.Forms.Label();
             DateOFCallLabel = new System.Windows.Forms.Label();
             FileLawyerLabel = new System.Windows.Forms.Label();
@@ -390,6 +391,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PreliminayPanel.BackColor = System.Drawing.Color.White;
+            this.PreliminayPanel.Controls.Add(this.PrelimInfoQuestionnaireButton);
             this.PreliminayPanel.Controls.Add(this.FindIntakeButton);
             this.PreliminayPanel.Controls.Add(this.GroupBox6);
             this.PreliminayPanel.Controls.Add(this.TableLayoutPanel2);
@@ -446,6 +448,22 @@
             this.MatterTypeComboBox.ValueMember = "MatterType";
             this.MatterTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.MatterTypeComboBox_SelectedIndexChanged);
             // 
+            // PrelimInfoQuestionnaireButton
+            // 
+            this.PrelimInfoQuestionnaireButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PrelimInfoQuestionnaireButton.BackColor = System.Drawing.Color.Maroon;
+            this.PrelimInfoQuestionnaireButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrelimInfoQuestionnaireButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrelimInfoQuestionnaireButton.ForeColor = System.Drawing.Color.White;
+            this.PrelimInfoQuestionnaireButton.Location = new System.Drawing.Point(900, 20);
+            this.PrelimInfoQuestionnaireButton.Name = "PrelimInfoQuestionnaireButton";
+            this.PrelimInfoQuestionnaireButton.Size = new System.Drawing.Size(212, 36);
+            this.PrelimInfoQuestionnaireButton.TabIndex = 144;
+            this.PrelimInfoQuestionnaireButton.Text = "Load Questionnaire Data";
+            this.PrelimInfoQuestionnaireButton.UseVisualStyleBackColor = false;
+            this.PrelimInfoQuestionnaireButton.Visible = false;
+            this.PrelimInfoQuestionnaireButton.Click += new System.EventHandler(this.PrelimInfoQuestionnaireButton_Click);
+            // 
             // PreliminaryInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -489,5 +507,6 @@
         private System.Windows.Forms.Button FindIntakeButton;
         internal System.Windows.Forms.Label StatutoryNoticeLabel;
         private System.Windows.Forms.Label DateOfLossLabel;
+        private System.Windows.Forms.Button PrelimInfoQuestionnaireButton;
     }
 }

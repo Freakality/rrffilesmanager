@@ -46,11 +46,35 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public IEnumerable<LawyerTask> Search(Lawyer lawyer, TaskState taskState, int? take = null)
+        public void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer)
         {
-            var query = _context.LawyerTasks.Where(s =>
+            IQueryable<LawyerTask> query = _context.LawyerTasks.Where(s =>
+                s.Lawyer == formerLawyer &&
+                s.State.Description == "To Do"
+            );
+            var taskList = query.ToList();
+            taskList.ForEach(a =>
+            {
+                a.Lawyer = newLawyer;
+            });
+            _context.SaveChanges();
+        }
+
+        public IEnumerable<LawyerTask> Search(string searchText, Lawyer lawyer, TaskState taskState, int? take = null)
+        {
+            IQueryable<LawyerTask> query = _context.LawyerTasks.Where(s =>
                 s.Lawyer == lawyer
             );
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                query = query.Where(s =>
+                    s.Task.Description.ToString().Contains(searchText) ||
+                    s.Notes.Contains(searchText) ||
+                    s.Lawyer.Description.Contains(searchText) ||
+                    s.Task.CreatedBy.Description.Contains(searchText) ||
+                    s.Task.Lawyer.Description.Contains(searchText)
+                );
+            }
             if (taskState != null)
             {
                 query = query.Where(s =>

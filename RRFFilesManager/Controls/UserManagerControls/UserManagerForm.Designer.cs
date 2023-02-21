@@ -43,7 +43,6 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.TBoxDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.DTPContractDateDateTime = new System.Windows.Forms.DateTimePicker();
             this.NUDNumberIDNUpDown = new System.Windows.Forms.NumericUpDown();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.TBoxConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
@@ -60,15 +59,17 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.HomeButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.NewButton = new System.Windows.Forms.Button();
+            this.UserManagerTransferButton = new System.Windows.Forms.Button();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.UserLawyerBox.SuspendLayout();
             this.UserNameChangeBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDComissionMultiplierNUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDNumberIDNUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TBarClearanceLevelTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // UserLawyerListBox
@@ -244,17 +245,6 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.NUDNumberIDNUpDown.Name = "NUDNumberIDNUpDown";
             this.NUDNumberIDNUpDown.Size = new System.Drawing.Size(230, 23);
             this.NUDNumberIDNUpDown.TabIndex = 20;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
-            this.PictureBox1.Location = new System.Drawing.Point(20, 16);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(299, 89);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 144;
-            this.PictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -448,7 +438,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.SaveButton.Location = new System.Drawing.Point(335, 542);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(426, 30);
+            this.SaveButton.Size = new System.Drawing.Size(246, 30);
             this.SaveButton.TabIndex = 155;
             this.SaveButton.Text = "Save Selected User";
             this.SaveButton.UseVisualStyleBackColor = false;
@@ -460,14 +450,40 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewButton.ForeColor = System.Drawing.Color.White;
-            this.NewButton.Location = new System.Drawing.Point(775, 542);
+            this.NewButton.Location = new System.Drawing.Point(817, 542);
             this.NewButton.Margin = new System.Windows.Forms.Padding(4);
             this.NewButton.Name = "NewButton";
-            this.NewButton.Size = new System.Drawing.Size(272, 30);
+            this.NewButton.Size = new System.Drawing.Size(230, 30);
             this.NewButton.TabIndex = 156;
             this.NewButton.Text = "Create New User / Lawyer";
             this.NewButton.UseVisualStyleBackColor = false;
             this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
+            // 
+            // UserManagerTransferButton
+            // 
+            this.UserManagerTransferButton.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.UserManagerTransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UserManagerTransferButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManagerTransferButton.ForeColor = System.Drawing.Color.White;
+            this.UserManagerTransferButton.Location = new System.Drawing.Point(589, 542);
+            this.UserManagerTransferButton.Margin = new System.Windows.Forms.Padding(4);
+            this.UserManagerTransferButton.Name = "UserManagerTransferButton";
+            this.UserManagerTransferButton.Size = new System.Drawing.Size(220, 30);
+            this.UserManagerTransferButton.TabIndex = 157;
+            this.UserManagerTransferButton.Text = "Transfer User Tasks";
+            this.UserManagerTransferButton.UseVisualStyleBackColor = false;
+            this.UserManagerTransferButton.Click += new System.EventHandler(this.UserManagerTransferButton_Click);
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::RRFFilesManager.Properties.Resources.RRFLogo;
+            this.PictureBox1.Location = new System.Drawing.Point(20, 16);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(299, 89);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 144;
+            this.PictureBox1.TabStop = false;
             // 
             // UserManagerForm
             // 
@@ -475,6 +491,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 588);
+            this.Controls.Add(this.UserManagerTransferButton);
             this.Controls.Add(this.NewButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.HomeButton);
@@ -485,18 +502,18 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserManagerForm";
-            this.Text = "UserManagerForm";
+            this.Text = "User Manager";
             this.UserLawyerBox.ResumeLayout(false);
             this.UserNameChangeBox.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDComissionMultiplierNUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDNumberIDNUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TBarClearanceLevelTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -534,5 +551,6 @@ namespace RRFFilesManager.Controls.UserManagerControls
         internal System.Windows.Forms.TextBox TBoxNewPasswordTextBox;
         private System.Windows.Forms.CheckBox CBoxChangePasswordCheckBox;
         internal System.Windows.Forms.Button NewButton;
+        internal System.Windows.Forms.Button UserManagerTransferButton;
     }
 }

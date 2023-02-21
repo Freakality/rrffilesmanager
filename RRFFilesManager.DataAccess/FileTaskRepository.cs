@@ -63,5 +63,18 @@ namespace RRFFilesManager.DataAccess
             }
             return query.ToList();
         }
+        public void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer)
+        {
+            IQueryable<FileTask> query = _context.FileTasks.Where(s =>
+                s.Lawyer == formerLawyer &&
+                s.State.Description == "To Do"
+            );
+            var taskList = query.ToList();
+            taskList.ForEach(a =>
+            {
+                a.Lawyer = newLawyer;
+            });
+            _context.SaveChanges();
+        }
     }
 }

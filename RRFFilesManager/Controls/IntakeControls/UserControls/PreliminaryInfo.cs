@@ -11,6 +11,8 @@ using RRFFilesManager.DataAccess;
 using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
+using System.IO;
+using ClosedXML.Excel;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -149,7 +151,7 @@ namespace RRFFilesManager.IntakeForm
             DateOfLossDateTimePicker.CustomFormat = " ";
         }
 
-        public void FillFile(File file)
+        public void FillFile(Abstractions.File file)
         {
             file.MatterType = (MatterType)MatterTypeComboBox.SelectedItem;
             file.DateOfCall = DateOFCallDateTimePicker.Value;
@@ -166,7 +168,7 @@ namespace RRFFilesManager.IntakeForm
             file.CurrentStatus = _fileStatusRepository.GetById(1); // Intake phase
         }
 
-        public void FillForm(File file)
+        public void FillForm(Abstractions.File file)
         {
             MatterTypeComboBox.SelectedItem = file.MatterType;
             DateOFCallDateTimePicker.Value= file.DateOfCall;
@@ -190,7 +192,7 @@ namespace RRFFilesManager.IntakeForm
         public void UpserFile()
         {
             if (Home.IntakeForm.Intake.File == null)
-                Home.IntakeForm.Intake.File = new File();
+                Home.IntakeForm.Intake.File = new Abstractions.File();
             FillFile(Home.IntakeForm.Intake.File);
             if (Home.IntakeForm.Intake.File.ID == default)
                 _fileRepository.Insert(Home.IntakeForm.Intake.File);
@@ -234,6 +236,102 @@ namespace RRFFilesManager.IntakeForm
         {
             var findIntakeForm = sender as FindIntake;
             Home.IntakeForm.SetIntake(findIntakeForm.SelectedIntake);
+            if (findIntakeForm.SelectedIntake != null)
+                PrelimInfoQuestionnaireButton.Visible = true;
+            else
+                PrelimInfoQuestionnaireButton.Visible = false;
+
+        }
+
+        private void PrelimInfoQuestionnaireButton_Click(object sender, EventArgs e)
+        {
+            var file = Home.IntakeForm.Intake.File;
+            if (file == null)
+            {
+                MessageBox.Show("Please select an Intake first.");
+                return;
+            }
+            OpenFileDialog openTaskDialog = new OpenFileDialog();
+            DataTable dt = new DataTable();
+            openTaskDialog.Filter = "Excel(*.xlsx;*.xlsm;*.xlsb)|*.xlsx;*.xlsm;*.xlsb";
+            try
+            {
+                if (openTaskDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (openTaskDialog.CheckFileExists)
+                    {
+                        string path = Path.GetFullPath(openTaskDialog.FileName);
+                        if (path.Contains("xlsb"))
+                        {
+                            path = Excel.XLSXConvert(path);
+                        }
+                        using (XLWorkbook workBook = new XLWorkbook(path))
+                        {
+                            foreach (IXLWorksheet sheet in workBook.Worksheets)
+                            {
+                                //Read the first Sheet from Excel file.
+                                IXLWorksheet workSheet = sheet;
+                                if (sheet.Name.ToLower() != "output")
+                                    continue;
+                                //Create a new DataTable.
+                                dt.TableName = sheet.Name;
+                                //Loop through the Worksheet rows.
+                                bool firstCol = true;
+                                //bool firstRowF = true;
+                                //bool firstRowV = true;
+                                foreach (IXLRow row in workSheet.Rows())
+                                {
+                                    //Use the first row to add columns to DataTable.
+                                    if (firstCol)
+                                    {
+                                        foreach (IXLCell cell in row.Cells())
+                                        {
+                                            /*if (firstRowF)
+                                            {
+                                                firstRowF = false;
+                                                continue;
+                                            }*/
+                                            dt.Columns.Add(cell.Value.ToString());
+                                        }
+                                        firstCol = false;
+                                        continue;
+                                    }
+                                    else
+                                    {
+                                        dt.Rows.Add();
+                                        int i = 0;
+                                        foreach (IXLCell cell in row.Cells(1, dt.Columns.Count))
+                                        {
+                                            /*if (firstRowV)
+                                            {
+                                                firstRowV = false;
+                                                continue;
+                                            }*/
+                                            dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
+                                            i++;
+                                            if (i > 1)
+                                                break;
+                                        }
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                        Home.IntakeForm.SetQData(dt);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please upload a valid Excel file.");
+                }
+            }
+            catch (Exception ex)
+            {
+                //it will give if file is already exits..
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
     }
 }

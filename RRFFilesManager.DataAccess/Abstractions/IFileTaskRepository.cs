@@ -14,5 +14,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         FileTask GetById(int fileTaskId);
         IEnumerable<FileTask> List();
         IEnumerable<FileTask> Search(File file, TaskState taskState, int? take = null);
+        void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer);
     }
 }

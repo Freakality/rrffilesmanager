@@ -29,64 +29,168 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.AddTaskButton = new System.Windows.Forms.Button();
-            this.SaveChangesButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.StaffPortalButtonLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.StaffPortalSaveChangesButton = new System.Windows.Forms.Button();
+            this.StaffPortalAddTaskButton = new System.Windows.Forms.Button();
+            this.StaffPortalMainSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.StaffPortalGridLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.StaffPortalTaskStateComboBox = new System.Windows.Forms.ComboBox();
+            this.StaffPortalSearchTextBox = new System.Windows.Forms.TextBox();
+            this.StaffLawyerTaskView = new System.Windows.Forms.DataGridView();
+            this.StaffPortalButtonLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffPortalMainSplitContainer)).BeginInit();
+            this.StaffPortalMainSplitContainer.Panel1.SuspendLayout();
+            this.StaffPortalMainSplitContainer.Panel2.SuspendLayout();
+            this.StaffPortalMainSplitContainer.SuspendLayout();
+            this.StaffPortalGridLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffLawyerTaskView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // StaffPortalButtonLayoutPanel
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(822, 408);
-            this.dataGridView1.TabIndex = 0;
+            this.StaffPortalButtonLayoutPanel.ColumnCount = 3;
+            this.StaffPortalButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 547F));
+            this.StaffPortalButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.68853F));
+            this.StaffPortalButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.31147F));
+            this.StaffPortalButtonLayoutPanel.Controls.Add(this.StaffPortalAddTaskButton, 1, 0);
+            this.StaffPortalButtonLayoutPanel.Controls.Add(this.StaffPortalSaveChangesButton, 2, 0);
+            this.StaffPortalButtonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffPortalButtonLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.StaffPortalButtonLayoutPanel.Name = "StaffPortalButtonLayoutPanel";
+            this.StaffPortalButtonLayoutPanel.RowCount = 1;
+            this.StaffPortalButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.StaffPortalButtonLayoutPanel.Size = new System.Drawing.Size(859, 53);
+            this.StaffPortalButtonLayoutPanel.TabIndex = 156;
             // 
-            // AddTaskButton
+            // StaffPortalSaveChangesButton
             // 
-            this.AddTaskButton.BackColor = System.Drawing.Color.Maroon;
-            this.AddTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddTaskButton.ForeColor = System.Drawing.Color.White;
-            this.AddTaskButton.Location = new System.Drawing.Point(517, 444);
-            this.AddTaskButton.Name = "AddTaskButton";
-            this.AddTaskButton.Size = new System.Drawing.Size(152, 37);
-            this.AddTaskButton.TabIndex = 157;
-            this.AddTaskButton.Text = "Add Task";
-            this.AddTaskButton.UseVisualStyleBackColor = false;
+            this.StaffPortalSaveChangesButton.BackColor = System.Drawing.Color.Maroon;
+            this.StaffPortalSaveChangesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffPortalSaveChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StaffPortalSaveChangesButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffPortalSaveChangesButton.ForeColor = System.Drawing.Color.White;
+            this.StaffPortalSaveChangesButton.Location = new System.Drawing.Point(671, 5);
+            this.StaffPortalSaveChangesButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StaffPortalSaveChangesButton.Name = "StaffPortalSaveChangesButton";
+            this.StaffPortalSaveChangesButton.Size = new System.Drawing.Size(184, 43);
+            this.StaffPortalSaveChangesButton.TabIndex = 154;
+            this.StaffPortalSaveChangesButton.Text = "Save Changes";
+            this.StaffPortalSaveChangesButton.UseVisualStyleBackColor = false;
             // 
-            // SaveChangesButton
+            // StaffPortalAddTaskButton
             // 
-            this.SaveChangesButton.BackColor = System.Drawing.Color.Maroon;
-            this.SaveChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveChangesButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveChangesButton.ForeColor = System.Drawing.Color.White;
-            this.SaveChangesButton.Location = new System.Drawing.Point(686, 444);
-            this.SaveChangesButton.Name = "SaveChangesButton";
-            this.SaveChangesButton.Size = new System.Drawing.Size(152, 37);
-            this.SaveChangesButton.TabIndex = 156;
-            this.SaveChangesButton.Text = "Save Changes";
-            this.SaveChangesButton.UseVisualStyleBackColor = false;
+            this.StaffPortalAddTaskButton.BackColor = System.Drawing.Color.Maroon;
+            this.StaffPortalAddTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffPortalAddTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StaffPortalAddTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffPortalAddTaskButton.ForeColor = System.Drawing.Color.White;
+            this.StaffPortalAddTaskButton.Location = new System.Drawing.Point(551, 5);
+            this.StaffPortalAddTaskButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StaffPortalAddTaskButton.Name = "StaffPortalAddTaskButton";
+            this.StaffPortalAddTaskButton.Size = new System.Drawing.Size(112, 43);
+            this.StaffPortalAddTaskButton.TabIndex = 155;
+            this.StaffPortalAddTaskButton.Text = "Add Task";
+            this.StaffPortalAddTaskButton.UseVisualStyleBackColor = false;
+            // 
+            // StaffPortalMainSplitContainer
+            // 
+            this.StaffPortalMainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffPortalMainSplitContainer.IsSplitterFixed = true;
+            this.StaffPortalMainSplitContainer.Location = new System.Drawing.Point(0, 0);
+            this.StaffPortalMainSplitContainer.Name = "StaffPortalMainSplitContainer";
+            this.StaffPortalMainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // StaffPortalMainSplitContainer.Panel1
+            // 
+            this.StaffPortalMainSplitContainer.Panel1.Controls.Add(this.StaffPortalGridLayoutPanel);
+            // 
+            // StaffPortalMainSplitContainer.Panel2
+            // 
+            this.StaffPortalMainSplitContainer.Panel2.Controls.Add(this.StaffPortalButtonLayoutPanel);
+            this.StaffPortalMainSplitContainer.Size = new System.Drawing.Size(859, 504);
+            this.StaffPortalMainSplitContainer.SplitterDistance = 447;
+            this.StaffPortalMainSplitContainer.TabIndex = 159;
+            // 
+            // StaffPortalGridLayoutPanel
+            // 
+            this.StaffPortalGridLayoutPanel.ColumnCount = 2;
+            this.StaffPortalGridLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.049F));
+            this.StaffPortalGridLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.951F));
+            this.StaffPortalGridLayoutPanel.Controls.Add(this.StaffPortalTaskStateComboBox, 0, 0);
+            this.StaffPortalGridLayoutPanel.Controls.Add(this.StaffPortalSearchTextBox, 1, 0);
+            this.StaffPortalGridLayoutPanel.Controls.Add(this.StaffLawyerTaskView, 0, 1);
+            this.StaffPortalGridLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffPortalGridLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.StaffPortalGridLayoutPanel.Name = "StaffPortalGridLayoutPanel";
+            this.StaffPortalGridLayoutPanel.RowCount = 2;
+            this.StaffPortalGridLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.488987F));
+            this.StaffPortalGridLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.51102F));
+            this.StaffPortalGridLayoutPanel.Size = new System.Drawing.Size(859, 447);
+            this.StaffPortalGridLayoutPanel.TabIndex = 159;
+            // 
+            // StaffPortalTaskStateComboBox
+            // 
+            this.StaffPortalTaskStateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StaffPortalTaskStateComboBox.FormattingEnabled = true;
+            this.StaffPortalTaskStateComboBox.ItemHeight = 13;
+            this.StaffPortalTaskStateComboBox.Location = new System.Drawing.Point(4, 12);
+            this.StaffPortalTaskStateComboBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.StaffPortalTaskStateComboBox.Name = "StaffPortalTaskStateComboBox";
+            this.StaffPortalTaskStateComboBox.Size = new System.Drawing.Size(189, 21);
+            this.StaffPortalTaskStateComboBox.TabIndex = 156;
+            this.StaffPortalTaskStateComboBox.SelectedIndexChanged += new System.EventHandler(this.StaffPortalFileStatusComboBox_SelectedIndexChanged);
+            // 
+            // StaffPortalSearchTextBox
+            // 
+            this.StaffPortalSearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StaffPortalSearchTextBox.Location = new System.Drawing.Point(201, 8);
+            this.StaffPortalSearchTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StaffPortalSearchTextBox.Name = "StaffPortalSearchTextBox";
+            this.StaffPortalSearchTextBox.Size = new System.Drawing.Size(654, 20);
+            this.StaffPortalSearchTextBox.TabIndex = 157;
+            this.StaffPortalSearchTextBox.TextChanged += new System.EventHandler(this.StaffPortalSearchTextBox_TextChanged);
+            // 
+            // StaffLawyerTaskView
+            // 
+            this.StaffLawyerTaskView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StaffPortalGridLayoutPanel.SetColumnSpan(this.StaffLawyerTaskView, 2);
+            this.StaffLawyerTaskView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffLawyerTaskView.Location = new System.Drawing.Point(4, 38);
+            this.StaffLawyerTaskView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StaffLawyerTaskView.Name = "StaffLawyerTaskView";
+            this.StaffLawyerTaskView.Size = new System.Drawing.Size(851, 404);
+            this.StaffLawyerTaskView.TabIndex = 148;
             // 
             // StaffViewControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.AddTaskButton);
-            this.Controls.Add(this.SaveChangesButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.StaffPortalMainSplitContainer);
             this.Name = "StaffViewControls";
             this.Size = new System.Drawing.Size(859, 504);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.StaffPortalButtonLayoutPanel.ResumeLayout(false);
+            this.StaffPortalMainSplitContainer.Panel1.ResumeLayout(false);
+            this.StaffPortalMainSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StaffPortalMainSplitContainer)).EndInit();
+            this.StaffPortalMainSplitContainer.ResumeLayout(false);
+            this.StaffPortalGridLayoutPanel.ResumeLayout(false);
+            this.StaffPortalGridLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffLawyerTaskView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        internal System.Windows.Forms.Button AddTaskButton;
-        internal System.Windows.Forms.Button SaveChangesButton;
+        private System.Windows.Forms.TableLayoutPanel StaffPortalButtonLayoutPanel;
+        internal System.Windows.Forms.Button StaffPortalAddTaskButton;
+        internal System.Windows.Forms.Button StaffPortalSaveChangesButton;
+        private System.Windows.Forms.SplitContainer StaffPortalMainSplitContainer;
+        private System.Windows.Forms.TableLayoutPanel StaffPortalGridLayoutPanel;
+        private System.Windows.Forms.ComboBox StaffPortalTaskStateComboBox;
+        private System.Windows.Forms.TextBox StaffPortalSearchTextBox;
+        private System.Windows.Forms.DataGridView StaffLawyerTaskView;
     }
 }

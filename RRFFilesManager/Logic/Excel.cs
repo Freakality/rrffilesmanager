@@ -1,6 +1,7 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -15,6 +16,42 @@ namespace RRFFilesManager.Logic
             excelApp.DisplayAlerts = false;
             var workbook = excelApp?.Workbooks?.Open(path);
             excelApp.Visible = true;
+        }
+        public static string XLSXConvert(string strPath)
+        {
+            try
+            {
+                Application excelApplication = new Application();
+                Workbooks workbooks = excelApplication.Workbooks;
+                // open book in any format
+                Workbook workbook = workbooks.Open(strPath, XlUpdateLinks.xlUpdateLinksNever, true, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+                // save in XlFileFormat.xlExcel12 format which is XLSB
+                workbook.SaveAs(strPath + ".xlsx", XlFileFormat.xlOpenXMLWorkbook, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlNoChange, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+                // close workbook
+                workbook.Close(false, Type.Missing, Type.Missing);
+
+                // ...
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(workbooks);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApplication);
+                // shutdown excel
+                //excelApplication.Quit();
+                return strPath + ".xlsx";
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+
+                foreach (System.Diagnostics.Process proc in System.Diagnostics.Process.GetProcessesByName("EXCEL"))
+                {
+                    proc.Kill();
+                }
+            }
         }
         public static void ReplaceAll(Worksheet worksheet, string findText, string replaceWith)
         {

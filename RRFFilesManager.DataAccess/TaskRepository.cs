@@ -139,9 +139,23 @@ namespace RRFFilesManager.DataAccess
                 TaskId = task.ID,
                 DueDate = file.DateOfCall.AddDays(task.DueBy),
                 DeferUntilDate = file.DateOfCall.AddDays(task.DeferBy),
+                Lawyer = task.Lawyer,
                 State = taskState
             };
             _context.FileTasks.Add(fileTask);
+            _context.SaveChanges();
+        }
+
+        public void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer)
+        {
+            IQueryable<Task> query = _context.Tasks.Where(s =>
+                s.Lawyer == formerLawyer
+            );
+            var taskList = query.ToList();
+            taskList.ForEach(a =>
+            {
+                a.Lawyer = newLawyer;
+            });
             _context.SaveChanges();
         }
     }

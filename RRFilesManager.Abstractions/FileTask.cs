@@ -21,6 +21,7 @@ namespace RRFFilesManager.Abstractions
         public DateTime CompletedDate { get; set; }
         public virtual TaskState State { get; set; }
         public virtual Lawyer AddedBy { get; set; }
+        public virtual Lawyer Lawyer { get; set; }
         public string Notes { get; set; }
         public override string ToString() => $"{File.FileNumber} - {File.Client?.FirstName} {File.Client?.LastName} - {Task.Description}";
     }

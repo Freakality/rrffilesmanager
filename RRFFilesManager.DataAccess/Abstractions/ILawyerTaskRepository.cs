@@ -13,6 +13,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void SoftDelete(int lawyerTaskId);
         LawyerTask GetById(int lawyerTaskId);
         IEnumerable<LawyerTask> List();
-        IEnumerable<LawyerTask> Search(Lawyer lawyer, TaskState taskState, int? take = null);
+        void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer);
+        IEnumerable<LawyerTask> Search(string searchText, Lawyer lawyer, TaskState taskState, int? take = null);
     }
 }

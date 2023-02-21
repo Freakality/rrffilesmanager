@@ -125,5 +125,11 @@ namespace RRFFilesManager.Controls.UserManagerControls
             Close();
             Home.Instance.Show();
         }
+
+        private void UserManagerTransferButton_Click(object sender, EventArgs e)
+        {
+            TransferTasks transferTasks = new TransferTasks(SelectedLawyer);
+            transferTasks.ShowDialog();
+        }
     }
 }

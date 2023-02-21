@@ -592,6 +592,12 @@
     <Compile Include="Controls\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\StaffControls\CreateEditLawyerTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\StaffControls\CreateEditLawyerTask.Designer.cs">
+      <DependentUpon>CreateEditLawyerTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MasterTaskControls\CreateEditTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -777,6 +783,12 @@
     </Compile>
     <Compile Include="Controls\IntakeControls\UserControls\PreliminaryInfo.Designer.cs">
       <DependentUpon>PreliminaryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserManagerControls\TransferTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\UserManagerControls\TransferTasks.Designer.cs">
+      <DependentUpon>TransferTasks.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\UserManagerControls\UserManagerForm.cs">
       <SubType>Form</SubType>
@@ -1050,6 +1062,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SharedControls\PleaseWait.resx">
       <DependentUpon>PleaseWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserManagerControls\TransferTasks.resx">
+      <DependentUpon>TransferTasks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UserManagerControls\UserManagerForm.resx">
       <DependentUpon>UserManagerForm.cs</DependentUpon>

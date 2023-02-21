@@ -54,7 +54,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                     taskCategoryID = -1;
                 }
             }
-            TaskGridView.DataSource = _taskRepository.Search(SearchTextBox.Text, taskCategoryID, OnlyHoldIntakes, 20);
+            TaskGridView.DataSource = _taskRepository.Search(SearchTextBox.Text, taskCategoryID, OnlyHoldIntakes);
         }
         public void SetOnlyHoldIntakes(bool value)
         {
@@ -198,10 +198,10 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                         List<string> DependencyStack = new List<string>();
                         foreach (DataTable table in ds.Tables)
                         {
-                            /*if (table.TableName.ToUpper() == "INFORMATION")
+                            if (table.TableName.ToUpper() == "RSW")
                             {
-                                continue;
-                            }*/
+                                MessageBox.Show("Hi");
+                            }
                             TaskCategory taskCategory = new TaskCategory();
                             var found = _taskCategoryRepository.Search(table.TableName);
                             if (found.Count() > 0)
@@ -298,6 +298,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                             _taskRepository.AddTaskDependency(task, dependency);
                         }
                     }
+                    MessageBox.Show("Master Tasks have been successfully imported.");
                 }
                 else
                 {
