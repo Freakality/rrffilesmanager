@@ -586,6 +586,12 @@
     <Compile Include="Controls\FileControls\UserControls\StandardBenefitStatementsControl.Designer.cs">
       <DependentUpon>StandardBenefitStatementsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileControls\UserControls\TaskActions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\UserControls\TaskActions.Designer.cs">
+      <DependentUpon>TaskActions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\LoginUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -989,6 +995,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\UserControls\StandardBenefitStatementsControl.resx">
       <DependentUpon>StandardBenefitStatementsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\UserControls\TaskActions.resx">
+      <DependentUpon>TaskActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>
