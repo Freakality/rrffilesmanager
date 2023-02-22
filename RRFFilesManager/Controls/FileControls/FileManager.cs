@@ -1664,6 +1664,7 @@ namespace RRFFilesManager
         }
         private void Busqueda()
         {
+
             if (Home.FileManager.File == null)
             {
                 TabControl4.Enabled = false;
@@ -1676,6 +1677,22 @@ namespace RRFFilesManager
             {
                 TabControl4.Enabled = true;
             }
+
+            if (Home.FileManager.File.FileLawyer.ClearanceLevel != 0)
+            {
+                GroupBoxLat1.Visible = false;
+                GroupBoxLat2.Visible = false;
+                GroupBoxLat3.Visible = false;
+                GroupBoxLat4.Visible = false;
+            }
+            else
+            {
+                GroupBoxLat1.Visible = true;
+                GroupBoxLat2.Visible = true;
+                GroupBoxLat3.Visible = true;
+                GroupBoxLat4.Visible = true;
+            }
+
             txtLimitationDate.Text = Home.FileManager.File.LimitationPeriod;
             if (_latDataRepository.List().Where(t => t.FileId == Home.FileManager.File.ID).ToList().Count == 0)
             {
@@ -1921,7 +1938,6 @@ namespace RRFFilesManager
                     RefreshActionLogDataGridViewDataSource();
                 }
             }
-
         }
     }
 }
