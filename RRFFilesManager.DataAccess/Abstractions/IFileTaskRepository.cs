@@ -15,5 +15,8 @@ namespace RRFFilesManager.DataAccess.Abstractions
         IEnumerable<FileTask> List();
         IEnumerable<FileTask> Search(File file, TaskState taskState, int? take = null);
         void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer);
+        void AddTask(File file, Task task, TaskState taskState, int Days = 0);
+        void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState, int Days = 0);
+        bool DependencyStatusApproved(File file, Task task);
     }
 }

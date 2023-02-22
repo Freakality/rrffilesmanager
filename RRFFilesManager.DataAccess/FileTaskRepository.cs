@@ -42,6 +42,14 @@ namespace RRFFilesManager.DataAccess
         public void Update(FileTask fileTask)
         {
             var trxContact = GetById(fileTask.ID);
+            if (trxContact.State == _context.TaskStates.FirstOrDefault(x => x.Description.ToLower() == "to do") && 
+                fileTask.State == _context.TaskStates.FirstOrDefault(x => x.Description.ToLower() == "done"))
+            {
+                foreach(TaskDependency taskDependency in fileTask.Task.Dependencies)
+                {
+                    AddTask(fileTask.File, taskDependency.Task, _context.TaskStates.FirstOrDefault(x => x.Description.ToLower() == "to do"), 0);
+                }
+            }
             _context.Entry(trxContact).CurrentValues.SetValues(fileTask);
             _context.SaveChanges();
         }
@@ -75,6 +83,86 @@ namespace RRFFilesManager.DataAccess
                 a.Lawyer = newLawyer;
             });
             _context.SaveChanges();
+        }
+
+        public bool DependencyStatusApproved(File file, Task task)
+        {
+            var exist = _context.FileTasks.Any(s => s.File.ID == file.ID && s.Task.ID == task.ID && s.State == _context.TaskStates.FirstOrDefault(x => x.Description.ToLower() == "done"));
+            if (exist)
+            {
+                return true;
+            }
+            return false;
+        }
+        public void AddTask(File file, Task task, TaskState taskState, int Days)
+        {
+            int due = task.DueBy;
+            if (Days != 0)
+            {
+                due = Days;
+            }
+            var exist = _context.FileTasks.Any(s => s.File.ID == file.ID && s.Task.ID == task.ID);
+            if (exist)
+            {
+                var fileTaskPrev = _context.FileTasks.Single(t => t.TaskId == task.ID && t.FileId == file.ID);
+                var taskexisten = _context.FileTasks.Single(t => t.TaskId == task.ID && t.FileId == file.ID);
+                taskexisten.DueDate = DateTime.Now.AddDays(due);
+                taskexisten.DeferUntilDate = DateTime.Now.AddDays(task.DeferBy);
+                _context.Entry(fileTaskPrev).CurrentValues.SetValues(taskexisten);
+                _context.SaveChanges();
+            }
+            else
+            {
+                if (task.Dependencies.Count > 0)
+                {
+                    foreach (TaskDependency taskDependency in task.Dependencies)
+                    {
+                        if (!DependencyStatusApproved(file, taskDependency.Dependency))
+                        {
+                            return;
+                        }
+                    }
+                }
+                
+                var filetask = new FileTask
+                {
+                    File = file,
+                    FileId = file.ID,
+                    Task = task,
+                    TaskId = task.ID,
+                    DueDate = DateTime.Now.AddDays(due),
+                    DeferUntilDate = DateTime.Now.AddDays(task.DeferBy),
+                    State = taskState
+                };
+                _context.FileTasks.Add(filetask);
+                _context.SaveChanges();
+            }
+
+            //if (exist)
+            //    return;
+            //DateTime dueDate;
+            //DateTime deferUntil;
+            //var fileTask = new FileTask
+            //{
+            //    File = file,
+            //    FileId = file.ID,
+            //    Task = task,
+            //    TaskId = task.ID,
+            //    DueDate = file.DateOfCall.AddDays(task.DueBy),
+            //    DeferUntilDate = file.DateOfCall.AddDays(task.DeferBy),
+            //    State = taskState
+            //};
+
+            //_context.FileTasks.Add(fileTask);
+            //_context.SaveChanges(); 
+        }
+
+        public void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState, int Days = 0)
+        {
+            foreach(Task task in tasks)
+            {
+                AddTask(file, task, taskState, Days);
+            }
         }
     }
 }

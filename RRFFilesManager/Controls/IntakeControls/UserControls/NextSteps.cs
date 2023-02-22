@@ -18,6 +18,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly ITemplateRepository _templateRepository;
         private readonly ITaskRepository _taskRepository;
         private readonly IFileRepository _fileRepository;
+        private readonly IFileTaskRepository _fileTaskRepository;
         private readonly Logic.FileManager _fileManager;
         private readonly ITaskStateRepository _taskStateRepository;
 
@@ -29,6 +30,7 @@ namespace RRFFilesManager.IntakeForm
             _templateRepository = Program.GetService<ITemplateRepository>();
             _taskRepository = Program.GetService<ITaskRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
+            _fileTaskRepository = Program.GetService<IFileTaskRepository>();
             _fileManager = new Logic.FileManager();
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
 
@@ -93,7 +95,7 @@ namespace RRFFilesManager.IntakeForm
                         if (Count.ShowDialog() == DialogResult.OK)
                         {
                             var _task = _taskRepository.List().Where(t => t.TaskCategory.Description == "Potential Client");
-                            _fileRepository.AddAllCategoryTasks(Home.IntakeForm.Intake.File,_task,_taskStateRepository.GetById(1),Count.days);
+                            _fileTaskRepository.AddAllCategoryTasks(Home.IntakeForm.Intake.File,_task,_taskStateRepository.GetById(1),Count.days);
                             MessageBox.Show("task assignment complete");
                             IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, true);
                             PrintAndHold();

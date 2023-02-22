@@ -806,7 +806,7 @@ namespace RRFFilesManager
                 var tasks = _taskRepository.Search("", taskCategoryID);
                 if (tasks.Count() > 0)
                 {
-                    _fileRepository.AddAllCategoryTasks(File, tasks, taskState);
+                    _fileTaskRepository.AddAllCategoryTasks(File, tasks, taskState);
                 }
             }
         }

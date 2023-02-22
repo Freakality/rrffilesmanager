@@ -112,7 +112,16 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public void AddTask(File file, Task task, TaskState taskState, int Days)
+        public bool DependencyStatusApproved(File file, Task task)
+        {
+            var exist = _context.FileTasks.Any(s => s.File.ID == file.ID && s.Task.ID == task.ID && s.State == _context.TaskStates.FirstOrDefault(x => x.Description.ToLower() == "done"));
+            if (exist)
+            {
+                return true;
+            }
+            return false;
+        }
+        /*public void AddTask(File file, Task task, TaskState taskState, int Days)
         {
             var exist = _context.FileTasks.Any(s => s.File.ID == file.ID && s.Task.ID == task.ID);
             if (exist)
@@ -126,6 +135,17 @@ namespace RRFFilesManager.DataAccess
             }  
             else
             {
+                
+                if (task.Dependencies.Count > 0)
+                {
+                    foreach(TaskDependency taskDependency in task.Dependencies)
+                    {
+                        if (!DependencyStatusApproved(file, taskDependency.Dependency))
+                        {
+                            return;
+                        }
+                    }
+                }
                 var filetask = new FileTask
                 {
                     File = file,
@@ -165,6 +185,6 @@ namespace RRFFilesManager.DataAccess
             {
                 AddTask(file, task, taskState,Days);
             }
-        }
+        }*/
     }
 }

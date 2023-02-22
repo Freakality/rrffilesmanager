@@ -21,12 +21,14 @@ namespace RRFFilesManager.Controls.FileControls
         private readonly ITaskCategoryRepository _taskCategoryRepository;
         private readonly IFileRepository _fileRepository;
         private readonly ITaskStateRepository _taskStateRepository;
+        private readonly IFileTaskRepository _fileTaskRepository;
         private Abstractions.Task TaskToAdd;
         public File File { get; set; }
         public FileTask SelectedFileTask { get; set; }
         public AddTaskManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
+            _fileTaskRepository = Program.GetService<IFileTaskRepository>();
             _taskRepository = Program.GetService<ITaskRepository>();
             _taskCategoryRepository = Program.GetService<ITaskCategoryRepository>();
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
@@ -112,7 +114,7 @@ namespace RRFFilesManager.Controls.FileControls
                 TaskState ts = _taskStateRepository.GetByDescription("To Do");
                 foreach (Task t in tasksToAdd)
                 {
-                    _fileRepository.AddTask(File, t, ts);
+                    _fileTaskRepository.AddTask(File, t, ts);
                 }
             }
         }
