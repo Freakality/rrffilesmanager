@@ -47,6 +47,8 @@ namespace RRFFilesManager
         public IEnumerable<FileTask> fileTasks;
         private DataTable Notes = new DataTable();
         private DataView FilteredNotes = new DataView();
+        TaskActions  Task_Actions = new TaskActions(true);
+        ContextMenuStrip Ctms_TaskActions;
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -87,11 +89,12 @@ namespace RRFFilesManager
             Utils.Utils.SetContent(SemiAnnualFileReviewTabAccidentBenefits, SemiAnnualFileReviewControlAccidentBenefits);
             SemiAnnualFileReviewControlAccidentBenefits.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
 
-            Notes.Columns.Add("Date",typeof(DateTime));
-            Notes.Columns.Add("Lawyer",typeof(string));
-            Notes.Columns.Add("Description",typeof(string));
+            Notes.Columns.Add("Date", typeof(DateTime));
+            Notes.Columns.Add("Lawyer", typeof(string));
+            Notes.Columns.Add("Description", typeof(string));
             Notes.TableName = "ClientNotesDataTable";
             FilteredNotes.Table = Notes;
+            Ctms_TaskActions = Task_Actions.Ctms_TaskActions;
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -242,7 +245,8 @@ namespace RRFFilesManager
 
         }
 
-        private void RefreshActionLogDataGridViewDataSource()
+        private bool firstActionLogDataLoad = true;
+        public void RefreshActionLogDataGridViewDataSource()
         {
             /*int taskCategoryID = -1;
             if (!(CBoxTaskCategory.SelectedValue is null))
@@ -252,9 +256,7 @@ namespace RRFFilesManager
                     taskCategoryID = -1;
                 }
             }*/
-            bool setup = true;
-            if (ActionLogDataGridView.DataSource != null)
-                setup = false;
+            
             fileTasks = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
             var filetasks = fileTasks.Select( x => new
             {
@@ -263,7 +265,7 @@ namespace RRFFilesManager
                 StatusId = x?.State?.ID,
                 StatusDescription = x?.State?.Description,
                 TaskID = x?.TaskId,
-                TasIDNumber = x?.Task?.TaskIDNumber ?? "N/A",
+                TaskIDNumber = x?.Task?.TaskIDNumber ?? "N/A",
                 TaskDescription = x?.Task?.Description,
                 BusinessProcess = x?.Task?.TaskCategory?.Description ?? "N/A",
                 ResponsibleLawyer = x.Task?.Lawyer?.Description,
@@ -280,14 +282,20 @@ namespace RRFFilesManager
 
             //ActionLogDataGridView.DataSource = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
             ActionLogDataGridView.DataSource = filetasks.ToList();
-            if (setup)
+            bool setup = false;
+            if (ActionLogDataGridView.DataSource != null)
+            {
+                setup = true;
+            }
+
+            if (setup && firstActionLogDataLoad)
             {
                 ActionLogDataGridView.Columns["ID"].Visible = false;
                 //ActionLogDataGridView.Columns["File"].Visible = false;
                 ActionLogDataGridView.Columns["FileId"].Visible = false;
                 ActionLogDataGridView.Columns["TaskId"].Visible = false;
                 ActionLogDataGridView.Columns["StatusId"].Visible = false;
-                ActionLogDataGridView.Columns["TasIDNumber"].HeaderText = "Task ID";
+                ActionLogDataGridView.Columns["TaskIDNumber"].HeaderText = "Task ID";
                 ActionLogDataGridView.Columns["BusinessProcess"].HeaderText = "Business Process";
                 ActionLogDataGridView.Columns["DueDate"].HeaderText = "Due Date";
                 ActionLogDataGridView.Columns["DeferUntilDate"].HeaderText = "Defer Until Date";
@@ -298,6 +306,11 @@ namespace RRFFilesManager
                 ActionLogDataGridView.Columns["NotifiedRRFDate"].HeaderText = "Notified RRF Date";
                 ActionLogDataGridView.Columns["StatusDescription"].HeaderText = "Status";
                 ActionLogDataGridView.Columns["CompletedDate"].HeaderText = "Completed Date";
+
+                //ActionLogDataGridView.RowTemplate.ContextMenuStrip = Ctms_TaskActions;
+                ActionLogDataGridView.ContextMenuStrip = Ctms_TaskActions;
+                firstActionLogDataLoad = false;
+                //ActionLogDataGridView.Columns["BusinessProcess"].ContextMenuStrip = Ctms_TaskActions;
 
             }
         }
@@ -1929,14 +1942,23 @@ namespace RRFFilesManager
             {
                 MessageBox.Show($"You have to search a file to add a task","Wait",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 return;
-            }
-
+            }            
             using (TaskManager taskManager = new TaskManager(File))
             {
                 if (taskManager.ShowDialog() == DialogResult.OK)
                 {
                     RefreshActionLogDataGridViewDataSource();
                 }
+            }
+        }
+       
+
+        private void ActionLogDataGridView_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+            {
+                ActionLogDataGridView.CurrentCell = ActionLogDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                Task_Actions.fileTask = _fileTaskRepository.GetById(Convert.ToInt32(ActionLogDataGridView.Rows[e.RowIndex].Cells[0].Value));
             }
         }
     }

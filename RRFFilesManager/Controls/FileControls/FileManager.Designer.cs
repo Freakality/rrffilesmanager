@@ -3368,6 +3368,7 @@
             this.ActionLogDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ActionLogDataGridView.Size = new System.Drawing.Size(1127, 241);
             this.ActionLogDataGridView.TabIndex = 5;
+            this.ActionLogDataGridView.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.ActionLogDataGridView_CellContextMenuStripNeeded);
             // 
             // panel7
             // 
