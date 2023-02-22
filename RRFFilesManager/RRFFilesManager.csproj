@@ -604,6 +604,12 @@
     <Compile Include="Controls\InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SettingsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SettingsScreen.Designer.cs">
+      <DependentUpon>SettingsScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\StaffControls\CreateEditLawyerTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -729,6 +735,12 @@
     </Compile>
     <Compile Include="Controls\StaffControls\UserControls\StaffViewControls.Designer.cs">
       <DependentUpon>StaffViewControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HomePermissions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HomePermissions.Designer.cs">
+      <DependentUpon>HomePermissions.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\TemplateControls\CreateTemplate.cs">
       <SubType>Form</SubType>
@@ -1046,6 +1058,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\StaffControls\UserControls\StaffViewControls.resx">
       <DependentUpon>StaffViewControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HomePermissions.resx">
+      <DependentUpon>HomePermissions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TemplateControls\CreateTemplate.resx">
       <DependentUpon>CreateTemplate.cs</DependentUpon>

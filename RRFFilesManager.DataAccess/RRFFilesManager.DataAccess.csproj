@@ -224,6 +224,7 @@
     <Compile Include="Abstractions\IStandardBenefitRowRepository.cs" />
     <Compile Include="Abstractions\ITaskCategoryRepository.cs" />
     <Compile Include="Abstractions\ITaskRepository.cs" />
+    <Compile Include="Abstractions\IPermissionRepository.cs" />
     <Compile Include="Abstractions\ITaskStateRepository.cs" />
     <Compile Include="Abstractions\ITimelineRepository.cs" />
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
@@ -365,6 +366,10 @@
     <Compile Include="Migrations\20230220191623_FileTaskLawyer.cs" />
     <Compile Include="Migrations\20230220191623_FileTaskLawyer.designer.cs">
       <DependentUpon>20230220191623_FileTaskLawyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230222223440_HomePermissions.cs" />
+    <Compile Include="Migrations\20230222223440_HomePermissions.designer.cs">
+      <DependentUpon>20230222223440_HomePermissions.cs</DependentUpon>
     </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
@@ -580,6 +585,7 @@
     <Compile Include="StandardBenefitRowRepository.cs" />
     <Compile Include="TaskCategoryRepository.cs" />
     <Compile Include="TaskRepository.cs" />
+    <Compile Include="PermissionRepository.cs" />
     <Compile Include="TaskStateRepository.cs" />
     <Compile Include="TimelineRepository.cs" />
     <Compile Include="UploadArchivesSettingsRepository.cs" />

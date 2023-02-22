@@ -28,114 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Button30 = new System.Windows.Forms.Button();
-            this.Button29 = new System.Windows.Forms.Button();
-            this.Button28 = new System.Windows.Forms.Button();
-            this.Button27 = new System.Windows.Forms.Button();
+            this.ContinuingEducationButton = new System.Windows.Forms.Button();
+            this.ProjectedOutcomesButton = new System.Windows.Forms.Button();
+            this.MarketingButton = new System.Windows.Forms.Button();
+            this.HumanResourcesButton = new System.Windows.Forms.Button();
             this.StaffPortalButton = new System.Windows.Forms.Button();
             this.PrescriptionSummariesButton = new System.Windows.Forms.Button();
             this.PredictorCalculatorButton = new System.Windows.Forms.Button();
             this.CommisionCalculatorButton = new System.Windows.Forms.Button();
-            this.Button22 = new System.Windows.Forms.Button();
-            this.Button21 = new System.Windows.Forms.Button();
-            this.Button20 = new System.Windows.Forms.Button();
-            this.Button19 = new System.Windows.Forms.Button();
-            this.Button18 = new System.Windows.Forms.Button();
+            this.FileCloseOutButton = new System.Windows.Forms.Button();
+            this.ClientPortalButton = new System.Windows.Forms.Button();
+            this.ExpertDateBaseButton = new System.Windows.Forms.Button();
+            this.ProtectedAccountsButton = new System.Windows.Forms.Button();
+            this.VariousDocumentUpdatesButton = new System.Windows.Forms.Button();
             this.MedicalSummariesButton = new System.Windows.Forms.Button();
-            this.Button16 = new System.Windows.Forms.Button();
+            this.LimitationDeadlineTrackerButton = new System.Windows.Forms.Button();
             this.MasterTaskButton = new System.Windows.Forms.Button();
             this.ImportDocumentsButton = new System.Windows.Forms.Button();
-            this.Button13 = new System.Windows.Forms.Button();
-            this.Contacts = new System.Windows.Forms.Button();
-            this.Button11 = new System.Windows.Forms.Button();
+            this.DisbursementsButton = new System.Windows.Forms.Button();
+            this.ContactsButton = new System.Windows.Forms.Button();
+            this.ClientNotesButton = new System.Windows.Forms.Button();
             this.AddNewTaskButton = new System.Windows.Forms.Button();
             this.CalendarButton = new System.Windows.Forms.Button();
             this.CreateDocumentsButton = new System.Windows.Forms.Button();
             this.PrivateFootPrintButton = new System.Windows.Forms.Button();
-            this.DocumentTemplate = new System.Windows.Forms.Button();
-            this.Button5 = new System.Windows.Forms.Button();
+            this.DocumentTemplateButton = new System.Windows.Forms.Button();
+            this.PostResolutionDataButton = new System.Windows.Forms.Button();
             this.ReportsButton = new System.Windows.Forms.Button();
-            this.Button3 = new System.Windows.Forms.Button();
+            this.ConflictChecksButton = new System.Windows.Forms.Button();
             this.FileManagerButton = new System.Windows.Forms.Button();
-            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.HomeTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.IntakeButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.UserFullName = new System.Windows.Forms.ToolStripStatusLabel();
             this.UserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.ChangeLogViewButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TableLayoutPanel1.SuspendLayout();
+            this.HomeTableLayoutPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Button30
+            // ContinuingEducationButton
             // 
-            this.Button30.BackColor = System.Drawing.Color.DarkGray;
-            this.Button30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button30.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button30.ForeColor = System.Drawing.Color.Black;
-            this.Button30.Location = new System.Drawing.Point(766, 334);
-            this.Button30.Margin = new System.Windows.Forms.Padding(10);
-            this.Button30.Name = "Button30";
-            this.Button30.Size = new System.Drawing.Size(170, 61);
-            this.Button30.TabIndex = 4;
-            this.Button30.Text = "CONTINUING EDUCATION";
-            this.Button30.UseVisualStyleBackColor = false;
-            this.Button30.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button30.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ContinuingEducationButton.BackColor = System.Drawing.Color.DarkGray;
+            this.ContinuingEducationButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContinuingEducationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ContinuingEducationButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContinuingEducationButton.ForeColor = System.Drawing.Color.Black;
+            this.ContinuingEducationButton.Location = new System.Drawing.Point(766, 334);
+            this.ContinuingEducationButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ContinuingEducationButton.Name = "ContinuingEducationButton";
+            this.ContinuingEducationButton.Size = new System.Drawing.Size(170, 61);
+            this.ContinuingEducationButton.TabIndex = 4;
+            this.ContinuingEducationButton.Text = "CONTINUING EDUCATION";
+            this.ContinuingEducationButton.UseVisualStyleBackColor = false;
+            this.ContinuingEducationButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ContinuingEducationButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button29
+            // ProjectedOutcomesButton
             // 
-            this.Button29.BackColor = System.Drawing.Color.DarkGray;
-            this.Button29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button29.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button29.ForeColor = System.Drawing.Color.Black;
-            this.Button29.Location = new System.Drawing.Point(766, 253);
-            this.Button29.Margin = new System.Windows.Forms.Padding(10);
-            this.Button29.Name = "Button29";
-            this.Button29.Size = new System.Drawing.Size(170, 61);
-            this.Button29.TabIndex = 4;
-            this.Button29.Text = "PROJECTED OUTCOMES";
-            this.Button29.UseVisualStyleBackColor = false;
-            this.Button29.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button29.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ProjectedOutcomesButton.BackColor = System.Drawing.Color.DarkGray;
+            this.ProjectedOutcomesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedOutcomesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectedOutcomesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectedOutcomesButton.ForeColor = System.Drawing.Color.Black;
+            this.ProjectedOutcomesButton.Location = new System.Drawing.Point(766, 253);
+            this.ProjectedOutcomesButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ProjectedOutcomesButton.Name = "ProjectedOutcomesButton";
+            this.ProjectedOutcomesButton.Size = new System.Drawing.Size(170, 61);
+            this.ProjectedOutcomesButton.TabIndex = 4;
+            this.ProjectedOutcomesButton.Text = "PROJECTED OUTCOMES";
+            this.ProjectedOutcomesButton.UseVisualStyleBackColor = false;
+            this.ProjectedOutcomesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ProjectedOutcomesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button28
+            // MarketingButton
             // 
-            this.Button28.BackColor = System.Drawing.Color.DarkGray;
-            this.Button28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button28.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button28.ForeColor = System.Drawing.Color.Black;
-            this.Button28.Location = new System.Drawing.Point(766, 172);
-            this.Button28.Margin = new System.Windows.Forms.Padding(10);
-            this.Button28.Name = "Button28";
-            this.Button28.Size = new System.Drawing.Size(170, 61);
-            this.Button28.TabIndex = 4;
-            this.Button28.Text = "MARKETING";
-            this.Button28.UseVisualStyleBackColor = false;
-            this.Button28.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button28.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.MarketingButton.BackColor = System.Drawing.Color.DarkGray;
+            this.MarketingButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MarketingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MarketingButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarketingButton.ForeColor = System.Drawing.Color.Black;
+            this.MarketingButton.Location = new System.Drawing.Point(766, 172);
+            this.MarketingButton.Margin = new System.Windows.Forms.Padding(10);
+            this.MarketingButton.Name = "MarketingButton";
+            this.MarketingButton.Size = new System.Drawing.Size(170, 61);
+            this.MarketingButton.TabIndex = 4;
+            this.MarketingButton.Text = "MARKETING";
+            this.MarketingButton.UseVisualStyleBackColor = false;
+            this.MarketingButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.MarketingButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button27
+            // HumanResourcesButton
             // 
-            this.Button27.BackColor = System.Drawing.Color.DarkGray;
-            this.Button27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button27.ForeColor = System.Drawing.Color.Black;
-            this.Button27.Location = new System.Drawing.Point(766, 91);
-            this.Button27.Margin = new System.Windows.Forms.Padding(10);
-            this.Button27.Name = "Button27";
-            this.Button27.Size = new System.Drawing.Size(170, 61);
-            this.Button27.TabIndex = 4;
-            this.Button27.Text = "HUMAN RESOURCES";
-            this.Button27.UseVisualStyleBackColor = false;
-            this.Button27.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button27.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.HumanResourcesButton.BackColor = System.Drawing.Color.DarkGray;
+            this.HumanResourcesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HumanResourcesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HumanResourcesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HumanResourcesButton.ForeColor = System.Drawing.Color.Black;
+            this.HumanResourcesButton.Location = new System.Drawing.Point(766, 91);
+            this.HumanResourcesButton.Margin = new System.Windows.Forms.Padding(10);
+            this.HumanResourcesButton.Name = "HumanResourcesButton";
+            this.HumanResourcesButton.Size = new System.Drawing.Size(170, 61);
+            this.HumanResourcesButton.TabIndex = 4;
+            this.HumanResourcesButton.Text = "HUMAN RESOURCES";
+            this.HumanResourcesButton.UseVisualStyleBackColor = false;
+            this.HumanResourcesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.HumanResourcesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // StaffPortalButton
             // 
@@ -207,90 +207,90 @@
             this.CommisionCalculatorButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.CommisionCalculatorButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button22
+            // FileCloseOutButton
             // 
-            this.Button22.BackColor = System.Drawing.Color.Gray;
-            this.Button22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button22.ForeColor = System.Drawing.Color.White;
-            this.Button22.Location = new System.Drawing.Point(577, 91);
-            this.Button22.Margin = new System.Windows.Forms.Padding(10);
-            this.Button22.Name = "Button22";
-            this.Button22.Size = new System.Drawing.Size(169, 61);
-            this.Button22.TabIndex = 4;
-            this.Button22.Text = "FILE CLOSE OUT";
-            this.Button22.UseVisualStyleBackColor = false;
-            this.Button22.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button22.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.FileCloseOutButton.BackColor = System.Drawing.Color.Gray;
+            this.FileCloseOutButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileCloseOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FileCloseOutButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileCloseOutButton.ForeColor = System.Drawing.Color.White;
+            this.FileCloseOutButton.Location = new System.Drawing.Point(577, 91);
+            this.FileCloseOutButton.Margin = new System.Windows.Forms.Padding(10);
+            this.FileCloseOutButton.Name = "FileCloseOutButton";
+            this.FileCloseOutButton.Size = new System.Drawing.Size(169, 61);
+            this.FileCloseOutButton.TabIndex = 4;
+            this.FileCloseOutButton.Text = "FILE CLOSE OUT";
+            this.FileCloseOutButton.UseVisualStyleBackColor = false;
+            this.FileCloseOutButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.FileCloseOutButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button21
+            // ClientPortalButton
             // 
-            this.Button21.BackColor = System.Drawing.Color.Gray;
-            this.Button21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button21.ForeColor = System.Drawing.Color.White;
-            this.Button21.Location = new System.Drawing.Point(577, 10);
-            this.Button21.Margin = new System.Windows.Forms.Padding(10);
-            this.Button21.Name = "Button21";
-            this.Button21.Size = new System.Drawing.Size(169, 61);
-            this.Button21.TabIndex = 4;
-            this.Button21.Text = "CLIENT PORTAL";
-            this.Button21.UseVisualStyleBackColor = false;
-            this.Button21.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button21.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ClientPortalButton.BackColor = System.Drawing.Color.Gray;
+            this.ClientPortalButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientPortalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClientPortalButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientPortalButton.ForeColor = System.Drawing.Color.White;
+            this.ClientPortalButton.Location = new System.Drawing.Point(577, 10);
+            this.ClientPortalButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ClientPortalButton.Name = "ClientPortalButton";
+            this.ClientPortalButton.Size = new System.Drawing.Size(169, 61);
+            this.ClientPortalButton.TabIndex = 4;
+            this.ClientPortalButton.Text = "CLIENT PORTAL";
+            this.ClientPortalButton.UseVisualStyleBackColor = false;
+            this.ClientPortalButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ClientPortalButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button20
+            // ExpertDateBaseButton
             // 
-            this.Button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Button20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button20.ForeColor = System.Drawing.Color.White;
-            this.Button20.Location = new System.Drawing.Point(388, 334);
-            this.Button20.Margin = new System.Windows.Forms.Padding(10);
-            this.Button20.Name = "Button20";
-            this.Button20.Size = new System.Drawing.Size(169, 61);
-            this.Button20.TabIndex = 4;
-            this.Button20.Text = "EXPERT DATE BASE";
-            this.Button20.UseVisualStyleBackColor = false;
-            this.Button20.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button20.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ExpertDateBaseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ExpertDateBaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExpertDateBaseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExpertDateBaseButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpertDateBaseButton.ForeColor = System.Drawing.Color.White;
+            this.ExpertDateBaseButton.Location = new System.Drawing.Point(388, 334);
+            this.ExpertDateBaseButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ExpertDateBaseButton.Name = "ExpertDateBaseButton";
+            this.ExpertDateBaseButton.Size = new System.Drawing.Size(169, 61);
+            this.ExpertDateBaseButton.TabIndex = 4;
+            this.ExpertDateBaseButton.Text = "EXPERT DATE BASE";
+            this.ExpertDateBaseButton.UseVisualStyleBackColor = false;
+            this.ExpertDateBaseButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ExpertDateBaseButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button19
+            // ProtectedAccountsButton
             // 
-            this.Button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Button19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button19.ForeColor = System.Drawing.Color.White;
-            this.Button19.Location = new System.Drawing.Point(388, 253);
-            this.Button19.Margin = new System.Windows.Forms.Padding(10);
-            this.Button19.Name = "Button19";
-            this.Button19.Size = new System.Drawing.Size(169, 61);
-            this.Button19.TabIndex = 4;
-            this.Button19.Text = "PROTECTED ACCOUNTS";
-            this.Button19.UseVisualStyleBackColor = false;
-            this.Button19.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button19.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ProtectedAccountsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProtectedAccountsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProtectedAccountsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProtectedAccountsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProtectedAccountsButton.ForeColor = System.Drawing.Color.White;
+            this.ProtectedAccountsButton.Location = new System.Drawing.Point(388, 253);
+            this.ProtectedAccountsButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ProtectedAccountsButton.Name = "ProtectedAccountsButton";
+            this.ProtectedAccountsButton.Size = new System.Drawing.Size(169, 61);
+            this.ProtectedAccountsButton.TabIndex = 4;
+            this.ProtectedAccountsButton.Text = "PROTECTED ACCOUNTS";
+            this.ProtectedAccountsButton.UseVisualStyleBackColor = false;
+            this.ProtectedAccountsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ProtectedAccountsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button18
+            // VariousDocumentUpdatesButton
             // 
-            this.Button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Button18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button18.ForeColor = System.Drawing.Color.White;
-            this.Button18.Location = new System.Drawing.Point(388, 172);
-            this.Button18.Margin = new System.Windows.Forms.Padding(10);
-            this.Button18.Name = "Button18";
-            this.Button18.Size = new System.Drawing.Size(169, 61);
-            this.Button18.TabIndex = 4;
-            this.Button18.Text = "VARIOUS DOCUMENT UPDATES";
-            this.Button18.UseVisualStyleBackColor = false;
-            this.Button18.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button18.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.VariousDocumentUpdatesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.VariousDocumentUpdatesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VariousDocumentUpdatesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VariousDocumentUpdatesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VariousDocumentUpdatesButton.ForeColor = System.Drawing.Color.White;
+            this.VariousDocumentUpdatesButton.Location = new System.Drawing.Point(388, 172);
+            this.VariousDocumentUpdatesButton.Margin = new System.Windows.Forms.Padding(10);
+            this.VariousDocumentUpdatesButton.Name = "VariousDocumentUpdatesButton";
+            this.VariousDocumentUpdatesButton.Size = new System.Drawing.Size(169, 61);
+            this.VariousDocumentUpdatesButton.TabIndex = 4;
+            this.VariousDocumentUpdatesButton.Text = "VARIOUS DOCUMENT UPDATES";
+            this.VariousDocumentUpdatesButton.UseVisualStyleBackColor = false;
+            this.VariousDocumentUpdatesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.VariousDocumentUpdatesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // MedicalSummariesButton
             // 
@@ -310,22 +310,22 @@
             this.MedicalSummariesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.MedicalSummariesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button16
+            // LimitationDeadlineTrackerButton
             // 
-            this.Button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Button16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button16.ForeColor = System.Drawing.Color.White;
-            this.Button16.Location = new System.Drawing.Point(388, 10);
-            this.Button16.Margin = new System.Windows.Forms.Padding(10);
-            this.Button16.Name = "Button16";
-            this.Button16.Size = new System.Drawing.Size(169, 61);
-            this.Button16.TabIndex = 4;
-            this.Button16.Text = "LIMITATION & DEADLINE TRACKER";
-            this.Button16.UseVisualStyleBackColor = false;
-            this.Button16.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.LimitationDeadlineTrackerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LimitationDeadlineTrackerButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LimitationDeadlineTrackerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LimitationDeadlineTrackerButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LimitationDeadlineTrackerButton.ForeColor = System.Drawing.Color.White;
+            this.LimitationDeadlineTrackerButton.Location = new System.Drawing.Point(388, 10);
+            this.LimitationDeadlineTrackerButton.Margin = new System.Windows.Forms.Padding(10);
+            this.LimitationDeadlineTrackerButton.Name = "LimitationDeadlineTrackerButton";
+            this.LimitationDeadlineTrackerButton.Size = new System.Drawing.Size(169, 61);
+            this.LimitationDeadlineTrackerButton.TabIndex = 4;
+            this.LimitationDeadlineTrackerButton.Text = "LIMITATION and DEADLINE TRACKER";
+            this.LimitationDeadlineTrackerButton.UseVisualStyleBackColor = false;
+            this.LimitationDeadlineTrackerButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.LimitationDeadlineTrackerButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // MasterTaskButton
             // 
@@ -363,58 +363,58 @@
             this.ImportDocumentsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ImportDocumentsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button13
+            // DisbursementsButton
             // 
-            this.Button13.BackColor = System.Drawing.Color.Black;
-            this.Button13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button13.ForeColor = System.Drawing.Color.White;
-            this.Button13.Location = new System.Drawing.Point(199, 253);
-            this.Button13.Margin = new System.Windows.Forms.Padding(10);
-            this.Button13.Name = "Button13";
-            this.Button13.Size = new System.Drawing.Size(169, 61);
-            this.Button13.TabIndex = 4;
-            this.Button13.Text = "DISBURSEMENTS";
-            this.Button13.UseVisualStyleBackColor = false;
-            this.Button13.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.DisbursementsButton.BackColor = System.Drawing.Color.Black;
+            this.DisbursementsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DisbursementsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DisbursementsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisbursementsButton.ForeColor = System.Drawing.Color.White;
+            this.DisbursementsButton.Location = new System.Drawing.Point(199, 253);
+            this.DisbursementsButton.Margin = new System.Windows.Forms.Padding(10);
+            this.DisbursementsButton.Name = "DisbursementsButton";
+            this.DisbursementsButton.Size = new System.Drawing.Size(169, 61);
+            this.DisbursementsButton.TabIndex = 4;
+            this.DisbursementsButton.Text = "DISBURSEMENTS";
+            this.DisbursementsButton.UseVisualStyleBackColor = false;
+            this.DisbursementsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.DisbursementsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Contacts
+            // ContactsButton
             // 
-            this.Contacts.BackColor = System.Drawing.Color.Black;
-            this.Contacts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Contacts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contacts.ForeColor = System.Drawing.Color.White;
-            this.Contacts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Contacts.Location = new System.Drawing.Point(199, 172);
-            this.Contacts.Margin = new System.Windows.Forms.Padding(10);
-            this.Contacts.Name = "Contacts";
-            this.Contacts.Size = new System.Drawing.Size(169, 61);
-            this.Contacts.TabIndex = 4;
-            this.Contacts.Text = "CONTACTS";
-            this.Contacts.UseVisualStyleBackColor = false;
-            this.Contacts.Click += new System.EventHandler(this.Contacts_Click);
-            this.Contacts.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Contacts.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ContactsButton.BackColor = System.Drawing.Color.Black;
+            this.ContactsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContactsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ContactsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactsButton.ForeColor = System.Drawing.Color.White;
+            this.ContactsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ContactsButton.Location = new System.Drawing.Point(199, 172);
+            this.ContactsButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ContactsButton.Name = "ContactsButton";
+            this.ContactsButton.Size = new System.Drawing.Size(169, 61);
+            this.ContactsButton.TabIndex = 4;
+            this.ContactsButton.Text = "CONTACTS";
+            this.ContactsButton.UseVisualStyleBackColor = false;
+            this.ContactsButton.Click += new System.EventHandler(this.Contacts_Click);
+            this.ContactsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ContactsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button11
+            // ClientNotesButton
             // 
-            this.Button11.BackColor = System.Drawing.Color.Maroon;
-            this.Button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button11.ForeColor = System.Drawing.Color.White;
-            this.Button11.Location = new System.Drawing.Point(10, 253);
-            this.Button11.Margin = new System.Windows.Forms.Padding(10);
-            this.Button11.Name = "Button11";
-            this.Button11.Size = new System.Drawing.Size(169, 61);
-            this.Button11.TabIndex = 4;
-            this.Button11.Text = "CLIENT NOTES";
-            this.Button11.UseVisualStyleBackColor = false;
-            this.Button11.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ClientNotesButton.BackColor = System.Drawing.Color.Maroon;
+            this.ClientNotesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientNotesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClientNotesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientNotesButton.ForeColor = System.Drawing.Color.White;
+            this.ClientNotesButton.Location = new System.Drawing.Point(10, 253);
+            this.ClientNotesButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ClientNotesButton.Name = "ClientNotesButton";
+            this.ClientNotesButton.Size = new System.Drawing.Size(169, 61);
+            this.ClientNotesButton.TabIndex = 4;
+            this.ClientNotesButton.Text = "CLIENT NOTES";
+            this.ClientNotesButton.UseVisualStyleBackColor = false;
+            this.ClientNotesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ClientNotesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // AddNewTaskButton
             // 
@@ -488,40 +488,40 @@
             this.PrivateFootPrintButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.PrivateFootPrintButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // DocumentTemplate
+            // DocumentTemplateButton
             // 
-            this.DocumentTemplate.BackColor = System.Drawing.Color.Black;
-            this.DocumentTemplate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DocumentTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DocumentTemplate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocumentTemplate.ForeColor = System.Drawing.Color.White;
-            this.DocumentTemplate.Location = new System.Drawing.Point(199, 415);
-            this.DocumentTemplate.Margin = new System.Windows.Forms.Padding(10);
-            this.DocumentTemplate.Name = "DocumentTemplate";
-            this.DocumentTemplate.Size = new System.Drawing.Size(169, 65);
-            this.DocumentTemplate.TabIndex = 6;
-            this.DocumentTemplate.Text = "DOCUMENT TEMPLATES";
-            this.DocumentTemplate.UseVisualStyleBackColor = false;
-            this.DocumentTemplate.Click += new System.EventHandler(this.CreateTemplates_Click);
-            this.DocumentTemplate.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.DocumentTemplate.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.DocumentTemplateButton.BackColor = System.Drawing.Color.Black;
+            this.DocumentTemplateButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentTemplateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DocumentTemplateButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentTemplateButton.ForeColor = System.Drawing.Color.White;
+            this.DocumentTemplateButton.Location = new System.Drawing.Point(199, 415);
+            this.DocumentTemplateButton.Margin = new System.Windows.Forms.Padding(10);
+            this.DocumentTemplateButton.Name = "DocumentTemplateButton";
+            this.DocumentTemplateButton.Size = new System.Drawing.Size(169, 65);
+            this.DocumentTemplateButton.TabIndex = 6;
+            this.DocumentTemplateButton.Text = "DOCUMENT TEMPLATES";
+            this.DocumentTemplateButton.UseVisualStyleBackColor = false;
+            this.DocumentTemplateButton.Click += new System.EventHandler(this.CreateTemplates_Click);
+            this.DocumentTemplateButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.DocumentTemplateButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button5
+            // PostResolutionDataButton
             // 
-            this.Button5.BackColor = System.Drawing.Color.Gray;
-            this.Button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button5.ForeColor = System.Drawing.Color.White;
-            this.Button5.Location = new System.Drawing.Point(577, 415);
-            this.Button5.Margin = new System.Windows.Forms.Padding(10);
-            this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(169, 65);
-            this.Button5.TabIndex = 4;
-            this.Button5.Text = "POST RESOLUTION DATA";
-            this.Button5.UseVisualStyleBackColor = false;
-            this.Button5.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.PostResolutionDataButton.BackColor = System.Drawing.Color.Gray;
+            this.PostResolutionDataButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PostResolutionDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PostResolutionDataButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PostResolutionDataButton.ForeColor = System.Drawing.Color.White;
+            this.PostResolutionDataButton.Location = new System.Drawing.Point(577, 415);
+            this.PostResolutionDataButton.Margin = new System.Windows.Forms.Padding(10);
+            this.PostResolutionDataButton.Name = "PostResolutionDataButton";
+            this.PostResolutionDataButton.Size = new System.Drawing.Size(169, 65);
+            this.PostResolutionDataButton.TabIndex = 4;
+            this.PostResolutionDataButton.Text = "POST RESOLUTION DATA";
+            this.PostResolutionDataButton.UseVisualStyleBackColor = false;
+            this.PostResolutionDataButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.PostResolutionDataButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // ReportsButton
             // 
@@ -541,23 +541,23 @@
             this.ReportsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ReportsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // Button3
+            // ConflictChecksButton
             // 
-            this.Button3.BackColor = System.Drawing.Color.Maroon;
-            this.Button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button3.ForeColor = System.Drawing.Color.White;
-            this.Button3.Location = new System.Drawing.Point(10, 10);
-            this.Button3.Margin = new System.Windows.Forms.Padding(10);
-            this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(169, 61);
-            this.Button3.TabIndex = 3;
-            this.Button3.Text = "CONFLICT CHECKS";
-            this.Button3.UseVisualStyleBackColor = false;
-            this.Button3.Click += new System.EventHandler(this.ConflictChecks_Click);
-            this.Button3.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
-            this.Button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
+            this.ConflictChecksButton.BackColor = System.Drawing.Color.Maroon;
+            this.ConflictChecksButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConflictChecksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConflictChecksButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConflictChecksButton.ForeColor = System.Drawing.Color.White;
+            this.ConflictChecksButton.Location = new System.Drawing.Point(10, 10);
+            this.ConflictChecksButton.Margin = new System.Windows.Forms.Padding(10);
+            this.ConflictChecksButton.Name = "ConflictChecksButton";
+            this.ConflictChecksButton.Size = new System.Drawing.Size(169, 61);
+            this.ConflictChecksButton.TabIndex = 3;
+            this.ConflictChecksButton.Text = "CONFLICT CHECKS";
+            this.ConflictChecksButton.UseVisualStyleBackColor = false;
+            this.ConflictChecksButton.Click += new System.EventHandler(this.ConflictChecks_Click);
+            this.ConflictChecksButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ConflictChecksButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // FileManagerButton
             // 
@@ -577,60 +577,60 @@
             this.FileManagerButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.FileManagerButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
-            // TableLayoutPanel1
+            // HomeTableLayoutPanel
             // 
-            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.HomeTableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableLayoutPanel1.ColumnCount = 5;
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanel1.Controls.Add(this.Button30, 4, 4);
-            this.TableLayoutPanel1.Controls.Add(this.Button29, 4, 3);
-            this.TableLayoutPanel1.Controls.Add(this.Button28, 4, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Button27, 4, 1);
-            this.TableLayoutPanel1.Controls.Add(this.StaffPortalButton, 4, 0);
-            this.TableLayoutPanel1.Controls.Add(this.PrescriptionSummariesButton, 3, 4);
-            this.TableLayoutPanel1.Controls.Add(this.PredictorCalculatorButton, 3, 3);
-            this.TableLayoutPanel1.Controls.Add(this.CommisionCalculatorButton, 3, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Button22, 3, 1);
-            this.TableLayoutPanel1.Controls.Add(this.Button21, 3, 0);
-            this.TableLayoutPanel1.Controls.Add(this.Button20, 2, 4);
-            this.TableLayoutPanel1.Controls.Add(this.Button19, 2, 3);
-            this.TableLayoutPanel1.Controls.Add(this.Button18, 2, 2);
-            this.TableLayoutPanel1.Controls.Add(this.MedicalSummariesButton, 2, 1);
-            this.TableLayoutPanel1.Controls.Add(this.Button16, 2, 0);
-            this.TableLayoutPanel1.Controls.Add(this.MasterTaskButton, 1, 4);
-            this.TableLayoutPanel1.Controls.Add(this.ImportDocumentsButton, 0, 4);
-            this.TableLayoutPanel1.Controls.Add(this.Button13, 1, 3);
-            this.TableLayoutPanel1.Controls.Add(this.Contacts, 1, 2);
-            this.TableLayoutPanel1.Controls.Add(this.Button11, 0, 3);
-            this.TableLayoutPanel1.Controls.Add(this.AddNewTaskButton, 1, 1);
-            this.TableLayoutPanel1.Controls.Add(this.CalendarButton, 1, 0);
-            this.TableLayoutPanel1.Controls.Add(this.CreateDocumentsButton, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.PrivateFootPrintButton, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.DocumentTemplate, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.Button5, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.ReportsButton, 0, 5);
-            this.TableLayoutPanel1.Controls.Add(this.Button3, 0, 0);
-            this.TableLayoutPanel1.Controls.Add(this.IntakeButton, 0, 1);
-            this.TableLayoutPanel1.Controls.Add(this.FileManagerButton, 0, 2);
-            this.TableLayoutPanel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableLayoutPanel1.Location = new System.Drawing.Point(12, 225);
-            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
-            this.TableLayoutPanel1.RowCount = 6;
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableLayoutPanel1.Size = new System.Drawing.Size(946, 490);
-            this.TableLayoutPanel1.TabIndex = 5;
+            this.HomeTableLayoutPanel.ColumnCount = 5;
+            this.HomeTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HomeTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HomeTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HomeTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HomeTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HomeTableLayoutPanel.Controls.Add(this.ContinuingEducationButton, 4, 4);
+            this.HomeTableLayoutPanel.Controls.Add(this.ProjectedOutcomesButton, 4, 3);
+            this.HomeTableLayoutPanel.Controls.Add(this.MarketingButton, 4, 2);
+            this.HomeTableLayoutPanel.Controls.Add(this.HumanResourcesButton, 4, 1);
+            this.HomeTableLayoutPanel.Controls.Add(this.StaffPortalButton, 4, 0);
+            this.HomeTableLayoutPanel.Controls.Add(this.PrescriptionSummariesButton, 3, 4);
+            this.HomeTableLayoutPanel.Controls.Add(this.PredictorCalculatorButton, 3, 3);
+            this.HomeTableLayoutPanel.Controls.Add(this.CommisionCalculatorButton, 3, 2);
+            this.HomeTableLayoutPanel.Controls.Add(this.FileCloseOutButton, 3, 1);
+            this.HomeTableLayoutPanel.Controls.Add(this.ClientPortalButton, 3, 0);
+            this.HomeTableLayoutPanel.Controls.Add(this.ExpertDateBaseButton, 2, 4);
+            this.HomeTableLayoutPanel.Controls.Add(this.ProtectedAccountsButton, 2, 3);
+            this.HomeTableLayoutPanel.Controls.Add(this.VariousDocumentUpdatesButton, 2, 2);
+            this.HomeTableLayoutPanel.Controls.Add(this.MedicalSummariesButton, 2, 1);
+            this.HomeTableLayoutPanel.Controls.Add(this.LimitationDeadlineTrackerButton, 2, 0);
+            this.HomeTableLayoutPanel.Controls.Add(this.MasterTaskButton, 1, 4);
+            this.HomeTableLayoutPanel.Controls.Add(this.ImportDocumentsButton, 0, 4);
+            this.HomeTableLayoutPanel.Controls.Add(this.DisbursementsButton, 1, 3);
+            this.HomeTableLayoutPanel.Controls.Add(this.ContactsButton, 1, 2);
+            this.HomeTableLayoutPanel.Controls.Add(this.ClientNotesButton, 0, 3);
+            this.HomeTableLayoutPanel.Controls.Add(this.AddNewTaskButton, 1, 1);
+            this.HomeTableLayoutPanel.Controls.Add(this.CalendarButton, 1, 0);
+            this.HomeTableLayoutPanel.Controls.Add(this.CreateDocumentsButton, 0, 5);
+            this.HomeTableLayoutPanel.Controls.Add(this.PrivateFootPrintButton, 0, 5);
+            this.HomeTableLayoutPanel.Controls.Add(this.DocumentTemplateButton, 0, 5);
+            this.HomeTableLayoutPanel.Controls.Add(this.PostResolutionDataButton, 0, 5);
+            this.HomeTableLayoutPanel.Controls.Add(this.ReportsButton, 0, 5);
+            this.HomeTableLayoutPanel.Controls.Add(this.ConflictChecksButton, 0, 0);
+            this.HomeTableLayoutPanel.Controls.Add(this.IntakeButton, 0, 1);
+            this.HomeTableLayoutPanel.Controls.Add(this.FileManagerButton, 0, 2);
+            this.HomeTableLayoutPanel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeTableLayoutPanel.Location = new System.Drawing.Point(12, 225);
+            this.HomeTableLayoutPanel.Name = "HomeTableLayoutPanel";
+            this.HomeTableLayoutPanel.RowCount = 6;
+            this.HomeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.HomeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.HomeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.HomeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.HomeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.HomeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.HomeTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.HomeTableLayoutPanel.Size = new System.Drawing.Size(946, 490);
+            this.HomeTableLayoutPanel.TabIndex = 5;
             // 
             // IntakeButton
             // 
@@ -709,11 +709,11 @@
             this.Controls.Add(this.ChangeLogViewButton);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.PictureBox1);
-            this.Controls.Add(this.TableLayoutPanel1);
+            this.Controls.Add(this.HomeTableLayoutPanel);
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
-            this.TableLayoutPanel1.ResumeLayout(false);
+            this.HomeTableLayoutPanel.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
@@ -724,37 +724,37 @@
 
         #endregion
 
-        internal System.Windows.Forms.Button Button30;
-        internal System.Windows.Forms.Button Button29;
-        internal System.Windows.Forms.Button Button28;
-        internal System.Windows.Forms.Button Button27;
+        internal System.Windows.Forms.Button ContinuingEducationButton;
+        internal System.Windows.Forms.Button ProjectedOutcomesButton;
+        internal System.Windows.Forms.Button MarketingButton;
+        internal System.Windows.Forms.Button HumanResourcesButton;
         internal System.Windows.Forms.Button StaffPortalButton;
         internal System.Windows.Forms.Button PrescriptionSummariesButton;
         internal System.Windows.Forms.Button PredictorCalculatorButton;
         internal System.Windows.Forms.Button CommisionCalculatorButton;
-        internal System.Windows.Forms.Button Button22;
-        internal System.Windows.Forms.Button Button21;
-        internal System.Windows.Forms.Button Button20;
-        internal System.Windows.Forms.Button Button19;
-        internal System.Windows.Forms.Button Button18;
+        internal System.Windows.Forms.Button FileCloseOutButton;
+        internal System.Windows.Forms.Button ClientPortalButton;
+        internal System.Windows.Forms.Button ExpertDateBaseButton;
+        internal System.Windows.Forms.Button ProtectedAccountsButton;
+        internal System.Windows.Forms.Button VariousDocumentUpdatesButton;
         internal System.Windows.Forms.Button MedicalSummariesButton;
-        internal System.Windows.Forms.Button Button16;
+        internal System.Windows.Forms.Button LimitationDeadlineTrackerButton;
         internal System.Windows.Forms.Button MasterTaskButton;
         internal System.Windows.Forms.Button ImportDocumentsButton;
-        internal System.Windows.Forms.Button Button13;
-        internal System.Windows.Forms.Button Contacts;
-        internal System.Windows.Forms.Button Button11;
+        internal System.Windows.Forms.Button DisbursementsButton;
+        internal System.Windows.Forms.Button ContactsButton;
+        internal System.Windows.Forms.Button ClientNotesButton;
         internal System.Windows.Forms.Button AddNewTaskButton;
         internal System.Windows.Forms.Button CalendarButton;
         internal System.Windows.Forms.Button CreateDocumentsButton;
         internal System.Windows.Forms.Button PrivateFootPrintButton;
-        internal System.Windows.Forms.Button DocumentTemplate;
-        internal System.Windows.Forms.Button Button5;
+        internal System.Windows.Forms.Button DocumentTemplateButton;
+        internal System.Windows.Forms.Button PostResolutionDataButton;
         internal System.Windows.Forms.Button ReportsButton;
-        internal System.Windows.Forms.Button Button3;
+        internal System.Windows.Forms.Button ConflictChecksButton;
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Button FileManagerButton;
-        internal System.Windows.Forms.TableLayoutPanel TableLayoutPanel1;
+        internal System.Windows.Forms.TableLayoutPanel HomeTableLayoutPanel;
         internal System.Windows.Forms.Button IntakeButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel UserFullName;

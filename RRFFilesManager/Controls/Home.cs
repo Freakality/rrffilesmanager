@@ -27,11 +27,15 @@ using RRFFilesManager.Controls.FileControls;
 using RRFFilesManager.Controls.UserManagerControls;
 using RRFFilesManager.Controls.ReportsControls;
 using RRFFilesManager.Controls.StaffControls;
+using RRFFilesManager.Controls.FileControls.UserControls;
+using RRFFilesManager.DataAccess.Abstractions;
 
 namespace RRFFilesManager
 {
     public partial class Home : Form
     {
+        private readonly IPermissionRepository _permissionRepository;
+        private int clearance;
         public Home()
         {
             /* try
@@ -57,9 +61,23 @@ namespace RRFFilesManager
                  return;
              }*/
             User = Program.GetUser();
+            _permissionRepository = Program.GetService<IPermissionRepository>();
             InitializeComponent();
             UserFullName.Text = User?.Description;
             UserName.Text = User?.UserName;
+            TableLayoutControlCollection controls = HomeTableLayoutPanel.Controls;
+
+            for (int i = 0; i < controls.Count; i++)
+            {
+                if (controls[i] is Button)
+                {
+                    AddPermissionStrip(controls[i]);
+                    /*HomePermissions homePermissions = new HomePermissions(controls[i]);
+                    ContextMenuStrip contextMenuStrip = homePermissions.HomePermissionsContextMenuStrip;
+                    controls[i].ContextMenuStrip = contextMenuStrip;*/
+                }
+            }
+            AddPermissionStrip(ChangeLogViewButton);
             //UserFullName.Text = UserManager.GetUserFullName();
             //UserName.Text = UserManager.GetFullUserName();
         }
@@ -87,61 +105,116 @@ namespace RRFFilesManager
         {
             SplashScreen.Instance.Hide();
         }
-
+        public void AddPermissionStrip(Control control)
+        {
+            HomePermissions homePermissions = new HomePermissions(control);
+            ContextMenuStrip contextMenuStrip = homePermissions.HomePermissionsContextMenuStrip;
+            control.ContextMenuStrip = contextMenuStrip;
+        }
         private void IntakeButton_Click(object sender, EventArgs e)
         {
-            IntakeForm = Utils.Utils.OpenForm<IntakeForm.IntakeForm>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                IntakeForm = Utils.Utils.OpenForm<IntakeForm.IntakeForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void ConflictChecks_Click(object sender, EventArgs e)
         {
-            CNSignOn.StartProcess();
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                CNSignOn.StartProcess();
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void FileManagerButton_Click(object sender, EventArgs e)
         {
-            FileManager = Utils.Utils.OpenForm<FileManager>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                FileManager = Utils.Utils.OpenForm<FileManager>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void ClientInfoButton_Click(object sender, EventArgs e)
         {
-            ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void Contacts_Click(object sender, EventArgs e)
         {
-            ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void CreateDocumentsButton_Click(object sender, EventArgs e)
         {
-            CreateDocument = Utils.Utils.OpenForm<CreateDocument>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                CreateDocument = Utils.Utils.OpenForm<CreateDocument>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void CreateTemplates_Click(object sender, EventArgs e)
         {
-            CreateTemplate = Utils.Utils.OpenForm<CreateTemplate>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                CreateTemplate = Utils.Utils.OpenForm<CreateTemplate>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void CalendarButton_Click(object sender, EventArgs e)
         {
-            try
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
             {
-                var oApp = new Microsoft.Office.Interop.Outlook.Application();
-                var ns = oApp.GetNamespace("MAPI");
-                ns.Logon();
-                var inbox = ns.GetDefaultFolder(OlDefaultFolders.olFolderCalendar);
-                if (oApp.Explorers.Count > 0)
+                try
                 {
-                    Explorer expl = oApp.Explorers[1];
-                    expl.CurrentFolder = inbox;
-                }
+                    var oApp = new Microsoft.Office.Interop.Outlook.Application();
+                    var ns = oApp.GetNamespace("MAPI");
+                    ns.Logon();
+                    var inbox = ns.GetDefaultFolder(OlDefaultFolders.olFolderCalendar);
+                    if (oApp.Explorers.Count > 0)
+                    {
+                        Explorer expl = oApp.Explorers[1];
+                        expl.CurrentFolder = inbox;
+                    }
 
-                inbox.Display();
+                    inbox.Display();
+                }
+                catch { }
             }
-            catch { }
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
             
         }
         private void PrivateFootPrintButton_Click(object sender, EventArgs e)
         {
             
         }
+        private void GetClearance(Button b)
+        {
+            Permission p = _permissionRepository.GetByDescription(b.Name);
+            if (p != null)
+            {
+                clearance = p.MinClearance;
+            }
+            else
+            {
+                clearance = 10;
+            }
+        }
         private void ImportDocumentsButton_Click(object sender, EventArgs e)
         {
-            Utils.Utils.OpenForm<UploadArchivesForm>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                Utils.Utils.OpenForm<UploadArchivesForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
         private void CommisionCalculatorButton_Click(object sender, EventArgs e)
         {
@@ -154,7 +227,8 @@ namespace RRFFilesManager
             {
                 MessageBox.Show("Not Authorized");
             }*/
-            if (User.ClearanceLevel == 0 || User.ClearanceLevel == 99)
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance|| User.ClearanceLevel == 99)
                 Utils.Utils.OpenForm<CommissionCalculatorForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
@@ -163,37 +237,62 @@ namespace RRFFilesManager
 
         private void PrescriptionSummariesButton_Click(object sender, EventArgs e)
         {
-            Utils.Utils.OpenForm<PrescriptionSummariesForm>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                Utils.Utils.OpenForm<PrescriptionSummariesForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
         private void MedicalSummariesButton_Click(object sender, EventArgs e)
         {
-            Utils.Utils.OpenForm<MedicalSummariesForm>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                Utils.Utils.OpenForm<MedicalSummariesForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
         private void PredictorCalculatorButton_Click(object sender, EventArgs e)
         {
-            Utils.Utils.OpenForm<PredictorCalculatorForm>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                Utils.Utils.OpenForm<PredictorCalculatorForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
         private void ReportsButton_Click(object sender, EventArgs e)
         {
-            ReportsForm = Utils.Utils.OpenForm<ReportsForm>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                ReportsForm = Utils.Utils.OpenForm<ReportsForm>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
         private void AddNewTaskButton_Click(object sender, EventArgs e)
         {
-            AddTaskManager = Utils.Utils.OpenForm<AddTaskManager>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                AddTaskManager = Utils.Utils.OpenForm<AddTaskManager>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
         private void MasterTaskButton_Click(object sender, EventArgs e)
         {
-            MasterTaskManager = Utils.Utils.OpenForm<MasterTaskManager>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                MasterTaskManager = Utils.Utils.OpenForm<MasterTaskManager>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
         private void ChangeLogViewButton_Click(object sender, EventArgs e)
         {
-            if (User.ClearanceLevel == 0 || User.ClearanceLevel == 99)
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
                 ChangeLogView = Utils.Utils.OpenForm<ChangeLogView>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
@@ -209,7 +308,11 @@ namespace RRFFilesManager
 
         private void StaffPortalButton_Click(object sender, EventArgs e)
         {
-            StaffPortal = Utils.Utils.OpenForm<StaffPortal>(this);
+            GetClearance(sender as Button);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+                StaffPortal = Utils.Utils.OpenForm<StaffPortal>(this);
+            else
+                MessageBox.Show("User does not have enough permissions to access this screen.");
         }
 
         private void ButtonMouseMove(object sender, MouseEventArgs e)

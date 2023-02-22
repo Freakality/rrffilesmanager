@@ -3749,7 +3749,7 @@
             this.TimelineSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TimelineSaveBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimelineSaveBtn.ForeColor = System.Drawing.Color.White;
-            this.TimelineSaveBtn.Location = new System.Drawing.Point(922, 877);
+            this.TimelineSaveBtn.Location = new System.Drawing.Point(922, 873);
             this.TimelineSaveBtn.Name = "TimelineSaveBtn";
             this.TimelineSaveBtn.Size = new System.Drawing.Size(175, 37);
             this.TimelineSaveBtn.TabIndex = 167;
@@ -5286,7 +5286,7 @@
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(3729, 945);
+            this.Btn_Save.Location = new System.Drawing.Point(3951, 980);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -6189,7 +6189,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1248, 510);
+            this.btnSave.Location = new System.Drawing.Point(1248, 514);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;

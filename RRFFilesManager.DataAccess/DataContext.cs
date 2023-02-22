@@ -58,6 +58,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<ClientNote> ClientNotes { get; set; }
         public DbSet<FileStatus> FileStatus { get; set; }
         public DbSet<LATData> LATDatas { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
         public Lawyer User { get; set; }
 
 
@@ -247,6 +248,9 @@ namespace RRFFilesManager.DataAccess
                     case "FileReview":
                         value = FileReviews.Find(n).ToString();
                         break;
+                    case "FileStatus":
+                        value = FileStatus.Find(n).ToString();
+                        break;
                     case "FileTask":
                         value = FileTasks.Find(n).ToString();
                         break;
@@ -283,6 +287,9 @@ namespace RRFFilesManager.DataAccess
                     case "OutOfPocketHealthCareExp":
                         value = OutOfPocketHealthCareExp.Find(n).ToString();
                         break;
+                    case "Permission":
+                        value = Permissions.Find(n).ToString();
+                        break;
                     case "Pharmacy":
                         value = Pharmacies.Find(n).ToString();
                         break;
@@ -309,9 +316,6 @@ namespace RRFFilesManager.DataAccess
                         break;
                     case "UploadArchiveSettings":
                         value = UploadArchivesSettings.Find(n).ToString();
-                        break;
-                    case "ClientNotes":
-                        value = ClientNotes.Find(n).ToString();
                         break;
 
                 }
