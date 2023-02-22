@@ -76,10 +76,10 @@
             this.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button30.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button30.ForeColor = System.Drawing.Color.Black;
-            this.Button30.Location = new System.Drawing.Point(766, 338);
+            this.Button30.Location = new System.Drawing.Point(766, 334);
             this.Button30.Margin = new System.Windows.Forms.Padding(10);
             this.Button30.Name = "Button30";
-            this.Button30.Size = new System.Drawing.Size(170, 62);
+            this.Button30.Size = new System.Drawing.Size(170, 61);
             this.Button30.TabIndex = 4;
             this.Button30.Text = "CONTINUING EDUCATION";
             this.Button30.UseVisualStyleBackColor = false;
@@ -93,10 +93,10 @@
             this.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button29.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button29.ForeColor = System.Drawing.Color.Black;
-            this.Button29.Location = new System.Drawing.Point(766, 256);
+            this.Button29.Location = new System.Drawing.Point(766, 253);
             this.Button29.Margin = new System.Windows.Forms.Padding(10);
             this.Button29.Name = "Button29";
-            this.Button29.Size = new System.Drawing.Size(170, 62);
+            this.Button29.Size = new System.Drawing.Size(170, 61);
             this.Button29.TabIndex = 4;
             this.Button29.Text = "PROJECTED OUTCOMES";
             this.Button29.UseVisualStyleBackColor = false;
@@ -110,10 +110,10 @@
             this.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button28.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button28.ForeColor = System.Drawing.Color.Black;
-            this.Button28.Location = new System.Drawing.Point(766, 174);
+            this.Button28.Location = new System.Drawing.Point(766, 172);
             this.Button28.Margin = new System.Windows.Forms.Padding(10);
             this.Button28.Name = "Button28";
-            this.Button28.Size = new System.Drawing.Size(170, 62);
+            this.Button28.Size = new System.Drawing.Size(170, 61);
             this.Button28.TabIndex = 4;
             this.Button28.Text = "MARKETING";
             this.Button28.UseVisualStyleBackColor = false;
@@ -127,10 +127,10 @@
             this.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button27.ForeColor = System.Drawing.Color.Black;
-            this.Button27.Location = new System.Drawing.Point(766, 92);
+            this.Button27.Location = new System.Drawing.Point(766, 91);
             this.Button27.Margin = new System.Windows.Forms.Padding(10);
             this.Button27.Name = "Button27";
-            this.Button27.Size = new System.Drawing.Size(170, 62);
+            this.Button27.Size = new System.Drawing.Size(170, 61);
             this.Button27.TabIndex = 4;
             this.Button27.Text = "HUMAN RESOURCES";
             this.Button27.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             this.StaffPortalButton.Location = new System.Drawing.Point(766, 10);
             this.StaffPortalButton.Margin = new System.Windows.Forms.Padding(10);
             this.StaffPortalButton.Name = "StaffPortalButton";
-            this.StaffPortalButton.Size = new System.Drawing.Size(170, 62);
+            this.StaffPortalButton.Size = new System.Drawing.Size(170, 61);
             this.StaffPortalButton.TabIndex = 4;
             this.StaffPortalButton.Text = "STAFF PORTAL";
             this.StaffPortalButton.UseVisualStyleBackColor = false;
@@ -160,10 +160,10 @@
             this.PrescriptionSummariesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrescriptionSummariesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrescriptionSummariesButton.ForeColor = System.Drawing.Color.White;
-            this.PrescriptionSummariesButton.Location = new System.Drawing.Point(577, 338);
+            this.PrescriptionSummariesButton.Location = new System.Drawing.Point(577, 334);
             this.PrescriptionSummariesButton.Margin = new System.Windows.Forms.Padding(10);
             this.PrescriptionSummariesButton.Name = "PrescriptionSummariesButton";
-            this.PrescriptionSummariesButton.Size = new System.Drawing.Size(169, 62);
+            this.PrescriptionSummariesButton.Size = new System.Drawing.Size(169, 61);
             this.PrescriptionSummariesButton.TabIndex = 4;
             this.PrescriptionSummariesButton.Text = "PRESCRIPTION SUMMARIES";
             this.PrescriptionSummariesButton.UseVisualStyleBackColor = false;
@@ -178,10 +178,10 @@
             this.PredictorCalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredictorCalculatorButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PredictorCalculatorButton.ForeColor = System.Drawing.Color.White;
-            this.PredictorCalculatorButton.Location = new System.Drawing.Point(577, 256);
+            this.PredictorCalculatorButton.Location = new System.Drawing.Point(577, 253);
             this.PredictorCalculatorButton.Margin = new System.Windows.Forms.Padding(10);
             this.PredictorCalculatorButton.Name = "PredictorCalculatorButton";
-            this.PredictorCalculatorButton.Size = new System.Drawing.Size(169, 62);
+            this.PredictorCalculatorButton.Size = new System.Drawing.Size(169, 61);
             this.PredictorCalculatorButton.TabIndex = 4;
             this.PredictorCalculatorButton.Text = "PREDICTOR CALCULATOR";
             this.PredictorCalculatorButton.UseVisualStyleBackColor = false;
@@ -196,10 +196,10 @@
             this.CommisionCalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CommisionCalculatorButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommisionCalculatorButton.ForeColor = System.Drawing.Color.White;
-            this.CommisionCalculatorButton.Location = new System.Drawing.Point(577, 174);
+            this.CommisionCalculatorButton.Location = new System.Drawing.Point(577, 172);
             this.CommisionCalculatorButton.Margin = new System.Windows.Forms.Padding(10);
             this.CommisionCalculatorButton.Name = "CommisionCalculatorButton";
-            this.CommisionCalculatorButton.Size = new System.Drawing.Size(169, 62);
+            this.CommisionCalculatorButton.Size = new System.Drawing.Size(169, 61);
             this.CommisionCalculatorButton.TabIndex = 4;
             this.CommisionCalculatorButton.Text = "COMMISION CALCULATOR";
             this.CommisionCalculatorButton.UseVisualStyleBackColor = false;
@@ -214,10 +214,10 @@
             this.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button22.ForeColor = System.Drawing.Color.White;
-            this.Button22.Location = new System.Drawing.Point(577, 92);
+            this.Button22.Location = new System.Drawing.Point(577, 91);
             this.Button22.Margin = new System.Windows.Forms.Padding(10);
             this.Button22.Name = "Button22";
-            this.Button22.Size = new System.Drawing.Size(169, 62);
+            this.Button22.Size = new System.Drawing.Size(169, 61);
             this.Button22.TabIndex = 4;
             this.Button22.Text = "FILE CLOSE OUT";
             this.Button22.UseVisualStyleBackColor = false;
@@ -234,7 +234,7 @@
             this.Button21.Location = new System.Drawing.Point(577, 10);
             this.Button21.Margin = new System.Windows.Forms.Padding(10);
             this.Button21.Name = "Button21";
-            this.Button21.Size = new System.Drawing.Size(169, 62);
+            this.Button21.Size = new System.Drawing.Size(169, 61);
             this.Button21.TabIndex = 4;
             this.Button21.Text = "CLIENT PORTAL";
             this.Button21.UseVisualStyleBackColor = false;
@@ -248,10 +248,10 @@
             this.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button20.ForeColor = System.Drawing.Color.White;
-            this.Button20.Location = new System.Drawing.Point(388, 338);
+            this.Button20.Location = new System.Drawing.Point(388, 334);
             this.Button20.Margin = new System.Windows.Forms.Padding(10);
             this.Button20.Name = "Button20";
-            this.Button20.Size = new System.Drawing.Size(169, 62);
+            this.Button20.Size = new System.Drawing.Size(169, 61);
             this.Button20.TabIndex = 4;
             this.Button20.Text = "EXPERT DATE BASE";
             this.Button20.UseVisualStyleBackColor = false;
@@ -265,10 +265,10 @@
             this.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button19.ForeColor = System.Drawing.Color.White;
-            this.Button19.Location = new System.Drawing.Point(388, 256);
+            this.Button19.Location = new System.Drawing.Point(388, 253);
             this.Button19.Margin = new System.Windows.Forms.Padding(10);
             this.Button19.Name = "Button19";
-            this.Button19.Size = new System.Drawing.Size(169, 62);
+            this.Button19.Size = new System.Drawing.Size(169, 61);
             this.Button19.TabIndex = 4;
             this.Button19.Text = "PROTECTED ACCOUNTS";
             this.Button19.UseVisualStyleBackColor = false;
@@ -282,10 +282,10 @@
             this.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button18.ForeColor = System.Drawing.Color.White;
-            this.Button18.Location = new System.Drawing.Point(388, 174);
+            this.Button18.Location = new System.Drawing.Point(388, 172);
             this.Button18.Margin = new System.Windows.Forms.Padding(10);
             this.Button18.Name = "Button18";
-            this.Button18.Size = new System.Drawing.Size(169, 62);
+            this.Button18.Size = new System.Drawing.Size(169, 61);
             this.Button18.TabIndex = 4;
             this.Button18.Text = "VARIOUS DOCUMENT UPDATES";
             this.Button18.UseVisualStyleBackColor = false;
@@ -299,10 +299,10 @@
             this.MedicalSummariesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MedicalSummariesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MedicalSummariesButton.ForeColor = System.Drawing.Color.White;
-            this.MedicalSummariesButton.Location = new System.Drawing.Point(388, 92);
+            this.MedicalSummariesButton.Location = new System.Drawing.Point(388, 91);
             this.MedicalSummariesButton.Margin = new System.Windows.Forms.Padding(10);
             this.MedicalSummariesButton.Name = "MedicalSummariesButton";
-            this.MedicalSummariesButton.Size = new System.Drawing.Size(169, 62);
+            this.MedicalSummariesButton.Size = new System.Drawing.Size(169, 61);
             this.MedicalSummariesButton.TabIndex = 4;
             this.MedicalSummariesButton.Text = "MEDICAL SUMMARIES";
             this.MedicalSummariesButton.UseVisualStyleBackColor = false;
@@ -320,7 +320,7 @@
             this.Button16.Location = new System.Drawing.Point(388, 10);
             this.Button16.Margin = new System.Windows.Forms.Padding(10);
             this.Button16.Name = "Button16";
-            this.Button16.Size = new System.Drawing.Size(169, 62);
+            this.Button16.Size = new System.Drawing.Size(169, 61);
             this.Button16.TabIndex = 4;
             this.Button16.Text = "LIMITATION & DEADLINE TRACKER";
             this.Button16.UseVisualStyleBackColor = false;
@@ -334,10 +334,10 @@
             this.MasterTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MasterTaskButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MasterTaskButton.ForeColor = System.Drawing.Color.White;
-            this.MasterTaskButton.Location = new System.Drawing.Point(199, 338);
+            this.MasterTaskButton.Location = new System.Drawing.Point(199, 334);
             this.MasterTaskButton.Margin = new System.Windows.Forms.Padding(10);
             this.MasterTaskButton.Name = "MasterTaskButton";
-            this.MasterTaskButton.Size = new System.Drawing.Size(169, 62);
+            this.MasterTaskButton.Size = new System.Drawing.Size(169, 61);
             this.MasterTaskButton.TabIndex = 4;
             this.MasterTaskButton.Text = "MASTER TASKS MANAGER";
             this.MasterTaskButton.UseVisualStyleBackColor = false;
@@ -352,10 +352,10 @@
             this.ImportDocumentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ImportDocumentsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ImportDocumentsButton.ForeColor = System.Drawing.Color.White;
-            this.ImportDocumentsButton.Location = new System.Drawing.Point(10, 338);
+            this.ImportDocumentsButton.Location = new System.Drawing.Point(10, 334);
             this.ImportDocumentsButton.Margin = new System.Windows.Forms.Padding(10);
             this.ImportDocumentsButton.Name = "ImportDocumentsButton";
-            this.ImportDocumentsButton.Size = new System.Drawing.Size(169, 62);
+            this.ImportDocumentsButton.Size = new System.Drawing.Size(169, 61);
             this.ImportDocumentsButton.TabIndex = 4;
             this.ImportDocumentsButton.Text = "IMPORT DOCUMENTS";
             this.ImportDocumentsButton.UseVisualStyleBackColor = false;
@@ -370,10 +370,10 @@
             this.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button13.ForeColor = System.Drawing.Color.White;
-            this.Button13.Location = new System.Drawing.Point(199, 256);
+            this.Button13.Location = new System.Drawing.Point(199, 253);
             this.Button13.Margin = new System.Windows.Forms.Padding(10);
             this.Button13.Name = "Button13";
-            this.Button13.Size = new System.Drawing.Size(169, 62);
+            this.Button13.Size = new System.Drawing.Size(169, 61);
             this.Button13.TabIndex = 4;
             this.Button13.Text = "DISBURSEMENTS";
             this.Button13.UseVisualStyleBackColor = false;
@@ -388,10 +388,10 @@
             this.Contacts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contacts.ForeColor = System.Drawing.Color.White;
             this.Contacts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Contacts.Location = new System.Drawing.Point(199, 174);
+            this.Contacts.Location = new System.Drawing.Point(199, 172);
             this.Contacts.Margin = new System.Windows.Forms.Padding(10);
             this.Contacts.Name = "Contacts";
-            this.Contacts.Size = new System.Drawing.Size(169, 62);
+            this.Contacts.Size = new System.Drawing.Size(169, 61);
             this.Contacts.TabIndex = 4;
             this.Contacts.Text = "CONTACTS";
             this.Contacts.UseVisualStyleBackColor = false;
@@ -406,10 +406,10 @@
             this.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button11.ForeColor = System.Drawing.Color.White;
-            this.Button11.Location = new System.Drawing.Point(10, 256);
+            this.Button11.Location = new System.Drawing.Point(10, 253);
             this.Button11.Margin = new System.Windows.Forms.Padding(10);
             this.Button11.Name = "Button11";
-            this.Button11.Size = new System.Drawing.Size(169, 62);
+            this.Button11.Size = new System.Drawing.Size(169, 61);
             this.Button11.TabIndex = 4;
             this.Button11.Text = "CLIENT NOTES";
             this.Button11.UseVisualStyleBackColor = false;
@@ -423,10 +423,10 @@
             this.AddNewTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNewTaskButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewTaskButton.ForeColor = System.Drawing.Color.White;
-            this.AddNewTaskButton.Location = new System.Drawing.Point(199, 92);
+            this.AddNewTaskButton.Location = new System.Drawing.Point(199, 91);
             this.AddNewTaskButton.Margin = new System.Windows.Forms.Padding(10);
             this.AddNewTaskButton.Name = "AddNewTaskButton";
-            this.AddNewTaskButton.Size = new System.Drawing.Size(169, 62);
+            this.AddNewTaskButton.Size = new System.Drawing.Size(169, 61);
             this.AddNewTaskButton.TabIndex = 4;
             this.AddNewTaskButton.Text = "RELEASE MASTER TASKS";
             this.AddNewTaskButton.UseVisualStyleBackColor = false;
@@ -444,7 +444,7 @@
             this.CalendarButton.Location = new System.Drawing.Point(199, 10);
             this.CalendarButton.Margin = new System.Windows.Forms.Padding(10);
             this.CalendarButton.Name = "CalendarButton";
-            this.CalendarButton.Size = new System.Drawing.Size(169, 62);
+            this.CalendarButton.Size = new System.Drawing.Size(169, 61);
             this.CalendarButton.TabIndex = 4;
             this.CalendarButton.Text = "CALENDAR/ UPCOMING EVENTS";
             this.CalendarButton.UseVisualStyleBackColor = false;
@@ -459,10 +459,10 @@
             this.CreateDocumentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateDocumentsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateDocumentsButton.ForeColor = System.Drawing.Color.White;
-            this.CreateDocumentsButton.Location = new System.Drawing.Point(10, 420);
+            this.CreateDocumentsButton.Location = new System.Drawing.Point(10, 415);
             this.CreateDocumentsButton.Margin = new System.Windows.Forms.Padding(10);
             this.CreateDocumentsButton.Name = "CreateDocumentsButton";
-            this.CreateDocumentsButton.Size = new System.Drawing.Size(169, 68);
+            this.CreateDocumentsButton.Size = new System.Drawing.Size(169, 65);
             this.CreateDocumentsButton.TabIndex = 8;
             this.CreateDocumentsButton.Text = "CREATE DOCUMENTS";
             this.CreateDocumentsButton.UseVisualStyleBackColor = false;
@@ -477,10 +477,10 @@
             this.PrivateFootPrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrivateFootPrintButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrivateFootPrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrivateFootPrintButton.Location = new System.Drawing.Point(388, 420);
+            this.PrivateFootPrintButton.Location = new System.Drawing.Point(388, 415);
             this.PrivateFootPrintButton.Margin = new System.Windows.Forms.Padding(10);
             this.PrivateFootPrintButton.Name = "PrivateFootPrintButton";
-            this.PrivateFootPrintButton.Size = new System.Drawing.Size(169, 68);
+            this.PrivateFootPrintButton.Size = new System.Drawing.Size(169, 65);
             this.PrivateFootPrintButton.TabIndex = 7;
             this.PrivateFootPrintButton.Text = "PRIVATE FOOTPRINT";
             this.PrivateFootPrintButton.UseVisualStyleBackColor = false;
@@ -495,10 +495,10 @@
             this.DocumentTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DocumentTemplate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentTemplate.ForeColor = System.Drawing.Color.White;
-            this.DocumentTemplate.Location = new System.Drawing.Point(199, 420);
+            this.DocumentTemplate.Location = new System.Drawing.Point(199, 415);
             this.DocumentTemplate.Margin = new System.Windows.Forms.Padding(10);
             this.DocumentTemplate.Name = "DocumentTemplate";
-            this.DocumentTemplate.Size = new System.Drawing.Size(169, 68);
+            this.DocumentTemplate.Size = new System.Drawing.Size(169, 65);
             this.DocumentTemplate.TabIndex = 6;
             this.DocumentTemplate.Text = "DOCUMENT TEMPLATES";
             this.DocumentTemplate.UseVisualStyleBackColor = false;
@@ -513,10 +513,10 @@
             this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button5.ForeColor = System.Drawing.Color.White;
-            this.Button5.Location = new System.Drawing.Point(577, 420);
+            this.Button5.Location = new System.Drawing.Point(577, 415);
             this.Button5.Margin = new System.Windows.Forms.Padding(10);
             this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(169, 68);
+            this.Button5.Size = new System.Drawing.Size(169, 65);
             this.Button5.TabIndex = 4;
             this.Button5.Text = "POST RESOLUTION DATA";
             this.Button5.UseVisualStyleBackColor = false;
@@ -530,14 +530,16 @@
             this.ReportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.ReportsButton.ForeColor = System.Drawing.Color.Black;
-            this.ReportsButton.Location = new System.Drawing.Point(766, 420);
+            this.ReportsButton.Location = new System.Drawing.Point(766, 415);
             this.ReportsButton.Margin = new System.Windows.Forms.Padding(10);
             this.ReportsButton.Name = "ReportsButton";
-            this.ReportsButton.Size = new System.Drawing.Size(170, 68);
+            this.ReportsButton.Size = new System.Drawing.Size(170, 65);
             this.ReportsButton.TabIndex = 5;
             this.ReportsButton.Text = "REPORTS";
             this.ReportsButton.UseVisualStyleBackColor = false;
             this.ReportsButton.Click += new System.EventHandler(this.ReportsButton_Click);
+            this.ReportsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
+            this.ReportsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // Button3
             // 
@@ -549,7 +551,7 @@
             this.Button3.Location = new System.Drawing.Point(10, 10);
             this.Button3.Margin = new System.Windows.Forms.Padding(10);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(169, 62);
+            this.Button3.Size = new System.Drawing.Size(169, 61);
             this.Button3.TabIndex = 3;
             this.Button3.Text = "CONFLICT CHECKS";
             this.Button3.UseVisualStyleBackColor = false;
@@ -564,10 +566,10 @@
             this.FileManagerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FileManagerButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileManagerButton.ForeColor = System.Drawing.Color.White;
-            this.FileManagerButton.Location = new System.Drawing.Point(10, 174);
+            this.FileManagerButton.Location = new System.Drawing.Point(10, 172);
             this.FileManagerButton.Margin = new System.Windows.Forms.Padding(10);
             this.FileManagerButton.Name = "FileManagerButton";
-            this.FileManagerButton.Size = new System.Drawing.Size(169, 62);
+            this.FileManagerButton.Size = new System.Drawing.Size(169, 61);
             this.FileManagerButton.TabIndex = 2;
             this.FileManagerButton.Text = "FILE MANAGER";
             this.FileManagerButton.UseVisualStyleBackColor = false;
@@ -627,7 +629,7 @@
             this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableLayoutPanel1.Size = new System.Drawing.Size(946, 498);
+            this.TableLayoutPanel1.Size = new System.Drawing.Size(946, 490);
             this.TableLayoutPanel1.TabIndex = 5;
             // 
             // IntakeButton
@@ -637,10 +639,10 @@
             this.IntakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IntakeButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IntakeButton.ForeColor = System.Drawing.Color.White;
-            this.IntakeButton.Location = new System.Drawing.Point(10, 92);
+            this.IntakeButton.Location = new System.Drawing.Point(10, 91);
             this.IntakeButton.Margin = new System.Windows.Forms.Padding(10);
             this.IntakeButton.Name = "IntakeButton";
-            this.IntakeButton.Size = new System.Drawing.Size(169, 62);
+            this.IntakeButton.Size = new System.Drawing.Size(169, 61);
             this.IntakeButton.TabIndex = 1;
             this.IntakeButton.Text = "INITIAL INTAKES";
             this.IntakeButton.UseVisualStyleBackColor = false;
@@ -653,7 +655,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UserFullName,
             this.UserName});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 735);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 727);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.statusStrip1.Size = new System.Drawing.Size(970, 22);
@@ -679,7 +681,7 @@
             this.ChangeLogViewButton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ChangeLogViewButton.FlatAppearance.BorderSize = 0;
             this.ChangeLogViewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeLogViewButton.Location = new System.Drawing.Point(22, 727);
+            this.ChangeLogViewButton.Location = new System.Drawing.Point(22, 719);
             this.ChangeLogViewButton.Name = "ChangeLogViewButton";
             this.ChangeLogViewButton.Size = new System.Drawing.Size(75, 23);
             this.ChangeLogViewButton.TabIndex = 7;
@@ -703,7 +705,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(970, 757);
+            this.ClientSize = new System.Drawing.Size(970, 749);
             this.Controls.Add(this.ChangeLogViewButton);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.PictureBox1);
