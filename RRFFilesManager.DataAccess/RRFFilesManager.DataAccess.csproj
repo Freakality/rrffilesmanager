@@ -377,6 +377,10 @@
     <Compile Include="Migrations\20230222223440_HomePermissions.designer.cs">
       <DependentUpon>20230222223440_HomePermissions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230223222405_Denials.cs" />
+    <Compile Include="Migrations\20230223222405_Denials.designer.cs">
+      <DependentUpon>20230223222405_Denials.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutOfPocketHealthCareExpRepository.cs" />
     <Compile Include="PharmacyRepository.cs" />
     <Compile Include="Migrations\20210127003412_Position.cs" />
