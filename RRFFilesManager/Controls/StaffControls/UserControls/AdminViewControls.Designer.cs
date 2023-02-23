@@ -32,7 +32,6 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             this.AdminPortalUserLawyerBox = new System.Windows.Forms.GroupBox();
             this.AdminPortalUserLawyerListBox = new System.Windows.Forms.ListBox();
             this.AdminLawyerTaskView = new System.Windows.Forms.DataGridView();
-            this.AdminPortalSaveChangesButton = new System.Windows.Forms.Button();
             this.AdminPortalAddTaskButton = new System.Windows.Forms.Button();
             this.AdminPortalTaskStateComboBox = new System.Windows.Forms.ComboBox();
             this.AdminPortalSearchTextBox = new System.Windows.Forms.TextBox();
@@ -89,26 +88,12 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             this.AdminLawyerTaskView.Name = "AdminLawyerTaskView";
             this.AdminLawyerTaskView.Size = new System.Drawing.Size(606, 411);
             this.AdminLawyerTaskView.TabIndex = 148;
-            // 
-            // AdminPortalSaveChangesButton
-            // 
-            this.AdminPortalSaveChangesButton.BackColor = System.Drawing.Color.Maroon;
-            this.AdminPortalSaveChangesButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdminPortalSaveChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdminPortalSaveChangesButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminPortalSaveChangesButton.ForeColor = System.Drawing.Color.White;
-            this.AdminPortalSaveChangesButton.Location = new System.Drawing.Point(661, 5);
-            this.AdminPortalSaveChangesButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.AdminPortalSaveChangesButton.Name = "AdminPortalSaveChangesButton";
-            this.AdminPortalSaveChangesButton.Size = new System.Drawing.Size(167, 43);
-            this.AdminPortalSaveChangesButton.TabIndex = 154;
-            this.AdminPortalSaveChangesButton.Text = "Save Changes";
-            this.AdminPortalSaveChangesButton.UseVisualStyleBackColor = false;
-            this.AdminPortalSaveChangesButton.Click += new System.EventHandler(this.AdminPortalSaveChangesButton_Click);
+            this.AdminLawyerTaskView.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.AdminLawyerTaskView_CellContextMenuStripNeeded);
             // 
             // AdminPortalAddTaskButton
             // 
             this.AdminPortalAddTaskButton.BackColor = System.Drawing.Color.Maroon;
+            this.AdminPortalButtonLayoutPanel.SetColumnSpan(this.AdminPortalAddTaskButton, 2);
             this.AdminPortalAddTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AdminPortalAddTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdminPortalAddTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,7 +101,7 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             this.AdminPortalAddTaskButton.Location = new System.Drawing.Point(551, 5);
             this.AdminPortalAddTaskButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminPortalAddTaskButton.Name = "AdminPortalAddTaskButton";
-            this.AdminPortalAddTaskButton.Size = new System.Drawing.Size(102, 43);
+            this.AdminPortalAddTaskButton.Size = new System.Drawing.Size(277, 43);
             this.AdminPortalAddTaskButton.TabIndex = 155;
             this.AdminPortalAddTaskButton.Text = "Add Task";
             this.AdminPortalAddTaskButton.UseVisualStyleBackColor = false;
@@ -207,7 +192,6 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             this.AdminPortalButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.68853F));
             this.AdminPortalButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.31147F));
             this.AdminPortalButtonLayoutPanel.Controls.Add(this.AdminPortalAddTaskButton, 1, 0);
-            this.AdminPortalButtonLayoutPanel.Controls.Add(this.AdminPortalSaveChangesButton, 2, 0);
             this.AdminPortalButtonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AdminPortalButtonLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.AdminPortalButtonLayoutPanel.Name = "AdminPortalButtonLayoutPanel";
@@ -247,7 +231,6 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
         private System.Windows.Forms.GroupBox AdminPortalUserLawyerBox;
         private System.Windows.Forms.ListBox AdminPortalUserLawyerListBox;
         private System.Windows.Forms.DataGridView AdminLawyerTaskView;
-        internal System.Windows.Forms.Button AdminPortalSaveChangesButton;
         internal System.Windows.Forms.Button AdminPortalAddTaskButton;
         private System.Windows.Forms.ComboBox AdminPortalTaskStateComboBox;
         private System.Windows.Forms.TextBox AdminPortalSearchTextBox;

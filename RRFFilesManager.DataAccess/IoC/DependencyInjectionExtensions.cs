@@ -57,6 +57,9 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IFileStatusRepository, FileStatusRepository>();
             services.AddTransient<ILATDataRepository, LATDataRepository>();
             services.AddTransient<IPermissionRepository, PermissionRepository>();
+            services.AddTransient<IDenialRepository, DenialRepository>();
+            services.AddTransient<IDenialStatusRepository, DenialStatusRepository>();
+            services.AddTransient<IDenialBenefitRepository, DenialBenefitRepository>();
             services.AddTransient<ILoggedUser, LoggedUser>();
             return services;
         }

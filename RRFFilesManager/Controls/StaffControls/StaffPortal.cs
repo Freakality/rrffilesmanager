@@ -36,12 +36,12 @@ namespace RRFFilesManager.Controls.StaffControls
             if (User.ClearanceLevel == 0 || User.ClearanceLevel == 99)
             {
                 AdminViewControls = new AdminViewControls();
-                Utils.Utils.SetContent(panel1, AdminViewControls);
+                Utils.Utils.SetContent(StaffPortalMainPanel, AdminViewControls);
             }
             else
             {
                 StaffViewControls = new StaffViewControls();
-                Utils.Utils.SetContent(panel1, StaffViewControls);
+                Utils.Utils.SetContent(StaffPortalMainPanel, StaffViewControls);
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿using RRFFilesManager.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
+using RRFFilesManager.Controls.StaffControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
     {
         private readonly IFileTaskRepository _fileTaskRepository;
         private readonly ITaskStateRepository _taskStateRepository;
+        private readonly ILawyerTaskRepository _lawyerTaskRepository;
         public DataGridView Grid;
         public int RowIndex;
 
@@ -30,34 +32,68 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             IsFileTask = _isFileTask;
             _fileTaskRepository = Program.GetService<IFileTaskRepository>();
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
+            _lawyerTaskRepository = Program.GetService<ILawyerTaskRepository>();
         }
 
         private void Ctms_TaskActions_Opening(object sender, CancelEventArgs e)
         {
+            TaskState state = _taskStateRepository.GetByDescription("DONE");
+            if (state != null)
+            {
+                if (IsFileTask)
+                {
+                    if (fileTask.State.ID == state.ID)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+                    //editNotesToolStripMenuItem.Visible = false;
+                    if (fileTask.TaskStartedDate.ToString() != "01/01/0001 0:00:00")
+                    {
+                        startTaskToolStripMenuItem.Visible = false;
+                    }
+                    else
+                    {
+                        if (fileTask.WorkedOnDate1.ToString() != "01/01/0001 0:00:00" &&
+                            fileTask.WorkedOnDate2.ToString() != "01/01/0001 0:00:00" &&
+                            fileTask.WorkedOnDate3.ToString() != "01/01/0001 0:00:00")
+                        {
+                            workedDayToolStripMenuItem.Visible = false;
+                        }
+                        if (fileTask.NotifiedRRFDate.ToString() != "01/01/0001 0:00:00")
+                        {
+                            notifyRRFToolStripMenuItem.Visible = false;
+                        }
+                        completeTaskToolStripMenuItem.Visible = false;
+                    }
 
-            if (fileTask.State.ID == _taskStateRepository.GetByDescription("DONE").ID)
-            {
-                e.Cancel = true;
-                return;
-            }
-            //editNotesToolStripMenuItem.Visible = false;
-            if (fileTask.TaskStartedDate.ToString() != "01/01/0001 0:00:00")
-            {
-                startTaskToolStripMenuItem.Visible = false;
-            }
-            else
-            {
-                if (fileTask.WorkedOnDate1.ToString() != "01/01/0001 0:00:00" &&
-                    fileTask.WorkedOnDate2.ToString() != "01/01/0001 0:00:00" &&
-                    fileTask.WorkedOnDate3.ToString() != "01/01/0001 0:00:00")
-                {
-                    workedDayToolStripMenuItem.Visible = false;
                 }
-                if (fileTask.NotifiedRRFDate.ToString() != "01/01/0001 0:00:00")
+                else
                 {
-                    notifyRRFToolStripMenuItem.Visible = false;
+                    if (lawyerTask.State.ID == state.ID)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+                    if (lawyerTask.TaskStartedDate != default(DateTime))
+                    {
+                        startTaskToolStripMenuItem.Visible = false;
+                    }
+                    else
+                    {
+                        if (lawyerTask.WorkedOnDate1 != default(DateTime) &&
+                         lawyerTask.WorkedOnDate2 != default(DateTime) &&
+                         lawyerTask.WorkedOnDate3 != default(DateTime))
+                        {
+                            workedDayToolStripMenuItem.Visible = false;
+                        }
+                        if (lawyerTask.NotifiedRRFDate != default(DateTime))
+                        {
+                            notifyRRFToolStripMenuItem.Visible = false;
+                        }
+                        completeTaskToolStripMenuItem.Visible = false;
+                    }
                 }
-                completeTaskToolStripMenuItem.Visible = false;
             }
 
         }
@@ -69,7 +105,15 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             }
             else
             {
-                //Home.StaffPortal.
+                UserControl StaffUserControl = Home.StaffPortal.StaffPortalMainPanel.Controls[0] as UserControl;
+                if (StaffUserControl.Name == "AdminViewControls")
+                {
+                    (StaffUserControl as StaffControls.UserControls.AdminViewControls).FillAdminLawyerTaskView();
+                }
+                else
+                {
+                    (StaffUserControl as StaffControls.UserControls.StaffViewControls).FillStaffLawyerTaskView();
+                }
             }
         }
 
@@ -82,13 +126,14 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             {                                
                 fileTask.TaskStartedDate= DateTime.Now;
                 _fileTaskRepository.Update(fileTask);
-                MessageBox.Show("¡Task started successfully!","Success",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else // Para LawyerTask
             {
-
+                lawyerTask.TaskStartedDate = DateTime.Now;
+                _lawyerTaskRepository.Update(lawyerTask);
             }
+            MessageBox.Show("Task started successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshViews();
         }
 
@@ -113,12 +158,26 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
                 }
 
                 _fileTaskRepository.Update(fileTask);
-                MessageBox.Show("¡Worked day added successfully!", "Success", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
             }
-            else // Para LawyerTask
+            else
             {
+                if (lawyerTask.WorkedOnDate1.ToString() == "01/01/0001 0:00:00")
+                {
+                    lawyerTask.WorkedOnDate1 = DateTime.Now;
+                }
+                else if (lawyerTask.WorkedOnDate2.ToString() == "01/01/0001 0:00:00")
+                {
+                    lawyerTask.WorkedOnDate2 = DateTime.Now;
+                }
+                else if (lawyerTask.WorkedOnDate3.ToString() == "01/01/0001 0:00:00")
+                {
+                    lawyerTask.WorkedOnDate3 = DateTime.Now;
+                }
 
+                _lawyerTaskRepository.Update(lawyerTask);
             }
+            MessageBox.Show("Worked day added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshViews();
 
         }
@@ -132,12 +191,13 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             {
                 fileTask.NotifiedRRFDate = DateTime.Now;
                 _fileTaskRepository.Update(fileTask);
-                MessageBox.Show("¡Notification date successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else // Para LawyerTask
+            else
             {
-
+                lawyerTask.NotifiedRRFDate = DateTime.Now;
+                _lawyerTaskRepository.Update(lawyerTask);
             }
+            MessageBox.Show("Notification date added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshViews();
         }
 
@@ -151,12 +211,14 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
                 fileTask.State = _taskStateRepository.GetById(4);
                 fileTask.CompletedDate = DateTime.Now;
                 _fileTaskRepository.Update(fileTask);
-                MessageBox.Show("¡Task succesfully completed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else // Para LawyerTask
+            else
             {
-
+                lawyerTask.State = _taskStateRepository.GetById(4);
+                lawyerTask.CompletedDate = DateTime.Now;
+                _lawyerTaskRepository.Update(lawyerTask);
             }
+            MessageBox.Show("Task succesfully marked as completed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshViews();
         }
 
@@ -180,7 +242,7 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             }
             else
             {
-                using (TaskManager taskManager = new TaskManager(true, true, null,lawyerTask))
+                using (TaskManager taskManager = new TaskManager(true, true, null, lawyerTask))
                 {
                     taskManager.ShowDialog();
                 }

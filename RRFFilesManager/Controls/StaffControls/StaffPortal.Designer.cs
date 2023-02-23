@@ -31,7 +31,7 @@ namespace RRFFilesManager.Controls.StaffControls
         {
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.HomeButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.StaffPortalMainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,12 +59,12 @@ namespace RRFFilesManager.Controls.StaffControls
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
-            // panel1
+            // StaffPortalMainPanel
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 95);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1149, 490);
-            this.panel1.TabIndex = 154;
+            this.StaffPortalMainPanel.Location = new System.Drawing.Point(12, 95);
+            this.StaffPortalMainPanel.Name = "StaffPortalMainPanel";
+            this.StaffPortalMainPanel.Size = new System.Drawing.Size(1149, 490);
+            this.StaffPortalMainPanel.TabIndex = 154;
             // 
             // StaffPortal
             // 
@@ -72,11 +72,11 @@ namespace RRFFilesManager.Controls.StaffControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 597);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.StaffPortalMainPanel);
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.PictureBox1);
             this.Name = "StaffPortal";
-            this.Text = "Add New Tasks";
+            this.Text = "Staff Portal";
             this.Load += new System.EventHandler(this.StaffPortal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -87,6 +87,6 @@ namespace RRFFilesManager.Controls.StaffControls
 
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Button HomeButton;
-        private System.Windows.Forms.Panel panel1;
+        internal System.Windows.Forms.Panel StaffPortalMainPanel;
     }
 }

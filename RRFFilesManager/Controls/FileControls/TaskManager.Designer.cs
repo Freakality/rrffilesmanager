@@ -32,11 +32,10 @@ namespace RRFFilesManager.Controls.FileControls
             this.Btn_Save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Panel_Main = new System.Windows.Forms.Panel();
-            this.Gb_TypeOfTaskToAdd = new System.Windows.Forms.GroupBox();
-            this.Rb_NewTask = new System.Windows.Forms.RadioButton();
-            this.Rb_PrevioslyCreatedTask = new System.Windows.Forms.RadioButton();
+            this.Panel_GbNotes = new System.Windows.Forms.Panel();
             this.Gb_Notes = new System.Windows.Forms.GroupBox();
             this.Txt_Notes = new System.Windows.Forms.TextBox();
+            this.Panel_GbNewTask = new System.Windows.Forms.Panel();
             this.Gb_NewTask = new System.Windows.Forms.GroupBox();
             this.Cbb_ResponsibleLawyer = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.Dtp_DueDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Panel_GbPreviosluCreatedTask = new System.Windows.Forms.Panel();
             this.Gb_PrevioslyCreatedTasks = new System.Windows.Forms.GroupBox();
             this.Lbl_ResponsibleLawyer = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,19 +54,19 @@ namespace RRFFilesManager.Controls.FileControls
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_GbTypeOfTaskToAdd = new System.Windows.Forms.Panel();
-            this.Panel_GbPreviosluCreatedTask = new System.Windows.Forms.Panel();
-            this.Panel_GbNewTask = new System.Windows.Forms.Panel();
-            this.Panel_GbNotes = new System.Windows.Forms.Panel();
+            this.Gb_TypeOfTaskToAdd = new System.Windows.Forms.GroupBox();
+            this.Rb_NewTask = new System.Windows.Forms.RadioButton();
+            this.Rb_PrevioslyCreatedTask = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.Panel_Main.SuspendLayout();
-            this.Gb_TypeOfTaskToAdd.SuspendLayout();
+            this.Panel_GbNotes.SuspendLayout();
             this.Gb_Notes.SuspendLayout();
+            this.Panel_GbNewTask.SuspendLayout();
             this.Gb_NewTask.SuspendLayout();
+            this.Panel_GbPreviosluCreatedTask.SuspendLayout();
             this.Gb_PrevioslyCreatedTasks.SuspendLayout();
             this.Panel_GbTypeOfTaskToAdd.SuspendLayout();
-            this.Panel_GbPreviosluCreatedTask.SuspendLayout();
-            this.Panel_GbNewTask.SuspendLayout();
-            this.Panel_GbNotes.SuspendLayout();
+            this.Gb_TypeOfTaskToAdd.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Save
@@ -106,43 +106,16 @@ namespace RRFFilesManager.Controls.FileControls
             this.Panel_Main.Size = new System.Drawing.Size(859, 530);
             this.Panel_Main.TabIndex = 149;
             // 
-            // Gb_TypeOfTaskToAdd
+            // Panel_GbNotes
             // 
-            this.Gb_TypeOfTaskToAdd.BackColor = System.Drawing.Color.White;
-            this.Gb_TypeOfTaskToAdd.Controls.Add(this.Rb_NewTask);
-            this.Gb_TypeOfTaskToAdd.Controls.Add(this.Rb_PrevioslyCreatedTask);
-            this.Gb_TypeOfTaskToAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Gb_TypeOfTaskToAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.Gb_TypeOfTaskToAdd.Location = new System.Drawing.Point(5, 5);
-            this.Gb_TypeOfTaskToAdd.Name = "Gb_TypeOfTaskToAdd";
-            this.Gb_TypeOfTaskToAdd.Size = new System.Drawing.Size(832, 101);
-            this.Gb_TypeOfTaskToAdd.TabIndex = 18;
-            this.Gb_TypeOfTaskToAdd.TabStop = false;
-            this.Gb_TypeOfTaskToAdd.Text = "Indicates what type of task to add";
-            // 
-            // Rb_NewTask
-            // 
-            this.Rb_NewTask.AutoSize = true;
-            this.Rb_NewTask.Location = new System.Drawing.Point(496, 44);
-            this.Rb_NewTask.Name = "Rb_NewTask";
-            this.Rb_NewTask.Size = new System.Drawing.Size(99, 23);
-            this.Rb_NewTask.TabIndex = 1;
-            this.Rb_NewTask.TabStop = true;
-            this.Rb_NewTask.Text = "New Task";
-            this.Rb_NewTask.UseVisualStyleBackColor = true;
-            this.Rb_NewTask.CheckedChanged += new System.EventHandler(this.Rb_NewTask_CheckedChanged);
-            // 
-            // Rb_PrevioslyCreatedTask
-            // 
-            this.Rb_PrevioslyCreatedTask.AutoSize = true;
-            this.Rb_PrevioslyCreatedTask.Location = new System.Drawing.Point(123, 44);
-            this.Rb_PrevioslyCreatedTask.Name = "Rb_PrevioslyCreatedTask";
-            this.Rb_PrevioslyCreatedTask.Size = new System.Drawing.Size(192, 23);
-            this.Rb_PrevioslyCreatedTask.TabIndex = 0;
-            this.Rb_PrevioslyCreatedTask.TabStop = true;
-            this.Rb_PrevioslyCreatedTask.Text = "Previosly created task";
-            this.Rb_PrevioslyCreatedTask.UseVisualStyleBackColor = true;
-            this.Rb_PrevioslyCreatedTask.CheckedChanged += new System.EventHandler(this.Rb_PrevioslyCreatedTask_CheckedChanged);
+            this.Panel_GbNotes.BackColor = System.Drawing.Color.DimGray;
+            this.Panel_GbNotes.Controls.Add(this.Gb_Notes);
+            this.Panel_GbNotes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_GbNotes.Location = new System.Drawing.Point(0, 588);
+            this.Panel_GbNotes.Name = "Panel_GbNotes";
+            this.Panel_GbNotes.Padding = new System.Windows.Forms.Padding(5);
+            this.Panel_GbNotes.Size = new System.Drawing.Size(842, 142);
+            this.Panel_GbNotes.TabIndex = 22;
             // 
             // Gb_Notes
             // 
@@ -170,6 +143,17 @@ namespace RRFFilesManager.Controls.FileControls
             this.Txt_Notes.Size = new System.Drawing.Size(805, 85);
             this.Txt_Notes.TabIndex = 0;
             // 
+            // Panel_GbNewTask
+            // 
+            this.Panel_GbNewTask.BackColor = System.Drawing.Color.DimGray;
+            this.Panel_GbNewTask.Controls.Add(this.Gb_NewTask);
+            this.Panel_GbNewTask.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_GbNewTask.Location = new System.Drawing.Point(0, 297);
+            this.Panel_GbNewTask.Name = "Panel_GbNewTask";
+            this.Panel_GbNewTask.Padding = new System.Windows.Forms.Padding(5);
+            this.Panel_GbNewTask.Size = new System.Drawing.Size(842, 291);
+            this.Panel_GbNewTask.TabIndex = 21;
+            // 
             // Gb_NewTask
             // 
             this.Gb_NewTask.BackColor = System.Drawing.Color.White;
@@ -186,7 +170,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.Gb_NewTask.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gb_NewTask.Location = new System.Drawing.Point(5, 5);
             this.Gb_NewTask.Name = "Gb_NewTask";
-            this.Gb_NewTask.Size = new System.Drawing.Size(832, 247);
+            this.Gb_NewTask.Size = new System.Drawing.Size(832, 281);
             this.Gb_NewTask.TabIndex = 15;
             this.Gb_NewTask.TabStop = false;
             this.Gb_NewTask.Text = "Indicate a new task";
@@ -271,6 +255,17 @@ namespace RRFFilesManager.Controls.FileControls
             this.label4.Size = new System.Drawing.Size(84, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Due Date:";
+            // 
+            // Panel_GbPreviosluCreatedTask
+            // 
+            this.Panel_GbPreviosluCreatedTask.BackColor = System.Drawing.Color.DimGray;
+            this.Panel_GbPreviosluCreatedTask.Controls.Add(this.Gb_PrevioslyCreatedTasks);
+            this.Panel_GbPreviosluCreatedTask.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_GbPreviosluCreatedTask.Location = new System.Drawing.Point(0, 111);
+            this.Panel_GbPreviosluCreatedTask.Name = "Panel_GbPreviosluCreatedTask";
+            this.Panel_GbPreviosluCreatedTask.Padding = new System.Windows.Forms.Padding(5);
+            this.Panel_GbPreviosluCreatedTask.Size = new System.Drawing.Size(842, 186);
+            this.Panel_GbPreviosluCreatedTask.TabIndex = 20;
             // 
             // Gb_PrevioslyCreatedTasks
             // 
@@ -370,38 +365,43 @@ namespace RRFFilesManager.Controls.FileControls
             this.Panel_GbTypeOfTaskToAdd.Size = new System.Drawing.Size(842, 111);
             this.Panel_GbTypeOfTaskToAdd.TabIndex = 19;
             // 
-            // Panel_GbPreviosluCreatedTask
+            // Gb_TypeOfTaskToAdd
             // 
-            this.Panel_GbPreviosluCreatedTask.BackColor = System.Drawing.Color.DimGray;
-            this.Panel_GbPreviosluCreatedTask.Controls.Add(this.Gb_PrevioslyCreatedTasks);
-            this.Panel_GbPreviosluCreatedTask.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_GbPreviosluCreatedTask.Location = new System.Drawing.Point(0, 111);
-            this.Panel_GbPreviosluCreatedTask.Name = "Panel_GbPreviosluCreatedTask";
-            this.Panel_GbPreviosluCreatedTask.Padding = new System.Windows.Forms.Padding(5);
-            this.Panel_GbPreviosluCreatedTask.Size = new System.Drawing.Size(842, 186);
-            this.Panel_GbPreviosluCreatedTask.TabIndex = 20;
+            this.Gb_TypeOfTaskToAdd.BackColor = System.Drawing.Color.White;
+            this.Gb_TypeOfTaskToAdd.Controls.Add(this.Rb_NewTask);
+            this.Gb_TypeOfTaskToAdd.Controls.Add(this.Rb_PrevioslyCreatedTask);
+            this.Gb_TypeOfTaskToAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Gb_TypeOfTaskToAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.Gb_TypeOfTaskToAdd.Location = new System.Drawing.Point(5, 5);
+            this.Gb_TypeOfTaskToAdd.Name = "Gb_TypeOfTaskToAdd";
+            this.Gb_TypeOfTaskToAdd.Size = new System.Drawing.Size(832, 101);
+            this.Gb_TypeOfTaskToAdd.TabIndex = 18;
+            this.Gb_TypeOfTaskToAdd.TabStop = false;
+            this.Gb_TypeOfTaskToAdd.Text = "Indicates what type of task to add";
             // 
-            // Panel_GbNewTask
+            // Rb_NewTask
             // 
-            this.Panel_GbNewTask.BackColor = System.Drawing.Color.DimGray;
-            this.Panel_GbNewTask.Controls.Add(this.Gb_NewTask);
-            this.Panel_GbNewTask.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_GbNewTask.Location = new System.Drawing.Point(0, 297);
-            this.Panel_GbNewTask.Name = "Panel_GbNewTask";
-            this.Panel_GbNewTask.Padding = new System.Windows.Forms.Padding(5);
-            this.Panel_GbNewTask.Size = new System.Drawing.Size(842, 257);
-            this.Panel_GbNewTask.TabIndex = 21;
+            this.Rb_NewTask.AutoSize = true;
+            this.Rb_NewTask.Location = new System.Drawing.Point(496, 44);
+            this.Rb_NewTask.Name = "Rb_NewTask";
+            this.Rb_NewTask.Size = new System.Drawing.Size(99, 23);
+            this.Rb_NewTask.TabIndex = 1;
+            this.Rb_NewTask.TabStop = true;
+            this.Rb_NewTask.Text = "New Task";
+            this.Rb_NewTask.UseVisualStyleBackColor = true;
+            this.Rb_NewTask.CheckedChanged += new System.EventHandler(this.Rb_NewTask_CheckedChanged);
             // 
-            // Panel_GbNotes
+            // Rb_PrevioslyCreatedTask
             // 
-            this.Panel_GbNotes.BackColor = System.Drawing.Color.DimGray;
-            this.Panel_GbNotes.Controls.Add(this.Gb_Notes);
-            this.Panel_GbNotes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_GbNotes.Location = new System.Drawing.Point(0, 554);
-            this.Panel_GbNotes.Name = "Panel_GbNotes";
-            this.Panel_GbNotes.Padding = new System.Windows.Forms.Padding(5);
-            this.Panel_GbNotes.Size = new System.Drawing.Size(842, 142);
-            this.Panel_GbNotes.TabIndex = 22;
+            this.Rb_PrevioslyCreatedTask.AutoSize = true;
+            this.Rb_PrevioslyCreatedTask.Location = new System.Drawing.Point(123, 44);
+            this.Rb_PrevioslyCreatedTask.Name = "Rb_PrevioslyCreatedTask";
+            this.Rb_PrevioslyCreatedTask.Size = new System.Drawing.Size(192, 23);
+            this.Rb_PrevioslyCreatedTask.TabIndex = 0;
+            this.Rb_PrevioslyCreatedTask.TabStop = true;
+            this.Rb_PrevioslyCreatedTask.Text = "Previosly created task";
+            this.Rb_PrevioslyCreatedTask.UseVisualStyleBackColor = true;
+            this.Rb_PrevioslyCreatedTask.CheckedChanged += new System.EventHandler(this.Rb_PrevioslyCreatedTask_CheckedChanged);
             // 
             // TaskManager
             // 
@@ -416,18 +416,18 @@ namespace RRFFilesManager.Controls.FileControls
             this.Text = "TaskManager";
             this.panel1.ResumeLayout(false);
             this.Panel_Main.ResumeLayout(false);
-            this.Gb_TypeOfTaskToAdd.ResumeLayout(false);
-            this.Gb_TypeOfTaskToAdd.PerformLayout();
+            this.Panel_GbNotes.ResumeLayout(false);
             this.Gb_Notes.ResumeLayout(false);
             this.Gb_Notes.PerformLayout();
+            this.Panel_GbNewTask.ResumeLayout(false);
             this.Gb_NewTask.ResumeLayout(false);
             this.Gb_NewTask.PerformLayout();
+            this.Panel_GbPreviosluCreatedTask.ResumeLayout(false);
             this.Gb_PrevioslyCreatedTasks.ResumeLayout(false);
             this.Gb_PrevioslyCreatedTasks.PerformLayout();
             this.Panel_GbTypeOfTaskToAdd.ResumeLayout(false);
-            this.Panel_GbPreviosluCreatedTask.ResumeLayout(false);
-            this.Panel_GbNewTask.ResumeLayout(false);
-            this.Panel_GbNotes.ResumeLayout(false);
+            this.Gb_TypeOfTaskToAdd.ResumeLayout(false);
+            this.Gb_TypeOfTaskToAdd.PerformLayout();
             this.ResumeLayout(false);
 
         }

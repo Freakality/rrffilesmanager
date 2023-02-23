@@ -29,7 +29,7 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             StaffPortalTaskStateComboBox.SelectedIndex = 1;
         }
 
-        private void FillStaffLawyerTaskView()
+        internal void FillStaffLawyerTaskView()
         {
             //throw new NotImplementedException();
             StaffLawyerTaskView.DataSource = _lawyerTaskRepository.Search(StaffPortalSearchTextBox.Text, Program.GetUser(), SelectedTaskState);

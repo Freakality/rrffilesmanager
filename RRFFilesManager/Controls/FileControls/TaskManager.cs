@@ -23,6 +23,7 @@ namespace RRFFilesManager.Controls.FileControls
         private readonly IFileTaskRepository _fileTaskRepository;
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly ILawyerRepository _lawyerRepository;
+        private readonly ILawyerTaskRepository _lawyerTaskRepository;
         bool IsFileTask, Editing;
 
         public TaskManager(File _file = null, Lawyer _lawyer = null)
@@ -32,6 +33,7 @@ namespace RRFFilesManager.Controls.FileControls
             _fileTaskRepository = Program.GetService<IFileTaskRepository>();
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
             _lawyerRepository = Program.GetService<ILawyerRepository>();
+            _lawyerTaskRepository = Program.GetService<ILawyerTaskRepository>();
             file = _file;
             lawyer = _lawyer;
             InitializeComponent();
@@ -175,17 +177,16 @@ namespace RRFFilesManager.Controls.FileControls
 
             if (!Editing)
             {
+                if (MessageBox.Show("Are you sure you want to save the task?", "Confirmation", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) != DialogResult.Yes) return;
                 if (file != null)
                 {
-                    if (MessageBox.Show("Are you sure you want to save the task?", "Confirmation", MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Question) != DialogResult.Yes) return;
-
-
                     if (Rb_PrevioslyCreatedTask.Checked)
                     {
                         FileTask fileTask = new FileTask();
                         fileTask.TaskId = task.ID;
                         fileTask.Task = task;
+                        fileTask.Lawyer = task.Lawyer;
                         fileTask.DueDate = DateTime.Now.AddDays(task.DueBy);
                         fileTask.DeferUntilDate = DateTime.Now.AddDays(task.DeferBy);
                         fileTask.Notes = Txt_Notes.Text.Trim();
@@ -199,7 +200,7 @@ namespace RRFFilesManager.Controls.FileControls
                     {
                         if (string.IsNullOrEmpty(Txt_NewTaskDescription.Text))
                         {
-                            MessageBox.Show("You must indicate the description of the task", "Missing Information", MessageBoxButtons.OK,
+                            MessageBox.Show("You must indicate the description of the task.", "Missing Information", MessageBoxButtons.OK,
                             MessageBoxIcon.Stop);
                             return;
                         }
@@ -222,18 +223,45 @@ namespace RRFFilesManager.Controls.FileControls
                         fileTask.AddedBy = Program.GetUser();
                         fileTask.State = _taskStateRepository.GetById(1);
                         fileTask.File = file;
+                        fileTask.Lawyer = task.Lawyer;
                         fileTask.FileId = file.ID;
 
                         _fileTaskRepository.Insert(fileTask);
                     }
 
-                    MessageBox.Show($"Task added succesfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
                 }
                 else // Codigo para lawyer task
                 {
+                    if (string.IsNullOrEmpty(Txt_NewTaskDescription.Text))
+                    {
+                        MessageBox.Show("You must indicate the description of the task.", "Missing Information", MessageBoxButtons.OK,
+                        MessageBoxIcon.Stop);
+                        return;
+                    }
 
-                }
+                    task = new Task();
+                    task.Description = Txt_NewTaskDescription.Text;
+                    task.IsMasterTask = false;
+                    task.TaskCategory = null;
+                    task.CreatedBy = Program.GetUser();
+                    task.Lawyer = ((Lawyer)Cbb_ResponsibleLawyer.SelectedItem);
+                    _taskRepository.Insert(task);
+                    task = _taskRepository.GetLastTask();
+
+                    LawyerTask lawyerTask = new LawyerTask();
+                    lawyerTask.TaskId = task.ID;
+                    lawyerTask.Task = task;
+                    lawyerTask.DueDate = Dtp_DueDate.Value;
+                    lawyerTask.DeferUntilDate = Dtp_DeferUntilDate.Value;
+                    lawyerTask.Notes = Txt_Notes.Text.Trim();
+                    lawyerTask.AddedBy = Program.GetUser();
+                    lawyerTask.State = _taskStateRepository.GetById(1);
+                    lawyerTask.Lawyer = task.Lawyer;
+                    lawyerTask.LawyerId = task.Lawyer.ID;
+                    _lawyerTaskRepository.Insert(lawyerTask);
+            }
+                MessageBox.Show($"Task added succesfuly.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -241,12 +269,15 @@ namespace RRFFilesManager.Controls.FileControls
                 {
                     fileTask.Notes = Txt_Notes.Text.Trim();
                     _fileTaskRepository.Update(fileTask);
-                    MessageBox.Show($"¡Task successfully edited!","Succsess",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show($"Task successfully edited.","Succsess",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                 }
                 else // para lawyer task
                 {
-
+                    lawyerTask.Notes = Txt_Notes.Text.Trim();
+                    _lawyerTaskRepository.Update(lawyerTask);
+                    MessageBox.Show($"Task successfully edited.", "Succsess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
                 }
             }
            

@@ -37,6 +37,7 @@ namespace RRFFilesManager.Abstractions
         public virtual ICollection<FileTask> Tasks { get; set; }
         public virtual ICollection<ClientNote> ClientNotes { get; set; }
         public virtual ICollection<LATData> LATData { get; set; }
+        public virtual ICollection<Denial> Denials { get; set; }
         public override string ToString() => $"{FileNumber} - {Client?.FirstName} {Client?.LastName}";
     }
 }

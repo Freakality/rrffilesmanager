@@ -94,9 +94,15 @@ namespace RRFFilesManager.DataAccess
             }
             return false;
         }
-        public void AddTask(File file, Task task, TaskState taskState, int Days)
+        public void AddTask(File file, Task task, TaskState taskState, int Days, DateTime date = default)
         {
             int due = task.DueBy;
+            DateTime newDueDate = DateTime.Now;
+            if (date != default)
+            {
+                newDueDate = date;
+                //Days = -120;
+            }
             if (Days != 0)
             {
                 due = Days;
@@ -106,7 +112,7 @@ namespace RRFFilesManager.DataAccess
             {
                 var fileTaskPrev = _context.FileTasks.Single(t => t.TaskId == task.ID && t.FileId == file.ID);
                 var taskexisten = _context.FileTasks.Single(t => t.TaskId == task.ID && t.FileId == file.ID);
-                taskexisten.DueDate = DateTime.Now.AddDays(due);
+                taskexisten.DueDate = newDueDate.AddDays(due);
                 taskexisten.DeferUntilDate = DateTime.Now.AddDays(task.DeferBy);
                 _context.Entry(fileTaskPrev).CurrentValues.SetValues(taskexisten);
                 _context.SaveChanges();
@@ -130,7 +136,7 @@ namespace RRFFilesManager.DataAccess
                     FileId = file.ID,
                     Task = task,
                     TaskId = task.ID,
-                    DueDate = DateTime.Now.AddDays(due),
+                    DueDate = newDueDate.AddDays(due),
                     DeferUntilDate = DateTime.Now.AddDays(task.DeferBy),
                     State = taskState
                 };

@@ -27,7 +27,7 @@ namespace RRFFilesManager.DataAccess
 
         public TaskState GetByDescription(string description)
         {
-            var account = _context.TaskStates.FirstOrDefault(x => x.Description == description);
+            var account = _context.TaskStates.FirstOrDefault(x => x.Description.ToLower() == description.ToLower());
 
             return account;
 

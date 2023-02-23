@@ -200,6 +200,9 @@
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
     <Compile Include="Abstractions\IClientNoteRepository.cs" />
+    <Compile Include="Abstractions\IDenialRepositoryy.cs" />
+    <Compile Include="Abstractions\IDenialBenefitRepository.cs" />
+    <Compile Include="Abstractions\IDenialStatusRepository.cs" />
     <Compile Include="Abstractions\ILATDataRepository.cs" />
     <Compile Include="Abstractions\IFileReviewRepository.cs" />
     <Compile Include="Abstractions\IFileStatusRepository.cs" />
@@ -230,6 +233,9 @@
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
     <Compile Include="ClientNoteRepository.cs" />
+    <Compile Include="DenialRepository.cs" />
+    <Compile Include="DenialBenefitRepository.cs" />
+    <Compile Include="DenialStatusRepository.cs" />
     <Compile Include="LATDataRepository.cs" />
     <Compile Include="FileStatusRepository.cs" />
     <Compile Include="LawyerTaskRepository.cs" />

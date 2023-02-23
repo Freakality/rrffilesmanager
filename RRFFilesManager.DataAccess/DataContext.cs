@@ -59,6 +59,10 @@ namespace RRFFilesManager.DataAccess
         public DbSet<FileStatus> FileStatus { get; set; }
         public DbSet<LATData> LATDatas { get; set; }
         public DbSet<Permission> Permissions { get; set; }
+        public DbSet<Denial> Denials { get; set; }
+        public DbSet<DenialBenefit> DenialBenefits { get; set; }
+        public DbSet<DenialStatus> DenialStatus { get; set; }
+
         public Lawyer User { get; set; }
 
 
@@ -226,6 +230,15 @@ namespace RRFFilesManager.DataAccess
                         break;
                     case "Contact":
                         value = Contacts.Find(n).ToString();
+                        break;
+                    case "Denial":
+                        value = Denials.Find(n).ToString();
+                        break;
+                    case "DenialBenefit":
+                        value = DenialBenefits.Find(n).ToString();
+                        break;
+                    case "DenialStatus":
+                        value = DenialStatus.Find(n).ToString();
                         break;
                     case "DisabilityInsuranceCompany":
                         value = DisabilityInsuranceCompanies.Find(n).ToString();
