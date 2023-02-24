@@ -25,6 +25,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly IFileRepository _fileRepository;
         private readonly Logic.FileManager _fileManager;
         private readonly IFileStatusRepository _fileStatusRepository;
+        private readonly IQuestionnaireFieldMapperRepository _questionnaireFieldMapperRepository;
         public PreliminaryInfo()
         {
             _matterTypeRepository = Program.GetService<IMatterTypeRepository>();
@@ -33,6 +34,7 @@ namespace RRFFilesManager.IntakeForm
             _lawyerRepository = Program.GetService<ILawyerRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
             _fileStatusRepository = Program.GetService<IFileStatusRepository>();
+            _questionnaireFieldMapperRepository = Program.GetService<IQuestionnaireFieldMapperRepository>();
             _fileManager = new Logic.FileManager();
             InitializeComponent();
             Initialize();

@@ -61,6 +61,7 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<IDenialStatusRepository, DenialStatusRepository>();
             services.AddTransient<IDenialBenefitRepository, DenialBenefitRepository>();
             services.AddTransient<ILoggedUser, LoggedUser>();
+            services.AddTransient<IQuestionnaireFieldMapperRepository, QuestionnaireFieldMapperRepository>();
             return services;
         }
     }

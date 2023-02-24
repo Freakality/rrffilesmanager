@@ -62,6 +62,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<Denial> Denials { get; set; }
         public DbSet<DenialBenefit> DenialBenefits { get; set; }
         public DbSet<DenialStatus> DenialStatus { get; set; }
+        public DbSet<QuestionnaireFieldMapper> QuestionnaireFieldMappers { get; set; }
 
         public Lawyer User { get; set; }
 
@@ -329,6 +330,9 @@ namespace RRFFilesManager.DataAccess
                         break;
                     case "UploadArchiveSettings":
                         value = UploadArchivesSettings.Find(n).ToString();
+                        break;
+                    case "QuestionnaireFieldMappers":
+                        value = QuestionnaireFieldMappers.Find(n).ToString();
                         break;
 
                 }
