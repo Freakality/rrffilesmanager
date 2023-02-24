@@ -7,12 +7,10 @@ using System.Linq;
 using System.Text;
 
 using System.Windows.Forms;
-using RRFFilesManager.DataAccess;
 using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
-using System.IO;
-using ClosedXML.Excel;
+using RRFFilesManager.Controls.IntakeControls;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -25,7 +23,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly IFileRepository _fileRepository;
         private readonly Logic.FileManager _fileManager;
         private readonly IFileStatusRepository _fileStatusRepository;
-        private readonly IQuestionnaireFieldMapperRepository _questionnaireFieldMapperRepository;
+        private readonly QuestionnaireManager _questionnaireManager;
         public PreliminaryInfo()
         {
             _matterTypeRepository = Program.GetService<IMatterTypeRepository>();
@@ -34,8 +32,8 @@ namespace RRFFilesManager.IntakeForm
             _lawyerRepository = Program.GetService<ILawyerRepository>();
             _fileRepository = Program.GetService<IFileRepository>();
             _fileStatusRepository = Program.GetService<IFileStatusRepository>();
-            _questionnaireFieldMapperRepository = Program.GetService<IQuestionnaireFieldMapperRepository>();
             _fileManager = new Logic.FileManager();
+            _questionnaireManager = new QuestionnaireManager();
             InitializeComponent();
             Initialize();
         }
@@ -255,87 +253,11 @@ namespace RRFFilesManager.IntakeForm
                 MessageBox.Show("Please select an Intake first.");
                 return;
             }
-            OpenFileDialog openTaskDialog = new OpenFileDialog();
-            DataTable dt = new DataTable();
-            openTaskDialog.Filter = "Excel(*.xlsx;*.xlsm;*.xlsb)|*.xlsx;*.xlsm;*.xlsb";
-            try
-            {
-                if (openTaskDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    if (openTaskDialog.CheckFileExists)
-                    {
-                        string path = Path.GetFullPath(openTaskDialog.FileName);
-                        if (path.Contains("xlsb"))
-                        {
-                            path = Excel.XLSXConvert(path);
-                        }
-                        using (ClosedXML.Excel.XLWorkbook workBook = new ClosedXML.Excel.XLWorkbook(path))
-                        {
-                            foreach (IXLWorksheet sheet in workBook.Worksheets)
-                            {
-                                //Read the first Sheet from Excel file.
-                                IXLWorksheet workSheet = sheet;
-                                if (sheet.Name.ToLower() != "output")
-                                    continue;
-                                //Create a new DataTable.
-                                dt.TableName = sheet.Name;
-                                //Loop through the Worksheet rows.
-                                bool firstCol = true;
-                                //bool firstRowF = true;
-                                //bool firstRowV = true;
-                                foreach (IXLRow row in workSheet.Rows())
-                                {
-                                    //Use the first row to add columns to DataTable.
-                                    if (firstCol)
-                                    {
-                                        foreach (IXLCell cell in row.Cells())
-                                        {
-                                            /*if (firstRowF)
-                                            {
-                                                firstRowF = false;
-                                                continue;
-                                            }*/
-                                            dt.Columns.Add(cell.Value.ToString());
-                                        }
-                                        firstCol = false;
-                                        continue;
-                                    }
-                                    else
-                                    {
-                                        dt.Rows.Add();
-                                        int i = 0;
-                                        foreach (IXLCell cell in row.Cells(1, dt.Columns.Count))
-                                        {
-                                            /*if (firstRowV)
-                                            {
-                                                firstRowV = false;
-                                                continue;
-                                            }*/
-                                            dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
-                                            i++;
-                                            if (i > 1)
-                                                break;
-                                        }
-                                    }
-                                }
-                                break;
-                            }
-                        }
-                        Home.IntakeForm.SetQData(dt);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please upload a valid Excel file.");
-                }
-            }
-            catch (Exception ex)
-            {
-                //it will give if file is already exits..
-                MessageBox.Show(ex.Message);
-            }
+            var dataTable = _questionnaireManager.Import();
 
-
+            var form = Utils.Utils.OpenForm<ImportQuestionnaireFields>();
+            form.SetFieldsDataGridViewDataSource(dataTable);
+            
         }
     }
 }

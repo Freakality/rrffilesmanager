@@ -37,17 +37,17 @@ namespace RRFFilesManager.IntakeForm
         }
 
         private Intake intake;
-        private DataTable questionnaireData;
+        //private DataTable questionnaireData;
         public Intake Intake => intake ?? (intake = new Intake());
 
-        public void SetQData(DataTable dt)
-        {
-            this.questionnaireData = dt;
-            if (questionnaireData == null)
-                return;
-            else
-                MessageBox.Show("Questionnaire data has been loaded.");
-        }
+        //public void SetQData(DataTable dt)
+        //{
+        //    this.questionnaireData = dt;
+        //    if (questionnaireData == null)
+        //        return;
+        //    else
+        //        MessageBox.Show("Questionnaire data has been loaded.");
+        //}
         public void SetIntake(Intake intake)
         {
             this.intake = intake;

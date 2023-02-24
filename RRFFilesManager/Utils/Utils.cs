@@ -57,30 +57,34 @@ namespace RRFFilesManager.Utils
             Content.Controls[0].Dock = DockStyle.Fill;
         }
 
-        public static T OpenForm<T>(Form from = null) where T : Form, new()
+
+        public static T OpenForm<T>(Form from = null, FormClosingEventHandler formClosingEventHandler = null) where T : Form, new()
         {
             from?.Hide();
             PleaseWait.Instance.Show();
             var form = new T();
             form.Show();
             PleaseWait.Instance.Hide();
-            form.FormClosing += ReturnHome_FormClosing;
+            if (formClosingEventHandler != null)
+                form.FormClosing += formClosingEventHandler;
             return form;
         }
+
+        public static T OpenFormHome<T>(Form from = null) where T : Form, new()
+        {
+            return OpenForm<T>(from, ReturnHome_FormClosing);
+        }
+
         public static T OpenFormLogIn<T>(Form from = null) where T : Form, new()
         {
-            from?.Hide();
-            PleaseWait.Instance.Show();
-            var form = new T();
-            form.Show();
-            PleaseWait.Instance.Hide();
-            form.FormClosing += ReturnLogIn_FormClosing;
-            return form;
+            return OpenForm<T>(from, ReturnLogIn_FormClosing);
         }
+
         private static void ReturnHome_FormClosing(object sender, FormClosingEventArgs e)
         {
             CloseForm(sender as Form, Home.Instance);
         }
+
         private static void ReturnLogIn_FormClosing(object sender, FormClosingEventArgs e)
         {
             CloseForm(sender as Form, LoginUI.Instance);
