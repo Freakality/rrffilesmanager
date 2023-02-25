@@ -196,7 +196,7 @@ namespace RRFFilesManager
         {
             
         }
-        private void GetClearance(Button b)
+        internal int GetClearance(Button b)
         {
             Permission p = _permissionRepository.GetByDescription(b.Name);
             if (p != null)
@@ -207,6 +207,7 @@ namespace RRFFilesManager
             {
                 clearance = 10;
             }
+            return clearance;
         }
         private void ImportDocumentsButton_Click(object sender, EventArgs e)
         {

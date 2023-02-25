@@ -39,6 +39,10 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
                 p.MinClearance = newClearance;
                 _permissionRepository.Insert(p);
             }
+            string message = $"Permissions for the '{b.Text}' functionality have been updated.";
+            if (b.FindForm().Name == "FileManager")
+                message += $"{Environment.NewLine}Visible changes will appear the next time this screen is opened.";
+            MessageBox.Show(message);
         }
 
         private void HomePermissionsContextMenuStrip_Opening(object sender, CancelEventArgs e)

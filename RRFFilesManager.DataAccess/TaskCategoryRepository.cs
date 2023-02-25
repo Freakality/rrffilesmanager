@@ -57,7 +57,7 @@ namespace RRFFilesManager.DataAccess
         public IEnumerable<TaskCategory> Search(string searchText, bool? hold = null, int? take = null)
         {
             var query = _context.TaskCategories.Where(s =>
-                (s.Description.Equals(searchText))
+                (s.Description.ToLower().Equals(searchText.ToLower()))
 
             );
 
