@@ -592,6 +592,12 @@
     <Compile Include="Controls\FileControls\UserControls\TaskActions.Designer.cs">
       <DependentUpon>TaskActions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\IntakeControls\ImportQuestionnaireFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\IntakeControls\ImportQuestionnaireFields.Designer.cs">
+      <DependentUpon>ImportQuestionnaireFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\LoginUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -828,6 +834,7 @@
     <Compile Include="Logic\FileManager.cs" />
     <Compile Include="Logic\IntakeManager.cs" />
     <Compile Include="Logic\Outlook.cs" />
+    <Compile Include="Logic\QuestionnaireManager.cs" />
     <Compile Include="Logic\UserManager.cs" />
     <Compile Include="Logic\XLWorkbook.cs" />
     <Compile Include="PdfAxHost .cs">
@@ -1010,6 +1017,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\UserControls\TaskActions.resx">
       <DependentUpon>TaskActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\IntakeControls\ImportQuestionnaireFields.resx">
+      <DependentUpon>ImportQuestionnaireFields.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>

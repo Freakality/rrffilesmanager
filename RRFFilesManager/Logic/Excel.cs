@@ -17,7 +17,7 @@ namespace RRFFilesManager.Logic
             var workbook = excelApp?.Workbooks?.Open(path);
             excelApp.Visible = true;
         }
-        public static string XLSXConvert(string strPath)
+        public static string ToXLSX(string strPath)
         {
             try
             {

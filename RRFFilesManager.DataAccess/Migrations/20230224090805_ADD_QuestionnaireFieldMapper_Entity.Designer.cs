@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RRFFilesManager.DataAccess;
 
 namespace RRFFilesManager.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230224090805_ADD_QuestionnaireFieldMapper_Entity")]
+    partial class ADD_QuestionnaireFieldMapper_Entity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1987,13 +1989,7 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<DateTime>("LiabilityMeetingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("MediationResolutionDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("MedicalSummariesPreDiscDueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("MemoToBeServedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("PlaintiffAODSent")
@@ -2002,28 +1998,13 @@ namespace RRFFilesManager.DataAccess.Migrations
                     b.Property<DateTime>("PreDiscoveryMeetingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("PreMedSttleMeetingDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("PrePleadingsMeetingDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("PrePreTrialMeetingDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("PreTrialResolutionDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("PreTrialToBeServedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("ProposedDateIssueSOC")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("ProposedDateToServeSOC")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("TrialDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("ID");

@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\Extensions.cs" />
+    <Compile Include="Abstractions\IQuestionnaireFieldMapperRepository.cs" />
     <Compile Include="Abstractions\IDrugRepository.cs" />
     <Compile Include="Abstractions\IComissionCalculatorRepository.cs" />
     <Compile Include="Abstractions\IClientRepository.cs" />
@@ -232,6 +233,11 @@
     <Compile Include="Abstractions\ITimelineRepository.cs" />
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
+    <Compile Include="Migrations\20230224090805_ADD_QuestionnaireFieldMapper_Entity.cs" />
+    <Compile Include="Migrations\20230224090805_ADD_QuestionnaireFieldMapper_Entity.designer.cs">
+      <DependentUpon>20230224090805_ADD_QuestionnaireFieldMapper_Entity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionnaireFieldMapperRepository.cs" />
     <Compile Include="ClientNoteRepository.cs" />
     <Compile Include="DenialRepository.cs" />
     <Compile Include="DenialBenefitRepository.cs" />
