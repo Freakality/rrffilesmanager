@@ -398,6 +398,7 @@ namespace RRFFilesManager
                     }
                 }
             }
+        }
         private void SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes()
         {
             Cbb_TaskLogStateFilter.Items.Clear();
@@ -1364,7 +1365,7 @@ namespace RRFFilesManager
             {
                 Busqueda();
             }
-            else if (TabControl5.SelectedTab == Denials)
+            else if (ABOverviewTab.SelectedTab == Denials)
             {
                 BusquedaDenials();
             }
@@ -1382,7 +1383,7 @@ namespace RRFFilesManager
             }
             else
             {
-                TabControl5.SelectedTab = ABBinderTab;
+                ABOverviewTab.SelectedTab = ABBinderTab;
                 TabControl1.SelectedIndex = 0;
                 MessageBox.Show($"You have to search a file", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -2308,7 +2309,7 @@ namespace RRFFilesManager
         {
             bool update = false;
             abOverview.File = File;
-            
+
             if (ABOPreJune1st2016ComboBox.SelectedItem != null)
             {
                 abOverview.PolicyPreJune1st2016 = ABOPreJune1st2016ComboBox.SelectedItem.ToString();
@@ -2483,6 +2484,8 @@ namespace RRFFilesManager
                 abOverview.LastUpdatedDate = DateTime.Now;
             }
             return update;
+        }
+
         private void TaskLogFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (File != null)
