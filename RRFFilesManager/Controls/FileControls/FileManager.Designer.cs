@@ -201,11 +201,12 @@
             System.Windows.Forms.Label TBoxDateOfDefendantDiscoveryLabel;
             System.Windows.Forms.Label TBoxTimelineMediationResolutionDateLabel;
             System.Windows.Forms.Label TBoxTimelinePreMedSttleMeetingDateLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileManager));
             this.InvoicesDataGridView = new System.Windows.Forms.DataGridView();
             this.GroupBox23 = new System.Windows.Forms.GroupBox();
@@ -283,6 +284,7 @@
             this.TBoxTimelinePreMedSttleMeetingDateTextBox = new System.Windows.Forms.TextBox();
             this.TBoxAllDefendantUndertakingRecdTextBox = new System.Windows.Forms.TextBox();
             this.TBoxDatePlaintiffUndertakingCompleteTextBox = new System.Windows.Forms.TextBox();
+            this.TimelineSaveBtn = new System.Windows.Forms.Button();
             this.Liability = new System.Windows.Forms.TabPage();
             this.EmploymentEconomicLoss = new System.Windows.Forms.TabPage();
             this.Pleadings = new System.Windows.Forms.TabPage();
@@ -422,6 +424,7 @@
             this.ABOACBeingIncurredLabel = new System.Windows.Forms.Label();
             this.ABOLatestForm1DateTextBox = new System.Windows.Forms.TextBox();
             this.ABOWhosFundingLabel = new System.Windows.Forms.Label();
+            this.ABOWhosFundingComboBox = new System.Windows.Forms.ComboBox();
             this.ABOLatestForm1DateLabel = new System.Windows.Forms.Label();
             this.ABOInitialAmountLabel = new System.Windows.Forms.Label();
             this.ABOInitialAmountTextBox = new System.Windows.Forms.TextBox();
@@ -455,7 +458,7 @@
             this.ABOBenefitsEndDate = new System.Windows.Forms.DateTimePicker();
             this.ABOMRBAmountPaidToDateLabel = new System.Windows.Forms.Label();
             this.ABOBenefitsEndDateTextBox = new System.Windows.Forms.TextBox();
-            this.ABOCurrentBenefitsLevelLabel = new System.Windows.Forms.Label();
+            this.ABOCurrentBenefitsLevelLabel = new System.Windows.Forms.Label();            
             this.ABOBenefitsEndDateLabel = new System.Windows.Forms.Label();
             this.ABOPotentialOffsetsGroupBox = new System.Windows.Forms.GroupBox();
             this.ABOPotentialOffsetsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -533,22 +536,13 @@
             this.label113 = new System.Windows.Forms.Label();
             this.Denials = new System.Windows.Forms.TabPage();
             this.ABDenialsDataGridView = new System.Windows.Forms.DataGridView();
-            this.NameofBenefit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountDispute = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateSubmitted = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateDenied = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameServiceProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RangeFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RangeTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DisputeRelatedTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LimitationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox31 = new System.Windows.Forms.GroupBox();
+            this.btnNewDenials = new System.Windows.Forms.Button();
             this.Label110 = new System.Windows.Forms.Label();
-            this.ComboBox5 = new System.Windows.Forms.ComboBox();
+            this.CboxStatusDenialsFilemanager = new System.Windows.Forms.ComboBox();
             this.Button3 = new System.Windows.Forms.Button();
             this.Label109 = new System.Windows.Forms.Label();
-            this.ComboBox4 = new System.Windows.Forms.ComboBox();
+            this.CboxBenefitDenialsFilemanager = new System.Windows.Forms.ComboBox();
             this.ProductionRequests = new System.Windows.Forms.TabPage();
             this.ABLAT = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -1057,6 +1051,18 @@
             this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.CurrentFileStatusComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
+            this.NameofBenefit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountDispute = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateDenied = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameServiceProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeService = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RangeFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RangeTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DisputeRelatedTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TreamentPlanDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DenialStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DenialNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
             TBoxActualDateSOCServedLabel = new System.Windows.Forms.Label();
             TBoxPreDiscoveryMeetingDateLabel = new System.Windows.Forms.Label();
@@ -2970,8 +2976,8 @@
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.InvoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InvoicesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -3068,8 +3074,8 @@
             // PLReportsDataGridView
             // 
             this.PLReportsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.PLReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PLReportsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PLReportsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -3137,8 +3143,8 @@
             // MedApptsDataGridView
             // 
             this.MedApptsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.MedApptsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MedApptsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MedApptsDataGridView.Location = new System.Drawing.Point(3, 54);
@@ -3912,6 +3918,24 @@
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.Size = new System.Drawing.Size(251, 23);
             this.TBoxDatePlaintiffUndertakingCompleteTextBox.TabIndex = 41;
             // 
+            // TimelineSaveBtn
+            // 
+            this.TimelineSaveBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TimelineSaveBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.TimelineLayoutPanel.SetColumnSpan(this.TimelineSaveBtn, 3);
+            this.TimelineSaveBtn.Enabled = false;
+            this.TimelineSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TimelineSaveBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.TimelineSaveBtn.ForeColor = System.Drawing.Color.White;
+            this.TimelineSaveBtn.Location = new System.Drawing.Point(852, 303);
+            this.TimelineSaveBtn.Name = "TimelineSaveBtn";
+            this.TimelineLayoutPanel.SetRowSpan(this.TimelineSaveBtn, 2);
+            this.TimelineSaveBtn.Size = new System.Drawing.Size(265, 32);
+            this.TimelineSaveBtn.TabIndex = 167;
+            this.TimelineSaveBtn.Text = "Save Timeline";
+            this.TimelineSaveBtn.UseVisualStyleBackColor = false;
+            this.TimelineSaveBtn.Click += new System.EventHandler(this.TimelineSaveBtn_Click);
+            // 
             // Liability
             // 
             this.Liability.Location = new System.Drawing.Point(4, 26);
@@ -3963,8 +3987,8 @@
             // UndertakingsDataGridView
             // 
             this.UndertakingsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.UndertakingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UndertakingsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -5101,7 +5125,7 @@
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(4583, 1091);
+            this.Btn_Save.Location = new System.Drawing.Point(4514, 1238);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -5185,20 +5209,6 @@
             this.ABOACBAmountPaidToDateTextBox.Size = new System.Drawing.Size(126, 23);
             this.ABOACBAmountPaidToDateTextBox.TabIndex = 21;
             // 
-            // ABOWhosFundingComboBox
-            // 
-            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOWhosFundingComboBox, 2);
-            this.ABOWhosFundingComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOWhosFundingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOWhosFundingComboBox.FormattingEnabled = true;
-            this.ABOWhosFundingComboBox.Items.AddRange(new object[] {
-            "Insurer",
-            "Protected"});
-            this.ABOWhosFundingComboBox.Location = new System.Drawing.Point(345, 3);
-            this.ABOWhosFundingComboBox.Name = "ABOWhosFundingComboBox";
-            this.ABOWhosFundingComboBox.Size = new System.Drawing.Size(126, 25);
-            this.ABOWhosFundingComboBox.TabIndex = 16;
-            // 
             // ABOInitiallyApprovedLabel
             // 
             this.ABOInitiallyApprovedLabel.AutoSize = true;
@@ -5220,6 +5230,102 @@
             this.ABOACBAmountPaidToDateLabel.Text = "Amount Paid To Date";
             // 
             // ABOInitiallyApprovedComboBox
+            // 
+            this.ABOInitiallyApprovedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitiallyApprovedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOInitiallyApprovedComboBox.FormattingEnabled = true;
+            this.ABOInitiallyApprovedComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOInitiallyApprovedComboBox.Location = new System.Drawing.Point(117, 3);
+            this.ABOInitiallyApprovedComboBox.Name = "ABOInitiallyApprovedComboBox";
+            this.ABOInitiallyApprovedComboBox.Size = new System.Drawing.Size(108, 25);
+            this.ABOInitiallyApprovedComboBox.TabIndex = 7;
+            // 
+            // ABOACBeingIncurredComboBox
+            // 
+            this.ABOACBeingIncurredComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBeingIncurredComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOACBeingIncurredComboBox.FormattingEnabled = true;
+            this.ABOACBeingIncurredComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOACBeingIncurredComboBox.Location = new System.Drawing.Point(117, 67);
+            this.ABOACBeingIncurredComboBox.Name = "ABOACBeingIncurredComboBox";
+            this.ABOACBeingIncurredComboBox.Size = new System.Drawing.Size(108, 25);
+            this.ABOACBeingIncurredComboBox.TabIndex = 14;
+            // 
+            // ABOLatestForm1Date
+            // 
+            this.ABOLatestForm1Date.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLatestForm1Date.Location = new System.Drawing.Point(459, 35);
+            this.ABOLatestForm1Date.Name = "ABOLatestForm1Date";
+            this.ABOLatestForm1Date.Size = new System.Drawing.Size(12, 23);
+            this.ABOLatestForm1Date.TabIndex = 18;
+            // 
+            // ABOACBeingIncurredLabel
+            // 
+            this.ABOACBeingIncurredLabel.AutoSize = true;
+            this.ABOACBeingIncurredLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBeingIncurredLabel.Location = new System.Drawing.Point(3, 64);
+            this.ABOACBeingIncurredLabel.Name = "ABOACBeingIncurredLabel";
+            this.ABOACBeingIncurredLabel.Size = new System.Drawing.Size(108, 34);
+            this.ABOACBeingIncurredLabel.TabIndex = 13;
+            this.ABOACBeingIncurredLabel.Text = "A/C Being Incurred:";
+            // 
+            // ABOLatestForm1DateTextBox
+            // 
+            this.ABOLatestForm1DateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLatestForm1DateTextBox.Location = new System.Drawing.Point(345, 35);
+            this.ABOLatestForm1DateTextBox.Name = "ABOLatestForm1DateTextBox";
+            this.ABOLatestForm1DateTextBox.Size = new System.Drawing.Size(108, 23);
+            this.ABOLatestForm1DateTextBox.TabIndex = 19;
+            // 
+            // ABOWhosFundingLabel
+            // 
+            this.ABOWhosFundingLabel.AutoSize = true;
+            this.ABOWhosFundingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOWhosFundingLabel.Location = new System.Drawing.Point(231, 0);
+            this.ABOWhosFundingLabel.Name = "ABOWhosFundingLabel";
+            this.ABOWhosFundingLabel.Size = new System.Drawing.Size(108, 32);
+            this.ABOWhosFundingLabel.TabIndex = 15;
+            this.ABOWhosFundingLabel.Text = "Who\'s Funding";
+            // 
+            // ABOWhosFundingComboBox
+            // 
+            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOWhosFundingComboBox, 2);
+            this.ABOWhosFundingComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOWhosFundingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOWhosFundingComboBox.FormattingEnabled = true;
+            this.ABOWhosFundingComboBox.Items.AddRange(new object[] {
+            "Insurer",
+            "Protected"});
+            this.ABOWhosFundingComboBox.Location = new System.Drawing.Point(345, 3);
+            this.ABOWhosFundingComboBox.Name = "ABOWhosFundingComboBox";
+            this.ABOWhosFundingComboBox.Size = new System.Drawing.Size(126, 25);
+            this.ABOWhosFundingComboBox.TabIndex = 16;
+            // 
+            // ABOLatestForm1DateLabel
+            // 
+            this.ABOLatestForm1DateLabel.AutoSize = true;
+            this.ABOLatestForm1DateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLatestForm1DateLabel.Location = new System.Drawing.Point(231, 32);
+            this.ABOLatestForm1DateLabel.Name = "ABOLatestForm1DateLabel";
+            this.ABOLatestForm1DateLabel.Size = new System.Drawing.Size(108, 32);
+            this.ABOLatestForm1DateLabel.TabIndex = 17;
+            this.ABOLatestForm1DateLabel.Text = "Latest Form 1";
+            // 
+            // ABOInitialAmountLabel
+            // 
+            this.ABOInitialAmountLabel.AutoSize = true;
+            this.ABOInitialAmountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitialAmountLabel.Location = new System.Drawing.Point(3, 32);
+            this.ABOInitialAmountLabel.Name = "ABOInitialAmountLabel";
+            this.ABOInitialAmountLabel.Size = new System.Drawing.Size(108, 32);
+            this.ABOInitialAmountLabel.TabIndex = 8;
+            this.ABOInitialAmountLabel.Text = "Initial Amount:";
+            // 
+            // ABOInitialAmountTextBox
             // 
             this.ABOInitiallyApprovedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOInitiallyApprovedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5642,6 +5748,31 @@
             this.ABOCurrentBenefitsLevelLabel.Size = new System.Drawing.Size(107, 29);
             this.ABOCurrentBenefitsLevelLabel.TabIndex = 0;
             this.ABOCurrentBenefitsLevelLabel.Text = "Current Benefits Level";
+            // 
+            // ABOCurrentBenefitsLevelComboBox
+            // 
+            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOCurrentBenefitsLevelComboBox, 2);
+            this.ABOCurrentBenefitsLevelComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCurrentBenefitsLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOCurrentBenefitsLevelComboBox.FormattingEnabled = true;
+            this.ABOCurrentBenefitsLevelComboBox.Items.AddRange(new object[] {
+            "MIG",
+            "Non-CAT",
+            "CAT"});
+            this.ABOCurrentBenefitsLevelComboBox.Location = new System.Drawing.Point(116, 3);
+            this.ABOCurrentBenefitsLevelComboBox.Name = "ABOCurrentBenefitsLevelComboBox";
+            this.ABOCurrentBenefitsLevelComboBox.Size = new System.Drawing.Size(124, 25);
+            this.ABOCurrentBenefitsLevelComboBox.TabIndex = 6;
+            // 
+            // ABOBenefitsEndDateLabel
+            // 
+            this.ABOBenefitsEndDateLabel.AutoSize = true;
+            this.ABOBenefitsEndDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOBenefitsEndDateLabel.Location = new System.Drawing.Point(3, 29);
+            this.ABOBenefitsEndDateLabel.Name = "ABOBenefitsEndDateLabel";
+            this.ABOBenefitsEndDateLabel.Size = new System.Drawing.Size(107, 29);
+            this.ABOBenefitsEndDateLabel.TabIndex = 7;
+            this.ABOBenefitsEndDateLabel.Text = "Benefits End:";
             // 
             // ABOBenefitsEndDateLabel
             // 
@@ -6141,7 +6272,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1443, 631);
+            this.btnSave.Location = new System.Drawing.Point(1443, 566);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6477,94 +6608,46 @@
             // ABDenialsDataGridView
             // 
             this.ABDenialsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ABDenialsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ABDenialsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ABDenialsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameofBenefit,
             this.AmountDispute,
-            this.DateSubmitted,
             this.DateDenied,
             this.NameServiceProvider,
             this.TypeService,
             this.RangeFrom,
             this.RangeTo,
             this.DisputeRelatedTo,
-            this.LimitationDate});
+            this.LimitationDate,
+            this.TreamentPlanDate,
+            this.DenialStatus,
+            this.DenialNotes});
             this.ABDenialsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABDenialsDataGridView.EnableHeadersVisualStyles = false;
             this.ABDenialsDataGridView.Location = new System.Drawing.Point(3, 66);
             this.ABDenialsDataGridView.Name = "ABDenialsDataGridView";
             this.ABDenialsDataGridView.RowTemplate.Height = 40;
-            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1308, 283);
+            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1308, 279);
             this.ABDenialsDataGridView.TabIndex = 0;
-            // 
-            // NameofBenefit
-            // 
-            this.NameofBenefit.DataPropertyName = "NameofBenefit";
-            this.NameofBenefit.HeaderText = "Name of Benefit";
-            this.NameofBenefit.Name = "NameofBenefit";
-            // 
-            // AmountDispute
-            // 
-            this.AmountDispute.DataPropertyName = "AmountDispute";
-            this.AmountDispute.HeaderText = "Amount Dispute";
-            this.AmountDispute.Name = "AmountDispute";
-            // 
-            // DateSubmitted
-            // 
-            this.DateSubmitted.DataPropertyName = "DateSubmitted";
-            this.DateSubmitted.HeaderText = "Date Submitted";
-            this.DateSubmitted.Name = "DateSubmitted";
-            // 
-            // DateDenied
-            // 
-            this.DateDenied.DataPropertyName = "DateDenied";
-            this.DateDenied.HeaderText = "Date Denied";
-            this.DateDenied.Name = "DateDenied";
-            // 
-            // NameServiceProvider
-            // 
-            this.NameServiceProvider.DataPropertyName = "NameServiceProvider";
-            this.NameServiceProvider.HeaderText = "Name Service Provider";
-            this.NameServiceProvider.Name = "NameServiceProvider";
-            // 
-            // TypeService
-            // 
-            this.TypeService.DataPropertyName = "TypeService";
-            this.TypeService.HeaderText = "Type Service";
-            this.TypeService.Name = "TypeService";
-            // 
-            // RangeFrom
-            // 
-            this.RangeFrom.DataPropertyName = "RangeFrom";
-            this.RangeFrom.HeaderText = "Range From";
-            this.RangeFrom.Name = "RangeFrom";
-            // 
-            // RangeTo
-            // 
-            this.RangeTo.DataPropertyName = "RangeTo";
-            this.RangeTo.HeaderText = "Range To";
-            this.RangeTo.Name = "RangeTo";
-            // 
-            // DisputeRelatedTo
-            // 
-            this.DisputeRelatedTo.DataPropertyName = "DisputeRelatedTo";
-            this.DisputeRelatedTo.HeaderText = "Dispute Related To";
-            this.DisputeRelatedTo.Name = "DisputeRelatedTo";
-            // 
-            // LimitationDate
-            // 
-            this.LimitationDate.DataPropertyName = "LimitationDate";
-            this.LimitationDate.HeaderText = "Limitation Date";
-            this.LimitationDate.Name = "LimitationDate";
             // 
             // GroupBox31
             // 
+            this.GroupBox31.Controls.Add(this.btnNewDenials);
             this.GroupBox31.Controls.Add(this.Label110);
-            this.GroupBox31.Controls.Add(this.ComboBox5);
+            this.GroupBox31.Controls.Add(this.CboxStatusDenialsFilemanager);
             this.GroupBox31.Controls.Add(this.Button3);
             this.GroupBox31.Controls.Add(this.Label109);
-            this.GroupBox31.Controls.Add(this.ComboBox4);
+            this.GroupBox31.Controls.Add(this.CboxBenefitDenialsFilemanager);
             this.GroupBox31.Dock = System.Windows.Forms.DockStyle.Top;
             this.GroupBox31.Location = new System.Drawing.Point(3, 3);
             this.GroupBox31.Name = "GroupBox31";
@@ -6573,52 +6656,72 @@
             this.GroupBox31.TabStop = false;
             this.GroupBox31.Text = "Filters";
             // 
+            // btnNewDenials
+            // 
+            this.btnNewDenials.BackColor = System.Drawing.Color.Maroon;
+            this.btnNewDenials.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewDenials.ForeColor = System.Drawing.Color.White;
+            this.btnNewDenials.Location = new System.Drawing.Point(1128, 20);
+            this.btnNewDenials.Name = "btnNewDenials";
+            this.btnNewDenials.Size = new System.Drawing.Size(177, 37);
+            this.btnNewDenials.TabIndex = 6;
+            this.btnNewDenials.Text = "Create a new denials";
+            this.btnNewDenials.UseVisualStyleBackColor = false;
+            this.btnNewDenials.Click += new System.EventHandler(this.btnNewDenials_Click);
+            // 
             // Label110
             // 
             this.Label110.AutoSize = true;
-            this.Label110.Location = new System.Drawing.Point(209, 23);
+            this.Label110.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label110.Location = new System.Drawing.Point(209, 29);
             this.Label110.Name = "Label110";
-            this.Label110.Size = new System.Drawing.Size(46, 17);
+            this.Label110.Size = new System.Drawing.Size(46, 16);
             this.Label110.TabIndex = 4;
             this.Label110.Text = "Status";
             // 
-            // ComboBox5
+            // CboxStatusDenialsFilemanager
             // 
-            this.ComboBox5.FormattingEnabled = true;
-            this.ComboBox5.Items.AddRange(new object[] {
+            this.CboxStatusDenialsFilemanager.FormattingEnabled = true;
+            this.CboxStatusDenialsFilemanager.Items.AddRange(new object[] {
             "Pending",
             "Withdrawn",
             "Filed for LAT",
             "Claiming in Tort",
             "Settled",
             "Not Pursuing"});
-            this.ComboBox5.Location = new System.Drawing.Point(270, 20);
-            this.ComboBox5.Name = "ComboBox5";
-            this.ComboBox5.Size = new System.Drawing.Size(113, 25);
-            this.ComboBox5.TabIndex = 5;
+            this.CboxStatusDenialsFilemanager.Location = new System.Drawing.Point(270, 26);
+            this.CboxStatusDenialsFilemanager.Name = "CboxStatusDenialsFilemanager";
+            this.CboxStatusDenialsFilemanager.Size = new System.Drawing.Size(113, 25);
+            this.CboxStatusDenialsFilemanager.TabIndex = 5;
+            this.CboxStatusDenialsFilemanager.SelectedIndexChanged += new System.EventHandler(this.CboxsDenials_SelectedIndexChanged);
             // 
             // Button3
             // 
+            this.Button3.BackColor = System.Drawing.Color.Maroon;
+            this.Button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button3.ForeColor = System.Drawing.Color.White;
             this.Button3.Location = new System.Drawing.Point(422, 21);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(122, 26);
+            this.Button3.Size = new System.Drawing.Size(122, 35);
             this.Button3.TabIndex = 3;
             this.Button3.Text = "Clear Filters";
-            this.Button3.UseVisualStyleBackColor = true;
+            this.Button3.UseVisualStyleBackColor = false;
+            this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Label109
             // 
             this.Label109.AutoSize = true;
-            this.Label109.Location = new System.Drawing.Point(17, 23);
+            this.Label109.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label109.Location = new System.Drawing.Point(17, 29);
             this.Label109.Name = "Label109";
-            this.Label109.Size = new System.Drawing.Size(51, 17);
+            this.Label109.Size = new System.Drawing.Size(52, 16);
             this.Label109.TabIndex = 0;
             this.Label109.Text = "Benefit";
             // 
-            // ComboBox4
+            // CboxBenefitDenialsFilemanager
             // 
-            this.ComboBox4.FormattingEnabled = true;
-            this.ComboBox4.Items.AddRange(new object[] {
+            this.CboxBenefitDenialsFilemanager.FormattingEnabled = true;
+            this.CboxBenefitDenialsFilemanager.Items.AddRange(new object[] {
             "IRB - Pre-104",
             "IRB - Post 104",
             "Non-Earner",
@@ -6628,10 +6731,11 @@
             "HH",
             "MIG",
             "CAT "});
-            this.ComboBox4.Location = new System.Drawing.Point(78, 20);
-            this.ComboBox4.Name = "ComboBox4";
-            this.ComboBox4.Size = new System.Drawing.Size(113, 25);
-            this.ComboBox4.TabIndex = 2;
+            this.CboxBenefitDenialsFilemanager.Location = new System.Drawing.Point(78, 26);
+            this.CboxBenefitDenialsFilemanager.Name = "CboxBenefitDenialsFilemanager";
+            this.CboxBenefitDenialsFilemanager.Size = new System.Drawing.Size(113, 25);
+            this.CboxBenefitDenialsFilemanager.TabIndex = 2;
+            this.CboxBenefitDenialsFilemanager.SelectedIndexChanged += new System.EventHandler(this.CboxsDenials_SelectedIndexChanged);
             // 
             // ProductionRequests
             // 
@@ -11690,6 +11794,90 @@
             this.CurrentFileStatusComboBox.TabIndex = 150;
             this.CurrentFileStatusComboBox.SelectedIndexChanged += new System.EventHandler(this.CurrentFileStatusComboBox_SelectedIndexChanged);
             // 
+            // NameofBenefit
+            // 
+            this.NameofBenefit.DataPropertyName = "DenialBenefit";
+            this.NameofBenefit.HeaderText = "Name of Benefit";
+            this.NameofBenefit.Name = "NameofBenefit";
+            this.NameofBenefit.Width = 105;
+            // 
+            // AmountDispute
+            // 
+            this.AmountDispute.DataPropertyName = "AmountinDispute";
+            this.AmountDispute.HeaderText = "Amount Dispute";
+            this.AmountDispute.Name = "AmountDispute";
+            this.AmountDispute.Width = 106;
+            // 
+            // DateDenied
+            // 
+            this.DateDenied.DataPropertyName = "DateDenied";
+            this.DateDenied.HeaderText = "Date Denied";
+            this.DateDenied.Name = "DateDenied";
+            this.DateDenied.Width = 105;
+            // 
+            // NameServiceProvider
+            // 
+            this.NameServiceProvider.DataPropertyName = "ServiceProvider";
+            this.NameServiceProvider.HeaderText = "Name Service Provider";
+            this.NameServiceProvider.Name = "NameServiceProvider";
+            this.NameServiceProvider.Width = 106;
+            // 
+            // TypeService
+            // 
+            this.TypeService.DataPropertyName = "ServiceType";
+            this.TypeService.HeaderText = "Type Service";
+            this.TypeService.Name = "TypeService";
+            this.TypeService.Width = 105;
+            // 
+            // RangeFrom
+            // 
+            this.RangeFrom.DataPropertyName = "RangeFrom";
+            this.RangeFrom.HeaderText = "Range From";
+            this.RangeFrom.Name = "RangeFrom";
+            this.RangeFrom.Width = 105;
+            // 
+            // RangeTo
+            // 
+            this.RangeTo.DataPropertyName = "RangeTo";
+            this.RangeTo.HeaderText = "Range To";
+            this.RangeTo.Name = "RangeTo";
+            this.RangeTo.Width = 106;
+            // 
+            // DisputeRelatedTo
+            // 
+            this.DisputeRelatedTo.DataPropertyName = "DisputeRelatedTo";
+            this.DisputeRelatedTo.HeaderText = "Dispute Related To";
+            this.DisputeRelatedTo.Name = "DisputeRelatedTo";
+            this.DisputeRelatedTo.Width = 105;
+            // 
+            // LimitationDate
+            // 
+            this.LimitationDate.DataPropertyName = "LimitationDate";
+            this.LimitationDate.HeaderText = "Limitation Date";
+            this.LimitationDate.Name = "LimitationDate";
+            this.LimitationDate.Width = 106;
+            // 
+            // TreamentPlanDate
+            // 
+            this.TreamentPlanDate.DataPropertyName = "TreatmentPlanDate";
+            this.TreamentPlanDate.HeaderText = "Treament Plan Date";
+            this.TreamentPlanDate.Name = "TreamentPlanDate";
+            this.TreamentPlanDate.Width = 105;
+            // 
+            // DenialStatus
+            // 
+            this.DenialStatus.DataPropertyName = "DenialStatus";
+            this.DenialStatus.HeaderText = "Status";
+            this.DenialStatus.Name = "DenialStatus";
+            this.DenialStatus.Width = 106;
+            // 
+            // DenialNotes
+            // 
+            this.DenialNotes.DataPropertyName = "DenialNotes";
+            this.DenialNotes.HeaderText = "Notes";
+            this.DenialNotes.Name = "DenialNotes";
+            this.DenialNotes.Width = 105;
+            // 
             // FileManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -12066,22 +12254,12 @@
         internal System.Windows.Forms.TabPage txtDateTo;
         internal System.Windows.Forms.TabPage Denials;
         internal System.Windows.Forms.DataGridView ABDenialsDataGridView;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn NameofBenefit;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn AmountDispute;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn DateSubmitted;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn DateDenied;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn NameServiceProvider;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn TypeService;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn RangeFrom;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn RangeTo;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn DisputeRelatedTo;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn LimitationDate;
         internal System.Windows.Forms.GroupBox GroupBox31;
         internal System.Windows.Forms.Label Label110;
-        internal System.Windows.Forms.ComboBox ComboBox5;
+        internal System.Windows.Forms.ComboBox CboxStatusDenialsFilemanager;
         internal System.Windows.Forms.Button Button3;
         internal System.Windows.Forms.Label Label109;
-        internal System.Windows.Forms.ComboBox ComboBox4;
+        internal System.Windows.Forms.ComboBox CboxBenefitDenialsFilemanager;
         internal System.Windows.Forms.TabPage ProductionRequests;
         internal System.Windows.Forms.TabPage ABLAT;
         private System.Windows.Forms.TabPage QuickABPaidToDate;
@@ -12746,6 +12924,19 @@
         internal System.Windows.Forms.ComboBox Cbb_TaskLogBusinessProcessFilter;
         internal System.Windows.Forms.Label label236;
         internal System.Windows.Forms.ComboBox Cbb_TaskLogFilterLawyers;
+        private System.Windows.Forms.Button btnNewDenials;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameofBenefit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountDispute;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateDenied;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameServiceProvider;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeService;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RangeFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RangeTo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DisputeRelatedTo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LimitationDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TreamentPlanDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DenialStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DenialNotes;
     }
 }
 

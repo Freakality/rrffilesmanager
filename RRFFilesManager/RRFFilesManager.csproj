@@ -452,6 +452,12 @@
     <Compile Include="Controls\FileControls\DaysCount.designer.cs">
       <DependentUpon>DaysCount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FileControls\DenialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FileControls\DenialsForm.Designer.cs">
+      <DependentUpon>DenialsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FileControls\FileManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -950,6 +956,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\DaysCount.resx">
       <DependentUpon>DaysCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FileControls\DenialsForm.resx">
+      <DependentUpon>DenialsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FileControls\FileManager.resx">
       <DependentUpon>FileManager.cs</DependentUpon>
