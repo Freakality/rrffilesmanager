@@ -541,6 +541,8 @@ namespace RRFFilesManager
                 ActionLogDataGridView.Columns["StatusId"].Visible = false;
                 ActionLogDataGridView.Columns["TaskIDNumber"].HeaderText = "Task ID";
                 ActionLogDataGridView.Columns["BusinessProcess"].HeaderText = "Business Process";
+                ActionLogDataGridView.Columns["TaskDescription"].HeaderText = "Description";
+                ActionLogDataGridView.Columns["ResponsibleLawyer"].HeaderText = "Lawyer";
                 ActionLogDataGridView.Columns["DueDate"].HeaderText = "Due Date";
                 ActionLogDataGridView.Columns["DeferUntilDate"].HeaderText = "Defer Until Date";
                 ActionLogDataGridView.Columns["TaskStartedDate"].HeaderText = "Started Date";
