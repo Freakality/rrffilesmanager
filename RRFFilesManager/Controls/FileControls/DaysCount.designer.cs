@@ -59,7 +59,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(83, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 23);
+            this.label1.Size = new System.Drawing.Size(135, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Days Selector";
             // 
@@ -82,12 +82,12 @@ namespace RRFFilesManager.Controls.FileControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(309, 162);
-            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CboxSelectionDay);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "DaysCount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);

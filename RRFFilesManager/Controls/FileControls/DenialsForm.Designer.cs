@@ -186,6 +186,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.txtLimitationDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLimitationDate.Location = new System.Drawing.Point(623, 83);
             this.txtLimitationDate.Name = "txtLimitationDate";
+            this.txtLimitationDate.ReadOnly = true;
             this.txtLimitationDate.Size = new System.Drawing.Size(123, 26);
             this.txtLimitationDate.TabIndex = 22;
             // 
@@ -194,6 +195,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.txtDateDenied.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateDenied.Location = new System.Drawing.Point(623, 50);
             this.txtDateDenied.Name = "txtDateDenied";
+            this.txtDateDenied.ReadOnly = true;
             this.txtDateDenied.Size = new System.Drawing.Size(123, 26);
             this.txtDateDenied.TabIndex = 21;
             // 
@@ -202,6 +204,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.txtTreatmentPlanDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTreatmentPlanDate.Location = new System.Drawing.Point(623, 16);
             this.txtTreatmentPlanDate.Name = "txtTreatmentPlanDate";
+            this.txtTreatmentPlanDate.ReadOnly = true;
             this.txtTreatmentPlanDate.Size = new System.Drawing.Size(123, 26);
             this.txtTreatmentPlanDate.TabIndex = 20;
             // 
