@@ -278,7 +278,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             var selected = SelectedFile;
             var path = selected.FullName;
             var extension = Path.GetExtension(path);
-            var fileName = $"{DocumentName.Text}{extension}".EscapeText();
+            var fileName = DocumentName.Text.EscapeText();
             var archive = new Archive();
             archive.File = CurrentFile;
             archive.OriginalPath = path;
@@ -376,6 +376,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             originalArchive.File.Archives.Remove(originalArchive);
             _fileManager.Update(CurrentFile);
             Archives.Remove(archive);
+            InitializeSettings();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

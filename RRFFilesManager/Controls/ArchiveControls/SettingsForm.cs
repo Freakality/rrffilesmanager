@@ -32,7 +32,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             UploadArchivesSettings = _uploadArchivesSettingsRepository.Get() ?? new UploadArchivesSettings();
             if (UploadArchivesSettings?.InputFolders != null)
                 InputFolders.Items.AddRange(UploadArchivesSettings?.InputFolders?.Select(s => s.Path).ToArray());
-            OutputFolder.Text = UploadArchivesSettings?.OutputFolder;
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -60,15 +59,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void Save_Click(object sender, EventArgs e)
         {
-            var exportFolder = OutputFolder.Text;
-            if (!Directory.Exists(exportFolder))
-            {
-                MessageBox.Show("The export folder could not be found");
-                return;
-            }
             var inputFolders = InputFolders.Items.Cast<string>().ToList();
             UploadArchivesSettings.InputFolders = inputFolders.Select(s => new FilePath { Path = s }).ToList();
-            UploadArchivesSettings.OutputFolder = OutputFolder.Text;
             _uploadArchivesSettingsRepository.Set(UploadArchivesSettings);
             Close();
         }
