@@ -59,8 +59,9 @@ namespace RRFFilesManager.Controls.FileControls.UserControls
             File = file;
             if (file == null)
                 return;
-            Prescriptions = file.Prescriptions.Select(s => new Prescription(s)).ToList();
-            Utils.Utils.InitializeDataGridViewWithCheck(DataGridView, Prescriptions);
+            Prescriptions = file.Prescriptions?.Select(s => new Prescription(s)).ToList();
+            if (!(Prescriptions is null))
+                Utils.Utils.InitializeDataGridViewWithCheck(DataGridView, Prescriptions);
             PharmaciesBox.DataSource = Pharmacies;
         }
         private void ExportWordButton_Click(object sender, EventArgs e)

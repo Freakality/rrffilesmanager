@@ -22,9 +22,9 @@ namespace RRFFilesManager.Controls.FileControls
         private readonly IFileRepository _fileRepository;
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
-        private Abstractions.Task TaskToAdd;
+        //private Abstractions.Task TaskToAdd;
         public File File { get; set; }
-        public FileTask SelectedFileTask { get; set; }
+        //public FileTask SelectedFileTask { get; set; }
         public AddTaskManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -38,7 +38,7 @@ namespace RRFFilesManager.Controls.FileControls
 
         private static AddTaskManager instance;
         public static AddTaskManager Instance => instance == null || instance.IsDisposed ? (instance = new AddTaskManager()) : instance;
-        public Abstractions.Task SelectedTask { get; set; }
+        //public Abstractions.Task SelectedTask { get; set; }
         private bool? OnlyHoldIntakes { get; set; }
         /*private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -50,16 +50,16 @@ namespace RRFFilesManager.Controls.FileControls
             CBoxTaskCategory.ValueMember = "ID";
             CBoxTaskCategory.DisplayMember = "Description";
         }
-        private void RefreshTaskGridViewDataSource()
+        /*private void RefreshTaskGridViewDataSource()
         {
-            /*int taskCategoryID = -1;
+            int taskCategoryID = -1;
             if (!(CBoxTaskCategory.SelectedValue is null))
             {
                 if (!Int32.TryParse(CBoxTaskCategory.SelectedValue.ToString(), out taskCategoryID))
                 {
                     taskCategoryID = -1;
                 }
-            }*/
+            }
             TaskGridView.DataSource = File.Tasks.ToList();
             TaskGridView.Columns["ID"].Visible = false;
             TaskGridView.Columns["File"].Visible = false;
@@ -76,7 +76,7 @@ namespace RRFFilesManager.Controls.FileControls
             if (File.Tasks.ToList().Count == 0)
                 BtnEditSelectedTextButton.Enabled = false;
             //_taskRepository.Search("", taskCategoryID, OnlyHoldIntakes, 20);
-        }
+        }*/
         /*public void SetOnlyHoldIntakes(bool value)
         {
             OnlyHoldIntakes = value;
@@ -84,9 +84,9 @@ namespace RRFFilesManager.Controls.FileControls
         }*/
         private void MasterTaskManager_Load(object sender, EventArgs e)
         {
-            TaskGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            /*TaskGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             TaskGridView.MultiSelect = false;
-            TaskGridView.ReadOnly = true;
+            TaskGridView.ReadOnly = true;*/
             //RefreshTaskGridViewDataSource();
             //TaskGridView.Columns["ID"].Visible = false;
         }
@@ -140,13 +140,14 @@ namespace RRFFilesManager.Controls.FileControls
             if (File == null)
                 return;
             AddCategoryTasksButton.Enabled = true;
-            RefreshTaskGridViewDataSource();
+
+            //RefreshTaskGridViewDataSource();
         }
 
-        private void TaskGridView_SelectionChanged(object sender, EventArgs e)
+        /*private void TaskGridView_SelectionChanged(object sender, EventArgs e)
         {
-            SelectedFileTask = TaskGridView.SelectedRows[0].DataBoundItem as FileTask;
-            BtnEditSelectedTextButton.Enabled = true;
+            //SelectedFileTask = TaskGridView.SelectedRows[0].DataBoundItem as FileTask;
+            //BtnEditSelectedTextButton.Enabled = true;
         }
 
         private void BtnEditSelectedTextButton_Click(object sender, EventArgs e)
@@ -157,6 +158,6 @@ namespace RRFFilesManager.Controls.FileControls
                 createEditFileTask.ShowDialog();
                 RefreshTaskGridViewDataSource();
             }
-        }
+        }*/
     }
 }

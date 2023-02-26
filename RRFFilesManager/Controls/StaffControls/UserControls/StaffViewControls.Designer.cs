@@ -30,7 +30,6 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
         private void InitializeComponent()
         {
             this.StaffPortalButtonLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.StaffPortalSaveChangesButton = new System.Windows.Forms.Button();
             this.StaffPortalAddTaskButton = new System.Windows.Forms.Button();
             this.StaffPortalMainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.StaffPortalGridLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -53,7 +52,6 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             this.StaffPortalButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.68853F));
             this.StaffPortalButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.31147F));
             this.StaffPortalButtonLayoutPanel.Controls.Add(this.StaffPortalAddTaskButton, 1, 0);
-            this.StaffPortalButtonLayoutPanel.Controls.Add(this.StaffPortalSaveChangesButton, 2, 0);
             this.StaffPortalButtonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StaffPortalButtonLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.StaffPortalButtonLayoutPanel.Name = "StaffPortalButtonLayoutPanel";
@@ -62,24 +60,10 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             this.StaffPortalButtonLayoutPanel.Size = new System.Drawing.Size(859, 53);
             this.StaffPortalButtonLayoutPanel.TabIndex = 156;
             // 
-            // StaffPortalSaveChangesButton
-            // 
-            this.StaffPortalSaveChangesButton.BackColor = System.Drawing.Color.Maroon;
-            this.StaffPortalSaveChangesButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StaffPortalSaveChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StaffPortalSaveChangesButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffPortalSaveChangesButton.ForeColor = System.Drawing.Color.White;
-            this.StaffPortalSaveChangesButton.Location = new System.Drawing.Point(671, 5);
-            this.StaffPortalSaveChangesButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.StaffPortalSaveChangesButton.Name = "StaffPortalSaveChangesButton";
-            this.StaffPortalSaveChangesButton.Size = new System.Drawing.Size(184, 43);
-            this.StaffPortalSaveChangesButton.TabIndex = 154;
-            this.StaffPortalSaveChangesButton.Text = "Save Changes";
-            this.StaffPortalSaveChangesButton.UseVisualStyleBackColor = false;
-            // 
             // StaffPortalAddTaskButton
             // 
             this.StaffPortalAddTaskButton.BackColor = System.Drawing.Color.Maroon;
+            this.StaffPortalButtonLayoutPanel.SetColumnSpan(this.StaffPortalAddTaskButton, 2);
             this.StaffPortalAddTaskButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StaffPortalAddTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StaffPortalAddTaskButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,10 +71,11 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             this.StaffPortalAddTaskButton.Location = new System.Drawing.Point(551, 5);
             this.StaffPortalAddTaskButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.StaffPortalAddTaskButton.Name = "StaffPortalAddTaskButton";
-            this.StaffPortalAddTaskButton.Size = new System.Drawing.Size(112, 43);
+            this.StaffPortalAddTaskButton.Size = new System.Drawing.Size(304, 43);
             this.StaffPortalAddTaskButton.TabIndex = 155;
             this.StaffPortalAddTaskButton.Text = "Add Task";
             this.StaffPortalAddTaskButton.UseVisualStyleBackColor = false;
+            this.StaffPortalAddTaskButton.Click += new System.EventHandler(this.StaffPortalAddTaskButton_Click);
             // 
             // StaffPortalMainSplitContainer
             // 
@@ -186,7 +171,6 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
 
         private System.Windows.Forms.TableLayoutPanel StaffPortalButtonLayoutPanel;
         internal System.Windows.Forms.Button StaffPortalAddTaskButton;
-        internal System.Windows.Forms.Button StaffPortalSaveChangesButton;
         private System.Windows.Forms.SplitContainer StaffPortalMainSplitContainer;
         private System.Windows.Forms.TableLayoutPanel StaffPortalGridLayoutPanel;
         private System.Windows.Forms.ComboBox StaffPortalTaskStateComboBox;

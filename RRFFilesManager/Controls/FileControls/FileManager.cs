@@ -1111,6 +1111,7 @@ namespace RRFFilesManager
             {
                 AddFileTasks("Trial", taskState);
             }
+            RefreshActionLogDataGridViewDataSource();
         }
         private void AddFileTasks(string category, TaskState taskState)
         {

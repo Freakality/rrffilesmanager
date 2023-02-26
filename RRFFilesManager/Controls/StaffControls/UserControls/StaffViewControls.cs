@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRFFilesManager.Controls.FileControls.UserControls;
+using RRFFilesManager.Controls.FileControls;
 
 namespace RRFFilesManager.Controls.StaffControls.UserControls
 {
@@ -19,6 +21,8 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
         private readonly ILawyerTaskRepository _lawyerTaskRepository;
         private readonly ITaskStateRepository _taskStateRepository;
         private TaskState SelectedTaskState;
+        TaskActions Task_Actions = new TaskActions(false);
+        ContextMenuStrip Ctms_TaskActions;
         public StaffViewControls()
         {
             _lawyerRepository = Program.GetService<ILawyerRepository>();
@@ -27,6 +31,7 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             InitializeComponent();
             Utils.Utils.SetComboBoxDataSource(StaffPortalTaskStateComboBox, _taskStateRepository.List());
             StaffPortalTaskStateComboBox.SelectedIndex = 1;
+            Ctms_TaskActions = Task_Actions.Ctms_TaskActions;
         }
 
         internal void FillStaffLawyerTaskView()
@@ -43,6 +48,24 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
         {
             FillStaffLawyerTaskView();
         }
+        private void StaffLawyerTaskView_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+            {
+                StaffLawyerTaskView.CurrentCell = StaffLawyerTaskView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                Task_Actions.lawyerTask = _lawyerTaskRepository.GetById(Convert.ToInt32(StaffLawyerTaskView.Rows[e.RowIndex].Cells[0].Value));
+            }
+        }
 
+        private void StaffPortalAddTaskButton_Click(object sender, EventArgs e)
+        {
+            using (TaskManager taskManager = new TaskManager(null, Program.GetUser()))
+            {
+                if (taskManager.ShowDialog() == DialogResult.OK)
+                {
+                    FillStaffLawyerTaskView();
+                }
+            }
+        }
     }
 }

@@ -291,7 +291,19 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                             string[] tasks = taskAndDependency.Split(',');
                             var task = _taskRepository.GetByTaskIdNumber(tasks[0]);
                             var dependency = _taskRepository.GetByTaskIdNumber(tasks[1]);
-                            _taskRepository.AddTaskDependency(task, dependency);
+                            bool skip = false;
+                            if (task is null)
+                            {
+                                MessageBox.Show($"Task {tasks[0]} not found.");
+                                skip = true;
+                            }
+                            if (dependency is null)
+                            {
+                                MessageBox.Show($"Dependency {tasks[1]} not found.");
+                                skip = true;
+                            }
+                            if (!skip)
+                                _taskRepository.AddTaskDependency(task, dependency);
                         }
                     }
                     MessageBox.Show("Master Tasks have been successfully imported.");
