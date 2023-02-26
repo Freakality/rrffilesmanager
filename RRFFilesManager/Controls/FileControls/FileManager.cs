@@ -59,6 +59,7 @@ namespace RRFFilesManager
         private readonly IPermissionRepository _permissionRepository;
         private int clearance;
         List<Lawyer> LawyerList = new List<Lawyer>();
+        private bool isSettingForm;
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -169,8 +170,9 @@ namespace RRFFilesManager
 
         private void SetForm(File file)
         {
-            if(file == null)
+            if (file == null)
                 return;
+            isSettingForm = true;
             PeopleControl.SetFile(file);
             ABBinderControl.SetFile(file);
             StandardBenefitStatementsControl.SetFile(file);
@@ -273,8 +275,8 @@ namespace RRFFilesManager
             CurrentFileStatusComboBox.Enabled = true;
             var statusList = _fileStatusManager.GetValidFileStatus(file);
             Utils.Utils.SetComboBoxDataSource(CurrentFileStatusComboBox, statusList);
-            CurrentFileStatusComboBox.SelectedItem = statusList.FirstOrDefault(x => x.ID == file.CurrentStatus.ID);
-
+            CurrentFileStatusComboBox.SelectedItem = file.CurrentStatus;
+            isSettingForm = false;
         }
 
         private void LoadABOverview()
@@ -1353,6 +1355,7 @@ namespace RRFFilesManager
 
         private void CurrentFileStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (isSettingForm) return;
             var newStatus = (FileStatus)CurrentFileStatusComboBox.SelectedValue;
             if (newStatus != null && File.CurrentStatus != newStatus)
             {
