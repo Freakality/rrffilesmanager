@@ -198,10 +198,6 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                         List<string> DependencyStack = new List<string>();
                         foreach (DataTable table in ds.Tables)
                         {
-                            if (table.TableName.ToUpper() == "RSW")
-                            {
-                                MessageBox.Show("Hi");
-                            }
                             TaskCategory taskCategory = new TaskCategory();
                             var found = _taskCategoryRepository.Search(table.TableName);
                             if (found.Count() > 0)
@@ -212,7 +208,7 @@ namespace RRFFilesManager.Controls.MasterTaskControls
                             {
                                 taskCategory.Description = table.TableName;
                                 _taskCategoryRepository.Insert(taskCategory);
-                                taskCategory = _taskCategoryRepository.Search(taskCategory.Description).First();
+                                taskCategory = _taskCategoryRepository.GetByDescription(table.TableName);
                             }
                             foreach(DataRow row in table.Rows)
                             {
