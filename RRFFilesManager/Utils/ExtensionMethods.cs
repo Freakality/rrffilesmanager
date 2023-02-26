@@ -68,7 +68,7 @@ namespace RRFFilesManager.Utils
             var sourcePath = archive.Path;
             if (!sourcePath.Contains(fileFolderPath))
             {
-                var archiveFileName = fileName ?? Path.GetFileName(archive.Path);
+                var archiveFileName = fileName ?? archive.Name;
                 var destPath = Path.Combine(fileFolderPath, archiveFileName);
                 if (System.IO.File.Exists(sourcePath))
                 {
@@ -97,18 +97,11 @@ namespace RRFFilesManager.Utils
             var sourcePath = archive.Path;
             if (!sourcePath.Contains(fileFolderPath))
             {
-                var archiveFileName = fileName ?? Path.GetFileName(archive.Path);
+                var archiveFileName = fileName ?? archive.Name;
                 var destPath = Path.Combine(fileFolderPath, archiveFileName);
                 if(System.IO.File.Exists(sourcePath))
                 {
-                    try
-                    {
-                        System.IO.File.Move(sourcePath, destPath);
-                    } catch(Exception e)
-                    {
-                        Console.WriteLine(e);
-                    }
-                    
+                    System.IO.File.Move(sourcePath, destPath);
                 }
                 else
                 {

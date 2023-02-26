@@ -30,6 +30,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private readonly IDocumentCategoryRepository _documentCategoryRepository;
         private readonly IDocumentTypeRepository _documentTypeRepository;
         private readonly ArchiveManager _archiveManager;
+        private readonly Logic.FileManager _fileManager;
         private readonly IArchiveRepository _archiveRepository;
         private readonly IUploadArchivesSettingsRepository _uploadArchivesSettingsRepository;
         private UploadArchivesSettings UploadArchivesSettings { get; set; }
@@ -60,6 +61,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             _archiveManager = new ArchiveManager();
             _archiveRepository = Program.GetService<IArchiveRepository>();
             _uploadArchivesSettingsRepository = Program.GetService<IUploadArchivesSettingsRepository>();
+            _fileManager = new Logic.FileManager();
             InitializeComponent();
 
             Utils.Utils.SetComboBoxDataSource(DocumentGroup, _documentGroupRepository.List());
@@ -248,13 +250,11 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void ProcessFile(FileInfo selected)
         {
             var archive = GetArchive();
-            var extension = Path.GetExtension(archive.Path);
-            var newFileName = $"{DocumentName.Text}{extension}".EscapeText();
-            _archiveManager.Insert(CurrentFile, archive, newFileName);
+            CurrentFile.Archives.Add(archive);
+            _fileManager.Update(CurrentFile);
             Archives.Add(new Models.Archive(archive));
-            MoveArchiveToOutputFolder(archive);
             UploadedFiles.Remove(selected);
-            DocumentForm.FillAdditionalArchiveInfo(_archiveRepository.GetById(archive.ID));
+            //DocumentForm.FillAdditionalArchiveInfo(_archiveRepository.GetById(archive.ID));
         }
 
         private void MoveArchiveToOutputFolder(Archive archive)
@@ -277,7 +277,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             var selected = SelectedFile;
             var path = selected.FullName;
-            var fileName = System.IO.Path.GetFileName(selected.FullName);
+            var extension = Path.GetExtension(path);
+            var fileName = $"{DocumentName.Text}{extension}".EscapeText();
             var archive = new Archive();
             archive.File = CurrentFile;
             archive.OriginalPath = path;
@@ -370,12 +371,10 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private void UndoProcessedArchive(Models.Archive archive)
         {
             var originalArchive = archive.GetArchive();
-            //var filename = Path.GetFileName(originalArchive.OriginalPath);
-            //var sourceFileName = Path.Combine(UploadArchivesSettings.OutputFolder, filename);
             var sourceFileName = originalArchive.Path;
             System.IO.File.Move(sourceFileName, originalArchive.OriginalPath);
-            _archiveManager.Delete(originalArchive);
-            InitializeSettings();
+            originalArchive.File.Archives.Remove(originalArchive);
+            _fileManager.Update(CurrentFile);
             Archives.Remove(archive);
         }
 
