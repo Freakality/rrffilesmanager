@@ -23,6 +23,13 @@ namespace RRFFilesManager.DataAccess
             return taskCategory;
         }
 
+        public TaskCategory GetByDescription(string taskCategoryDescription)
+        {
+            var taskCategory = _context.TaskCategories.FirstOrDefault(x => x.Description == taskCategoryDescription);
+
+            return taskCategory;
+        }
+
         public void Insert(TaskCategory taskCategory)
         {
             _context.TaskCategories.Add(taskCategory);

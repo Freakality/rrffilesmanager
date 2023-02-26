@@ -38,6 +38,10 @@ namespace RRFFilesManager
         private readonly IFileTaskRepository _fileTaskRepository;
         private readonly ILATDataRepository _latDataRepository;
         private readonly IABOverviewRepository _abOverviewRepository;
+        private readonly ILawyerRepository _lawyerRepository;        
+        private readonly IDenialRepository _DenialRepository;
+        private readonly IDenialBenefitRepository denialBenefitRepository;
+        private readonly IDenialStatusRepository denialStatusRepository;
         private Logic.FileManager _fileManager;
         private FileStatusManager _fileStatusManager;
         private readonly IClientNoteRepository _clientNoteRepository;
@@ -54,6 +58,7 @@ namespace RRFFilesManager
         private Lawyer User;
         private readonly IPermissionRepository _permissionRepository;
         private int clearance;
+        List<Lawyer> LawyerList = new List<Lawyer>();
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -66,11 +71,14 @@ namespace RRFFilesManager
             _latDataRepository = Program.GetService<ILATDataRepository>();
             _permissionRepository = Program.GetService<IPermissionRepository>();
             _abOverviewRepository = Program.GetService<IABOverviewRepository>();
+            _lawyerRepository = Program.GetService<ILawyerRepository>();
+            _DenialRepository = Program.GetService<IDenialRepository>();
+            denialBenefitRepository = Program.GetService<IDenialBenefitRepository>();
+            denialStatusRepository = Program.GetService<IDenialStatusRepository>();
             User = Program.GetUser();
             InitializeComponent();
             _fileManager = new Logic.FileManager();
-            _fileStatusManager = new FileStatusManager();
-            ComboBox2.SelectedIndex = 0;
+            _fileStatusManager = new FileStatusManager();            
             PeopleControl = new PeopleControl();
             Utils.Utils.SetContent(PeopleTab, PeopleControl);
 
@@ -105,6 +113,7 @@ namespace RRFFilesManager
             Ctms_TaskActions = Task_Actions.Ctms_TaskActions;
             Home.Instance.AddPermissionStrip(TimelineSaveBtn);
             ShowClearanceLocked();
+            
         }
 
         private void ShowClearanceLocked()
@@ -259,6 +268,7 @@ namespace RRFFilesManager
             if (File.Tasks.ToList().Count > 0)
             {
                 RefreshActionLogDataGridViewDataSource();
+                SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
             }
             CurrentFileStatusComboBox.Enabled = true;
             var statusList = _fileStatusManager.GetValidFileStatus(file);
@@ -388,6 +398,34 @@ namespace RRFFilesManager
                     }
                 }
             }
+        private void SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes()
+        {
+            Cbb_TaskLogStateFilter.Items.Clear();
+            Cbb_TaskLogFilterLawyers.Items.Clear();
+            Cbb_TaskLogBusinessProcessFilter.Items.Clear();
+
+            Cbb_TaskLogStateFilter.Items.Add("All");
+            Cbb_TaskLogFilterLawyers.Items.Add("All");
+            Cbb_TaskLogBusinessProcessFilter.Items.Add("All");
+
+            foreach (var item in _taskStateRepository.List())
+            {
+                Cbb_TaskLogStateFilter.Items.Add(item.Description);
+            }
+            string[] LawyersDescriptions = fileTasks.Select(x => x?.Task?.Lawyer?.Description?? "N/A").Distinct().ToArray();
+            foreach (string item in LawyersDescriptions)
+            {
+                Cbb_TaskLogFilterLawyers.Items.Add(item);
+            }
+
+            string[] BusinessProcessDescriptions = fileTasks.Select(x => x?.Task?.TaskCategory?.Description??"N/A").Distinct().ToArray();
+            foreach (string item in BusinessProcessDescriptions)
+            {
+                Cbb_TaskLogBusinessProcessFilter.Items.Add(item);
+            }
+            //Cbb_TaskLogStateFilter.SelectedIndex = 0;
+            //Cbb_TaskLogFilterLawyers.SelectedIndex = 0;
+            //Cbb_TaskLogBusinessProcessFilter.SelectedIndex = 0;
         }
 
         public void FillTimelineFields()
@@ -460,7 +498,9 @@ namespace RRFFilesManager
                 }
             }*/
             
-            fileTasks = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
+            fileTasks = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(Cbb_TaskLogStateFilter.Text),
+                null, _lawyerRepository.GetByDescription(Cbb_TaskLogFilterLawyers.Text),
+                _taskCategoryRepository.GetByDescription(Cbb_TaskLogBusinessProcessFilter.Text));
             var filetasks = fileTasks.Select( x => new
             {
                 ID = x?.ID,
@@ -488,7 +528,7 @@ namespace RRFFilesManager
             bool setup = false;
             if (ActionLogDataGridView.DataSource != null)
             {
-                setup = true;
+                setup = true;                
             }
 
             if (setup && firstActionLogDataLoad)
@@ -1085,8 +1125,7 @@ namespace RRFFilesManager
 
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (File != null)
-                RefreshActionLogDataGridViewDataSource();
+
         }
 
         private void ABBinderTab_Click(object sender, EventArgs e)
@@ -1325,8 +1364,30 @@ namespace RRFFilesManager
             {
                 Busqueda();
             }
+            else if (TabControl5.SelectedTab == Denials)
+            {
+                BusquedaDenials();
+            }
         }
 
+        private void BusquedaDenials()
+        {
+            if (File != null)
+            {
+                //ABDenialsDataGridView.DataSource = null;
+                ABDenialsDataGridView.DataSource = _DenialRepository.Search(Home.FileManager.File);
+                ABDenialsDataGridView.Columns["ID"].Visible = false;
+                ABDenialsDataGridView.Columns["File"].Visible = false;
+                ABDenialsDataGridView.Columns["FileId"].Visible = false;
+            }
+            else
+            {
+                TabControl5.SelectedTab = ABBinderTab;
+                TabControl1.SelectedIndex = 0;
+                MessageBox.Show($"You have to search a file", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+        }
         private void BtnSaveLatData_Click(object sender, EventArgs e)
         {
             if (sender is Button)
@@ -2422,6 +2483,53 @@ namespace RRFFilesManager
                 abOverview.LastUpdatedDate = DateTime.Now;
             }
             return update;
+        private void TaskLogFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (File != null)
+            {
+                RefreshActionLogDataGridViewDataSource();
+                //SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
+            }
+
+        }
+
+
+        private void btnNewDenials_Click(object sender, EventArgs e)
+        {
+            if (Home.FileManager.File == null)
+            {
+                MessageBox.Show($"You have to search a file", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            using (DenialsForm _Denials = new DenialsForm())
+            {
+                if (_Denials.ShowDialog() == DialogResult.OK)
+                {
+                    BusquedaDenials();
+                }
+               
+            }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            CboxBenefitDenialsFilemanager.Text = "";
+            CboxStatusDenialsFilemanager.Text = "";
+            BusquedaDenials();
+        }
+
+        private void CboxsDenials_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (sender is ComboBox)
+            {
+                ComboBox cb = new ComboBox();
+                cb = sender as ComboBox;
+                if (!string.IsNullOrEmpty(cb.Text) && File != null)
+                {
+                    //ABDenialsDataGridView.DataSource = null;
+                    ABDenialsDataGridView.DataSource = _DenialRepository.Search(Home.FileManager.File, denialBenefitRepository.GetByDescription(CboxBenefitDenialsFilemanager.Text), denialStatusRepository.GetByDescription(CboxStatusDenialsFilemanager.Text));
+                }
+            }
         }
     }
 }

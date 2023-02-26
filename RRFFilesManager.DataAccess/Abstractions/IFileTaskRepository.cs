@@ -13,7 +13,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void SoftDelete(int fileTaskId);
         FileTask GetById(int fileTaskId);
         IEnumerable<FileTask> List();
-        IEnumerable<FileTask> Search(File file, TaskState taskState, int? take = null);
+        IEnumerable<FileTask> Search(File file, TaskState taskState, int? take = null, Lawyer lawyer = null, TaskCategory businessProcess = null);
         void SwitchLawyer(Lawyer formerLawyer, Lawyer newLawyer);
         void AddTask(File file, Task task, TaskState taskState, int Days = 0, DateTime date = default);
         void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState, int Days = 0);

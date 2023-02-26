@@ -46,6 +46,13 @@ namespace RRFFilesManager.DataAccess
             return account;
         }
 
+        public Lawyer GetByDescription(string searchText)
+        {
+            var account = _context.Lawyers.FirstOrDefault(x => x.Description == (searchText));
+
+            return account;
+        }
+
 
         public  IEnumerable<Lawyer>List(bool? isParalegal = null)
         {
