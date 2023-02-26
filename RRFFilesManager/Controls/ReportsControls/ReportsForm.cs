@@ -30,5 +30,10 @@ namespace RRFFilesManager.Controls.ReportsControls
             Close();
             Home.Instance.Show();
         }
+
+        private void ReportsForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Home.Instance.Show();
+        }
     }
 }

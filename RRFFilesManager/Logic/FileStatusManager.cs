@@ -29,7 +29,7 @@ namespace RRFFilesManager.Logic
         {
             StatusCheck("Potential File");
             StatusCheck("Open File");
-            StatusCheck("Closed Files");
+            StatusCheck("Closed File");
             StatusCheck("Not Retained");
         }
         public IEnumerable<FileStatus> GetValidFileStatus(File file)

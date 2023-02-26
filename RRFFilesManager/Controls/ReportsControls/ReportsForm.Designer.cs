@@ -103,6 +103,7 @@ namespace RRFFilesManager.Controls.ReportsControls
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ReportsForm";
             this.Text = "Reports";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReportsForm_FormClosing);
             this.Load += new System.EventHandler(this.ReportsForm_Load);
             this.Panel_Top.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();

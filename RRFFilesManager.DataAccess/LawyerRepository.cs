@@ -57,8 +57,8 @@ namespace RRFFilesManager.DataAccess
         public  IEnumerable<Lawyer>List(bool? isParalegal = null)
         {
             if(isParalegal != null)
-                return _context.Lawyers.Where(s => s.IsParalegal == isParalegal).ToList();
-            return _context.Lawyers.ToList();
+                return _context.Lawyers.Where(s => s.IsParalegal == isParalegal && s.Description != "DEVTEST_USER").ToList();
+            return _context.Lawyers.Where(s => s.Description != "DEVTEST_USER").ToList();
         }
 
 
