@@ -598,12 +598,14 @@
     <Compile Include="Controls\FileControls\UserControls\TaskActions.Designer.cs">
       <DependentUpon>TaskActions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\IntakeControls\Abstractions\ImporterItemFieldValue.cs" />
     <Compile Include="Controls\IntakeControls\ImportQuestionnaireFields.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\IntakeControls\ImportQuestionnaireFields.Designer.cs">
       <DependentUpon>ImportQuestionnaireFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\IntakeControls\Models\ImporterItemRow.cs" />
     <Compile Include="Controls\LoginUI.cs">
       <SubType>Form</SubType>
     </Compile>

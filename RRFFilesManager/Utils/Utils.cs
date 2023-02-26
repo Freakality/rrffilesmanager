@@ -200,5 +200,46 @@ namespace RRFFilesManager.Utils
             startInfo.Arguments = "\"" + f + "\"";
             Process.Start(startInfo);
         }
+
+        public static object GetPropValueFromPropertyPath(object src, string propertyPath)
+        {
+            var propsName = propertyPath.Split('.');
+            object currentPropValue = src;
+            foreach (var propName in propsName)
+            {
+                currentPropValue = GetPropValue(currentPropValue, propName);
+            }
+            return currentPropValue;
+        }
+
+        public static object GetPropValue(object src, string propName)
+        {
+            return src.GetType().GetProperty(propName).GetValue(src, null);
+        }
+
+        public static void SetPropValueFromPropertyPath(object src, string propertyPath, object value)
+        {
+            var propsName = propertyPath.Split('.');
+            var lastPropName = propsName.LastOrDefault(); 
+            object currentPropValue = src;
+            foreach (var propName in propsName)
+            {
+                if (propName.Equals(lastPropName))
+                {
+                    SetPropValue(currentPropValue, propName, value);
+                }
+                else
+                    currentPropValue = GetPropValue(currentPropValue, propName);
+            }
+        }
+
+        public static void SetPropValue(object src, string propName, object value)
+        {
+            PropertyInfo prop = src.GetType().GetProperty(propName, BindingFlags.Public | BindingFlags.Instance);
+            if (null != prop && prop.CanWrite)
+            {
+                prop.SetValue(src, value, null);
+            }
+        }
     }
 }

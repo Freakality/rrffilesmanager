@@ -115,7 +115,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                IntakeForm = Utils.Utils.OpenForm<IntakeForm.IntakeForm>(this);
+                IntakeForm = Utils.Utils.OpenFormHome<IntakeForm.IntakeForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -131,7 +131,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                FileManager = Utils.Utils.OpenForm<FileManager>(this);
+                FileManager = Utils.Utils.OpenFormHome<FileManager>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -139,7 +139,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
+                ContactInfo = Utils.Utils.OpenFormHome<ContactInfo>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -147,7 +147,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                ContactInfo = Utils.Utils.OpenForm<ContactInfo>(this);
+                ContactInfo = Utils.Utils.OpenFormHome<ContactInfo>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -155,7 +155,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                CreateDocument = Utils.Utils.OpenForm<CreateDocument>(this);
+                CreateDocument = Utils.Utils.OpenFormHome<CreateDocument>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -163,7 +163,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                CreateTemplate = Utils.Utils.OpenForm<CreateTemplate>(this);
+                CreateTemplate = Utils.Utils.OpenFormHome<CreateTemplate>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -213,7 +213,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                Utils.Utils.OpenForm<UploadArchivesForm>(this);
+                Utils.Utils.OpenFormHome<UploadArchivesForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -230,7 +230,7 @@ namespace RRFFilesManager
             }*/
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance|| User.ClearanceLevel == 99)
-                Utils.Utils.OpenForm<CommissionCalculatorForm>(this);
+                Utils.Utils.OpenFormHome<CommissionCalculatorForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
 
@@ -240,7 +240,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                Utils.Utils.OpenForm<PrescriptionSummariesForm>(this);
+                Utils.Utils.OpenFormHome<PrescriptionSummariesForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -249,7 +249,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                Utils.Utils.OpenForm<MedicalSummariesForm>(this);
+                Utils.Utils.OpenFormHome<MedicalSummariesForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -258,7 +258,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                Utils.Utils.OpenForm<PredictorCalculatorForm>(this);
+                Utils.Utils.OpenFormHome<PredictorCalculatorForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -267,7 +267,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                ReportsForm = Utils.Utils.OpenForm<ReportsForm>(this);
+                ReportsForm = Utils.Utils.OpenFormHome<ReportsForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -276,7 +276,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                AddTaskManager = Utils.Utils.OpenForm<AddTaskManager>(this);
+                AddTaskManager = Utils.Utils.OpenFormHome<AddTaskManager>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -285,7 +285,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                MasterTaskManager = Utils.Utils.OpenForm<MasterTaskManager>(this);
+                MasterTaskManager = Utils.Utils.OpenFormHome<MasterTaskManager>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -294,7 +294,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                ChangeLogView = Utils.Utils.OpenForm<ChangeLogView>(this);
+                ChangeLogView = Utils.Utils.OpenFormHome<ChangeLogView>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -302,7 +302,7 @@ namespace RRFFilesManager
         private void UserName_Click(object sender, EventArgs e)
         {
             if (User.ClearanceLevel == 0 || User.ClearanceLevel == 99)
-                UserManagerForm = Utils.Utils.OpenForm<UserManagerForm>(this);
+                UserManagerForm = Utils.Utils.OpenFormHome<UserManagerForm>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }
@@ -311,7 +311,7 @@ namespace RRFFilesManager
         {
             GetClearance(sender as Button);
             if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
-                StaffPortal = Utils.Utils.OpenForm<StaffPortal>(this);
+                StaffPortal = Utils.Utils.OpenFormHome<StaffPortal>(this);
             else
                 MessageBox.Show("User does not have enough permissions to access this screen.");
         }

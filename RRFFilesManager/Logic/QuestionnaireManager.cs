@@ -1,4 +1,6 @@
 ﻿using ClosedXML.Excel;
+using RRFFilesManager.Abstractions;
+using RRFFilesManager.Controls.IntakeControls.Abstractions;
 using RRFFilesManager.DataAccess.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -19,11 +21,12 @@ namespace RRFFilesManager.Logic
             _questionnaireFieldMapperRepository = Program.GetService<IQuestionnaireFieldMapperRepository>();
         }
 
-        public DataTable Import()
+        public List<ImporterItemFieldValue> ImportQuestionnaire(Intake intake)
         {
             OpenFileDialog openTaskDialog = new OpenFileDialog();
-            DataTable dt = new DataTable();
             openTaskDialog.Filter = "Excel(*.xlsx;*.xlsm;*.xlsb)|*.xlsx;*.xlsm;*.xlsb";
+            var importerItemFieldValues = new List<ImporterItemFieldValue>();
+            var fieldMappers = _questionnaireFieldMapperRepository.List();
             try
             {
                 if (openTaskDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -31,7 +34,7 @@ namespace RRFFilesManager.Logic
                     if (openTaskDialog.CheckFileExists)
                     {
                         string path = Path.GetFullPath(openTaskDialog.FileName);
-                        if (path.Contains("xlsb"))
+                        if (Path.GetExtension(path) == ".xlsb")
                         {
                             path = Excel.ToXLSX(path);
                         }
@@ -43,51 +46,45 @@ namespace RRFFilesManager.Logic
                                 IXLWorksheet workSheet = sheet;
                                 if (sheet.Name.ToLower() != "output")
                                     continue;
-                                //Create a new DataTable.
-                                dt.TableName = sheet.Name;
                                 //Loop through the Worksheet rows.
-                                bool firstCol = true;
-                                //bool firstRowF = true;
-                                //bool firstRowV = true;
+                                
                                 foreach (IXLRow row in workSheet.Rows())
                                 {
+                                    ImporterItemFieldValue importerItem = new ImporterItemFieldValue();
+                                    var firstCol = true;
                                     //Use the first row to add columns to DataTable.
-                                    if (firstCol)
-                                    {
-                                        foreach (IXLCell cell in row.Cells())
+                                    foreach (IXLCell cell in row.Cells())
+                                        if (firstCol)
                                         {
-                                            /*if (firstRowF)
+                                            var formFieldName = cell.Value.ToString().Trim();
+                                            var mapper = fieldMappers.FirstOrDefault(s => s.FormFieldName == formFieldName);
+                                            if (mapper != null)
                                             {
-                                                firstRowF = false;
-                                                continue;
-                                            }*/
-                                            dt.Columns.Add(cell.Value.ToString());
-                                        }
-                                        firstCol = false;
-                                        continue;
-                                    }
-                                    else
-                                    {
-                                        dt.Rows.Add();
-                                        int i = 0;
-                                        foreach (IXLCell cell in row.Cells(1, dt.Columns.Count))
+                                                importerItem.Mapper = mapper;
+                                            }
+                                            else
+                                            {
+                                                importerItem.Mapper = new QuestionnaireFieldMapper
+                                                {
+                                                    FormFieldName = formFieldName
+                                                };
+                                            }
+                                            firstCol = false;
+                                        } else
                                         {
-                                            /*if (firstRowV)
+                                            if (importerItem.Mapper.FileFieldName != null)
                                             {
-                                                firstRowV = false;
-                                                continue;
-                                            }*/
-                                            dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
-                                            i++;
-                                            if (i > 1)
-                                                break;
+                                                importerItem.FileValue = Utils.Utils.GetPropValueFromPropertyPath(intake, importerItem.Mapper.FileFieldName);
+                                            }
+                                            importerItem.FormValue = cell.Value.ToString();
                                         }
-                                    }
+                                    if (importerItem != null)
+                                        importerItemFieldValues.Add(importerItem);
+
                                 }
-                                break;
                             }
                         }
-                        return dt;
+                        return importerItemFieldValues;
                     }
                 }
                 else

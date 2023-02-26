@@ -247,17 +247,23 @@ namespace RRFFilesManager.IntakeForm
 
         private void PrelimInfoQuestionnaireButton_Click(object sender, EventArgs e)
         {
-            var file = Home.IntakeForm.Intake.File;
-            if (file == null)
+            var intake = Home.IntakeForm.Intake;
+            if (intake.File == null)
             {
-                MessageBox.Show("Please select an Intake first.");
+                MessageBox.Show("Please select an file first.");
                 return;
             }
-            var dataTable = _questionnaireManager.Import();
-
-            var form = Utils.Utils.OpenForm<ImportQuestionnaireFields>();
-            form.SetFieldsDataGridViewDataSource(dataTable);
-            
+            var fields = _questionnaireManager.ImportQuestionnaire(intake);
+            if(fields != null)
+            {
+                var form = Utils.Utils.OpenForm<ImportQuestionnaireFields>();
+                form.FormClosing += ImportQuestionnaireFieldsForm_FormClosing;
+                form.SetFields(fields);
+            }
+        }
+        private void ImportQuestionnaireFieldsForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Home.IntakeForm.SetIntake(Home.IntakeForm.Intake);
         }
     }
 }
