@@ -26,6 +26,7 @@ namespace RRFFilesManager.Abstractions
         public string AdditionalNotes { get; set; }
 
         public virtual Intake Intake { get; set; }
+        public virtual ABOverview ABOverview { get; set; }
         public virtual Timeline Timeline { get; set; }
         public virtual FileStatus PreviousStatus { get; set; }
         public virtual FileStatus CurrentStatus { get; set; }

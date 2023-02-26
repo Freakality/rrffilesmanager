@@ -32,6 +32,10 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             ReportingInfo = Utils.Utils.ListToDataTable
                 (_intakeRepository.SearchInfoForReporting(Dtp_From.Value, Dtp_To.Value).ToList());           
             Dg_Data.DataSource = ReportingInfo;
+
+            SetEditedColumnsName();
+
+
             if (Dg_Data.Rows.Count == 0)
             {
                 MessageBox.Show("¡There is no information between the selected dates!",
@@ -41,16 +45,43 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             {
                 Chl_Columns.Items.Clear();
 
-                foreach (DataColumn column in ReportingInfo.Columns)
+                foreach (DataGridViewColumn column in Dg_Data.Columns)
                 {
-                    Chl_Columns.Items.Add(column.ColumnName, false);
+                    Chl_Columns.Items.Add(column.HeaderText, false);
                 }
             }
 
 
         }
 
+        private void SetEditedColumnsName()
+        {
+            //DateOfCall = x.File.DateOfCall.ToString(),
+            //    Interviewer = x.File.StaffInterviewer.Description,
+            //    TypeOfMatter = x.File.MatterType.Description,
+            //    HowHear = x.File.HowHear.Description,
+            //    DateOfLoss = x.File.DateOFLoss.ToString(),
+            //    ResponsibleLawyer = x.File.ResponsibleLawyer.Description,
+            //    FileLawyer = x.File.FileLawyer.Description,
+            //    Status = x.File.CurrentStatus.Description,
+            //    LastName = x.File.Client.LastName,
+            //    FirstName = x.File.Client.FirstName
 
+            if (Dg_Data.DataSource == null) return;
+
+            if (Dg_Data.Columns["DateOfCall"] != null)
+            {
+                Dg_Data.Columns["DateOfCall"].HeaderText = "Date of Call";           
+            }
+            if (Dg_Data.Columns["TypeOfMatter"] != null) Dg_Data.Columns["TypeOfMatter"].HeaderText = "Type of Matter";
+            if (Dg_Data.Columns["HowHearAboutUs"]  != null) Dg_Data.Columns["HowHearAboutUs"].HeaderText = "How Hear About Us";
+            if (Dg_Data.Columns["DateOfLoss"] != null) Dg_Data.Columns["DateOfLoss"].HeaderText = "Date of Loss";
+            if (Dg_Data.Columns["ResponsibleLawyer"] != null) Dg_Data.Columns["ResponsibleLawyer"].HeaderText = "Responsible Lawyer";
+            if (Dg_Data.Columns["FileLawyer"] != null) Dg_Data.Columns["FileLawyer"].HeaderText = "File Lawyer";
+            if (Dg_Data.Columns["LastName"] != null) Dg_Data.Columns["LastName"].HeaderText = "Last Name";
+            if (Dg_Data.Columns["FirstName"] != null) Dg_Data.Columns["FirstName"].HeaderText = "First Name";
+
+        }
 
         private void GroupByButton_Click(object sender, EventArgs e)
         {
@@ -62,7 +93,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             }
             for (int i = 0; i < Chl_Columns.CheckedItems.Count; i++)
             {
-                FieldsList.Add(Chl_Columns.CheckedItems[i].ToString()) ;
+                FieldsList.Add(Chl_Columns.CheckedItems[i].ToString().Replace(" ","")) ;
             }
             //var qfields = string.Join(", ", FieldsList.Select(x => $"it[\"{x}\"] as " + x));
             var qfields = string.Join(", ", FieldsList.Select(x => x));
@@ -97,6 +128,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
 
             Dg_Data.DataSource = null;
             Dg_Data.DataSource = GroupInfo;
+            SetEditedColumnsName();
 
         }
 

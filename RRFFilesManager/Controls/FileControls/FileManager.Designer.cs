@@ -409,84 +409,10 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.ABDenials = new System.Windows.Forms.TabPage();
-            this.TabControl5 = new System.Windows.Forms.TabControl();
+            this.ABOverviewTab = new System.Windows.Forms.TabControl();
             this.ABTimeline = new System.Windows.Forms.TabPage();
-            this.Btn_Save = new System.Windows.Forms.Button();
-            this.groupBox51 = new System.Windows.Forms.GroupBox();
-            this.txtStatementDate = new System.Windows.Forms.TextBox();
-            this.label270 = new System.Windows.Forms.Label();
-            this.ABOAttendantCareBenefitsGroupBox = new System.Windows.Forms.GroupBox();
-            this.ABOAttendantCareBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ABOACBAmountPaidToDateTextBox = new System.Windows.Forms.TextBox();
-            this.ABOInitiallyApprovedLabel = new System.Windows.Forms.Label();
-            this.ABOACBAmountPaidToDateLabel = new System.Windows.Forms.Label();
-            this.ABOInitiallyApprovedComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOACBeingIncurredComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOLatestForm1Date = new System.Windows.Forms.DateTimePicker();
-            this.ABOACBeingIncurredLabel = new System.Windows.Forms.Label();
-            this.ABOLatestForm1DateTextBox = new System.Windows.Forms.TextBox();
-            this.ABOWhosFundingLabel = new System.Windows.Forms.Label();
-            this.ABOWhosFundingComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOLatestForm1DateLabel = new System.Windows.Forms.Label();
-            this.ABOInitialAmountLabel = new System.Windows.Forms.Label();
-            this.ABOInitialAmountTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox49 = new System.Windows.Forms.GroupBox();
-            this.CboxCatLatFiled = new System.Windows.Forms.ComboBox();
-            this.label263 = new System.Windows.Forms.Label();
-            this.CboxCatResult = new System.Windows.Forms.ComboBox();
-            this.label261 = new System.Windows.Forms.Label();
-            this.IEsScheduled = new System.Windows.Forms.ComboBox();
-            this.label262 = new System.Windows.Forms.Label();
-            this.CboxCriteria = new System.Windows.Forms.ComboBox();
-            this.label260 = new System.Windows.Forms.Label();
-            this.CboxCat = new System.Windows.Forms.ComboBox();
-            this.CboxCatApplied = new System.Windows.Forms.Label();
-            this.groupBox48 = new System.Windows.Forms.GroupBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker28 = new System.Windows.Forms.DateTimePicker();
-            this.label256 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label259 = new System.Windows.Forms.Label();
-            this.groupBox47 = new System.Windows.Forms.GroupBox();
-            this.txtDateFamily = new System.Windows.Forms.TextBox();
-            this.dateAvailableFamily = new System.Windows.Forms.DateTimePicker();
-            this.label257 = new System.Windows.Forms.Label();
-            this.CboxInsured = new System.Windows.Forms.ComboBox();
-            this.label258 = new System.Windows.Forms.Label();
-            this.AOBMedicalRehabBenefitsGroupBox = new System.Windows.Forms.GroupBox();
-            this.AOBMedicalRehabBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ABOMRBAmountPaidToDateTextBox = new System.Windows.Forms.TextBox();
-            this.ABOBenefitsEndDate = new System.Windows.Forms.DateTimePicker();
-            this.ABOMRBAmountPaidToDateLabel = new System.Windows.Forms.Label();
-            this.ABOBenefitsEndDateTextBox = new System.Windows.Forms.TextBox();
-            this.ABOCurrentBenefitsLevelLabel = new System.Windows.Forms.Label();
-            this.ABOCurrentBenefitsLevelComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOBenefitsEndDateLabel = new System.Windows.Forms.Label();
-            this.ABOPotentialOffsetsGroupBox = new System.Windows.Forms.GroupBox();
-            this.ABOPotentialOffsetsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ABOGroupPrivateComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOGovtOntarioLabel = new System.Windows.Forms.Label();
-            this.ABOGroupPrivateLabel = new System.Windows.Forms.Label();
-            this.ABOGovtOntarioComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOGovtFederalComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOGovtFederalLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtxtAutoPopulate = new System.Windows.Forms.TextBox();
-            this.label249 = new System.Windows.Forms.Label();
-            this.ABOIncomeBenefitsGroupBox = new System.Windows.Forms.GroupBox();
-            this.ABOIncomeBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ABOIncomeBenefitsFileForLATComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOIncomeBenefitsAppliedLabel = new System.Windows.Forms.Label();
-            this.ABOIncomeBenefitsFileForLATLabel = new System.Windows.Forms.Label();
-            this.ABOIncomeBenefitsDeniedComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOIncomeBenefitsAppliedComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOIncomeBenefitsLatestOFC3ComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOIncomeBenefitsDeniedLabel = new System.Windows.Forms.Label();
-            this.ABOIncomeBenefitsLatestOFC3Label = new System.Windows.Forms.Label();
-            this.ABOIncomeBenefitsWeeklyAmountTextBox = new System.Windows.Forms.TextBox();
-            this.ABOIncomeBenefitsTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.ABOIncomeBenefitsWeeklyAmountLabel = new System.Windows.Forms.Label();
-            this.ABOIncomeBenefitsTypeLabel = new System.Windows.Forms.Label();
+            this.ABOMainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOSaveButton = new System.Windows.Forms.Button();
             this.ABOPolicyDetailsGroupBox = new System.Windows.Forms.GroupBox();
             this.ABOPolicyDetailsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ABOABCounselTextBox = new System.Windows.Forms.TextBox();
@@ -501,6 +427,82 @@
             this.ABOInsurerNameTextBox = new System.Windows.Forms.TextBox();
             this.ABOPreJune1st2016Label = new System.Windows.Forms.Label();
             this.ABOPreJune1st2016ComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOIncomeBenefitsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ABOIncomeBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOIncomeBenefitsLatestOFC3 = new System.Windows.Forms.DateTimePicker();
+            this.ABOIncomeBenefitsLatestOFC3TextBox = new System.Windows.Forms.TextBox();
+            this.ABOIncomeBenefitsWeeklyAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.ABOIncomeBenefitsFileForLATComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOIncomeBenefitsAppliedLabel = new System.Windows.Forms.Label();
+            this.ABOIncomeBenefitsFileForLATLabel = new System.Windows.Forms.Label();
+            this.ABOIncomeBenefitsDeniedComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOIncomeBenefitsAppliedComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOIncomeBenefitsDeniedLabel = new System.Windows.Forms.Label();
+            this.ABOIncomeBenefitsLatestOFC3Label = new System.Windows.Forms.Label();
+            this.ABOIncomeBenefitsTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOIncomeBenefitsWeeklyAmountLabel = new System.Windows.Forms.Label();
+            this.ABOIncomeBenefitsTypeLabel = new System.Windows.Forms.Label();
+            this.ABOPotentialCATGroupBox = new System.Windows.Forms.GroupBox();
+            this.ABOPotentialCATLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOCATLATFiledComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOCATAppliedLabel = new System.Windows.Forms.Label();
+            this.ABOCATLATFiledLabel = new System.Windows.Forms.Label();
+            this.ABOCATAppliedComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOCATResultComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOCATCriteriaLabel = new System.Windows.Forms.Label();
+            this.ABOCATResultLabel = new System.Windows.Forms.Label();
+            this.ABOCATCriteriaComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOIEsScheduledComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOIEsScheduledLabel = new System.Windows.Forms.Label();
+            this.ABOStandardBenefitsStatementGroupBox = new System.Windows.Forms.GroupBox();
+            this.ABOStandardBenefitsStatementLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOStatementDate = new System.Windows.Forms.DateTimePicker();
+            this.ABOStatementDateTextBox = new System.Windows.Forms.TextBox();
+            this.ABOStatementDateLabel = new System.Windows.Forms.Label();
+            this.ABOLastUpdatePanel = new System.Windows.Forms.Panel();
+            this.ABOLastUpdateLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOLastUpdateTextBox = new System.Windows.Forms.TextBox();
+            this.ABOLabel = new System.Windows.Forms.Label();
+            this.ABOLastUpdateLabel = new System.Windows.Forms.Label();
+            this.ABOPotentialOffsetsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ABOPotentialOffsetsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOGroupPrivateComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOGovtOntarioLabel = new System.Windows.Forms.Label();
+            this.ABOGroupPrivateLabel = new System.Windows.Forms.Label();
+            this.ABOGovtOntarioComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOGovtFederalComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOGovtFederalLabel = new System.Windows.Forms.Label();
+            this.ABOAttendantCareBenefitsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ABOAttendantCareBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOACBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.ABOInitialAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.ABOInitiallyApprovedLabel = new System.Windows.Forms.Label();
+            this.ABOACBAmountPaidToDateLabel = new System.Windows.Forms.Label();
+            this.ABOInitiallyApprovedComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOACBeingIncurredComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOLatestForm1Date = new System.Windows.Forms.DateTimePicker();
+            this.ABOACBeingIncurredLabel = new System.Windows.Forms.Label();
+            this.ABOLatestForm1DateTextBox = new System.Windows.Forms.TextBox();
+            this.ABOWhosFundingLabel = new System.Windows.Forms.Label();
+            this.ABOWhosFundingComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOLatestForm1DateLabel = new System.Windows.Forms.Label();
+            this.ABOInitialAmountLabel = new System.Windows.Forms.Label();
+            this.AOBMedicalRehabBenefitsGroupBox = new System.Windows.Forms.GroupBox();
+            this.AOBMedicalRehabBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOMRBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.ABOBenefitsEndDate = new System.Windows.Forms.DateTimePicker();
+            this.ABOMRBAmountPaidToDateLabel = new System.Windows.Forms.Label();
+            this.ABOBenefitsEndDateTextBox = new System.Windows.Forms.TextBox();
+            this.ABOCurrentBenefitsLevelLabel = new System.Windows.Forms.Label();
+            this.ABOCurrentBenefitsLevelComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOBenefitsEndDateLabel = new System.Windows.Forms.Label();
+            this.ABOCollateralsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ABOCollateralsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOAvailableCollateralFamilyComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOAvailableCollateralInsuredLabel = new System.Windows.Forms.Label();
+            this.ABOAvailableCollateralInsuredComboBox = new System.Windows.Forms.ComboBox();
+            this.ABOAvailableCollateralFamilyLabel = new System.Windows.Forms.Label();
+            this.Btn_Save = new System.Windows.Forms.Button();
             this.ABBinderTab = new System.Windows.Forms.TabPage();
             this.txtDateTo = new System.Windows.Forms.TabPage();
             this.btnSave = new System.Windows.Forms.Button();
@@ -1293,23 +1295,27 @@
             this.GroupBox17.SuspendLayout();
             this.TabControl1.SuspendLayout();
             this.ABDenials.SuspendLayout();
-            this.TabControl5.SuspendLayout();
+            this.ABOverviewTab.SuspendLayout();
             this.ABTimeline.SuspendLayout();
-            this.groupBox51.SuspendLayout();
-            this.ABOAttendantCareBenefitsGroupBox.SuspendLayout();
-            this.ABOAttendantCareBenefitsLayoutPanel.SuspendLayout();
-            this.groupBox49.SuspendLayout();
-            this.groupBox48.SuspendLayout();
-            this.groupBox47.SuspendLayout();
-            this.AOBMedicalRehabBenefitsGroupBox.SuspendLayout();
-            this.AOBMedicalRehabBenefitsLayoutPanel.SuspendLayout();
-            this.ABOPotentialOffsetsGroupBox.SuspendLayout();
-            this.ABOPotentialOffsetsLayoutPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.ABOIncomeBenefitsGroupBox.SuspendLayout();
-            this.ABOIncomeBenefitsLayoutPanel.SuspendLayout();
+            this.ABOMainLayoutPanel.SuspendLayout();
             this.ABOPolicyDetailsGroupBox.SuspendLayout();
             this.ABOPolicyDetailsLayoutPanel.SuspendLayout();
+            this.ABOIncomeBenefitsGroupBox.SuspendLayout();
+            this.ABOIncomeBenefitsLayoutPanel.SuspendLayout();
+            this.ABOPotentialCATGroupBox.SuspendLayout();
+            this.ABOPotentialCATLayoutPanel.SuspendLayout();
+            this.ABOStandardBenefitsStatementGroupBox.SuspendLayout();
+            this.ABOStandardBenefitsStatementLayoutPanel.SuspendLayout();
+            this.ABOLastUpdatePanel.SuspendLayout();
+            this.ABOLastUpdateLayoutPanel.SuspendLayout();
+            this.ABOPotentialOffsetsGroupBox.SuspendLayout();
+            this.ABOPotentialOffsetsLayoutPanel.SuspendLayout();
+            this.ABOAttendantCareBenefitsGroupBox.SuspendLayout();
+            this.ABOAttendantCareBenefitsLayoutPanel.SuspendLayout();
+            this.AOBMedicalRehabBenefitsGroupBox.SuspendLayout();
+            this.AOBMedicalRehabBenefitsLayoutPanel.SuspendLayout();
+            this.ABOCollateralsGroupBox.SuspendLayout();
+            this.ABOCollateralsLayoutPanel.SuspendLayout();
             this.txtDateTo.SuspendLayout();
             this.groupBox42.SuspendLayout();
             this.groupBox41.SuspendLayout();
@@ -5094,7 +5100,7 @@
             // 
             // ABDenials
             // 
-            this.ABDenials.Controls.Add(this.TabControl5);
+            this.ABDenials.Controls.Add(this.ABOverviewTab);
             this.ABDenials.Location = new System.Drawing.Point(4, 26);
             this.ABDenials.Name = "ABDenials";
             this.ABDenials.Padding = new System.Windows.Forms.Padding(3);
@@ -5103,40 +5109,31 @@
             this.ABDenials.Text = "Accident Benefits ";
             this.ABDenials.UseVisualStyleBackColor = true;
             // 
-            // TabControl5
+            // ABOverviewTab
             // 
-            this.TabControl5.Controls.Add(this.ABTimeline);
-            this.TabControl5.Controls.Add(this.ABBinderTab);
-            this.TabControl5.Controls.Add(this.txtDateTo);
-            this.TabControl5.Controls.Add(this.Denials);
-            this.TabControl5.Controls.Add(this.ProductionRequests);
-            this.TabControl5.Controls.Add(this.ABLAT);
-            this.TabControl5.Controls.Add(this.InterestCalculator);
-            this.TabControl5.Controls.Add(this.BenefitStatements);
-            this.TabControl5.Controls.Add(this.QuickABPaidToDate);
-            this.TabControl5.Controls.Add(this.tabPage1);
-            this.TabControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControl5.Location = new System.Drawing.Point(3, 3);
-            this.TabControl5.Name = "TabControl5";
-            this.TabControl5.SelectedIndex = 0;
-            this.TabControl5.Size = new System.Drawing.Size(1322, 378);
-            this.TabControl5.TabIndex = 5;
-            this.TabControl5.Click += new System.EventHandler(this.TabControl5_Click);
+            this.ABOverviewTab.Controls.Add(this.ABTimeline);
+            this.ABOverviewTab.Controls.Add(this.ABBinderTab);
+            this.ABOverviewTab.Controls.Add(this.txtDateTo);
+            this.ABOverviewTab.Controls.Add(this.Denials);
+            this.ABOverviewTab.Controls.Add(this.ProductionRequests);
+            this.ABOverviewTab.Controls.Add(this.ABLAT);
+            this.ABOverviewTab.Controls.Add(this.InterestCalculator);
+            this.ABOverviewTab.Controls.Add(this.BenefitStatements);
+            this.ABOverviewTab.Controls.Add(this.QuickABPaidToDate);
+            this.ABOverviewTab.Controls.Add(this.tabPage1);
+            this.ABOverviewTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOverviewTab.Location = new System.Drawing.Point(3, 3);
+            this.ABOverviewTab.Name = "ABOverviewTab";
+            this.ABOverviewTab.SelectedIndex = 0;
+            this.ABOverviewTab.Size = new System.Drawing.Size(1322, 378);
+            this.ABOverviewTab.TabIndex = 5;
+            this.ABOverviewTab.Click += new System.EventHandler(this.TabControl5_Click);
             // 
             // ABTimeline
             // 
             this.ABTimeline.AutoScroll = true;
+            this.ABTimeline.Controls.Add(this.ABOMainLayoutPanel);
             this.ABTimeline.Controls.Add(this.Btn_Save);
-            this.ABTimeline.Controls.Add(this.groupBox51);
-            this.ABTimeline.Controls.Add(this.ABOAttendantCareBenefitsGroupBox);
-            this.ABTimeline.Controls.Add(this.groupBox49);
-            this.ABTimeline.Controls.Add(this.groupBox48);
-            this.ABTimeline.Controls.Add(this.groupBox47);
-            this.ABTimeline.Controls.Add(this.AOBMedicalRehabBenefitsGroupBox);
-            this.ABTimeline.Controls.Add(this.ABOPotentialOffsetsGroupBox);
-            this.ABTimeline.Controls.Add(this.panel1);
-            this.ABTimeline.Controls.Add(this.ABOIncomeBenefitsGroupBox);
-            this.ABTimeline.Controls.Add(this.ABOPolicyDetailsGroupBox);
             this.ABTimeline.Location = new System.Drawing.Point(4, 26);
             this.ABTimeline.Name = "ABTimeline";
             this.ABTimeline.Padding = new System.Windows.Forms.Padding(3);
@@ -5145,876 +5142,59 @@
             this.ABTimeline.Text = "AB Overview";
             this.ABTimeline.UseVisualStyleBackColor = true;
             // 
-            // Btn_Save
-            // 
-            this.Btn_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
-            this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(4468, 1336);
-            this.Btn_Save.Name = "Btn_Save";
-            this.Btn_Save.Size = new System.Drawing.Size(98, 39);
-            this.Btn_Save.TabIndex = 11;
-            this.Btn_Save.Text = "Save";
-            this.Btn_Save.UseVisualStyleBackColor = false;
-            // 
-            // groupBox51
-            // 
-            this.groupBox51.Controls.Add(this.txtStatementDate);
-            this.groupBox51.Controls.Add(this.label270);
-            this.groupBox51.Location = new System.Drawing.Point(1033, 136);
-            this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Size = new System.Drawing.Size(268, 109);
-            this.groupBox51.TabIndex = 10;
-            this.groupBox51.TabStop = false;
-            this.groupBox51.Text = "Standard Benefits Statement";
-            // 
-            // txtStatementDate
-            // 
-            this.txtStatementDate.Location = new System.Drawing.Point(141, 22);
-            this.txtStatementDate.Name = "txtStatementDate";
-            this.txtStatementDate.Size = new System.Drawing.Size(94, 23);
-            this.txtStatementDate.TabIndex = 22;
-            // 
-            // label270
-            // 
-            this.label270.AutoSize = true;
-            this.label270.Location = new System.Drawing.Point(6, 26);
-            this.label270.Name = "label270";
-            this.label270.Size = new System.Drawing.Size(111, 17);
-            this.label270.TabIndex = 0;
-            this.label270.Text = "Statement Date";
-            // 
-            // ABOAttendantCareBenefitsGroupBox
-            // 
-            this.ABOAttendantCareBenefitsGroupBox.Controls.Add(this.ABOAttendantCareBenefitsLayoutPanel);
-            this.ABOAttendantCareBenefitsGroupBox.Location = new System.Drawing.Point(3, 251);
-            this.ABOAttendantCareBenefitsGroupBox.Name = "ABOAttendantCareBenefitsGroupBox";
-            this.ABOAttendantCareBenefitsGroupBox.Size = new System.Drawing.Size(480, 120);
-            this.ABOAttendantCareBenefitsGroupBox.TabIndex = 9;
-            this.ABOAttendantCareBenefitsGroupBox.TabStop = false;
-            this.ABOAttendantCareBenefitsGroupBox.Text = "Attendant Care Benefits";
-            // 
-            // ABOAttendantCareBenefitsLayoutPanel
-            // 
-            this.ABOAttendantCareBenefitsLayoutPanel.ColumnCount = 5;
-            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBAmountPaidToDateTextBox, 3, 2);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitiallyApprovedLabel, 0, 0);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBAmountPaidToDateLabel, 2, 2);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitiallyApprovedComboBox, 1, 0);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBeingIncurredComboBox, 1, 2);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOLatestForm1Date, 4, 1);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBeingIncurredLabel, 0, 2);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOLatestForm1DateTextBox, 3, 1);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOWhosFundingLabel, 2, 0);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOWhosFundingComboBox, 3, 0);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOLatestForm1DateLabel, 2, 1);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitialAmountLabel, 0, 1);
-            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitialAmountTextBox, 1, 1);
-            this.ABOAttendantCareBenefitsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOAttendantCareBenefitsLayoutPanel.Location = new System.Drawing.Point(3, 19);
-            this.ABOAttendantCareBenefitsLayoutPanel.Name = "ABOAttendantCareBenefitsLayoutPanel";
-            this.ABOAttendantCareBenefitsLayoutPanel.RowCount = 3;
-            this.ABOAttendantCareBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOAttendantCareBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOAttendantCareBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOAttendantCareBenefitsLayoutPanel.Size = new System.Drawing.Size(474, 98);
-            this.ABOAttendantCareBenefitsLayoutPanel.TabIndex = 12;
-            // 
-            // ABOACBAmountPaidToDateTextBox
-            // 
-            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOACBAmountPaidToDateTextBox, 2);
-            this.ABOACBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOACBAmountPaidToDateTextBox.Location = new System.Drawing.Point(345, 67);
-            this.ABOACBAmountPaidToDateTextBox.Name = "ABOACBAmountPaidToDateTextBox";
-            this.ABOACBAmountPaidToDateTextBox.Size = new System.Drawing.Size(126, 23);
-            this.ABOACBAmountPaidToDateTextBox.TabIndex = 21;
-            // 
-            // ABOInitiallyApprovedLabel
-            // 
-            this.ABOInitiallyApprovedLabel.AutoSize = true;
-            this.ABOInitiallyApprovedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInitiallyApprovedLabel.Location = new System.Drawing.Point(3, 0);
-            this.ABOInitiallyApprovedLabel.Name = "ABOInitiallyApprovedLabel";
-            this.ABOInitiallyApprovedLabel.Size = new System.Drawing.Size(108, 32);
-            this.ABOInitiallyApprovedLabel.TabIndex = 0;
-            this.ABOInitiallyApprovedLabel.Text = "Initially Approved:";
-            // 
-            // ABOACBAmountPaidToDateLabel
-            // 
-            this.ABOACBAmountPaidToDateLabel.AutoSize = true;
-            this.ABOACBAmountPaidToDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOACBAmountPaidToDateLabel.Location = new System.Drawing.Point(231, 64);
-            this.ABOACBAmountPaidToDateLabel.Name = "ABOACBAmountPaidToDateLabel";
-            this.ABOACBAmountPaidToDateLabel.Size = new System.Drawing.Size(108, 34);
-            this.ABOACBAmountPaidToDateLabel.TabIndex = 20;
-            this.ABOACBAmountPaidToDateLabel.Text = "Amount Paid To Date";
-            // 
-            // ABOInitiallyApprovedComboBox
-            // 
-            this.ABOInitiallyApprovedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInitiallyApprovedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOInitiallyApprovedComboBox.FormattingEnabled = true;
-            this.ABOInitiallyApprovedComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No",
-            "Yes",
-            "No"});
-            this.ABOInitiallyApprovedComboBox.Location = new System.Drawing.Point(117, 3);
-            this.ABOInitiallyApprovedComboBox.Name = "ABOInitiallyApprovedComboBox";
-            this.ABOInitiallyApprovedComboBox.Size = new System.Drawing.Size(108, 25);
-            this.ABOInitiallyApprovedComboBox.TabIndex = 7;
-            // 
-            // ABOACBeingIncurredComboBox
-            // 
-            this.ABOACBeingIncurredComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOACBeingIncurredComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOACBeingIncurredComboBox.FormattingEnabled = true;
-            this.ABOACBeingIncurredComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No",
-            "Yes",
-            "No"});
-            this.ABOACBeingIncurredComboBox.Location = new System.Drawing.Point(117, 67);
-            this.ABOACBeingIncurredComboBox.Name = "ABOACBeingIncurredComboBox";
-            this.ABOACBeingIncurredComboBox.Size = new System.Drawing.Size(108, 25);
-            this.ABOACBeingIncurredComboBox.TabIndex = 14;
-            // 
-            // ABOLatestForm1Date
-            // 
-            this.ABOLatestForm1Date.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOLatestForm1Date.Location = new System.Drawing.Point(459, 35);
-            this.ABOLatestForm1Date.Name = "ABOLatestForm1Date";
-            this.ABOLatestForm1Date.Size = new System.Drawing.Size(12, 23);
-            this.ABOLatestForm1Date.TabIndex = 18;
-            // 
-            // ABOACBeingIncurredLabel
-            // 
-            this.ABOACBeingIncurredLabel.AutoSize = true;
-            this.ABOACBeingIncurredLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOACBeingIncurredLabel.Location = new System.Drawing.Point(3, 64);
-            this.ABOACBeingIncurredLabel.Name = "ABOACBeingIncurredLabel";
-            this.ABOACBeingIncurredLabel.Size = new System.Drawing.Size(108, 34);
-            this.ABOACBeingIncurredLabel.TabIndex = 13;
-            this.ABOACBeingIncurredLabel.Text = "A/C Being Incurred:";
-            // 
-            // ABOLatestForm1DateTextBox
-            // 
-            this.ABOLatestForm1DateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOLatestForm1DateTextBox.Location = new System.Drawing.Point(345, 35);
-            this.ABOLatestForm1DateTextBox.Name = "ABOLatestForm1DateTextBox";
-            this.ABOLatestForm1DateTextBox.Size = new System.Drawing.Size(108, 23);
-            this.ABOLatestForm1DateTextBox.TabIndex = 19;
-            // 
-            // ABOWhosFundingLabel
-            // 
-            this.ABOWhosFundingLabel.AutoSize = true;
-            this.ABOWhosFundingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOWhosFundingLabel.Location = new System.Drawing.Point(231, 0);
-            this.ABOWhosFundingLabel.Name = "ABOWhosFundingLabel";
-            this.ABOWhosFundingLabel.Size = new System.Drawing.Size(108, 32);
-            this.ABOWhosFundingLabel.TabIndex = 15;
-            this.ABOWhosFundingLabel.Text = "Who\'s Funding";
-            // 
-            // ABOWhosFundingComboBox
-            // 
-            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOWhosFundingComboBox, 2);
-            this.ABOWhosFundingComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOWhosFundingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOWhosFundingComboBox.FormattingEnabled = true;
-            this.ABOWhosFundingComboBox.Items.AddRange(new object[] {
-            "Insurer",
-            "Protected"});
-            this.ABOWhosFundingComboBox.Location = new System.Drawing.Point(345, 3);
-            this.ABOWhosFundingComboBox.Name = "ABOWhosFundingComboBox";
-            this.ABOWhosFundingComboBox.Size = new System.Drawing.Size(126, 25);
-            this.ABOWhosFundingComboBox.TabIndex = 16;
-            // 
-            // ABOLatestForm1DateLabel
-            // 
-            this.ABOLatestForm1DateLabel.AutoSize = true;
-            this.ABOLatestForm1DateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOLatestForm1DateLabel.Location = new System.Drawing.Point(231, 32);
-            this.ABOLatestForm1DateLabel.Name = "ABOLatestForm1DateLabel";
-            this.ABOLatestForm1DateLabel.Size = new System.Drawing.Size(108, 32);
-            this.ABOLatestForm1DateLabel.TabIndex = 17;
-            this.ABOLatestForm1DateLabel.Text = "Latest Form 1";
-            // 
-            // ABOInitialAmountLabel
-            // 
-            this.ABOInitialAmountLabel.AutoSize = true;
-            this.ABOInitialAmountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInitialAmountLabel.Location = new System.Drawing.Point(3, 32);
-            this.ABOInitialAmountLabel.Name = "ABOInitialAmountLabel";
-            this.ABOInitialAmountLabel.Size = new System.Drawing.Size(108, 32);
-            this.ABOInitialAmountLabel.TabIndex = 8;
-            this.ABOInitialAmountLabel.Text = "Initial Amount:";
-            // 
-            // ABOInitialAmountTextBox
-            // 
-            this.ABOInitialAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInitialAmountTextBox.Location = new System.Drawing.Point(117, 35);
-            this.ABOInitialAmountTextBox.Name = "ABOInitialAmountTextBox";
-            this.ABOInitialAmountTextBox.Size = new System.Drawing.Size(108, 23);
-            this.ABOInitialAmountTextBox.TabIndex = 12;
-            // 
-            // groupBox49
-            // 
-            this.groupBox49.Controls.Add(this.CboxCatLatFiled);
-            this.groupBox49.Controls.Add(this.label263);
-            this.groupBox49.Controls.Add(this.CboxCatResult);
-            this.groupBox49.Controls.Add(this.label261);
-            this.groupBox49.Controls.Add(this.IEsScheduled);
-            this.groupBox49.Controls.Add(this.label262);
-            this.groupBox49.Controls.Add(this.CboxCriteria);
-            this.groupBox49.Controls.Add(this.label260);
-            this.groupBox49.Controls.Add(this.CboxCat);
-            this.groupBox49.Controls.Add(this.CboxCatApplied);
-            this.groupBox49.Location = new System.Drawing.Point(512, 251);
-            this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Size = new System.Drawing.Size(499, 120);
-            this.groupBox49.TabIndex = 8;
-            this.groupBox49.TabStop = false;
-            this.groupBox49.Text = "Potential Cat";
-            // 
-            // CboxCatLatFiled
-            // 
-            this.CboxCatLatFiled.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboxCatLatFiled.FormattingEnabled = true;
-            this.CboxCatLatFiled.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.CboxCatLatFiled.Location = new System.Drawing.Point(337, 44);
-            this.CboxCatLatFiled.Name = "CboxCatLatFiled";
-            this.CboxCatLatFiled.Size = new System.Drawing.Size(92, 25);
-            this.CboxCatLatFiled.TabIndex = 14;
-            // 
-            // label263
-            // 
-            this.label263.AutoSize = true;
-            this.label263.Location = new System.Drawing.Point(243, 47);
-            this.label263.Name = "label263";
-            this.label263.Size = new System.Drawing.Size(94, 17);
-            this.label263.TabIndex = 13;
-            this.label263.Text = "CAT LAT Filed:";
-            // 
-            // CboxCatResult
-            // 
-            this.CboxCatResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboxCatResult.FormattingEnabled = true;
-            this.CboxCatResult.Items.AddRange(new object[] {
-            "Approved",
-            "Denied"});
-            this.CboxCatResult.Location = new System.Drawing.Point(337, 12);
-            this.CboxCatResult.Name = "CboxCatResult";
-            this.CboxCatResult.Size = new System.Drawing.Size(92, 25);
-            this.CboxCatResult.TabIndex = 12;
-            // 
-            // label261
-            // 
-            this.label261.AutoSize = true;
-            this.label261.Location = new System.Drawing.Point(243, 20);
-            this.label261.Name = "label261";
-            this.label261.Size = new System.Drawing.Size(78, 17);
-            this.label261.TabIndex = 11;
-            this.label261.Text = "Cat Result:";
-            // 
-            // IEsScheduled
-            // 
-            this.IEsScheduled.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.IEsScheduled.FormattingEnabled = true;
-            this.IEsScheduled.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.IEsScheduled.Location = new System.Drawing.Point(117, 75);
-            this.IEsScheduled.Name = "IEsScheduled";
-            this.IEsScheduled.Size = new System.Drawing.Size(92, 25);
-            this.IEsScheduled.TabIndex = 10;
-            // 
-            // label262
-            // 
-            this.label262.AutoSize = true;
-            this.label262.Location = new System.Drawing.Point(15, 79);
-            this.label262.Name = "label262";
-            this.label262.Size = new System.Drawing.Size(98, 17);
-            this.label262.TabIndex = 9;
-            this.label262.Text = "IEs Scheduled:";
-            // 
-            // CboxCriteria
-            // 
-            this.CboxCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboxCriteria.FormattingEnabled = true;
-            this.CboxCriteria.Items.AddRange(new object[] {
-            "4,6,7,8",
-            "4 & 8",
-            "7 & 8"});
-            this.CboxCriteria.Location = new System.Drawing.Point(117, 47);
-            this.CboxCriteria.Name = "CboxCriteria";
-            this.CboxCriteria.Size = new System.Drawing.Size(92, 25);
-            this.CboxCriteria.TabIndex = 8;
-            // 
-            // label260
-            // 
-            this.label260.AutoSize = true;
-            this.label260.Location = new System.Drawing.Point(15, 50);
-            this.label260.Name = "label260";
-            this.label260.Size = new System.Drawing.Size(88, 17);
-            this.label260.TabIndex = 7;
-            this.label260.Text = "CAT Criteria:";
-            // 
-            // CboxCat
-            // 
-            this.CboxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboxCat.FormattingEnabled = true;
-            this.CboxCat.Items.AddRange(new object[] {
-            "Pending",
-            "Yes",
-            "No"});
-            this.CboxCat.Location = new System.Drawing.Point(117, 20);
-            this.CboxCat.Name = "CboxCat";
-            this.CboxCat.Size = new System.Drawing.Size(92, 25);
-            this.CboxCat.TabIndex = 6;
-            // 
-            // CboxCatApplied
-            // 
-            this.CboxCatApplied.AutoSize = true;
-            this.CboxCatApplied.Location = new System.Drawing.Point(16, 25);
-            this.CboxCatApplied.Name = "CboxCatApplied";
-            this.CboxCatApplied.Size = new System.Drawing.Size(91, 17);
-            this.CboxCatApplied.TabIndex = 0;
-            this.CboxCatApplied.Text = "CAT Applied:";
-            // 
-            // groupBox48
-            // 
-            this.groupBox48.Controls.Add(this.textBox25);
-            this.groupBox48.Controls.Add(this.dateTimePicker28);
-            this.groupBox48.Controls.Add(this.label256);
-            this.groupBox48.Controls.Add(this.comboBox10);
-            this.groupBox48.Controls.Add(this.label259);
-            this.groupBox48.Location = new System.Drawing.Point(767, 134);
-            this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Size = new System.Drawing.Size(249, 110);
-            this.groupBox48.TabIndex = 7;
-            this.groupBox48.TabStop = false;
-            this.groupBox48.Text = "Potential Cat";
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(142, 47);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(82, 23);
-            this.textBox25.TabIndex = 12;
-            // 
-            // dateTimePicker28
-            // 
-            this.dateTimePicker28.Location = new System.Drawing.Point(225, 47);
-            this.dateTimePicker28.Name = "dateTimePicker28";
-            this.dateTimePicker28.Size = new System.Drawing.Size(10, 23);
-            this.dateTimePicker28.TabIndex = 11;
-            // 
-            // label256
-            // 
-            this.label256.AutoSize = true;
-            this.label256.Location = new System.Drawing.Point(20, 50);
-            this.label256.Name = "label256";
-            this.label256.Size = new System.Drawing.Size(125, 17);
-            this.label256.TabIndex = 7;
-            this.label256.Text = "Available - Family:";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.comboBox10.Location = new System.Drawing.Point(142, 19);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(92, 25);
-            this.comboBox10.TabIndex = 6;
-            // 
-            // label259
-            // 
-            this.label259.AutoSize = true;
-            this.label259.Location = new System.Drawing.Point(21, 23);
-            this.label259.Name = "label259";
-            this.label259.Size = new System.Drawing.Size(122, 17);
-            this.label259.TabIndex = 0;
-            this.label259.Text = "Available Insured:";
-            // 
-            // groupBox47
-            // 
-            this.groupBox47.Controls.Add(this.txtDateFamily);
-            this.groupBox47.Controls.Add(this.dateAvailableFamily);
-            this.groupBox47.Controls.Add(this.label257);
-            this.groupBox47.Controls.Add(this.CboxInsured);
-            this.groupBox47.Controls.Add(this.label258);
-            this.groupBox47.Location = new System.Drawing.Point(512, 134);
-            this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(249, 110);
-            this.groupBox47.TabIndex = 6;
-            this.groupBox47.TabStop = false;
-            this.groupBox47.Text = "Collaterals";
-            // 
-            // txtDateFamily
-            // 
-            this.txtDateFamily.Location = new System.Drawing.Point(142, 58);
-            this.txtDateFamily.Name = "txtDateFamily";
-            this.txtDateFamily.Size = new System.Drawing.Size(82, 23);
-            this.txtDateFamily.TabIndex = 12;
-            // 
-            // dateAvailableFamily
-            // 
-            this.dateAvailableFamily.Location = new System.Drawing.Point(225, 58);
-            this.dateAvailableFamily.Name = "dateAvailableFamily";
-            this.dateAvailableFamily.Size = new System.Drawing.Size(10, 23);
-            this.dateAvailableFamily.TabIndex = 11;
-            // 
-            // label257
-            // 
-            this.label257.AutoSize = true;
-            this.label257.Location = new System.Drawing.Point(19, 61);
-            this.label257.Name = "label257";
-            this.label257.Size = new System.Drawing.Size(125, 17);
-            this.label257.TabIndex = 7;
-            this.label257.Text = "Available - Family:";
-            // 
-            // CboxInsured
-            // 
-            this.CboxInsured.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboxInsured.FormattingEnabled = true;
-            this.CboxInsured.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.CboxInsured.Location = new System.Drawing.Point(142, 19);
-            this.CboxInsured.Name = "CboxInsured";
-            this.CboxInsured.Size = new System.Drawing.Size(92, 25);
-            this.CboxInsured.TabIndex = 6;
-            // 
-            // label258
-            // 
-            this.label258.AutoSize = true;
-            this.label258.Location = new System.Drawing.Point(20, 23);
-            this.label258.Name = "label258";
-            this.label258.Size = new System.Drawing.Size(122, 17);
-            this.label258.TabIndex = 0;
-            this.label258.Text = "Available Insured:";
-            // 
-            // AOBMedicalRehabBenefitsGroupBox
-            // 
-            this.AOBMedicalRehabBenefitsGroupBox.Controls.Add(this.AOBMedicalRehabBenefitsLayoutPanel);
-            this.AOBMedicalRehabBenefitsGroupBox.Location = new System.Drawing.Point(234, 134);
-            this.AOBMedicalRehabBenefitsGroupBox.Name = "AOBMedicalRehabBenefitsGroupBox";
-            this.AOBMedicalRehabBenefitsGroupBox.Size = new System.Drawing.Size(249, 110);
-            this.AOBMedicalRehabBenefitsGroupBox.TabIndex = 5;
-            this.AOBMedicalRehabBenefitsGroupBox.TabStop = false;
-            this.AOBMedicalRehabBenefitsGroupBox.Text = "Medical/Rehab Benefits";
-            // 
-            // AOBMedicalRehabBenefitsLayoutPanel
-            // 
-            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnCount = 3;
-            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOMRBAmountPaidToDateTextBox, 1, 2);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOBenefitsEndDate, 2, 1);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOMRBAmountPaidToDateLabel, 0, 2);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOBenefitsEndDateTextBox, 1, 1);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOCurrentBenefitsLevelLabel, 0, 0);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOCurrentBenefitsLevelComboBox, 1, 0);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOBenefitsEndDateLabel, 0, 1);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AOBMedicalRehabBenefitsLayoutPanel.Location = new System.Drawing.Point(3, 19);
-            this.AOBMedicalRehabBenefitsLayoutPanel.Name = "AOBMedicalRehabBenefitsLayoutPanel";
-            this.AOBMedicalRehabBenefitsLayoutPanel.RowCount = 3;
-            this.AOBMedicalRehabBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.AOBMedicalRehabBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.AOBMedicalRehabBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.AOBMedicalRehabBenefitsLayoutPanel.Size = new System.Drawing.Size(243, 88);
-            this.AOBMedicalRehabBenefitsLayoutPanel.TabIndex = 12;
-            // 
-            // ABOMRBAmountPaidToDateTextBox
-            // 
-            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOMRBAmountPaidToDateTextBox, 2);
-            this.ABOMRBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOMRBAmountPaidToDateTextBox.Location = new System.Drawing.Point(116, 61);
-            this.ABOMRBAmountPaidToDateTextBox.Name = "ABOMRBAmountPaidToDateTextBox";
-            this.ABOMRBAmountPaidToDateTextBox.Size = new System.Drawing.Size(124, 23);
-            this.ABOMRBAmountPaidToDateTextBox.TabIndex = 13;
-            // 
-            // ABOBenefitsEndDate
-            // 
-            this.ABOBenefitsEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOBenefitsEndDate.Location = new System.Drawing.Point(229, 32);
-            this.ABOBenefitsEndDate.Name = "ABOBenefitsEndDate";
-            this.ABOBenefitsEndDate.Size = new System.Drawing.Size(11, 23);
-            this.ABOBenefitsEndDate.TabIndex = 11;
-            // 
-            // ABOMRBAmountPaidToDateLabel
-            // 
-            this.ABOMRBAmountPaidToDateLabel.AutoSize = true;
-            this.ABOMRBAmountPaidToDateLabel.Location = new System.Drawing.Point(3, 58);
-            this.ABOMRBAmountPaidToDateLabel.Name = "ABOMRBAmountPaidToDateLabel";
-            this.ABOMRBAmountPaidToDateLabel.Size = new System.Drawing.Size(97, 30);
-            this.ABOMRBAmountPaidToDateLabel.TabIndex = 9;
-            this.ABOMRBAmountPaidToDateLabel.Text = "Amount Paid to Date:";
-            // 
-            // ABOBenefitsEndDateTextBox
-            // 
-            this.ABOBenefitsEndDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOBenefitsEndDateTextBox.Location = new System.Drawing.Point(116, 32);
-            this.ABOBenefitsEndDateTextBox.Name = "ABOBenefitsEndDateTextBox";
-            this.ABOBenefitsEndDateTextBox.Size = new System.Drawing.Size(107, 23);
-            this.ABOBenefitsEndDateTextBox.TabIndex = 12;
-            // 
-            // ABOCurrentBenefitsLevelLabel
-            // 
-            this.ABOCurrentBenefitsLevelLabel.AutoSize = true;
-            this.ABOCurrentBenefitsLevelLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOCurrentBenefitsLevelLabel.Location = new System.Drawing.Point(3, 0);
-            this.ABOCurrentBenefitsLevelLabel.Name = "ABOCurrentBenefitsLevelLabel";
-            this.ABOCurrentBenefitsLevelLabel.Size = new System.Drawing.Size(107, 29);
-            this.ABOCurrentBenefitsLevelLabel.TabIndex = 0;
-            this.ABOCurrentBenefitsLevelLabel.Text = "Current Benefits Level";
-            // 
-            // ABOCurrentBenefitsLevelComboBox
-            // 
-            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOCurrentBenefitsLevelComboBox, 2);
-            this.ABOCurrentBenefitsLevelComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOCurrentBenefitsLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOCurrentBenefitsLevelComboBox.FormattingEnabled = true;
-            this.ABOCurrentBenefitsLevelComboBox.Items.AddRange(new object[] {
-            "MIG",
-            "Non-CAT",
-            "CAT",
-            "MIG",
-            "Non-CAT",
-            "CAT"});
-            this.ABOCurrentBenefitsLevelComboBox.Location = new System.Drawing.Point(116, 3);
-            this.ABOCurrentBenefitsLevelComboBox.Name = "ABOCurrentBenefitsLevelComboBox";
-            this.ABOCurrentBenefitsLevelComboBox.Size = new System.Drawing.Size(124, 25);
-            this.ABOCurrentBenefitsLevelComboBox.TabIndex = 6;
-            // 
-            // ABOBenefitsEndDateLabel
-            // 
-            this.ABOBenefitsEndDateLabel.AutoSize = true;
-            this.ABOBenefitsEndDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOBenefitsEndDateLabel.Location = new System.Drawing.Point(3, 29);
-            this.ABOBenefitsEndDateLabel.Name = "ABOBenefitsEndDateLabel";
-            this.ABOBenefitsEndDateLabel.Size = new System.Drawing.Size(107, 29);
-            this.ABOBenefitsEndDateLabel.TabIndex = 7;
-            this.ABOBenefitsEndDateLabel.Text = "Benefits End:";
-            // 
-            // ABOPotentialOffsetsGroupBox
-            // 
-            this.ABOPotentialOffsetsGroupBox.Controls.Add(this.ABOPotentialOffsetsLayoutPanel);
-            this.ABOPotentialOffsetsGroupBox.Location = new System.Drawing.Point(3, 134);
-            this.ABOPotentialOffsetsGroupBox.Name = "ABOPotentialOffsetsGroupBox";
-            this.ABOPotentialOffsetsGroupBox.Size = new System.Drawing.Size(225, 110);
-            this.ABOPotentialOffsetsGroupBox.TabIndex = 4;
-            this.ABOPotentialOffsetsGroupBox.TabStop = false;
-            this.ABOPotentialOffsetsGroupBox.Text = "Potential Off-Sets";
-            // 
-            // ABOPotentialOffsetsLayoutPanel
-            // 
-            this.ABOPotentialOffsetsLayoutPanel.ColumnCount = 2;
-            this.ABOPotentialOffsetsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ABOPotentialOffsetsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGroupPrivateComboBox, 1, 2);
-            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtOntarioLabel, 0, 0);
-            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGroupPrivateLabel, 0, 2);
-            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtOntarioComboBox, 1, 0);
-            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtFederalComboBox, 1, 1);
-            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtFederalLabel, 0, 1);
-            this.ABOPotentialOffsetsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOPotentialOffsetsLayoutPanel.Location = new System.Drawing.Point(3, 19);
-            this.ABOPotentialOffsetsLayoutPanel.Name = "ABOPotentialOffsetsLayoutPanel";
-            this.ABOPotentialOffsetsLayoutPanel.RowCount = 3;
-            this.ABOPotentialOffsetsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOPotentialOffsetsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOPotentialOffsetsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOPotentialOffsetsLayoutPanel.Size = new System.Drawing.Size(219, 88);
-            this.ABOPotentialOffsetsLayoutPanel.TabIndex = 12;
-            // 
-            // ABOGroupPrivateComboBox
-            // 
-            this.ABOGroupPrivateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOGroupPrivateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOGroupPrivateComboBox.FormattingEnabled = true;
-            this.ABOGroupPrivateComboBox.Items.AddRange(new object[] {
-            "STD",
-            "LTD"});
-            this.ABOGroupPrivateComboBox.Location = new System.Drawing.Point(112, 61);
-            this.ABOGroupPrivateComboBox.Name = "ABOGroupPrivateComboBox";
-            this.ABOGroupPrivateComboBox.Size = new System.Drawing.Size(104, 25);
-            this.ABOGroupPrivateComboBox.TabIndex = 10;
-            // 
-            // ABOGovtOntarioLabel
-            // 
-            this.ABOGovtOntarioLabel.AutoSize = true;
-            this.ABOGovtOntarioLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOGovtOntarioLabel.Location = new System.Drawing.Point(3, 0);
-            this.ABOGovtOntarioLabel.Name = "ABOGovtOntarioLabel";
-            this.ABOGovtOntarioLabel.Size = new System.Drawing.Size(103, 29);
-            this.ABOGovtOntarioLabel.TabIndex = 0;
-            this.ABOGovtOntarioLabel.Text = "Gov\'t (Ontario):";
-            // 
-            // ABOGroupPrivateLabel
-            // 
-            this.ABOGroupPrivateLabel.AutoSize = true;
-            this.ABOGroupPrivateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOGroupPrivateLabel.Location = new System.Drawing.Point(3, 58);
-            this.ABOGroupPrivateLabel.Name = "ABOGroupPrivateLabel";
-            this.ABOGroupPrivateLabel.Size = new System.Drawing.Size(103, 30);
-            this.ABOGroupPrivateLabel.TabIndex = 9;
-            this.ABOGroupPrivateLabel.Text = "Group/Private:";
-            // 
-            // ABOGovtOntarioComboBox
-            // 
-            this.ABOGovtOntarioComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOGovtOntarioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOGovtOntarioComboBox.FormattingEnabled = true;
-            this.ABOGovtOntarioComboBox.Items.AddRange(new object[] {
-            "OW",
-            "ODSP"});
-            this.ABOGovtOntarioComboBox.Location = new System.Drawing.Point(112, 3);
-            this.ABOGovtOntarioComboBox.Name = "ABOGovtOntarioComboBox";
-            this.ABOGovtOntarioComboBox.Size = new System.Drawing.Size(104, 25);
-            this.ABOGovtOntarioComboBox.TabIndex = 6;
-            // 
-            // ABOGovtFederalComboBox
-            // 
-            this.ABOGovtFederalComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOGovtFederalComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOGovtFederalComboBox.FormattingEnabled = true;
-            this.ABOGovtFederalComboBox.Items.AddRange(new object[] {
-            "ODSP"});
-            this.ABOGovtFederalComboBox.Location = new System.Drawing.Point(112, 32);
-            this.ABOGovtFederalComboBox.Name = "ABOGovtFederalComboBox";
-            this.ABOGovtFederalComboBox.Size = new System.Drawing.Size(104, 25);
-            this.ABOGovtFederalComboBox.TabIndex = 8;
-            // 
-            // ABOGovtFederalLabel
-            // 
-            this.ABOGovtFederalLabel.AutoSize = true;
-            this.ABOGovtFederalLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOGovtFederalLabel.Location = new System.Drawing.Point(3, 29);
-            this.ABOGovtFederalLabel.Name = "ABOGovtFederalLabel";
-            this.ABOGovtFederalLabel.Size = new System.Drawing.Size(103, 29);
-            this.ABOGovtFederalLabel.TabIndex = 7;
-            this.ABOGovtFederalLabel.Text = "Gov\'t (Federal):";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.txtxtAutoPopulate);
-            this.panel1.Controls.Add(this.label249);
-            this.panel1.Location = new System.Drawing.Point(1033, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 122);
-            this.panel1.TabIndex = 3;
-            // 
-            // txtxtAutoPopulate
-            // 
-            this.txtxtAutoPopulate.Location = new System.Drawing.Point(34, 30);
-            this.txtxtAutoPopulate.Name = "txtxtAutoPopulate";
-            this.txtxtAutoPopulate.Size = new System.Drawing.Size(100, 23);
-            this.txtxtAutoPopulate.TabIndex = 1;
-            // 
-            // label249
-            // 
-            this.label249.AutoSize = true;
-            this.label249.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label249.Location = new System.Drawing.Point(38, 8);
-            this.label249.Name = "label249";
-            this.label249.Size = new System.Drawing.Size(93, 18);
-            this.label249.TabIndex = 0;
-            this.label249.Text = "Last Update";
-            // 
-            // ABOIncomeBenefitsGroupBox
-            // 
-            this.ABOIncomeBenefitsGroupBox.Controls.Add(this.ABOIncomeBenefitsLayoutPanel);
-            this.ABOIncomeBenefitsGroupBox.Location = new System.Drawing.Point(513, 3);
-            this.ABOIncomeBenefitsGroupBox.Name = "ABOIncomeBenefitsGroupBox";
-            this.ABOIncomeBenefitsGroupBox.Size = new System.Drawing.Size(498, 125);
-            this.ABOIncomeBenefitsGroupBox.TabIndex = 1;
-            this.ABOIncomeBenefitsGroupBox.TabStop = false;
-            this.ABOIncomeBenefitsGroupBox.Text = "Income Benefits";
-            // 
-            // ABOIncomeBenefitsLayoutPanel
-            // 
-            this.ABOIncomeBenefitsLayoutPanel.ColumnCount = 4;
-            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsFileForLATComboBox, 3, 2);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsAppliedLabel, 0, 0);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsFileForLATLabel, 2, 2);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsDeniedComboBox, 3, 1);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsAppliedComboBox, 1, 0);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsLatestOFC3ComboBox, 1, 2);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsDeniedLabel, 2, 1);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsLatestOFC3Label, 0, 2);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsWeeklyAmountTextBox, 3, 0);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsTypeComboBox, 1, 1);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsWeeklyAmountLabel, 2, 0);
-            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsTypeLabel, 0, 1);
-            this.ABOIncomeBenefitsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsLayoutPanel.Location = new System.Drawing.Point(3, 19);
-            this.ABOIncomeBenefitsLayoutPanel.Name = "ABOIncomeBenefitsLayoutPanel";
-            this.ABOIncomeBenefitsLayoutPanel.RowCount = 3;
-            this.ABOIncomeBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOIncomeBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOIncomeBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOIncomeBenefitsLayoutPanel.Size = new System.Drawing.Size(492, 103);
-            this.ABOIncomeBenefitsLayoutPanel.TabIndex = 12;
-            // 
-            // ABOIncomeBenefitsFileForLATComboBox
-            // 
-            this.ABOIncomeBenefitsFileForLATComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsFileForLATComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOIncomeBenefitsFileForLATComboBox.FormattingEnabled = true;
-            this.ABOIncomeBenefitsFileForLATComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.ABOIncomeBenefitsFileForLATComboBox.Location = new System.Drawing.Point(372, 71);
-            this.ABOIncomeBenefitsFileForLATComboBox.Name = "ABOIncomeBenefitsFileForLATComboBox";
-            this.ABOIncomeBenefitsFileForLATComboBox.Size = new System.Drawing.Size(117, 25);
-            this.ABOIncomeBenefitsFileForLATComboBox.TabIndex = 14;
-            // 
-            // ABOIncomeBenefitsAppliedLabel
-            // 
-            this.ABOIncomeBenefitsAppliedLabel.AutoSize = true;
-            this.ABOIncomeBenefitsAppliedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsAppliedLabel.Location = new System.Drawing.Point(3, 0);
-            this.ABOIncomeBenefitsAppliedLabel.Name = "ABOIncomeBenefitsAppliedLabel";
-            this.ABOIncomeBenefitsAppliedLabel.Size = new System.Drawing.Size(117, 34);
-            this.ABOIncomeBenefitsAppliedLabel.TabIndex = 0;
-            this.ABOIncomeBenefitsAppliedLabel.Text = "Applied:";
-            // 
-            // ABOIncomeBenefitsFileForLATLabel
-            // 
-            this.ABOIncomeBenefitsFileForLATLabel.AutoSize = true;
-            this.ABOIncomeBenefitsFileForLATLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsFileForLATLabel.Location = new System.Drawing.Point(249, 68);
-            this.ABOIncomeBenefitsFileForLATLabel.Name = "ABOIncomeBenefitsFileForLATLabel";
-            this.ABOIncomeBenefitsFileForLATLabel.Size = new System.Drawing.Size(117, 35);
-            this.ABOIncomeBenefitsFileForLATLabel.TabIndex = 10;
-            this.ABOIncomeBenefitsFileForLATLabel.Text = "File For LAT:";
-            // 
-            // ABOIncomeBenefitsDeniedComboBox
-            // 
-            this.ABOIncomeBenefitsDeniedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsDeniedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOIncomeBenefitsDeniedComboBox.FormattingEnabled = true;
-            this.ABOIncomeBenefitsDeniedComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.ABOIncomeBenefitsDeniedComboBox.Location = new System.Drawing.Point(372, 37);
-            this.ABOIncomeBenefitsDeniedComboBox.Name = "ABOIncomeBenefitsDeniedComboBox";
-            this.ABOIncomeBenefitsDeniedComboBox.Size = new System.Drawing.Size(117, 25);
-            this.ABOIncomeBenefitsDeniedComboBox.TabIndex = 13;
-            // 
-            // ABOIncomeBenefitsAppliedComboBox
-            // 
-            this.ABOIncomeBenefitsAppliedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsAppliedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOIncomeBenefitsAppliedComboBox.FormattingEnabled = true;
-            this.ABOIncomeBenefitsAppliedComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.ABOIncomeBenefitsAppliedComboBox.Location = new System.Drawing.Point(126, 3);
-            this.ABOIncomeBenefitsAppliedComboBox.Name = "ABOIncomeBenefitsAppliedComboBox";
-            this.ABOIncomeBenefitsAppliedComboBox.Size = new System.Drawing.Size(117, 25);
-            this.ABOIncomeBenefitsAppliedComboBox.TabIndex = 3;
-            // 
-            // ABOIncomeBenefitsLatestOFC3ComboBox
-            // 
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.FormattingEnabled = true;
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.Location = new System.Drawing.Point(126, 71);
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.Name = "ABOIncomeBenefitsLatestOFC3ComboBox";
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.Size = new System.Drawing.Size(117, 25);
-            this.ABOIncomeBenefitsLatestOFC3ComboBox.TabIndex = 5;
-            // 
-            // ABOIncomeBenefitsDeniedLabel
-            // 
-            this.ABOIncomeBenefitsDeniedLabel.AutoSize = true;
-            this.ABOIncomeBenefitsDeniedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsDeniedLabel.Location = new System.Drawing.Point(249, 34);
-            this.ABOIncomeBenefitsDeniedLabel.Name = "ABOIncomeBenefitsDeniedLabel";
-            this.ABOIncomeBenefitsDeniedLabel.Size = new System.Drawing.Size(117, 34);
-            this.ABOIncomeBenefitsDeniedLabel.TabIndex = 8;
-            this.ABOIncomeBenefitsDeniedLabel.Text = "Denied:";
-            // 
-            // ABOIncomeBenefitsLatestOFC3Label
-            // 
-            this.ABOIncomeBenefitsLatestOFC3Label.AutoSize = true;
-            this.ABOIncomeBenefitsLatestOFC3Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsLatestOFC3Label.Location = new System.Drawing.Point(3, 68);
-            this.ABOIncomeBenefitsLatestOFC3Label.Name = "ABOIncomeBenefitsLatestOFC3Label";
-            this.ABOIncomeBenefitsLatestOFC3Label.Size = new System.Drawing.Size(117, 35);
-            this.ABOIncomeBenefitsLatestOFC3Label.TabIndex = 4;
-            this.ABOIncomeBenefitsLatestOFC3Label.Text = "Latest OFC-3:";
-            // 
-            // ABOIncomeBenefitsWeeklyAmountTextBox
-            // 
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Location = new System.Drawing.Point(372, 3);
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Name = "ABOIncomeBenefitsWeeklyAmountTextBox";
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Size = new System.Drawing.Size(117, 23);
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.TabIndex = 7;
-            // 
-            // ABOIncomeBenefitsTypeComboBox
-            // 
-            this.ABOIncomeBenefitsTypeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ABOIncomeBenefitsTypeComboBox.FormattingEnabled = true;
-            this.ABOIncomeBenefitsTypeComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.ABOIncomeBenefitsTypeComboBox.Location = new System.Drawing.Point(126, 37);
-            this.ABOIncomeBenefitsTypeComboBox.Name = "ABOIncomeBenefitsTypeComboBox";
-            this.ABOIncomeBenefitsTypeComboBox.Size = new System.Drawing.Size(117, 25);
-            this.ABOIncomeBenefitsTypeComboBox.TabIndex = 12;
-            // 
-            // ABOIncomeBenefitsWeeklyAmountLabel
-            // 
-            this.ABOIncomeBenefitsWeeklyAmountLabel.AutoSize = true;
-            this.ABOIncomeBenefitsWeeklyAmountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsWeeklyAmountLabel.Location = new System.Drawing.Point(249, 0);
-            this.ABOIncomeBenefitsWeeklyAmountLabel.Name = "ABOIncomeBenefitsWeeklyAmountLabel";
-            this.ABOIncomeBenefitsWeeklyAmountLabel.Size = new System.Drawing.Size(117, 34);
-            this.ABOIncomeBenefitsWeeklyAmountLabel.TabIndex = 6;
-            this.ABOIncomeBenefitsWeeklyAmountLabel.Text = "Weekly Amount";
-            // 
-            // ABOIncomeBenefitsTypeLabel
-            // 
-            this.ABOIncomeBenefitsTypeLabel.AutoSize = true;
-            this.ABOIncomeBenefitsTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsTypeLabel.Location = new System.Drawing.Point(3, 34);
-            this.ABOIncomeBenefitsTypeLabel.Name = "ABOIncomeBenefitsTypeLabel";
-            this.ABOIncomeBenefitsTypeLabel.Size = new System.Drawing.Size(117, 34);
-            this.ABOIncomeBenefitsTypeLabel.TabIndex = 2;
-            this.ABOIncomeBenefitsTypeLabel.Text = "Type:";
+            // ABOMainLayoutPanel
+            // 
+            this.ABOMainLayoutPanel.ColumnCount = 3;
+            this.ABOMainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOMainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOMainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOSaveButton, 3, 4);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOPolicyDetailsGroupBox, 0, 0);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOIncomeBenefitsGroupBox, 0, 1);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOPotentialCATGroupBox, 2, 1);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOStandardBenefitsStatementGroupBox, 1, 2);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOLastUpdatePanel, 2, 0);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOPotentialOffsetsGroupBox, 1, 3);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOAttendantCareBenefitsGroupBox, 0, 3);
+            this.ABOMainLayoutPanel.Controls.Add(this.AOBMedicalRehabBenefitsGroupBox, 1, 0);
+            this.ABOMainLayoutPanel.Controls.Add(this.ABOCollateralsGroupBox, 1, 1);
+            this.ABOMainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOMainLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.ABOMainLayoutPanel.Name = "ABOMainLayoutPanel";
+            this.ABOMainLayoutPanel.RowCount = 5;
+            this.ABOMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33036F));
+            this.ABOMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.99956F));
+            this.ABOMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.3397F));
+            this.ABOMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66519F));
+            this.ABOMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66519F));
+            this.ABOMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.ABOMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.ABOMainLayoutPanel.Size = new System.Drawing.Size(1308, 342);
+            this.ABOMainLayoutPanel.TabIndex = 12;
+            // 
+            // ABOSaveButton
+            // 
+            this.ABOSaveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ABOSaveButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.ABOSaveButton.Enabled = false;
+            this.ABOSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ABOSaveButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.ABOSaveButton.ForeColor = System.Drawing.Color.White;
+            this.ABOSaveButton.Location = new System.Drawing.Point(1012, 293);
+            this.ABOSaveButton.Name = "ABOSaveButton";
+            this.ABOSaveButton.Size = new System.Drawing.Size(265, 37);
+            this.ABOSaveButton.TabIndex = 168;
+            this.ABOSaveButton.Text = "Save";
+            this.ABOSaveButton.UseVisualStyleBackColor = false;
+            this.ABOSaveButton.Click += new System.EventHandler(this.ABOSaveButton_Click);
             // 
             // ABOPolicyDetailsGroupBox
             // 
             this.ABOPolicyDetailsGroupBox.Controls.Add(this.ABOPolicyDetailsLayoutPanel);
+            this.ABOPolicyDetailsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOPolicyDetailsGroupBox.Location = new System.Drawing.Point(3, 3);
             this.ABOPolicyDetailsGroupBox.Name = "ABOPolicyDetailsGroupBox";
-            this.ABOPolicyDetailsGroupBox.Size = new System.Drawing.Size(480, 125);
+            this.ABOPolicyDetailsGroupBox.Size = new System.Drawing.Size(648, 107);
             this.ABOPolicyDetailsGroupBox.TabIndex = 0;
             this.ABOPolicyDetailsGroupBox.TabStop = false;
             this.ABOPolicyDetailsGroupBox.Text = "Policy Details";
@@ -6045,15 +5225,16 @@
             this.ABOPolicyDetailsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.ABOPolicyDetailsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.ABOPolicyDetailsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.ABOPolicyDetailsLayoutPanel.Size = new System.Drawing.Size(474, 103);
+            this.ABOPolicyDetailsLayoutPanel.Size = new System.Drawing.Size(642, 85);
             this.ABOPolicyDetailsLayoutPanel.TabIndex = 12;
             // 
             // ABOABCounselTextBox
             // 
             this.ABOABCounselTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOABCounselTextBox.Location = new System.Drawing.Point(357, 71);
+            this.ABOABCounselTextBox.Enabled = false;
+            this.ABOABCounselTextBox.Location = new System.Drawing.Point(483, 59);
             this.ABOABCounselTextBox.Name = "ABOABCounselTextBox";
-            this.ABOABCounselTextBox.Size = new System.Drawing.Size(114, 23);
+            this.ABOABCounselTextBox.Size = new System.Drawing.Size(156, 23);
             this.ABOABCounselTextBox.TabIndex = 11;
             // 
             // ABODateOfLossLabel
@@ -6062,7 +5243,7 @@
             this.ABODateOfLossLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABODateOfLossLabel.Location = new System.Drawing.Point(3, 0);
             this.ABODateOfLossLabel.Name = "ABODateOfLossLabel";
-            this.ABODateOfLossLabel.Size = new System.Drawing.Size(112, 34);
+            this.ABODateOfLossLabel.Size = new System.Drawing.Size(154, 28);
             this.ABODateOfLossLabel.TabIndex = 0;
             this.ABODateOfLossLabel.Text = "Date of Loss:";
             // 
@@ -6070,48 +5251,51 @@
             // 
             this.ABOABCounselLabel.AutoSize = true;
             this.ABOABCounselLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOABCounselLabel.Location = new System.Drawing.Point(239, 68);
+            this.ABOABCounselLabel.Location = new System.Drawing.Point(323, 56);
             this.ABOABCounselLabel.Name = "ABOABCounselLabel";
-            this.ABOABCounselLabel.Size = new System.Drawing.Size(112, 35);
+            this.ABOABCounselLabel.Size = new System.Drawing.Size(154, 29);
             this.ABOABCounselLabel.TabIndex = 10;
             this.ABOABCounselLabel.Text = "AB Counsel:";
             // 
             // ABODateOfLossTextBox
             // 
             this.ABODateOfLossTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABODateOfLossTextBox.Location = new System.Drawing.Point(121, 3);
+            this.ABODateOfLossTextBox.Location = new System.Drawing.Point(163, 3);
             this.ABODateOfLossTextBox.Name = "ABODateOfLossTextBox";
-            this.ABODateOfLossTextBox.Size = new System.Drawing.Size(112, 23);
+            this.ABODateOfLossTextBox.ReadOnly = true;
+            this.ABODateOfLossTextBox.Size = new System.Drawing.Size(154, 23);
             this.ABODateOfLossTextBox.TabIndex = 1;
             // 
             // ABOOptionalBenefitsComboBox
             // 
             this.ABOOptionalBenefitsComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOOptionalBenefitsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOOptionalBenefitsComboBox.Enabled = false;
             this.ABOOptionalBenefitsComboBox.FormattingEnabled = true;
             this.ABOOptionalBenefitsComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.ABOOptionalBenefitsComboBox.Location = new System.Drawing.Point(121, 71);
+            this.ABOOptionalBenefitsComboBox.Location = new System.Drawing.Point(163, 59);
             this.ABOOptionalBenefitsComboBox.Name = "ABOOptionalBenefitsComboBox";
-            this.ABOOptionalBenefitsComboBox.Size = new System.Drawing.Size(112, 25);
+            this.ABOOptionalBenefitsComboBox.Size = new System.Drawing.Size(154, 25);
             this.ABOOptionalBenefitsComboBox.TabIndex = 5;
             // 
             // ABOAdjusterNameTextBox
             // 
             this.ABOAdjusterNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOAdjusterNameTextBox.Location = new System.Drawing.Point(357, 37);
+            this.ABOAdjusterNameTextBox.Location = new System.Drawing.Point(483, 31);
             this.ABOAdjusterNameTextBox.Name = "ABOAdjusterNameTextBox";
-            this.ABOAdjusterNameTextBox.Size = new System.Drawing.Size(114, 23);
+            this.ABOAdjusterNameTextBox.ReadOnly = true;
+            this.ABOAdjusterNameTextBox.Size = new System.Drawing.Size(156, 23);
             this.ABOAdjusterNameTextBox.TabIndex = 9;
             // 
             // ABOOptionalBenefitsLabel
             // 
             this.ABOOptionalBenefitsLabel.AutoSize = true;
             this.ABOOptionalBenefitsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOOptionalBenefitsLabel.Location = new System.Drawing.Point(3, 68);
+            this.ABOOptionalBenefitsLabel.Location = new System.Drawing.Point(3, 56);
             this.ABOOptionalBenefitsLabel.Name = "ABOOptionalBenefitsLabel";
-            this.ABOOptionalBenefitsLabel.Size = new System.Drawing.Size(112, 35);
+            this.ABOOptionalBenefitsLabel.Size = new System.Drawing.Size(154, 29);
             this.ABOOptionalBenefitsLabel.TabIndex = 4;
             this.ABOOptionalBenefitsLabel.Text = "Optional Benefits:";
             // 
@@ -6119,9 +5303,9 @@
             // 
             this.ABOInsurerNameLabel.AutoSize = true;
             this.ABOInsurerNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInsurerNameLabel.Location = new System.Drawing.Point(239, 0);
+            this.ABOInsurerNameLabel.Location = new System.Drawing.Point(323, 0);
             this.ABOInsurerNameLabel.Name = "ABOInsurerNameLabel";
-            this.ABOInsurerNameLabel.Size = new System.Drawing.Size(112, 34);
+            this.ABOInsurerNameLabel.Size = new System.Drawing.Size(154, 28);
             this.ABOInsurerNameLabel.TabIndex = 6;
             this.ABOInsurerNameLabel.Text = "Insurer Name:";
             // 
@@ -6129,27 +5313,28 @@
             // 
             this.ABOAdjusterNameLabel.AutoSize = true;
             this.ABOAdjusterNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOAdjusterNameLabel.Location = new System.Drawing.Point(239, 34);
+            this.ABOAdjusterNameLabel.Location = new System.Drawing.Point(323, 28);
             this.ABOAdjusterNameLabel.Name = "ABOAdjusterNameLabel";
-            this.ABOAdjusterNameLabel.Size = new System.Drawing.Size(112, 34);
+            this.ABOAdjusterNameLabel.Size = new System.Drawing.Size(154, 28);
             this.ABOAdjusterNameLabel.TabIndex = 8;
             this.ABOAdjusterNameLabel.Text = "Ajuster Name:";
             // 
             // ABOInsurerNameTextBox
             // 
             this.ABOInsurerNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInsurerNameTextBox.Location = new System.Drawing.Point(357, 3);
+            this.ABOInsurerNameTextBox.Location = new System.Drawing.Point(483, 3);
             this.ABOInsurerNameTextBox.Name = "ABOInsurerNameTextBox";
-            this.ABOInsurerNameTextBox.Size = new System.Drawing.Size(114, 23);
+            this.ABOInsurerNameTextBox.ReadOnly = true;
+            this.ABOInsurerNameTextBox.Size = new System.Drawing.Size(156, 23);
             this.ABOInsurerNameTextBox.TabIndex = 7;
             // 
             // ABOPreJune1st2016Label
             // 
             this.ABOPreJune1st2016Label.AutoSize = true;
             this.ABOPreJune1st2016Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOPreJune1st2016Label.Location = new System.Drawing.Point(3, 34);
+            this.ABOPreJune1st2016Label.Location = new System.Drawing.Point(3, 28);
             this.ABOPreJune1st2016Label.Name = "ABOPreJune1st2016Label";
-            this.ABOPreJune1st2016Label.Size = new System.Drawing.Size(112, 34);
+            this.ABOPreJune1st2016Label.Size = new System.Drawing.Size(154, 28);
             this.ABOPreJune1st2016Label.TabIndex = 2;
             this.ABOPreJune1st2016Label.Text = "Pre-June 1, 2016:";
             // 
@@ -6157,14 +5342,1000 @@
             // 
             this.ABOPreJune1st2016ComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOPreJune1st2016ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOPreJune1st2016ComboBox.Enabled = false;
             this.ABOPreJune1st2016ComboBox.FormattingEnabled = true;
             this.ABOPreJune1st2016ComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.ABOPreJune1st2016ComboBox.Location = new System.Drawing.Point(121, 37);
+            this.ABOPreJune1st2016ComboBox.Location = new System.Drawing.Point(163, 31);
             this.ABOPreJune1st2016ComboBox.Name = "ABOPreJune1st2016ComboBox";
-            this.ABOPreJune1st2016ComboBox.Size = new System.Drawing.Size(112, 25);
+            this.ABOPreJune1st2016ComboBox.Size = new System.Drawing.Size(154, 25);
             this.ABOPreJune1st2016ComboBox.TabIndex = 3;
+            // 
+            // ABOIncomeBenefitsGroupBox
+            // 
+            this.ABOIncomeBenefitsGroupBox.Controls.Add(this.ABOIncomeBenefitsLayoutPanel);
+            this.ABOIncomeBenefitsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsGroupBox.Location = new System.Drawing.Point(3, 116);
+            this.ABOIncomeBenefitsGroupBox.Name = "ABOIncomeBenefitsGroupBox";
+            this.ABOMainLayoutPanel.SetRowSpan(this.ABOIncomeBenefitsGroupBox, 2);
+            this.ABOIncomeBenefitsGroupBox.Size = new System.Drawing.Size(648, 107);
+            this.ABOIncomeBenefitsGroupBox.TabIndex = 1;
+            this.ABOIncomeBenefitsGroupBox.TabStop = false;
+            this.ABOIncomeBenefitsGroupBox.Text = "Income Benefits";
+            // 
+            // ABOIncomeBenefitsLayoutPanel
+            // 
+            this.ABOIncomeBenefitsLayoutPanel.ColumnCount = 5;
+            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOIncomeBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsLatestOFC3, 2, 2);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsLatestOFC3TextBox, 1, 2);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsWeeklyAmountTextBox, 4, 0);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsFileForLATComboBox, 4, 2);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsAppliedLabel, 0, 0);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsFileForLATLabel, 3, 2);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsDeniedComboBox, 4, 1);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsAppliedComboBox, 1, 0);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsDeniedLabel, 3, 1);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsLatestOFC3Label, 0, 2);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsTypeComboBox, 1, 1);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsWeeklyAmountLabel, 3, 0);
+            this.ABOIncomeBenefitsLayoutPanel.Controls.Add(this.ABOIncomeBenefitsTypeLabel, 0, 1);
+            this.ABOIncomeBenefitsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.ABOIncomeBenefitsLayoutPanel.Name = "ABOIncomeBenefitsLayoutPanel";
+            this.ABOIncomeBenefitsLayoutPanel.RowCount = 3;
+            this.ABOIncomeBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOIncomeBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOIncomeBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOIncomeBenefitsLayoutPanel.Size = new System.Drawing.Size(642, 85);
+            this.ABOIncomeBenefitsLayoutPanel.TabIndex = 12;
+            // 
+            // ABOIncomeBenefitsLatestOFC3
+            // 
+            this.ABOIncomeBenefitsLatestOFC3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsLatestOFC3.Enabled = false;
+            this.ABOIncomeBenefitsLatestOFC3.Location = new System.Drawing.Point(315, 59);
+            this.ABOIncomeBenefitsLatestOFC3.Name = "ABOIncomeBenefitsLatestOFC3";
+            this.ABOIncomeBenefitsLatestOFC3.Size = new System.Drawing.Size(11, 23);
+            this.ABOIncomeBenefitsLatestOFC3.TabIndex = 17;
+            this.ABOIncomeBenefitsLatestOFC3.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // ABOIncomeBenefitsLatestOFC3TextBox
+            // 
+            this.ABOIncomeBenefitsLatestOFC3TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsLatestOFC3TextBox.Location = new System.Drawing.Point(159, 59);
+            this.ABOIncomeBenefitsLatestOFC3TextBox.Name = "ABOIncomeBenefitsLatestOFC3TextBox";
+            this.ABOIncomeBenefitsLatestOFC3TextBox.ReadOnly = true;
+            this.ABOIncomeBenefitsLatestOFC3TextBox.Size = new System.Drawing.Size(150, 23);
+            this.ABOIncomeBenefitsLatestOFC3TextBox.TabIndex = 16;
+            // 
+            // ABOIncomeBenefitsWeeklyAmountTextBox
+            // 
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.CurrencySymbol = "$";
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Enabled = false;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Location = new System.Drawing.Point(488, 3);
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Name = "ABOIncomeBenefitsWeeklyAmountTextBox";
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Size = new System.Drawing.Size(151, 23);
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.TabIndex = 15;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ABOIncomeBenefitsFileForLATComboBox
+            // 
+            this.ABOIncomeBenefitsFileForLATComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsFileForLATComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOIncomeBenefitsFileForLATComboBox.Enabled = false;
+            this.ABOIncomeBenefitsFileForLATComboBox.FormattingEnabled = true;
+            this.ABOIncomeBenefitsFileForLATComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No",
+            "N/A"});
+            this.ABOIncomeBenefitsFileForLATComboBox.Location = new System.Drawing.Point(488, 59);
+            this.ABOIncomeBenefitsFileForLATComboBox.Name = "ABOIncomeBenefitsFileForLATComboBox";
+            this.ABOIncomeBenefitsFileForLATComboBox.Size = new System.Drawing.Size(151, 25);
+            this.ABOIncomeBenefitsFileForLATComboBox.TabIndex = 14;
+            // 
+            // ABOIncomeBenefitsAppliedLabel
+            // 
+            this.ABOIncomeBenefitsAppliedLabel.AutoSize = true;
+            this.ABOIncomeBenefitsAppliedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsAppliedLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOIncomeBenefitsAppliedLabel.Name = "ABOIncomeBenefitsAppliedLabel";
+            this.ABOIncomeBenefitsAppliedLabel.Size = new System.Drawing.Size(150, 28);
+            this.ABOIncomeBenefitsAppliedLabel.TabIndex = 0;
+            this.ABOIncomeBenefitsAppliedLabel.Text = "Applied:";
+            // 
+            // ABOIncomeBenefitsFileForLATLabel
+            // 
+            this.ABOIncomeBenefitsFileForLATLabel.AutoSize = true;
+            this.ABOIncomeBenefitsFileForLATLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsFileForLATLabel.Location = new System.Drawing.Point(332, 56);
+            this.ABOIncomeBenefitsFileForLATLabel.Name = "ABOIncomeBenefitsFileForLATLabel";
+            this.ABOIncomeBenefitsFileForLATLabel.Size = new System.Drawing.Size(150, 29);
+            this.ABOIncomeBenefitsFileForLATLabel.TabIndex = 10;
+            this.ABOIncomeBenefitsFileForLATLabel.Text = "File For LAT:";
+            // 
+            // ABOIncomeBenefitsDeniedComboBox
+            // 
+            this.ABOIncomeBenefitsDeniedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsDeniedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOIncomeBenefitsDeniedComboBox.Enabled = false;
+            this.ABOIncomeBenefitsDeniedComboBox.FormattingEnabled = true;
+            this.ABOIncomeBenefitsDeniedComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOIncomeBenefitsDeniedComboBox.Location = new System.Drawing.Point(488, 31);
+            this.ABOIncomeBenefitsDeniedComboBox.Name = "ABOIncomeBenefitsDeniedComboBox";
+            this.ABOIncomeBenefitsDeniedComboBox.Size = new System.Drawing.Size(151, 25);
+            this.ABOIncomeBenefitsDeniedComboBox.TabIndex = 13;
+            // 
+            // ABOIncomeBenefitsAppliedComboBox
+            // 
+            this.ABOIncomeBenefitsLayoutPanel.SetColumnSpan(this.ABOIncomeBenefitsAppliedComboBox, 2);
+            this.ABOIncomeBenefitsAppliedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsAppliedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOIncomeBenefitsAppliedComboBox.Enabled = false;
+            this.ABOIncomeBenefitsAppliedComboBox.FormattingEnabled = true;
+            this.ABOIncomeBenefitsAppliedComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOIncomeBenefitsAppliedComboBox.Location = new System.Drawing.Point(159, 3);
+            this.ABOIncomeBenefitsAppliedComboBox.Name = "ABOIncomeBenefitsAppliedComboBox";
+            this.ABOIncomeBenefitsAppliedComboBox.Size = new System.Drawing.Size(167, 25);
+            this.ABOIncomeBenefitsAppliedComboBox.TabIndex = 3;
+            // 
+            // ABOIncomeBenefitsDeniedLabel
+            // 
+            this.ABOIncomeBenefitsDeniedLabel.AutoSize = true;
+            this.ABOIncomeBenefitsDeniedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsDeniedLabel.Location = new System.Drawing.Point(332, 28);
+            this.ABOIncomeBenefitsDeniedLabel.Name = "ABOIncomeBenefitsDeniedLabel";
+            this.ABOIncomeBenefitsDeniedLabel.Size = new System.Drawing.Size(150, 28);
+            this.ABOIncomeBenefitsDeniedLabel.TabIndex = 8;
+            this.ABOIncomeBenefitsDeniedLabel.Text = "Denied:";
+            // 
+            // ABOIncomeBenefitsLatestOFC3Label
+            // 
+            this.ABOIncomeBenefitsLatestOFC3Label.AutoSize = true;
+            this.ABOIncomeBenefitsLatestOFC3Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsLatestOFC3Label.Location = new System.Drawing.Point(3, 56);
+            this.ABOIncomeBenefitsLatestOFC3Label.Name = "ABOIncomeBenefitsLatestOFC3Label";
+            this.ABOIncomeBenefitsLatestOFC3Label.Size = new System.Drawing.Size(150, 29);
+            this.ABOIncomeBenefitsLatestOFC3Label.TabIndex = 4;
+            this.ABOIncomeBenefitsLatestOFC3Label.Text = "Latest OFC-3:";
+            // 
+            // ABOIncomeBenefitsTypeComboBox
+            // 
+            this.ABOIncomeBenefitsLayoutPanel.SetColumnSpan(this.ABOIncomeBenefitsTypeComboBox, 2);
+            this.ABOIncomeBenefitsTypeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOIncomeBenefitsTypeComboBox.Enabled = false;
+            this.ABOIncomeBenefitsTypeComboBox.FormattingEnabled = true;
+            this.ABOIncomeBenefitsTypeComboBox.Items.AddRange(new object[] {
+            "IRB",
+            "NEB"});
+            this.ABOIncomeBenefitsTypeComboBox.Location = new System.Drawing.Point(159, 31);
+            this.ABOIncomeBenefitsTypeComboBox.Name = "ABOIncomeBenefitsTypeComboBox";
+            this.ABOIncomeBenefitsTypeComboBox.Size = new System.Drawing.Size(167, 25);
+            this.ABOIncomeBenefitsTypeComboBox.TabIndex = 12;
+            // 
+            // ABOIncomeBenefitsWeeklyAmountLabel
+            // 
+            this.ABOIncomeBenefitsWeeklyAmountLabel.AutoSize = true;
+            this.ABOIncomeBenefitsWeeklyAmountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsWeeklyAmountLabel.Location = new System.Drawing.Point(332, 0);
+            this.ABOIncomeBenefitsWeeklyAmountLabel.Name = "ABOIncomeBenefitsWeeklyAmountLabel";
+            this.ABOIncomeBenefitsWeeklyAmountLabel.Size = new System.Drawing.Size(150, 28);
+            this.ABOIncomeBenefitsWeeklyAmountLabel.TabIndex = 6;
+            this.ABOIncomeBenefitsWeeklyAmountLabel.Text = "Weekly Amount";
+            // 
+            // ABOIncomeBenefitsTypeLabel
+            // 
+            this.ABOIncomeBenefitsTypeLabel.AutoSize = true;
+            this.ABOIncomeBenefitsTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsTypeLabel.Location = new System.Drawing.Point(3, 28);
+            this.ABOIncomeBenefitsTypeLabel.Name = "ABOIncomeBenefitsTypeLabel";
+            this.ABOIncomeBenefitsTypeLabel.Size = new System.Drawing.Size(150, 28);
+            this.ABOIncomeBenefitsTypeLabel.TabIndex = 2;
+            this.ABOIncomeBenefitsTypeLabel.Text = "Type:";
+            // 
+            // ABOPotentialCATGroupBox
+            // 
+            this.ABOPotentialCATGroupBox.Controls.Add(this.ABOPotentialCATLayoutPanel);
+            this.ABOPotentialCATGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOPotentialCATGroupBox.Location = new System.Drawing.Point(984, 116);
+            this.ABOPotentialCATGroupBox.Name = "ABOPotentialCATGroupBox";
+            this.ABOMainLayoutPanel.SetRowSpan(this.ABOPotentialCATGroupBox, 3);
+            this.ABOPotentialCATGroupBox.Size = new System.Drawing.Size(321, 163);
+            this.ABOPotentialCATGroupBox.TabIndex = 8;
+            this.ABOPotentialCATGroupBox.TabStop = false;
+            this.ABOPotentialCATGroupBox.Text = "Potential CAT";
+            // 
+            // ABOPotentialCATLayoutPanel
+            // 
+            this.ABOPotentialCATLayoutPanel.ColumnCount = 2;
+            this.ABOPotentialCATLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOPotentialCATLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATLATFiledComboBox, 1, 4);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATAppliedLabel, 0, 0);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATLATFiledLabel, 0, 4);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATAppliedComboBox, 1, 0);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATResultComboBox, 1, 3);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATCriteriaLabel, 0, 1);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATResultLabel, 0, 3);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOCATCriteriaComboBox, 1, 1);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOIEsScheduledComboBox, 1, 2);
+            this.ABOPotentialCATLayoutPanel.Controls.Add(this.ABOIEsScheduledLabel, 0, 2);
+            this.ABOPotentialCATLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOPotentialCATLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.ABOPotentialCATLayoutPanel.Name = "ABOPotentialCATLayoutPanel";
+            this.ABOPotentialCATLayoutPanel.RowCount = 5;
+            this.ABOPotentialCATLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.ABOPotentialCATLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.ABOPotentialCATLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.ABOPotentialCATLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.ABOPotentialCATLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.ABOPotentialCATLayoutPanel.Size = new System.Drawing.Size(315, 141);
+            this.ABOPotentialCATLayoutPanel.TabIndex = 12;
+            // 
+            // ABOCATLATFiledComboBox
+            // 
+            this.ABOCATLATFiledComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATLATFiledComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOCATLATFiledComboBox.Enabled = false;
+            this.ABOCATLATFiledComboBox.FormattingEnabled = true;
+            this.ABOCATLATFiledComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOCATLATFiledComboBox.Location = new System.Drawing.Point(160, 115);
+            this.ABOCATLATFiledComboBox.Name = "ABOCATLATFiledComboBox";
+            this.ABOCATLATFiledComboBox.Size = new System.Drawing.Size(152, 25);
+            this.ABOCATLATFiledComboBox.TabIndex = 14;
+            // 
+            // ABOCATAppliedLabel
+            // 
+            this.ABOCATAppliedLabel.AutoSize = true;
+            this.ABOCATAppliedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATAppliedLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOCATAppliedLabel.Name = "ABOCATAppliedLabel";
+            this.ABOCATAppliedLabel.Size = new System.Drawing.Size(151, 28);
+            this.ABOCATAppliedLabel.TabIndex = 0;
+            this.ABOCATAppliedLabel.Text = "CAT Applied:";
+            // 
+            // ABOCATLATFiledLabel
+            // 
+            this.ABOCATLATFiledLabel.AutoSize = true;
+            this.ABOCATLATFiledLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATLATFiledLabel.Location = new System.Drawing.Point(3, 112);
+            this.ABOCATLATFiledLabel.Name = "ABOCATLATFiledLabel";
+            this.ABOCATLATFiledLabel.Size = new System.Drawing.Size(151, 29);
+            this.ABOCATLATFiledLabel.TabIndex = 13;
+            this.ABOCATLATFiledLabel.Text = "CAT LAT Filed:";
+            // 
+            // ABOCATAppliedComboBox
+            // 
+            this.ABOCATAppliedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATAppliedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOCATAppliedComboBox.Enabled = false;
+            this.ABOCATAppliedComboBox.FormattingEnabled = true;
+            this.ABOCATAppliedComboBox.Items.AddRange(new object[] {
+            "Pending",
+            "Yes",
+            "No"});
+            this.ABOCATAppliedComboBox.Location = new System.Drawing.Point(160, 3);
+            this.ABOCATAppliedComboBox.Name = "ABOCATAppliedComboBox";
+            this.ABOCATAppliedComboBox.Size = new System.Drawing.Size(152, 25);
+            this.ABOCATAppliedComboBox.TabIndex = 6;
+            // 
+            // ABOCATResultComboBox
+            // 
+            this.ABOCATResultComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATResultComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOCATResultComboBox.Enabled = false;
+            this.ABOCATResultComboBox.FormattingEnabled = true;
+            this.ABOCATResultComboBox.Items.AddRange(new object[] {
+            "Approved",
+            "Denied"});
+            this.ABOCATResultComboBox.Location = new System.Drawing.Point(160, 87);
+            this.ABOCATResultComboBox.Name = "ABOCATResultComboBox";
+            this.ABOCATResultComboBox.Size = new System.Drawing.Size(152, 25);
+            this.ABOCATResultComboBox.TabIndex = 12;
+            // 
+            // ABOCATCriteriaLabel
+            // 
+            this.ABOCATCriteriaLabel.AutoSize = true;
+            this.ABOCATCriteriaLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATCriteriaLabel.Location = new System.Drawing.Point(3, 28);
+            this.ABOCATCriteriaLabel.Name = "ABOCATCriteriaLabel";
+            this.ABOCATCriteriaLabel.Size = new System.Drawing.Size(151, 28);
+            this.ABOCATCriteriaLabel.TabIndex = 7;
+            this.ABOCATCriteriaLabel.Text = "CAT Criteria:";
+            // 
+            // ABOCATResultLabel
+            // 
+            this.ABOCATResultLabel.AutoSize = true;
+            this.ABOCATResultLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATResultLabel.Location = new System.Drawing.Point(3, 84);
+            this.ABOCATResultLabel.Name = "ABOCATResultLabel";
+            this.ABOCATResultLabel.Size = new System.Drawing.Size(151, 28);
+            this.ABOCATResultLabel.TabIndex = 11;
+            this.ABOCATResultLabel.Text = "CAT Result:";
+            // 
+            // ABOCATCriteriaComboBox
+            // 
+            this.ABOCATCriteriaComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCATCriteriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOCATCriteriaComboBox.Enabled = false;
+            this.ABOCATCriteriaComboBox.FormattingEnabled = true;
+            this.ABOCATCriteriaComboBox.Items.AddRange(new object[] {
+            "4,6,7,8",
+            "4 & 8",
+            "7 & 8"});
+            this.ABOCATCriteriaComboBox.Location = new System.Drawing.Point(160, 31);
+            this.ABOCATCriteriaComboBox.Name = "ABOCATCriteriaComboBox";
+            this.ABOCATCriteriaComboBox.Size = new System.Drawing.Size(152, 25);
+            this.ABOCATCriteriaComboBox.TabIndex = 8;
+            // 
+            // ABOIEsScheduledComboBox
+            // 
+            this.ABOIEsScheduledComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIEsScheduledComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOIEsScheduledComboBox.Enabled = false;
+            this.ABOIEsScheduledComboBox.FormattingEnabled = true;
+            this.ABOIEsScheduledComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOIEsScheduledComboBox.Location = new System.Drawing.Point(160, 59);
+            this.ABOIEsScheduledComboBox.Name = "ABOIEsScheduledComboBox";
+            this.ABOIEsScheduledComboBox.Size = new System.Drawing.Size(152, 25);
+            this.ABOIEsScheduledComboBox.TabIndex = 10;
+            // 
+            // ABOIEsScheduledLabel
+            // 
+            this.ABOIEsScheduledLabel.AutoSize = true;
+            this.ABOIEsScheduledLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIEsScheduledLabel.Location = new System.Drawing.Point(3, 56);
+            this.ABOIEsScheduledLabel.Name = "ABOIEsScheduledLabel";
+            this.ABOIEsScheduledLabel.Size = new System.Drawing.Size(151, 28);
+            this.ABOIEsScheduledLabel.TabIndex = 9;
+            this.ABOIEsScheduledLabel.Text = "IEs Scheduled:";
+            // 
+            // ABOStandardBenefitsStatementGroupBox
+            // 
+            this.ABOStandardBenefitsStatementGroupBox.Controls.Add(this.ABOStandardBenefitsStatementLayoutPanel);
+            this.ABOStandardBenefitsStatementGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOStandardBenefitsStatementGroupBox.Location = new System.Drawing.Point(657, 184);
+            this.ABOStandardBenefitsStatementGroupBox.Name = "ABOStandardBenefitsStatementGroupBox";
+            this.ABOStandardBenefitsStatementGroupBox.Size = new System.Drawing.Size(321, 39);
+            this.ABOStandardBenefitsStatementGroupBox.TabIndex = 10;
+            this.ABOStandardBenefitsStatementGroupBox.TabStop = false;
+            this.ABOStandardBenefitsStatementGroupBox.Text = "Standard Benefits Statement";
+            // 
+            // ABOStandardBenefitsStatementLayoutPanel
+            // 
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnCount = 3;
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDate, 2, 0);
+            this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateTextBox, 1, 0);
+            this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateLabel, 0, 0);
+            this.ABOStandardBenefitsStatementLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOStandardBenefitsStatementLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.ABOStandardBenefitsStatementLayoutPanel.Name = "ABOStandardBenefitsStatementLayoutPanel";
+            this.ABOStandardBenefitsStatementLayoutPanel.RowCount = 1;
+            this.ABOStandardBenefitsStatementLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOStandardBenefitsStatementLayoutPanel.Size = new System.Drawing.Size(315, 17);
+            this.ABOStandardBenefitsStatementLayoutPanel.TabIndex = 12;
+            // 
+            // ABOStatementDate
+            // 
+            this.ABOStatementDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOStatementDate.Enabled = false;
+            this.ABOStatementDate.Location = new System.Drawing.Point(293, 3);
+            this.ABOStatementDate.Name = "ABOStatementDate";
+            this.ABOStatementDate.Size = new System.Drawing.Size(19, 23);
+            this.ABOStatementDate.TabIndex = 23;
+            // 
+            // ABOStatementDateTextBox
+            // 
+            this.ABOStatementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(151, 3);
+            this.ABOStatementDateTextBox.Name = "ABOStatementDateTextBox";
+            this.ABOStatementDateTextBox.ReadOnly = true;
+            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(136, 23);
+            this.ABOStatementDateTextBox.TabIndex = 22;
+            // 
+            // ABOStatementDateLabel
+            // 
+            this.ABOStatementDateLabel.AutoSize = true;
+            this.ABOStatementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOStatementDateLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOStatementDateLabel.Name = "ABOStatementDateLabel";
+            this.ABOStatementDateLabel.Size = new System.Drawing.Size(142, 17);
+            this.ABOStatementDateLabel.TabIndex = 0;
+            this.ABOStatementDateLabel.Text = "Statement Date";
+            // 
+            // ABOLastUpdatePanel
+            // 
+            this.ABOLastUpdatePanel.BackColor = System.Drawing.Color.Transparent;
+            this.ABOLastUpdatePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ABOLastUpdatePanel.Controls.Add(this.ABOLastUpdateLayoutPanel);
+            this.ABOLastUpdatePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLastUpdatePanel.Location = new System.Drawing.Point(984, 3);
+            this.ABOLastUpdatePanel.Name = "ABOLastUpdatePanel";
+            this.ABOLastUpdatePanel.Size = new System.Drawing.Size(321, 107);
+            this.ABOLastUpdatePanel.TabIndex = 3;
+            // 
+            // ABOLastUpdateLayoutPanel
+            // 
+            this.ABOLastUpdateLayoutPanel.ColumnCount = 1;
+            this.ABOLastUpdateLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ABOLastUpdateLayoutPanel.Controls.Add(this.ABOLastUpdateTextBox, 0, 2);
+            this.ABOLastUpdateLayoutPanel.Controls.Add(this.ABOLabel, 0, 0);
+            this.ABOLastUpdateLayoutPanel.Controls.Add(this.ABOLastUpdateLabel, 0, 1);
+            this.ABOLastUpdateLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLastUpdateLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.ABOLastUpdateLayoutPanel.Name = "ABOLastUpdateLayoutPanel";
+            this.ABOLastUpdateLayoutPanel.RowCount = 3;
+            this.ABOLastUpdateLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOLastUpdateLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOLastUpdateLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOLastUpdateLayoutPanel.Size = new System.Drawing.Size(317, 103);
+            this.ABOLastUpdateLayoutPanel.TabIndex = 12;
+            // 
+            // ABOLastUpdateTextBox
+            // 
+            this.ABOLastUpdateTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ABOLastUpdateTextBox.Location = new System.Drawing.Point(97, 74);
+            this.ABOLastUpdateTextBox.Name = "ABOLastUpdateTextBox";
+            this.ABOLastUpdateTextBox.ReadOnly = true;
+            this.ABOLastUpdateTextBox.Size = new System.Drawing.Size(123, 23);
+            this.ABOLastUpdateTextBox.TabIndex = 1;
+            this.ABOLastUpdateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ABOLabel
+            // 
+            this.ABOLabel.AutoSize = true;
+            this.ABOLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLabel.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.ABOLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOLabel.Name = "ABOLabel";
+            this.ABOLabel.Size = new System.Drawing.Size(311, 34);
+            this.ABOLabel.TabIndex = 13;
+            this.ABOLabel.Text = "AB Overview";
+            this.ABOLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ABOLastUpdateLabel
+            // 
+            this.ABOLastUpdateLabel.AutoSize = true;
+            this.ABOLastUpdateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLastUpdateLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ABOLastUpdateLabel.Location = new System.Drawing.Point(3, 34);
+            this.ABOLastUpdateLabel.Name = "ABOLastUpdateLabel";
+            this.ABOLastUpdateLabel.Size = new System.Drawing.Size(311, 34);
+            this.ABOLastUpdateLabel.TabIndex = 0;
+            this.ABOLastUpdateLabel.Text = "Last Update";
+            this.ABOLastUpdateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ABOPotentialOffsetsGroupBox
+            // 
+            this.ABOPotentialOffsetsGroupBox.Controls.Add(this.ABOPotentialOffsetsLayoutPanel);
+            this.ABOPotentialOffsetsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOPotentialOffsetsGroupBox.Location = new System.Drawing.Point(657, 229);
+            this.ABOPotentialOffsetsGroupBox.Name = "ABOPotentialOffsetsGroupBox";
+            this.ABOMainLayoutPanel.SetRowSpan(this.ABOPotentialOffsetsGroupBox, 2);
+            this.ABOPotentialOffsetsGroupBox.Size = new System.Drawing.Size(321, 110);
+            this.ABOPotentialOffsetsGroupBox.TabIndex = 4;
+            this.ABOPotentialOffsetsGroupBox.TabStop = false;
+            this.ABOPotentialOffsetsGroupBox.Text = "Potential Off-Sets";
+            // 
+            // ABOPotentialOffsetsLayoutPanel
+            // 
+            this.ABOPotentialOffsetsLayoutPanel.ColumnCount = 2;
+            this.ABOPotentialOffsetsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.ABOPotentialOffsetsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGroupPrivateComboBox, 1, 2);
+            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtOntarioLabel, 0, 0);
+            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGroupPrivateLabel, 0, 2);
+            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtOntarioComboBox, 1, 0);
+            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtFederalComboBox, 1, 1);
+            this.ABOPotentialOffsetsLayoutPanel.Controls.Add(this.ABOGovtFederalLabel, 0, 1);
+            this.ABOPotentialOffsetsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOPotentialOffsetsLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.ABOPotentialOffsetsLayoutPanel.Name = "ABOPotentialOffsetsLayoutPanel";
+            this.ABOPotentialOffsetsLayoutPanel.RowCount = 3;
+            this.ABOPotentialOffsetsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOPotentialOffsetsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOPotentialOffsetsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOPotentialOffsetsLayoutPanel.Size = new System.Drawing.Size(315, 88);
+            this.ABOPotentialOffsetsLayoutPanel.TabIndex = 12;
+            // 
+            // ABOGroupPrivateComboBox
+            // 
+            this.ABOGroupPrivateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOGroupPrivateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOGroupPrivateComboBox.Enabled = false;
+            this.ABOGroupPrivateComboBox.FormattingEnabled = true;
+            this.ABOGroupPrivateComboBox.Items.AddRange(new object[] {
+            "STD",
+            "LTD"});
+            this.ABOGroupPrivateComboBox.Location = new System.Drawing.Point(176, 61);
+            this.ABOGroupPrivateComboBox.Name = "ABOGroupPrivateComboBox";
+            this.ABOGroupPrivateComboBox.Size = new System.Drawing.Size(136, 25);
+            this.ABOGroupPrivateComboBox.TabIndex = 10;
+            // 
+            // ABOGovtOntarioLabel
+            // 
+            this.ABOGovtOntarioLabel.AutoSize = true;
+            this.ABOGovtOntarioLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOGovtOntarioLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOGovtOntarioLabel.Name = "ABOGovtOntarioLabel";
+            this.ABOGovtOntarioLabel.Size = new System.Drawing.Size(167, 29);
+            this.ABOGovtOntarioLabel.TabIndex = 0;
+            this.ABOGovtOntarioLabel.Text = "Gov\'t (Ontario):";
+            // 
+            // ABOGroupPrivateLabel
+            // 
+            this.ABOGroupPrivateLabel.AutoSize = true;
+            this.ABOGroupPrivateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOGroupPrivateLabel.Location = new System.Drawing.Point(3, 58);
+            this.ABOGroupPrivateLabel.Name = "ABOGroupPrivateLabel";
+            this.ABOGroupPrivateLabel.Size = new System.Drawing.Size(167, 30);
+            this.ABOGroupPrivateLabel.TabIndex = 9;
+            this.ABOGroupPrivateLabel.Text = "Group/Private:";
+            // 
+            // ABOGovtOntarioComboBox
+            // 
+            this.ABOGovtOntarioComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOGovtOntarioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOGovtOntarioComboBox.Enabled = false;
+            this.ABOGovtOntarioComboBox.FormattingEnabled = true;
+            this.ABOGovtOntarioComboBox.Items.AddRange(new object[] {
+            "OW",
+            "ODSP"});
+            this.ABOGovtOntarioComboBox.Location = new System.Drawing.Point(176, 3);
+            this.ABOGovtOntarioComboBox.Name = "ABOGovtOntarioComboBox";
+            this.ABOGovtOntarioComboBox.Size = new System.Drawing.Size(136, 25);
+            this.ABOGovtOntarioComboBox.TabIndex = 6;
+            // 
+            // ABOGovtFederalComboBox
+            // 
+            this.ABOGovtFederalComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOGovtFederalComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOGovtFederalComboBox.Enabled = false;
+            this.ABOGovtFederalComboBox.FormattingEnabled = true;
+            this.ABOGovtFederalComboBox.Items.AddRange(new object[] {
+            "CPPD"});
+            this.ABOGovtFederalComboBox.Location = new System.Drawing.Point(176, 32);
+            this.ABOGovtFederalComboBox.Name = "ABOGovtFederalComboBox";
+            this.ABOGovtFederalComboBox.Size = new System.Drawing.Size(136, 25);
+            this.ABOGovtFederalComboBox.TabIndex = 8;
+            // 
+            // ABOGovtFederalLabel
+            // 
+            this.ABOGovtFederalLabel.AutoSize = true;
+            this.ABOGovtFederalLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOGovtFederalLabel.Location = new System.Drawing.Point(3, 29);
+            this.ABOGovtFederalLabel.Name = "ABOGovtFederalLabel";
+            this.ABOGovtFederalLabel.Size = new System.Drawing.Size(167, 29);
+            this.ABOGovtFederalLabel.TabIndex = 7;
+            this.ABOGovtFederalLabel.Text = "Gov\'t (Federal):";
+            // 
+            // ABOAttendantCareBenefitsGroupBox
+            // 
+            this.ABOAttendantCareBenefitsGroupBox.Controls.Add(this.ABOAttendantCareBenefitsLayoutPanel);
+            this.ABOAttendantCareBenefitsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOAttendantCareBenefitsGroupBox.Location = new System.Drawing.Point(3, 229);
+            this.ABOAttendantCareBenefitsGroupBox.Name = "ABOAttendantCareBenefitsGroupBox";
+            this.ABOMainLayoutPanel.SetRowSpan(this.ABOAttendantCareBenefitsGroupBox, 2);
+            this.ABOAttendantCareBenefitsGroupBox.Size = new System.Drawing.Size(648, 110);
+            this.ABOAttendantCareBenefitsGroupBox.TabIndex = 9;
+            this.ABOAttendantCareBenefitsGroupBox.TabStop = false;
+            this.ABOAttendantCareBenefitsGroupBox.Text = "Attendant Care Benefits";
+            // 
+            // ABOAttendantCareBenefitsLayoutPanel
+            // 
+            this.ABOAttendantCareBenefitsLayoutPanel.ColumnCount = 5;
+            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.ABOAttendantCareBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBAmountPaidToDateTextBox, 3, 2);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitialAmountTextBox, 1, 1);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitiallyApprovedLabel, 0, 0);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBAmountPaidToDateLabel, 2, 2);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitiallyApprovedComboBox, 1, 0);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBeingIncurredComboBox, 1, 2);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOLatestForm1Date, 4, 1);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOACBeingIncurredLabel, 0, 2);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOLatestForm1DateTextBox, 3, 1);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOWhosFundingLabel, 2, 0);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOWhosFundingComboBox, 3, 0);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOLatestForm1DateLabel, 2, 1);
+            this.ABOAttendantCareBenefitsLayoutPanel.Controls.Add(this.ABOInitialAmountLabel, 0, 1);
+            this.ABOAttendantCareBenefitsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOAttendantCareBenefitsLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.ABOAttendantCareBenefitsLayoutPanel.Name = "ABOAttendantCareBenefitsLayoutPanel";
+            this.ABOAttendantCareBenefitsLayoutPanel.RowCount = 3;
+            this.ABOAttendantCareBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOAttendantCareBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOAttendantCareBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.ABOAttendantCareBenefitsLayoutPanel.Size = new System.Drawing.Size(642, 88);
+            this.ABOAttendantCareBenefitsLayoutPanel.TabIndex = 12;
+            // 
+            // ABOACBAmountPaidToDateTextBox
+            // 
+            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOACBAmountPaidToDateTextBox, 2);
+            this.ABOACBAmountPaidToDateTextBox.CurrencySymbol = "$";
+            this.ABOACBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOACBAmountPaidToDateTextBox.Enabled = false;
+            this.ABOACBAmountPaidToDateTextBox.Location = new System.Drawing.Point(468, 61);
+            this.ABOACBAmountPaidToDateTextBox.Name = "ABOACBAmountPaidToDateTextBox";
+            this.ABOACBAmountPaidToDateTextBox.Size = new System.Drawing.Size(171, 23);
+            this.ABOACBAmountPaidToDateTextBox.TabIndex = 21;
+            this.ABOACBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ABOInitialAmountTextBox
+            // 
+            this.ABOInitialAmountTextBox.CurrencySymbol = "$";
+            this.ABOInitialAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitialAmountTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOInitialAmountTextBox.Enabled = false;
+            this.ABOInitialAmountTextBox.Location = new System.Drawing.Point(158, 32);
+            this.ABOInitialAmountTextBox.Name = "ABOInitialAmountTextBox";
+            this.ABOInitialAmountTextBox.Size = new System.Drawing.Size(149, 23);
+            this.ABOInitialAmountTextBox.TabIndex = 13;
+            this.ABOInitialAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ABOInitiallyApprovedLabel
+            // 
+            this.ABOInitiallyApprovedLabel.AutoSize = true;
+            this.ABOInitiallyApprovedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitiallyApprovedLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOInitiallyApprovedLabel.Name = "ABOInitiallyApprovedLabel";
+            this.ABOInitiallyApprovedLabel.Size = new System.Drawing.Size(149, 29);
+            this.ABOInitiallyApprovedLabel.TabIndex = 0;
+            this.ABOInitiallyApprovedLabel.Text = "Initially Approved:";
+            // 
+            // ABOACBAmountPaidToDateLabel
+            // 
+            this.ABOACBAmountPaidToDateLabel.AutoSize = true;
+            this.ABOACBAmountPaidToDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBAmountPaidToDateLabel.Location = new System.Drawing.Point(313, 58);
+            this.ABOACBAmountPaidToDateLabel.Name = "ABOACBAmountPaidToDateLabel";
+            this.ABOACBAmountPaidToDateLabel.Size = new System.Drawing.Size(149, 30);
+            this.ABOACBAmountPaidToDateLabel.TabIndex = 20;
+            this.ABOACBAmountPaidToDateLabel.Text = "Amount Paid To Date";
+            // 
+            // ABOInitiallyApprovedComboBox
+            // 
+            this.ABOInitiallyApprovedComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitiallyApprovedComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOInitiallyApprovedComboBox.Enabled = false;
+            this.ABOInitiallyApprovedComboBox.FormattingEnabled = true;
+            this.ABOInitiallyApprovedComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOInitiallyApprovedComboBox.Location = new System.Drawing.Point(158, 3);
+            this.ABOInitiallyApprovedComboBox.Name = "ABOInitiallyApprovedComboBox";
+            this.ABOInitiallyApprovedComboBox.Size = new System.Drawing.Size(149, 25);
+            this.ABOInitiallyApprovedComboBox.TabIndex = 7;
+            // 
+            // ABOACBeingIncurredComboBox
+            // 
+            this.ABOACBeingIncurredComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBeingIncurredComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOACBeingIncurredComboBox.Enabled = false;
+            this.ABOACBeingIncurredComboBox.FormattingEnabled = true;
+            this.ABOACBeingIncurredComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOACBeingIncurredComboBox.Location = new System.Drawing.Point(158, 61);
+            this.ABOACBeingIncurredComboBox.Name = "ABOACBeingIncurredComboBox";
+            this.ABOACBeingIncurredComboBox.Size = new System.Drawing.Size(149, 25);
+            this.ABOACBeingIncurredComboBox.TabIndex = 14;
+            // 
+            // ABOLatestForm1Date
+            // 
+            this.ABOLatestForm1Date.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLatestForm1Date.Enabled = false;
+            this.ABOLatestForm1Date.Location = new System.Drawing.Point(623, 32);
+            this.ABOLatestForm1Date.Name = "ABOLatestForm1Date";
+            this.ABOLatestForm1Date.Size = new System.Drawing.Size(16, 23);
+            this.ABOLatestForm1Date.TabIndex = 18;
+            this.ABOLatestForm1Date.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // ABOACBeingIncurredLabel
+            // 
+            this.ABOACBeingIncurredLabel.AutoSize = true;
+            this.ABOACBeingIncurredLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBeingIncurredLabel.Location = new System.Drawing.Point(3, 58);
+            this.ABOACBeingIncurredLabel.Name = "ABOACBeingIncurredLabel";
+            this.ABOACBeingIncurredLabel.Size = new System.Drawing.Size(149, 30);
+            this.ABOACBeingIncurredLabel.TabIndex = 13;
+            this.ABOACBeingIncurredLabel.Text = "A/C Being Incurred:";
+            // 
+            // ABOLatestForm1DateTextBox
+            // 
+            this.ABOLatestForm1DateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLatestForm1DateTextBox.Location = new System.Drawing.Point(468, 32);
+            this.ABOLatestForm1DateTextBox.Name = "ABOLatestForm1DateTextBox";
+            this.ABOLatestForm1DateTextBox.ReadOnly = true;
+            this.ABOLatestForm1DateTextBox.Size = new System.Drawing.Size(149, 23);
+            this.ABOLatestForm1DateTextBox.TabIndex = 19;
+            // 
+            // ABOWhosFundingLabel
+            // 
+            this.ABOWhosFundingLabel.AutoSize = true;
+            this.ABOWhosFundingLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOWhosFundingLabel.Location = new System.Drawing.Point(313, 0);
+            this.ABOWhosFundingLabel.Name = "ABOWhosFundingLabel";
+            this.ABOWhosFundingLabel.Size = new System.Drawing.Size(149, 29);
+            this.ABOWhosFundingLabel.TabIndex = 15;
+            this.ABOWhosFundingLabel.Text = "Who\'s Funding";
+            // 
+            // ABOWhosFundingComboBox
+            // 
+            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOWhosFundingComboBox, 2);
+            this.ABOWhosFundingComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOWhosFundingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOWhosFundingComboBox.Enabled = false;
+            this.ABOWhosFundingComboBox.FormattingEnabled = true;
+            this.ABOWhosFundingComboBox.Items.AddRange(new object[] {
+            "Insurer",
+            "Protected"});
+            this.ABOWhosFundingComboBox.Location = new System.Drawing.Point(468, 3);
+            this.ABOWhosFundingComboBox.Name = "ABOWhosFundingComboBox";
+            this.ABOWhosFundingComboBox.Size = new System.Drawing.Size(171, 25);
+            this.ABOWhosFundingComboBox.TabIndex = 16;
+            // 
+            // ABOLatestForm1DateLabel
+            // 
+            this.ABOLatestForm1DateLabel.AutoSize = true;
+            this.ABOLatestForm1DateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOLatestForm1DateLabel.Location = new System.Drawing.Point(313, 29);
+            this.ABOLatestForm1DateLabel.Name = "ABOLatestForm1DateLabel";
+            this.ABOLatestForm1DateLabel.Size = new System.Drawing.Size(149, 29);
+            this.ABOLatestForm1DateLabel.TabIndex = 17;
+            this.ABOLatestForm1DateLabel.Text = "Latest Form 1";
+            // 
+            // ABOInitialAmountLabel
+            // 
+            this.ABOInitialAmountLabel.AutoSize = true;
+            this.ABOInitialAmountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitialAmountLabel.Location = new System.Drawing.Point(3, 29);
+            this.ABOInitialAmountLabel.Name = "ABOInitialAmountLabel";
+            this.ABOInitialAmountLabel.Size = new System.Drawing.Size(149, 29);
+            this.ABOInitialAmountLabel.TabIndex = 8;
+            this.ABOInitialAmountLabel.Text = "Initial Amount:";
+            // 
+            // AOBMedicalRehabBenefitsGroupBox
+            // 
+            this.AOBMedicalRehabBenefitsGroupBox.Controls.Add(this.AOBMedicalRehabBenefitsLayoutPanel);
+            this.AOBMedicalRehabBenefitsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AOBMedicalRehabBenefitsGroupBox.Location = new System.Drawing.Point(657, 3);
+            this.AOBMedicalRehabBenefitsGroupBox.Name = "AOBMedicalRehabBenefitsGroupBox";
+            this.AOBMedicalRehabBenefitsGroupBox.Size = new System.Drawing.Size(321, 107);
+            this.AOBMedicalRehabBenefitsGroupBox.TabIndex = 5;
+            this.AOBMedicalRehabBenefitsGroupBox.TabStop = false;
+            this.AOBMedicalRehabBenefitsGroupBox.Text = "Medical/Rehab Benefits";
+            // 
+            // AOBMedicalRehabBenefitsLayoutPanel
+            // 
+            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnCount = 3;
+            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.AOBMedicalRehabBenefitsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOMRBAmountPaidToDateTextBox, 1, 2);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOBenefitsEndDate, 2, 1);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOMRBAmountPaidToDateLabel, 0, 2);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOBenefitsEndDateTextBox, 1, 1);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOCurrentBenefitsLevelLabel, 0, 0);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOCurrentBenefitsLevelComboBox, 1, 0);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Controls.Add(this.ABOBenefitsEndDateLabel, 0, 1);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AOBMedicalRehabBenefitsLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.AOBMedicalRehabBenefitsLayoutPanel.Name = "AOBMedicalRehabBenefitsLayoutPanel";
+            this.AOBMedicalRehabBenefitsLayoutPanel.RowCount = 3;
+            this.AOBMedicalRehabBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.AOBMedicalRehabBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.AOBMedicalRehabBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.AOBMedicalRehabBenefitsLayoutPanel.Size = new System.Drawing.Size(315, 85);
+            this.AOBMedicalRehabBenefitsLayoutPanel.TabIndex = 12;
+            // 
+            // ABOMRBAmountPaidToDateTextBox
+            // 
+            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOMRBAmountPaidToDateTextBox, 2);
+            this.ABOMRBAmountPaidToDateTextBox.CurrencySymbol = "$";
+            this.ABOMRBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOMRBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOMRBAmountPaidToDateTextBox.Enabled = false;
+            this.ABOMRBAmountPaidToDateTextBox.Location = new System.Drawing.Point(152, 59);
+            this.ABOMRBAmountPaidToDateTextBox.Name = "ABOMRBAmountPaidToDateTextBox";
+            this.ABOMRBAmountPaidToDateTextBox.Size = new System.Drawing.Size(160, 23);
+            this.ABOMRBAmountPaidToDateTextBox.TabIndex = 13;
+            this.ABOMRBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ABOBenefitsEndDate
+            // 
+            this.ABOBenefitsEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOBenefitsEndDate.Enabled = false;
+            this.ABOBenefitsEndDate.Location = new System.Drawing.Point(301, 31);
+            this.ABOBenefitsEndDate.Name = "ABOBenefitsEndDate";
+            this.ABOBenefitsEndDate.Size = new System.Drawing.Size(11, 23);
+            this.ABOBenefitsEndDate.TabIndex = 11;
+            this.ABOBenefitsEndDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // ABOMRBAmountPaidToDateLabel
+            // 
+            this.ABOMRBAmountPaidToDateLabel.AutoSize = true;
+            this.ABOMRBAmountPaidToDateLabel.Location = new System.Drawing.Point(3, 56);
+            this.ABOMRBAmountPaidToDateLabel.Name = "ABOMRBAmountPaidToDateLabel";
+            this.ABOMRBAmountPaidToDateLabel.Size = new System.Drawing.Size(115, 29);
+            this.ABOMRBAmountPaidToDateLabel.TabIndex = 9;
+            this.ABOMRBAmountPaidToDateLabel.Text = "Amount Paid to Date:";
+            // 
+            // ABOBenefitsEndDateTextBox
+            // 
+            this.ABOBenefitsEndDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOBenefitsEndDateTextBox.Location = new System.Drawing.Point(152, 31);
+            this.ABOBenefitsEndDateTextBox.Name = "ABOBenefitsEndDateTextBox";
+            this.ABOBenefitsEndDateTextBox.ReadOnly = true;
+            this.ABOBenefitsEndDateTextBox.Size = new System.Drawing.Size(143, 23);
+            this.ABOBenefitsEndDateTextBox.TabIndex = 12;
+            // 
+            // ABOCurrentBenefitsLevelLabel
+            // 
+            this.ABOCurrentBenefitsLevelLabel.AutoSize = true;
+            this.ABOCurrentBenefitsLevelLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCurrentBenefitsLevelLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOCurrentBenefitsLevelLabel.Name = "ABOCurrentBenefitsLevelLabel";
+            this.ABOCurrentBenefitsLevelLabel.Size = new System.Drawing.Size(143, 28);
+            this.ABOCurrentBenefitsLevelLabel.TabIndex = 0;
+            this.ABOCurrentBenefitsLevelLabel.Text = "Current Benefits Level";
+            // 
+            // ABOCurrentBenefitsLevelComboBox
+            // 
+            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOCurrentBenefitsLevelComboBox, 2);
+            this.ABOCurrentBenefitsLevelComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCurrentBenefitsLevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOCurrentBenefitsLevelComboBox.Enabled = false;
+            this.ABOCurrentBenefitsLevelComboBox.FormattingEnabled = true;
+            this.ABOCurrentBenefitsLevelComboBox.Items.AddRange(new object[] {
+            "MIG",
+            "Non-CAT",
+            "CAT"});
+            this.ABOCurrentBenefitsLevelComboBox.Location = new System.Drawing.Point(152, 3);
+            this.ABOCurrentBenefitsLevelComboBox.Name = "ABOCurrentBenefitsLevelComboBox";
+            this.ABOCurrentBenefitsLevelComboBox.Size = new System.Drawing.Size(160, 25);
+            this.ABOCurrentBenefitsLevelComboBox.TabIndex = 6;
+            // 
+            // ABOBenefitsEndDateLabel
+            // 
+            this.ABOBenefitsEndDateLabel.AutoSize = true;
+            this.ABOBenefitsEndDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOBenefitsEndDateLabel.Location = new System.Drawing.Point(3, 28);
+            this.ABOBenefitsEndDateLabel.Name = "ABOBenefitsEndDateLabel";
+            this.ABOBenefitsEndDateLabel.Size = new System.Drawing.Size(143, 28);
+            this.ABOBenefitsEndDateLabel.TabIndex = 7;
+            this.ABOBenefitsEndDateLabel.Text = "Benefits End:";
+            // 
+            // ABOCollateralsGroupBox
+            // 
+            this.ABOCollateralsGroupBox.Controls.Add(this.ABOCollateralsLayoutPanel);
+            this.ABOCollateralsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCollateralsGroupBox.Location = new System.Drawing.Point(657, 116);
+            this.ABOCollateralsGroupBox.Name = "ABOCollateralsGroupBox";
+            this.ABOCollateralsGroupBox.Size = new System.Drawing.Size(321, 62);
+            this.ABOCollateralsGroupBox.TabIndex = 6;
+            this.ABOCollateralsGroupBox.TabStop = false;
+            this.ABOCollateralsGroupBox.Text = "Collaterals";
+            // 
+            // ABOCollateralsLayoutPanel
+            // 
+            this.ABOCollateralsLayoutPanel.ColumnCount = 2;
+            this.ABOCollateralsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOCollateralsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOCollateralsLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.ABOCollateralsLayoutPanel.Controls.Add(this.ABOAvailableCollateralFamilyComboBox, 1, 1);
+            this.ABOCollateralsLayoutPanel.Controls.Add(this.ABOAvailableCollateralInsuredLabel, 0, 0);
+            this.ABOCollateralsLayoutPanel.Controls.Add(this.ABOAvailableCollateralInsuredComboBox, 1, 0);
+            this.ABOCollateralsLayoutPanel.Controls.Add(this.ABOAvailableCollateralFamilyLabel, 0, 1);
+            this.ABOCollateralsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOCollateralsLayoutPanel.Location = new System.Drawing.Point(3, 19);
+            this.ABOCollateralsLayoutPanel.Name = "ABOCollateralsLayoutPanel";
+            this.ABOCollateralsLayoutPanel.RowCount = 2;
+            this.ABOCollateralsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOCollateralsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ABOCollateralsLayoutPanel.Size = new System.Drawing.Size(315, 40);
+            this.ABOCollateralsLayoutPanel.TabIndex = 12;
+            // 
+            // ABOAvailableCollateralFamilyComboBox
+            // 
+            this.ABOAvailableCollateralFamilyComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOAvailableCollateralFamilyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOAvailableCollateralFamilyComboBox.Enabled = false;
+            this.ABOAvailableCollateralFamilyComboBox.FormattingEnabled = true;
+            this.ABOAvailableCollateralFamilyComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No",
+            "N/A"});
+            this.ABOAvailableCollateralFamilyComboBox.Location = new System.Drawing.Point(160, 23);
+            this.ABOAvailableCollateralFamilyComboBox.Name = "ABOAvailableCollateralFamilyComboBox";
+            this.ABOAvailableCollateralFamilyComboBox.Size = new System.Drawing.Size(152, 25);
+            this.ABOAvailableCollateralFamilyComboBox.TabIndex = 8;
+            // 
+            // ABOAvailableCollateralInsuredLabel
+            // 
+            this.ABOAvailableCollateralInsuredLabel.AutoSize = true;
+            this.ABOAvailableCollateralInsuredLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOAvailableCollateralInsuredLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOAvailableCollateralInsuredLabel.Name = "ABOAvailableCollateralInsuredLabel";
+            this.ABOAvailableCollateralInsuredLabel.Size = new System.Drawing.Size(151, 20);
+            this.ABOAvailableCollateralInsuredLabel.TabIndex = 0;
+            this.ABOAvailableCollateralInsuredLabel.Text = "Available - Insured:";
+            // 
+            // ABOAvailableCollateralInsuredComboBox
+            // 
+            this.ABOAvailableCollateralInsuredComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOAvailableCollateralInsuredComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ABOAvailableCollateralInsuredComboBox.Enabled = false;
+            this.ABOAvailableCollateralInsuredComboBox.FormattingEnabled = true;
+            this.ABOAvailableCollateralInsuredComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.ABOAvailableCollateralInsuredComboBox.Location = new System.Drawing.Point(160, 3);
+            this.ABOAvailableCollateralInsuredComboBox.Name = "ABOAvailableCollateralInsuredComboBox";
+            this.ABOAvailableCollateralInsuredComboBox.Size = new System.Drawing.Size(152, 25);
+            this.ABOAvailableCollateralInsuredComboBox.TabIndex = 6;
+            // 
+            // ABOAvailableCollateralFamilyLabel
+            // 
+            this.ABOAvailableCollateralFamilyLabel.AutoSize = true;
+            this.ABOAvailableCollateralFamilyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOAvailableCollateralFamilyLabel.Location = new System.Drawing.Point(3, 20);
+            this.ABOAvailableCollateralFamilyLabel.Name = "ABOAvailableCollateralFamilyLabel";
+            this.ABOAvailableCollateralFamilyLabel.Size = new System.Drawing.Size(151, 20);
+            this.ABOAvailableCollateralFamilyLabel.TabIndex = 7;
+            this.ABOAvailableCollateralFamilyLabel.Text = "Available - Family:";
+            // 
+            // Btn_Save
+            // 
+            this.Btn_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
+            this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Save.ForeColor = System.Drawing.Color.White;
+            this.Btn_Save.Location = new System.Drawing.Point(4539, 1135);
+            this.Btn_Save.Name = "Btn_Save";
+            this.Btn_Save.Size = new System.Drawing.Size(98, 39);
+            this.Btn_Save.TabIndex = 11;
+            this.Btn_Save.Text = "Save";
+            this.Btn_Save.UseVisualStyleBackColor = false;
             // 
             // ABBinderTab
             // 
@@ -6198,7 +6369,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1443, 582);
+            this.btnSave.Location = new System.Drawing.Point(1443, 578);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6435,7 +6606,7 @@
             this.groupBox2.Controls.Add(this.label113);
             this.groupBox2.Location = new System.Drawing.Point(6, 7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(752, 114);
+            this.groupBox2.Size = new System.Drawing.Size(698, 114);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Policy Details";
@@ -11860,33 +12031,36 @@
             this.GroupBox17.PerformLayout();
             this.TabControl1.ResumeLayout(false);
             this.ABDenials.ResumeLayout(false);
-            this.TabControl5.ResumeLayout(false);
+            this.ABOverviewTab.ResumeLayout(false);
             this.ABTimeline.ResumeLayout(false);
-            this.groupBox51.ResumeLayout(false);
-            this.groupBox51.PerformLayout();
-            this.ABOAttendantCareBenefitsGroupBox.ResumeLayout(false);
-            this.ABOAttendantCareBenefitsLayoutPanel.ResumeLayout(false);
-            this.ABOAttendantCareBenefitsLayoutPanel.PerformLayout();
-            this.groupBox49.ResumeLayout(false);
-            this.groupBox49.PerformLayout();
-            this.groupBox48.ResumeLayout(false);
-            this.groupBox48.PerformLayout();
-            this.groupBox47.ResumeLayout(false);
-            this.groupBox47.PerformLayout();
-            this.AOBMedicalRehabBenefitsGroupBox.ResumeLayout(false);
-            this.AOBMedicalRehabBenefitsLayoutPanel.ResumeLayout(false);
-            this.AOBMedicalRehabBenefitsLayoutPanel.PerformLayout();
-            this.ABOPotentialOffsetsGroupBox.ResumeLayout(false);
-            this.ABOPotentialOffsetsLayoutPanel.ResumeLayout(false);
-            this.ABOPotentialOffsetsLayoutPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ABOIncomeBenefitsGroupBox.ResumeLayout(false);
-            this.ABOIncomeBenefitsLayoutPanel.ResumeLayout(false);
-            this.ABOIncomeBenefitsLayoutPanel.PerformLayout();
+            this.ABOMainLayoutPanel.ResumeLayout(false);
             this.ABOPolicyDetailsGroupBox.ResumeLayout(false);
             this.ABOPolicyDetailsLayoutPanel.ResumeLayout(false);
             this.ABOPolicyDetailsLayoutPanel.PerformLayout();
+            this.ABOIncomeBenefitsGroupBox.ResumeLayout(false);
+            this.ABOIncomeBenefitsLayoutPanel.ResumeLayout(false);
+            this.ABOIncomeBenefitsLayoutPanel.PerformLayout();
+            this.ABOPotentialCATGroupBox.ResumeLayout(false);
+            this.ABOPotentialCATLayoutPanel.ResumeLayout(false);
+            this.ABOPotentialCATLayoutPanel.PerformLayout();
+            this.ABOStandardBenefitsStatementGroupBox.ResumeLayout(false);
+            this.ABOStandardBenefitsStatementLayoutPanel.ResumeLayout(false);
+            this.ABOStandardBenefitsStatementLayoutPanel.PerformLayout();
+            this.ABOLastUpdatePanel.ResumeLayout(false);
+            this.ABOLastUpdateLayoutPanel.ResumeLayout(false);
+            this.ABOLastUpdateLayoutPanel.PerformLayout();
+            this.ABOPotentialOffsetsGroupBox.ResumeLayout(false);
+            this.ABOPotentialOffsetsLayoutPanel.ResumeLayout(false);
+            this.ABOPotentialOffsetsLayoutPanel.PerformLayout();
+            this.ABOAttendantCareBenefitsGroupBox.ResumeLayout(false);
+            this.ABOAttendantCareBenefitsLayoutPanel.ResumeLayout(false);
+            this.ABOAttendantCareBenefitsLayoutPanel.PerformLayout();
+            this.AOBMedicalRehabBenefitsGroupBox.ResumeLayout(false);
+            this.AOBMedicalRehabBenefitsLayoutPanel.ResumeLayout(false);
+            this.AOBMedicalRehabBenefitsLayoutPanel.PerformLayout();
+            this.ABOCollateralsGroupBox.ResumeLayout(false);
+            this.ABOCollateralsLayoutPanel.ResumeLayout(false);
+            this.ABOCollateralsLayoutPanel.PerformLayout();
             this.txtDateTo.ResumeLayout(false);
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
@@ -12130,7 +12304,7 @@
         internal System.Windows.Forms.TextBox TBoxMainInjuries2TextBox;
         internal System.Windows.Forms.TabControl TabControl1;
         internal System.Windows.Forms.TabPage ABDenials;
-        internal System.Windows.Forms.TabControl TabControl5;
+        internal System.Windows.Forms.TabControl ABOverviewTab;
         internal System.Windows.Forms.TabPage ABTimeline;
         internal System.Windows.Forms.TabPage txtDateTo;
         internal System.Windows.Forms.TabPage Denials;
@@ -12201,12 +12375,10 @@
         private System.Windows.Forms.GroupBox ABOIncomeBenefitsGroupBox;
         private System.Windows.Forms.ComboBox ABOIncomeBenefitsTypeComboBox;
         private System.Windows.Forms.Label ABOIncomeBenefitsLatestOFC3Label;
-        private System.Windows.Forms.ComboBox ABOIncomeBenefitsLatestOFC3ComboBox;
         private System.Windows.Forms.Label ABOIncomeBenefitsFileForLATLabel;
         private System.Windows.Forms.ComboBox ABOIncomeBenefitsAppliedComboBox;
         private System.Windows.Forms.Label ABOIncomeBenefitsTypeLabel;
         private System.Windows.Forms.Label ABOIncomeBenefitsDeniedLabel;
-        private System.Windows.Forms.TextBox ABOIncomeBenefitsWeeklyAmountTextBox;
         private System.Windows.Forms.Label ABOIncomeBenefitsWeeklyAmountLabel;
         private System.Windows.Forms.Label ABOIncomeBenefitsAppliedLabel;
         private System.Windows.Forms.TextBox ABOABCounselTextBox;
@@ -12220,9 +12392,9 @@
         private System.Windows.Forms.ComboBox ABOPreJune1st2016ComboBox;
         private System.Windows.Forms.Label ABOPreJune1st2016Label;
         private System.Windows.Forms.GroupBox ABOPotentialOffsetsGroupBox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtxtAutoPopulate;
-        private System.Windows.Forms.Label label249;
+        private System.Windows.Forms.Panel ABOLastUpdatePanel;
+        private System.Windows.Forms.TextBox ABOLastUpdateTextBox;
+        private System.Windows.Forms.Label ABOLastUpdateLabel;
         private System.Windows.Forms.ComboBox ABOIncomeBenefitsFileForLATComboBox;
         private System.Windows.Forms.ComboBox ABOIncomeBenefitsDeniedComboBox;
         private System.Windows.Forms.GroupBox AOBMedicalRehabBenefitsGroupBox;
@@ -12238,34 +12410,25 @@
         private System.Windows.Forms.Label ABOGovtFederalLabel;
         private System.Windows.Forms.ComboBox ABOGovtOntarioComboBox;
         private System.Windows.Forms.Label ABOGovtOntarioLabel;
-        private System.Windows.Forms.GroupBox groupBox47;
-        private System.Windows.Forms.TextBox txtDateFamily;
-        private System.Windows.Forms.DateTimePicker dateAvailableFamily;
-        private System.Windows.Forms.Label label257;
-        private System.Windows.Forms.ComboBox CboxInsured;
-        private System.Windows.Forms.Label label258;
-        private System.Windows.Forms.GroupBox groupBox49;
-        private System.Windows.Forms.ComboBox CboxCatLatFiled;
-        private System.Windows.Forms.Label label263;
-        private System.Windows.Forms.ComboBox CboxCatResult;
-        private System.Windows.Forms.Label label261;
-        private System.Windows.Forms.ComboBox IEsScheduled;
-        private System.Windows.Forms.Label label262;
-        private System.Windows.Forms.ComboBox CboxCriteria;
-        private System.Windows.Forms.Label label260;
-        private System.Windows.Forms.ComboBox CboxCat;
-        private System.Windows.Forms.Label CboxCatApplied;
-        private System.Windows.Forms.GroupBox groupBox48;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.DateTimePicker dateTimePicker28;
-        private System.Windows.Forms.Label label256;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.Label label259;
-        private System.Windows.Forms.GroupBox groupBox51;
-        private System.Windows.Forms.TextBox txtStatementDate;
-        private System.Windows.Forms.Label label270;
+        private System.Windows.Forms.GroupBox ABOCollateralsGroupBox;
+        private System.Windows.Forms.Label ABOAvailableCollateralFamilyLabel;
+        private System.Windows.Forms.ComboBox ABOAvailableCollateralInsuredComboBox;
+        private System.Windows.Forms.Label ABOAvailableCollateralInsuredLabel;
+        private System.Windows.Forms.GroupBox ABOPotentialCATGroupBox;
+        private System.Windows.Forms.ComboBox ABOCATLATFiledComboBox;
+        private System.Windows.Forms.Label ABOCATLATFiledLabel;
+        private System.Windows.Forms.ComboBox ABOCATResultComboBox;
+        private System.Windows.Forms.Label ABOCATResultLabel;
+        private System.Windows.Forms.ComboBox ABOIEsScheduledComboBox;
+        private System.Windows.Forms.Label ABOIEsScheduledLabel;
+        private System.Windows.Forms.ComboBox ABOCATCriteriaComboBox;
+        private System.Windows.Forms.Label ABOCATCriteriaLabel;
+        private System.Windows.Forms.ComboBox ABOCATAppliedComboBox;
+        private System.Windows.Forms.Label ABOCATAppliedLabel;
+        private System.Windows.Forms.GroupBox ABOStandardBenefitsStatementGroupBox;
+        private System.Windows.Forms.TextBox ABOStatementDateTextBox;
+        private System.Windows.Forms.Label ABOStatementDateLabel;
         private System.Windows.Forms.GroupBox ABOAttendantCareBenefitsGroupBox;
-        private System.Windows.Forms.TextBox ABOACBAmountPaidToDateTextBox;
         private System.Windows.Forms.Label ABOACBAmountPaidToDateLabel;
         private System.Windows.Forms.TextBox ABOLatestForm1DateTextBox;
         private System.Windows.Forms.DateTimePicker ABOLatestForm1Date;
@@ -12274,7 +12437,6 @@
         private System.Windows.Forms.Label ABOWhosFundingLabel;
         private System.Windows.Forms.ComboBox ABOACBeingIncurredComboBox;
         private System.Windows.Forms.Label ABOACBeingIncurredLabel;
-        private System.Windows.Forms.TextBox ABOInitialAmountTextBox;
         private System.Windows.Forms.Label ABOInitialAmountLabel;
         private System.Windows.Forms.ComboBox ABOInitiallyApprovedComboBox;
         private System.Windows.Forms.Label ABOInitiallyApprovedLabel;
@@ -12798,9 +12960,23 @@
         private System.Windows.Forms.TableLayoutPanel ABOPolicyDetailsLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel ABOPotentialOffsetsLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel AOBMedicalRehabBenefitsLayoutPanel;
-        private System.Windows.Forms.TextBox ABOMRBAmountPaidToDateTextBox;
         private System.Windows.Forms.TableLayoutPanel ABOAttendantCareBenefitsLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel ABOIncomeBenefitsLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel ABOCollateralsLayoutPanel;
+        private System.Windows.Forms.ComboBox ABOAvailableCollateralFamilyComboBox;
+        private System.Windows.Forms.TableLayoutPanel ABOPotentialCATLayoutPanel;
+        private Controls.Components.CurrencyTextBox ABOACBAmountPaidToDateTextBox;
+        private Controls.Components.CurrencyTextBox ABOInitialAmountTextBox;
+        private Controls.Components.CurrencyTextBox ABOMRBAmountPaidToDateTextBox;
+        private Controls.Components.CurrencyTextBox ABOIncomeBenefitsWeeklyAmountTextBox;
+        private System.Windows.Forms.TableLayoutPanel ABOStandardBenefitsStatementLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel ABOMainLayoutPanel;
+        internal System.Windows.Forms.Button ABOSaveButton;
+        private System.Windows.Forms.DateTimePicker ABOIncomeBenefitsLatestOFC3;
+        private System.Windows.Forms.TextBox ABOIncomeBenefitsLatestOFC3TextBox;
+        private System.Windows.Forms.TableLayoutPanel ABOLastUpdateLayoutPanel;
+        private System.Windows.Forms.Label ABOLabel;
+        private System.Windows.Forms.DateTimePicker ABOStatementDate;
         internal System.Windows.Forms.Label Lbl_BusinessProcessTaskLog;
         internal System.Windows.Forms.ComboBox Cbb_TaskLogBusinessProcessFilter;
         internal System.Windows.Forms.Label Lbl_LawyersTaskLog;

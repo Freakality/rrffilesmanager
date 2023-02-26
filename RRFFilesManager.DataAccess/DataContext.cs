@@ -11,9 +11,9 @@ namespace RRFFilesManager.DataAccess
 {
     public class DataContext : DbContext
     {
- 
 
-        public DataContext() : base() 
+
+        public DataContext() : base()
         {
             Database.Migrate();
         }
@@ -51,7 +51,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<FileTask> FileTasks { get; set; }
         public DbSet<TaskState> TaskStates { get; set; }
         public DbSet<TaskCategory> TaskCategories { get; set; }
-        public DbSet<TaskDependency> TaskDependencies { get;  set; }
+        public DbSet<TaskDependency> TaskDependencies { get; set; }
         public DbSet<LogItem> LogItems { get; set; }
         public DbSet<Timeline> Timelines { get; set; }
         public DbSet<LawyerTask> LawyerTasks { get; set; }
@@ -63,6 +63,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<DenialBenefit> DenialBenefits { get; set; }
         public DbSet<DenialStatus> DenialStatus { get; set; }
         public DbSet<QuestionnaireFieldMapper> QuestionnaireFieldMappers { get; set; }
+        public DbSet<ABOverview> ABOverviews { get; set; }
 
         public Lawyer User { get; set; }
 
@@ -211,6 +212,9 @@ namespace RRFFilesManager.DataAccess
             {
                 switch (propertyname)
                 {
+                    case "ABOverview":
+                        value = ABOverviews.Find(n).ToString();
+                        break;
                     case "ComissionSubType":
                         value = ComissionSubTypes.Find(n).ToString();
                         break;

@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\Extensions.cs" />
+    <Compile Include="Abstractions\IABOverviewRepository.cs" />
     <Compile Include="Abstractions\IQuestionnaireFieldMapperRepository.cs" />
     <Compile Include="Abstractions\IDrugRepository.cs" />
     <Compile Include="Abstractions\IComissionCalculatorRepository.cs" />
@@ -201,7 +202,7 @@
     <Compile Include="Abstractions\IDocumentCategoryRepository.cs" />
     <Compile Include="Abstractions\IDocumentGroupRepository.cs" />
     <Compile Include="Abstractions\IClientNoteRepository.cs" />
-    <Compile Include="Abstractions\IDenialRepositoryy.cs" />
+    <Compile Include="Abstractions\IDenialRepository.cs" />
     <Compile Include="Abstractions\IDenialBenefitRepository.cs" />
     <Compile Include="Abstractions\IDenialStatusRepository.cs" />
     <Compile Include="Abstractions\ILATDataRepository.cs" />
@@ -233,9 +234,14 @@
     <Compile Include="Abstractions\ITimelineRepository.cs" />
     <Compile Include="Abstractions\IUploadArchivesSettingsRepository.cs" />
     <Compile Include="Abstractions\ITemplateRepository.cs" />
+    <Compile Include="ABOverviewRepository.cs" />
     <Compile Include="Migrations\20230224090805_ADD_QuestionnaireFieldMapper_Entity.cs" />
     <Compile Include="Migrations\20230224090805_ADD_QuestionnaireFieldMapper_Entity.designer.cs">
       <DependentUpon>20230224090805_ADD_QuestionnaireFieldMapper_Entity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230226131118_ABOverview.cs" />
+    <Compile Include="Migrations\20230226131118_ABOverview.designer.cs">
+      <DependentUpon>20230226131118_ABOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="QuestionnaireFieldMapperRepository.cs" />
     <Compile Include="ClientNoteRepository.cs" />
