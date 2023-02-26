@@ -36,6 +36,9 @@ namespace RRFFilesManager
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
         private readonly ILATDataRepository _latDataRepository;
+        private readonly IDenialRepository _DenialRepository;
+        private readonly IDenialBenefitRepository denialBenefitRepository;
+        private readonly IDenialStatusRepository denialStatusRepository;
         private Logic.FileManager _fileManager;
         private FileStatusManager _fileStatusManager;
         private readonly IClientNoteRepository _clientNoteRepository;
@@ -63,6 +66,9 @@ namespace RRFFilesManager
             _clientNoteRepository = Program.GetService<IClientNoteRepository>();
             _latDataRepository = Program.GetService<ILATDataRepository>();
             _permissionRepository = Program.GetService<IPermissionRepository>();
+            _DenialRepository = Program.GetService<IDenialRepository>();
+            denialBenefitRepository = Program.GetService<IDenialBenefitRepository>();
+            denialStatusRepository = Program.GetService<IDenialStatusRepository>();
             User = Program.GetUser();
             InitializeComponent();
             _fileManager = new Logic.FileManager();
@@ -1170,8 +1176,30 @@ namespace RRFFilesManager
             {
                 Busqueda();
             }
+            else if (TabControl5.SelectedTab == Denials)
+            {
+                BusquedaDenials();
+            }
         }
 
+        private void BusquedaDenials()
+        {
+            if (File != null)
+            {
+                //ABDenialsDataGridView.DataSource = null;
+                ABDenialsDataGridView.DataSource = _DenialRepository.Search(Home.FileManager.File);
+                ABDenialsDataGridView.Columns["ID"].Visible = false;
+                ABDenialsDataGridView.Columns["File"].Visible = false;
+                ABDenialsDataGridView.Columns["FileId"].Visible = false;
+            }
+            else
+            {
+                TabControl5.SelectedTab = ABBinderTab;
+                TabControl1.SelectedIndex = 0;
+                MessageBox.Show($"You have to search a file", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+        }
         private void BtnSaveLatData_Click(object sender, EventArgs e)
         {
             if (sender is Button)
@@ -2063,6 +2091,44 @@ namespace RRFFilesManager
             {
                 ActionLogDataGridView.CurrentCell = ActionLogDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 Task_Actions.fileTask = _fileTaskRepository.GetById(Convert.ToInt32(ActionLogDataGridView.Rows[e.RowIndex].Cells[0].Value));
+            }
+        }
+
+        private void btnNewDenials_Click(object sender, EventArgs e)
+        {
+            if (Home.FileManager.File == null)
+            {
+                MessageBox.Show($"You have to search a file", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            using (DenialsForm _Denials = new DenialsForm())
+            {
+                if (_Denials.ShowDialog() == DialogResult.OK)
+                {
+                    BusquedaDenials();
+                }
+               
+            }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            CboxBenefitDenialsFilemanager.Text = "";
+            CboxStatusDenialsFilemanager.Text = "";
+            BusquedaDenials();
+        }
+
+        private void CboxsDenials_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (sender is ComboBox)
+            {
+                ComboBox cb = new ComboBox();
+                cb = sender as ComboBox;
+                if (!string.IsNullOrEmpty(cb.Text) && File != null)
+                {
+                    //ABDenialsDataGridView.DataSource = null;
+                    ABDenialsDataGridView.DataSource = _DenialRepository.Search(Home.FileManager.File, denialBenefitRepository.GetByDescription(CboxBenefitDenialsFilemanager.Text), denialStatusRepository.GetByDescription(CboxStatusDenialsFilemanager.Text));
+                }
             }
         }
     }
