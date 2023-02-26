@@ -25,7 +25,7 @@ namespace RRFFilesManager.Utils
         {
             if (file == null)
                 throw new Exception("File can not be null");
-            var clientFolderName = $"{file.Client.ID} - {file.Client.FirstName} {file.Client.LastName}";
+            var clientFolderName = $"{file.Client.FirstName} {file.Client.LastName} - {file.Client.ID}";
             var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], clientFolderName);
             path = Path.Combine(path, file.FileNumber.ToString());
             Directory.CreateDirectory(path);
@@ -68,7 +68,7 @@ namespace RRFFilesManager.Utils
             var sourcePath = archive.Path;
             if (!sourcePath.Contains(fileFolderPath))
             {
-                var archiveFileName = fileName ?? Path.GetFileName(archive.Path);
+                var archiveFileName = fileName ?? archive.Name;
                 var destPath = Path.Combine(fileFolderPath, archiveFileName);
                 if (System.IO.File.Exists(sourcePath))
                 {
@@ -97,18 +97,11 @@ namespace RRFFilesManager.Utils
             var sourcePath = archive.Path;
             if (!sourcePath.Contains(fileFolderPath))
             {
-                var archiveFileName = fileName ?? Path.GetFileName(archive.Path);
+                var archiveFileName = fileName ?? archive.Name;
                 var destPath = Path.Combine(fileFolderPath, archiveFileName);
                 if(System.IO.File.Exists(sourcePath))
                 {
-                    try
-                    {
-                        System.IO.File.Move(sourcePath, destPath);
-                    } catch(Exception e)
-                    {
-                        Console.WriteLine(e);
-                    }
-                    
+                    System.IO.File.Move(sourcePath, destPath);
                 }
                 else
                 {

@@ -3268,7 +3268,6 @@
             // SaveNoteButton
             // 
             this.SaveNoteButton.BackColor = System.Drawing.Color.Maroon;
-            this.SaveNoteButton.Enabled = false;
             this.SaveNoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveNoteButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveNoteButton.ForeColor = System.Drawing.Color.White;
@@ -3283,7 +3282,6 @@
             // AddNotesRowButton
             // 
             this.AddNotesRowButton.BackColor = System.Drawing.Color.Maroon;
-            this.AddNotesRowButton.Enabled = false;
             this.AddNotesRowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNotesRowButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNotesRowButton.ForeColor = System.Drawing.Color.White;
@@ -3329,7 +3327,6 @@
             // 
             this.ExportToExcelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ExportToExcelButton.BackColor = System.Drawing.Color.Maroon;
-            this.ExportToExcelButton.Enabled = false;
             this.ExportToExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExportToExcelButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExportToExcelButton.ForeColor = System.Drawing.Color.White;
@@ -3374,7 +3371,6 @@
             // 
             this.Btn_SearchNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn_SearchNotes.BackColor = System.Drawing.Color.Maroon;
-            this.Btn_SearchNotes.Enabled = false;
             this.Btn_SearchNotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_SearchNotes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_SearchNotes.ForeColor = System.Drawing.Color.White;

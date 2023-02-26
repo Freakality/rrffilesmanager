@@ -37,8 +37,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.Remove = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.InputFolders = new System.Windows.Forms.ListBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.OutputFolder = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Cancel = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
@@ -46,7 +44,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,14 +52,13 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
@@ -75,7 +71,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(794, 344);
+            this.groupBox1.Size = new System.Drawing.Size(794, 386);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Import Folders";
@@ -92,7 +88,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 322);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 364);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel1
@@ -150,28 +146,8 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.InputFolders.ItemHeight = 17;
             this.InputFolders.Location = new System.Drawing.Point(3, 28);
             this.InputFolders.Name = "InputFolders";
-            this.InputFolders.Size = new System.Drawing.Size(782, 291);
+            this.InputFolders.Size = new System.Drawing.Size(782, 333);
             this.InputFolders.TabIndex = 3;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.OutputFolder);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 353);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(794, 44);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Output Folder";
-            // 
-            // OutputFolder
-            // 
-            this.OutputFolder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OutputFolder.Location = new System.Drawing.Point(3, 19);
-            this.OutputFolder.Name = "OutputFolder";
-            this.OutputFolder.Size = new System.Drawing.Size(788, 23);
-            this.OutputFolder.TabIndex = 0;
             // 
             // panel2
             // 
@@ -225,8 +201,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -241,8 +215,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private System.Windows.Forms.TextBox InputFolderTextBox;
         private System.Windows.Forms.Button Remove;
         private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox OutputFolder;
         private System.Windows.Forms.ListBox InputFolders;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Cancel;

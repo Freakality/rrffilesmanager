@@ -59,6 +59,7 @@ namespace RRFFilesManager
         private readonly IPermissionRepository _permissionRepository;
         private int clearance;
         List<Lawyer> LawyerList = new List<Lawyer>();
+        private bool isSettingForm;
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -169,8 +170,9 @@ namespace RRFFilesManager
 
         private void SetForm(File file)
         {
-            if(file == null)
+            if (file == null)
                 return;
+            isSettingForm = true;
             PeopleControl.SetFile(file);
             ABBinderControl.SetFile(file);
             StandardBenefitStatementsControl.SetFile(file);
@@ -271,10 +273,11 @@ namespace RRFFilesManager
                 SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
             }
             CurrentFileStatusComboBox.Enabled = true;
+            Btn_SearchNotes.Enabled = true;
             var statusList = _fileStatusManager.GetValidFileStatus(file);
             Utils.Utils.SetComboBoxDataSource(CurrentFileStatusComboBox, statusList);
-            CurrentFileStatusComboBox.SelectedItem = statusList.FirstOrDefault(x => x.ID == file.CurrentStatus.ID);
-
+            CurrentFileStatusComboBox.SelectedItem = file.CurrentStatus;
+            isSettingForm = false;
         }
 
         private void LoadABOverview()
@@ -1140,7 +1143,11 @@ namespace RRFFilesManager
 
         private void AddNotesRowButton_Click(object sender, EventArgs e)
         {
-            if (File == null) return;
+            if (File is null)
+            {
+                MessageBox.Show($"You have to select a file!","Wait",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
            
 
             if (ClientNotesDataGridView.Rows.Count > 0)
@@ -1162,9 +1169,15 @@ namespace RRFFilesManager
 
         private void SaveNoteButton_Click(object sender, EventArgs e)
         {
-            if (ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_DateTime.Index].Value == null && 
-                ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index].Value != null &&
-                !string.IsNullOrEmpty(ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index].Value.ToString()))
+            if (File is null)
+            {
+                MessageBox.Show($"You have to select a file!","Wait",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
+            if (ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1]?.Cells[DgColumn_DateTime.Index].Value == null && 
+                ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1]?.Cells[DgColumn_Description.Index].Value != null &&
+                !string.IsNullOrEmpty(ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1]?.Cells[DgColumn_Description.Index].Value.ToString()))
             {
                 if (MessageBox.Show("Are you sure you want to save a note?", "Wait", MessageBoxButtons.YesNoCancel,
                     MessageBoxIcon.Question) != DialogResult.Yes) return;
@@ -1193,6 +1206,11 @@ namespace RRFFilesManager
 
         private void Btn_SearchNotes_Click(object sender, EventArgs e)
         {
+            if (File is null)
+            {
+                MessageBox.Show($"You hace to select a file!", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             clientNotes =  _clientNoteRepository.Search(File,Dtp_From.Value,Dtp_To.Value);
             UpdateClienteNotesGrid();
             
@@ -1280,7 +1298,7 @@ namespace RRFFilesManager
             }
 
             Cbb_Staff.Items.Clear();
-            Cbb_Staff.Items.Add("");
+            Cbb_Staff.Items.Add("All");
             var lawyers = Notes.AsEnumerable().Select(x => x.Field<string>("Lawyer")).Distinct();
             foreach (var item in lawyers)
             {
@@ -1354,6 +1372,7 @@ namespace RRFFilesManager
 
         private void CurrentFileStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (isSettingForm) return;
             var newStatus = (FileStatus)CurrentFileStatusComboBox.SelectedValue;
             if (newStatus != null && File.CurrentStatus != newStatus)
             {
