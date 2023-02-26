@@ -22,6 +22,7 @@ namespace RRFFilesManager
     {
         public File File { get; set; }
         public Timeline FileTimeline { get; set; }
+        public ABOverview FileABOverview { get; set; }
         public bool SettingFile = false;
         public readonly PeopleControl PeopleControl;
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
@@ -36,6 +37,7 @@ namespace RRFFilesManager
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
         private readonly ILATDataRepository _latDataRepository;
+        private readonly IABOverviewRepository _abOverviewRepository;
         private Logic.FileManager _fileManager;
         private FileStatusManager _fileStatusManager;
         private readonly IClientNoteRepository _clientNoteRepository;
@@ -63,6 +65,7 @@ namespace RRFFilesManager
             _clientNoteRepository = Program.GetService<IClientNoteRepository>();
             _latDataRepository = Program.GetService<ILATDataRepository>();
             _permissionRepository = Program.GetService<IPermissionRepository>();
+            _abOverviewRepository = Program.GetService<IABOverviewRepository>();
             User = Program.GetUser();
             InitializeComponent();
             _fileManager = new Logic.FileManager();
@@ -173,6 +176,7 @@ namespace RRFFilesManager
             DateOfLossTextBox.Text = file.DateOFLoss.ToString("MMM-dd-yyyy");
             LimDateTextBox.Text = file.LimitationPeriod;
             FileOpenDateTextBox.Text = file.DateOfCall.ToString("MMM-dd-yyyy");
+
             /*DateTime nextReview = file.DateOfCall.AddMonths(6);
             while (nextReview.Date < DateTime.Now.Date)
             {
@@ -206,6 +210,7 @@ namespace RRFFilesManager
                 ProjectedABSettlementDateTextBox.Show();
                 ProjectedABSettlementValueLabel.Show();
                 ProjectedABSettlementValueTextBox.Show();
+                
             }
             SubTypeCategoryComboBox.Enabled = true;
             SubTypeCategoryComboBox.MatterType = File.MatterType;
@@ -217,7 +222,18 @@ namespace RRFFilesManager
                 SetSemiAnnualFileReviewTab(File);
                 SetProjections();
             }
-            TBoxLiabilityMeetingDate.Enabled = true;
+
+            FastEnabler(TimelineLayoutPanel);
+            FastEnabler(ABOMainLayoutPanel);
+            /*foreach(Control c in TimelineLayoutPanel.Controls)
+            {
+                if (c is Button || c is ColorDateTimePicker || c is DateTimePicker)
+                {
+                    c.Enabled = true;
+                }
+            }*/
+
+            /*TBoxLiabilityMeetingDate.Enabled = true;
             TBoxProposedDateIssueSOC.Enabled = true;
             TBoxPrePleadingsMeetingDate.Enabled = true;
             TBoxActualDateSOCIssued.Enabled = true;
@@ -233,12 +249,13 @@ namespace RRFFilesManager
             TBoxDateTrialRecordFiled.Enabled = true;
             TBoxDatePlaintiffUndertakingComplete.Enabled = true;
             TBoxAllDefendantUndertakingRecd.Enabled = true;
-            TimelineSaveBtn.Enabled = true;
+            TimelineSaveBtn.Enabled = true;*/
 
             if (File.Timeline != null)
             {
                 FillTimelineFields();   
             }
+            LoadABOverview();
             if (File.Tasks.ToList().Count > 0)
             {
                 RefreshActionLogDataGridViewDataSource();
@@ -248,6 +265,129 @@ namespace RRFFilesManager
             Utils.Utils.SetComboBoxDataSource(CurrentFileStatusComboBox, statusList);
             CurrentFileStatusComboBox.SelectedItem = statusList.FirstOrDefault(x => x.ID == file.CurrentStatus.ID);
 
+        }
+
+        private void LoadABOverview()
+        {
+            ABODateOfLossTextBox.Text = File.DateOFLoss.ToString("MMMM dd, yyyy");
+            ABOInsurerNameTextBox.Text = File.Intake.AccBenInsuranceCompany;
+            ABOAdjusterNameTextBox.Text = File.Intake.AccBenAdjuster;
+
+            FileABOverview = File.ABOverview;
+            if (FileABOverview != null)
+            {
+                ABOPreJune1st2016ComboBox.SelectedItem = FileABOverview.PolicyPreJune1st2016 ?? null;
+                ABOOptionalBenefitsComboBox.SelectedItem = FileABOverview.PolicyOptionalBenefits ?? null;
+                ABOABCounselTextBox.Text = FileABOverview.PolicyABCounsel ?? "";
+
+                ABOIncomeBenefitsAppliedComboBox.SelectedItem = FileABOverview.IncomeBenefitsApplied ?? null;
+                ABOIncomeBenefitsTypeComboBox.SelectedItem = FileABOverview.IncomeBenefitsType ?? null;
+                if (FileABOverview.IncomeBenefitsLatestOCF3 != default)
+                    ABOIncomeBenefitsLatestOFC3.Value = FileABOverview.IncomeBenefitsLatestOCF3;
+                if (FileABOverview.IncomeBenefitsWeeklyAmount != 0)
+                    ABOIncomeBenefitsWeeklyAmountTextBox.Text = FileABOverview.IncomeBenefitsWeeklyAmount.ToString() ?? "";
+                ABOIncomeBenefitsDeniedComboBox.SelectedItem = FileABOverview.IncomeBenefitsDenied ?? null;
+                ABOIncomeBenefitsFileForLATComboBox.SelectedItem = FileABOverview.IncomeBenefitsFiledForLAT ?? null;
+
+                ABOInitiallyApprovedComboBox.SelectedItem = FileABOverview.AttendantCareBenefitsInitiallyApproved ?? null;
+                if (FileABOverview.AttendantCareBenefitsInitialAmount != 0)
+                    ABOInitialAmountTextBox.Text = FileABOverview.AttendantCareBenefitsInitialAmount.ToString() ?? "";
+                ABOACBeingIncurredComboBox.SelectedItem = FileABOverview.AttendantCareBenefitsACBeingIncurred ?? null;
+                ABOWhosFundingComboBox.SelectedItem = FileABOverview.AttendantCareBenefitsWhosFunding ?? null;
+                if (FileABOverview.AttendantCareBenefitsLatestForm1 != default)
+                    ABOLatestForm1Date.Value = FileABOverview.AttendantCareBenefitsLatestForm1;
+                if (FileABOverview.AttendantCareBenefitsAmountPaidToDate != 0)
+                    ABOACBAmountPaidToDateTextBox.Text = FileABOverview.AttendantCareBenefitsAmountPaidToDate.ToString() ?? "";
+
+                ABOCurrentBenefitsLevelComboBox.SelectedItem = FileABOverview.MedicalRehabBenefitsCurrentLevel ?? null;
+                if (FileABOverview.MedicalRehabBenefitsEnd != default)
+                    ABOBenefitsEndDate.Value = FileABOverview.MedicalRehabBenefitsEnd;
+                if (FileABOverview.MedicalRehabBenefitsAmountPaidToDate != 0)
+                    ABOMRBAmountPaidToDateTextBox.Text = FileABOverview.MedicalRehabBenefitsAmountPaidToDate.ToString() ?? "";
+
+                ABOAvailableCollateralInsuredComboBox.SelectedItem = FileABOverview.CollateralsInsured ?? null;
+                ABOAvailableCollateralFamilyComboBox.SelectedItem = FileABOverview.CollateralsFamily ?? null;
+
+                if (FileABOverview.StatementBenefitsStatementDate != default)
+                    ABOStatementDate.Value = FileABOverview.StatementBenefitsStatementDate;
+
+                ABOGovtOntarioComboBox.SelectedItem = FileABOverview.PotentialOffSetsGovtOntario ?? null;
+                ABOGovtFederalComboBox.SelectedItem = FileABOverview.PotentialOffSetsGovtFederal ?? null;
+                ABOGroupPrivateComboBox.SelectedItem = FileABOverview.PotentialOffSetsGroupPrivate ?? null;
+
+                ABOCATAppliedComboBox.SelectedItem = FileABOverview.PotentialCATApplied ?? null;
+                ABOCATCriteriaComboBox.SelectedItem = FileABOverview.PotentialCATCriteria ?? null;
+                ABOIEsScheduledComboBox.SelectedItem = FileABOverview.PotentialCATIEsScheduled ?? null;
+                ABOCATResultComboBox.SelectedItem = FileABOverview.PotentialCATResult ?? null;
+                ABOCATLATFiledComboBox.SelectedItem = FileABOverview.PotentialCATLATFiled ?? null;
+
+                if (FileABOverview.LastUpdatedDate != default)
+                    ABOLastUpdateTextBox.Text= FileABOverview.LastUpdatedDate.ToString("MMMM dd, yyyy");
+                else
+                {
+                    ABOLastUpdateTextBox.Text = "-";
+                }
+
+            }
+            else
+            {
+                ABOPreJune1st2016ComboBox.SelectedItem = null;
+                ABOOptionalBenefitsComboBox.SelectedItem = null;
+                ABOABCounselTextBox.Text = "";
+
+                ABOIncomeBenefitsAppliedComboBox.SelectedItem = null;
+                ABOIncomeBenefitsTypeComboBox.SelectedItem = null;
+                ABOIncomeBenefitsLatestOFC3TextBox.Text = "";
+                ABOIncomeBenefitsWeeklyAmountTextBox.Text = "";
+                ABOIncomeBenefitsDeniedComboBox.SelectedItem = null;
+                ABOIncomeBenefitsFileForLATComboBox.SelectedItem = null;
+
+                ABOInitiallyApprovedComboBox.SelectedItem = null;
+                ABOInitialAmountTextBox.Text = "";
+                ABOACBeingIncurredComboBox.SelectedItem =  null;
+                ABOWhosFundingComboBox.SelectedItem = null;
+                ABOLatestForm1DateTextBox.Text = "";
+                ABOACBAmountPaidToDateTextBox.Text = "";
+
+                ABOCurrentBenefitsLevelComboBox.SelectedItem =  null;
+                ABOBenefitsEndDateTextBox.Text = "";
+                ABOMRBAmountPaidToDateTextBox.Text =  "";
+
+                ABOAvailableCollateralInsuredComboBox.SelectedItem = null;
+                ABOAvailableCollateralFamilyComboBox.SelectedItem =  null;
+
+                ABOStatementDateTextBox.Text = "";
+
+                ABOGovtOntarioComboBox.SelectedItem = null;
+                ABOGovtFederalComboBox.SelectedItem = null;
+                ABOGroupPrivateComboBox.SelectedItem =  null;
+
+                ABOCATAppliedComboBox.SelectedItem = null;
+                ABOCATCriteriaComboBox.SelectedItem = null;
+                ABOIEsScheduledComboBox.SelectedItem = null;
+                ABOCATResultComboBox.SelectedItem = null;
+                ABOCATLATFiledComboBox.SelectedItem = null;
+
+                ABOLastUpdateTextBox.Text = "-";
+            }
+
+        }
+        private void FastEnabler(Control parent)
+        {
+            if (parent.Controls.Count > 0)
+            {
+                foreach (Control c in parent.Controls)
+                {
+                    if (c is Button || c is ColorDateTimePicker || c is DateTimePicker || c is ComboBox || c is TextBox || c is CurrencyTextBox)
+                    {
+                        c.Enabled = true;
+                    }
+                    if (c is GroupBox || c is TableLayoutPanel)
+                    {
+                        FastEnabler(c);
+                    }
+                }
+            }
         }
 
         public void FillTimelineFields()
@@ -305,6 +445,7 @@ namespace RRFFilesManager
                 TBoxPreTrialResolutionDate.Value = FileTimeline.PreTrialResolutionDate;
             if (FileTimeline.TrialDate != default(DateTime))
                 TBoxTrialDate.Value = FileTimeline.TrialDate;
+
         }
 
         private bool firstActionLogDataLoad = true;
@@ -419,15 +560,15 @@ namespace RRFFilesManager
             {
                 TabControl2.TabPages.Remove(SemiAnnualFileReviewTabAction);
             }
-            if (TabControl5.TabPages.Contains(SemiAnnualFileReviewTabAccidentBenefits))
+            if (ABOverviewTab.TabPages.Contains(SemiAnnualFileReviewTabAccidentBenefits))
             {
-                TabControl5.TabPages.Remove(SemiAnnualFileReviewTabAccidentBenefits);
+                ABOverviewTab.TabPages.Remove(SemiAnnualFileReviewTabAccidentBenefits);
             }
 
             if (file.MatterType.Description == "Motor Vehicle Accident" && file.SubTypeCategory.Description.ToUpper().Contains("AB") && !file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
             {
                 SemiAnnualFileReviewControlAccidentBenefits.File = file;
-                TabControl5.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
+                ABOverviewTab.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
             }
             else if (file.MatterType.Description == "Motor Vehicle Accident" && !file.SubTypeCategory.Description.ToUpper().Contains("AB") && file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
             {
@@ -437,7 +578,7 @@ namespace RRFFilesManager
             else
             {
                 SemiAnnualFileReviewControlAccidentBenefits.File = SemiAnnualFileReviewControlAction.File = file;
-                TabControl5.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
+                ABOverviewTab.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
                 TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
             }
             
@@ -773,13 +914,27 @@ namespace RRFFilesManager
             }
         }
 
-        private void DTP_ValueChanged(object sender, EventArgs e)
+        /*private void DTPTimeline_ValueChanged(object sender, EventArgs e)
         {
             var dtp = sender as ColorDateTimePicker;
             if (dtp.Value != default(DateTime))
                 ((this.Timeline.Controls["TimelineLayoutPanel"] as TableLayoutPanel).Controls[dtp.Name + "TextBox"] as TextBox).Text = dtp.Value.ToString("MMMM dd, yyyy");
             else
                 ((this.Timeline.Controls["TimelineLayoutPanel"] as TableLayoutPanel).Controls[dtp.Name + "TextBox"] as TextBox).Text = "";
+        }*/
+
+        private void DTP_ValueChanged(object sender, EventArgs e)
+        {
+            var dtp = sender as DateTimePicker;
+            DTPChanger(dtp, dtp.Parent.Controls[dtp.Name + "TextBox"] as TextBox);
+        }
+
+        private void DTPChanger(DateTimePicker dtp, TextBox textBox)
+        {
+            if (dtp.Value != default(DateTime))
+                textBox.Text = dtp.Value.ToString("MMMM dd, yyyy");
+            else
+                textBox.Text = "";
         }
 
         private void TimelineSaveBtn_Click(object sender, EventArgs e)
@@ -1166,7 +1321,7 @@ namespace RRFFilesManager
 
         private void TabControl5_Click(object sender, EventArgs e)
         {
-            if (TabControl5.SelectedTab == ABLAT)
+            if (ABOverviewTab.SelectedTab == ABLAT)
             {
                 Busqueda();
             }
@@ -1786,7 +1941,7 @@ namespace RRFFilesManager
             {
                 TabControl4.Enabled = false;
                 TabControl1.SelectedIndex = 0;
-                TabControl5.SelectedTab = ABBinderTab;
+                ABOverviewTab.SelectedTab = ABBinderTab;
                 MessageBox.Show("You have to select a file!");
                 return;
             }
@@ -2064,6 +2219,209 @@ namespace RRFFilesManager
                 ActionLogDataGridView.CurrentCell = ActionLogDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 Task_Actions.fileTask = _fileTaskRepository.GetById(Convert.ToInt32(ActionLogDataGridView.Rows[e.RowIndex].Cells[0].Value));
             }
+        }
+
+        private void ABOSaveButton_Click(object sender, EventArgs e)
+        {
+            var abOverview = FileABOverview;
+            if (abOverview == null)
+                abOverview = new ABOverview();
+            if (FillABOverview(abOverview))
+            {
+                if (abOverview.ID == default)
+                    _abOverviewRepository.Insert(abOverview, abOverview.File);
+                else
+                    _abOverviewRepository.Update(abOverview);
+                LoadABOverview();
+                MessageBox.Show("AB Overview has been saved.");
+            }
+            else
+            {
+                MessageBox.Show("No changes detected.");
+            }
+
+
+        }
+
+        private bool FillABOverview(ABOverview abOverview)
+        {
+            bool update = false;
+            abOverview.File = File;
+            
+            if (ABOPreJune1st2016ComboBox.SelectedItem != null)
+            {
+                abOverview.PolicyPreJune1st2016 = ABOPreJune1st2016ComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOOptionalBenefitsComboBox.SelectedItem != null)
+            {
+                abOverview.PolicyOptionalBenefits = ABOOptionalBenefitsComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOABCounselTextBox.Text != "")
+            {
+                abOverview.PolicyABCounsel = ABOABCounselTextBox.Text;
+                update = true;
+            }
+
+            if (ABOIncomeBenefitsAppliedComboBox.SelectedItem != null)
+            {
+                abOverview.IncomeBenefitsApplied = ABOIncomeBenefitsAppliedComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOIncomeBenefitsTypeComboBox.SelectedItem != null)
+            {
+                abOverview.IncomeBenefitsType = ABOIncomeBenefitsTypeComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOIncomeBenefitsLatestOFC3TextBox.Text != "")
+            {
+                abOverview.IncomeBenefitsLatestOCF3 = ABOIncomeBenefitsLatestOFC3.Value;
+                update = true;
+            }
+            if (ABOIncomeBenefitsWeeklyAmountTextBox.Text != "")
+            {
+                int n = 0;
+                if (Int32.TryParse(ABOIncomeBenefitsWeeklyAmountTextBox.Text, out n))
+                {
+                    abOverview.IncomeBenefitsWeeklyAmount = n;
+                    update = true;
+                }
+            }
+            if (ABOIncomeBenefitsDeniedComboBox.SelectedItem != null)
+            {
+                abOverview.IncomeBenefitsDenied = ABOIncomeBenefitsDeniedComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOIncomeBenefitsFileForLATComboBox.SelectedItem != null)
+            {
+                abOverview.IncomeBenefitsFiledForLAT = ABOIncomeBenefitsFileForLATComboBox.SelectedItem.ToString();
+                update = true;
+            }
+
+            if (ABOInitiallyApprovedComboBox.SelectedItem != null)
+            {
+                abOverview.AttendantCareBenefitsInitiallyApproved = ABOInitiallyApprovedComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOIncomeBenefitsWeeklyAmountTextBox.Text != "")
+            {
+                int n = 0;
+                if (Int32.TryParse(ABOInitialAmountTextBox.Text, out n))
+                {
+                    abOverview.AttendantCareBenefitsInitialAmount = n;
+                    update = true;
+                }
+            }
+            if (ABOACBeingIncurredComboBox.SelectedItem != null)
+            {
+                abOverview.AttendantCareBenefitsACBeingIncurred = ABOACBeingIncurredComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOWhosFundingComboBox.SelectedItem != null)
+            {
+                abOverview.AttendantCareBenefitsWhosFunding = ABOWhosFundingComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOLatestForm1DateTextBox.Text != "")
+            {
+                abOverview.AttendantCareBenefitsLatestForm1 = ABOLatestForm1Date.Value;
+                update = true;
+            }
+            if (ABOACBAmountPaidToDateTextBox.Text != "")
+            {
+                int n = 0;
+                if (Int32.TryParse(ABOACBAmountPaidToDateTextBox.Text, out n))
+                {
+                    abOverview.AttendantCareBenefitsAmountPaidToDate = n;
+                    update = true;
+                }
+            }
+
+            if (ABOCurrentBenefitsLevelComboBox.SelectedItem != null)
+            {
+                abOverview.MedicalRehabBenefitsCurrentLevel = ABOCurrentBenefitsLevelComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOBenefitsEndDateTextBox.Text != "")
+            {
+                abOverview.MedicalRehabBenefitsEnd = ABOBenefitsEndDate.Value;
+                update = true;
+            }
+            if (ABOMRBAmountPaidToDateTextBox.Text != "")
+            {
+                int n = 0;
+                if (Int32.TryParse(ABOMRBAmountPaidToDateTextBox.Text, out n))
+                {
+                    abOverview.MedicalRehabBenefitsAmountPaidToDate = n;
+                    update = true;
+                }
+            }
+
+            if (ABOAvailableCollateralInsuredComboBox.SelectedItem != null)
+            {
+                abOverview.CollateralsInsured = ABOAvailableCollateralInsuredComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOAvailableCollateralFamilyComboBox.SelectedItem != null)
+            {
+                abOverview.CollateralsFamily = ABOAvailableCollateralFamilyComboBox.SelectedItem.ToString();
+                update = true;
+            }
+
+            if (ABOStatementDateTextBox.Text != "")
+            {
+                abOverview.StatementBenefitsStatementDate = ABOStatementDate.Value;
+                update = true;
+            }
+
+            if (ABOGovtOntarioComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialOffSetsGovtOntario = ABOGovtOntarioComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOGovtFederalComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialOffSetsGovtFederal = ABOGovtFederalComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOGroupPrivateComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialOffSetsGroupPrivate = ABOGroupPrivateComboBox.SelectedItem.ToString();
+                update = true;
+            }
+
+            if (ABOCATAppliedComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialCATApplied = ABOCATAppliedComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOCATCriteriaComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialCATCriteria = ABOCATCriteriaComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOIEsScheduledComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialCATIEsScheduled = ABOIEsScheduledComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOCATResultComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialCATResult = ABOCATResultComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (ABOCATLATFiledComboBox.SelectedItem != null)
+            {
+                abOverview.PotentialCATLATFiled = ABOCATLATFiledComboBox.SelectedItem.ToString();
+                update = true;
+            }
+
+            if (update)
+            {
+                abOverview.LastUpdatedDate = DateTime.Now;
+            }
+            return update;
         }
     }
 }
