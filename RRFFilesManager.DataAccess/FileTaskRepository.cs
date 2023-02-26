@@ -54,7 +54,7 @@ namespace RRFFilesManager.DataAccess
             _context.SaveChanges();
         }
 
-        public IEnumerable<FileTask> Search(File file, TaskState taskState, int? take = null)
+        public IEnumerable<FileTask> Search(File file, TaskState taskState = null, int? take = null, Lawyer lawyer = null, TaskCategory businessProcess = null)
         {
             var query = _context.FileTasks.Where(s =>
                 s.File == file
@@ -65,6 +65,21 @@ namespace RRFFilesManager.DataAccess
                     s.State == taskState
                 );
             }
+
+            if (lawyer != null)
+            {
+                query = query.Where(s =>
+                    s.Lawyer.ID == lawyer.ID
+                );
+            }
+
+            if (businessProcess != null)
+            {
+                query = query.Where(s =>
+                    s.Task.TaskCategory.ID == businessProcess.ID
+                );
+            }
+
             if (take != null)
             {
                 query = query.Take(take.Value);

@@ -13,6 +13,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         void Update(TaskCategory taskCategory);
         void SoftDelete(int taskCategoryId);
         TaskCategory GetById(int taskCategoryId);
+        TaskCategory GetByDescription(string taskCategoryDescription);
         IEnumerable<TaskCategory> List();
         IEnumerable<TaskCategory> Search(string searchText, bool? hold = null, int? take = null);
     }

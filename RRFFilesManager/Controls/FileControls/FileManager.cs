@@ -36,6 +36,7 @@ namespace RRFFilesManager
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
         private readonly ILATDataRepository _latDataRepository;
+        private readonly ILawyerRepository _lawyerRepository;        
         private Logic.FileManager _fileManager;
         private FileStatusManager _fileStatusManager;
         private readonly IClientNoteRepository _clientNoteRepository;
@@ -52,6 +53,7 @@ namespace RRFFilesManager
         private Lawyer User;
         private readonly IPermissionRepository _permissionRepository;
         private int clearance;
+        List<Lawyer> LawyerList = new List<Lawyer>();
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -63,11 +65,11 @@ namespace RRFFilesManager
             _clientNoteRepository = Program.GetService<IClientNoteRepository>();
             _latDataRepository = Program.GetService<ILATDataRepository>();
             _permissionRepository = Program.GetService<IPermissionRepository>();
+            _lawyerRepository = Program.GetService<ILawyerRepository>();
             User = Program.GetUser();
             InitializeComponent();
             _fileManager = new Logic.FileManager();
-            _fileStatusManager = new FileStatusManager();
-            ComboBox2.SelectedIndex = 0;
+            _fileStatusManager = new FileStatusManager();            
             PeopleControl = new PeopleControl();
             Utils.Utils.SetContent(PeopleTab, PeopleControl);
 
@@ -102,6 +104,7 @@ namespace RRFFilesManager
             Ctms_TaskActions = Task_Actions.Ctms_TaskActions;
             Home.Instance.AddPermissionStrip(TimelineSaveBtn);
             ShowClearanceLocked();
+            
         }
 
         private void ShowClearanceLocked()
@@ -242,12 +245,43 @@ namespace RRFFilesManager
             if (File.Tasks.ToList().Count > 0)
             {
                 RefreshActionLogDataGridViewDataSource();
+                SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
             }
             CurrentFileStatusComboBox.Enabled = true;
             var statusList = _fileStatusManager.GetValidFileStatus(file);
             Utils.Utils.SetComboBoxDataSource(CurrentFileStatusComboBox, statusList);
             CurrentFileStatusComboBox.SelectedItem = statusList.FirstOrDefault(x => x.ID == file.CurrentStatus.ID);
 
+        }
+
+        private void SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes()
+        {
+            Cbb_TaskLogStateFilter.Items.Clear();
+            Cbb_TaskLogFilterLawyers.Items.Clear();
+            Cbb_TaskLogBusinessProcessFilter.Items.Clear();
+
+            Cbb_TaskLogStateFilter.Items.Add("All");
+            Cbb_TaskLogFilterLawyers.Items.Add("All");
+            Cbb_TaskLogBusinessProcessFilter.Items.Add("All");
+
+            foreach (var item in _taskStateRepository.List())
+            {
+                Cbb_TaskLogStateFilter.Items.Add(item.Description);
+            }
+            string[] LawyersDescriptions = fileTasks.Select(x => x?.Task?.Lawyer?.Description?? "N/A").Distinct().ToArray();
+            foreach (string item in LawyersDescriptions)
+            {
+                Cbb_TaskLogFilterLawyers.Items.Add(item);
+            }
+
+            string[] BusinessProcessDescriptions = fileTasks.Select(x => x?.Task?.TaskCategory?.Description??"N/A").Distinct().ToArray();
+            foreach (string item in BusinessProcessDescriptions)
+            {
+                Cbb_TaskLogBusinessProcessFilter.Items.Add(item);
+            }
+            //Cbb_TaskLogStateFilter.SelectedIndex = 0;
+            //Cbb_TaskLogFilterLawyers.SelectedIndex = 0;
+            //Cbb_TaskLogBusinessProcessFilter.SelectedIndex = 0;
         }
 
         public void FillTimelineFields()
@@ -319,7 +353,9 @@ namespace RRFFilesManager
                 }
             }*/
             
-            fileTasks = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(ComboBox2.Text));
+            fileTasks = _fileTaskRepository.Search(File, _taskStateRepository.GetByDescription(Cbb_TaskLogStateFilter.Text),
+                null, _lawyerRepository.GetByDescription(Cbb_TaskLogFilterLawyers.Text),
+                _taskCategoryRepository.GetByDescription(Cbb_TaskLogBusinessProcessFilter.Text));
             var filetasks = fileTasks.Select( x => new
             {
                 ID = x?.ID,
@@ -347,7 +383,7 @@ namespace RRFFilesManager
             bool setup = false;
             if (ActionLogDataGridView.DataSource != null)
             {
-                setup = true;
+                setup = true;                
             }
 
             if (setup && firstActionLogDataLoad)
@@ -930,8 +966,7 @@ namespace RRFFilesManager
 
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (File != null)
-                RefreshActionLogDataGridViewDataSource();
+
         }
 
         private void ABBinderTab_Click(object sender, EventArgs e)
@@ -2065,5 +2100,17 @@ namespace RRFFilesManager
                 Task_Actions.fileTask = _fileTaskRepository.GetById(Convert.ToInt32(ActionLogDataGridView.Rows[e.RowIndex].Cells[0].Value));
             }
         }
+
+        private void TaskLogFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (File != null)
+            {
+                RefreshActionLogDataGridViewDataSource();
+                //SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
+            }
+
+        }
+
+
     }
 }
