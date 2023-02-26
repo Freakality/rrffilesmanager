@@ -36,11 +36,11 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gb_GroupBY = new System.Windows.Forms.GroupBox();
+            this.ExcelExportButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
             this.GroupByButton = new System.Windows.Forms.Button();
             this.Chl_Columns = new System.Windows.Forms.CheckedListBox();
             this.Dg_Data = new System.Windows.Forms.DataGridView();
-            this.ExcelExportButton = new System.Windows.Forms.Button();
             this.Gb_FindInfoControls.SuspendLayout();
             this.Gb_GroupBY.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Data)).BeginInit();
@@ -131,6 +131,21 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Gb_GroupBY.TabStop = false;
             this.Gb_GroupBY.Text = "Group By";
             // 
+            // ExcelExportButton
+            // 
+            this.ExcelExportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExcelExportButton.BackColor = System.Drawing.Color.Maroon;
+            this.ExcelExportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcelExportButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExcelExportButton.ForeColor = System.Drawing.Color.White;
+            this.ExcelExportButton.Location = new System.Drawing.Point(602, 137);
+            this.ExcelExportButton.Name = "ExcelExportButton";
+            this.ExcelExportButton.Size = new System.Drawing.Size(111, 35);
+            this.ExcelExportButton.TabIndex = 157;
+            this.ExcelExportButton.Text = "Export";
+            this.ExcelExportButton.UseVisualStyleBackColor = false;
+            this.ExcelExportButton.Click += new System.EventHandler(this.ExcelExportButton_Click);
+            // 
             // RefreshButton
             // 
             this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -167,7 +182,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chl_Columns.CheckOnClick = true;
-            this.Chl_Columns.ColumnWidth = 165;
+            this.Chl_Columns.ColumnWidth = 185;
             this.Chl_Columns.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chl_Columns.FormattingEnabled = true;
             this.Chl_Columns.Location = new System.Drawing.Point(16, 37);
@@ -183,7 +198,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Dg_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dg_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dg_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.Dg_Data.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.Dg_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dg_Data.Location = new System.Drawing.Point(9, 198);
@@ -192,21 +207,6 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             this.Dg_Data.RowHeadersVisible = false;
             this.Dg_Data.Size = new System.Drawing.Size(954, 301);
             this.Dg_Data.TabIndex = 2;
-            // 
-            // ExcelExportButton
-            // 
-            this.ExcelExportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExcelExportButton.BackColor = System.Drawing.Color.Maroon;
-            this.ExcelExportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcelExportButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExcelExportButton.ForeColor = System.Drawing.Color.White;
-            this.ExcelExportButton.Location = new System.Drawing.Point(602, 137);
-            this.ExcelExportButton.Name = "ExcelExportButton";
-            this.ExcelExportButton.Size = new System.Drawing.Size(111, 35);
-            this.ExcelExportButton.TabIndex = 157;
-            this.ExcelExportButton.Text = "Export";
-            this.ExcelExportButton.UseVisualStyleBackColor = false;
-            this.ExcelExportButton.Click += new System.EventHandler(this.ExcelExportButton_Click);
             // 
             // IntakeReportControls
             // 

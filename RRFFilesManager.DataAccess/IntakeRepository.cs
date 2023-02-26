@@ -92,13 +92,13 @@ namespace RRFFilesManager.DataAccess
 
             var query = _context.Intakes.Where(j => j.File.DateOfCall >= from && j.File.DateOfCall <= to).Select(x => new
             {
-                DateOfCall = x.File.DateOfCall.ToString(),
+                DateOfCall = x.File.DateOfCall.ToString("dd/MM/yyyy"),
                 Interviewer = x.File.StaffInterviewer.Description,
                 TypeOfMatter = x.File.MatterType.Description,
-                HowHear = x.File.HowHear.Description,
-                DateOfLoss = x.File.DateOFLoss.ToString(),
+                HowHearAboutUs = x.File.HowHear.Description,
+                DateOfLoss = x.File.DateOFLoss.ToString("dd/MM/yyyy"),
                 ResponsibleLawyer = x.File.ResponsibleLawyer.Description,
-                FileLaweyer = x.File.FileLawyer.Description,
+                FileLawyer = x.File.FileLawyer.Description,
                 Status = x.File.CurrentStatus.Description,
                 LastName = x.File.Client.LastName,
                 FirstName = x.File.Client.FirstName
