@@ -111,6 +111,7 @@ namespace RRFFilesManager
             Utils.Utils.SetContent(SemiAnnualFileReviewTabAccidentBenefits, SemiAnnualFileReviewControlAccidentBenefits);
             SemiAnnualFileReviewControlAccidentBenefits.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
 
+            Notes.Columns.Add("Origin", typeof(string));
             Notes.Columns.Add("Date", typeof(DateTime));
             Notes.Columns.Add("Lawyer", typeof(string));
             Notes.Columns.Add("Description", typeof(string));
@@ -1020,7 +1021,7 @@ namespace RRFFilesManager
                 }
             }
 
-            ClientNotesDataGridView.Rows.Add(null,null,null);
+            ClientNotesDataGridView.Rows.Add(null,null,null,null);
             ClientNotesDataGridView.CurrentCell = ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index];
             ClientNotesDataGridView.Rows[ClientNotesDataGridView.CurrentCell.RowIndex].Cells[ClientNotesDataGridView.CurrentCell.ColumnIndex].ReadOnly = false;
             //ClientNotesDataGridView.CurrentCell.ReadOnly = false;
@@ -1088,6 +1089,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.DamNotes))
             {
                 Notes.Rows.Add(
+                    "Intake Dam Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.DamNotes
@@ -1097,6 +1099,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.EILNotes))
             {
                 Notes.Rows.Add(
+                    "Intake EIL Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.EILNotes
@@ -1106,6 +1109,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.LiaNotes))
             {
                 Notes.Rows.Add(
+                    "Intake LIA Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.LiaNotes
@@ -1115,6 +1119,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.AccBenNotes))
             {
                 Notes.Rows.Add(
+                    "Intake AccBen Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.AccBenNotes
@@ -1124,6 +1129,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.PolOtherNotes))
             {
                 Notes.Rows.Add(
+                    "Intake Pol Other Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.PolOtherNotes
@@ -1133,6 +1139,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.Notes))
             {
                 Notes.Rows.Add(
+                    "Intake Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.Notes
@@ -1142,6 +1149,7 @@ namespace RRFFilesManager
             foreach (var item in clientNotes)
             {
                 Notes.Rows.Add(
+                    "Client Notes",
                     item.Date,
                     item.Lawyer,
                     item.Description
@@ -1151,6 +1159,7 @@ namespace RRFFilesManager
             foreach (DataRow item in Notes.Rows)
             {
                 ClientNotesDataGridView.Rows.Add(
+                    item["Origin"].ToString(),
                     Convert.ToDateTime(item["Date"]),
                     item["Lawyer"].ToString(),
                     item["Description"].ToString()
@@ -1169,7 +1178,7 @@ namespace RRFFilesManager
 
         private void Cbb_Staff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Cbb_Staff.Text.Trim() == "")
+            if (Cbb_Staff.Text.Trim() == "All")
             {
                 UpdateClienteNotesGrid();
             }
@@ -1180,9 +1189,10 @@ namespace RRFFilesManager
                 foreach (DataRowView item in FilteredNotes)
                 {
                     ClientNotesDataGridView.Rows.Add(
-                    Convert.ToDateTime(item["Date"]),
-                    item["Lawyer"].ToString(),
-                    item["Description"].ToString()
+                        item["Origin"].ToString(),
+                        Convert.ToDateTime(item["Date"]),
+                        item["Lawyer"].ToString(),
+                        item["Description"].ToString()
                     );
                 }
             }
