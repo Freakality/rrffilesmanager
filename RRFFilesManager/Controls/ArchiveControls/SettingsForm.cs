@@ -36,7 +36,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
 
         private void Add_Click(object sender, EventArgs e)
         {
-            var folder = InputFolderTextBox.Text;
+            var folder = Utils.Utils.GetFolderPathFromFindFileDialog();
             if (!Directory.Exists(folder))
             {
                 MessageBox.Show("The folder could not be found");
@@ -48,7 +48,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             }
 
             InputFolders.Items.Add(folder);
-            InputFolderTextBox.ResetText();
         }
 
         private void Remove_Click(object sender, EventArgs e)
