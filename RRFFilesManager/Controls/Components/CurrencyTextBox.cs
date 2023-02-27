@@ -49,8 +49,8 @@ namespace RRFFilesManager.Controls.Components
             try
             {
                 // format the value as currency
-                Decimal dTmp = Convert.ToDecimal(this.Text);
-                this.Text = $"{CurrencySymbol} {String.Format("{0:n}", dTmp)}";
+                DollarValue = Convert.ToDecimal(this.Text);
+                this.Text = $"{CurrencySymbol} {String.Format("{0:n}", DollarValue)}";
             }
             catch { }
         }
@@ -65,7 +65,8 @@ namespace RRFFilesManager.Controls.Components
         {
             try
             {
-                DollarValue = Convert.ToDecimal(this.Text);
+                /*if (!(sender as TextBox).ContainsFocus)
+                    DollarValue = Convert.ToDecimal(this.Text);*/
             }
             catch 
             {

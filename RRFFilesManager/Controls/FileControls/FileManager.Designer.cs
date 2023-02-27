@@ -5696,7 +5696,7 @@
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnCount = 3;
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDate, 2, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateTextBox, 1, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateLabel, 0, 0);
@@ -5712,9 +5712,9 @@
             // 
             this.ABOStatementDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOStatementDate.Enabled = false;
-            this.ABOStatementDate.Location = new System.Drawing.Point(281, 3);
+            this.ABOStatementDate.Location = new System.Drawing.Point(282, 3);
             this.ABOStatementDate.Name = "ABOStatementDate";
-            this.ABOStatementDate.Size = new System.Drawing.Size(31, 23);
+            this.ABOStatementDate.Size = new System.Drawing.Size(30, 23);
             this.ABOStatementDate.TabIndex = 23;
             // 
             // ABOStatementDateTextBox
@@ -5729,11 +5729,7 @@
             // ABOStatementDateLabel
             // 
             this.ABOStatementDateLabel.AutoSize = true;
-            this.ABOStatementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOStatementDateLabel.Location = new System.Drawing.Point(3, 0);
-            this.ABOStatementDateLabel.Name = "ABOStatementDateLabel";
             this.ABOStatementDateLabel.Size = new System.Drawing.Size(136, 17);
-            this.ABOStatementDateLabel.TabIndex = 0;
             this.ABOStatementDateLabel.Text = "Statement Date";
             // 
             // ABOLastUpdatePanel
@@ -6250,7 +6246,7 @@
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(4539, 1115);
+            this.Btn_Save.Location = new System.Drawing.Point(4539, 1119);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;

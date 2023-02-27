@@ -113,7 +113,7 @@ namespace RRFFilesManager.Controls.StaffControls.UserControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AdminPortalTaskStateComboBox.FormattingEnabled = true;
             this.AdminPortalTaskStateComboBox.ItemHeight = 20;
-            this.AdminPortalTaskStateComboBox.Location = new System.Drawing.Point(4, 13);
+            this.AdminPortalTaskStateComboBox.Location = new System.Drawing.Point(4, 6);
             this.AdminPortalTaskStateComboBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AdminPortalTaskStateComboBox.Name = "AdminPortalTaskStateComboBox";
             this.AdminPortalTaskStateComboBox.Size = new System.Drawing.Size(133, 28);

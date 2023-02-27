@@ -94,9 +94,14 @@ namespace RRFFilesManager.DataAccess
                 .OnDelete(DeleteBehavior.Restrict);
         }
 
+        string[] SkipEntities = new string[] {
+            typeof(FilePath).FullName
+        };
+
         public override int SaveChanges()
         {
-            var changes = ChangeTracker.Entries().Where(p => p.State == EntityState.Modified || p.State == EntityState.Added || p.State == EntityState.Deleted).ToList();
+            var entries = ChangeTracker.Entries().Where(entry => !SkipEntities.Contains(entry.Entity.GetType().FullName));
+            var changes = entries.Where(p => p.State == EntityState.Modified || p.State == EntityState.Added || p.State == EntityState.Deleted).ToList();
             /*var changes = Extensions.DetailedCompare<File>(file, trxFile);*/
             string description = "";// $"Updated File {file.ToString()} with the following changes: ";
             bool notfirst = false;
