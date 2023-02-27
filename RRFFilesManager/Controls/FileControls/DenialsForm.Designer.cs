@@ -51,7 +51,6 @@ namespace RRFFilesManager.Controls.FileControls
             this.label6 = new System.Windows.Forms.Label();
             this.TxtServicesProvider = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpLimitationDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpDateDenied = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,11 +80,11 @@ namespace RRFFilesManager.Controls.FileControls
             // Label110
             // 
             this.Label110.AutoSize = true;
-            this.Label110.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Label110.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label110.ForeColor = System.Drawing.Color.White;
             this.Label110.Location = new System.Drawing.Point(216, 25);
             this.Label110.Name = "Label110";
-            this.Label110.Size = new System.Drawing.Size(46, 16);
+            this.Label110.Size = new System.Drawing.Size(49, 18);
             this.Label110.TabIndex = 8;
             this.Label110.Text = "Status";
             // 
@@ -109,7 +108,7 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.btnSaveDenials.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveDenials.BackColor = System.Drawing.Color.Black;
-            this.btnSaveDenials.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSaveDenials.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveDenials.ForeColor = System.Drawing.Color.White;
             this.btnSaveDenials.Location = new System.Drawing.Point(687, 17);
             this.btnSaveDenials.Name = "btnSaveDenials";
@@ -122,11 +121,11 @@ namespace RRFFilesManager.Controls.FileControls
             // Label109
             // 
             this.Label109.AutoSize = true;
-            this.Label109.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Label109.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label109.ForeColor = System.Drawing.Color.White;
             this.Label109.Location = new System.Drawing.Point(24, 25);
             this.Label109.Name = "Label109";
-            this.Label109.Size = new System.Drawing.Size(52, 16);
+            this.Label109.Size = new System.Drawing.Size(58, 18);
             this.Label109.TabIndex = 6;
             this.Label109.Text = "Benefit";
             // 
@@ -167,7 +166,6 @@ namespace RRFFilesManager.Controls.FileControls
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.TxtServicesProvider);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.dtpLimitationDate);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.dtpDateDenied);
             this.panel2.Controls.Add(this.label3);
@@ -211,10 +209,10 @@ namespace RRFFilesManager.Controls.FileControls
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(388, 256);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(388, 253);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 16);
+            this.label10.Size = new System.Drawing.Size(49, 18);
             this.label10.TabIndex = 19;
             this.label10.Text = "Notes";
             // 
@@ -231,7 +229,7 @@ namespace RRFFilesManager.Controls.FileControls
             // txtDisputeRelateTo
             // 
             this.txtDisputeRelateTo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisputeRelateTo.Location = new System.Drawing.Point(143, 215);
+            this.txtDisputeRelateTo.Location = new System.Drawing.Point(211, 219);
             this.txtDisputeRelateTo.Name = "txtDisputeRelateTo";
             this.txtDisputeRelateTo.Size = new System.Drawing.Size(123, 26);
             this.txtDisputeRelateTo.TabIndex = 17;
@@ -239,17 +237,17 @@ namespace RRFFilesManager.Controls.FileControls
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(11, 221);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 224);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 16);
+            this.label9.Size = new System.Drawing.Size(127, 18);
             this.label9.TabIndex = 16;
             this.label9.Text = "Dispute relate to";
             // 
             // RangeTo
             // 
             this.RangeTo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangeTo.Location = new System.Drawing.Point(143, 174);
+            this.RangeTo.Location = new System.Drawing.Point(211, 178);
             this.RangeTo.Name = "RangeTo";
             this.RangeTo.Size = new System.Drawing.Size(123, 26);
             this.RangeTo.TabIndex = 15;
@@ -257,17 +255,17 @@ namespace RRFFilesManager.Controls.FileControls
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(11, 180);
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 185);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 16);
+            this.label8.Size = new System.Drawing.Size(76, 18);
             this.label8.TabIndex = 14;
             this.label8.Text = "Range To";
             // 
             // RangeFrom
             // 
             this.RangeFrom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangeFrom.Location = new System.Drawing.Point(143, 135);
+            this.RangeFrom.Location = new System.Drawing.Point(211, 139);
             this.RangeFrom.Name = "RangeFrom";
             this.RangeFrom.Size = new System.Drawing.Size(123, 26);
             this.RangeFrom.TabIndex = 13;
@@ -275,17 +273,17 @@ namespace RRFFilesManager.Controls.FileControls
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(11, 141);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 143);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 16);
+            this.label7.Size = new System.Drawing.Size(96, 18);
             this.label7.TabIndex = 12;
             this.label7.Text = "Range From";
             // 
             // txtServicesType
             // 
             this.txtServicesType.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServicesType.Location = new System.Drawing.Point(143, 95);
+            this.txtServicesType.Location = new System.Drawing.Point(211, 99);
             this.txtServicesType.Name = "txtServicesType";
             this.txtServicesType.Size = new System.Drawing.Size(123, 26);
             this.txtServicesType.TabIndex = 11;
@@ -293,17 +291,17 @@ namespace RRFFilesManager.Controls.FileControls
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(11, 100);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 16);
+            this.label6.Size = new System.Drawing.Size(124, 18);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Services provider";
+            this.label6.Text = "Services of type";
             // 
             // TxtServicesProvider
             // 
             this.TxtServicesProvider.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtServicesProvider.Location = new System.Drawing.Point(143, 55);
+            this.TxtServicesProvider.Location = new System.Drawing.Point(211, 59);
             this.TxtServicesProvider.Name = "TxtServicesProvider";
             this.TxtServicesProvider.Size = new System.Drawing.Size(123, 26);
             this.TxtServicesProvider.TabIndex = 9;
@@ -311,30 +309,20 @@ namespace RRFFilesManager.Controls.FileControls
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(11, 60);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(10, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 16);
+            this.label5.Size = new System.Drawing.Size(200, 18);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Services provider";
-            // 
-            // dtpLimitationDate
-            // 
-            this.dtpLimitationDate.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.dtpLimitationDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpLimitationDate.Location = new System.Drawing.Point(749, 83);
-            this.dtpLimitationDate.Name = "dtpLimitationDate";
-            this.dtpLimitationDate.Size = new System.Drawing.Size(10, 26);
-            this.dtpLimitationDate.TabIndex = 7;
-            this.dtpLimitationDate.ValueChanged += new System.EventHandler(this.dtp_ValueChanged);
+            this.label5.Text = "Name of services provider";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(442, 88);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(442, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 16);
+            this.label4.Size = new System.Drawing.Size(117, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Limitation Date";
             // 
@@ -351,10 +339,10 @@ namespace RRFFilesManager.Controls.FileControls
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(442, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(101, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Date Denied";
             // 
@@ -371,17 +359,17 @@ namespace RRFFilesManager.Controls.FileControls
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(442, 22);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(442, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 16);
+            this.label2.Size = new System.Drawing.Size(155, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Treatment plan date";
             // 
             // txtAmountDispute
             // 
             this.txtAmountDispute.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmountDispute.Location = new System.Drawing.Point(143, 16);
+            this.txtAmountDispute.Location = new System.Drawing.Point(211, 20);
             this.txtAmountDispute.Name = "txtAmountDispute";
             this.txtAmountDispute.Size = new System.Drawing.Size(123, 26);
             this.txtAmountDispute.TabIndex = 1;
@@ -390,10 +378,10 @@ namespace RRFFilesManager.Controls.FileControls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(11, 20);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 16);
+            this.label1.Size = new System.Drawing.Size(140, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Amount in Dispute";
             // 
@@ -427,7 +415,6 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAmountDispute;
-        private System.Windows.Forms.DateTimePicker dtpLimitationDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpDateDenied;
         private System.Windows.Forms.Label label3;

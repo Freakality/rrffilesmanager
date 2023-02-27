@@ -39,10 +39,7 @@ namespace RRFFilesManager.Controls.FileControls
                 else if (dtp.Name == "dtpDateDenied")
                 {
                     txtDateDenied.Text = dtp.Value.ToShortDateString();
-                }
-                else if (dtp.Name == "dtpLimitationDate")
-                {
-                    txtLimitationDate.Text = dtp.Value.ToShortDateString();
+                    txtLimitationDate.Text = dtp.Value.AddYears(2).ToShortDateString();
                 }
             }
         }

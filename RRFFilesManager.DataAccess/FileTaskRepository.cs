@@ -38,7 +38,6 @@ namespace RRFFilesManager.DataAccess
             var accountToDelete = GetById(fileTaskId);
             _context.SaveChanges();
         }
-
         public void Update(FileTask fileTask)
         {
             var trxContact = GetById(fileTask.ID);
@@ -53,7 +52,6 @@ namespace RRFFilesManager.DataAccess
             _context.Entry(trxContact).CurrentValues.SetValues(fileTask);
             _context.SaveChanges();
         }
-
         public IEnumerable<FileTask> Search(File file, TaskState taskState = null, int? take = null, Lawyer lawyer = null, TaskCategory businessProcess = null)
         {
             var query = _context.FileTasks.Where(s =>
@@ -177,7 +175,6 @@ namespace RRFFilesManager.DataAccess
             //_context.FileTasks.Add(fileTask);
             //_context.SaveChanges(); 
         }
-
         public void AddAllCategoryTasks(File file, IEnumerable<Task> tasks, TaskState taskState, int Days = 0)
         {
             foreach(Task task in tasks)
