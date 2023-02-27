@@ -167,6 +167,12 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             Transferring = true;
             Close();
         }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Close();
+            Home.Instance.Show();
+        }
     }
 
     public class SemiAnnualData

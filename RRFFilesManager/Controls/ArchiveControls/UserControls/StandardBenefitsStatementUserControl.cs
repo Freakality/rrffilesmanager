@@ -233,7 +233,9 @@ namespace RRFFilesManager.Controls.ArchiveControls
             PayeeTB.Clear();
             MRACGSAProvidedTB.Clear();
             AmountTB.Clear();
+            AmountTB.DollarValue = 0;
             IEAmountTB.Clear();
+            IEAmountTB.DollarValue = 0;
             tableLayoutPanel1.Size = new Size(tableLayoutPanel1.Size.Width, height);
             Update();
         }
