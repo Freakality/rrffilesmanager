@@ -63,6 +63,7 @@ namespace RRFFilesManager.DataAccess
             services.AddTransient<ILoggedUser, LoggedUser>();
             services.AddTransient<IQuestionnaireFieldMapperRepository, QuestionnaireFieldMapperRepository>();
             services.AddTransient<IABOverviewRepository, ABOverviewRepository>();
+            services.AddTransient<IPolicyParticularsRepository, PolicyParticularsRepository>();
             return services;
         }
     }

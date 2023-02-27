@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -80,6 +82,10 @@ namespace RRFFilesManager.Controls.Components
             set
             {
                 mDollarValue = value;
+                if (mDollarValue > 0)
+                {
+                    this.Text = $"{CurrencySymbol} {String.Format("{0:n}", mDollarValue)}";
+                }
             }
         }
         public string CurrencySymbol { get; set; } = "$";

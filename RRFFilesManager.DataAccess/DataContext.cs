@@ -64,6 +64,7 @@ namespace RRFFilesManager.DataAccess
         public DbSet<DenialStatus> DenialStatus { get; set; }
         public DbSet<QuestionnaireFieldMapper> QuestionnaireFieldMappers { get; set; }
         public DbSet<ABOverview> ABOverviews { get; set; }
+        public DbSet<PolicyParticulars> PolicyParticulars { get; set; }
 
         public Lawyer User { get; set; }
 
@@ -310,6 +311,9 @@ namespace RRFFilesManager.DataAccess
                         break;
                     case "Pharmacy":
                         value = Pharmacies.Find(n).ToString();
+                        break;
+                    case "PolicyParticulars":
+                        value = PolicyParticulars.Find(n).ToString();
                         break;
                     case "Position":
                         value = Positions.Find(n).ToString();
