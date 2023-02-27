@@ -3331,6 +3331,8 @@ namespace RRFFilesManager
             }
             PPOptionalBenefitsPurchasedDetailsGroupBox.Visible = false;
             return;
+        }
+
         private void Dtp_CloseUp(object sender, EventArgs e)
         {
             DtpChange(sender);
