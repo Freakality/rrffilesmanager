@@ -201,12 +201,12 @@
             System.Windows.Forms.Label TBoxDateOfDefendantDiscoveryLabel;
             System.Windows.Forms.Label TBoxTimelineMediationResolutionDateLabel;
             System.Windows.Forms.Label TBoxTimelinePreMedSttleMeetingDateLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileManager));
             this.InvoicesDataGridView = new System.Windows.Forms.DataGridView();
             this.GroupBox23 = new System.Windows.Forms.GroupBox();
@@ -454,6 +454,7 @@
             this.ABOIncomeBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ABOIncomeBenefitsLatestOFC3 = new System.Windows.Forms.DateTimePicker();
             this.ABOIncomeBenefitsLatestOFC3TextBox = new System.Windows.Forms.TextBox();
+            this.ABOIncomeBenefitsWeeklyAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.ABOIncomeBenefitsFileForLATComboBox = new System.Windows.Forms.ComboBox();
             this.ABOIncomeBenefitsAppliedLabel = new System.Windows.Forms.Label();
             this.ABOIncomeBenefitsFileForLATLabel = new System.Windows.Forms.Label();
@@ -496,6 +497,8 @@
             this.ABOGovtFederalLabel = new System.Windows.Forms.Label();
             this.ABOAttendantCareBenefitsGroupBox = new System.Windows.Forms.GroupBox();
             this.ABOAttendantCareBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOACBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.ABOInitialAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.ABOInitiallyApprovedLabel = new System.Windows.Forms.Label();
             this.ABOACBAmountPaidToDateLabel = new System.Windows.Forms.Label();
             this.ABOInitiallyApprovedComboBox = new System.Windows.Forms.ComboBox();
@@ -509,6 +512,7 @@
             this.ABOInitialAmountLabel = new System.Windows.Forms.Label();
             this.AOBMedicalRehabBenefitsGroupBox = new System.Windows.Forms.GroupBox();
             this.AOBMedicalRehabBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOMRBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.ABOBenefitsEndDate = new System.Windows.Forms.DateTimePicker();
             this.ABOMRBAmountPaidToDateLabel = new System.Windows.Forms.Label();
             this.ABOBenefitsEndDateTextBox = new System.Windows.Forms.TextBox();
@@ -1057,33 +1061,6 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
             this.LimDateTextBox = new System.Windows.Forms.TextBox();
-            this.TBoxTrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxProposedDateIssueSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelinePrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPrePleadingsMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateTrialRecordFiled = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateToFileTrialRecordBy = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxActualDateSOCIssued = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxProposedDateToServeSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxActualDateSOCServed = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPlaintiffAODSent = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxMedicalSummariesPreDiscDueDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateOfPlaintiffDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPreDiscoveryMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDefendantAODRequest = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateOfDefendantDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelineMediationResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelineMemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelinePreMedSttleMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxAllDefendantUndertakingRecd = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.ABOIncomeBenefitsWeeklyAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.ABOACBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.ABOInitialAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.ABOMRBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.CurrentFileStatusComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
@@ -3003,8 +2980,8 @@
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.InvoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InvoicesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -3101,8 +3078,8 @@
             // PLReportsDataGridView
             // 
             this.PLReportsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.PLReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PLReportsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PLReportsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -3170,8 +3147,8 @@
             // MedApptsDataGridView
             // 
             this.MedApptsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.MedApptsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MedApptsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MedApptsDataGridView.Location = new System.Drawing.Point(3, 54);
@@ -4358,8 +4335,8 @@
             // UndertakingsDataGridView
             // 
             this.UndertakingsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.UndertakingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UndertakingsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -5753,6 +5730,22 @@
             this.ABOIncomeBenefitsLatestOFC3TextBox.Size = new System.Drawing.Size(150, 23);
             this.ABOIncomeBenefitsLatestOFC3TextBox.TabIndex = 16;
             // 
+            // ABOIncomeBenefitsWeeklyAmountTextBox
+            // 
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.CurrencySymbol = "$";
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Enabled = false;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Location = new System.Drawing.Point(488, 3);
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Name = "ABOIncomeBenefitsWeeklyAmountTextBox";
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Size = new System.Drawing.Size(151, 23);
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.TabIndex = 15;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // ABOIncomeBenefitsFileForLATComboBox
             // 
             this.ABOIncomeBenefitsFileForLATComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -6049,7 +6042,7 @@
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnCount = 3;
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDate, 2, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateTextBox, 1, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateLabel, 0, 0);
@@ -6065,15 +6058,15 @@
             // 
             this.ABOStatementDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOStatementDate.Enabled = false;
-            this.ABOStatementDate.Location = new System.Drawing.Point(289, 3);
+            this.ABOStatementDate.Location = new System.Drawing.Point(288, 3);
             this.ABOStatementDate.Name = "ABOStatementDate";
-            this.ABOStatementDate.Size = new System.Drawing.Size(23, 23);
+            this.ABOStatementDate.Size = new System.Drawing.Size(24, 23);
             this.ABOStatementDate.TabIndex = 23;
             // 
             // ABOStatementDateTextBox
             // 
             this.ABOStatementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(149, 3);
+            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(148, 3);
             this.ABOStatementDateTextBox.Name = "ABOStatementDateTextBox";
             this.ABOStatementDateTextBox.ReadOnly = true;
             this.ABOStatementDateTextBox.Size = new System.Drawing.Size(134, 23);
@@ -6085,7 +6078,7 @@
             this.ABOStatementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOStatementDateLabel.Location = new System.Drawing.Point(3, 0);
             this.ABOStatementDateLabel.Name = "ABOStatementDateLabel";
-            this.ABOStatementDateLabel.Size = new System.Drawing.Size(140, 17);
+            this.ABOStatementDateLabel.Size = new System.Drawing.Size(139, 17);
             this.ABOStatementDateLabel.TabIndex = 0;
             this.ABOStatementDateLabel.Text = "Statement Date";
             // 
@@ -6298,6 +6291,39 @@
             this.ABOAttendantCareBenefitsLayoutPanel.Size = new System.Drawing.Size(642, 88);
             this.ABOAttendantCareBenefitsLayoutPanel.TabIndex = 12;
             // 
+            // ABOACBAmountPaidToDateTextBox
+            // 
+            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOACBAmountPaidToDateTextBox, 2);
+            this.ABOACBAmountPaidToDateTextBox.CurrencySymbol = "$";
+            this.ABOACBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOACBAmountPaidToDateTextBox.Enabled = false;
+            this.ABOACBAmountPaidToDateTextBox.Location = new System.Drawing.Point(468, 61);
+            this.ABOACBAmountPaidToDateTextBox.Name = "ABOACBAmountPaidToDateTextBox";
+            this.ABOACBAmountPaidToDateTextBox.Size = new System.Drawing.Size(171, 23);
+            this.ABOACBAmountPaidToDateTextBox.TabIndex = 21;
+            this.ABOACBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ABOInitialAmountTextBox
+            // 
+            this.ABOInitialAmountTextBox.CurrencySymbol = "$";
+            this.ABOInitialAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitialAmountTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOInitialAmountTextBox.Enabled = false;
+            this.ABOInitialAmountTextBox.Location = new System.Drawing.Point(158, 32);
+            this.ABOInitialAmountTextBox.Name = "ABOInitialAmountTextBox";
+            this.ABOInitialAmountTextBox.Size = new System.Drawing.Size(149, 23);
+            this.ABOInitialAmountTextBox.TabIndex = 13;
+            this.ABOInitialAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // ABOInitiallyApprovedLabel
             // 
             this.ABOInitiallyApprovedLabel.AutoSize = true;
@@ -6453,6 +6479,23 @@
             this.AOBMedicalRehabBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.AOBMedicalRehabBenefitsLayoutPanel.Size = new System.Drawing.Size(315, 85);
             this.AOBMedicalRehabBenefitsLayoutPanel.TabIndex = 12;
+            // 
+            // ABOMRBAmountPaidToDateTextBox
+            // 
+            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOMRBAmountPaidToDateTextBox, 2);
+            this.ABOMRBAmountPaidToDateTextBox.CurrencySymbol = "$";
+            this.ABOMRBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOMRBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOMRBAmountPaidToDateTextBox.Enabled = false;
+            this.ABOMRBAmountPaidToDateTextBox.Location = new System.Drawing.Point(152, 59);
+            this.ABOMRBAmountPaidToDateTextBox.Name = "ABOMRBAmountPaidToDateTextBox";
+            this.ABOMRBAmountPaidToDateTextBox.Size = new System.Drawing.Size(160, 23);
+            this.ABOMRBAmountPaidToDateTextBox.TabIndex = 13;
+            this.ABOMRBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ABOBenefitsEndDate
             // 
@@ -6642,7 +6685,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1443, 590);
+            this.btnSave.Location = new System.Drawing.Point(1443, 594);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6978,17 +7021,17 @@
             // ABDenialsDataGridView
             // 
             this.ABDenialsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ABDenialsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ABDenialsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ABDenialsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ABDenialsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ABDenialsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameofBenefit,
@@ -7008,7 +7051,7 @@
             this.ABDenialsDataGridView.Location = new System.Drawing.Point(3, 66);
             this.ABDenialsDataGridView.Name = "ABDenialsDataGridView";
             this.ABDenialsDataGridView.RowTemplate.Height = 40;
-            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1308, 283);
+            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1308, 279);
             this.ABDenialsDataGridView.TabIndex = 0;
             // 
             // NameofBenefit
@@ -7221,7 +7264,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 43);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1308, 306);
+            this.panel5.Size = new System.Drawing.Size(1308, 302);
             this.panel5.TabIndex = 59;
             // 
             // TabControl4
@@ -7235,7 +7278,7 @@
             this.TabControl4.Location = new System.Drawing.Point(0, 0);
             this.TabControl4.Name = "TabControl4";
             this.TabControl4.SelectedIndex = 0;
-            this.TabControl4.Size = new System.Drawing.Size(1308, 306);
+            this.TabControl4.Size = new System.Drawing.Size(1308, 302);
             this.TabControl4.TabIndex = 2;
             // 
             // Summary
@@ -7248,7 +7291,7 @@
             this.Summary.Location = new System.Drawing.Point(4, 26);
             this.Summary.Name = "Summary";
             this.Summary.Padding = new System.Windows.Forms.Padding(3);
-            this.Summary.Size = new System.Drawing.Size(1300, 276);
+            this.Summary.Size = new System.Drawing.Size(1300, 272);
             this.Summary.TabIndex = 4;
             this.Summary.Text = "Summary";
             this.Summary.UseVisualStyleBackColor = true;
@@ -10499,7 +10542,7 @@
             this.LAT2.Location = new System.Drawing.Point(4, 26);
             this.LAT2.Name = "LAT2";
             this.LAT2.Padding = new System.Windows.Forms.Padding(3);
-            this.LAT2.Size = new System.Drawing.Size(1300, 272);
+            this.LAT2.Size = new System.Drawing.Size(1300, 276);
             this.LAT2.TabIndex = 1;
             this.LAT2.Text = "LAT 2";
             // 
@@ -10843,7 +10886,7 @@
             this.LAT3.Location = new System.Drawing.Point(4, 26);
             this.LAT3.Name = "LAT3";
             this.LAT3.Padding = new System.Windows.Forms.Padding(3);
-            this.LAT3.Size = new System.Drawing.Size(1300, 272);
+            this.LAT3.Size = new System.Drawing.Size(1300, 276);
             this.LAT3.TabIndex = 2;
             this.LAT3.Text = "LAT 3";
             // 
@@ -11187,7 +11230,7 @@
             this.LAT4.Location = new System.Drawing.Point(4, 26);
             this.LAT4.Name = "LAT4";
             this.LAT4.Padding = new System.Windows.Forms.Padding(3);
-            this.LAT4.Size = new System.Drawing.Size(1300, 272);
+            this.LAT4.Size = new System.Drawing.Size(1300, 276);
             this.LAT4.TabIndex = 3;
             this.LAT4.Text = "LAT 4";
             // 
@@ -11859,392 +11902,6 @@
             this.LimDateTextBox.Name = "LimDateTextBox";
             this.LimDateTextBox.Size = new System.Drawing.Size(132, 23);
             this.LimDateTextBox.TabIndex = 7;
-            // 
-            // TBoxTrialDate
-            // 
-            this.TBoxTrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTrialDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTrialDate.CustomFormat = "\' \'";
-            this.TBoxTrialDate.Enabled = false;
-            this.TBoxTrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTrialDate.Location = new System.Drawing.Point(1288, 273);
-            this.TBoxTrialDate.Name = "TBoxTrialDate";
-            this.TBoxTrialDate.Size = new System.Drawing.Size(17, 23);
-            this.TBoxTrialDate.TabIndex = 185;
-            this.TBoxTrialDate.Visible = false;
-            this.TBoxTrialDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPreTrialResolutionDate
-            // 
-            this.TBoxPreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreTrialResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreTrialResolutionDate.CustomFormat = "\' \'";
-            this.TBoxPreTrialResolutionDate.Enabled = false;
-            this.TBoxPreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPreTrialResolutionDate.Location = new System.Drawing.Point(1287, 246);
-            this.TBoxPreTrialResolutionDate.Name = "TBoxPreTrialResolutionDate";
-            this.TBoxPreTrialResolutionDate.Size = new System.Drawing.Size(18, 23);
-            this.TBoxPreTrialResolutionDate.TabIndex = 182;
-            this.TBoxPreTrialResolutionDate.Visible = false;
-            this.TBoxPreTrialResolutionDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxLiabilityMeetingDate
-            // 
-            this.TBoxLiabilityMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxLiabilityMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxLiabilityMeetingDate.CustomFormat = "\' \'";
-            this.TBoxLiabilityMeetingDate.Enabled = false;
-            this.TBoxLiabilityMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxLiabilityMeetingDate.Location = new System.Drawing.Point(621, 3);
-            this.TBoxLiabilityMeetingDate.Name = "TBoxLiabilityMeetingDate";
-            this.TBoxLiabilityMeetingDate.Size = new System.Drawing.Size(18, 23);
-            this.TBoxLiabilityMeetingDate.TabIndex = 151;
-            this.TBoxLiabilityMeetingDate.Visible = false;
-            this.TBoxLiabilityMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPreTrialToBeServedDate
-            // 
-            this.TBoxPreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxPreTrialToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxPreTrialToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxPreTrialToBeServedDate.CustomFormat = "\' \'";
-            this.TBoxPreTrialToBeServedDate.Enabled = false;
-            this.TBoxPreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPreTrialToBeServedDate.Location = new System.Drawing.Point(1286, 219);
-            this.TBoxPreTrialToBeServedDate.Name = "TBoxPreTrialToBeServedDate";
-            this.TBoxPreTrialToBeServedDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPreTrialToBeServedDate.TabIndex = 179;
-            this.TBoxPreTrialToBeServedDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxProposedDateIssueSOC
-            // 
-            this.TBoxProposedDateIssueSOC.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateIssueSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateIssueSOC.CustomFormat = "\' \'";
-            this.TBoxProposedDateIssueSOC.Enabled = false;
-            this.TBoxProposedDateIssueSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxProposedDateIssueSOC.Location = new System.Drawing.Point(621, 30);
-            this.TBoxProposedDateIssueSOC.Name = "TBoxProposedDateIssueSOC";
-            this.TBoxProposedDateIssueSOC.Size = new System.Drawing.Size(19, 23);
-            this.TBoxProposedDateIssueSOC.TabIndex = 152;
-            this.TBoxProposedDateIssueSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelinePrePreTrialMeetingDate
-            // 
-            this.TBoxTimelinePrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelinePrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelinePrePreTrialMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelinePrePreTrialMeetingDate.CustomFormat = "\' \'";
-            this.TBoxTimelinePrePreTrialMeetingDate.Enabled = false;
-            this.TBoxTimelinePrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelinePrePreTrialMeetingDate.Location = new System.Drawing.Point(1285, 192);
-            this.TBoxTimelinePrePreTrialMeetingDate.Name = "TBoxTimelinePrePreTrialMeetingDate";
-            this.TBoxTimelinePrePreTrialMeetingDate.Size = new System.Drawing.Size(20, 23);
-            this.TBoxTimelinePrePreTrialMeetingDate.TabIndex = 176;
-            this.TBoxTimelinePrePreTrialMeetingDate.Visible = false;
-            this.TBoxTimelinePrePreTrialMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPrePleadingsMeetingDate
-            // 
-            this.TBoxPrePleadingsMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPrePleadingsMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPrePleadingsMeetingDate.CustomFormat = "\' \'";
-            this.TBoxPrePleadingsMeetingDate.Enabled = false;
-            this.TBoxPrePleadingsMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPrePleadingsMeetingDate.Location = new System.Drawing.Point(621, 57);
-            this.TBoxPrePleadingsMeetingDate.Name = "TBoxPrePleadingsMeetingDate";
-            this.TBoxPrePleadingsMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPrePleadingsMeetingDate.TabIndex = 153;
-            this.TBoxPrePleadingsMeetingDate.Visible = false;
-            this.TBoxPrePleadingsMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateTrialRecordFiled
-            // 
-            this.TBoxDateTrialRecordFiled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateTrialRecordFiled.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateTrialRecordFiled.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateTrialRecordFiled.CustomFormat = "\' \'";
-            this.TBoxDateTrialRecordFiled.Enabled = false;
-            this.TBoxDateTrialRecordFiled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(1286, 165);
-            this.TBoxDateTrialRecordFiled.Name = "TBoxDateTrialRecordFiled";
-            this.TBoxDateTrialRecordFiled.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateTrialRecordFiled.TabIndex = 164;
-            this.TBoxDateTrialRecordFiled.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateToFileTrialRecordBy
-            // 
-            this.TBoxDateToFileTrialRecordBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateToFileTrialRecordBy.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateToFileTrialRecordBy.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateToFileTrialRecordBy.CustomFormat = "\' \'";
-            this.TBoxDateToFileTrialRecordBy.Enabled = false;
-            this.TBoxDateToFileTrialRecordBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(1286, 138);
-            this.TBoxDateToFileTrialRecordBy.Name = "TBoxDateToFileTrialRecordBy";
-            this.TBoxDateToFileTrialRecordBy.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateToFileTrialRecordBy.TabIndex = 158;
-            this.TBoxDateToFileTrialRecordBy.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxActualDateSOCIssued
-            // 
-            this.TBoxActualDateSOCIssued.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxActualDateSOCIssued.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxActualDateSOCIssued.CustomFormat = "\' \'";
-            this.TBoxActualDateSOCIssued.Enabled = false;
-            this.TBoxActualDateSOCIssued.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxActualDateSOCIssued.Location = new System.Drawing.Point(621, 84);
-            this.TBoxActualDateSOCIssued.Name = "TBoxActualDateSOCIssued";
-            this.TBoxActualDateSOCIssued.Size = new System.Drawing.Size(19, 23);
-            this.TBoxActualDateSOCIssued.TabIndex = 154;
-            this.TBoxActualDateSOCIssued.Visible = false;
-            this.TBoxActualDateSOCIssued.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxProposedDateToServeSOC
-            // 
-            this.TBoxProposedDateToServeSOC.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateToServeSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateToServeSOC.CustomFormat = "\' \'";
-            this.TBoxProposedDateToServeSOC.Enabled = false;
-            this.TBoxProposedDateToServeSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxProposedDateToServeSOC.Location = new System.Drawing.Point(621, 111);
-            this.TBoxProposedDateToServeSOC.Name = "TBoxProposedDateToServeSOC";
-            this.TBoxProposedDateToServeSOC.Size = new System.Drawing.Size(19, 23);
-            this.TBoxProposedDateToServeSOC.TabIndex = 156;
-            this.TBoxProposedDateToServeSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxActualDateSOCServed
-            // 
-            this.TBoxActualDateSOCServed.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxActualDateSOCServed.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxActualDateSOCServed.CustomFormat = "\' \'";
-            this.TBoxActualDateSOCServed.Enabled = false;
-            this.TBoxActualDateSOCServed.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxActualDateSOCServed.Location = new System.Drawing.Point(621, 138);
-            this.TBoxActualDateSOCServed.Name = "TBoxActualDateSOCServed";
-            this.TBoxActualDateSOCServed.Size = new System.Drawing.Size(19, 23);
-            this.TBoxActualDateSOCServed.TabIndex = 157;
-            this.TBoxActualDateSOCServed.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPlaintiffAODSent
-            // 
-            this.TBoxPlaintiffAODSent.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxPlaintiffAODSent.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxPlaintiffAODSent.CustomFormat = "\' \'";
-            this.TBoxPlaintiffAODSent.Enabled = false;
-            this.TBoxPlaintiffAODSent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPlaintiffAODSent.Location = new System.Drawing.Point(621, 165);
-            this.TBoxPlaintiffAODSent.Name = "TBoxPlaintiffAODSent";
-            this.TBoxPlaintiffAODSent.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPlaintiffAODSent.TabIndex = 162;
-            this.TBoxPlaintiffAODSent.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxMedicalSummariesPreDiscDueDate
-            // 
-            this.TBoxMedicalSummariesPreDiscDueDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxMedicalSummariesPreDiscDueDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxMedicalSummariesPreDiscDueDate.CustomFormat = "\' \'";
-            this.TBoxMedicalSummariesPreDiscDueDate.Enabled = false;
-            this.TBoxMedicalSummariesPreDiscDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxMedicalSummariesPreDiscDueDate.Location = new System.Drawing.Point(621, 192);
-            this.TBoxMedicalSummariesPreDiscDueDate.Name = "TBoxMedicalSummariesPreDiscDueDate";
-            this.TBoxMedicalSummariesPreDiscDueDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxMedicalSummariesPreDiscDueDate.TabIndex = 155;
-            this.TBoxMedicalSummariesPreDiscDueDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateOfPlaintiffDiscovery
-            // 
-            this.TBoxDateOfPlaintiffDiscovery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxDateOfPlaintiffDiscovery.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxDateOfPlaintiffDiscovery.CustomFormat = "\' \'";
-            this.TBoxDateOfPlaintiffDiscovery.Enabled = false;
-            this.TBoxDateOfPlaintiffDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateOfPlaintiffDiscovery.Location = new System.Drawing.Point(621, 273);
-            this.TBoxDateOfPlaintiffDiscovery.Name = "TBoxDateOfPlaintiffDiscovery";
-            this.TBoxDateOfPlaintiffDiscovery.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateOfPlaintiffDiscovery.TabIndex = 161;
-            this.TBoxDateOfPlaintiffDiscovery.Visible = false;
-            this.TBoxDateOfPlaintiffDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPreDiscoveryMeetingDate
-            // 
-            this.TBoxPreDiscoveryMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreDiscoveryMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreDiscoveryMeetingDate.CustomFormat = "\' \'";
-            this.TBoxPreDiscoveryMeetingDate.Enabled = false;
-            this.TBoxPreDiscoveryMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPreDiscoveryMeetingDate.Location = new System.Drawing.Point(621, 219);
-            this.TBoxPreDiscoveryMeetingDate.Name = "TBoxPreDiscoveryMeetingDate";
-            this.TBoxPreDiscoveryMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPreDiscoveryMeetingDate.TabIndex = 159;
-            this.TBoxPreDiscoveryMeetingDate.Visible = false;
-            this.TBoxPreDiscoveryMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDefendantAODRequest
-            // 
-            this.TBoxDefendantAODRequest.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDefendantAODRequest.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDefendantAODRequest.CustomFormat = "\' \'";
-            this.TBoxDefendantAODRequest.Enabled = false;
-            this.TBoxDefendantAODRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDefendantAODRequest.Location = new System.Drawing.Point(621, 246);
-            this.TBoxDefendantAODRequest.Name = "TBoxDefendantAODRequest";
-            this.TBoxDefendantAODRequest.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDefendantAODRequest.TabIndex = 160;
-            this.TBoxDefendantAODRequest.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateOfDefendantDiscovery
-            // 
-            this.TBoxDateOfDefendantDiscovery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateOfDefendantDiscovery.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateOfDefendantDiscovery.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateOfDefendantDiscovery.CustomFormat = "\' \'";
-            this.TBoxDateOfDefendantDiscovery.Enabled = false;
-            this.TBoxDateOfDefendantDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateOfDefendantDiscovery.Location = new System.Drawing.Point(621, 300);
-            this.TBoxDateOfDefendantDiscovery.Name = "TBoxDateOfDefendantDiscovery";
-            this.TBoxDateOfDefendantDiscovery.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateOfDefendantDiscovery.TabIndex = 188;
-            this.TBoxDateOfDefendantDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelineMediationResolutionDate
-            // 
-            this.TBoxTimelineMediationResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelineMediationResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelineMediationResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelineMediationResolutionDate.CustomFormat = "\' \'";
-            this.TBoxTimelineMediationResolutionDate.Enabled = false;
-            this.TBoxTimelineMediationResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelineMediationResolutionDate.Location = new System.Drawing.Point(1286, 111);
-            this.TBoxTimelineMediationResolutionDate.Name = "TBoxTimelineMediationResolutionDate";
-            this.TBoxTimelineMediationResolutionDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxTimelineMediationResolutionDate.TabIndex = 173;
-            this.TBoxTimelineMediationResolutionDate.Visible = false;
-            this.TBoxTimelineMediationResolutionDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelineMemoToBeServedDate
-            // 
-            this.TBoxTimelineMemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelineMemoToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelineMemoToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelineMemoToBeServedDate.CustomFormat = "\' \'";
-            this.TBoxTimelineMemoToBeServedDate.Enabled = false;
-            this.TBoxTimelineMemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelineMemoToBeServedDate.Location = new System.Drawing.Point(1286, 84);
-            this.TBoxTimelineMemoToBeServedDate.Name = "TBoxTimelineMemoToBeServedDate";
-            this.TBoxTimelineMemoToBeServedDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxTimelineMemoToBeServedDate.TabIndex = 170;
-            this.TBoxTimelineMemoToBeServedDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelinePreMedSttleMeetingDate
-            // 
-            this.TBoxTimelinePreMedSttleMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelinePreMedSttleMeetingDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelinePreMedSttleMeetingDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelinePreMedSttleMeetingDate.CustomFormat = "\' \'";
-            this.TBoxTimelinePreMedSttleMeetingDate.Enabled = false;
-            this.TBoxTimelinePreMedSttleMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelinePreMedSttleMeetingDate.Location = new System.Drawing.Point(1286, 57);
-            this.TBoxTimelinePreMedSttleMeetingDate.Name = "TBoxTimelinePreMedSttleMeetingDate";
-            this.TBoxTimelinePreMedSttleMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxTimelinePreMedSttleMeetingDate.TabIndex = 191;
-            this.TBoxTimelinePreMedSttleMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxAllDefendantUndertakingRecd
-            // 
-            this.TBoxAllDefendantUndertakingRecd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxAllDefendantUndertakingRecd.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxAllDefendantUndertakingRecd.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxAllDefendantUndertakingRecd.CustomFormat = "\' \'";
-            this.TBoxAllDefendantUndertakingRecd.Enabled = false;
-            this.TBoxAllDefendantUndertakingRecd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(1286, 30);
-            this.TBoxAllDefendantUndertakingRecd.Name = "TBoxAllDefendantUndertakingRecd";
-            this.TBoxAllDefendantUndertakingRecd.Size = new System.Drawing.Size(19, 23);
-            this.TBoxAllDefendantUndertakingRecd.TabIndex = 166;
-            this.TBoxAllDefendantUndertakingRecd.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDatePlaintiffUndertakingComplete
-            // 
-            this.TBoxDatePlaintiffUndertakingComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDatePlaintiffUndertakingComplete.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDatePlaintiffUndertakingComplete.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDatePlaintiffUndertakingComplete.CustomFormat = "\' \'";
-            this.TBoxDatePlaintiffUndertakingComplete.Enabled = false;
-            this.TBoxDatePlaintiffUndertakingComplete.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(1286, 3);
-            this.TBoxDatePlaintiffUndertakingComplete.Name = "TBoxDatePlaintiffUndertakingComplete";
-            this.TBoxDatePlaintiffUndertakingComplete.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDatePlaintiffUndertakingComplete.TabIndex = 165;
-            this.TBoxDatePlaintiffUndertakingComplete.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // ABOIncomeBenefitsWeeklyAmountTextBox
-            // 
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.CurrencySymbol = "$";
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Enabled = false;
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Location = new System.Drawing.Point(488, 3);
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Name = "ABOIncomeBenefitsWeeklyAmountTextBox";
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Size = new System.Drawing.Size(151, 23);
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.TabIndex = 15;
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // ABOACBAmountPaidToDateTextBox
-            // 
-            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOACBAmountPaidToDateTextBox, 2);
-            this.ABOACBAmountPaidToDateTextBox.CurrencySymbol = "$";
-            this.ABOACBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOACBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOACBAmountPaidToDateTextBox.Enabled = false;
-            this.ABOACBAmountPaidToDateTextBox.Location = new System.Drawing.Point(468, 61);
-            this.ABOACBAmountPaidToDateTextBox.Name = "ABOACBAmountPaidToDateTextBox";
-            this.ABOACBAmountPaidToDateTextBox.Size = new System.Drawing.Size(171, 23);
-            this.ABOACBAmountPaidToDateTextBox.TabIndex = 21;
-            this.ABOACBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // ABOInitialAmountTextBox
-            // 
-            this.ABOInitialAmountTextBox.CurrencySymbol = "$";
-            this.ABOInitialAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInitialAmountTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOInitialAmountTextBox.Enabled = false;
-            this.ABOInitialAmountTextBox.Location = new System.Drawing.Point(158, 32);
-            this.ABOInitialAmountTextBox.Name = "ABOInitialAmountTextBox";
-            this.ABOInitialAmountTextBox.Size = new System.Drawing.Size(149, 23);
-            this.ABOInitialAmountTextBox.TabIndex = 13;
-            this.ABOInitialAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // ABOMRBAmountPaidToDateTextBox
-            // 
-            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOMRBAmountPaidToDateTextBox, 2);
-            this.ABOMRBAmountPaidToDateTextBox.CurrencySymbol = "$";
-            this.ABOMRBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOMRBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOMRBAmountPaidToDateTextBox.Enabled = false;
-            this.ABOMRBAmountPaidToDateTextBox.Location = new System.Drawing.Point(152, 59);
-            this.ABOMRBAmountPaidToDateTextBox.Name = "ABOMRBAmountPaidToDateTextBox";
-            this.ABOMRBAmountPaidToDateTextBox.Size = new System.Drawing.Size(160, 23);
-            this.ABOMRBAmountPaidToDateTextBox.TabIndex = 13;
-            this.ABOMRBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SubTypeCategoryComboBox
             // 
