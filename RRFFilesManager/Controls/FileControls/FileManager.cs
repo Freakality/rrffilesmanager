@@ -2987,6 +2987,7 @@ namespace RRFFilesManager
                 if (taskManager.ShowDialog() == DialogResult.OK)
                 {
                     RefreshActionLogDataGridViewDataSource();
+                    SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
                 }
             }
         }
