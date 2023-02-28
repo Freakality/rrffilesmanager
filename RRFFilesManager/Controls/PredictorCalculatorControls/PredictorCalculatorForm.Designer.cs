@@ -676,6 +676,7 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
             this.HomeButton.TabIndex = 151;
             this.HomeButton.Text = "Home";
             this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // groupBox3
             // 

@@ -83,7 +83,7 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
         {
             comissionSubTypeComboBox1.MatterType = matterTypeComboBox1.MatterType;
         }
-
+        
         private void ContingencyFeeTypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             ContingencyFeeCB.Visible = ContingencyFeeTypeCB.Text == "Choose CF%";
@@ -166,6 +166,12 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
         {
             Transferring = true;
             Close();
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            Close();
+            Home.Instance.Show();
         }
     }
 

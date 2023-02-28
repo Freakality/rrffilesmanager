@@ -1,4 +1,4 @@
-﻿using ClosedXML.Excel;
+using ClosedXML.Excel;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Controls.Components;
 using RRFFilesManager.Controls.FileControls;
@@ -23,6 +23,7 @@ namespace RRFFilesManager
         public File File { get; set; }
         public Timeline FileTimeline { get; set; }
         public ABOverview FileABOverview { get; set; }
+        public PolicyParticulars FilePolicyParticulars { get; set; }
         public bool SettingFile = false;
         public readonly PeopleControl PeopleControl;
         public readonly MedicalBinderIndexControl MedicalBinderIndexControl;
@@ -42,6 +43,8 @@ namespace RRFFilesManager
         private readonly IDenialRepository _DenialRepository;
         private readonly IDenialBenefitRepository denialBenefitRepository;
         private readonly IDenialStatusRepository denialStatusRepository;
+        private readonly IDisabilityInsuranceCompanyRepository _disabilityInsuranceCompanyRepository;
+        private readonly IPolicyParticularsRepository _policyParticularsRepository;
         private Logic.FileManager _fileManager;
         private FileStatusManager _fileStatusManager;
         private readonly IClientNoteRepository _clientNoteRepository;
@@ -76,6 +79,8 @@ namespace RRFFilesManager
             _DenialRepository = Program.GetService<IDenialRepository>();
             denialBenefitRepository = Program.GetService<IDenialBenefitRepository>();
             denialStatusRepository = Program.GetService<IDenialStatusRepository>();
+            _disabilityInsuranceCompanyRepository = Program.GetService<IDisabilityInsuranceCompanyRepository>();
+            _policyParticularsRepository = Program.GetService<IPolicyParticularsRepository>();
             User = Program.GetUser();
             InitializeComponent();
             _fileManager = new Logic.FileManager();
@@ -106,15 +111,57 @@ namespace RRFFilesManager
             Utils.Utils.SetContent(SemiAnnualFileReviewTabAccidentBenefits, SemiAnnualFileReviewControlAccidentBenefits);
             SemiAnnualFileReviewControlAccidentBenefits.ReviewDoneSaveButton.Click += ReviewDoneSaveButton_Click2;
 
+            Notes.Columns.Add("Origin", typeof(string));
             Notes.Columns.Add("Date", typeof(DateTime));
             Notes.Columns.Add("Lawyer", typeof(string));
             Notes.Columns.Add("Description", typeof(string));
             Notes.TableName = "ClientNotesDataTable";
+            FillDenialData();
             FilteredNotes.Table = Notes;
             Ctms_TaskActions = Task_Actions.Ctms_TaskActions;
             Home.Instance.AddPermissionStrip(TimelineSaveBtn);
             ShowClearanceLocked();
             
+        }
+
+        private void FillDenialData()
+        {
+            DenialBenefitCheck("IRB - Pre-104");
+            DenialBenefitCheck("IRB - Post 104");
+            DenialBenefitCheck("Non-Earner");
+            DenialBenefitCheck("Care Giver");
+            DenialBenefitCheck("Med/Rehab");
+            DenialBenefitCheck("AC");
+            DenialBenefitCheck("HH");
+            DenialBenefitCheck("MIG");
+            DenialBenefitCheck("CAT");
+
+            DenialStatusCheck("Pending");
+            DenialStatusCheck("Withdrawn");
+            DenialStatusCheck("Filed for LAT");
+            DenialStatusCheck("Claiming in Tort");
+            DenialStatusCheck("Settled");
+            DenialStatusCheck("Not Pursuing");
+        }
+
+        private void DenialBenefitCheck(string description)
+        {
+            if (denialBenefitRepository.GetByDescription(description) is null)
+            {
+                DenialBenefit benefit = new DenialBenefit();
+                benefit.Description = description;
+                denialBenefitRepository.Insert(benefit);
+            }
+        }
+       
+        private void DenialStatusCheck(string description)
+        {
+            if (denialStatusRepository.GetByDescription(description) is null)
+            {
+                DenialStatus status = new DenialStatus();
+                status.Description = description;
+                denialStatusRepository.Insert(status);
+            }
         }
 
         private void ShowClearanceLocked()
@@ -238,6 +285,7 @@ namespace RRFFilesManager
 
             FastEnabler(TimelineLayoutPanel);
             FastEnabler(ABOMainLayoutPanel);
+            FastEnabler(PolicyParticularsMainLayoutPanel);
             /*foreach(Control c in TimelineLayoutPanel.Controls)
             {
                 if (c is Button || c is ColorDateTimePicker || c is DateTimePicker)
@@ -269,6 +317,9 @@ namespace RRFFilesManager
                 FillTimelineFields();   
             }
             LoadABOverview();
+            var insurerList = _disabilityInsuranceCompanyRepository.List();
+            Utils.Utils.SetComboBoxDataSource(PPHomeInsurerComboBox, insurerList);
+            LoadPolicyParticulars();
             if (File.Tasks.ToList().Count > 0)
             {
                 RefreshActionLogDataGridViewDataSource();
@@ -282,6 +333,59 @@ namespace RRFFilesManager
             isSettingForm = false;
         }
 
+        private void LoadPolicyParticulars()
+        {
+            PPInsurerNameTextBox.Text = File.Intake.AccBenInsuranceCompany;
+            PPDateOfLossTextBox.Text = File.DateOFLoss.ToString("MMMM dd, yyyy");
+
+            FilePolicyParticulars = File.PolicyParticulars;
+            if (FilePolicyParticulars != null)
+            {
+                if (FilePolicyParticulars.TermOfPolicyFrom != default)
+                    PPTermsOfPolicyFrom.Value = FilePolicyParticulars.TermOfPolicyFrom;
+                if (FilePolicyParticulars.TermOfPolicyTo != default)
+                    PPTermsOfPolicyTo.Value = FilePolicyParticulars.TermOfPolicyTo;
+
+                PPOPCF44RComboBox.SelectedItem = FilePolicyParticulars.OPCF44R ?? null;
+                if (FilePolicyParticulars.OPCF44RLiabilityLimits != 0)
+                    PPOPCF44RLiabilityLimitsTextBox.DollarValue = FilePolicyParticulars.OPCF44RLiabilityLimits;
+
+                PPUmbrellaViaAutoComboBox.SelectedItem = FilePolicyParticulars.UmbrellaViaAuto ?? null;
+                if (FilePolicyParticulars.UmbrellaViaAutoLiabilityLimits != 0)
+                    PPUmbrellaLiabilityLimitsTextBox.DollarValue = FilePolicyParticulars.UmbrellaViaAutoLiabilityLimits;
+
+                PPOptionalBenefitsPurchasedComboBox.SelectedItem = FilePolicyParticulars.OptionalBenefitsPurchased ?? null;
+                PPOptionalBenefitsPurchasedDetailsTextBox.Text = FilePolicyParticulars.OptionalBenefitsPurchasedDetails;
+
+                if (FilePolicyParticulars.ExcessHomeInsurer != null)
+                {
+                    PPHomeInsurerComboBox.SelectedItem = FilePolicyParticulars.ExcessHomeInsurer;
+                }
+                PPUmbrellaCoverageComboBox.SelectedItem = FilePolicyParticulars.ExcessUmbrellaCoverage ?? null;
+                PPCopyOfPolicyInFileComboBox.SelectedItem = FilePolicyParticulars.ExcessCopyOfPolicyInFile ?? null;
+                if (FilePolicyParticulars.ExcessCoverageAmount != 0)
+                    PPCoverageAmountTextBox.DollarValue = FilePolicyParticulars.ExcessCoverageAmount;
+            }
+            else
+            {
+                PPTermsOfPolicyFromTextBox.Text = "";
+                PPTermsOfPolicyToTextBox.Text = "";
+
+                PPOPCF44RComboBox.SelectedItem = null;
+                PPOPCF44RLiabilityLimitsTextBox.Text = "";
+
+                PPUmbrellaViaAutoComboBox.SelectedItem = null;
+                PPUmbrellaLiabilityLimitsTextBox.Text = "";
+
+                PPOptionalBenefitsPurchasedComboBox.SelectedItem = null;
+                PPOptionalBenefitsPurchasedDetailsTextBox.Text = "";
+
+                PPHomeInsurerComboBox.SelectedItem = null;
+                PPUmbrellaCoverageComboBox.SelectedItem = null;
+                PPCopyOfPolicyInFileComboBox.SelectedItem = null;
+                PPCoverageAmountTextBox.Text = "";
+            }
+        }
         private void LoadABOverview()
         {
             ABODateOfLossTextBox.Text = File.DateOFLoss.ToString("MMMM dd, yyyy");
@@ -300,25 +404,25 @@ namespace RRFFilesManager
                 if (FileABOverview.IncomeBenefitsLatestOCF3 != default)
                     ABOIncomeBenefitsLatestOFC3.Value = FileABOverview.IncomeBenefitsLatestOCF3;
                 if (FileABOverview.IncomeBenefitsWeeklyAmount != 0)
-                    ABOIncomeBenefitsWeeklyAmountTextBox.Text = FileABOverview.IncomeBenefitsWeeklyAmount.ToString() ?? "";
+                    ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue = FileABOverview.IncomeBenefitsWeeklyAmount;
                 ABOIncomeBenefitsDeniedComboBox.SelectedItem = FileABOverview.IncomeBenefitsDenied ?? null;
                 ABOIncomeBenefitsFileForLATComboBox.SelectedItem = FileABOverview.IncomeBenefitsFiledForLAT ?? null;
 
                 ABOInitiallyApprovedComboBox.SelectedItem = FileABOverview.AttendantCareBenefitsInitiallyApproved ?? null;
                 if (FileABOverview.AttendantCareBenefitsInitialAmount != 0)
-                    ABOInitialAmountTextBox.Text = FileABOverview.AttendantCareBenefitsInitialAmount.ToString() ?? "";
+                    ABOInitialAmountTextBox.DollarValue = FileABOverview.AttendantCareBenefitsInitialAmount;
                 ABOACBeingIncurredComboBox.SelectedItem = FileABOverview.AttendantCareBenefitsACBeingIncurred ?? null;
                 ABOWhosFundingComboBox.SelectedItem = FileABOverview.AttendantCareBenefitsWhosFunding ?? null;
                 if (FileABOverview.AttendantCareBenefitsLatestForm1 != default)
                     ABOLatestForm1Date.Value = FileABOverview.AttendantCareBenefitsLatestForm1;
                 if (FileABOverview.AttendantCareBenefitsAmountPaidToDate != 0)
-                    ABOACBAmountPaidToDateTextBox.Text = FileABOverview.AttendantCareBenefitsAmountPaidToDate.ToString() ?? "";
+                    ABOACBAmountPaidToDateTextBox.DollarValue = FileABOverview.AttendantCareBenefitsAmountPaidToDate;
 
                 ABOCurrentBenefitsLevelComboBox.SelectedItem = FileABOverview.MedicalRehabBenefitsCurrentLevel ?? null;
                 if (FileABOverview.MedicalRehabBenefitsEnd != default)
                     ABOBenefitsEndDate.Value = FileABOverview.MedicalRehabBenefitsEnd;
                 if (FileABOverview.MedicalRehabBenefitsAmountPaidToDate != 0)
-                    ABOMRBAmountPaidToDateTextBox.Text = FileABOverview.MedicalRehabBenefitsAmountPaidToDate.ToString() ?? "";
+                    ABOMRBAmountPaidToDateTextBox.DollarValue = FileABOverview.MedicalRehabBenefitsAmountPaidToDate;
 
                 ABOAvailableCollateralInsuredComboBox.SelectedItem = FileABOverview.CollateralsInsured ?? null;
                 ABOAvailableCollateralFamilyComboBox.SelectedItem = FileABOverview.CollateralsFamily ?? null;
@@ -608,27 +712,32 @@ namespace RRFFilesManager
             {
                 TabControl2.TabPages.Remove(SemiAnnualFileReviewTabAction);
             }
-            if (ABOverviewTab.TabPages.Contains(SemiAnnualFileReviewTabAccidentBenefits))
+            if (AccidentBenefitsTab.TabPages.Contains(SemiAnnualFileReviewTabAccidentBenefits))
             {
-                ABOverviewTab.TabPages.Remove(SemiAnnualFileReviewTabAccidentBenefits);
+                AccidentBenefitsTab.TabPages.Remove(SemiAnnualFileReviewTabAccidentBenefits);
             }
 
-            if (file.MatterType.Description == "Motor Vehicle Accident" && file.SubTypeCategory.Description.ToUpper().Contains("AB") && !file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
+            if (file.MatterType != null && file.SubTypeCategory != null)
             {
-                SemiAnnualFileReviewControlAccidentBenefits.File = file;
-                ABOverviewTab.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
+                if (file.MatterType.Description == "Motor Vehicle Accident" && file.SubTypeCategory.Description.ToUpper().Contains("AB") && !file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
+                {
+                    SemiAnnualFileReviewControlAccidentBenefits.File = file;
+                    AccidentBenefitsTab.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
+                }
+                else if (file.MatterType.Description == "Motor Vehicle Accident" && !file.SubTypeCategory.Description.ToUpper().Contains("AB") && file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
+                {
+                    SemiAnnualFileReviewControlAction.File = file;
+                    TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
+                }
+                else
+                {
+                    SemiAnnualFileReviewControlAccidentBenefits.File = SemiAnnualFileReviewControlAction.File = file;
+                    AccidentBenefitsTab.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
+                    TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
+                }
+
             }
-            else if (file.MatterType.Description == "Motor Vehicle Accident" && !file.SubTypeCategory.Description.ToUpper().Contains("AB") && file.SubTypeCategory.Description.ToUpper().Contains("TORT"))
-            {
-                SemiAnnualFileReviewControlAction.File = file;
-                TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
-            }
-            else
-            {
-                SemiAnnualFileReviewControlAccidentBenefits.File = SemiAnnualFileReviewControlAction.File = file;
-                ABOverviewTab.TabPages.Add(SemiAnnualFileReviewTabAccidentBenefits);
-                TabControl2.TabPages.Insert(6, SemiAnnualFileReviewTabAction);
-            }
+
             
         }
 
@@ -914,7 +1023,7 @@ namespace RRFFilesManager
                 }
             }
 
-            ClientNotesDataGridView.Rows.Add(null,null,null);
+            ClientNotesDataGridView.Rows.Add(null,null,null,null);
             ClientNotesDataGridView.CurrentCell = ClientNotesDataGridView.Rows[ClientNotesDataGridView.Rows.Count - 1].Cells[DgColumn_Description.Index];
             ClientNotesDataGridView.Rows[ClientNotesDataGridView.CurrentCell.RowIndex].Cells[ClientNotesDataGridView.CurrentCell.ColumnIndex].ReadOnly = false;
             //ClientNotesDataGridView.CurrentCell.ReadOnly = false;
@@ -982,6 +1091,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.DamNotes))
             {
                 Notes.Rows.Add(
+                    "Intake Dam Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.DamNotes
@@ -991,6 +1101,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.EILNotes))
             {
                 Notes.Rows.Add(
+                    "Intake EIL Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.EILNotes
@@ -1000,6 +1111,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.LiaNotes))
             {
                 Notes.Rows.Add(
+                    "Intake LIA Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.LiaNotes
@@ -1009,6 +1121,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.AccBenNotes))
             {
                 Notes.Rows.Add(
+                    "Intake AccBen Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.AccBenNotes
@@ -1018,6 +1131,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.PolOtherNotes))
             {
                 Notes.Rows.Add(
+                    "Intake Pol Other Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.PolOtherNotes
@@ -1027,6 +1141,7 @@ namespace RRFFilesManager
             if (!string.IsNullOrEmpty(intake.Notes))
             {
                 Notes.Rows.Add(
+                    "Intake Notes",
                    File.DateOfCall,
                    intake.File.FileLawyer.Description,
                    intake.Notes
@@ -1036,6 +1151,7 @@ namespace RRFFilesManager
             foreach (var item in clientNotes)
             {
                 Notes.Rows.Add(
+                    "Client Notes",
                     item.Date,
                     item.Lawyer,
                     item.Description
@@ -1045,6 +1161,7 @@ namespace RRFFilesManager
             foreach (DataRow item in Notes.Rows)
             {
                 ClientNotesDataGridView.Rows.Add(
+                    item["Origin"].ToString(),
                     Convert.ToDateTime(item["Date"]),
                     item["Lawyer"].ToString(),
                     item["Description"].ToString()
@@ -1063,7 +1180,7 @@ namespace RRFFilesManager
 
         private void Cbb_Staff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Cbb_Staff.Text.Trim() == "")
+            if (Cbb_Staff.Text.Trim() == "All")
             {
                 UpdateClienteNotesGrid();
             }
@@ -1074,9 +1191,10 @@ namespace RRFFilesManager
                 foreach (DataRowView item in FilteredNotes)
                 {
                     ClientNotesDataGridView.Rows.Add(
-                    Convert.ToDateTime(item["Date"]),
-                    item["Lawyer"].ToString(),
-                    item["Description"].ToString()
+                        item["Origin"].ToString(),
+                        Convert.ToDateTime(item["Date"]),
+                        item["Lawyer"].ToString(),
+                        item["Description"].ToString()
                     );
                 }
             }
@@ -2975,6 +3093,7 @@ namespace RRFFilesManager
                 if (taskManager.ShowDialog() == DialogResult.OK)
                 {
                     RefreshActionLogDataGridViewDataSource();
+                    SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
                 }
             }
         }
@@ -3046,14 +3165,10 @@ namespace RRFFilesManager
                 abOverview.IncomeBenefitsLatestOCF3 = ABOIncomeBenefitsLatestOFC3.Value;
                 update = true;
             }
-            if (ABOIncomeBenefitsWeeklyAmountTextBox.Text != "")
+            if (ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue != 0)
             {
-                int n = 0;
-                if (Int32.TryParse(ABOIncomeBenefitsWeeklyAmountTextBox.Text, out n))
-                {
-                    abOverview.IncomeBenefitsWeeklyAmount = n;
-                    update = true;
-                }
+                abOverview.IncomeBenefitsWeeklyAmount = ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue;
+                update = true;
             }
             if (ABOIncomeBenefitsDeniedComboBox.SelectedItem != null)
             {
@@ -3071,14 +3186,10 @@ namespace RRFFilesManager
                 abOverview.AttendantCareBenefitsInitiallyApproved = ABOInitiallyApprovedComboBox.SelectedItem.ToString();
                 update = true;
             }
-            if (ABOIncomeBenefitsWeeklyAmountTextBox.Text != "")
+            if (ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue != 0)
             {
-                int n = 0;
-                if (Int32.TryParse(ABOInitialAmountTextBox.Text, out n))
-                {
-                    abOverview.AttendantCareBenefitsInitialAmount = n;
-                    update = true;
-                }
+                abOverview.AttendantCareBenefitsInitialAmount = ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue;
+                update = true;
             }
             if (ABOACBeingIncurredComboBox.SelectedItem != null)
             {
@@ -3095,14 +3206,10 @@ namespace RRFFilesManager
                 abOverview.AttendantCareBenefitsLatestForm1 = ABOLatestForm1Date.Value;
                 update = true;
             }
-            if (ABOACBAmountPaidToDateTextBox.Text != "")
+            if (ABOACBAmountPaidToDateTextBox.DollarValue != 0)
             {
-                int n = 0;
-                if (Int32.TryParse(ABOACBAmountPaidToDateTextBox.Text, out n))
-                {
-                    abOverview.AttendantCareBenefitsAmountPaidToDate = n;
-                    update = true;
-                }
+                abOverview.AttendantCareBenefitsAmountPaidToDate = ABOACBAmountPaidToDateTextBox.DollarValue;
+                update = true;
             }
 
             if (ABOCurrentBenefitsLevelComboBox.SelectedItem != null)
@@ -3115,14 +3222,10 @@ namespace RRFFilesManager
                 abOverview.MedicalRehabBenefitsEnd = ABOBenefitsEndDate.Value;
                 update = true;
             }
-            if (ABOMRBAmountPaidToDateTextBox.Text != "")
+            if (ABOMRBAmountPaidToDateTextBox.DollarValue != 0)
             {
-                int n = 0;
-                if (Int32.TryParse(ABOMRBAmountPaidToDateTextBox.Text, out n))
-                {
-                    abOverview.MedicalRehabBenefitsAmountPaidToDate = n;
-                    update = true;
-                }
+                abOverview.MedicalRehabBenefitsAmountPaidToDate = ABOMRBAmountPaidToDateTextBox.DollarValue;
+                update = true;
             }
 
             if (ABOAvailableCollateralInsuredComboBox.SelectedItem != null)
@@ -3234,6 +3337,113 @@ namespace RRFFilesManager
                     
                 }
             }
+        }
+
+        private void PolicyParticularsSaveButton_Click(object sender, EventArgs e)
+        {
+            var policyParticulars = FilePolicyParticulars;
+            if (policyParticulars == null)
+                policyParticulars = new PolicyParticulars();
+            if (FillPolicyParticulars(policyParticulars))
+            {
+                if (policyParticulars.ID == default)
+                    _policyParticularsRepository.Insert(policyParticulars, policyParticulars.File);
+                else
+                    _policyParticularsRepository.Update(policyParticulars);
+                LoadPolicyParticulars();
+                MessageBox.Show("Policy Particulars have been saved.");
+            }
+            else
+            {
+                MessageBox.Show("No changes detected.");
+            }
+        }
+
+        private bool FillPolicyParticulars(PolicyParticulars policyParticulars)
+        {
+            bool update = false;
+            policyParticulars.File = File;
+
+            if (PPTermsOfPolicyFromTextBox.Text != "")
+            {
+                policyParticulars.TermOfPolicyFrom= PPTermsOfPolicyFrom.Value;
+                update = true;
+            }
+            if (PPTermsOfPolicyToTextBox.Text != "")
+            {
+                policyParticulars.TermOfPolicyTo = PPTermsOfPolicyTo.Value;
+                update = true;
+            }
+
+
+            if (PPOPCF44RComboBox.SelectedItem != null)
+            {
+                policyParticulars.OPCF44R = PPOPCF44RComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (PPOPCF44RLiabilityLimitsTextBox.DollarValue != 0)
+            {
+                policyParticulars.OPCF44RLiabilityLimits = PPOPCF44RLiabilityLimitsTextBox.DollarValue;
+                update = true;
+            }
+
+            if (PPUmbrellaViaAutoComboBox.SelectedItem != null)
+            {
+                policyParticulars.UmbrellaViaAuto = PPUmbrellaViaAutoComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (PPUmbrellaLiabilityLimitsTextBox.DollarValue != 0)
+            {
+                policyParticulars.UmbrellaViaAutoLiabilityLimits = PPUmbrellaLiabilityLimitsTextBox.DollarValue;
+                update = true;
+            }
+
+            if (PPOptionalBenefitsPurchasedComboBox.SelectedItem != null)
+            {
+                policyParticulars.OptionalBenefitsPurchased = PPOptionalBenefitsPurchasedComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (PPOptionalBenefitsPurchasedDetailsTextBox.Text != "")
+            {
+                policyParticulars.OptionalBenefitsPurchasedDetails = PPOptionalBenefitsPurchasedDetailsTextBox.Text;
+                update = true;
+            }
+
+            if (PPHomeInsurerComboBox.SelectedItem != null)
+            {
+                policyParticulars.ExcessHomeInsurer = PPHomeInsurerComboBox.SelectedItem as DisabilityInsuranceCompany;
+                update = true;
+            }
+            if (PPUmbrellaCoverageComboBox.SelectedItem != null)
+            {
+                policyParticulars.ExcessUmbrellaCoverage = PPUmbrellaCoverageComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (PPCopyOfPolicyInFileComboBox.SelectedItem != null)
+            {
+                policyParticulars.ExcessCopyOfPolicyInFile = PPCopyOfPolicyInFileComboBox.SelectedItem.ToString();
+                update = true;
+            }
+            if (PPCoverageAmountTextBox.DollarValue != 0)
+            {
+                policyParticulars.ExcessCoverageAmount = PPCoverageAmountTextBox.DollarValue;
+                update = true;
+            }
+            return update;
+        }
+
+        private void PPOptionalBenefitsPurchasedComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (PPOptionalBenefitsPurchasedComboBox.SelectedItem != null)
+            {
+                if (PPOptionalBenefitsPurchasedComboBox.SelectedItem.ToString() == "Yes")
+                {
+                    PPOptionalBenefitsPurchasedDetailsGroupBox.Visible = true;
+                    return;
+                }
+            }
+            PPOptionalBenefitsPurchasedDetailsGroupBox.Visible = false;
+            return;
         }
 
         private void Dtp_CloseUp(object sender, EventArgs e)

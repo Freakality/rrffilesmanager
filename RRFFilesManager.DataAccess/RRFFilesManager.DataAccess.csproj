@@ -188,7 +188,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\20230227185918_PolicyParticulars.cs" />
+    <Compile Include="Migrations\20230227185918_PolicyParticulars.designer.cs">
+      <DependentUpon>20230227185918_PolicyParticulars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyParticularsRepository.cs" />
     <Compile Include="Abstractions\Extensions.cs" />
+    <Compile Include="Abstractions\IPolicyParticularsRepository.cs" />
     <Compile Include="Abstractions\IABOverviewRepository.cs" />
     <Compile Include="Abstractions\IQuestionnaireFieldMapperRepository.cs" />
     <Compile Include="Abstractions\IDrugRepository.cs" />

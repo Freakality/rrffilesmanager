@@ -241,5 +241,30 @@ namespace RRFFilesManager.Utils
                 prop.SetValue(src, value, null);
             }
         }
+
+        public static string GetFileNameFromFindFileDialog()
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                return openFileDialog1.FileName;
+            }
+            return null;
+        }
+
+        public static string GetFolderPathFromFindFileDialog()
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    return fbd.SelectedPath;
+                }
+            }
+            return null;
+        }
     }
 }
