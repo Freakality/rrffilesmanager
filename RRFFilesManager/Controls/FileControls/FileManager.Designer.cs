@@ -5114,7 +5114,7 @@ namespace RRFFilesManager
             this.AccidentBenefitsTab.SelectedIndex = 0;
             this.AccidentBenefitsTab.Size = new System.Drawing.Size(1322, 378);
             this.AccidentBenefitsTab.TabIndex = 5;
-            this.AccidentBenefitsTab.Click += new System.EventHandler(this.TabControl5_Click);
+
             // 
             // ABTimeline
             // 
