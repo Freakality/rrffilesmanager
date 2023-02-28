@@ -334,5 +334,70 @@ namespace RRFFilesManager
                 btn.Font = new Font("Century Gothic", 9.75f, FontStyle.Bold);
             }
         }
+
+        private void ClientNotesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisbursementsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LimitationDeadlineTrackerButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VariousDocumentUpdatesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProtectedAccountsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExpertDateBaseButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClientPortalButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FileCloseOutButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PostResolutionDataButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HumanResourcesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MarketingButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProjectedOutcomesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ContinuingEducationButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

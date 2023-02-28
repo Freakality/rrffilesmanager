@@ -23,7 +23,8 @@ namespace RRFFilesManager.Controls.FileControls
         private readonly ITaskStateRepository _taskStateRepository;
         private readonly IFileTaskRepository _fileTaskRepository;
         //private Abstractions.Task TaskToAdd;
-        public File File { get; set; }
+        public File File => findFilePanelUserControl1.File;
+
         //public FileTask SelectedFileTask { get; set; }
         public AddTaskManager()
         {
@@ -34,6 +35,11 @@ namespace RRFFilesManager.Controls.FileControls
             _taskStateRepository = Program.GetService<ITaskStateRepository>();
             InitializeComponent();
             RefreshTaskCategoryCBoxDataSource();
+            findFilePanelUserControl1.FileChanged += FileChanged;
+        }
+        private void FileChanged(object sender, EventArgs e)
+        {
+            AddCategoryTasksButton.Enabled = true;
         }
 
         private static AddTaskManager instance;
@@ -125,7 +131,7 @@ namespace RRFFilesManager.Controls.FileControls
             Home.Instance.Show();
         }
 
-        private void FindFileButton_Click(object sender, EventArgs e)
+        /*private void FindFileButton_Click(object sender, EventArgs e)
         {
             SettingFile = true;
             FindFile.Instance.Show();
@@ -142,6 +148,11 @@ namespace RRFFilesManager.Controls.FileControls
             AddCategoryTasksButton.Enabled = true;
 
             //RefreshTaskGridViewDataSource();
+        }*/
+
+        private void findFilePanelUserControl1_Load(object sender, EventArgs e)
+        {
+
         }
 
         /*private void TaskGridView_SelectionChanged(object sender, EventArgs e)

@@ -35,6 +35,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.FindFileButton = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.SearchBox = new System.Windows.Forms.GroupBox();
+            this.findFilePanelUserControl1 = new RRFFilesManager.Controls.CommonControls.FindFilePanelUserControl();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SearchBox.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +59,9 @@ namespace RRFFilesManager.Controls.FileControls
             this.AddCategoryTasksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCategoryTasksButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddCategoryTasksButton.ForeColor = System.Drawing.Color.White;
-            this.AddCategoryTasksButton.Location = new System.Drawing.Point(25, 144);
+            this.AddCategoryTasksButton.Location = new System.Drawing.Point(24, 197);
             this.AddCategoryTasksButton.Name = "AddCategoryTasksButton";
-            this.AddCategoryTasksButton.Size = new System.Drawing.Size(671, 37);
+            this.AddCategoryTasksButton.Size = new System.Drawing.Size(1056, 37);
             this.AddCategoryTasksButton.TabIndex = 148;
             this.AddCategoryTasksButton.Text = "Add Tasks to File from Selected Category";
             this.AddCategoryTasksButton.UseVisualStyleBackColor = false;
@@ -74,7 +75,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.CBoxTaskCategory.FormattingEnabled = true;
             this.CBoxTaskCategory.Location = new System.Drawing.Point(9, 21);
             this.CBoxTaskCategory.Name = "CBoxTaskCategory";
-            this.CBoxTaskCategory.Size = new System.Drawing.Size(665, 25);
+            this.CBoxTaskCategory.Size = new System.Drawing.Size(1050, 25);
             this.CBoxTaskCategory.TabIndex = 149;
             // 
             // FindFileButton
@@ -84,13 +85,13 @@ namespace RRFFilesManager.Controls.FileControls
             this.FindFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindFileButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindFileButton.ForeColor = System.Drawing.Color.White;
-            this.FindFileButton.Location = new System.Drawing.Point(385, 43);
+            this.FindFileButton.Location = new System.Drawing.Point(770, 43);
             this.FindFileButton.Name = "FindFileButton";
             this.FindFileButton.Size = new System.Drawing.Size(152, 37);
             this.FindFileButton.TabIndex = 152;
             this.FindFileButton.Text = "Find File";
             this.FindFileButton.UseVisualStyleBackColor = false;
-            this.FindFileButton.Click += new System.EventHandler(this.FindFileButton_Click);
+            this.FindFileButton.Visible = false;
             // 
             // HomeButton
             // 
@@ -99,7 +100,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.White;
-            this.HomeButton.Location = new System.Drawing.Point(543, 43);
+            this.HomeButton.Location = new System.Drawing.Point(928, 43);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(152, 37);
             this.HomeButton.TabIndex = 153;
@@ -113,19 +114,31 @@ namespace RRFFilesManager.Controls.FileControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBox.Controls.Add(this.CBoxTaskCategory);
             this.SearchBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.Location = new System.Drawing.Point(16, 86);
+            this.SearchBox.Location = new System.Drawing.Point(15, 139);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(680, 52);
+            this.SearchBox.Size = new System.Drawing.Size(1065, 52);
             this.SearchBox.TabIndex = 145;
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Category";
+            // 
+            // findFilePanelUserControl1
+            // 
+            this.findFilePanelUserControl1.File = null;
+            this.findFilePanelUserControl1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findFilePanelUserControl1.Location = new System.Drawing.Point(15, 87);
+            this.findFilePanelUserControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.findFilePanelUserControl1.Name = "findFilePanelUserControl1";
+            this.findFilePanelUserControl1.Size = new System.Drawing.Size(1065, 45);
+            this.findFilePanelUserControl1.TabIndex = 154;
+            this.findFilePanelUserControl1.Load += new System.EventHandler(this.findFilePanelUserControl1_Load);
             // 
             // AddTaskManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(717, 205);
+            this.ClientSize = new System.Drawing.Size(1102, 252);
+            this.Controls.Add(this.findFilePanelUserControl1);
             this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.FindFileButton);
             this.Controls.Add(this.AddCategoryTasksButton);
@@ -148,5 +161,6 @@ namespace RRFFilesManager.Controls.FileControls
         internal System.Windows.Forms.Button FindFileButton;
         internal System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.GroupBox SearchBox;
+        private CommonControls.FindFilePanelUserControl findFilePanelUserControl1;
     }
 }

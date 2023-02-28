@@ -71,11 +71,13 @@
             // 
             // ContinuingEducationButton
             // 
-            this.ContinuingEducationButton.BackColor = System.Drawing.Color.DarkGray;
+            this.ContinuingEducationButton.BackColor = System.Drawing.Color.Gainsboro;
             this.ContinuingEducationButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContinuingEducationButton.Enabled = false;
+            this.ContinuingEducationButton.FlatAppearance.BorderSize = 0;
             this.ContinuingEducationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ContinuingEducationButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContinuingEducationButton.ForeColor = System.Drawing.Color.Black;
+            this.ContinuingEducationButton.ForeColor = System.Drawing.Color.White;
             this.ContinuingEducationButton.Location = new System.Drawing.Point(766, 334);
             this.ContinuingEducationButton.Margin = new System.Windows.Forms.Padding(10);
             this.ContinuingEducationButton.Name = "ContinuingEducationButton";
@@ -83,16 +85,18 @@
             this.ContinuingEducationButton.TabIndex = 4;
             this.ContinuingEducationButton.Text = "CONTINUING EDUCATION";
             this.ContinuingEducationButton.UseVisualStyleBackColor = false;
+            this.ContinuingEducationButton.Click += new System.EventHandler(this.ContinuingEducationButton_Click);
             this.ContinuingEducationButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ContinuingEducationButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // ProjectedOutcomesButton
             // 
-            this.ProjectedOutcomesButton.BackColor = System.Drawing.Color.DarkGray;
+            this.ProjectedOutcomesButton.BackColor = System.Drawing.Color.Gainsboro;
             this.ProjectedOutcomesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProjectedOutcomesButton.Enabled = false;
             this.ProjectedOutcomesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProjectedOutcomesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectedOutcomesButton.ForeColor = System.Drawing.Color.Black;
+            this.ProjectedOutcomesButton.ForeColor = System.Drawing.Color.White;
             this.ProjectedOutcomesButton.Location = new System.Drawing.Point(766, 253);
             this.ProjectedOutcomesButton.Margin = new System.Windows.Forms.Padding(10);
             this.ProjectedOutcomesButton.Name = "ProjectedOutcomesButton";
@@ -100,16 +104,19 @@
             this.ProjectedOutcomesButton.TabIndex = 4;
             this.ProjectedOutcomesButton.Text = "PROJECTED OUTCOMES";
             this.ProjectedOutcomesButton.UseVisualStyleBackColor = false;
+            this.ProjectedOutcomesButton.Click += new System.EventHandler(this.ProjectedOutcomesButton_Click);
             this.ProjectedOutcomesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ProjectedOutcomesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // MarketingButton
             // 
-            this.MarketingButton.BackColor = System.Drawing.Color.DarkGray;
+            this.MarketingButton.BackColor = System.Drawing.Color.Gainsboro;
             this.MarketingButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MarketingButton.Enabled = false;
+            this.MarketingButton.FlatAppearance.BorderSize = 0;
             this.MarketingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MarketingButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MarketingButton.ForeColor = System.Drawing.Color.Black;
+            this.MarketingButton.ForeColor = System.Drawing.Color.White;
             this.MarketingButton.Location = new System.Drawing.Point(766, 172);
             this.MarketingButton.Margin = new System.Windows.Forms.Padding(10);
             this.MarketingButton.Name = "MarketingButton";
@@ -117,16 +124,19 @@
             this.MarketingButton.TabIndex = 4;
             this.MarketingButton.Text = "MARKETING";
             this.MarketingButton.UseVisualStyleBackColor = false;
+            this.MarketingButton.Click += new System.EventHandler(this.MarketingButton_Click);
             this.MarketingButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.MarketingButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // HumanResourcesButton
             // 
-            this.HumanResourcesButton.BackColor = System.Drawing.Color.DarkGray;
+            this.HumanResourcesButton.BackColor = System.Drawing.Color.Gainsboro;
             this.HumanResourcesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HumanResourcesButton.Enabled = false;
+            this.HumanResourcesButton.FlatAppearance.BorderSize = 0;
             this.HumanResourcesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HumanResourcesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HumanResourcesButton.ForeColor = System.Drawing.Color.Black;
+            this.HumanResourcesButton.ForeColor = System.Drawing.Color.White;
             this.HumanResourcesButton.Location = new System.Drawing.Point(766, 91);
             this.HumanResourcesButton.Margin = new System.Windows.Forms.Padding(10);
             this.HumanResourcesButton.Name = "HumanResourcesButton";
@@ -134,6 +144,7 @@
             this.HumanResourcesButton.TabIndex = 4;
             this.HumanResourcesButton.Text = "HUMAN RESOURCES";
             this.HumanResourcesButton.UseVisualStyleBackColor = false;
+            this.HumanResourcesButton.Click += new System.EventHandler(this.HumanResourcesButton_Click);
             this.HumanResourcesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.HumanResourcesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
@@ -209,8 +220,9 @@
             // 
             // FileCloseOutButton
             // 
-            this.FileCloseOutButton.BackColor = System.Drawing.Color.Gray;
+            this.FileCloseOutButton.BackColor = System.Drawing.Color.Gainsboro;
             this.FileCloseOutButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileCloseOutButton.Enabled = false;
             this.FileCloseOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FileCloseOutButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileCloseOutButton.ForeColor = System.Drawing.Color.White;
@@ -221,13 +233,15 @@
             this.FileCloseOutButton.TabIndex = 4;
             this.FileCloseOutButton.Text = "FILE CLOSE OUT";
             this.FileCloseOutButton.UseVisualStyleBackColor = false;
+            this.FileCloseOutButton.Click += new System.EventHandler(this.FileCloseOutButton_Click);
             this.FileCloseOutButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.FileCloseOutButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // ClientPortalButton
             // 
-            this.ClientPortalButton.BackColor = System.Drawing.Color.Gray;
+            this.ClientPortalButton.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientPortalButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientPortalButton.Enabled = false;
             this.ClientPortalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClientPortalButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientPortalButton.ForeColor = System.Drawing.Color.White;
@@ -238,13 +252,15 @@
             this.ClientPortalButton.TabIndex = 4;
             this.ClientPortalButton.Text = "CLIENT PORTAL";
             this.ClientPortalButton.UseVisualStyleBackColor = false;
+            this.ClientPortalButton.Click += new System.EventHandler(this.ClientPortalButton_Click);
             this.ClientPortalButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ClientPortalButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // ExpertDateBaseButton
             // 
-            this.ExpertDateBaseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ExpertDateBaseButton.BackColor = System.Drawing.Color.Gainsboro;
             this.ExpertDateBaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExpertDateBaseButton.Enabled = false;
             this.ExpertDateBaseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExpertDateBaseButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpertDateBaseButton.ForeColor = System.Drawing.Color.White;
@@ -255,13 +271,15 @@
             this.ExpertDateBaseButton.TabIndex = 4;
             this.ExpertDateBaseButton.Text = "EXPERT DATE BASE";
             this.ExpertDateBaseButton.UseVisualStyleBackColor = false;
+            this.ExpertDateBaseButton.Click += new System.EventHandler(this.ExpertDateBaseButton_Click);
             this.ExpertDateBaseButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ExpertDateBaseButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // ProtectedAccountsButton
             // 
-            this.ProtectedAccountsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProtectedAccountsButton.BackColor = System.Drawing.Color.Gainsboro;
             this.ProtectedAccountsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProtectedAccountsButton.Enabled = false;
             this.ProtectedAccountsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProtectedAccountsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProtectedAccountsButton.ForeColor = System.Drawing.Color.White;
@@ -272,13 +290,15 @@
             this.ProtectedAccountsButton.TabIndex = 4;
             this.ProtectedAccountsButton.Text = "PROTECTED ACCOUNTS";
             this.ProtectedAccountsButton.UseVisualStyleBackColor = false;
+            this.ProtectedAccountsButton.Click += new System.EventHandler(this.ProtectedAccountsButton_Click);
             this.ProtectedAccountsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ProtectedAccountsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
             // VariousDocumentUpdatesButton
             // 
-            this.VariousDocumentUpdatesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.VariousDocumentUpdatesButton.BackColor = System.Drawing.Color.Gainsboro;
             this.VariousDocumentUpdatesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VariousDocumentUpdatesButton.Enabled = false;
             this.VariousDocumentUpdatesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VariousDocumentUpdatesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VariousDocumentUpdatesButton.ForeColor = System.Drawing.Color.White;
@@ -289,6 +309,7 @@
             this.VariousDocumentUpdatesButton.TabIndex = 4;
             this.VariousDocumentUpdatesButton.Text = "VARIOUS DOCUMENT UPDATES";
             this.VariousDocumentUpdatesButton.UseVisualStyleBackColor = false;
+            this.VariousDocumentUpdatesButton.Click += new System.EventHandler(this.VariousDocumentUpdatesButton_Click);
             this.VariousDocumentUpdatesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.VariousDocumentUpdatesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
@@ -312,8 +333,9 @@
             // 
             // LimitationDeadlineTrackerButton
             // 
-            this.LimitationDeadlineTrackerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LimitationDeadlineTrackerButton.BackColor = System.Drawing.Color.Gainsboro;
             this.LimitationDeadlineTrackerButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LimitationDeadlineTrackerButton.Enabled = false;
             this.LimitationDeadlineTrackerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LimitationDeadlineTrackerButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LimitationDeadlineTrackerButton.ForeColor = System.Drawing.Color.White;
@@ -324,6 +346,7 @@
             this.LimitationDeadlineTrackerButton.TabIndex = 4;
             this.LimitationDeadlineTrackerButton.Text = "LIMITATION and DEADLINE TRACKER";
             this.LimitationDeadlineTrackerButton.UseVisualStyleBackColor = false;
+            this.LimitationDeadlineTrackerButton.Click += new System.EventHandler(this.LimitationDeadlineTrackerButton_Click);
             this.LimitationDeadlineTrackerButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.LimitationDeadlineTrackerButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
@@ -365,8 +388,9 @@
             // 
             // DisbursementsButton
             // 
-            this.DisbursementsButton.BackColor = System.Drawing.Color.Black;
+            this.DisbursementsButton.BackColor = System.Drawing.Color.Gainsboro;
             this.DisbursementsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DisbursementsButton.Enabled = false;
             this.DisbursementsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DisbursementsButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisbursementsButton.ForeColor = System.Drawing.Color.White;
@@ -377,6 +401,7 @@
             this.DisbursementsButton.TabIndex = 4;
             this.DisbursementsButton.Text = "DISBURSEMENTS";
             this.DisbursementsButton.UseVisualStyleBackColor = false;
+            this.DisbursementsButton.Click += new System.EventHandler(this.DisbursementsButton_Click);
             this.DisbursementsButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.DisbursementsButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
@@ -401,8 +426,9 @@
             // 
             // ClientNotesButton
             // 
-            this.ClientNotesButton.BackColor = System.Drawing.Color.Maroon;
+            this.ClientNotesButton.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientNotesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClientNotesButton.Enabled = false;
             this.ClientNotesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClientNotesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientNotesButton.ForeColor = System.Drawing.Color.White;
@@ -413,6 +439,7 @@
             this.ClientNotesButton.TabIndex = 4;
             this.ClientNotesButton.Text = "CLIENT NOTES";
             this.ClientNotesButton.UseVisualStyleBackColor = false;
+            this.ClientNotesButton.Click += new System.EventHandler(this.ClientNotesButton_Click);
             this.ClientNotesButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.ClientNotesButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
@@ -472,8 +499,9 @@
             // 
             // PrivateFootPrintButton
             // 
-            this.PrivateFootPrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PrivateFootPrintButton.BackColor = System.Drawing.Color.Gainsboro;
             this.PrivateFootPrintButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrivateFootPrintButton.Enabled = false;
             this.PrivateFootPrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrivateFootPrintButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrivateFootPrintButton.ForeColor = System.Drawing.Color.White;
@@ -508,8 +536,9 @@
             // 
             // PostResolutionDataButton
             // 
-            this.PostResolutionDataButton.BackColor = System.Drawing.Color.Gray;
+            this.PostResolutionDataButton.BackColor = System.Drawing.Color.Gainsboro;
             this.PostResolutionDataButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PostResolutionDataButton.Enabled = false;
             this.PostResolutionDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PostResolutionDataButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PostResolutionDataButton.ForeColor = System.Drawing.Color.White;
@@ -520,6 +549,7 @@
             this.PostResolutionDataButton.TabIndex = 4;
             this.PostResolutionDataButton.Text = "POST RESOLUTION DATA";
             this.PostResolutionDataButton.UseVisualStyleBackColor = false;
+            this.PostResolutionDataButton.Click += new System.EventHandler(this.PostResolutionDataButton_Click);
             this.PostResolutionDataButton.MouseLeave += new System.EventHandler(this.ButtonMouseLeave);
             this.PostResolutionDataButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonMouseMove);
             // 
