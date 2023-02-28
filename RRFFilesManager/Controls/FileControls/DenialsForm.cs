@@ -43,70 +43,46 @@ namespace RRFFilesManager.Controls.FileControls
                 }
             }
         }
-        private bool IsEmpty()
-        {
-            bool val = false;
-            foreach (Control item in panel1.Controls)
-            {
-                if (item is ComboBox)
-                {
-                    ComboBox c = new ComboBox();
-                    c = item as ComboBox;
-                    if (string.IsNullOrEmpty(c.Text))
-                    {
-                        val = true;
-                    }
-                }
-            }
-            foreach (Control item in panel2.Controls)
-            {
-                if (item is TextBox)
-                {
-                    TextBox txt = new TextBox();
-                    txt = item as TextBox;
-                    if (string.IsNullOrEmpty(txt.Text))
-                    {
-                        val = true;
-                    }
-                }
-            }
-
-            return val;
-        }
         private void Save()
         {
             Denial data = new Denial
             {
                 FileId = Home.FileManager.File.ID,
                 DenialBenefit = denialBenefitRepository.GetByDescription(CboxDenialBenefit.Text),
-                AmountInDispute = string.IsNullOrEmpty(txtAmountDispute.Text)? 0.00m :Convert.ToDecimal(txtAmountDispute.Text),
-                TreatmentPlanDate = Convert.ToDateTime(txtTreatmentPlanDate.Text),
-                DateDenied = Convert.ToDateTime(txtDateDenied.Text),
+                AmountInDispute = string.IsNullOrEmpty(txtAmountDispute.Text) ? 0.00m : txtAmountDispute.DollarValue,
+                TreatmentPlanDate = string.IsNullOrEmpty(txtTreatmentPlanDate.Text) ? default(DateTime) : Convert.ToDateTime(txtTreatmentPlanDate.Text),
+                DateDenied = string.IsNullOrEmpty(txtTreatmentPlanDate.Text) ? default(DateTime) : Convert.ToDateTime(txtDateDenied.Text),
                 ServiceProvider = TxtServicesProvider.Text,
                 ServiceType = txtServicesType.Text,
                 RangeFrom = RangeFrom.Text,
                 RangeTo = RangeTo.Text,
                 DisputeRelatedTo = txtDisputeRelateTo.Text,
-                LimitationDate = Convert.ToDateTime(txtLimitationDate.Text),
+                LimitationDate = string.IsNullOrEmpty(txtLimitationDate.Text) ? default(DateTime) : Convert.ToDateTime(txtLimitationDate.Text),
                 DenialStatus = denialStatusRepository.GetByDescription(CboxStatus.Text),
-                DenialNotes = txtNotes.Text
+                DenialNotes = txtNotes.Text,
+                
             };
+           
             _DenialRepository.Insert(data,Home.FileManager.File);
         }
         private void btnSaveDenials_Click(object sender, EventArgs e)
         {
-            if (IsEmpty())
+            try
             {
-                MessageBox.Show("Complete all the requested information.");
-                return;
-            }
-            else
-            {
+                if (string.IsNullOrEmpty(CboxDenialBenefit.Text) || string.IsNullOrEmpty(CboxStatus.Text))
+                {
+                    MessageBox.Show("Select a benefit and state.");
+                    return;
+                }
                 Save();
                 MessageBox.Show("the data was saved successfully.");
                 this.DialogResult = DialogResult.OK;
-                
             }
+            catch (Exception _e)
+            {
+                MessageBox.Show(_e.Message);
+            }
+    
         }
         private void txtKeyPress(object sender, KeyPressEventArgs e)
         {
@@ -122,6 +98,5 @@ namespace RRFFilesManager.Controls.FileControls
                 e.Handled = true;
             }
         }
-
     }
 }

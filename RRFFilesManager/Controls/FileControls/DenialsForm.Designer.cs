@@ -56,8 +56,8 @@ namespace RRFFilesManager.Controls.FileControls
             this.label3 = new System.Windows.Forms.Label();
             this.dtpTreatmentPlanDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtAmountDispute = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtAmountDispute = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -151,6 +151,7 @@ namespace RRFFilesManager.Controls.FileControls
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtAmountDispute);
             this.panel2.Controls.Add(this.txtLimitationDate);
             this.panel2.Controls.Add(this.txtDateDenied);
             this.panel2.Controls.Add(this.txtTreatmentPlanDate);
@@ -171,7 +172,6 @@ namespace RRFFilesManager.Controls.FileControls
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.dtpTreatmentPlanDate);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtAmountDispute);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 67);
@@ -366,15 +366,6 @@ namespace RRFFilesManager.Controls.FileControls
             this.label2.TabIndex = 2;
             this.label2.Text = "Treatment plan date";
             // 
-            // txtAmountDispute
-            // 
-            this.txtAmountDispute.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmountDispute.Location = new System.Drawing.Point(211, 20);
-            this.txtAmountDispute.Name = "txtAmountDispute";
-            this.txtAmountDispute.Size = new System.Drawing.Size(123, 26);
-            this.txtAmountDispute.TabIndex = 1;
-            this.txtAmountDispute.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKeyPress);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -384,6 +375,21 @@ namespace RRFFilesManager.Controls.FileControls
             this.label1.Size = new System.Drawing.Size(140, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Amount in Dispute";
+            // 
+            // txtAmountDispute
+            // 
+            this.txtAmountDispute.CurrencySymbol = "$";
+            this.txtAmountDispute.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtAmountDispute.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtAmountDispute.Location = new System.Drawing.Point(211, 20);
+            this.txtAmountDispute.Name = "txtAmountDispute";
+            this.txtAmountDispute.Size = new System.Drawing.Size(123, 26);
+            this.txtAmountDispute.TabIndex = 23;
+            this.txtAmountDispute.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // DenialsForm
             // 
@@ -414,7 +420,6 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAmountDispute;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpDateDenied;
         private System.Windows.Forms.Label label3;
@@ -435,5 +440,6 @@ namespace RRFFilesManager.Controls.FileControls
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.TextBox txtDisputeRelateTo;
         private System.Windows.Forms.Label label9;
+        private Components.CurrencyTextBox txtAmountDispute;
     }
 }

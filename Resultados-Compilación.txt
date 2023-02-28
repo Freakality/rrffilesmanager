@@ -1,0 +1,15 @@
+﻿Operación Compilar iniciada..
+1>------ Operación Compilar iniciada: proyecto: RRFFilesManager.DataAccess, configuración: Debug Any CPU ------
+1>  RRFFilesManager.DataAccess -> C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager.DataAccess\bin\Debug\RRFFilesManager.DataAccess.dll
+2>------ Operación Compilar iniciada: proyecto: RRFFilesManager, configuración: Debug Any CPU ------
+2>  La referencia COM 'AcroPDFLib' es el ensamblado de interoperabilidad del control ActiveX 'AxAcroPDFLib' pero estaba marcada para su vinculación por el compilador con la marca /link. Esta referencia COM se tratará como una referencia y no se vinculará.
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Controls\ArchiveControls\UserControls\DocumentFormUserControl.cs(17,16,17,20): warning CS0114: 'DocumentFormUserControl.Text' oculta el miembro heredado 'UserControl.Text'. Para hacer que el miembro actual invalide esa implementación, agregue la palabra clave override. Si no, agregue la palabra clave new.
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Controls\ContactControls\GroupForm.Designer.cs(146,47,146,51): warning CS0108: 'GroupForm.Name' oculta el miembro heredado 'Control.Name'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Logic\Outlook.cs(45,36,45,37): warning CS0168: La variable 'e' se ha declarado pero nunca se usa
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Logic\Excel.cs(43,30,43,32): warning CS0168: La variable 'ex' se ha declarado pero nunca se usa
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Controls\MasterTaskControls\MasterTaskManager.cs(23,35,23,44): warning CS0169: El campo 'MasterTaskManager.TaskToAdd' nunca se usa
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Controls\ChangeLogViewControls\ChangeLogView.cs(21,35,21,44): warning CS0169: El campo 'ChangeLogView.TaskToAdd' nunca se usa
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Controls\UserManagerControls\UserManagerForm.cs(20,24,20,36): warning CS0414: El campo 'UserManagerForm.passwordhash' está asignado pero su valor nunca se usa
+2>C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\Controls\FileControls\UserControls\FileReviewTabControl.cs(23,22,23,41): warning CS0414: El campo 'FileReviewTabControl.projectedatechanged' está asignado pero su valor nunca se usa
+2>  RRFFilesManager -> C:\Users\migue\source\repos\rrffilesmanager\RRFFilesManager\bin\Debug\RRFFilesManager.exe
+========== Compilar: 2 correctos, 0 incorrectos, 1 actualizados, 0 omitidos ==========

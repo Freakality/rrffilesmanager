@@ -172,6 +172,8 @@ namespace RRFFilesManager
         {
             if (file == null)
                 return;
+            Busqueda();
+            BusquedaDenials();
             isSettingForm = true;
             PeopleControl.SetFile(file);
             ABBinderControl.SetFile(file);
@@ -1133,23 +1135,14 @@ namespace RRFFilesManager
             }
         }
 
-        private void TabControl5_Click(object sender, EventArgs e)
-        {
-            if (ABOverviewTab.SelectedTab == ABLAT)
-            {
-                Busqueda();
-            }
-            else if (ABOverviewTab.SelectedTab == Denials)
-            {
-                BusquedaDenials();
-            }
-        }
-
+ 
         private void BusquedaDenials()
         {
             if (File != null)
             {
                 //ABDenialsDataGridView.DataSource = null;
+                GroupBox31.Enabled = true;
+                ABDenialsDataGridView.Enabled = true;
                 ABDenialsDataGridView.DataSource = _DenialRepository.Search(Home.FileManager.File);
                 ABDenialsDataGridView.Columns["ID"].Visible = false;
                 ABDenialsDataGridView.Columns["File"].Visible = false;
@@ -1157,8 +1150,10 @@ namespace RRFFilesManager
             }
             else
             {
-                ABOverviewTab.SelectedTab = ABBinderTab;
-                TabControl1.SelectedIndex = 0;
+                //ABOverviewTab.SelectedTab = ABBinderTab;
+                //TabControl1.SelectedIndex = 0;
+                GroupBox31.Enabled = false;
+                ABDenialsDataGridView.Enabled = false;
                 MessageBox.Show($"You have to search a file", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
@@ -1669,7 +1664,7 @@ namespace RRFFilesManager
                     _LatData.LATDeadlineToServeFileCaseConfSummary = string.IsNullOrEmpty(Lat2DeadLineToServeFileCaseConfSummaryTxt.Text) ? default(DateTime) : Lat2DeadLineToServeFileCaseConfSummaryDtp.Value;
                     _LatData.LATDeadlineToDeliverProductionstoABCounsel = string.IsNullOrEmpty(Lat2DeadLineToDeliverProductionsToABCounselTxt.Text) ? default(DateTime) : Lat2DeadLineToDeliverProductionsToABCounselDtp.Value;
                     _LatData.LATDeadlineToReceiveABProductions = string.IsNullOrEmpty(Lat2DeadLineToReceiveABProductionsTxt.Text) ? default(DateTime) : Lat2DeadLineToReceiveABProductionsDtp.Value;
-                    _LatData.LATDeadlineToFileAffidavitReportsEtc = string.IsNullOrEmpty(Lat2DeadLineToReceiveAffidavitReportsTxt.Text) ? default(DateTime) : Lat2DeadLineToFileAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToFileAffidavitReportsEtc = string.IsNullOrEmpty(Lat2DeadLineToFileAffidavitReportsTxt.Text) ? default(DateTime) : Lat2DeadLineToFileAffidavitReportsDtp.Value;
                     _LatData.LATDeadlineToReceiveAffidavitReportsEtc = string.IsNullOrEmpty(Lat2DeadLineToReceiveAffidavitReportsTxt.Text) ? default(DateTime) : Lat2DeadLineToReceiveAffidavitReportsDtp.Value;
                     _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = string.IsNullOrEmpty(Lat2DeadLineToFileHearingSubmissionsTxt.Text) ? default(DateTime) : Lat2DeadLineToFileHearingSubmissionsDtp.Value;
                     _LatData.LATDeadlineToReceiveInsurerSubmissions = string.IsNullOrEmpty(Lat2DeadLineToReceiveInsurerTxt.Text) ? default(DateTime) : Lat2DeadLineToReceiveInsurerDtp.Value;
@@ -1710,7 +1705,7 @@ namespace RRFFilesManager
                     _LatData.LATDeadlineToDeliverProductionstoABCounsel = string.IsNullOrEmpty(Lat3DeadLineToDeliverProductionsToABCounselTxt.Text) ? default(DateTime) : Lat3DeadLineToDeliverProductionsToABCounselDtp.Value;
                     _LatData.LATDeadlineToReceiveABProductions = string.IsNullOrEmpty(Lat3DeadLineToReceiveABProductionsTxt.Text) ? default(DateTime) : Lat3DeadLineToReceiveABProductionsDtp.Value;
                     _LatData.LATDeadlineToFileAffidavitReportsEtc = string.IsNullOrEmpty(Lat3DeadLineToFileAffidavitReportsTxt.Text) ? default(DateTime) : Lat3DeadLineToFileAffidavitReportsDtp.Value;
-                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = string.IsNullOrEmpty(Lat3DeadLineToFileAffidavitReportsTxt.Text) ? default(DateTime) : Lat3DeadLineToReceiveAffidavitReportsDtp.Value;
+                    _LatData.LATDeadlineToReceiveAffidavitReportsEtc = string.IsNullOrEmpty(Lat3DeadLineToReceiveAffidavitReportsTxt.Text) ? default(DateTime) : Lat3DeadLineToReceiveAffidavitReportsDtp.Value;
                     _LatData.LATDeadlineToFileHearingSubmissionsAndOrBriefs = string.IsNullOrEmpty(Lat3DeadLineToFileHearingSubmissionsTxt.Text) ? default(DateTime) : Lat3DeadLineToFileHearingSubmissionsDtp.Value;
                     _LatData.LATDeadlineToReceiveInsurerSubmissions = string.IsNullOrEmpty(Lat3DeadLineToReceiveInsurerTxt.Text) ? default(DateTime) : Lat3DeadLineToReceiveInsurerDtp.Value;
                     _LatData.LATDeadlineForReplySubmissionsOfTheApplicant = string.IsNullOrEmpty(Lat3DeadLineForReplaySubmissionsTxt.Text) ? default(DateTime) : Lat3DeadLineForReplaySubmissionsDtp.Value;
@@ -1902,9 +1897,9 @@ namespace RRFFilesManager
             if (Home.FileManager.File == null)
             {
                 TabControl4.Enabled = false;
-                TabControl1.SelectedIndex = 0;
-                ABOverviewTab.SelectedTab = ABBinderTab;
-                MessageBox.Show("You have to select a file!");
+                //TabControl1.SelectedIndex = 0;
+                //ABOverviewTab.SelectedTab = ABBinderTab;
+                //MessageBox.Show("You have to select a file!");
                 return;
             }
             else
@@ -1931,22 +1926,50 @@ namespace RRFFilesManager
             if (_latDataRepository.List().Where(t => t.FileId == File.ID).ToList().Count == 0)
             {
                 _ClearDataLat();
-                MessageBox.Show("No lats available!");
+                //MessageBox.Show("No lats available!");
             }
             if (_latDataRepository.Search(Home.FileManager.File, 1).ToList().Count > 0)
             {
                 var latRepo = _latDataRepository.List().Single(t => t.FileId == File.ID && t.LATNumber == 1);
-                ActualDateLatFiledTxt.Text = latRepo.LATActualDateFiled == default(DateTime)?"": latRepo.LATActualDateFiled.ToShortDateString();
-                FiledDateTxt.Text = ActualDateLatFiledTxt.Text;
-                
-                LatCaseConfDateTxt.Text = latRepo.LATCaseConfDate == default(DateTime)?"":latRepo.LATCaseConfDate.ToShortDateString();
-                CaseConfTxt.Text = LatCaseConfDateTxt.Text;
 
-                HearingStarDateTxt.Text = latRepo.LATHearingDate == default(DateTime) ? "" : latRepo.LATHearingDate.ToShortDateString();
-                HearingDateTxt.Text = HearingStarDateTxt.Text;
+                if (latRepo.LATActualDateFiled != default(DateTime))
+                {
+                    ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                    LatFiledDtp_ValueChanged(ActualDateLatFiledDtp, evento);
+                }
+                else
+                {
+                    ActualDateLatFiledTxt.Text = "";
+                }
 
-                DateLatSettledClosedtTxt.Text = latRepo.LATDateSettled == default(DateTime) ? "" : latRepo.LATDateSettled.ToShortDateString();
-                DateSettledTxt.Text = DateLatSettledClosedtTxt.Text;
+                if (latRepo.LATCaseConfDate != default(DateTime))
+                {
+                    LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                    LatFiledDtp_ValueChanged(LatCaseConfDateDtp, evento);
+                }
+                else
+                {
+                    LatCaseConfDateTxt.Text = "";
+                }
+                if (latRepo.LATHearingDate != default(DateTime))
+                {
+                    HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                    LatFiledDtp_ValueChanged(HearingStarDateDtp, evento);
+                }
+                else
+                {
+                    HearingStarDateTxt.Text = "";
+                }
+
+                if (latRepo.LATDateSettled != default(DateTime))
+                {
+                    DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+                    LatFiledDtp_ValueChanged(DateLatSettledClosedDtp, evento);
+                }
+                else
+                {
+                    DateLatSettledClosedtTxt.Text = "";
+                }
 
                 if (latRepo.LATDueDateToDiscussPotentialLAT != default(DateTime))
                 {
@@ -2011,7 +2034,7 @@ namespace RRFFilesManager
                 }
                 else
                 {
-                    Lat2DeadLineToDeliverProductionsToABCounselTxt.Text = "";
+                    DeadLineToDeliverProductionsToABCounselTxt.Text = "";
                 }
 
                 if (latRepo.LATDeadlineToReceiveABProductions != default(DateTime))
@@ -2021,7 +2044,7 @@ namespace RRFFilesManager
                 }
                 else
                 {
-                    Lat2DeadLineToReceiveABProductionsTxt.Text = "";
+                    DeadLineToReceiveABProductionsTxt.Text = "";
                 }
                 if (latRepo.LATDeadlineToFileAffidavitReportsEtc!= default(DateTime))
                 {
@@ -2102,19 +2125,47 @@ namespace RRFFilesManager
             if (_latDataRepository.Search(File, 2).ToList().Count > 0)
             {
                 var latRepo = _latDataRepository.List().Single(t => t.FileId == File.ID && t.LATNumber == 2);
-                Lat2ActualDateLatFiledTxt.Text = latRepo.LATActualDateFiled == default(DateTime)? "" : latRepo.LATActualDateFiled.ToShortDateString();
-                FiledDateLat2.Text = Lat2ActualDateLatFiledTxt.Text;
 
-                Lat2LatCaseConfDateTxt.Text = latRepo.LATCaseConfDate == default(DateTime) ? "":latRepo.LATCaseConfDate.ToShortDateString();
-                CaseConfLat2.Text = Lat2LatCaseConfDateTxt.Text;
+                if (latRepo.LATActualDateFiled != default(DateTime))
+                {
+                    Lat2ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                    LatFiledDtp_ValueChanged(Lat2ActualDateLatFiledDtp, evento);
+                }
+                else
+                {
+                    Lat2ActualDateLatFiledTxt.Text = "";
+                }
 
-                Lat2HearingStarDateTxt.Text = latRepo.LATHearingDate==default(DateTime)?"": latRepo.LATHearingDate.ToShortDateString();
-                HearingDateTxt.Text = Lat2HearingStarDateTxt.Text;
+                if (latRepo.LATCaseConfDate != default(DateTime))
+                {
+                    Lat2LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                    LatFiledDtp_ValueChanged(Lat2LatCaseConfDateDtp, evento);
+                }
+                else
+                {
+                    Lat2LatCaseConfDateTxt.Text = "";
+                }
+                if (latRepo.LATHearingDate != default(DateTime))
+                {
+                    Lat2HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                    LatFiledDtp_ValueChanged(Lat2HearingStarDateDtp, evento);
+                }
+                else
+                {
+                    Lat2HearingStarDateTxt.Text = "";
+                }
 
-                Lat2DateLatSettledClosedTxt.Text = latRepo.LATDateSettled == default(DateTime) ? "" : latRepo.LATDateSettled.ToShortDateString();
-                DateSettledLat2.Text = Lat2DateLatSettledClosedTxt.Text;
+                if (latRepo.LATDateSettled != default(DateTime))
+                {
+                    Lat2DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+                    LatFiledDtp_ValueChanged(Lat2DateLatSettledClosedDtp, evento);
+                }
+                else
+                {
+                    Lat2DateLatSettledClosedTxt.Text = "";
+                }
 
-
+  
                 if (latRepo.LATDueDateToDiscussPotentialLAT != default(DateTime))
                 {
                     Lat2DueDateToDiscussPotenctialLatApplDtp.Value = latRepo.LATDueDateToDiscussPotentialLAT;
@@ -2149,7 +2200,7 @@ namespace RRFFilesManager
                 }
                 else
                 {
-                    Lat2ActualDateLatServedOnInsurerDtp.Text = "";
+                    Lat2ActualDateLatServedOnInsurerTxt.Text = "";
                 }
                 if (latRepo.LATInsurersResponseReceived != default(DateTime))
                 {
@@ -2176,7 +2227,7 @@ namespace RRFFilesManager
                 }
                 else
                 {
-                    Lat2DeadLineToDeliverProductionsToABCounselDtp.Text = "";
+                    Lat2DeadLineToDeliverProductionsToABCounselTxt.Text = "";
                 }
                 if (latRepo.LATDeadlineToReceiveABProductions != default(DateTime))
                 {
@@ -2196,7 +2247,7 @@ namespace RRFFilesManager
                 {
                     Lat2DeadLineToFileAffidavitReportsTxt.Text = "";
                 }
-                if (latRepo.LATDeadlineToFileAffidavitReportsEtc != default(DateTime))
+                if (latRepo.LATDeadlineToReceiveAffidavitReportsEtc!= default(DateTime))
                 {
                     Lat2DeadLineToReceiveAffidavitReportsDtp.Value = latRepo.LATDeadlineToReceiveAffidavitReportsEtc;
                     LatFiledDtp_ValueChanged(Lat2DeadLineToReceiveAffidavitReportsDtp, evento);
@@ -2267,17 +2318,44 @@ namespace RRFFilesManager
             {
                 var latRepo = _latDataRepository.List().Single(t => t.FileId == File.ID && t.LATNumber == 3);
 
-                Lat3ActualDateLatFiledTxt.Text = latRepo.LATActualDateFiled == default(DateTime) ? "":latRepo.LATActualDateFiled.ToShortDateString();
-                FiledDateLat3.Text = Lat3ActualDateLatFiledTxt.Text;
+                if (latRepo.LATActualDateFiled != default(DateTime))
+                {
+                    Lat3ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                    LatFiledDtp_ValueChanged(Lat3ActualDateLatFiledDtp, evento);
+                }
+                else
+                {
+                    Lat3ActualDateLatFiledTxt.Text = "";
+                }
 
-                Lat3LatCaseConfDateTxt.Text = latRepo.LATCaseConfDate == default(DateTime) ? "" : latRepo.LATCaseConfDate.ToShortDateString();
-                CaseConfLat3.Text = Lat3LatCaseConfDateTxt.Text;
+                if (latRepo.LATCaseConfDate != default(DateTime))
+                {
+                    Lat3LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                    LatFiledDtp_ValueChanged(Lat3LatCaseConfDateDtp, evento);
+                }
+                else
+                {
+                    Lat3LatCaseConfDateTxt.Text = "";
+                }
+                if (latRepo.LATHearingDate != default(DateTime))
+                {
+                    Lat3HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                    LatFiledDtp_ValueChanged(Lat3HearingStarDateDtp, evento);
+                }
+                else
+                {
+                    Lat3HearingStarDateTxt.Text = "";
+                }
 
-                Lat3HearingStarDateTxt.Text = latRepo.LATHearingDate == default(DateTime) ? "" : latRepo.LATHearingDate.ToShortDateString();
-                HearingDateLat3.Text = Lat3HearingStarDateTxt.Text;
-
-                Lat3DateLatSettledClosedTxt.Text = latRepo.LATDateSettled == default(DateTime) ? "" : latRepo.LATDateSettled.ToShortDateString();
-                DateSettledLat3.Text = Lat3DateLatSettledClosedTxt.Text;
+                if (latRepo.LATDateSettled != default(DateTime))
+                {
+                    Lat3DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+                    LatFiledDtp_ValueChanged(Lat3DateLatSettledClosedDtp, evento);
+                }
+                else
+                {
+                    Lat3DateLatSettledClosedTxt.Text = "";
+                }
 
                 if (latRepo.LATDueDateToDiscussPotentialLAT != default(DateTime))
                 {
@@ -2430,17 +2508,45 @@ namespace RRFFilesManager
             if (_latDataRepository.Search(File, 4).ToList().Count > 0)
             {
                 var latRepo = _latDataRepository.List().Single(t => t.FileId == File.ID && t.LATNumber == 4);
-                Lat4ActualDateLatFiledTxt.Text = latRepo.LATActualDateFiled == default(DateTime) ? "" : latRepo.LATActualDateFiled.ToShortDateString();
-                FiledDateLat4.Text = Lat4ActualDateLatFiledTxt.Text;
 
-                Lat4LatCaseConfDateTxt.Text = latRepo.LATCaseConfDate == default(DateTime) ? "" : latRepo.LATCaseConfDate.ToShortDateString();
-                CaseConfLat4.Text = Lat4LatCaseConfDateTxt.Text;
+                if (latRepo.LATActualDateFiled != default(DateTime))
+                {
+                    Lat4ActualDateLatFiledDtp.Value = latRepo.LATActualDateFiled;
+                    LatFiledDtp_ValueChanged(Lat4ActualDateLatFiledDtp, evento);
+                }
+                else
+                {
+                    Lat4ActualDateLatFiledTxt.Text = "";
+                }
 
-                Lat4HearingStarDateTxt.Text = latRepo.LATHearingDate == default(DateTime) ? "" : latRepo.LATHearingDate.ToShortDateString();
-                HearingDateLat4.Text = Lat4HearingStarDateTxt.Text;
+                if (latRepo.LATCaseConfDate != default(DateTime))
+                {
+                    Lat4LatCaseConfDateDtp.Value = latRepo.LATCaseConfDate;
+                    LatFiledDtp_ValueChanged(Lat4LatCaseConfDateDtp, evento);
+                }
+                else
+                {
+                    Lat4LatCaseConfDateTxt.Text = "";
+                }
+                if (latRepo.LATHearingDate != default(DateTime))
+                {
+                    Lat4HearingStarDateDtp.Value = latRepo.LATHearingDate;
+                    LatFiledDtp_ValueChanged(Lat4HearingStarDateDtp, evento);
+                }
+                else
+                {
+                    Lat4HearingStarDateTxt.Text = "";
+                }
 
-                Lat4DateLatSettledClosedTxt.Text = latRepo.LATDateSettled == default(DateTime) ? "" : latRepo.LATDateSettled.ToShortDateString();
-                HearingDateLat4.Text = Lat4DateLatSettledClosedTxt.Text;
+                if (latRepo.LATDateSettled != default(DateTime))
+                {
+                    Lat4DateLatSettledClosedDtp.Value = latRepo.LATDateSettled;
+                    LatFiledDtp_ValueChanged(Lat4DateLatSettledClosedDtp, evento);
+                }
+                else
+                {
+                    Lat4DateLatSettledClosedTxt.Text = "";
+                }
 
                 if (latRepo.LATDueDateToDiscussPotentialLAT != default(DateTime))
                 {
@@ -3097,11 +3203,7 @@ namespace RRFFilesManager
 
         private void btnNewDenials_Click(object sender, EventArgs e)
         {
-            if (Home.FileManager.File == null)
-            {
-                MessageBox.Show($"You have to search a file", "Wait", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
-            }
+            
             using (DenialsForm _Denials = new DenialsForm())
             {
                 if (_Denials.ShowDialog() == DialogResult.OK)
