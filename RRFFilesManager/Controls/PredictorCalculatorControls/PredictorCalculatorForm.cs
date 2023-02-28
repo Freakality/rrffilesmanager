@@ -83,7 +83,7 @@ namespace RRFFilesManager.Controls.PredictorCalculatorControls
         {
             comissionSubTypeComboBox1.MatterType = matterTypeComboBox1.MatterType;
         }
-
+        
         private void ContingencyFeeTypeCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             ContingencyFeeCB.Visible = ContingencyFeeTypeCB.Text == "Choose CF%";
