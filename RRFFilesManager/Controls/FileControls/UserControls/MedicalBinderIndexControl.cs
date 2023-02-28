@@ -104,7 +104,7 @@ namespace RRFFilesManager.Controls.FileControls
                     wordApp.DisplayAlerts = WdAlertLevel.wdAlertsNone;
                     if (!System.IO.File.Exists(DOCUMENT_TEMPLATE_PATH))
                         throw new Exception($"{DOCUMENT_TEMPLATE_PATH} not found.");
-                    var document = wordApp?.Documents.Open(FileName: DOCUMENT_TEMPLATE_PATH, ReadOnly: true);
+                    var document = wordApp?.Documents.Open(FileName: DOCUMENT_TEMPLATE_PATH);
                     try
                     {
                         wordApp.Visible = false;
@@ -116,9 +116,10 @@ namespace RRFFilesManager.Controls.FileControls
                             document.SaveAs2(FileName: filePath, FileFormat: WdSaveFormat.wdFormatPDF);
                         }
                     }
-                    catch
+                    catch(Exception ex)
                     {
-
+                        MessageBox.Show($"Error.\n\nError message: {ex.Message}\n\n" +
+                        $"Details:\n\n{ex.StackTrace}");
                     }
                     finally
                     {

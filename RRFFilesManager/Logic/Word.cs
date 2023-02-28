@@ -50,6 +50,7 @@ namespace RRFFilesManager.Logic
             Range range = document.Range(0, 0);
             if (range.Find.Execute("$$$MBIReport$$$"))
             {
+                ReplaceAll(document, "$$$MBIReport$$$", "");
                 var indexCategories = archives.Select(s => s.DocumentType.IndexCategory).Distinct();
                 document.Tables.Add(range, archives.Count() + indexCategories.Count(), 3);
                 var table = document.Tables[1];
