@@ -230,9 +230,6 @@
             this.SpecialDamagesDataGridView = new System.Windows.Forms.DataGridView();
             this.ClientNotes = new System.Windows.Forms.TabPage();
             this.ClientNotesDataGridView = new System.Windows.Forms.DataGridView();
-            this.DgColumn_DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgColumn_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SaveNoteButton = new System.Windows.Forms.Button();
             this.AddNotesRowButton = new System.Windows.Forms.Button();
@@ -1041,6 +1038,10 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
             this.LimDateTextBox = new System.Windows.Forms.TextBox();
+            this.DgColumn_Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TBoxTrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxPreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
@@ -3237,6 +3238,7 @@
             this.ClientNotesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.ClientNotesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientNotesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgColumn_Origin,
             this.DgColumn_DateTime,
             this.DgColumn_Staff,
             this.DgColumn_Description});
@@ -3247,29 +3249,6 @@
             this.ClientNotesDataGridView.RowHeadersVisible = false;
             this.ClientNotesDataGridView.Size = new System.Drawing.Size(961, 333);
             this.ClientNotesDataGridView.TabIndex = 3;
-            // 
-            // DgColumn_DateTime
-            // 
-            this.DgColumn_DateTime.DataPropertyName = "Date";
-            this.DgColumn_DateTime.FillWeight = 35F;
-            this.DgColumn_DateTime.HeaderText = "DateTime";
-            this.DgColumn_DateTime.Name = "DgColumn_DateTime";
-            this.DgColumn_DateTime.ReadOnly = true;
-            // 
-            // DgColumn_Staff
-            // 
-            this.DgColumn_Staff.DataPropertyName = "Lawyer";
-            this.DgColumn_Staff.FillWeight = 35F;
-            this.DgColumn_Staff.HeaderText = "Staff";
-            this.DgColumn_Staff.Name = "DgColumn_Staff";
-            this.DgColumn_Staff.ReadOnly = true;
-            // 
-            // DgColumn_Description
-            // 
-            this.DgColumn_Description.DataPropertyName = "Description";
-            this.DgColumn_Description.HeaderText = "Description";
-            this.DgColumn_Description.Name = "DgColumn_Description";
-            this.DgColumn_Description.ReadOnly = true;
             // 
             // panel6
             // 
@@ -3529,10 +3508,6 @@
             // 
             this.Cbb_TaskLogBusinessProcessFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbb_TaskLogBusinessProcessFilter.FormattingEnabled = true;
-            this.Cbb_TaskLogBusinessProcessFilter.Items.AddRange(new object[] {
-            "All",
-            "To Do",
-            "Done"});
             this.Cbb_TaskLogBusinessProcessFilter.Location = new System.Drawing.Point(669, 23);
             this.Cbb_TaskLogBusinessProcessFilter.Name = "Cbb_TaskLogBusinessProcessFilter";
             this.Cbb_TaskLogBusinessProcessFilter.Size = new System.Drawing.Size(266, 25);
@@ -3552,10 +3527,6 @@
             // 
             this.Cbb_TaskLogFilterLawyers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbb_TaskLogFilterLawyers.FormattingEnabled = true;
-            this.Cbb_TaskLogFilterLawyers.Items.AddRange(new object[] {
-            "All",
-            "To Do",
-            "Done"});
             this.Cbb_TaskLogFilterLawyers.Location = new System.Drawing.Point(265, 22);
             this.Cbb_TaskLogFilterLawyers.Name = "Cbb_TaskLogFilterLawyers";
             this.Cbb_TaskLogFilterLawyers.Size = new System.Drawing.Size(266, 25);
@@ -4065,7 +4036,7 @@
             this.TabControl3.Location = new System.Drawing.Point(3, 3);
             this.TabControl3.Name = "TabControl3";
             this.TabControl3.SelectedIndex = 0;
-            this.TabControl3.Size = new System.Drawing.Size(1386, 540);
+            this.TabControl3.Size = new System.Drawing.Size(1386, 536);
             this.TabControl3.TabIndex = 0;
             // 
             // TabPage14
@@ -4082,7 +4053,7 @@
             this.TabPage14.Location = new System.Drawing.Point(4, 26);
             this.TabPage14.Name = "TabPage14";
             this.TabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage14.Size = new System.Drawing.Size(1378, 510);
+            this.TabPage14.Size = new System.Drawing.Size(1378, 506);
             this.TabPage14.TabIndex = 0;
             this.TabPage14.Text = "Settlement/Mediation Resolution 1";
             // 
@@ -4333,7 +4304,7 @@
             this.TabPage15.Location = new System.Drawing.Point(4, 26);
             this.TabPage15.Name = "TabPage15";
             this.TabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage15.Size = new System.Drawing.Size(1378, 510);
+            this.TabPage15.Size = new System.Drawing.Size(1378, 506);
             this.TabPage15.TabIndex = 1;
             this.TabPage15.Text = "Settlement/Mediation Resolution 2";
             // 
@@ -5752,17 +5723,13 @@
             this.ABOStatementDateTextBox.Location = new System.Drawing.Point(145, 3);
             this.ABOStatementDateTextBox.Name = "ABOStatementDateTextBox";
             this.ABOStatementDateTextBox.ReadOnly = true;
-            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(131, 23);
+            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(130, 23);
             this.ABOStatementDateTextBox.TabIndex = 22;
             // 
             // ABOStatementDateLabel
             // 
             this.ABOStatementDateLabel.AutoSize = true;
-            this.ABOStatementDateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOStatementDateLabel.Location = new System.Drawing.Point(3, 0);
-            this.ABOStatementDateLabel.Name = "ABOStatementDateLabel";
             this.ABOStatementDateLabel.Size = new System.Drawing.Size(136, 17);
-            this.ABOStatementDateLabel.TabIndex = 0;
             this.ABOStatementDateLabel.Text = "Statement Date";
             // 
             // ABOLastUpdatePanel
@@ -11724,6 +11691,36 @@
             this.LimDateTextBox.Size = new System.Drawing.Size(132, 23);
             this.LimDateTextBox.TabIndex = 7;
             // 
+            // DgColumn_Origin
+            // 
+            this.DgColumn_Origin.FillWeight = 35F;
+            this.DgColumn_Origin.HeaderText = "Origin";
+            this.DgColumn_Origin.Name = "DgColumn_Origin";
+            this.DgColumn_Origin.ReadOnly = true;
+            // 
+            // DgColumn_DateTime
+            // 
+            this.DgColumn_DateTime.DataPropertyName = "Date";
+            this.DgColumn_DateTime.FillWeight = 35F;
+            this.DgColumn_DateTime.HeaderText = "DateTime";
+            this.DgColumn_DateTime.Name = "DgColumn_DateTime";
+            this.DgColumn_DateTime.ReadOnly = true;
+            // 
+            // DgColumn_Staff
+            // 
+            this.DgColumn_Staff.DataPropertyName = "Lawyer";
+            this.DgColumn_Staff.FillWeight = 35F;
+            this.DgColumn_Staff.HeaderText = "Staff";
+            this.DgColumn_Staff.Name = "DgColumn_Staff";
+            this.DgColumn_Staff.ReadOnly = true;
+            // 
+            // DgColumn_Description
+            // 
+            this.DgColumn_Description.DataPropertyName = "Description";
+            this.DgColumn_Description.HeaderText = "Description";
+            this.DgColumn_Description.Name = "DgColumn_Description";
+            this.DgColumn_Description.ReadOnly = true;
+            // 
             // TBoxTrialDate
             // 
             this.TBoxTrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -12760,9 +12757,6 @@
         private System.Windows.Forms.DateTimePicker Dtp_To;
         private System.Windows.Forms.DateTimePicker Dtp_From;
         private System.Windows.Forms.Label label277;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_DateTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Staff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Description;
         private System.Windows.Forms.Label label278;
         internal System.Windows.Forms.Button ExportToExcelButton;
         private Controls.SharedControls.CustomControls.ComissionSubTypeComboBox CurrentFileStatusComboBox;
@@ -13266,6 +13260,10 @@
         internal System.Windows.Forms.Button PolicyParticularsSaveButton;
         private System.Windows.Forms.GroupBox PPOptionalBenefitsPurchasedDetailsGroupBox;
         private System.Windows.Forms.TextBox PPOptionalBenefitsPurchasedDetailsTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Origin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_DateTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Staff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Description;
     }
 }
 

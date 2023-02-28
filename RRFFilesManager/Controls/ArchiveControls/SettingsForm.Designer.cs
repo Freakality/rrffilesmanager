@@ -33,7 +33,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.InputFolderTextBox = new System.Windows.Forms.TextBox();
             this.Remove = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.InputFolders = new System.Windows.Forms.ListBox();
@@ -93,7 +92,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.InputFolderTextBox);
             this.panel1.Controls.Add(this.Remove);
             this.panel1.Controls.Add(this.Add);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -102,14 +100,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(788, 25);
             this.panel1.TabIndex = 2;
-            // 
-            // InputFolderTextBox
-            // 
-            this.InputFolderTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InputFolderTextBox.Location = new System.Drawing.Point(0, 0);
-            this.InputFolderTextBox.Name = "InputFolderTextBox";
-            this.InputFolderTextBox.Size = new System.Drawing.Size(638, 23);
-            this.InputFolderTextBox.TabIndex = 3;
             // 
             // Remove
             // 
@@ -200,7 +190,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -212,7 +201,6 @@ namespace RRFFilesManager.Controls.ArchiveControls
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox InputFolderTextBox;
         private System.Windows.Forms.Button Remove;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.ListBox InputFolders;

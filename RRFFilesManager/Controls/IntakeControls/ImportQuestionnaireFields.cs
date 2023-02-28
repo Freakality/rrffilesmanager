@@ -18,6 +18,7 @@ namespace RRFFilesManager.Controls.IntakeControls
     {
         BindingList<ImporterItemRow> Fields = new BindingList<ImporterItemRow>();
         BindingList<ImporterItemRow> OtherFields = new BindingList<ImporterItemRow>();
+        List<ImporterItemFieldValue> AllFields;
         private readonly IIntakeRepository _intakeRepository;
         public ImportQuestionnaireFields()
         {
@@ -28,7 +29,8 @@ namespace RRFFilesManager.Controls.IntakeControls
 
         public void SetFields(List<ImporterItemFieldValue> fields)
         {
-            foreach(var field in fields)
+            AllFields = fields;
+            foreach (var field in fields)
             {
                 if (string.IsNullOrWhiteSpace(field.FormValue))
                     continue;
@@ -44,6 +46,8 @@ namespace RRFFilesManager.Controls.IntakeControls
 
         private void fieldsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+            
 
         }
 
@@ -60,9 +64,17 @@ namespace RRFFilesManager.Controls.IntakeControls
                 var importerItemFieldValue = field.GetImporterItemFieldValue();
                 Utils.Utils.SetPropValueFromPropertyPath(Home.IntakeForm.Intake, importerItemFieldValue.Mapper.FileFieldName, field.QuestionnaireValue);
             }
+            ImportCustomsFields();
             Home.IntakeForm.Intake.Notes = OtherNotesRTB.Text;
             _intakeRepository.Update(Home.IntakeForm.Intake);
             this.Close();
+        }
+
+        private void ImportCustomsFields()
+        {
+            var intake = Home.IntakeForm.Intake;
+            var provinceField = AllFields.FirstOrDefault(s => s.Mapper.FormFieldName == "Province");
+            //intake.Clien
         }
 
         private void SelectAllButton_Click(object sender, EventArgs e)

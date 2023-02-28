@@ -132,18 +132,8 @@ namespace RRFFilesManager.Utils
                     );
             if (result == DialogResult.Yes)
             {
-                var newSourceFileName = GetFileNameFromFindFileDialog();
+                var newSourceFileName = Utils.GetFileNameFromFindFileDialog();
                 return newSourceFileName;
-            }
-            return null;
-        }
-        public static string GetFileNameFromFindFileDialog()
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK) // Test result.
-            {
-                return openFileDialog1.FileName;
             }
             return null;
         }
