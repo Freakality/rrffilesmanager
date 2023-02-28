@@ -38,7 +38,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
 
             if (Dg_Data.Rows.Count == 0)
             {
-                MessageBox.Show("¡There is no information between the selected dates!",
+                MessageBox.Show("There is no information between the selected dates.",
                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -88,7 +88,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
             List<string> FieldsList = new List<string>();
             if (Chl_Columns.CheckedItems.Count == 0)
             {
-                MessageBox.Show("¡You must mark at least one field by which to group the information!","Stop",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                MessageBox.Show("You must mark at least one field by which to group the information.","Stop",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 return;
             }
             for (int i = 0; i < Chl_Columns.CheckedItems.Count; i++)
@@ -136,7 +136,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
         {
             if (Dg_Data.DataSource == null) 
             {
-                MessageBox.Show($"¡There is no information to export!","Stop",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                MessageBox.Show($"There is no information to export.","Stop",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 return;
             }
             var wb = new XLWorkbook();
@@ -153,7 +153,7 @@ namespace RRFFilesManager.Controls.ReportsControls.UserControls
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     wb.SaveAs(saveFileDialog.FileName);
-                    MessageBox.Show("¡successful export!", "Succes",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Data has been exported succesfully.", "Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     Utils.Utils.OpenMicrosoftExcel(saveFileDialog.FileName);
                 }
             }

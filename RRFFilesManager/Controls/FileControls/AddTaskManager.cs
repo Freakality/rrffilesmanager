@@ -122,6 +122,7 @@ namespace RRFFilesManager.Controls.FileControls
                 {
                     _fileTaskRepository.AddTask(File, t, ts);
                 }
+                MessageBox.Show($"All '{tc.Description}' tasks added to File '{File}'");
             }
         }
 

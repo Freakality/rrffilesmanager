@@ -1054,7 +1054,7 @@ namespace RRFFilesManager
                 clientNote.Description = description;
 
                 _clientNoteRepository.Insert(clientNote,File);
-                MessageBox.Show("note successfully saved!","Succes",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Note successfully saved.","Succes",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (Cbb_Staff.Items.Count > 0)
                 {
                     Cbb_Staff.SelectedIndex = 0;
@@ -1063,7 +1063,7 @@ namespace RRFFilesManager
             }
             else
             {
-                MessageBox.Show("¡There is no information to save!", "No info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There is no information to save.", "No info", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1204,7 +1204,7 @@ namespace RRFFilesManager
         {
             if (ClientNotesDataGridView.Rows.Count == 0)
             {
-                MessageBox.Show("¡There is no information to export!","No info",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("There is no information to export.","No info",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
 
@@ -1230,7 +1230,7 @@ namespace RRFFilesManager
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     wb.SaveAs(saveFileDialog.FileName);
-                    MessageBox.Show("¡successful export!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data has been successfully exported.", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Utils.Utils.OpenMicrosoftExcel(saveFileDialog.FileName);
                 }
             }
