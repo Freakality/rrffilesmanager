@@ -36,7 +36,7 @@ namespace RRFFilesManager.Utils
         {
             if (file == null)
                 throw new Exception("File can not be null");
-            var clientFolderName = $"{file.Client.ID} - {file.Client.FirstName} {file.Client.LastName}";
+            var clientFolderName = $"{file.Client.LastName}, {file.Client.FirstName} - {file.Client.ID}";
             var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], "Not Retained");
             path = Path.Combine(path, $"CYA - {file.MatterType.Description}");
             path = Path.Combine(path, clientFolderName);
