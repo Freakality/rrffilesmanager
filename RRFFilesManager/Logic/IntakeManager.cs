@@ -26,7 +26,7 @@ namespace RRFFilesManager.Logic
         {
             if (lawyer == null)
                 return 999999999;
-            var lastFileNumber = _fileRepository.GetLastFile()?.FileNumber;
+            var lastFileNumber = _fileRepository.GetLastFile(lawyer.ID)?.FileNumber;
             if(lastFileNumber == null)
                 return int.Parse($"{DateTime.Now.Year}{lawyer.Number?.ToString() ?? ""}001");
             var lastNumber = int.Parse(lastFileNumber.ToString()?.Substring(6, 3));

@@ -79,11 +79,11 @@ namespace RRFFilesManager.DataAccess
             return query.ToList();
         }
 
-        public  File GetLastFile(int? clientId = null)
+        public File GetLastFile(int? lawyerId, int? clientId = null)
         {
             var query = _context.Files.OrderByDescending(s => s.ID);
-            if (clientId != null)
-                query = (IOrderedQueryable<File>)query.Where(s => s.Client != null && s.Client.ID == clientId.Value);
+            if (lawyerId != null)
+                query = (IOrderedQueryable<File>)query.Where(s => s.FileLawyer.ID == lawyerId);
             return query.FirstOrDefault();
         }
 
