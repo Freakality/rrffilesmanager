@@ -15,7 +15,7 @@ namespace RRFFilesManager.DataAccess.Abstractions
         File GetById(int fileId);
         IEnumerable<File> List();
         IEnumerable<File> Search(string searchText, FileStatus fileStatus, bool? hold = null, int? take = null);
-        File GetLastFile(int? lawyerId, int? clientId = null);
+        File GetLastFile(int? lawyerId, int year, int? clientId = null);
         void AddFileContact(File file, Contact contact);
         void RemoveFileContact(File file, Contact contact);
         /*void AddTask(File file, Task task, TaskState taskState,int Days = 0);

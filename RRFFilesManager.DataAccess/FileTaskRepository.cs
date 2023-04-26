@@ -132,7 +132,7 @@ namespace RRFFilesManager.DataAccess
             }
             else
             {
-                if (task.Dependencies.Count > 0)
+                /*if (task.Dependencies.Count > 0)
                 {
                     foreach (TaskDependency taskDependency in task.Dependencies)
                     {
@@ -141,7 +141,7 @@ namespace RRFFilesManager.DataAccess
                             return;
                         }
                     }
-                }
+                }*/
                 
                 var filetask = new FileTask
                 {

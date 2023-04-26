@@ -15,6 +15,7 @@ namespace RRFFilesManager.Abstractions
         public virtual MatterType MatterType { get; set; }
         public DateTime DateOfCall { get; set; }
         public DateTime DateOFLoss { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
         public virtual Lawyer StaffInterviewer { get; set; }
         public virtual HearAboutUs HowHear { get; set; }
         public virtual Lawyer FileLawyer { get; set; }

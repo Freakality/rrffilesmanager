@@ -79,9 +79,9 @@ namespace RRFFilesManager.DataAccess
             return query.ToList();
         }
 
-        public File GetLastFile(int? lawyerId, int? clientId = null)
+        public File GetLastFile(int? lawyerId, int year, int? clientId = null)
         {
-            var query = _context.Files.OrderByDescending(s => s.ID);
+            var query = _context.Files.Where(file => file.DateCreated.Year == year).OrderByDescending(s => s.ID);
             if (lawyerId != null)
                 query = (IOrderedQueryable<File>)query.Where(s => s.FileLawyer.ID == lawyerId);
             return query.FirstOrDefault();

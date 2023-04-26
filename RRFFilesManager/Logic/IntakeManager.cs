@@ -26,12 +26,13 @@ namespace RRFFilesManager.Logic
         {
             if (lawyer == null)
                 return 999999999;
-            var lastFileNumber = _fileRepository.GetLastFile(lawyer.ID)?.FileNumber;
+            var lastFileNumber = _fileRepository.GetLastFile(lawyer.ID, DateTime.Now.Year)?.FileNumber;
+            var firstFileNumber = $"{DateTime.Now.Year}{lawyer.Number?.ToString().PadLeft(2, '0') ?? ""}";
             if(lastFileNumber == null)
-                return int.Parse($"{DateTime.Now.Year}{lawyer.Number?.ToString() ?? ""}001");
+                return int.Parse($"{firstFileNumber}001");
             var lastNumber = int.Parse(lastFileNumber.ToString()?.Substring(6, 3));
             var newNumber = (lastNumber + 1).ToString().PadLeft(3, '0');
-            return int.Parse($"{DateTime.Now.Year}{lawyer.Number?.ToString().PadLeft(2, '0') ?? ""}{newNumber}");
+            return int.Parse($"{firstFileNumber}{newNumber}");
         }
         public static string GetFilePath(string fileName)
         {

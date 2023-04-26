@@ -129,7 +129,6 @@ namespace RRFFilesManager
             System.Windows.Forms.Label TBoxLimDateLabel;
             System.Windows.Forms.Label Label100;
             System.Windows.Forms.Label label272;
-            System.Windows.Forms.Label label279;
             System.Windows.Forms.Label DateMetWithLawyerReDenialTLbl;
             System.Windows.Forms.Label Label102;
             System.Windows.Forms.Label Label103;
@@ -201,14 +200,15 @@ namespace RRFFilesManager
             System.Windows.Forms.Label TBoxDateOfDefendantDiscoveryLabel;
             System.Windows.Forms.Label TBoxTimelineMediationResolutionDateLabel;
             System.Windows.Forms.Label TBoxTimelinePreMedSttleMeetingDateLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileManager));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.StatusLabel = new System.Windows.Forms.Label();
             this.InvoicesDataGridView = new System.Windows.Forms.DataGridView();
             this.GroupBox23 = new System.Windows.Forms.GroupBox();
             this.Button2 = new System.Windows.Forms.Button();
@@ -231,6 +231,10 @@ namespace RRFFilesManager
             this.SpecialDamagesDataGridView = new System.Windows.Forms.DataGridView();
             this.ClientNotes = new System.Windows.Forms.TabPage();
             this.ClientNotesDataGridView = new System.Windows.Forms.DataGridView();
+            this.DgColumn_Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SaveNoteButton = new System.Windows.Forms.Button();
             this.AddNotesRowButton = new System.Windows.Forms.Button();
@@ -541,6 +545,18 @@ namespace RRFFilesManager
             this.btnSave = new System.Windows.Forms.Button();
             this.Denials = new System.Windows.Forms.TabPage();
             this.ABDenialsDataGridView = new System.Windows.Forms.DataGridView();
+            this.NameofBenefit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountDispute = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateDenied = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameServiceProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeService = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RangeFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RangeTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DisputeRelatedTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TreamentPlanDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DenialStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DenialNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox31 = new System.Windows.Forms.GroupBox();
             this.btnNewDenials = new System.Windows.Forms.Button();
             this.Label110 = new System.Windows.Forms.Label();
@@ -1027,10 +1043,6 @@ namespace RRFFilesManager
             this.Label1 = new System.Windows.Forms.Label();
             this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
             this.LimDateTextBox = new System.Windows.Forms.TextBox();
-            this.DgColumn_Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgColumn_DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgColumn_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TBoxTrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxPreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
@@ -1063,18 +1075,6 @@ namespace RRFFilesManager
             this.PPOPCF44RLiabilityLimitsTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.CurrentFileStatusComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
-            this.NameofBenefit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountDispute = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateDenied = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameServiceProvider = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RangeFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RangeTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DisputeRelatedTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LimitationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TreamentPlanDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DenialStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DenialNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
             TBoxActualDateSOCServedLabel = new System.Windows.Forms.Label();
             TBoxPreDiscoveryMeetingDateLabel = new System.Windows.Forms.Label();
@@ -1176,7 +1176,6 @@ namespace RRFFilesManager
             TBoxLimDateLabel = new System.Windows.Forms.Label();
             Label100 = new System.Windows.Forms.Label();
             label272 = new System.Windows.Forms.Label();
-            label279 = new System.Windows.Forms.Label();
             DateMetWithLawyerReDenialTLbl = new System.Windows.Forms.Label();
             Label102 = new System.Windows.Forms.Label();
             Label103 = new System.Windows.Forms.Label();
@@ -2271,9 +2270,10 @@ namespace RRFFilesManager
             // label111
             // 
             label111.AutoSize = true;
+            label111.Dock = System.Windows.Forms.DockStyle.Fill;
             label111.Location = new System.Drawing.Point(3, 112);
             label111.Name = "label111";
-            label111.Size = new System.Drawing.Size(109, 17);
+            label111.Size = new System.Drawing.Size(114, 56);
             label111.TabIndex = 146;
             label111.Text = "Matter Sub-Type";
             label111.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -2342,15 +2342,16 @@ namespace RRFFilesManager
             label272.TabIndex = 148;
             label272.Text = "From:";
             // 
-            // label279
+            // StatusLabel
             // 
-            label279.AutoSize = true;
-            label279.Location = new System.Drawing.Point(3, 168);
-            label279.Name = "label279";
-            label279.Size = new System.Drawing.Size(46, 17);
-            label279.TabIndex = 149;
-            label279.Text = "Status";
-            label279.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.StatusLabel.AutoSize = true;
+            this.StatusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatusLabel.Location = new System.Drawing.Point(3, 168);
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(114, 58);
+            this.StatusLabel.TabIndex = 149;
+            this.StatusLabel.Text = "Status";
+            this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // DateMetWithLawyerReDenialTLbl
             // 
@@ -3000,8 +3001,8 @@ namespace RRFFilesManager
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.InvoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InvoicesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -3098,8 +3099,8 @@ namespace RRFFilesManager
             // PLReportsDataGridView
             // 
             this.PLReportsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.PLReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PLReportsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PLReportsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -3167,8 +3168,8 @@ namespace RRFFilesManager
             // MedApptsDataGridView
             // 
             this.MedApptsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.MedApptsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MedApptsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MedApptsDataGridView.Location = new System.Drawing.Point(3, 54);
@@ -3250,6 +3251,36 @@ namespace RRFFilesManager
             this.ClientNotesDataGridView.RowHeadersVisible = false;
             this.ClientNotesDataGridView.Size = new System.Drawing.Size(961, 333);
             this.ClientNotesDataGridView.TabIndex = 3;
+            // 
+            // DgColumn_Origin
+            // 
+            this.DgColumn_Origin.FillWeight = 35F;
+            this.DgColumn_Origin.HeaderText = "Origin";
+            this.DgColumn_Origin.Name = "DgColumn_Origin";
+            this.DgColumn_Origin.ReadOnly = true;
+            // 
+            // DgColumn_DateTime
+            // 
+            this.DgColumn_DateTime.DataPropertyName = "Date";
+            this.DgColumn_DateTime.FillWeight = 35F;
+            this.DgColumn_DateTime.HeaderText = "DateTime";
+            this.DgColumn_DateTime.Name = "DgColumn_DateTime";
+            this.DgColumn_DateTime.ReadOnly = true;
+            // 
+            // DgColumn_Staff
+            // 
+            this.DgColumn_Staff.DataPropertyName = "Lawyer";
+            this.DgColumn_Staff.FillWeight = 35F;
+            this.DgColumn_Staff.HeaderText = "Staff";
+            this.DgColumn_Staff.Name = "DgColumn_Staff";
+            this.DgColumn_Staff.ReadOnly = true;
+            // 
+            // DgColumn_Description
+            // 
+            this.DgColumn_Description.DataPropertyName = "Description";
+            this.DgColumn_Description.HeaderText = "Description";
+            this.DgColumn_Description.Name = "DgColumn_Description";
+            this.DgColumn_Description.ReadOnly = true;
             // 
             // panel6
             // 
@@ -4006,8 +4037,8 @@ namespace RRFFilesManager
             // UndertakingsDataGridView
             // 
             this.UndertakingsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.UndertakingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UndertakingsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -4037,7 +4068,7 @@ namespace RRFFilesManager
             this.TabControl3.Location = new System.Drawing.Point(3, 3);
             this.TabControl3.Name = "TabControl3";
             this.TabControl3.SelectedIndex = 0;
-            this.TabControl3.Size = new System.Drawing.Size(1386, 536);
+            this.TabControl3.Size = new System.Drawing.Size(1386, 532);
             this.TabControl3.TabIndex = 0;
             // 
             // TabPage14
@@ -4054,7 +4085,7 @@ namespace RRFFilesManager
             this.TabPage14.Location = new System.Drawing.Point(4, 26);
             this.TabPage14.Name = "TabPage14";
             this.TabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage14.Size = new System.Drawing.Size(1378, 506);
+            this.TabPage14.Size = new System.Drawing.Size(1378, 502);
             this.TabPage14.TabIndex = 0;
             this.TabPage14.Text = "Settlement/Mediation Resolution 1";
             // 
@@ -4305,7 +4336,7 @@ namespace RRFFilesManager
             this.TabPage15.Location = new System.Drawing.Point(4, 26);
             this.TabPage15.Name = "TabPage15";
             this.TabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage15.Size = new System.Drawing.Size(1378, 506);
+            this.TabPage15.Size = new System.Drawing.Size(1378, 502);
             this.TabPage15.TabIndex = 1;
             this.TabPage15.Text = "Settlement/Mediation Resolution 2";
             // 
@@ -5114,7 +5145,6 @@ namespace RRFFilesManager
             this.AccidentBenefitsTab.SelectedIndex = 0;
             this.AccidentBenefitsTab.Size = new System.Drawing.Size(1322, 378);
             this.AccidentBenefitsTab.TabIndex = 5;
-
             // 
             // ABTimeline
             // 
@@ -5304,7 +5334,7 @@ namespace RRFFilesManager
             this.ABOAdjusterNameLabel.Name = "ABOAdjusterNameLabel";
             this.ABOAdjusterNameLabel.Size = new System.Drawing.Size(154, 28);
             this.ABOAdjusterNameLabel.TabIndex = 8;
-            this.ABOAdjusterNameLabel.Text = "Ajuster Name:";
+            this.ABOAdjusterNameLabel.Text = "Adjuster Name:";
             // 
             // ABOInsurerNameTextBox
             // 
@@ -5697,7 +5727,7 @@ namespace RRFFilesManager
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnCount = 3;
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDate, 2, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateTextBox, 1, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateLabel, 0, 0);
@@ -5713,24 +5743,27 @@ namespace RRFFilesManager
             // 
             this.ABOStatementDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOStatementDate.Enabled = false;
-            this.ABOStatementDate.Location = new System.Drawing.Point(282, 3);
+            this.ABOStatementDate.Location = new System.Drawing.Point(272, 3);
             this.ABOStatementDate.Name = "ABOStatementDate";
-            this.ABOStatementDate.Size = new System.Drawing.Size(30, 23);
+            this.ABOStatementDate.Size = new System.Drawing.Size(40, 23);
             this.ABOStatementDate.TabIndex = 23;
             // 
             // ABOStatementDateTextBox
             // 
             this.ABOStatementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(145, 3);
+            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(140, 3);
             this.ABOStatementDateTextBox.Name = "ABOStatementDateTextBox";
             this.ABOStatementDateTextBox.ReadOnly = true;
-            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(130, 23);
+            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(126, 23);
             this.ABOStatementDateTextBox.TabIndex = 22;
             // 
             // ABOStatementDateLabel
             // 
             this.ABOStatementDateLabel.AutoSize = true;
-            this.ABOStatementDateLabel.Size = new System.Drawing.Size(136, 17);
+            this.ABOStatementDateLabel.Location = new System.Drawing.Point(3, 0);
+            this.ABOStatementDateLabel.Name = "ABOStatementDateLabel";
+            this.ABOStatementDateLabel.Size = new System.Drawing.Size(111, 17);
+            this.ABOStatementDateLabel.TabIndex = 24;
             this.ABOStatementDateLabel.Text = "Statement Date";
             // 
             // ABOLastUpdatePanel
@@ -6247,7 +6280,7 @@ namespace RRFFilesManager
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(4539, 1119);
+            this.Btn_Save.Location = new System.Drawing.Point(4539, 1087);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -6788,7 +6821,7 @@ namespace RRFFilesManager
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1443, 606);
+            this.btnSave.Location = new System.Drawing.Point(1443, 614);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6810,17 +6843,17 @@ namespace RRFFilesManager
             // ABDenialsDataGridView
             // 
             this.ABDenialsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.ABDenialsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ABDenialsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ABDenialsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.ABDenialsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ABDenialsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameofBenefit,
@@ -6843,6 +6876,97 @@ namespace RRFFilesManager
             this.ABDenialsDataGridView.RowTemplate.Height = 40;
             this.ABDenialsDataGridView.Size = new System.Drawing.Size(1308, 283);
             this.ABDenialsDataGridView.TabIndex = 0;
+            // 
+            // NameofBenefit
+            // 
+            this.NameofBenefit.DataPropertyName = "DenialBenefit";
+            this.NameofBenefit.HeaderText = "Name of Benefit";
+            this.NameofBenefit.Name = "NameofBenefit";
+            this.NameofBenefit.ReadOnly = true;
+            this.NameofBenefit.Width = 125;
+            // 
+            // AmountDispute
+            // 
+            this.AmountDispute.DataPropertyName = "AmountinDispute";
+            dataGridViewCellStyle14.Format = "N2";
+            this.AmountDispute.DefaultCellStyle = dataGridViewCellStyle14;
+            this.AmountDispute.HeaderText = "Amount Dispute";
+            this.AmountDispute.Name = "AmountDispute";
+            this.AmountDispute.ReadOnly = true;
+            this.AmountDispute.Width = 125;
+            // 
+            // DateDenied
+            // 
+            this.DateDenied.DataPropertyName = "DateDenied";
+            this.DateDenied.HeaderText = "Date Denied";
+            this.DateDenied.Name = "DateDenied";
+            this.DateDenied.ReadOnly = true;
+            this.DateDenied.Width = 105;
+            // 
+            // NameServiceProvider
+            // 
+            this.NameServiceProvider.DataPropertyName = "ServiceProvider";
+            this.NameServiceProvider.HeaderText = "Name Service Provider";
+            this.NameServiceProvider.Name = "NameServiceProvider";
+            this.NameServiceProvider.Width = 163;
+            // 
+            // TypeService
+            // 
+            this.TypeService.DataPropertyName = "ServiceType";
+            this.TypeService.HeaderText = "Type Service";
+            this.TypeService.Name = "TypeService";
+            this.TypeService.Width = 101;
+            // 
+            // RangeFrom
+            // 
+            this.RangeFrom.DataPropertyName = "RangeFrom";
+            this.RangeFrom.HeaderText = "Range From";
+            this.RangeFrom.Name = "RangeFrom";
+            this.RangeFrom.Width = 102;
+            // 
+            // RangeTo
+            // 
+            this.RangeTo.DataPropertyName = "RangeTo";
+            this.RangeTo.HeaderText = "Range To";
+            this.RangeTo.Name = "RangeTo";
+            this.RangeTo.Width = 86;
+            // 
+            // DisputeRelatedTo
+            // 
+            this.DisputeRelatedTo.DataPropertyName = "DisputeRelatedTo";
+            this.DisputeRelatedTo.HeaderText = "Dispute Related To";
+            this.DisputeRelatedTo.Name = "DisputeRelatedTo";
+            this.DisputeRelatedTo.Width = 127;
+            // 
+            // LimitationDate
+            // 
+            this.LimitationDate.DataPropertyName = "LimitationDate";
+            this.LimitationDate.HeaderText = "Limitation Date";
+            this.LimitationDate.Name = "LimitationDate";
+            this.LimitationDate.ReadOnly = true;
+            this.LimitationDate.Width = 122;
+            // 
+            // TreamentPlanDate
+            // 
+            this.TreamentPlanDate.DataPropertyName = "TreatmentPlanDate";
+            this.TreamentPlanDate.HeaderText = "Treament Plan Date";
+            this.TreamentPlanDate.Name = "TreamentPlanDate";
+            this.TreamentPlanDate.Width = 118;
+            // 
+            // DenialStatus
+            // 
+            this.DenialStatus.DataPropertyName = "DenialStatus";
+            this.DenialStatus.HeaderText = "Status";
+            this.DenialStatus.Name = "DenialStatus";
+            this.DenialStatus.ReadOnly = true;
+            this.DenialStatus.Width = 71;
+            // 
+            // DenialNotes
+            // 
+            this.DenialNotes.DataPropertyName = "DenialNotes";
+            this.DenialNotes.HeaderText = "Notes";
+            this.DenialNotes.Name = "DenialNotes";
+            this.DenialNotes.Width = 70;
             // 
             // GroupBox31
             // 
@@ -11377,7 +11501,7 @@ namespace RRFFilesManager
             this.tableLayoutPanel18.Controls.Add(TBoxLimDateLabel, 4, 2);
             this.tableLayoutPanel18.Controls.Add(this.SubTypeCategoryComboBox, 3, 2);
             this.tableLayoutPanel18.Controls.Add(this.CurrentFileStatusComboBox, 1, 3);
-            this.tableLayoutPanel18.Controls.Add(label279, 0, 3);
+            this.tableLayoutPanel18.Controls.Add(this.StatusLabel, 0, 3);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
@@ -11610,36 +11734,6 @@ namespace RRFFilesManager
             this.LimDateTextBox.Name = "LimDateTextBox";
             this.LimDateTextBox.Size = new System.Drawing.Size(132, 23);
             this.LimDateTextBox.TabIndex = 7;
-            // 
-            // DgColumn_Origin
-            // 
-            this.DgColumn_Origin.FillWeight = 35F;
-            this.DgColumn_Origin.HeaderText = "Origin";
-            this.DgColumn_Origin.Name = "DgColumn_Origin";
-            this.DgColumn_Origin.ReadOnly = true;
-            // 
-            // DgColumn_DateTime
-            // 
-            this.DgColumn_DateTime.DataPropertyName = "Date";
-            this.DgColumn_DateTime.FillWeight = 35F;
-            this.DgColumn_DateTime.HeaderText = "DateTime";
-            this.DgColumn_DateTime.Name = "DgColumn_DateTime";
-            this.DgColumn_DateTime.ReadOnly = true;
-            // 
-            // DgColumn_Staff
-            // 
-            this.DgColumn_Staff.DataPropertyName = "Lawyer";
-            this.DgColumn_Staff.FillWeight = 35F;
-            this.DgColumn_Staff.HeaderText = "Staff";
-            this.DgColumn_Staff.Name = "DgColumn_Staff";
-            this.DgColumn_Staff.ReadOnly = true;
-            // 
-            // DgColumn_Description
-            // 
-            this.DgColumn_Description.DataPropertyName = "Description";
-            this.DgColumn_Description.HeaderText = "Description";
-            this.DgColumn_Description.Name = "DgColumn_Description";
-            this.DgColumn_Description.ReadOnly = true;
             // 
             // TBoxTrialDate
             // 
@@ -12098,97 +12192,6 @@ namespace RRFFilesManager
             this.CurrentFileStatusComboBox.Size = new System.Drawing.Size(132, 25);
             this.CurrentFileStatusComboBox.TabIndex = 150;
             this.CurrentFileStatusComboBox.SelectedIndexChanged += new System.EventHandler(this.CurrentFileStatusComboBox_SelectedIndexChanged);
-            // 
-            // NameofBenefit
-            // 
-            this.NameofBenefit.DataPropertyName = "DenialBenefit";
-            this.NameofBenefit.HeaderText = "Name of Benefit";
-            this.NameofBenefit.Name = "NameofBenefit";
-            this.NameofBenefit.ReadOnly = true;
-            this.NameofBenefit.Width = 125;
-            // 
-            // AmountDispute
-            // 
-            this.AmountDispute.DataPropertyName = "AmountinDispute";
-            dataGridViewCellStyle7.Format = "N2";
-            this.AmountDispute.DefaultCellStyle = dataGridViewCellStyle7;
-            this.AmountDispute.HeaderText = "Amount Dispute";
-            this.AmountDispute.Name = "AmountDispute";
-            this.AmountDispute.ReadOnly = true;
-            this.AmountDispute.Width = 125;
-            // 
-            // DateDenied
-            // 
-            this.DateDenied.DataPropertyName = "DateDenied";
-            this.DateDenied.HeaderText = "Date Denied";
-            this.DateDenied.Name = "DateDenied";
-            this.DateDenied.ReadOnly = true;
-            this.DateDenied.Width = 105;
-            // 
-            // NameServiceProvider
-            // 
-            this.NameServiceProvider.DataPropertyName = "ServiceProvider";
-            this.NameServiceProvider.HeaderText = "Name Service Provider";
-            this.NameServiceProvider.Name = "NameServiceProvider";
-            this.NameServiceProvider.Width = 163;
-            // 
-            // TypeService
-            // 
-            this.TypeService.DataPropertyName = "ServiceType";
-            this.TypeService.HeaderText = "Type Service";
-            this.TypeService.Name = "TypeService";
-            this.TypeService.Width = 101;
-            // 
-            // RangeFrom
-            // 
-            this.RangeFrom.DataPropertyName = "RangeFrom";
-            this.RangeFrom.HeaderText = "Range From";
-            this.RangeFrom.Name = "RangeFrom";
-            this.RangeFrom.Width = 102;
-            // 
-            // RangeTo
-            // 
-            this.RangeTo.DataPropertyName = "RangeTo";
-            this.RangeTo.HeaderText = "Range To";
-            this.RangeTo.Name = "RangeTo";
-            this.RangeTo.Width = 86;
-            // 
-            // DisputeRelatedTo
-            // 
-            this.DisputeRelatedTo.DataPropertyName = "DisputeRelatedTo";
-            this.DisputeRelatedTo.HeaderText = "Dispute Related To";
-            this.DisputeRelatedTo.Name = "DisputeRelatedTo";
-            this.DisputeRelatedTo.Width = 127;
-            // 
-            // LimitationDate
-            // 
-            this.LimitationDate.DataPropertyName = "LimitationDate";
-            this.LimitationDate.HeaderText = "Limitation Date";
-            this.LimitationDate.Name = "LimitationDate";
-            this.LimitationDate.ReadOnly = true;
-            this.LimitationDate.Width = 122;
-            // 
-            // TreamentPlanDate
-            // 
-            this.TreamentPlanDate.DataPropertyName = "TreatmentPlanDate";
-            this.TreamentPlanDate.HeaderText = "Treament Plan Date";
-            this.TreamentPlanDate.Name = "TreamentPlanDate";
-            this.TreamentPlanDate.Width = 118;
-            // 
-            // DenialStatus
-            // 
-            this.DenialStatus.DataPropertyName = "DenialStatus";
-            this.DenialStatus.HeaderText = "Status";
-            this.DenialStatus.Name = "DenialStatus";
-            this.DenialStatus.ReadOnly = true;
-            this.DenialStatus.Width = 71;
-            // 
-            // DenialNotes
-            // 
-            this.DenialNotes.DataPropertyName = "DenialNotes";
-            this.DenialNotes.HeaderText = "Notes";
-            this.DenialNotes.Name = "DenialNotes";
-            this.DenialNotes.Width = 70;
             // 
             // FileManager
             // 
@@ -13275,6 +13278,7 @@ namespace RRFFilesManager
         private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_DateTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Staff;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgColumn_Description;
+        public System.Windows.Forms.Label StatusLabel;
     }
 }
 

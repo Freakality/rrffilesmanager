@@ -62,19 +62,34 @@ namespace RRFFilesManager.Controls.UserManagerControls
                 TBarClearanceLevelTrackBar.Value = lawyer.ClearanceLevel;
             }
             CBoxChangePasswordCheckBox.Checked = false;
-
+            if (lawyer.FileLawyer != null)
+            {
+                if ((bool)lawyer.FileLawyer)
+                    CBoxFileLawyerCheckBox.Checked = true;
+            }
+            else
+                CBoxFileLawyerCheckBox.Checked = false;
+            if (lawyer.ResponsibleLawyer != null)
+            {
+                if ((bool)lawyer.ResponsibleLawyer)
+                    CBoxResponsibleCheckBox.Checked = true;
+            }
+            else
+                CBoxResponsibleCheckBox.Checked = false;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             AddUserLawyer(SelectedLawyer);
-            MessageBox.Show("User data has been saved.");
+            UserLawyerListBox.DataSource = _lawyerRepository.List();
+            
         }
 
         private void FillLawyer(Lawyer lawyer)
         {
             lawyer.Description = TBoxDescriptionTextBox.Text;
-            lawyer.Number = (int?)NUDNumberIDNUpDown.Value;
+            if (NUDNumberIDNUpDown.Value > 0)
+                lawyer.Number = (int?)NUDNumberIDNUpDown.Value;
             if (DTPContractDateDateTime.Value != DTPContractDateDateTime.MinDate)
                 lawyer.ContractDate = DTPContractDateDateTime.Value;
             lawyer.EarnBaseCommissionAsFileLawyer = CBoxBaseComissionCheckBox.Checked;
@@ -82,6 +97,8 @@ namespace RRFFilesManager.Controls.UserManagerControls
                 lawyer.ResponsibleLawyerBaseCommissionMultiplier = Convert.ToDouble(NUDComissionMultiplierNUpDown.Value);
             lawyer.IsParalegal = CBoxIsParalegalCheckBox.Checked;
             lawyer.ClearanceLevel = TBarClearanceLevelTrackBar.Value;
+            lawyer.FileLawyer = CBoxFileLawyerCheckBox.Checked;
+            lawyer.ResponsibleLawyer = CBoxResponsibleCheckBox.Checked;
             if (!String.IsNullOrEmpty(TBoxUserNameTextBox.Text))
             {
                 lawyer.UserName = TBoxUserNameTextBox.Text;
@@ -107,17 +124,48 @@ namespace RRFFilesManager.Controls.UserManagerControls
         {
             var lawyer = new Lawyer();
             AddUserLawyer(lawyer);
-            MessageBox.Show("User has been added.");
+            UserLawyerListBox.DataSource = _lawyerRepository.List();
+            
         }
+
 
         private void AddUserLawyer(Lawyer lawyerToAdd)
         {
             var lawyer = lawyerToAdd;
+            if (!String.IsNullOrEmpty(TBoxUserNameTextBox.Text))
+            {
+                var found = _lawyerRepository.GetByUserName(TBoxUserNameTextBox.Text);
+                if (!(found is null))
+                {
+                    if (found.ID != lawyer.ID)
+                    {
+                        MessageBox.Show("Username is taken or user is duplicate. Please enter different data before creating new user.");
+                        return;
+                    }
+                }
+            }
             FillLawyer(lawyer);
+
             if (lawyer.ID == default)
+            {
+                var found = _lawyerRepository.GetByDescription(lawyer.Description);
+                if (!(found is null))
+                {
+                    DialogResult dialogResult = MessageBox.Show($"The name of the user is already being used. Are you sure you want to proceed to add this user? It might be a duplicate.", "Confirmation", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Please enter different data before creating new user.");
+                        return;
+                    }
+                }
                 _lawyerRepository.Insert(lawyer);
+                MessageBox.Show("User has been added.");
+            }
             else
+            {
                 _lawyerRepository.Update(lawyer);
+                MessageBox.Show("User data has been saved.");
+            }
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

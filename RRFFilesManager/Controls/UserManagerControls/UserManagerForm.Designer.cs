@@ -61,6 +61,8 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.NewButton = new System.Windows.Forms.Button();
             this.UserManagerTransferButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CBoxFileLawyerCheckBox = new System.Windows.Forms.CheckBox();
+            this.CBoxResponsibleCheckBox = new System.Windows.Forms.CheckBox();
             this.UserLawyerBox.SuspendLayout();
             this.UserNameChangeBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -114,6 +116,8 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.CBoxResponsibleCheckBox, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.CBoxFileLawyerCheckBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.CBoxIsParalegalCheckBox, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.TBoxDescriptionLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.CBoxBaseComissionCheckBox, 1, 4);
@@ -134,6 +138,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(708, 205);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
@@ -485,6 +490,28 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.PictureBox1.TabIndex = 144;
             this.PictureBox1.TabStop = false;
             // 
+            // CBoxFileLawyerCheckBox
+            // 
+            this.CBoxFileLawyerCheckBox.AutoSize = true;
+            this.CBoxFileLawyerCheckBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CBoxFileLawyerCheckBox.Location = new System.Drawing.Point(239, 115);
+            this.CBoxFileLawyerCheckBox.Name = "CBoxFileLawyerCheckBox";
+            this.CBoxFileLawyerCheckBox.Size = new System.Drawing.Size(149, 40);
+            this.CBoxFileLawyerCheckBox.TabIndex = 158;
+            this.CBoxFileLawyerCheckBox.Text = "Can be File Lawyer";
+            this.CBoxFileLawyerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // CBoxResponsibleCheckBox
+            // 
+            this.CBoxResponsibleCheckBox.AutoSize = true;
+            this.CBoxResponsibleCheckBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CBoxResponsibleCheckBox.Location = new System.Drawing.Point(29, 115);
+            this.CBoxResponsibleCheckBox.Name = "CBoxResponsibleCheckBox";
+            this.CBoxResponsibleCheckBox.Size = new System.Drawing.Size(204, 40);
+            this.CBoxResponsibleCheckBox.TabIndex = 159;
+            this.CBoxResponsibleCheckBox.Text = "Can be Responsible Lawyer";
+            this.CBoxResponsibleCheckBox.UseVisualStyleBackColor = true;
+            // 
             // UserManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -552,5 +579,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
         private System.Windows.Forms.CheckBox CBoxChangePasswordCheckBox;
         internal System.Windows.Forms.Button NewButton;
         internal System.Windows.Forms.Button UserManagerTransferButton;
+        private System.Windows.Forms.CheckBox CBoxResponsibleCheckBox;
+        private System.Windows.Forms.CheckBox CBoxFileLawyerCheckBox;
     }
 }

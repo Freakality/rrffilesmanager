@@ -118,6 +118,11 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             0,
             0,
             0});
+            this.NBoxDueBy.Minimum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            -2147483648});
             this.NBoxDueBy.Name = "NBoxDueBy";
             this.NBoxDueBy.Size = new System.Drawing.Size(166, 26);
             this.NBoxDueBy.TabIndex = 152;
@@ -212,6 +217,11 @@ namespace RRFFilesManager.Controls.MasterTaskControls
             0,
             0,
             0});
+            this.NBoxDeferBy.Minimum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            -2147483648});
             this.NBoxDeferBy.Name = "NBoxDeferBy";
             this.NBoxDeferBy.Size = new System.Drawing.Size(172, 26);
             this.NBoxDeferBy.TabIndex = 153;

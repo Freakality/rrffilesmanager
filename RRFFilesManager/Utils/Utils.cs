@@ -18,6 +18,8 @@ namespace RRFFilesManager.Utils
     {
         public static void SetComboBoxDataSource(ComboBox comboBox, object dataSource, string displayMember = null)
         {
+            if (dataSource == null)
+                return;
             comboBox.DataSource = dataSource;
             comboBox.DisplayMember = displayMember;
             comboBox.SelectedItem = null;

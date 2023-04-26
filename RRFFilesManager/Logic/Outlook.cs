@@ -26,7 +26,8 @@ namespace RRFFilesManager.Logic
                 var Recipents = OutlookMessage.Recipients;
                 foreach (var recipent in recipentsName)
                 {
-                    Recipents.Add(recipent);
+                    if (!String.IsNullOrWhiteSpace(recipent))
+                        Recipents.Add(recipent);
                 }
 
                 OutlookMessage.Subject = subject;

@@ -192,6 +192,14 @@
     <Compile Include="Migrations\20230227185918_PolicyParticulars.designer.cs">
       <DependentUpon>20230227185918_PolicyParticulars.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230409014759_CreatedDateFile.cs" />
+    <Compile Include="Migrations\20230409014759_CreatedDateFile.designer.cs">
+      <DependentUpon>20230409014759_CreatedDateFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230409074810_LawyerSelecting.cs" />
+    <Compile Include="Migrations\20230409074810_LawyerSelecting.designer.cs">
+      <DependentUpon>20230409074810_LawyerSelecting.cs</DependentUpon>
+    </Compile>
     <Compile Include="PolicyParticularsRepository.cs" />
     <Compile Include="Abstractions\Extensions.cs" />
     <Compile Include="Abstractions\IPolicyParticularsRepository.cs" />

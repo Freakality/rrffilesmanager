@@ -196,7 +196,7 @@ namespace RRFFilesManager
         {
             
         }
-        internal int GetClearance(Button b)
+        internal int GetClearance(Control b)
         {
             Permission p = _permissionRepository.GetByDescription(b.Name);
             if (p != null)

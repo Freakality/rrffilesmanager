@@ -83,6 +83,11 @@ namespace RRFFilesManager.IntakeForm
                 MessageBox.Show("Please select: Matter Sub Type");
                 return false;
             }
+            if (FileNumberTextBox.Text == "999999999" || FileNumberTextBox.Text == "0")
+            {
+                MessageBox.Show("Invalid File Number, please select File Lawyer again.");
+                return false;
+            }
 
             return true;
         }
@@ -147,8 +152,8 @@ namespace RRFFilesManager.IntakeForm
             Utils.Utils.SetComboBoxDataSource(MatterTypeComboBox, _matterTypeRepository.List(), nameof(MatterType.Description));
             Utils.Utils.SetComboBoxDataSource(HowHearComboBox, _hearAboutUsRepository.List(), nameof(HearAboutUs.Description));
             Utils.Utils.SetComboBoxDataSource(StaffInterviewerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
-            Utils.Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, _lawyerRepository.List(), nameof(Lawyer.Description));
-            Utils.Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.Number != null).ToList(), nameof(Lawyer.Description));
+            Utils.Utils.SetComboBoxDataSource(ResponsibleLawyerComboBox, _lawyerRepository.List()?.Where(s => s.ResponsibleLawyer == true).ToList(), nameof(Lawyer.Description));
+            Utils.Utils.SetComboBoxDataSource(LawyerComboBox, _lawyerRepository.List()?.Where(s => s.Number != null && s.FileLawyer == true).ToList(), nameof(Lawyer.Description));
             DateOfLossDateTimePicker.Format = DateTimePickerFormat.Custom;
             DateOfLossDateTimePicker.CustomFormat = " ";
         }

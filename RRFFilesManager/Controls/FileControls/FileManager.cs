@@ -63,6 +63,8 @@ namespace RRFFilesManager
         private int clearance;
         List<Lawyer> LawyerList = new List<Lawyer>();
         private bool isSettingForm;
+        private bool Inhibit = false;
+        private int LastSelectedIndex = -1;
         public FileManager()
         {
             _fileRepository = Program.GetService<IFileRepository>();
@@ -120,8 +122,23 @@ namespace RRFFilesManager
             FilteredNotes.Table = Notes;
             Ctms_TaskActions = Task_Actions.Ctms_TaskActions;
             Home.Instance.AddPermissionStrip(TimelineSaveBtn);
+            Home.Instance.AddPermissionStrip(StatusLabel);
             ShowClearanceLocked();
+            SetStatusClearancePermissions();
             
+        }
+
+        private void SetStatusClearancePermissions()
+        {
+            clearance = Home.Instance.GetClearance(StatusLabel);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+            {
+                CurrentFileStatusComboBox.Enabled = true;
+            }
+            else
+            {
+                CurrentFileStatusComboBox.Enabled = false;
+            }
         }
 
         private void FillDenialData()
@@ -325,7 +342,7 @@ namespace RRFFilesManager
                 RefreshActionLogDataGridViewDataSource();
                 SetStatesLawyersAndBusinessProcessDataInTaslgsFiltersComboBoxes();
             }
-            CurrentFileStatusComboBox.Enabled = true;
+            //CurrentFileStatusComboBox.Enabled = true;
             Btn_SearchNotes.Enabled = true;
             var statusList = _fileStatusManager.GetValidFileStatus(file);
             Utils.Utils.SetComboBoxDataSource(CurrentFileStatusComboBox, statusList);
@@ -504,6 +521,27 @@ namespace RRFFilesManager
                     if (c is GroupBox || c is TableLayoutPanel)
                     {
                         FastEnabler(c);
+                    }
+                }
+            }
+        }
+
+        private void FastDisabler(Control parent)
+        {
+            if (parent.Controls.Count > 0)
+            {
+                foreach (Control c in parent.Controls)
+                {
+                    if (c is Button || c is ColorDateTimePicker || c is DateTimePicker || c is ComboBox || c is TextBox || c is CurrencyTextBox)
+                    {
+                        if (c is TextBox)
+                        {
+                            (c as TextBox).ReadOnly = true;
+                        }
+                    }
+                    if (c is GroupBox || c is TableLayoutPanel)
+                    {
+                        FastDisabler(c);
                     }
                 }
             }
@@ -1244,7 +1282,22 @@ namespace RRFFilesManager
 
         private void CurrentFileStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (isSettingForm) return;
+            if (isSettingForm || Inhibit) 
+            {
+                if (isSettingForm)
+                    LastSelectedIndex = CurrentFileStatusComboBox.SelectedIndex;
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show($"Are you sure you want to change the status?", "Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                Inhibit = true; //Make sure that the event does not fire again
+                CurrentFileStatusComboBox.SelectedIndex = LastSelectedIndex; //your variable
+                Inhibit = false; //Enable the event again
+                return;
+            }
+            LastSelectedIndex = CurrentFileStatusComboBox.SelectedIndex; // Save latest index.
             var newStatus = (FileStatus)CurrentFileStatusComboBox.SelectedValue;
             if (newStatus != null && File.CurrentStatus != newStatus)
             {
@@ -2027,17 +2080,18 @@ namespace RRFFilesManager
 
             if (User.ClearanceLevel != 0)
             {
-                GroupBoxLat1.Visible = false;
+                FastDisabler(Summary);
+                /*GroupBoxLat1.Visible = false;
                 GroupBoxLat2.Visible = false;
                 GroupBoxLat3.Visible = false;
-                GroupBoxLat4.Visible = false;
+                GroupBoxLat4.Visible = false;*/
             }
             else
             {
-                GroupBoxLat1.Visible = true;
+                /*GroupBoxLat1.Visible = true;
                 GroupBoxLat2.Visible = true;
                 GroupBoxLat3.Visible = true;
-                GroupBoxLat4.Visible = true;
+                GroupBoxLat4.Visible = true;*/
             }
 
             txtLimitationDate.Text = File.LimitationPeriod;

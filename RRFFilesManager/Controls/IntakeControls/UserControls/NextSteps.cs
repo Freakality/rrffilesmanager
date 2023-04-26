@@ -94,7 +94,7 @@ namespace RRFFilesManager.IntakeForm
                     {
                         if (Count.ShowDialog() == DialogResult.OK)
                         {
-                            var _task = _taskRepository.List().Where(t => t.TaskCategory.Description == "Potential Client");
+                            var _task = _taskRepository.List().Where(t => t.TaskCategory?.Description == "Potential Client");
                             _fileTaskRepository.AddAllCategoryTasks(Home.IntakeForm.Intake.File,_task,_taskStateRepository.GetById(1),Count.days);
                             MessageBox.Show("Task assignment complete");
                             IntakeManager.SetHoldIntake(Home.IntakeForm.Intake, true);
