@@ -11,6 +11,7 @@ using RRFFilesManager.DataAccess.Abstractions;
 using RRFFilesManager.Abstractions;
 using RRFFilesManager.Logic;
 using RRFFilesManager.Controls.IntakeControls;
+using RRFFilesManager.Controls.FileControls.UserControls;
 
 namespace RRFFilesManager.IntakeForm
 {
@@ -24,6 +25,11 @@ namespace RRFFilesManager.IntakeForm
         private readonly Logic.FileManager _fileManager;
         private readonly IFileStatusRepository _fileStatusRepository;
         private readonly QuestionnaireManager _questionnaireManager;
+        TaskActions Task_Actions = new TaskActions(true);
+        ContextMenuStrip Ctms_TaskActions;
+        private Lawyer User;
+        private readonly IPermissionRepository _permissionRepository;
+        private int clearance;
         public PreliminaryInfo()
         {
             _matterTypeRepository = Program.GetService<IMatterTypeRepository>();
@@ -34,8 +40,26 @@ namespace RRFFilesManager.IntakeForm
             _fileStatusRepository = Program.GetService<IFileStatusRepository>();
             _fileManager = new Logic.FileManager();
             _questionnaireManager = new QuestionnaireManager();
+            _permissionRepository = Program.GetService<IPermissionRepository>();
+            User = Program.GetUser();
             InitializeComponent();
             Initialize();
+            Ctms_TaskActions = Task_Actions.Ctms_TaskActions;
+            Home.Instance.AddPermissionStrip(FileNumberLabel);
+            SetStatusClearancePermissions();
+        }
+
+        private void SetStatusClearancePermissions()
+        {
+            clearance = Home.Instance.GetClearance(FileNumberLabel);
+            if (User.ClearanceLevel <= clearance || User.ClearanceLevel == 99)
+            {
+                FileNumberUpDown.Enabled = true;
+            }
+            else
+            {
+                FileNumberUpDown.Enabled = false;
+            }
         }
 
         public new bool Validate()
@@ -83,7 +107,12 @@ namespace RRFFilesManager.IntakeForm
                 MessageBox.Show("Please select: Matter Sub Type");
                 return false;
             }
-            if (FileNumberTextBox.Text == "999999999" || FileNumberTextBox.Text == "0")
+            /*if (FileNumberTextBox.Text == "999999999" || FileNumberTextBox.Text == "0")
+            {
+                MessageBox.Show("Invalid File Number, please select File Lawyer again.");
+                return false;
+            }*/
+            if (FileNumberUpDown.Value == 999999999 || FileNumberUpDown.Value == 0)
             {
                 MessageBox.Show("Invalid File Number, please select File Lawyer again.");
                 return false;
@@ -137,7 +166,8 @@ namespace RRFFilesManager.IntakeForm
         {
             var lawyer = (Lawyer)LawyerComboBox.SelectedItem;
             var fileNumber = IntakeManager.GetNewFileNumber(lawyer);
-            FileNumberTextBox.Text = fileNumber.ToString();
+            FileNumberUpDown.Value = fileNumber;
+            //FileNumberTextBox.Text = fileNumber.ToString();
         }
 
         private void PreliminaryInfo_Load(object sender, EventArgs e)
@@ -169,7 +199,8 @@ namespace RRFFilesManager.IntakeForm
             file.DateOFLoss = DateOfLossDateTimePicker.Value;
             file.LimitationPeriod = LimitationPeriodTextBox.Text;
             file.MatterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
-            file.FileNumber = int.Parse(FileNumberTextBox.Text);
+            //file.FileNumber = int.Parse(FileNumberTextBox.Text);
+            file.FileNumber = Convert.ToInt32(FileNumberUpDown.Value);
             file.StatutoryNotice = StatutoryNoticeBox.Text;
             file.AdditionalNotes = AdditionalNotesTextBox.Text;
             file.CurrentStatus = _fileStatusRepository.GetById((int)FileStatusEnum.PotentialFile);
@@ -186,7 +217,8 @@ namespace RRFFilesManager.IntakeForm
             DateOfLossDateTimePicker.Value = file.DateOFLoss;
             LimitationPeriodTextBox.Text = file.LimitationPeriod;
             MatterSubTypeComboBox.SelectedItem = file.MatterSubType;
-            FileNumberTextBox.Text = file.FileNumber.ToString();
+            FileNumberUpDown.Value = file.FileNumber;
+            //FileNumberTextBox.Text = file.FileNumber.ToString();
             StatutoryNoticeBox.Text = file.StatutoryNotice;
             AdditionalNotesTextBox.Text = file.AdditionalNotes;
         }

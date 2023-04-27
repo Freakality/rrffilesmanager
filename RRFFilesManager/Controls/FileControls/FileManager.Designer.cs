@@ -200,13 +200,13 @@ namespace RRFFilesManager
             System.Windows.Forms.Label TBoxDateOfDefendantDiscoveryLabel;
             System.Windows.Forms.Label TBoxTimelineMediationResolutionDateLabel;
             System.Windows.Forms.Label TBoxTimelinePreMedSttleMeetingDateLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileManager));
             this.StatusLabel = new System.Windows.Forms.Label();
             this.InvoicesDataGridView = new System.Windows.Forms.DataGridView();
@@ -2342,17 +2342,6 @@ namespace RRFFilesManager
             label272.TabIndex = 148;
             label272.Text = "From:";
             // 
-            // StatusLabel
-            // 
-            this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StatusLabel.Location = new System.Drawing.Point(3, 168);
-            this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(114, 58);
-            this.StatusLabel.TabIndex = 149;
-            this.StatusLabel.Text = "Status";
-            this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // DateMetWithLawyerReDenialTLbl
             // 
             DateMetWithLawyerReDenialTLbl.AutoSize = true;
@@ -2998,11 +2987,22 @@ namespace RRFFilesManager
             TBoxTimelinePreMedSttleMeetingDateLabel.Text = "Pre Med Sttle Meeting Date:";
             TBoxTimelinePreMedSttleMeetingDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // StatusLabel
+            // 
+            this.StatusLabel.AutoSize = true;
+            this.StatusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatusLabel.Location = new System.Drawing.Point(3, 168);
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(114, 58);
+            this.StatusLabel.TabIndex = 149;
+            this.StatusLabel.Text = "Status";
+            this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // InvoicesDataGridView
             // 
             this.InvoicesDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.InvoicesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InvoicesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoicesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -3099,8 +3099,8 @@ namespace RRFFilesManager
             // PLReportsDataGridView
             // 
             this.PLReportsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PLReportsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.PLReportsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PLReportsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PLReportsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -3168,8 +3168,8 @@ namespace RRFFilesManager
             // MedApptsDataGridView
             // 
             this.MedApptsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MedApptsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.MedApptsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MedApptsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MedApptsDataGridView.Location = new System.Drawing.Point(3, 54);
@@ -4037,8 +4037,8 @@ namespace RRFFilesManager
             // UndertakingsDataGridView
             // 
             this.UndertakingsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.UndertakingsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.UndertakingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UndertakingsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -5727,7 +5727,7 @@ namespace RRFFilesManager
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnCount = 3;
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDate, 2, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateTextBox, 1, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateLabel, 0, 0);
@@ -5743,18 +5743,18 @@ namespace RRFFilesManager
             // 
             this.ABOStatementDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOStatementDate.Enabled = false;
-            this.ABOStatementDate.Location = new System.Drawing.Point(272, 3);
+            this.ABOStatementDate.Location = new System.Drawing.Point(270, 3);
             this.ABOStatementDate.Name = "ABOStatementDate";
-            this.ABOStatementDate.Size = new System.Drawing.Size(40, 23);
+            this.ABOStatementDate.Size = new System.Drawing.Size(42, 23);
             this.ABOStatementDate.TabIndex = 23;
             // 
             // ABOStatementDateTextBox
             // 
             this.ABOStatementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(140, 3);
+            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(139, 3);
             this.ABOStatementDateTextBox.Name = "ABOStatementDateTextBox";
             this.ABOStatementDateTextBox.ReadOnly = true;
-            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(126, 23);
+            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(125, 23);
             this.ABOStatementDateTextBox.TabIndex = 22;
             // 
             // ABOStatementDateLabel
@@ -6280,7 +6280,7 @@ namespace RRFFilesManager
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(4539, 1087);
+            this.Btn_Save.Location = new System.Drawing.Point(4539, 1083);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -6821,7 +6821,7 @@ namespace RRFFilesManager
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1443, 614);
+            this.btnSave.Location = new System.Drawing.Point(1443, 618);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6843,17 +6843,17 @@ namespace RRFFilesManager
             // ABDenialsDataGridView
             // 
             this.ABDenialsDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ABDenialsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ABDenialsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ABDenialsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ABDenialsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ABDenialsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ABDenialsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameofBenefit,
@@ -6888,8 +6888,8 @@ namespace RRFFilesManager
             // AmountDispute
             // 
             this.AmountDispute.DataPropertyName = "AmountinDispute";
-            dataGridViewCellStyle14.Format = "N2";
-            this.AmountDispute.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Format = "N2";
+            this.AmountDispute.DefaultCellStyle = dataGridViewCellStyle7;
             this.AmountDispute.HeaderText = "Amount Dispute";
             this.AmountDispute.Name = "AmountDispute";
             this.AmountDispute.ReadOnly = true;

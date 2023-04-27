@@ -33,6 +33,8 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.UserLawyerBox = new System.Windows.Forms.GroupBox();
             this.UserNameChangeBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.CBoxResponsibleCheckBox = new System.Windows.Forms.CheckBox();
+            this.CBoxFileLawyerCheckBox = new System.Windows.Forms.CheckBox();
             this.CBoxIsParalegalCheckBox = new System.Windows.Forms.CheckBox();
             this.TBoxDescriptionLabel = new System.Windows.Forms.Label();
             this.CBoxBaseComissionCheckBox = new System.Windows.Forms.CheckBox();
@@ -61,8 +63,6 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.NewButton = new System.Windows.Forms.Button();
             this.UserManagerTransferButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CBoxFileLawyerCheckBox = new System.Windows.Forms.CheckBox();
-            this.CBoxResponsibleCheckBox = new System.Windows.Forms.CheckBox();
             this.UserLawyerBox.SuspendLayout();
             this.UserNameChangeBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -141,6 +141,28 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(708, 205);
             this.tableLayoutPanel1.TabIndex = 19;
+            // 
+            // CBoxResponsibleCheckBox
+            // 
+            this.CBoxResponsibleCheckBox.AutoSize = true;
+            this.CBoxResponsibleCheckBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CBoxResponsibleCheckBox.Location = new System.Drawing.Point(29, 115);
+            this.CBoxResponsibleCheckBox.Name = "CBoxResponsibleCheckBox";
+            this.CBoxResponsibleCheckBox.Size = new System.Drawing.Size(204, 40);
+            this.CBoxResponsibleCheckBox.TabIndex = 159;
+            this.CBoxResponsibleCheckBox.Text = "Can be Responsible Lawyer";
+            this.CBoxResponsibleCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // CBoxFileLawyerCheckBox
+            // 
+            this.CBoxFileLawyerCheckBox.AutoSize = true;
+            this.CBoxFileLawyerCheckBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CBoxFileLawyerCheckBox.Location = new System.Drawing.Point(239, 115);
+            this.CBoxFileLawyerCheckBox.Name = "CBoxFileLawyerCheckBox";
+            this.CBoxFileLawyerCheckBox.Size = new System.Drawing.Size(149, 40);
+            this.CBoxFileLawyerCheckBox.TabIndex = 158;
+            this.CBoxFileLawyerCheckBox.Text = "Can be File Lawyer";
+            this.CBoxFileLawyerCheckBox.UseVisualStyleBackColor = true;
             // 
             // CBoxIsParalegalCheckBox
             // 
@@ -489,28 +511,6 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 144;
             this.PictureBox1.TabStop = false;
-            // 
-            // CBoxFileLawyerCheckBox
-            // 
-            this.CBoxFileLawyerCheckBox.AutoSize = true;
-            this.CBoxFileLawyerCheckBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.CBoxFileLawyerCheckBox.Location = new System.Drawing.Point(239, 115);
-            this.CBoxFileLawyerCheckBox.Name = "CBoxFileLawyerCheckBox";
-            this.CBoxFileLawyerCheckBox.Size = new System.Drawing.Size(149, 40);
-            this.CBoxFileLawyerCheckBox.TabIndex = 158;
-            this.CBoxFileLawyerCheckBox.Text = "Can be File Lawyer";
-            this.CBoxFileLawyerCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // CBoxResponsibleCheckBox
-            // 
-            this.CBoxResponsibleCheckBox.AutoSize = true;
-            this.CBoxResponsibleCheckBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CBoxResponsibleCheckBox.Location = new System.Drawing.Point(29, 115);
-            this.CBoxResponsibleCheckBox.Name = "CBoxResponsibleCheckBox";
-            this.CBoxResponsibleCheckBox.Size = new System.Drawing.Size(204, 40);
-            this.CBoxResponsibleCheckBox.TabIndex = 159;
-            this.CBoxResponsibleCheckBox.Text = "Can be Responsible Lawyer";
-            this.CBoxResponsibleCheckBox.UseVisualStyleBackColor = true;
             // 
             // UserManagerForm
             // 

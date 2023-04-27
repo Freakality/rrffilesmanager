@@ -36,7 +36,7 @@
             System.Windows.Forms.Label LimitationPeriodLabel;
             System.Windows.Forms.Label MatterSubTypeLabel;
             System.Windows.Forms.Label StaffInterviewerLabel;
-            System.Windows.Forms.Label FileNumberLabel;
+            this.FileNumberLabel = new System.Windows.Forms.Label();
             this.DateOfLossLabel = new System.Windows.Forms.Label();
             this.AdditionalNotesTextBox = new System.Windows.Forms.TextBox();
             this.LawyerComboBox = new System.Windows.Forms.ComboBox();
@@ -58,6 +58,7 @@
             this.FindIntakeButton = new System.Windows.Forms.Button();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
             this.MatterTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.FileNumberUpDown = new System.Windows.Forms.NumericUpDown();
             AdditionalNotesLabel = new System.Windows.Forms.Label();
             DateOFCallLabel = new System.Windows.Forms.Label();
             FileLawyerLabel = new System.Windows.Forms.Label();
@@ -66,11 +67,11 @@
             LimitationPeriodLabel = new System.Windows.Forms.Label();
             MatterSubTypeLabel = new System.Windows.Forms.Label();
             StaffInterviewerLabel = new System.Windows.Forms.Label();
-            FileNumberLabel = new System.Windows.Forms.Label();
             this.TableLayoutPanel1.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
             this.PreliminayPanel.SuspendLayout();
             this.GroupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FileNumberUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // AdditionalNotesLabel
@@ -157,12 +158,12 @@
             // 
             // FileNumberLabel
             // 
-            FileNumberLabel.AutoSize = true;
-            FileNumberLabel.Location = new System.Drawing.Point(3, 184);
-            FileNumberLabel.Name = "FileNumberLabel";
-            FileNumberLabel.Size = new System.Drawing.Size(88, 17);
-            FileNumberLabel.TabIndex = 2;
-            FileNumberLabel.Text = "File Number:";
+            this.FileNumberLabel.AutoSize = true;
+            this.FileNumberLabel.Location = new System.Drawing.Point(3, 184);
+            this.FileNumberLabel.Name = "FileNumberLabel";
+            this.FileNumberLabel.Size = new System.Drawing.Size(88, 17);
+            this.FileNumberLabel.TabIndex = 2;
+            this.FileNumberLabel.Text = "File Number:";
             // 
             // DateOfLossLabel
             // 
@@ -211,10 +212,10 @@
             this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.TableLayoutPanel1.Controls.Add(this.FileNumberUpDown, 1, 4);
             this.TableLayoutPanel1.Controls.Add(this.LawyerComboBox, 3, 1);
-            this.TableLayoutPanel1.Controls.Add(FileNumberLabel, 0, 4);
+            this.TableLayoutPanel1.Controls.Add(this.FileNumberLabel, 0, 4);
             this.TableLayoutPanel1.Controls.Add(this.MatterSubTypeComboBox, 3, 3);
-            this.TableLayoutPanel1.Controls.Add(this.FileNumberTextBox, 1, 4);
             this.TableLayoutPanel1.Controls.Add(this.StaffInterviewerComboBox, 3, 0);
             this.TableLayoutPanel1.Controls.Add(StaffInterviewerLabel, 2, 0);
             this.TableLayoutPanel1.Controls.Add(MatterSubTypeLabel, 2, 3);
@@ -259,11 +260,12 @@
             this.FileNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FileNumberTextBox.Enabled = false;
-            this.FileNumberTextBox.Location = new System.Drawing.Point(126, 187);
+            this.FileNumberTextBox.Location = new System.Drawing.Point(157, 9);
             this.FileNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.FileNumberTextBox.Name = "FileNumberTextBox";
-            this.FileNumberTextBox.Size = new System.Drawing.Size(479, 23);
+            this.FileNumberTextBox.Size = new System.Drawing.Size(479, 20);
             this.FileNumberTextBox.TabIndex = 3;
+            this.FileNumberTextBox.Visible = false;
             // 
             // StaffInterviewerComboBox
             // 
@@ -464,6 +466,20 @@
             this.MatterTypeComboBox.ValueMember = "MatterType";
             this.MatterTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.MatterTypeComboBox_SelectedIndexChanged);
             // 
+            // FileNumberUpDown
+            // 
+            this.FileNumberUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FileNumberUpDown.Location = new System.Drawing.Point(126, 187);
+            this.FileNumberUpDown.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.FileNumberUpDown.Name = "FileNumberUpDown";
+            this.FileNumberUpDown.Size = new System.Drawing.Size(486, 23);
+            this.FileNumberUpDown.TabIndex = 145;
+            // 
             // PreliminaryInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -471,6 +487,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.PreliminayPanel);
+            this.Controls.Add(this.FileNumberTextBox);
             this.Name = "PreliminaryInfo";
             this.Size = new System.Drawing.Size(1350, 610);
             this.Load += new System.EventHandler(this.PreliminaryInfo_Load);
@@ -481,7 +498,9 @@
             this.PreliminayPanel.ResumeLayout(false);
             this.PreliminayPanel.PerformLayout();
             this.GroupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FileNumberUpDown)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -508,5 +527,7 @@
         internal System.Windows.Forms.Label StatutoryNoticeLabel;
         private System.Windows.Forms.Label DateOfLossLabel;
         private System.Windows.Forms.Button PrelimInfoQuestionnaireButton;
+        public System.Windows.Forms.Label FileNumberLabel;
+        internal System.Windows.Forms.NumericUpDown FileNumberUpDown;
     }
 }

@@ -496,6 +496,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
             // 
             this.pharmacyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pharmacyComboBox1.FormattingEnabled = true;
+            this.pharmacyComboBox1.IntegralHeight = false;
             this.pharmacyComboBox1.Location = new System.Drawing.Point(3, 3);
             this.pharmacyComboBox1.Name = "pharmacyComboBox1";
             this.pharmacyComboBox1.Size = new System.Drawing.Size(362, 21);

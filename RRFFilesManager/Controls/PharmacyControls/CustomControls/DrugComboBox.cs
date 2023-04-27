@@ -39,7 +39,7 @@ namespace RRFFilesManager.Controls.PharmacyControls
 
         private void FillItems()
         {
-            var items = _drugRepository?.Search(Text, 10).ToArray();
+            var items = _drugRepository?.Search(Text).ToArray();
             if (items == null)
                 return;
             Items.Clear();

@@ -25,9 +25,10 @@ namespace RRFFilesManager.Utils
         {
             if (file == null)
                 throw new Exception("File can not be null");
-            var clientFolderName = $"{file.Client.LastName}, {file.Client.FirstName} - {file.Client.ID}";
+            //var clientFolderName = $"{file.Client.LastName}, {file.Client.FirstName} - {file.Client.ID}";
+            var clientFolderName = $"{file.Client.LastName}, {file.Client.FirstName} - {file.FileNumber}";
             var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], clientFolderName);
-            path = Path.Combine(path, file.FileNumber.ToString());
+            //path = Path.Combine(path, file.FileNumber.ToString());
             Directory.CreateDirectory(path);
             return path;
         }
@@ -36,7 +37,8 @@ namespace RRFFilesManager.Utils
         {
             if (file == null)
                 throw new Exception("File can not be null");
-            var clientFolderName = $"{file.Client.LastName}, {file.Client.FirstName} - {file.Client.ID}";
+            //var clientFolderName = $"{file.Client.LastName}, {file.Client.FirstName} - {file.Client.ID}";
+            var clientFolderName = $"{file.Client.LastName}, {file.Client.FirstName}";
             var path = Path.Combine(ConfigurationManager.AppSettings["FilesPath"], "Not Retained");
             path = Path.Combine(path, $"CYA - {file.MatterType.Description}");
             path = Path.Combine(path, clientFolderName);
