@@ -179,5 +179,20 @@ namespace RRFFilesManager.Controls.UserManagerControls
             TransferTasks transferTasks = new TransferTasks(SelectedLawyer);
             transferTasks.ShowDialog();
         }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show($"Are you sure you want to delete this user/lawyer from the database?.", "Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DialogResult dialogResult2 = MessageBox.Show($"Deletion is permanent. Are you really sure you want to delete this user/lawyer from the database?.", "Last Chance", MessageBoxButtons.YesNo);
+                if (dialogResult2 == DialogResult.Yes)
+                {
+                    _lawyerRepository.SoftDelete(SelectedLawyer.ID);
+                    UserLawyerListBox.DataSource = _lawyerRepository.List();
+                    MessageBox.Show("User has been deleted.");
+                }
+            }
+        }
     }
 }

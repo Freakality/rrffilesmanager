@@ -64,10 +64,9 @@ namespace RRFFilesManager.DataAccess
 
         public void SoftDelete(int lawyerId)
         {
-            var accountToDelete = _context.Lawyers.Find(lawyerId);
-
+            var trxLawyer = GetById(lawyerId);
+            _context.Entry(trxLawyer).State = EntityState.Deleted;
             _context.SaveChanges();
-
         }
 
         public void Update(Lawyer lawyer)
@@ -76,6 +75,13 @@ namespace RRFFilesManager.DataAccess
             _context.Entry(trxLawyer).CurrentValues.SetValues(lawyer);
             _context.SaveChanges();
 
+        }
+
+        public void Delete(Lawyer lawyer)
+        {
+            var trxLawyer = GetById(lawyer.ID);
+            _context.Remove(trxLawyer);
+            _context.SaveChanges();
         }
     }
 }

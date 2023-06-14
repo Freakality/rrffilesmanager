@@ -39,6 +39,9 @@ namespace RRFFilesManager.Abstractions
         public string EILT4Employee { get; set; }
         public string EILT4Company { get; set; }
         public string EILCollecInsurance { get; set; }
+        public string EILEmployerName { get; set; }
+        public string EILEmploymentPosition { get; set; }
+        public string EILEssentialEmploymentDuties { get; set; }
         public string EILEmployeeGrossEarning { get; set; }
         public string EILHowLongEmployee { get; set; }
         public string EILJobTitle { get; set; }
@@ -73,20 +76,37 @@ namespace RRFFilesManager.Abstractions
         public string AccBenReplacBenef { get; set; }
         public string AccBenNotes { get; set; }
 
+        public DateTime LimDateOfDenial { get; set; }
+        public DateTime LimDateGivenToLawyer { get; set; }
+        public string LimConflictCheck { get; set; }
+
         public string Notes { get; set; }
 
+        public string PolReasonWork { get; set; }
+        public string PolPastOffWork { get; set; }
         public string PolSickBenefits { get; set; }
         public string PolWhoPaidBenefits { get; set; }
+        public DateTime PolDateFirstBenefits { get; set; }
         public DateTime PolDateLostBenefits { get; set; }
-        public string PolDeniedSTPorLTD { get; set; }
+        //public string PolDeniedSTPorLTD { get; set; }
+        public string PolBenefitsDeniedTerminated { get; set; }
         public string PolHowMuchBeingPaid { get; set; }
+        public string PolDeniedLTDBenefits { get; set; }
         public virtual DisabilityInsuranceCompany PolCompanyDeniedBenefits { get; set; }
+        public string PolDisabilityInsurerThirdParty { get; set; }
         public string PolLTDPrivateOrEmployerGroup { get; set; }
+        public DateTime PolDateEligibleLTD { get; set; }
         public DateTime PolDateSubmittedLTD { get; set; }
         public DateTime PolDateStartedCollLTD { get; set; }
+        public string PolMonthlyEntitledLTD { get; set; }
+        public string PolLTDBenefitsTaxable { get; set; }
         public DateTime PolDateLastDayLTD { get; set; }
         public string PolFirstTimeLTDApproved { get; set; }
         public string PolReasonTerminateLTD { get; set; }
+        public string PolInsuranceCaseManager { get; set; }
+        public string PolPolicyNumber { get; set; }
+        public string PolCertificateNumber { get; set; }
+        public string PolAppealedInsurance { get; set; }
         public string PolApplicationForCPP { get; set; }
         public string PolCPPOwnOrCompany { get; set; }
         public string PolCPPApproved { get; set; }

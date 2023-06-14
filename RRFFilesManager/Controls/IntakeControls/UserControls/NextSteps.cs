@@ -109,6 +109,7 @@ namespace RRFFilesManager.IntakeForm
             catch(System.Exception exception)
             {
                 MessageBox.Show(exception.Message);
+                MessageBox.Show(exception.StackTrace);
                 Submitting.Instance.Hide();
                 Home.IntakeForm.Show();
             }

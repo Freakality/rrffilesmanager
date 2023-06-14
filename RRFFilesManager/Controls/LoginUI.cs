@@ -92,5 +92,10 @@ namespace RRFFilesManager
         {
             ChangePasswordUI = Utils.Utils.OpenFormLogIn<ChangePasswordUI>(this);
         }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -17,6 +17,6 @@ namespace RRFFilesManager.Abstractions
         public string PostalCode { get; set; }
         public string PhoneNumber1 { get; set; }
         public string PhoneNumber2 { get; set; }
-        public override string ToString() => Name;
+        public override string ToString() => $"{Name} - {PostalCode}";
     }
 }

@@ -128,7 +128,7 @@ namespace RRFFilesManager.ContactForm
         private void ContactInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
-            Home.Instance.Show();
+            //Home.Instance.Show();
         }
 
 

@@ -123,6 +123,12 @@ namespace RRFFilesManager.Controls.ContactControls
                 
         }
 
+        public void FillName(string firstName, string lastName)
+        {
+            FirstName.Text = firstName;
+            LastName.Text = lastName;
+        }
+
         public void FillForm(Contact client)
         {
             if (client == null)

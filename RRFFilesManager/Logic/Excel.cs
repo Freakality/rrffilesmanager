@@ -55,7 +55,39 @@ namespace RRFFilesManager.Logic
         }
         public static void ReplaceAll(Worksheet worksheet, string findText, string replaceWith)
         {
-            worksheet.Cells.Replace(findText, replaceWith);
+            if (replaceWith != null)
+            {
+                if (replaceWith.Length > 255)
+                {
+                    OverloadReplace(worksheet, findText, replaceWith, 0, 250 - findText.Length);
+                }
+                else
+                {
+                    worksheet.Cells.Replace(findText, replaceWith);
+                }
+            }
+            else
+            {
+                worksheet.Cells.Replace(findText, "");
+            }
+        }
+
+        public static void OverloadReplace(Worksheet worksheet, string findText, string replaceWith, int start, int end)
+        {
+            if (replaceWith.Length > 255)
+            {
+                var newReplace = replaceWith.Substring(start, end);
+                worksheet.Cells.Replace(findText, newReplace + findText);
+                var newString = replaceWith.Substring(end + 1);
+                if (newString.Length > 255)
+                {
+                    OverloadReplace(worksheet, findText, newString, 0, 250 - findText.Length);
+                }
+                else
+                {
+                    worksheet.Cells.Replace(findText, newString);
+                }
+            }
         }
         public static void ReplaceAll(Worksheet worksheet, string findText, bool replaceWith)
         {
@@ -103,27 +135,7 @@ namespace RRFFilesManager.Logic
             ReplaceAll(worksheet, "$$$MobileCarrier$$$", file.Client?.MobileCarrier);
             ReplaceAll(worksheet, "$$$EmailToText$$$", file.Client?.EmailToText);
             ReplaceAll(worksheet, "$$$DateOfBirth$$$", file.Client?.DateOfBirth);
-            ReplaceAll(worksheet, "$$$OtherNotes$$$", file.Client?.Notes);
-
-            ReplaceAll(worksheet, "$$$LiabilityDate$$$", file.Intake.LiaDate);
-            ReplaceAll(worksheet, "$$$LiabilityMVR$$$", file.Intake.LiaMVR);
-            ReplaceAll(worksheet, "$$$LiabilityRC$$$", file.Intake.LiaReportCollision);
-            ReplaceAll(worksheet, "$$$LiabilityMVC$$$", file.Intake.LiaMVCExchange);
-            ReplaceAll(worksheet, "$$$LiabilityOtherDocuments$$$", file.Intake.LiaOtherDoc);
-            ReplaceAll(worksheet, "$$$LiabilityWhere$$$", file.Intake.LiaWhereAccident);
-            ReplaceAll(worksheet, "$$$LiabilityExplanation$$$", file.Intake.LiaExplain);
-            ReplaceAll(worksheet, "$$$LiabilityHavePhotos$$$", file.Intake.LiaHavePhotos);
-            ReplaceAll(worksheet, "$$$LiabilityDamageEstimation$$$", file.Intake.LiaEstimDamage);
-            ReplaceAll(worksheet, "$$$LiabilityYourFault$$$", file.Intake.LiaYourFault);
-            ReplaceAll(worksheet, "$$$LiabilityDriverName$$$", file.Intake.LiaDriverName);
-            ReplaceAll(worksheet, "$$$LiabilityOwnerName$$$", file.Intake.LiaOwnerName);
-            ReplaceAll(worksheet, "$$$LiabilityInsuranceCompany$$$", file.Intake.LiaInsuranceCo);
-            ReplaceAll(worksheet, "$$$LiabilityCopyReport$$$", file.Intake.LiaHaveCopy);
-            ReplaceAll(worksheet, "$$$LiabilityOwnNegligence$$$", file.Intake.LiaOwnNegligence);
-            ReplaceAll(worksheet, "$$$LiabilityFaultPerson$$$", file.Intake.LiaFaultPerson);
-            ReplaceAll(worksheet, "$$$LiabilityMunicipalityName$$$", file.Intake.LiaMunicipality);
-            ReplaceAll(worksheet, "$$$LiabilityMunicipalityNoticedy$$$", file.Intake.LiaNotifiedMunicipality);
-            ReplaceAll(worksheet, "$$$LiabilityNotes$$$", file.Intake.LiaNotes);
+            ReplaceAll(worksheet, "$$$ClientOtherNotes$$$", file.Client?.Notes);
 
             ReplaceAll(worksheet, "$$$LiabilityDate$$$", file.Intake.LiaDate.ToString("MMMM d, yyyy"));
             ReplaceAll(worksheet, "$$$LiabilityMVR$$$", file.Intake.LiaMVR);
@@ -145,19 +157,31 @@ namespace RRFFilesManager.Logic
             ReplaceAll(worksheet, "$$$LiabilityMunicipalityNoticedy$$$", file.Intake.LiaNotifiedMunicipality);
             ReplaceAll(worksheet, "$$$LiabilityNotes$$$", file.Intake.LiaNotes);
 
-
+            ReplaceAll(worksheet, "$$$PolicyReasonWork$$$", file.Intake.PolReasonWork);
+            ReplaceAll(worksheet, "$$$PolicyPastOffWork$$$", file.Intake.PolPastOffWork);
             ReplaceAll(worksheet, "$$$PolicySickBenefits$$$", file.Intake.PolSickBenefits);
             ReplaceAll(worksheet, "$$$PolicyWhoPaidBenefits$$$", file.Intake.PolWhoPaidBenefits);
+            ReplaceAll(worksheet, "$$$PolicyDateFirstBenefits$$$", file.Intake.PolDateFirstBenefits.ToString("MMMM d, yyyy"));
             ReplaceAll(worksheet, "$$$PolicyDateLostBenefits$$$", file.Intake.PolDateLostBenefits.ToString("MMMM d, yyyy"));
-            ReplaceAll(worksheet, "$$$PolicyDeniedSTPorLTD$$$", file.Intake.PolDeniedSTPorLTD);
+            //ReplaceAll(worksheet, "$$$PolicyDeniedSTPorLTD$$$", file.Intake.PolDeniedSTPorLTD);
+            ReplaceAll(worksheet, "$$$PolicyDeniedTerminated$$$", file.Intake.PolBenefitsDeniedTerminated);
             ReplaceAll(worksheet, "$$$PolicyHowMuchBeingPaid$$$", file.Intake.PolHowMuchBeingPaid);
+            ReplaceAll(worksheet, "$$$PolicyDeniedLTDBenefits$$$", file.Intake.PolDeniedLTDBenefits);
             ReplaceAll(worksheet, "$$$PolicyCompanyDeniedBenefits$$$", file.Intake.PolCompanyDeniedBenefits?.Description);
+            ReplaceAll(worksheet, "$$$PolicyDisabilityInsurerThirdParty$$$", file.Intake.PolDisabilityInsurerThirdParty);
             ReplaceAll(worksheet, "$$$PolicyLTDPrivateOrEmployerGroup$$$", file.Intake.PolLTDPrivateOrEmployerGroup);
+            ReplaceAll(worksheet, "$$$PolicyDateEligibleLTD$$$", file.Intake.PolDateEligibleLTD.ToString("MMMM d, yyyy"));
             ReplaceAll(worksheet, "$$$PolicyDateSubmittedLTD$$$", file.Intake.PolDateSubmittedLTD.ToString("MMMM d, yyyy"));
             ReplaceAll(worksheet, "$$$PolicyDateStartedCollLTD$$$", file.Intake.PolDateStartedCollLTD.ToString("MMMM d, yyyy"));
+            ReplaceAll(worksheet, "$$$PolicyMonthlyEntitled$$$", file.Intake.PolMonthlyEntitledLTD);
+            ReplaceAll(worksheet, "$$$PolicyBenefitsTaxable$$$", file.Intake.PolLTDBenefitsTaxable);
             ReplaceAll(worksheet, "$$$PolicyDateLastDayLTD$$$", file.Intake.PolDateLastDayLTD.ToString("MMMM d, yyyy"));
             ReplaceAll(worksheet, "$$$PolicyFirstTimeLTDApproved$$$", file.Intake.PolFirstTimeLTDApproved);
             ReplaceAll(worksheet, "$$$PolicyReasonTerminateLTD$$$", file.Intake.PolReasonTerminateLTD);
+            ReplaceAll(worksheet, "$$$PolicyInsuranceCaseManager$$$", file.Intake.PolInsuranceCaseManager);
+            ReplaceAll(worksheet, "$$$PolicyNumber$$$", file.Intake.PolPolicyNumber);
+            ReplaceAll(worksheet, "$$$PolicyCertificateNumber$$$", file.Intake.PolCertificateNumber);
+            ReplaceAll(worksheet, "$$$PolicyAppealedInsurance$$$", file.Intake.PolAppealedInsurance);
             ReplaceAll(worksheet, "$$$PolicyApplicationForCPP$$$", file.Intake.PolApplicationForCPP);
             ReplaceAll(worksheet, "$$$PolicyCPPOwnOrCompany$$$", file.Intake.PolCPPOwnOrCompany);
             ReplaceAll(worksheet, "$$$PolicyCPPApproved$$$", file.Intake.PolCPPApproved);
@@ -169,6 +193,9 @@ namespace RRFFilesManager.Logic
             ReplaceAll(worksheet, "$$$EmploymentT4Employee$$$", file.Intake.EILT4Employee);
             ReplaceAll(worksheet, "$$$EmploymentT4CompanyName$$$", file.Intake.EILT4Company);
             ReplaceAll(worksheet, "$$$EmploymentCollectingEmploymentInsurance$$$", file.Intake.EILCollecInsurance);
+            ReplaceAll(worksheet, "$$$EmploymentEmployerName$$$", file.Intake.EILEmployerName);
+            ReplaceAll(worksheet, "$$$EmploymentEmploymentPosition$$$", file.Intake.EILEmploymentPosition);
+            ReplaceAll(worksheet, "$$$EmploymentEssentialDuties$$$", file.Intake.EILEssentialEmploymentDuties);
             ReplaceAll(worksheet, "$$$EmploymentGrossEarning$$$", file.Intake.EILEmployeeGrossEarning);
             ReplaceAll(worksheet, "$$$EmploymentTimeBeingEmployed$$$", file.Intake.EILHowLongEmployee);
             ReplaceAll(worksheet, "$$$EmploymentJobTitle$$$", file.Intake.EILJobTitle);
@@ -203,6 +230,10 @@ namespace RRFFilesManager.Logic
             ReplaceAll(worksheet, "$$$ABCompletedOCF3$$$", file.Intake.AccBenOCF3);
             ReplaceAll(worksheet, "$$$ABReceivingBenefits$$$", file.Intake.AccBenReplacBenef);
             ReplaceAll(worksheet, "$$$ABNotes$$$", file.Intake.AccBenNotes);
+
+            ReplaceAll(worksheet, "$$$LimitationDateOfCall$$$", file.DateOFLoss);
+            ReplaceAll(worksheet, "$$$LimitationDateGivenToLawyer$$$", file.Intake.LimDateGivenToLawyer);
+            ReplaceAll(worksheet, "$$$LimitationConflictCheck$$$", file.Intake.LimConflictCheck);
 
             ReplaceAll(worksheet, "$$$OtherNotes$$$", file.Intake.Notes);
 

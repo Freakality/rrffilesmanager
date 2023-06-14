@@ -20,6 +20,7 @@ namespace RRFFilesManager.IntakeForm
         {
             _archiveManager = new ArchiveManager();
             InitializeComponent();
+            DateApptScheduled.CustomFormat = "MMM-dd-yyyy";
         }
 
         public new bool Validate()
@@ -146,12 +147,26 @@ namespace RRFFilesManager.IntakeForm
 
         private void NeedOnlineQues_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (NeedOnlineQues.Text == "Yes")
+            {
+                DateApptScheduled.CustomFormat = " ";
+                DateApptScheduled.Enabled = false;
+            }
+            else
+            {
+                DateApptScheduled.Enabled = true;
+                DateApptScheduled.CustomFormat = "MMM-dd-yyyy";
+            }
         }
 
         private void ApptType_SelectedIndexChanged(object sender, EventArgs e)
         {
             TimeFrame.Enabled = ApptType.Text == "In Office";
+        }
+
+        private void DateApptScheduled_ValueChanged(object sender, EventArgs e)
+        {
+            DateApptScheduled.CustomFormat = "MMM-dd-yyyy";
         }
     }
 }

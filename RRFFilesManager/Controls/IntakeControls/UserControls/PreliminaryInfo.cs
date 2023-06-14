@@ -22,6 +22,7 @@ namespace RRFFilesManager.IntakeForm
         private readonly IHearAboutUsRepository _hearAboutUsRepository;
         private readonly ILawyerRepository _lawyerRepository;
         private readonly IFileRepository _fileRepository;
+        private readonly IContactRepository _contactRepository;
         private readonly Logic.FileManager _fileManager;
         private readonly IFileStatusRepository _fileStatusRepository;
         private readonly QuestionnaireManager _questionnaireManager;
@@ -41,6 +42,7 @@ namespace RRFFilesManager.IntakeForm
             _fileManager = new Logic.FileManager();
             _questionnaireManager = new QuestionnaireManager();
             _permissionRepository = Program.GetService<IPermissionRepository>();
+            _contactRepository = Program.GetService<IContactRepository>();
             User = Program.GetUser();
             InitializeComponent();
             Initialize();
@@ -84,11 +86,11 @@ namespace RRFFilesManager.IntakeForm
                     return false;
                 }
 
-                if (string.IsNullOrEmpty(ResponsibleLawyerComboBox.Text))
+                /*if (string.IsNullOrEmpty(ResponsibleLawyerComboBox.Text))
                 {
                     MessageBox.Show("Please select: Responsible Lawyer");
                     return false;
-                }
+                }*/
 
                 if (string.IsNullOrEmpty(LawyerComboBox.Text))
                 {
@@ -190,12 +192,17 @@ namespace RRFFilesManager.IntakeForm
 
         public void FillFile(Abstractions.File file)
         {
+            /*if (!string.IsNullOrEmpty(FirstNameTBox.Text) || !string.IsNullOrEmpty(LastNameTBox.Text))
+            {
+                FillPrelimClient(file);
+            }*/
             file.MatterType = (MatterType)MatterTypeComboBox.SelectedItem;
             file.DateOfCall = DateOFCallDateTimePicker.Value;
             file.StaffInterviewer = (Lawyer)StaffInterviewerComboBox.SelectedItem;
             file.HowHear = (HearAboutUs)HowHearComboBox.SelectedItem;
             file.FileLawyer = (Lawyer)LawyerComboBox.SelectedItem;
-            file.ResponsibleLawyer = (Lawyer)ResponsibleLawyerComboBox.SelectedItem;
+            if (ResponsibleLawyerComboBox.SelectedItem != null)
+                file.ResponsibleLawyer = (Lawyer)ResponsibleLawyerComboBox.SelectedItem;
             file.DateOFLoss = DateOfLossDateTimePicker.Value;
             file.LimitationPeriod = LimitationPeriodTextBox.Text;
             file.MatterSubType = (MatterSubType)MatterSubTypeComboBox.SelectedItem;
@@ -206,14 +213,34 @@ namespace RRFFilesManager.IntakeForm
             file.CurrentStatus = _fileStatusRepository.GetById((int)FileStatusEnum.PotentialFile);
         }
 
+        public void FillPrelimClient(Abstractions.File file)
+        {
+
+            /*if (Home.IntakeForm.Intake.File.Client == null)
+                Home.IntakeForm.Intake.File.Client = new Contact();
+            var client = Home.IntakeForm.Intake.File.Client;
+            client.FirstName = FirstNameTBox.Text;
+            client.LastName = LastNameTBox.Text;
+            if (client.ID == default)
+                _contactRepository.Insert(client);
+            else
+                _contactRepository.Update(client);*/
+        }
+
         public void FillForm(Abstractions.File file)
         {
+            if (file.Client != null)
+            {
+                FirstNameTBox.Text = file.Client.FirstName;
+                LastNameTBox.Text = file.Client.LastName;
+            }
             MatterTypeComboBox.SelectedItem = file.MatterType;
             DateOFCallDateTimePicker.Value= file.DateOfCall;
             StaffInterviewerComboBox.SelectedItem = file.StaffInterviewer;
             HowHearComboBox.SelectedItem = file.HowHear;
             LawyerComboBox.SelectedItem = file.FileLawyer;
-            ResponsibleLawyerComboBox.SelectedItem = file.ResponsibleLawyer;
+            if (file.ResponsibleLawyer != null)
+                ResponsibleLawyerComboBox.SelectedItem = file.ResponsibleLawyer;
             DateOfLossDateTimePicker.Value = file.DateOFLoss;
             LimitationPeriodTextBox.Text = file.LimitationPeriod;
             MatterSubTypeComboBox.SelectedItem = file.MatterSubType;
@@ -237,6 +264,7 @@ namespace RRFFilesManager.IntakeForm
                 _fileManager.Insert(Home.IntakeForm.Intake.File);
             else
                 _fileManager.Update(Home.IntakeForm.Intake.File);
+            Home.IntakeForm.Intake.Hold = true;
         }
 
         private void MatterTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)

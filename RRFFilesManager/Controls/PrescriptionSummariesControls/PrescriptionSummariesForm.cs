@@ -17,6 +17,10 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Web;
 using RRFFilesManager.Utils;
+using System.IO;
+using ClosedXML.Excel;
+using File = RRFFilesManager.Abstractions.File;
+using XLWorkbook = ClosedXML.Excel.XLWorkbook;
 
 namespace RRFFilesManager.Controls.PrescriptionSummariesControls
 {
@@ -27,6 +31,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         public Pharmacy Pharmacy => pharmacyComboBox1.Pharmacy;
         public Drug Drug => drugComboBox1.Drug;
         private IPharmacyRepository _pharmacyRepository { get; set; }
+        private IDrugRepository _drugRepository { get; set; }
         private IOutOfPocketHealthCareExpRepository _outOfPocketHealthCareExpRepository { get; set; }
         //public double? Distance { get; set; }
 
@@ -34,6 +39,7 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         public PrescriptionSummariesForm()
         {
             _pharmacyRepository = Program.GetService<IPharmacyRepository>();
+            _drugRepository = Program.GetService<IDrugRepository>();
             _outOfPocketHealthCareExpRepository = Program.GetService<IOutOfPocketHealthCareExpRepository>();
             InitializeComponent();
 
@@ -246,6 +252,115 @@ namespace RRFFilesManager.Controls.PrescriptionSummariesControls
         {
             var form = new CreateDrugForm();
             form.Show();
+        }
+
+        private void LoadExcel()
+        {
+            OpenFileDialog openTaskDialog = new OpenFileDialog();
+
+            openTaskDialog.Filter = "Excel(*.xlsx;*.xlsm)|*.xlsx;*.xlsm";
+            try
+            {
+                if (openTaskDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (openTaskDialog.CheckFileExists)
+                    {
+                        string path = Path.GetFullPath(openTaskDialog.FileName);
+                        DataTable dt = new DataTable("Drugs");
+                        using (XLWorkbook workBook = new XLWorkbook(path))
+                        {
+                            foreach (IXLWorksheet sheet in workBook.Worksheets)
+                            {
+                                //Read the first Sheet from Excel file.
+                                IXLWorksheet workSheet = sheet;
+
+                                //Loop through the Worksheet rows.
+                                bool firstRow = true;
+                                foreach (IXLRow row in workSheet.Rows())
+                                {
+                                    //Use the first row to add columns to DataTable.
+                                    if (firstRow)
+                                    {
+                                        foreach (IXLCell cell in row.Cells())
+                                        {
+                                            dt.Columns.Add(cell.Value.ToString());
+                                        }
+                                        firstRow = false;
+                                    }
+                                    else
+                                    {
+                                        //Add rows to DataTable.
+                                        dt.Rows.Add();
+                                        int i = 0;
+                                        foreach (IXLCell cell in row.Cells(1, dt.Columns.Count))
+                                        {
+                                            dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
+                                            i++;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            if (String.IsNullOrEmpty(row[0].ToString()))
+                                continue;
+                            var exists = _drugRepository.Search(row[0].ToString());
+                            if (exists.Count() == 0 || row[0].ToString() == "Not Applicable")
+                            {
+                                Drug drug = new Drug();
+                                drug.DIN = row[0].ToString();
+                                drug.Name = row[1].ToString();
+                                drug.Schedule = row[2].ToString();
+                                drug.ActiveIngredients = row[3].ToString();
+                                drug.Strength = row[4].ToString();
+                                _drugRepository.Insert(drug);
+                            }
+                            else
+                            {
+                                foreach(Drug drug in exists)
+                                {
+                                    bool update = false;
+                                    if (drug.Name != row[1].ToString())
+                                    {
+                                        drug.Name = row[1].ToString();
+                                        update = true;
+                                    }
+                                    if (drug.ActiveIngredients != row[3].ToString())
+                                    {
+                                        drug.ActiveIngredients = row[3].ToString();
+                                        update = true;
+                                    }
+                                    if (drug.Strength != row[4].ToString())
+                                    {
+                                        drug.Strength = row[4].ToString();
+                                        update = true;
+                                    }
+                                    if (update)
+                                        _drugRepository.Update(drug);
+                                }
+                            }
+
+                        }
+                    }
+                    MessageBox.Show("Drugs have been successfully imported.");
+                }
+                else
+                {
+                    MessageBox.Show("Please upload a valid Excel file.");
+                }
+            }
+            catch (Exception ex)
+            {
+                //it will give if file is already exits..
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+            LoadExcel();
         }
     }
 }

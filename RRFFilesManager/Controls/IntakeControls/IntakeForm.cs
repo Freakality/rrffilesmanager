@@ -78,6 +78,13 @@ namespace RRFFilesManager.IntakeForm
             {
                 BackButton.Visible = true;
                 Utils.Utils.SetContent(Content, PotentialClientInfo);
+                /*if (intake.File != null)
+                    if (intake.File.Client != null)
+                        PotentialClientInfo.FillForm(intake.File.Client);*/
+                if (!string.IsNullOrEmpty(PreliminaryInfo.FirstNameTBox.Text) || !string.IsNullOrEmpty(PreliminaryInfo.LastNameTBox.Text))
+                {
+                    PotentialClientInfo.FillNames(PreliminaryInfo.FirstNameTBox.Text, PreliminaryInfo.LastNameTBox.Text);
+                }
                 PreliminaryInfo.OnNext();
             }
             else if (contentType == typeof(PotentialClientInfo) && PotentialClientInfo.Validate())

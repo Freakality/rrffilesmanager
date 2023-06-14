@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -44,7 +45,9 @@ namespace RRFFilesManager.Controls.FileControls
             TextToEmailLabel.Text = contact.EmailToText;
 
             DateOfBirthLabel.Text = contact.DateOfBirth?.ToString("d");
-            HealthCardLabel.Text = contact.HealthCard;
+            var healthcardstr = contact.HealthCard;
+            healthcardstr = Regex.Replace(healthcardstr, @"^(....)(...)(...)$", "$1-$2-$3");
+            HealthCardLabel.Text = healthcardstr;
             SINLabel.Text = contact.SIN;
             FirstLanguageLabel.Text = contact.FirstLanguage;
             Email2Label.Text = contact.Email;

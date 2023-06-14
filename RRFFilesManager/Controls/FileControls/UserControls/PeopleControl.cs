@@ -108,6 +108,7 @@ namespace RRFFilesManager.Controls.FileControls
         private void EditContact_FormClosing(object sender, FormClosingEventArgs e)
         {
             FillPeopleDataGridView();
+            SetCurrentPeoplePanelInformation();
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)

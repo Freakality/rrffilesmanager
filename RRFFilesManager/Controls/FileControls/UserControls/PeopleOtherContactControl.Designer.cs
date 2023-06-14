@@ -101,11 +101,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.Street1Label.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Street1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Street1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Street1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Street1Label.Location = new System.Drawing.Point(3, 3);
             this.Street1Label.Name = "Street1Label";
             this.Street1Label.ReadOnly = true;
-            this.Street1Label.Size = new System.Drawing.Size(358, 19);
+            this.Street1Label.Size = new System.Drawing.Size(358, 15);
             this.Street1Label.TabIndex = 3;
             this.Street1Label.Text = "Street1";
             // 
@@ -120,7 +120,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel6.Controls.Add(this.label2, 0, 5);
             this.tableLayoutPanel6.Controls.Add(this.WebsiteLabel, 0, 6);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 7;
@@ -131,18 +131,18 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(364, 144);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(364, 148);
             this.tableLayoutPanel6.TabIndex = 10;
             // 
             // Street2Label
             // 
             this.Street2Label.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Street2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Street2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Street2Label.Location = new System.Drawing.Point(3, 24);
+            this.Street2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Street2Label.Location = new System.Drawing.Point(3, 25);
             this.Street2Label.Name = "Street2Label";
             this.Street2Label.ReadOnly = true;
-            this.Street2Label.Size = new System.Drawing.Size(358, 19);
+            this.Street2Label.Size = new System.Drawing.Size(358, 15);
             this.Street2Label.TabIndex = 2;
             this.Street2Label.Text = "Street2";
             // 
@@ -150,11 +150,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.CityProvinceLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CityProvinceLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CityProvinceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityProvinceLabel.Location = new System.Drawing.Point(3, 45);
+            this.CityProvinceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityProvinceLabel.Location = new System.Drawing.Point(3, 47);
             this.CityProvinceLabel.Name = "CityProvinceLabel";
             this.CityProvinceLabel.ReadOnly = true;
-            this.CityProvinceLabel.Size = new System.Drawing.Size(358, 19);
+            this.CityProvinceLabel.Size = new System.Drawing.Size(358, 15);
             this.CityProvinceLabel.TabIndex = 1;
             this.CityProvinceLabel.Text = "City, Province";
             // 
@@ -162,33 +162,33 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.PostalCodeLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PostalCodeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PostalCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostalCodeLabel.Location = new System.Drawing.Point(3, 66);
+            this.PostalCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PostalCodeLabel.Location = new System.Drawing.Point(3, 69);
             this.PostalCodeLabel.Name = "PostalCodeLabel";
             this.PostalCodeLabel.ReadOnly = true;
-            this.PostalCodeLabel.Size = new System.Drawing.Size(358, 19);
+            this.PostalCodeLabel.Size = new System.Drawing.Size(358, 15);
             this.PostalCodeLabel.TabIndex = 7;
             this.PostalCodeLabel.Text = "PostalCode";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(3, 99);
+            this.label2.Location = new System.Drawing.Point(3, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 18);
+            this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Website";
             // 
             // WebsiteLabel
             // 
             this.WebsiteLabel.AutoSize = true;
-            this.WebsiteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WebsiteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WebsiteLabel.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.WebsiteLabel.Location = new System.Drawing.Point(3, 119);
+            this.WebsiteLabel.Location = new System.Drawing.Point(3, 123);
             this.WebsiteLabel.Name = "WebsiteLabel";
-            this.WebsiteLabel.Size = new System.Drawing.Size(74, 20);
+            this.WebsiteLabel.Size = new System.Drawing.Size(65, 16);
             this.WebsiteLabel.TabIndex = 10;
             this.WebsiteLabel.TabStop = true;
             this.WebsiteLabel.Text = "Website";
@@ -197,11 +197,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.OC2NameLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC2NameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC2NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC2NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OC2NameLabel.Location = new System.Drawing.Point(103, 3);
             this.OC2NameLabel.Name = "OC2NameLabel";
             this.OC2NameLabel.ReadOnly = true;
-            this.OC2NameLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC2NameLabel.Size = new System.Drawing.Size(258, 15);
             this.OC2NameLabel.TabIndex = 3;
             this.OC2NameLabel.Text = "OC2Name";
             // 
@@ -219,7 +219,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel8.Controls.Add(this.label16, 0, 3);
             this.tableLayoutPanel8.Controls.Add(this.OC2NameLabel, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 5;
@@ -228,17 +228,17 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(364, 144);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(364, 148);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // OC2EmailLabel
             // 
             this.OC2EmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC2EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC2EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OC2EmailLabel.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.OC2EmailLabel.Location = new System.Drawing.Point(103, 84);
+            this.OC2EmailLabel.Location = new System.Drawing.Point(103, 87);
             this.OC2EmailLabel.Name = "OC2EmailLabel";
-            this.OC2EmailLabel.Size = new System.Drawing.Size(258, 28);
+            this.OC2EmailLabel.Size = new System.Drawing.Size(258, 29);
             this.OC2EmailLabel.TabIndex = 7;
             this.OC2EmailLabel.TabStop = true;
             this.OC2EmailLabel.Text = "OCEmail";
@@ -248,11 +248,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.OC2PhoneLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC2PhoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC2PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OC2PhoneLabel.Location = new System.Drawing.Point(103, 59);
+            this.OC2PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC2PhoneLabel.Location = new System.Drawing.Point(103, 61);
             this.OC2PhoneLabel.Name = "OC2PhoneLabel";
             this.OC2PhoneLabel.ReadOnly = true;
-            this.OC2PhoneLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC2PhoneLabel.Size = new System.Drawing.Size(258, 15);
             this.OC2PhoneLabel.TabIndex = 1;
             this.OC2PhoneLabel.Text = "OC2Phone";
             // 
@@ -260,55 +260,55 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.OC2TeamMemberLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC2TeamMemberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC2TeamMemberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OC2TeamMemberLabel.Location = new System.Drawing.Point(103, 31);
+            this.OC2TeamMemberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC2TeamMemberLabel.Location = new System.Drawing.Point(103, 32);
             this.OC2TeamMemberLabel.Name = "OC2TeamMemberLabel";
             this.OC2TeamMemberLabel.ReadOnly = true;
-            this.OC2TeamMemberLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC2TeamMemberLabel.Size = new System.Drawing.Size(258, 15);
             this.OC2TeamMemberLabel.TabIndex = 2;
             this.OC2TeamMemberLabel.Text = "OC2TeamMember";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label13.Location = new System.Drawing.Point(3, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 18);
+            this.label13.Size = new System.Drawing.Size(49, 16);
             this.label13.TabIndex = 2;
             this.label13.Text = "Name";
             // 
             // labelOCR
             // 
             this.labelOCR.AutoSize = true;
-            this.labelOCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOCR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOCR.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelOCR.Location = new System.Drawing.Point(3, 28);
+            this.labelOCR.Location = new System.Drawing.Point(3, 29);
             this.labelOCR.Name = "labelOCR";
-            this.labelOCR.Size = new System.Drawing.Size(69, 28);
+            this.labelOCR.Size = new System.Drawing.Size(64, 29);
             this.labelOCR.TabIndex = 3;
             this.labelOCR.Text = "Team Member";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(3, 56);
+            this.label15.Location = new System.Drawing.Point(3, 58);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 18);
+            this.label15.Size = new System.Drawing.Size(52, 16);
             this.label15.TabIndex = 4;
             this.label15.Text = "Phone";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label16.Location = new System.Drawing.Point(3, 84);
+            this.label16.Location = new System.Drawing.Point(3, 87);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(50, 18);
+            this.label16.Size = new System.Drawing.Size(47, 16);
             this.label16.TabIndex = 5;
             this.label16.Text = "Email";
             // 
@@ -341,7 +341,7 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel7);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(370, 169);
@@ -363,7 +363,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel7.Controls.Add(this.label14, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.OC1NameLabel, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 5;
@@ -372,17 +372,17 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(364, 144);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(364, 148);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
             // OC1EmailLabel
             // 
             this.OC1EmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC1EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC1EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OC1EmailLabel.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.OC1EmailLabel.Location = new System.Drawing.Point(103, 84);
+            this.OC1EmailLabel.Location = new System.Drawing.Point(103, 87);
             this.OC1EmailLabel.Name = "OC1EmailLabel";
-            this.OC1EmailLabel.Size = new System.Drawing.Size(258, 28);
+            this.OC1EmailLabel.Size = new System.Drawing.Size(258, 29);
             this.OC1EmailLabel.TabIndex = 7;
             this.OC1EmailLabel.TabStop = true;
             this.OC1EmailLabel.Text = "OC1Email";
@@ -392,11 +392,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.OC1PhoneLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC1PhoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC1PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OC1PhoneLabel.Location = new System.Drawing.Point(103, 59);
+            this.OC1PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC1PhoneLabel.Location = new System.Drawing.Point(103, 61);
             this.OC1PhoneLabel.Name = "OC1PhoneLabel";
             this.OC1PhoneLabel.ReadOnly = true;
-            this.OC1PhoneLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC1PhoneLabel.Size = new System.Drawing.Size(258, 15);
             this.OC1PhoneLabel.TabIndex = 1;
             this.OC1PhoneLabel.Text = "OC1Phone";
             // 
@@ -404,55 +404,55 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.OC1TeamMemberLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC1TeamMemberLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC1TeamMemberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OC1TeamMemberLabel.Location = new System.Drawing.Point(103, 31);
+            this.OC1TeamMemberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC1TeamMemberLabel.Location = new System.Drawing.Point(103, 32);
             this.OC1TeamMemberLabel.Name = "OC1TeamMemberLabel";
             this.OC1TeamMemberLabel.ReadOnly = true;
-            this.OC1TeamMemberLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC1TeamMemberLabel.Size = new System.Drawing.Size(258, 15);
             this.OC1TeamMemberLabel.TabIndex = 2;
             this.OC1TeamMemberLabel.Text = "OC1TeamMember";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 18);
+            this.label10.Size = new System.Drawing.Size(49, 16);
             this.label10.TabIndex = 2;
             this.label10.Text = "Name";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(3, 28);
+            this.label11.Location = new System.Drawing.Point(3, 29);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 28);
+            this.label11.Size = new System.Drawing.Size(64, 29);
             this.label11.TabIndex = 3;
             this.label11.Text = "Team Member";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(3, 56);
+            this.label12.Location = new System.Drawing.Point(3, 58);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 18);
+            this.label12.Size = new System.Drawing.Size(52, 16);
             this.label12.TabIndex = 4;
             this.label12.Text = "Phone";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(3, 84);
+            this.label14.Location = new System.Drawing.Point(3, 87);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 18);
+            this.label14.Size = new System.Drawing.Size(47, 16);
             this.label14.TabIndex = 5;
             this.label14.Text = "Email";
             // 
@@ -460,11 +460,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.OC1NameLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OC1NameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OC1NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OC1NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OC1NameLabel.Location = new System.Drawing.Point(103, 3);
             this.OC1NameLabel.Name = "OC1NameLabel";
             this.OC1NameLabel.ReadOnly = true;
-            this.OC1NameLabel.Size = new System.Drawing.Size(258, 19);
+            this.OC1NameLabel.Size = new System.Drawing.Size(258, 15);
             this.OC1NameLabel.TabIndex = 3;
             this.OC1NameLabel.Text = "OC1Name";
             // 
@@ -534,7 +534,7 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel8);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(379, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(370, 169);
@@ -598,7 +598,7 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel6);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(379, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(370, 169);
@@ -610,7 +610,7 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel5);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 169);
@@ -634,7 +634,7 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel5.Controls.Add(this.label8, 0, 4);
             this.tableLayoutPanel5.Controls.Add(this.DirectPhoneLabel, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 5;
@@ -643,15 +643,15 @@ namespace RRFFilesManager.Controls.FileControls
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(364, 144);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(364, 148);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // EmailLabel
             // 
             this.EmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailLabel.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.EmailLabel.Location = new System.Drawing.Point(103, 112);
+            this.EmailLabel.Location = new System.Drawing.Point(103, 116);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(258, 32);
             this.EmailLabel.TabIndex = 8;
@@ -663,11 +663,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.FaxLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FaxLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FaxLabel.Location = new System.Drawing.Point(103, 87);
+            this.FaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FaxLabel.Location = new System.Drawing.Point(103, 90);
             this.FaxLabel.Name = "FaxLabel";
             this.FaxLabel.ReadOnly = true;
-            this.FaxLabel.Size = new System.Drawing.Size(258, 19);
+            this.FaxLabel.Size = new System.Drawing.Size(258, 15);
             this.FaxLabel.TabIndex = 7;
             this.FaxLabel.Text = "Fax";
             // 
@@ -675,11 +675,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.CellLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CellLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CellLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CellLabel.Location = new System.Drawing.Point(103, 59);
+            this.CellLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CellLabel.Location = new System.Drawing.Point(103, 61);
             this.CellLabel.Name = "CellLabel";
             this.CellLabel.ReadOnly = true;
-            this.CellLabel.Size = new System.Drawing.Size(258, 19);
+            this.CellLabel.Size = new System.Drawing.Size(258, 15);
             this.CellLabel.TabIndex = 1;
             this.CellLabel.Text = "Cell";
             // 
@@ -687,66 +687,66 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.OfficePhoneLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OfficePhoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OfficePhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OfficePhoneLabel.Location = new System.Drawing.Point(103, 31);
+            this.OfficePhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OfficePhoneLabel.Location = new System.Drawing.Point(103, 32);
             this.OfficePhoneLabel.Name = "OfficePhoneLabel";
             this.OfficePhoneLabel.ReadOnly = true;
-            this.OfficePhoneLabel.Size = new System.Drawing.Size(258, 19);
+            this.OfficePhoneLabel.Size = new System.Drawing.Size(258, 15);
             this.OfficePhoneLabel.TabIndex = 2;
             this.OfficePhoneLabel.Text = "OfficePhone";
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label.Location = new System.Drawing.Point(3, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(53, 18);
+            this.label.Size = new System.Drawing.Size(49, 16);
             this.label.TabIndex = 2;
             this.label.Text = "Direct";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(3, 28);
+            this.label5.Location = new System.Drawing.Point(3, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 3;
             this.label5.Text = "Office";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(3, 56);
+            this.label6.Location = new System.Drawing.Point(3, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 18);
+            this.label6.Size = new System.Drawing.Size(35, 16);
             this.label6.TabIndex = 4;
             this.label6.Text = "Cell";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(3, 84);
+            this.label7.Location = new System.Drawing.Point(3, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 18);
+            this.label7.Size = new System.Drawing.Size(33, 16);
             this.label7.TabIndex = 5;
             this.label7.Text = "Fax";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(3, 112);
+            this.label8.Location = new System.Drawing.Point(3, 116);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 18);
+            this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 6;
             this.label8.Text = "Email";
             // 
@@ -754,11 +754,11 @@ namespace RRFFilesManager.Controls.FileControls
             // 
             this.DirectPhoneLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DirectPhoneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DirectPhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DirectPhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DirectPhoneLabel.Location = new System.Drawing.Point(103, 3);
             this.DirectPhoneLabel.Name = "DirectPhoneLabel";
             this.DirectPhoneLabel.ReadOnly = true;
-            this.DirectPhoneLabel.Size = new System.Drawing.Size(258, 19);
+            this.DirectPhoneLabel.Size = new System.Drawing.Size(258, 15);
             this.DirectPhoneLabel.TabIndex = 3;
             this.DirectPhoneLabel.Text = "DirectPhone";
             // 

@@ -230,12 +230,14 @@
             // 
             this.DateApptScheduled.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DateApptScheduled.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateApptScheduled.CustomFormat = " ";
+            this.DateApptScheduled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateApptScheduled.Location = new System.Drawing.Point(266, 49);
             this.DateApptScheduled.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.DateApptScheduled.Name = "DateApptScheduled";
             this.DateApptScheduled.Size = new System.Drawing.Size(956, 23);
             this.DateApptScheduled.TabIndex = 23;
+            this.DateApptScheduled.ValueChanged += new System.EventHandler(this.DateApptScheduled_ValueChanged);
             // 
             // Label42
             // 

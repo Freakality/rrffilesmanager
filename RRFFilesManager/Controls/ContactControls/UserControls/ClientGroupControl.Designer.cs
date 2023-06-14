@@ -92,6 +92,8 @@ namespace RRFFilesManager.Controls.ContactControls
             this.OCIRelationship1 = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.SIN = new System.Windows.Forms.MaskedTextBox();
+            this.HealthCard = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.MonthBirth = new System.Windows.Forms.ComboBox();
             this.YearBirth = new System.Windows.Forms.MaskedTextBox();
@@ -107,8 +109,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.openPhotoDialog = new System.Windows.Forms.OpenFileDialog();
             this.EditLinkButton = new System.Windows.Forms.Button();
             this.ClientLinkPicture = new System.Windows.Forms.PictureBox();
-            this.HealthCard = new System.Windows.Forms.MaskedTextBox();
-            this.SIN = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -1018,6 +1018,24 @@ namespace RRFFilesManager.Controls.ContactControls
             this.tableLayoutPanel12.Size = new System.Drawing.Size(498, 142);
             this.tableLayoutPanel12.TabIndex = 150;
             // 
+            // SIN
+            // 
+            this.SIN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.SIN.Location = new System.Drawing.Point(123, 74);
+            this.SIN.Mask = "000-000-000";
+            this.SIN.Name = "SIN";
+            this.SIN.Size = new System.Drawing.Size(372, 26);
+            this.SIN.TabIndex = 155;
+            // 
+            // HealthCard
+            // 
+            this.HealthCard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.HealthCard.Location = new System.Drawing.Point(123, 39);
+            this.HealthCard.Mask = "0000-000-000-LL";
+            this.HealthCard.Name = "HealthCard";
+            this.HealthCard.Size = new System.Drawing.Size(372, 26);
+            this.HealthCard.TabIndex = 155;
+            // 
             // tableLayoutPanel15
             // 
             this.tableLayoutPanel15.ColumnCount = 3;
@@ -1251,24 +1269,6 @@ namespace RRFFilesManager.Controls.ContactControls
             this.ClientLinkPicture.TabIndex = 149;
             this.ClientLinkPicture.TabStop = false;
             this.ClientLinkPicture.Click += new System.EventHandler(this.ClientLinkPicture_Click);
-            // 
-            // HealthCard
-            // 
-            this.HealthCard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.HealthCard.Location = new System.Drawing.Point(123, 39);
-            this.HealthCard.Mask = "0000-000-000-LL";
-            this.HealthCard.Name = "HealthCard";
-            this.HealthCard.Size = new System.Drawing.Size(372, 26);
-            this.HealthCard.TabIndex = 155;
-            // 
-            // SIN
-            // 
-            this.SIN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SIN.Location = new System.Drawing.Point(123, 74);
-            this.SIN.Mask = "000-000-000";
-            this.SIN.Name = "SIN";
-            this.SIN.Size = new System.Drawing.Size(372, 26);
-            this.SIN.TabIndex = 155;
             // 
             // ClientGroupControl
             // 

@@ -91,6 +91,7 @@ namespace RRFFilesManager
             this.ExitBtn.TabIndex = 157;
             this.ExitBtn.Text = "EXIT";
             this.ExitBtn.UseVisualStyleBackColor = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // PasswordTextBox
             // 
@@ -168,6 +169,7 @@ namespace RRFFilesManager
             this.ChangePwBtn.TabIndex = 155;
             this.ChangePwBtn.Text = "Change Password";
             this.ChangePwBtn.UseVisualStyleBackColor = false;
+            this.ChangePwBtn.Visible = false;
             this.ChangePwBtn.Click += new System.EventHandler(this.ChangePwBtn_Click);
             // 
             // LoginUI

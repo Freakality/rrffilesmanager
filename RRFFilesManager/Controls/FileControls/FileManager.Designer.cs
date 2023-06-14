@@ -264,30 +264,53 @@ namespace RRFFilesManager
             this.TabControl2 = new System.Windows.Forms.TabControl();
             this.Timeline = new System.Windows.Forms.TabPage();
             this.TimelineLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.TBoxTrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxTrialDateTextBox = new System.Windows.Forms.TextBox();
             this.TBoxLiabilityMeetingDateTextBox = new System.Windows.Forms.TextBox();
             this.TBoxTrialDateLabel = new System.Windows.Forms.Label();
+            this.TBoxPreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxPreTrialResolutionDateTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxPreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxProposedDateIssueSOCTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxProposedDateIssueSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxTimelinePrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxPrePleadingsMeetingDateTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxPrePleadingsMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateTrialRecordFiled = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDateToFileTrialRecordBy = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxActualDateSOCIssuedTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxActualDateSOCIssued = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxProposedDateToServeSOCTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxProposedDateToServeSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxActualDateSOCServedTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxActualDateSOCServed = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxPlaintiffAODSentTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxPlaintiffAODSent = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxMedicalSummariesPreDiscDueDateTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxMedicalSummariesPreDiscDueDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxPreDiscoveryMeetingDateTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxDateOfPlaintiffDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxPreDiscoveryMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
+            this.TBoxDefendantAODRequest = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxDateOfPlaintiffDiscoveryTextBox = new System.Windows.Forms.TextBox();
             this.TBoxDefendantAODRequestTextBox = new System.Windows.Forms.TextBox();
             this.TBoxDateOfDefendantDiscoveryTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxDateOfDefendantDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxPreTrialToBeServedDateTextBox = new System.Windows.Forms.TextBox();
             this.TBoxTimelinePrePreTrialMeetingDateTextBox = new System.Windows.Forms.TextBox();
             this.TBoxDateTrialRecordFiledTextBox = new System.Windows.Forms.TextBox();
             this.TBoxDateToFileTrialRecordByTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxTimelineMediationResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxTimelineMediationResolutionDateTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxTimelineMemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxTimelineMemoToBeServedDateTextBox = new System.Windows.Forms.TextBox();
             this.TBoxTimelineMemoToBeServedDateLabel = new System.Windows.Forms.Label();
+            this.TBoxTimelinePreMedSttleMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxTimelinePreMedSttleMeetingDateTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxAllDefendantUndertakingRecd = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxAllDefendantUndertakingRecdTextBox = new System.Windows.Forms.TextBox();
+            this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
             this.TBoxDatePlaintiffUndertakingCompleteTextBox = new System.Windows.Forms.TextBox();
             this.TimelineSaveBtn = new System.Windows.Forms.Button();
             this.Liability = new System.Windows.Forms.TabPage();
@@ -433,6 +456,7 @@ namespace RRFFilesManager
             this.ABOIncomeBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ABOIncomeBenefitsLatestOFC3 = new System.Windows.Forms.DateTimePicker();
             this.ABOIncomeBenefitsLatestOFC3TextBox = new System.Windows.Forms.TextBox();
+            this.ABOIncomeBenefitsWeeklyAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.ABOIncomeBenefitsFileForLATComboBox = new System.Windows.Forms.ComboBox();
             this.ABOIncomeBenefitsAppliedLabel = new System.Windows.Forms.Label();
             this.ABOIncomeBenefitsFileForLATLabel = new System.Windows.Forms.Label();
@@ -475,6 +499,8 @@ namespace RRFFilesManager
             this.ABOGovtFederalLabel = new System.Windows.Forms.Label();
             this.ABOAttendantCareBenefitsGroupBox = new System.Windows.Forms.GroupBox();
             this.ABOAttendantCareBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOACBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
+            this.ABOInitialAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.ABOInitiallyApprovedLabel = new System.Windows.Forms.Label();
             this.ABOACBAmountPaidToDateLabel = new System.Windows.Forms.Label();
             this.ABOInitiallyApprovedComboBox = new System.Windows.Forms.ComboBox();
@@ -488,6 +514,7 @@ namespace RRFFilesManager
             this.ABOInitialAmountLabel = new System.Windows.Forms.Label();
             this.AOBMedicalRehabBenefitsGroupBox = new System.Windows.Forms.GroupBox();
             this.AOBMedicalRehabBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ABOMRBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.ABOBenefitsEndDate = new System.Windows.Forms.DateTimePicker();
             this.ABOMRBAmountPaidToDateLabel = new System.Windows.Forms.Label();
             this.ABOBenefitsEndDateTextBox = new System.Windows.Forms.TextBox();
@@ -506,6 +533,7 @@ namespace RRFFilesManager
             this.PolicyParticularsMainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.PolicyParticularsDetailsGroupBox3 = new System.Windows.Forms.GroupBox();
             this.PolicyParticularsDetailsLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.PPUmbrellaLiabilityLimitsTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.PPUmbrellaViaAutoLabel = new System.Windows.Forms.Label();
             this.PPUmbrellaLiabilityLimitsLabel = new System.Windows.Forms.Label();
             this.PPUmbrellaViaAutoComboBox = new System.Windows.Forms.ComboBox();
@@ -516,6 +544,7 @@ namespace RRFFilesManager
             this.PPOptionalBenefitsPurchasedLabel = new System.Windows.Forms.Label();
             this.PPPossibleExcessBenefitsGroupBox = new System.Windows.Forms.GroupBox();
             this.PPPossibleExcessBenefitsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.PPCoverageAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.PPHomeInsurerLabel = new System.Windows.Forms.Label();
             this.PPCoverageAmountLabel = new System.Windows.Forms.Label();
             this.PPHomeInsurerComboBox = new System.Windows.Forms.ComboBox();
@@ -538,6 +567,7 @@ namespace RRFFilesManager
             this.PPTermsOfPolicyFrom = new System.Windows.Forms.DateTimePicker();
             this.PolicyParticularsDetailsGroupBox2 = new System.Windows.Forms.GroupBox();
             this.PolicyParticularsDetailsLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.PPOPCF44RLiabilityLimitsTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.PPOPCF44RLabel = new System.Windows.Forms.Label();
             this.PPOPCF44RComboBox = new System.Windows.Forms.ComboBox();
             this.PPOPCF44RLiabilityLimitsLabel = new System.Windows.Forms.Label();
@@ -1043,36 +1073,6 @@ namespace RRFFilesManager
             this.Label1 = new System.Windows.Forms.Label();
             this.MatterSubTypeTextBox = new System.Windows.Forms.TextBox();
             this.LimDateTextBox = new System.Windows.Forms.TextBox();
-            this.TBoxTrialDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPreTrialResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxLiabilityMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPreTrialToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxProposedDateIssueSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelinePrePreTrialMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPrePleadingsMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateTrialRecordFiled = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateToFileTrialRecordBy = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxActualDateSOCIssued = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxProposedDateToServeSOC = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxActualDateSOCServed = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPlaintiffAODSent = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxMedicalSummariesPreDiscDueDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateOfPlaintiffDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxPreDiscoveryMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDefendantAODRequest = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDateOfDefendantDiscovery = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelineMediationResolutionDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelineMemoToBeServedDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxTimelinePreMedSttleMeetingDate = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxAllDefendantUndertakingRecd = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.TBoxDatePlaintiffUndertakingComplete = new RRFFilesManager.Controls.Components.ColorDateTimePicker();
-            this.ABOIncomeBenefitsWeeklyAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.ABOACBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.ABOInitialAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.ABOMRBAmountPaidToDateTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.PPUmbrellaLiabilityLimitsTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.PPCoverageAmountTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
-            this.PPOPCF44RLiabilityLimitsTextBox = new RRFFilesManager.Controls.Components.CurrencyTextBox();
             this.SubTypeCategoryComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             this.CurrentFileStatusComboBox = new RRFFilesManager.Controls.SharedControls.CustomControls.ComissionSubTypeComboBox();
             TBoxLiabilityMeetingDateLabel = new System.Windows.Forms.Label();
@@ -3730,6 +3730,21 @@ namespace RRFFilesManager
             this.TimelineLayoutPanel.Size = new System.Drawing.Size(1308, 342);
             this.TimelineLayoutPanel.TabIndex = 190;
             // 
+            // TBoxTrialDate
+            // 
+            this.TBoxTrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxTrialDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxTrialDate.CustomFormat = "\' \'";
+            this.TBoxTrialDate.Enabled = false;
+            this.TBoxTrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxTrialDate.Location = new System.Drawing.Point(1283, 268);
+            this.TBoxTrialDate.Name = "TBoxTrialDate";
+            this.TBoxTrialDate.Size = new System.Drawing.Size(17, 23);
+            this.TBoxTrialDate.TabIndex = 185;
+            this.TBoxTrialDate.Visible = false;
+            this.TBoxTrialDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxTrialDateTextBox
             // 
             this.TBoxTrialDateTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -3762,6 +3777,35 @@ namespace RRFFilesManager
             this.TBoxTrialDateLabel.Text = "Trial Date";
             this.TBoxTrialDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // TBoxPreTrialResolutionDate
+            // 
+            this.TBoxPreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPreTrialResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPreTrialResolutionDate.CustomFormat = "\' \'";
+            this.TBoxPreTrialResolutionDate.Enabled = false;
+            this.TBoxPreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPreTrialResolutionDate.Location = new System.Drawing.Point(1282, 242);
+            this.TBoxPreTrialResolutionDate.Name = "TBoxPreTrialResolutionDate";
+            this.TBoxPreTrialResolutionDate.Size = new System.Drawing.Size(18, 23);
+            this.TBoxPreTrialResolutionDate.TabIndex = 182;
+            this.TBoxPreTrialResolutionDate.Visible = false;
+            this.TBoxPreTrialResolutionDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxLiabilityMeetingDate
+            // 
+            this.TBoxLiabilityMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxLiabilityMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxLiabilityMeetingDate.CustomFormat = "\' \'";
+            this.TBoxLiabilityMeetingDate.Enabled = false;
+            this.TBoxLiabilityMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxLiabilityMeetingDate.Location = new System.Drawing.Point(621, 8);
+            this.TBoxLiabilityMeetingDate.Name = "TBoxLiabilityMeetingDate";
+            this.TBoxLiabilityMeetingDate.Size = new System.Drawing.Size(18, 23);
+            this.TBoxLiabilityMeetingDate.TabIndex = 151;
+            this.TBoxLiabilityMeetingDate.Visible = false;
+            this.TBoxLiabilityMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxPreTrialResolutionDateTextBox
             // 
             this.TBoxPreTrialResolutionDateTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -3772,6 +3816,20 @@ namespace RRFFilesManager
             this.TBoxPreTrialResolutionDateTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxPreTrialResolutionDateTextBox.TabIndex = 181;
             // 
+            // TBoxPreTrialToBeServedDate
+            // 
+            this.TBoxPreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxPreTrialToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxPreTrialToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxPreTrialToBeServedDate.CustomFormat = "\' \'";
+            this.TBoxPreTrialToBeServedDate.Enabled = false;
+            this.TBoxPreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPreTrialToBeServedDate.Location = new System.Drawing.Point(1281, 216);
+            this.TBoxPreTrialToBeServedDate.Name = "TBoxPreTrialToBeServedDate";
+            this.TBoxPreTrialToBeServedDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxPreTrialToBeServedDate.TabIndex = 179;
+            this.TBoxPreTrialToBeServedDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxProposedDateIssueSOCTextBox
             // 
             this.TBoxProposedDateIssueSOCTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3780,6 +3838,34 @@ namespace RRFFilesManager
             this.TBoxProposedDateIssueSOCTextBox.ReadOnly = true;
             this.TBoxProposedDateIssueSOCTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxProposedDateIssueSOCTextBox.TabIndex = 17;
+            // 
+            // TBoxProposedDateIssueSOC
+            // 
+            this.TBoxProposedDateIssueSOC.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateIssueSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateIssueSOC.CustomFormat = "\' \'";
+            this.TBoxProposedDateIssueSOC.Enabled = false;
+            this.TBoxProposedDateIssueSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxProposedDateIssueSOC.Location = new System.Drawing.Point(621, 34);
+            this.TBoxProposedDateIssueSOC.Name = "TBoxProposedDateIssueSOC";
+            this.TBoxProposedDateIssueSOC.Size = new System.Drawing.Size(19, 23);
+            this.TBoxProposedDateIssueSOC.TabIndex = 152;
+            this.TBoxProposedDateIssueSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxTimelinePrePreTrialMeetingDate
+            // 
+            this.TBoxTimelinePrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxTimelinePrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxTimelinePrePreTrialMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxTimelinePrePreTrialMeetingDate.CustomFormat = "\' \'";
+            this.TBoxTimelinePrePreTrialMeetingDate.Enabled = false;
+            this.TBoxTimelinePrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxTimelinePrePreTrialMeetingDate.Location = new System.Drawing.Point(1280, 190);
+            this.TBoxTimelinePrePreTrialMeetingDate.Name = "TBoxTimelinePrePreTrialMeetingDate";
+            this.TBoxTimelinePrePreTrialMeetingDate.Size = new System.Drawing.Size(20, 23);
+            this.TBoxTimelinePrePreTrialMeetingDate.TabIndex = 176;
+            this.TBoxTimelinePrePreTrialMeetingDate.Visible = false;
+            this.TBoxTimelinePrePreTrialMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxPrePleadingsMeetingDateTextBox
             // 
@@ -3791,6 +3877,48 @@ namespace RRFFilesManager
             this.TBoxPrePleadingsMeetingDateTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxPrePleadingsMeetingDateTextBox.TabIndex = 21;
             // 
+            // TBoxPrePleadingsMeetingDate
+            // 
+            this.TBoxPrePleadingsMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPrePleadingsMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPrePleadingsMeetingDate.CustomFormat = "\' \'";
+            this.TBoxPrePleadingsMeetingDate.Enabled = false;
+            this.TBoxPrePleadingsMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPrePleadingsMeetingDate.Location = new System.Drawing.Point(621, 60);
+            this.TBoxPrePleadingsMeetingDate.Name = "TBoxPrePleadingsMeetingDate";
+            this.TBoxPrePleadingsMeetingDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxPrePleadingsMeetingDate.TabIndex = 153;
+            this.TBoxPrePleadingsMeetingDate.Visible = false;
+            this.TBoxPrePleadingsMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDateTrialRecordFiled
+            // 
+            this.TBoxDateTrialRecordFiled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxDateTrialRecordFiled.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateTrialRecordFiled.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateTrialRecordFiled.CustomFormat = "\' \'";
+            this.TBoxDateTrialRecordFiled.Enabled = false;
+            this.TBoxDateTrialRecordFiled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(1281, 164);
+            this.TBoxDateTrialRecordFiled.Name = "TBoxDateTrialRecordFiled";
+            this.TBoxDateTrialRecordFiled.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateTrialRecordFiled.TabIndex = 164;
+            this.TBoxDateTrialRecordFiled.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDateToFileTrialRecordBy
+            // 
+            this.TBoxDateToFileTrialRecordBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxDateToFileTrialRecordBy.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateToFileTrialRecordBy.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateToFileTrialRecordBy.CustomFormat = "\' \'";
+            this.TBoxDateToFileTrialRecordBy.Enabled = false;
+            this.TBoxDateToFileTrialRecordBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(1281, 138);
+            this.TBoxDateToFileTrialRecordBy.Name = "TBoxDateToFileTrialRecordBy";
+            this.TBoxDateToFileTrialRecordBy.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateToFileTrialRecordBy.TabIndex = 158;
+            this.TBoxDateToFileTrialRecordBy.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxActualDateSOCIssuedTextBox
             // 
             this.TBoxActualDateSOCIssuedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -3801,6 +3929,20 @@ namespace RRFFilesManager
             this.TBoxActualDateSOCIssuedTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxActualDateSOCIssuedTextBox.TabIndex = 19;
             // 
+            // TBoxActualDateSOCIssued
+            // 
+            this.TBoxActualDateSOCIssued.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxActualDateSOCIssued.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxActualDateSOCIssued.CustomFormat = "\' \'";
+            this.TBoxActualDateSOCIssued.Enabled = false;
+            this.TBoxActualDateSOCIssued.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxActualDateSOCIssued.Location = new System.Drawing.Point(621, 86);
+            this.TBoxActualDateSOCIssued.Name = "TBoxActualDateSOCIssued";
+            this.TBoxActualDateSOCIssued.Size = new System.Drawing.Size(19, 23);
+            this.TBoxActualDateSOCIssued.TabIndex = 154;
+            this.TBoxActualDateSOCIssued.Visible = false;
+            this.TBoxActualDateSOCIssued.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxProposedDateToServeSOCTextBox
             // 
             this.TBoxProposedDateToServeSOCTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3809,6 +3951,19 @@ namespace RRFFilesManager
             this.TBoxProposedDateToServeSOCTextBox.ReadOnly = true;
             this.TBoxProposedDateToServeSOCTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxProposedDateToServeSOCTextBox.TabIndex = 25;
+            // 
+            // TBoxProposedDateToServeSOC
+            // 
+            this.TBoxProposedDateToServeSOC.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateToServeSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxProposedDateToServeSOC.CustomFormat = "\' \'";
+            this.TBoxProposedDateToServeSOC.Enabled = false;
+            this.TBoxProposedDateToServeSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxProposedDateToServeSOC.Location = new System.Drawing.Point(621, 112);
+            this.TBoxProposedDateToServeSOC.Name = "TBoxProposedDateToServeSOC";
+            this.TBoxProposedDateToServeSOC.Size = new System.Drawing.Size(19, 23);
+            this.TBoxProposedDateToServeSOC.TabIndex = 156;
+            this.TBoxProposedDateToServeSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxActualDateSOCServedTextBox
             // 
@@ -3819,6 +3974,19 @@ namespace RRFFilesManager
             this.TBoxActualDateSOCServedTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxActualDateSOCServedTextBox.TabIndex = 27;
             // 
+            // TBoxActualDateSOCServed
+            // 
+            this.TBoxActualDateSOCServed.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxActualDateSOCServed.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxActualDateSOCServed.CustomFormat = "\' \'";
+            this.TBoxActualDateSOCServed.Enabled = false;
+            this.TBoxActualDateSOCServed.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxActualDateSOCServed.Location = new System.Drawing.Point(621, 138);
+            this.TBoxActualDateSOCServed.Name = "TBoxActualDateSOCServed";
+            this.TBoxActualDateSOCServed.Size = new System.Drawing.Size(19, 23);
+            this.TBoxActualDateSOCServed.TabIndex = 157;
+            this.TBoxActualDateSOCServed.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxPlaintiffAODSentTextBox
             // 
             this.TBoxPlaintiffAODSentTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3827,6 +3995,19 @@ namespace RRFFilesManager
             this.TBoxPlaintiffAODSentTextBox.ReadOnly = true;
             this.TBoxPlaintiffAODSentTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxPlaintiffAODSentTextBox.TabIndex = 35;
+            // 
+            // TBoxPlaintiffAODSent
+            // 
+            this.TBoxPlaintiffAODSent.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxPlaintiffAODSent.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxPlaintiffAODSent.CustomFormat = "\' \'";
+            this.TBoxPlaintiffAODSent.Enabled = false;
+            this.TBoxPlaintiffAODSent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPlaintiffAODSent.Location = new System.Drawing.Point(621, 164);
+            this.TBoxPlaintiffAODSent.Name = "TBoxPlaintiffAODSent";
+            this.TBoxPlaintiffAODSent.Size = new System.Drawing.Size(19, 23);
+            this.TBoxPlaintiffAODSent.TabIndex = 162;
+            this.TBoxPlaintiffAODSent.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxMedicalSummariesPreDiscDueDateTextBox
             // 
@@ -3837,6 +4018,19 @@ namespace RRFFilesManager
             this.TBoxMedicalSummariesPreDiscDueDateTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxMedicalSummariesPreDiscDueDateTextBox.TabIndex = 23;
             // 
+            // TBoxMedicalSummariesPreDiscDueDate
+            // 
+            this.TBoxMedicalSummariesPreDiscDueDate.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxMedicalSummariesPreDiscDueDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxMedicalSummariesPreDiscDueDate.CustomFormat = "\' \'";
+            this.TBoxMedicalSummariesPreDiscDueDate.Enabled = false;
+            this.TBoxMedicalSummariesPreDiscDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxMedicalSummariesPreDiscDueDate.Location = new System.Drawing.Point(621, 190);
+            this.TBoxMedicalSummariesPreDiscDueDate.Name = "TBoxMedicalSummariesPreDiscDueDate";
+            this.TBoxMedicalSummariesPreDiscDueDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxMedicalSummariesPreDiscDueDate.TabIndex = 155;
+            this.TBoxMedicalSummariesPreDiscDueDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxPreDiscoveryMeetingDateTextBox
             // 
             this.TBoxPreDiscoveryMeetingDateTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -3846,6 +4040,47 @@ namespace RRFFilesManager
             this.TBoxPreDiscoveryMeetingDateTextBox.ReadOnly = true;
             this.TBoxPreDiscoveryMeetingDateTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxPreDiscoveryMeetingDateTextBox.TabIndex = 29;
+            // 
+            // TBoxDateOfPlaintiffDiscovery
+            // 
+            this.TBoxDateOfPlaintiffDiscovery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxDateOfPlaintiffDiscovery.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxDateOfPlaintiffDiscovery.CustomFormat = "\' \'";
+            this.TBoxDateOfPlaintiffDiscovery.Enabled = false;
+            this.TBoxDateOfPlaintiffDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateOfPlaintiffDiscovery.Location = new System.Drawing.Point(621, 268);
+            this.TBoxDateOfPlaintiffDiscovery.Name = "TBoxDateOfPlaintiffDiscovery";
+            this.TBoxDateOfPlaintiffDiscovery.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateOfPlaintiffDiscovery.TabIndex = 161;
+            this.TBoxDateOfPlaintiffDiscovery.Visible = false;
+            this.TBoxDateOfPlaintiffDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxPreDiscoveryMeetingDate
+            // 
+            this.TBoxPreDiscoveryMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPreDiscoveryMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxPreDiscoveryMeetingDate.CustomFormat = "\' \'";
+            this.TBoxPreDiscoveryMeetingDate.Enabled = false;
+            this.TBoxPreDiscoveryMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxPreDiscoveryMeetingDate.Location = new System.Drawing.Point(621, 216);
+            this.TBoxPreDiscoveryMeetingDate.Name = "TBoxPreDiscoveryMeetingDate";
+            this.TBoxPreDiscoveryMeetingDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxPreDiscoveryMeetingDate.TabIndex = 159;
+            this.TBoxPreDiscoveryMeetingDate.Visible = false;
+            this.TBoxPreDiscoveryMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
+            // TBoxDefendantAODRequest
+            // 
+            this.TBoxDefendantAODRequest.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDefendantAODRequest.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDefendantAODRequest.CustomFormat = "\' \'";
+            this.TBoxDefendantAODRequest.Enabled = false;
+            this.TBoxDefendantAODRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDefendantAODRequest.Location = new System.Drawing.Point(621, 242);
+            this.TBoxDefendantAODRequest.Name = "TBoxDefendantAODRequest";
+            this.TBoxDefendantAODRequest.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDefendantAODRequest.TabIndex = 160;
+            this.TBoxDefendantAODRequest.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxDateOfPlaintiffDiscoveryTextBox
             // 
@@ -3874,6 +4109,20 @@ namespace RRFFilesManager
             this.TBoxDateOfDefendantDiscoveryTextBox.ReadOnly = true;
             this.TBoxDateOfDefendantDiscoveryTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxDateOfDefendantDiscoveryTextBox.TabIndex = 187;
+            // 
+            // TBoxDateOfDefendantDiscovery
+            // 
+            this.TBoxDateOfDefendantDiscovery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxDateOfDefendantDiscovery.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateOfDefendantDiscovery.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDateOfDefendantDiscovery.CustomFormat = "\' \'";
+            this.TBoxDateOfDefendantDiscovery.Enabled = false;
+            this.TBoxDateOfDefendantDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDateOfDefendantDiscovery.Location = new System.Drawing.Point(621, 294);
+            this.TBoxDateOfDefendantDiscovery.Name = "TBoxDateOfDefendantDiscovery";
+            this.TBoxDateOfDefendantDiscovery.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDateOfDefendantDiscovery.TabIndex = 188;
+            this.TBoxDateOfDefendantDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxPreTrialToBeServedDateTextBox
             // 
@@ -3912,6 +4161,21 @@ namespace RRFFilesManager
             this.TBoxDateToFileTrialRecordByTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxDateToFileTrialRecordByTextBox.TabIndex = 45;
             // 
+            // TBoxTimelineMediationResolutionDate
+            // 
+            this.TBoxTimelineMediationResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxTimelineMediationResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxTimelineMediationResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.TBoxTimelineMediationResolutionDate.CustomFormat = "\' \'";
+            this.TBoxTimelineMediationResolutionDate.Enabled = false;
+            this.TBoxTimelineMediationResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxTimelineMediationResolutionDate.Location = new System.Drawing.Point(1281, 112);
+            this.TBoxTimelineMediationResolutionDate.Name = "TBoxTimelineMediationResolutionDate";
+            this.TBoxTimelineMediationResolutionDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxTimelineMediationResolutionDate.TabIndex = 173;
+            this.TBoxTimelineMediationResolutionDate.Visible = false;
+            this.TBoxTimelineMediationResolutionDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxTimelineMediationResolutionDateTextBox
             // 
             this.TBoxTimelineMediationResolutionDateTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -3921,6 +4185,20 @@ namespace RRFFilesManager
             this.TBoxTimelineMediationResolutionDateTextBox.ReadOnly = true;
             this.TBoxTimelineMediationResolutionDateTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxTimelineMediationResolutionDateTextBox.TabIndex = 172;
+            // 
+            // TBoxTimelineMemoToBeServedDate
+            // 
+            this.TBoxTimelineMemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxTimelineMemoToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxTimelineMemoToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxTimelineMemoToBeServedDate.CustomFormat = "\' \'";
+            this.TBoxTimelineMemoToBeServedDate.Enabled = false;
+            this.TBoxTimelineMemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxTimelineMemoToBeServedDate.Location = new System.Drawing.Point(1281, 86);
+            this.TBoxTimelineMemoToBeServedDate.Name = "TBoxTimelineMemoToBeServedDate";
+            this.TBoxTimelineMemoToBeServedDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxTimelineMemoToBeServedDate.TabIndex = 170;
+            this.TBoxTimelineMemoToBeServedDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxTimelineMemoToBeServedDateTextBox
             // 
@@ -3941,6 +4219,20 @@ namespace RRFFilesManager
             this.TBoxTimelineMemoToBeServedDateLabel.Text = "Memo To Be Served Date:";
             this.TBoxTimelineMemoToBeServedDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // TBoxTimelinePreMedSttleMeetingDate
+            // 
+            this.TBoxTimelinePreMedSttleMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxTimelinePreMedSttleMeetingDate.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxTimelinePreMedSttleMeetingDate.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxTimelinePreMedSttleMeetingDate.CustomFormat = "\' \'";
+            this.TBoxTimelinePreMedSttleMeetingDate.Enabled = false;
+            this.TBoxTimelinePreMedSttleMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxTimelinePreMedSttleMeetingDate.Location = new System.Drawing.Point(1281, 60);
+            this.TBoxTimelinePreMedSttleMeetingDate.Name = "TBoxTimelinePreMedSttleMeetingDate";
+            this.TBoxTimelinePreMedSttleMeetingDate.Size = new System.Drawing.Size(19, 23);
+            this.TBoxTimelinePreMedSttleMeetingDate.TabIndex = 191;
+            this.TBoxTimelinePreMedSttleMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxTimelinePreMedSttleMeetingDateTextBox
             // 
             this.TBoxTimelinePreMedSttleMeetingDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3950,6 +4242,20 @@ namespace RRFFilesManager
             this.TBoxTimelinePreMedSttleMeetingDateTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxTimelinePreMedSttleMeetingDateTextBox.TabIndex = 191;
             // 
+            // TBoxAllDefendantUndertakingRecd
+            // 
+            this.TBoxAllDefendantUndertakingRecd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxAllDefendantUndertakingRecd.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxAllDefendantUndertakingRecd.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxAllDefendantUndertakingRecd.CustomFormat = "\' \'";
+            this.TBoxAllDefendantUndertakingRecd.Enabled = false;
+            this.TBoxAllDefendantUndertakingRecd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(1281, 34);
+            this.TBoxAllDefendantUndertakingRecd.Name = "TBoxAllDefendantUndertakingRecd";
+            this.TBoxAllDefendantUndertakingRecd.Size = new System.Drawing.Size(19, 23);
+            this.TBoxAllDefendantUndertakingRecd.TabIndex = 166;
+            this.TBoxAllDefendantUndertakingRecd.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
+            // 
             // TBoxAllDefendantUndertakingRecdTextBox
             // 
             this.TBoxAllDefendantUndertakingRecdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3958,6 +4264,20 @@ namespace RRFFilesManager
             this.TBoxAllDefendantUndertakingRecdTextBox.ReadOnly = true;
             this.TBoxAllDefendantUndertakingRecdTextBox.Size = new System.Drawing.Size(249, 23);
             this.TBoxAllDefendantUndertakingRecdTextBox.TabIndex = 43;
+            // 
+            // TBoxDatePlaintiffUndertakingComplete
+            // 
+            this.TBoxDatePlaintiffUndertakingComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBoxDatePlaintiffUndertakingComplete.BackColor = System.Drawing.SystemColors.Window;
+            this.TBoxDatePlaintiffUndertakingComplete.BackDisabledColor = System.Drawing.SystemColors.Window;
+            this.TBoxDatePlaintiffUndertakingComplete.CustomFormat = "\' \'";
+            this.TBoxDatePlaintiffUndertakingComplete.Enabled = false;
+            this.TBoxDatePlaintiffUndertakingComplete.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(1281, 8);
+            this.TBoxDatePlaintiffUndertakingComplete.Name = "TBoxDatePlaintiffUndertakingComplete";
+            this.TBoxDatePlaintiffUndertakingComplete.Size = new System.Drawing.Size(19, 23);
+            this.TBoxDatePlaintiffUndertakingComplete.TabIndex = 165;
+            this.TBoxDatePlaintiffUndertakingComplete.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
             // 
             // TBoxDatePlaintiffUndertakingCompleteTextBox
             // 
@@ -4044,7 +4364,7 @@ namespace RRFFilesManager
             this.UndertakingsDataGridView.Location = new System.Drawing.Point(0, 0);
             this.UndertakingsDataGridView.Name = "UndertakingsDataGridView";
             this.UndertakingsDataGridView.RowTemplate.Height = 40;
-            this.UndertakingsDataGridView.Size = new System.Drawing.Size(1314, 352);
+            this.UndertakingsDataGridView.Size = new System.Drawing.Size(1314, 348);
             this.UndertakingsDataGridView.TabIndex = 1;
             // 
             // Settlement
@@ -4068,7 +4388,7 @@ namespace RRFFilesManager
             this.TabControl3.Location = new System.Drawing.Point(3, 3);
             this.TabControl3.Name = "TabControl3";
             this.TabControl3.SelectedIndex = 0;
-            this.TabControl3.Size = new System.Drawing.Size(1386, 532);
+            this.TabControl3.Size = new System.Drawing.Size(1386, 528);
             this.TabControl3.TabIndex = 0;
             // 
             // TabPage14
@@ -4085,7 +4405,7 @@ namespace RRFFilesManager
             this.TabPage14.Location = new System.Drawing.Point(4, 26);
             this.TabPage14.Name = "TabPage14";
             this.TabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage14.Size = new System.Drawing.Size(1378, 502);
+            this.TabPage14.Size = new System.Drawing.Size(1378, 498);
             this.TabPage14.TabIndex = 0;
             this.TabPage14.Text = "Settlement/Mediation Resolution 1";
             // 
@@ -4336,7 +4656,7 @@ namespace RRFFilesManager
             this.TabPage15.Location = new System.Drawing.Point(4, 26);
             this.TabPage15.Name = "TabPage15";
             this.TabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage15.Size = new System.Drawing.Size(1378, 502);
+            this.TabPage15.Size = new System.Drawing.Size(1378, 498);
             this.TabPage15.TabIndex = 1;
             this.TabPage15.Text = "Settlement/Mediation Resolution 2";
             // 
@@ -5431,6 +5751,22 @@ namespace RRFFilesManager
             this.ABOIncomeBenefitsLatestOFC3TextBox.Size = new System.Drawing.Size(150, 23);
             this.ABOIncomeBenefitsLatestOFC3TextBox.TabIndex = 16;
             // 
+            // ABOIncomeBenefitsWeeklyAmountTextBox
+            // 
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.CurrencySymbol = "$";
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Enabled = false;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Location = new System.Drawing.Point(488, 3);
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Name = "ABOIncomeBenefitsWeeklyAmountTextBox";
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.Size = new System.Drawing.Size(151, 23);
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.TabIndex = 15;
+            this.ABOIncomeBenefitsWeeklyAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // ABOIncomeBenefitsFileForLATComboBox
             // 
             this.ABOIncomeBenefitsFileForLATComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -5727,7 +6063,7 @@ namespace RRFFilesManager
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnCount = 3;
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDate, 2, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateTextBox, 1, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateLabel, 0, 0);
@@ -5743,18 +6079,18 @@ namespace RRFFilesManager
             // 
             this.ABOStatementDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOStatementDate.Enabled = false;
-            this.ABOStatementDate.Location = new System.Drawing.Point(270, 3);
+            this.ABOStatementDate.Location = new System.Drawing.Point(243, 3);
             this.ABOStatementDate.Name = "ABOStatementDate";
-            this.ABOStatementDate.Size = new System.Drawing.Size(42, 23);
+            this.ABOStatementDate.Size = new System.Drawing.Size(69, 23);
             this.ABOStatementDate.TabIndex = 23;
             // 
             // ABOStatementDateTextBox
             // 
             this.ABOStatementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(139, 3);
+            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(125, 3);
             this.ABOStatementDateTextBox.Name = "ABOStatementDateTextBox";
             this.ABOStatementDateTextBox.ReadOnly = true;
-            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(125, 23);
+            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(112, 23);
             this.ABOStatementDateTextBox.TabIndex = 22;
             // 
             // ABOStatementDateLabel
@@ -5975,6 +6311,39 @@ namespace RRFFilesManager
             this.ABOAttendantCareBenefitsLayoutPanel.Size = new System.Drawing.Size(642, 88);
             this.ABOAttendantCareBenefitsLayoutPanel.TabIndex = 12;
             // 
+            // ABOACBAmountPaidToDateTextBox
+            // 
+            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOACBAmountPaidToDateTextBox, 2);
+            this.ABOACBAmountPaidToDateTextBox.CurrencySymbol = "$";
+            this.ABOACBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOACBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOACBAmountPaidToDateTextBox.Enabled = false;
+            this.ABOACBAmountPaidToDateTextBox.Location = new System.Drawing.Point(468, 61);
+            this.ABOACBAmountPaidToDateTextBox.Name = "ABOACBAmountPaidToDateTextBox";
+            this.ABOACBAmountPaidToDateTextBox.Size = new System.Drawing.Size(171, 23);
+            this.ABOACBAmountPaidToDateTextBox.TabIndex = 21;
+            this.ABOACBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ABOInitialAmountTextBox
+            // 
+            this.ABOInitialAmountTextBox.CurrencySymbol = "$";
+            this.ABOInitialAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOInitialAmountTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOInitialAmountTextBox.Enabled = false;
+            this.ABOInitialAmountTextBox.Location = new System.Drawing.Point(158, 32);
+            this.ABOInitialAmountTextBox.Name = "ABOInitialAmountTextBox";
+            this.ABOInitialAmountTextBox.Size = new System.Drawing.Size(149, 23);
+            this.ABOInitialAmountTextBox.TabIndex = 13;
+            this.ABOInitialAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // ABOInitiallyApprovedLabel
             // 
             this.ABOInitiallyApprovedLabel.AutoSize = true;
@@ -6131,6 +6500,23 @@ namespace RRFFilesManager
             this.AOBMedicalRehabBenefitsLayoutPanel.Size = new System.Drawing.Size(315, 85);
             this.AOBMedicalRehabBenefitsLayoutPanel.TabIndex = 12;
             // 
+            // ABOMRBAmountPaidToDateTextBox
+            // 
+            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOMRBAmountPaidToDateTextBox, 2);
+            this.ABOMRBAmountPaidToDateTextBox.CurrencySymbol = "$";
+            this.ABOMRBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ABOMRBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.ABOMRBAmountPaidToDateTextBox.Enabled = false;
+            this.ABOMRBAmountPaidToDateTextBox.Location = new System.Drawing.Point(152, 59);
+            this.ABOMRBAmountPaidToDateTextBox.Name = "ABOMRBAmountPaidToDateTextBox";
+            this.ABOMRBAmountPaidToDateTextBox.Size = new System.Drawing.Size(160, 23);
+            this.ABOMRBAmountPaidToDateTextBox.TabIndex = 13;
+            this.ABOMRBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // ABOBenefitsEndDate
             // 
             this.ABOBenefitsEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -6280,7 +6666,7 @@ namespace RRFFilesManager
             this.Btn_Save.BackColor = System.Drawing.Color.Maroon;
             this.Btn_Save.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(4539, 1083);
+            this.Btn_Save.Location = new System.Drawing.Point(4539, 995);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Size = new System.Drawing.Size(98, 39);
             this.Btn_Save.TabIndex = 11;
@@ -6333,7 +6719,7 @@ namespace RRFFilesManager
             this.PolicyParticularsMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PolicyParticularsMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PolicyParticularsMainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.PolicyParticularsMainLayoutPanel.Size = new System.Drawing.Size(1308, 346);
+            this.PolicyParticularsMainLayoutPanel.Size = new System.Drawing.Size(1308, 342);
             this.PolicyParticularsMainLayoutPanel.TabIndex = 8;
             // 
             // PolicyParticularsDetailsGroupBox3
@@ -6343,7 +6729,7 @@ namespace RRFFilesManager
             this.PolicyParticularsDetailsGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PolicyParticularsDetailsGroupBox3.Location = new System.Drawing.Point(932, 13);
             this.PolicyParticularsDetailsGroupBox3.Name = "PolicyParticularsDetailsGroupBox3";
-            this.PolicyParticularsDetailsGroupBox3.Size = new System.Drawing.Size(363, 137);
+            this.PolicyParticularsDetailsGroupBox3.Size = new System.Drawing.Size(363, 135);
             this.PolicyParticularsDetailsGroupBox3.TabIndex = 7;
             this.PolicyParticularsDetailsGroupBox3.TabStop = false;
             // 
@@ -6362,8 +6748,24 @@ namespace RRFFilesManager
             this.PolicyParticularsDetailsLayoutPanel3.RowCount = 2;
             this.PolicyParticularsDetailsLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PolicyParticularsDetailsLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PolicyParticularsDetailsLayoutPanel3.Size = new System.Drawing.Size(357, 115);
+            this.PolicyParticularsDetailsLayoutPanel3.Size = new System.Drawing.Size(357, 113);
             this.PolicyParticularsDetailsLayoutPanel3.TabIndex = 6;
+            // 
+            // PPUmbrellaLiabilityLimitsTextBox
+            // 
+            this.PPUmbrellaLiabilityLimitsTextBox.CurrencySymbol = "$";
+            this.PPUmbrellaLiabilityLimitsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PPUmbrellaLiabilityLimitsTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PPUmbrellaLiabilityLimitsTextBox.Enabled = false;
+            this.PPUmbrellaLiabilityLimitsTextBox.Location = new System.Drawing.Point(138, 59);
+            this.PPUmbrellaLiabilityLimitsTextBox.Name = "PPUmbrellaLiabilityLimitsTextBox";
+            this.PPUmbrellaLiabilityLimitsTextBox.Size = new System.Drawing.Size(216, 23);
+            this.PPUmbrellaLiabilityLimitsTextBox.TabIndex = 10;
+            this.PPUmbrellaLiabilityLimitsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PPUmbrellaViaAutoLabel
             // 
@@ -6371,7 +6773,7 @@ namespace RRFFilesManager
             this.PPUmbrellaViaAutoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPUmbrellaViaAutoLabel.Location = new System.Drawing.Point(3, 0);
             this.PPUmbrellaViaAutoLabel.Name = "PPUmbrellaViaAutoLabel";
-            this.PPUmbrellaViaAutoLabel.Size = new System.Drawing.Size(129, 57);
+            this.PPUmbrellaViaAutoLabel.Size = new System.Drawing.Size(129, 56);
             this.PPUmbrellaViaAutoLabel.TabIndex = 5;
             this.PPUmbrellaViaAutoLabel.Text = "Umbrella Via Auto:";
             // 
@@ -6379,9 +6781,9 @@ namespace RRFFilesManager
             // 
             this.PPUmbrellaLiabilityLimitsLabel.AutoSize = true;
             this.PPUmbrellaLiabilityLimitsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPUmbrellaLiabilityLimitsLabel.Location = new System.Drawing.Point(3, 57);
+            this.PPUmbrellaLiabilityLimitsLabel.Location = new System.Drawing.Point(3, 56);
             this.PPUmbrellaLiabilityLimitsLabel.Name = "PPUmbrellaLiabilityLimitsLabel";
-            this.PPUmbrellaLiabilityLimitsLabel.Size = new System.Drawing.Size(129, 58);
+            this.PPUmbrellaLiabilityLimitsLabel.Size = new System.Drawing.Size(129, 57);
             this.PPUmbrellaLiabilityLimitsLabel.TabIndex = 9;
             this.PPUmbrellaLiabilityLimitsLabel.Text = "Liability Limits:";
             // 
@@ -6404,9 +6806,9 @@ namespace RRFFilesManager
             this.PolicyParticularsMainLayoutPanel.SetColumnSpan(this.PolicyParticularsDetailsGroupBox4, 7);
             this.PolicyParticularsDetailsGroupBox4.Controls.Add(this.PolicyParticularsDetailsLayoutPanel4);
             this.PolicyParticularsDetailsGroupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PolicyParticularsDetailsGroupBox4.Location = new System.Drawing.Point(13, 156);
+            this.PolicyParticularsDetailsGroupBox4.Location = new System.Drawing.Point(13, 154);
             this.PolicyParticularsDetailsGroupBox4.Name = "PolicyParticularsDetailsGroupBox4";
-            this.PolicyParticularsDetailsGroupBox4.Size = new System.Drawing.Size(1282, 137);
+            this.PolicyParticularsDetailsGroupBox4.Size = new System.Drawing.Size(1282, 135);
             this.PolicyParticularsDetailsGroupBox4.TabIndex = 2;
             this.PolicyParticularsDetailsGroupBox4.TabStop = false;
             // 
@@ -6429,7 +6831,8 @@ namespace RRFFilesManager
             this.PolicyParticularsDetailsLayoutPanel4.RowCount = 2;
             this.PolicyParticularsDetailsLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.PolicyParticularsDetailsLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PolicyParticularsDetailsLayoutPanel4.Size = new System.Drawing.Size(1276, 115);
+            this.PolicyParticularsDetailsLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.PolicyParticularsDetailsLayoutPanel4.Size = new System.Drawing.Size(1276, 113);
             this.PolicyParticularsDetailsLayoutPanel4.TabIndex = 8;
             // 
             // PPOptionalBenefitsPurchasedDetailsGroupBox
@@ -6439,7 +6842,7 @@ namespace RRFFilesManager
             this.PPOptionalBenefitsPurchasedDetailsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPOptionalBenefitsPurchasedDetailsGroupBox.Location = new System.Drawing.Point(3, 34);
             this.PPOptionalBenefitsPurchasedDetailsGroupBox.Name = "PPOptionalBenefitsPurchasedDetailsGroupBox";
-            this.PPOptionalBenefitsPurchasedDetailsGroupBox.Size = new System.Drawing.Size(622, 78);
+            this.PPOptionalBenefitsPurchasedDetailsGroupBox.Size = new System.Drawing.Size(622, 76);
             this.PPOptionalBenefitsPurchasedDetailsGroupBox.TabIndex = 6;
             this.PPOptionalBenefitsPurchasedDetailsGroupBox.TabStop = false;
             this.PPOptionalBenefitsPurchasedDetailsGroupBox.Text = "Describe which optional benefits  are available from this policy.";
@@ -6452,7 +6855,7 @@ namespace RRFFilesManager
             this.PPOptionalBenefitsPurchasedDetailsTextBox.Location = new System.Drawing.Point(3, 19);
             this.PPOptionalBenefitsPurchasedDetailsTextBox.Multiline = true;
             this.PPOptionalBenefitsPurchasedDetailsTextBox.Name = "PPOptionalBenefitsPurchasedDetailsTextBox";
-            this.PPOptionalBenefitsPurchasedDetailsTextBox.Size = new System.Drawing.Size(616, 56);
+            this.PPOptionalBenefitsPurchasedDetailsTextBox.Size = new System.Drawing.Size(616, 54);
             this.PPOptionalBenefitsPurchasedDetailsTextBox.TabIndex = 0;
             // 
             // PPOptionalBenefitsPurchasedLabel
@@ -6473,7 +6876,7 @@ namespace RRFFilesManager
             this.PPPossibleExcessBenefitsGroupBox.Location = new System.Drawing.Point(631, 3);
             this.PPPossibleExcessBenefitsGroupBox.Name = "PPPossibleExcessBenefitsGroupBox";
             this.PolicyParticularsDetailsLayoutPanel4.SetRowSpan(this.PPPossibleExcessBenefitsGroupBox, 2);
-            this.PPPossibleExcessBenefitsGroupBox.Size = new System.Drawing.Size(642, 109);
+            this.PPPossibleExcessBenefitsGroupBox.Size = new System.Drawing.Size(642, 107);
             this.PPPossibleExcessBenefitsGroupBox.TabIndex = 3;
             this.PPPossibleExcessBenefitsGroupBox.TabStop = false;
             this.PPPossibleExcessBenefitsGroupBox.Text = "Possible Excess Benefits Via Home Insurance";
@@ -6499,8 +6902,24 @@ namespace RRFFilesManager
             this.PPPossibleExcessBenefitsLayoutPanel.RowCount = 2;
             this.PPPossibleExcessBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PPPossibleExcessBenefitsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PPPossibleExcessBenefitsLayoutPanel.Size = new System.Drawing.Size(636, 87);
+            this.PPPossibleExcessBenefitsLayoutPanel.Size = new System.Drawing.Size(636, 85);
             this.PPPossibleExcessBenefitsLayoutPanel.TabIndex = 8;
+            // 
+            // PPCoverageAmountTextBox
+            // 
+            this.PPCoverageAmountTextBox.CurrencySymbol = "$";
+            this.PPCoverageAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PPCoverageAmountTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PPCoverageAmountTextBox.Enabled = false;
+            this.PPCoverageAmountTextBox.Location = new System.Drawing.Point(470, 45);
+            this.PPCoverageAmountTextBox.Name = "PPCoverageAmountTextBox";
+            this.PPCoverageAmountTextBox.Size = new System.Drawing.Size(163, 23);
+            this.PPCoverageAmountTextBox.TabIndex = 17;
+            this.PPCoverageAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PPHomeInsurerLabel
             // 
@@ -6508,7 +6927,7 @@ namespace RRFFilesManager
             this.PPHomeInsurerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPHomeInsurerLabel.Location = new System.Drawing.Point(3, 0);
             this.PPHomeInsurerLabel.Name = "PPHomeInsurerLabel";
-            this.PPHomeInsurerLabel.Size = new System.Drawing.Size(139, 43);
+            this.PPHomeInsurerLabel.Size = new System.Drawing.Size(139, 42);
             this.PPHomeInsurerLabel.TabIndex = 3;
             this.PPHomeInsurerLabel.Text = "Home Insurer:";
             // 
@@ -6516,9 +6935,9 @@ namespace RRFFilesManager
             // 
             this.PPCoverageAmountLabel.AutoSize = true;
             this.PPCoverageAmountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPCoverageAmountLabel.Location = new System.Drawing.Point(316, 43);
+            this.PPCoverageAmountLabel.Location = new System.Drawing.Point(316, 42);
             this.PPCoverageAmountLabel.Name = "PPCoverageAmountLabel";
-            this.PPCoverageAmountLabel.Size = new System.Drawing.Size(148, 44);
+            this.PPCoverageAmountLabel.Size = new System.Drawing.Size(148, 43);
             this.PPCoverageAmountLabel.TabIndex = 16;
             this.PPCoverageAmountLabel.Text = "Coverage Amount:";
             // 
@@ -6556,7 +6975,7 @@ namespace RRFFilesManager
             this.PPUmbrellaCoverageComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.PPUmbrellaCoverageComboBox.Location = new System.Drawing.Point(148, 46);
+            this.PPUmbrellaCoverageComboBox.Location = new System.Drawing.Point(148, 45);
             this.PPUmbrellaCoverageComboBox.Name = "PPUmbrellaCoverageComboBox";
             this.PPUmbrellaCoverageComboBox.Size = new System.Drawing.Size(162, 25);
             this.PPUmbrellaCoverageComboBox.TabIndex = 15;
@@ -6567,7 +6986,7 @@ namespace RRFFilesManager
             this.PPCopyOfPolicyInFileLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPCopyOfPolicyInFileLabel.Location = new System.Drawing.Point(316, 0);
             this.PPCopyOfPolicyInFileLabel.Name = "PPCopyOfPolicyInFileLabel";
-            this.PPCopyOfPolicyInFileLabel.Size = new System.Drawing.Size(148, 43);
+            this.PPCopyOfPolicyInFileLabel.Size = new System.Drawing.Size(148, 42);
             this.PPCopyOfPolicyInFileLabel.TabIndex = 12;
             this.PPCopyOfPolicyInFileLabel.Text = " Copy of Policy in File:";
             // 
@@ -6575,9 +6994,9 @@ namespace RRFFilesManager
             // 
             this.PPUmbrellaCoverageLabel.AutoSize = true;
             this.PPUmbrellaCoverageLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPUmbrellaCoverageLabel.Location = new System.Drawing.Point(3, 43);
+            this.PPUmbrellaCoverageLabel.Location = new System.Drawing.Point(3, 42);
             this.PPUmbrellaCoverageLabel.Name = "PPUmbrellaCoverageLabel";
-            this.PPUmbrellaCoverageLabel.Size = new System.Drawing.Size(139, 44);
+            this.PPUmbrellaCoverageLabel.Size = new System.Drawing.Size(139, 43);
             this.PPUmbrellaCoverageLabel.TabIndex = 14;
             this.PPUmbrellaCoverageLabel.Text = "Umbrella Coverage:";
             // 
@@ -6603,7 +7022,7 @@ namespace RRFFilesManager
             this.PolicyParticularsDetailsGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PolicyParticularsDetailsGroupBox1.Location = new System.Drawing.Point(13, 13);
             this.PolicyParticularsDetailsGroupBox1.Name = "PolicyParticularsDetailsGroupBox1";
-            this.PolicyParticularsDetailsGroupBox1.Size = new System.Drawing.Size(545, 137);
+            this.PolicyParticularsDetailsGroupBox1.Size = new System.Drawing.Size(545, 135);
             this.PolicyParticularsDetailsGroupBox1.TabIndex = 0;
             this.PolicyParticularsDetailsGroupBox1.TabStop = false;
             this.PolicyParticularsDetailsGroupBox1.Text = "Policy Details";
@@ -6634,14 +7053,14 @@ namespace RRFFilesManager
             this.PolicyParticularsDetailsLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.PolicyParticularsDetailsLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.PolicyParticularsDetailsLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.PolicyParticularsDetailsLayoutPanel1.Size = new System.Drawing.Size(539, 115);
+            this.PolicyParticularsDetailsLayoutPanel1.Size = new System.Drawing.Size(539, 113);
             this.PolicyParticularsDetailsLayoutPanel1.TabIndex = 5;
             // 
             // PPDateOfLossTextBox
             // 
             this.PolicyParticularsDetailsLayoutPanel1.SetColumnSpan(this.PPDateOfLossTextBox, 5);
             this.PPDateOfLossTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPDateOfLossTextBox.Location = new System.Drawing.Point(109, 79);
+            this.PPDateOfLossTextBox.Location = new System.Drawing.Point(109, 77);
             this.PPDateOfLossTextBox.Name = "PPDateOfLossTextBox";
             this.PPDateOfLossTextBox.ReadOnly = true;
             this.PPDateOfLossTextBox.Size = new System.Drawing.Size(427, 23);
@@ -6653,7 +7072,7 @@ namespace RRFFilesManager
             this.PPInsurerNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPInsurerNameLabel.Location = new System.Drawing.Point(3, 0);
             this.PPInsurerNameLabel.Name = "PPInsurerNameLabel";
-            this.PPInsurerNameLabel.Size = new System.Drawing.Size(100, 38);
+            this.PPInsurerNameLabel.Size = new System.Drawing.Size(100, 37);
             this.PPInsurerNameLabel.TabIndex = 0;
             this.PPInsurerNameLabel.Text = "Insurer Name:";
             // 
@@ -6661,7 +7080,7 @@ namespace RRFFilesManager
             // 
             this.PPDateOfLossLabel.AutoSize = true;
             this.PPDateOfLossLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPDateOfLossLabel.Location = new System.Drawing.Point(3, 76);
+            this.PPDateOfLossLabel.Location = new System.Drawing.Point(3, 74);
             this.PPDateOfLossLabel.Name = "PPDateOfLossLabel";
             this.PPDateOfLossLabel.Size = new System.Drawing.Size(100, 39);
             this.PPDateOfLossLabel.TabIndex = 2;
@@ -6671,7 +7090,7 @@ namespace RRFFilesManager
             // 
             this.PPTermsOfPolicyTo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPTermsOfPolicyTo.Enabled = false;
-            this.PPTermsOfPolicyTo.Location = new System.Drawing.Point(521, 41);
+            this.PPTermsOfPolicyTo.Location = new System.Drawing.Point(521, 40);
             this.PPTermsOfPolicyTo.Name = "PPTermsOfPolicyTo";
             this.PPTermsOfPolicyTo.Size = new System.Drawing.Size(15, 23);
             this.PPTermsOfPolicyTo.TabIndex = 8;
@@ -6690,7 +7109,7 @@ namespace RRFFilesManager
             // PPTermsOfPolicyToTextBox
             // 
             this.PPTermsOfPolicyToTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPTermsOfPolicyToTextBox.Location = new System.Drawing.Point(339, 41);
+            this.PPTermsOfPolicyToTextBox.Location = new System.Drawing.Point(339, 40);
             this.PPTermsOfPolicyToTextBox.Name = "PPTermsOfPolicyToTextBox";
             this.PPTermsOfPolicyToTextBox.ReadOnly = true;
             this.PPTermsOfPolicyToTextBox.Size = new System.Drawing.Size(176, 23);
@@ -6701,9 +7120,9 @@ namespace RRFFilesManager
             this.PPTermsOfPolicyToSubLabel.AutoSize = true;
             this.PPTermsOfPolicyToSubLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPTermsOfPolicyToSubLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PPTermsOfPolicyToSubLabel.Location = new System.Drawing.Point(311, 38);
+            this.PPTermsOfPolicyToSubLabel.Location = new System.Drawing.Point(311, 37);
             this.PPTermsOfPolicyToSubLabel.Name = "PPTermsOfPolicyToSubLabel";
-            this.PPTermsOfPolicyToSubLabel.Size = new System.Drawing.Size(22, 38);
+            this.PPTermsOfPolicyToSubLabel.Size = new System.Drawing.Size(22, 37);
             this.PPTermsOfPolicyToSubLabel.TabIndex = 7;
             this.PPTermsOfPolicyToSubLabel.Text = "To";
             // 
@@ -6711,16 +7130,16 @@ namespace RRFFilesManager
             // 
             this.PPTermsOfPolicyLabel.AutoSize = true;
             this.PPTermsOfPolicyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPTermsOfPolicyLabel.Location = new System.Drawing.Point(3, 38);
+            this.PPTermsOfPolicyLabel.Location = new System.Drawing.Point(3, 37);
             this.PPTermsOfPolicyLabel.Name = "PPTermsOfPolicyLabel";
-            this.PPTermsOfPolicyLabel.Size = new System.Drawing.Size(100, 38);
+            this.PPTermsOfPolicyLabel.Size = new System.Drawing.Size(100, 37);
             this.PPTermsOfPolicyLabel.TabIndex = 1;
             this.PPTermsOfPolicyLabel.Text = "Term of Policy:";
             // 
             // PPTermsOfPolicyFromTextBox
             // 
             this.PPTermsOfPolicyFromTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPTermsOfPolicyFromTextBox.Location = new System.Drawing.Point(109, 41);
+            this.PPTermsOfPolicyFromTextBox.Location = new System.Drawing.Point(109, 40);
             this.PPTermsOfPolicyFromTextBox.Name = "PPTermsOfPolicyFromTextBox";
             this.PPTermsOfPolicyFromTextBox.ReadOnly = true;
             this.PPTermsOfPolicyFromTextBox.Size = new System.Drawing.Size(176, 23);
@@ -6730,7 +7149,7 @@ namespace RRFFilesManager
             // 
             this.PPTermsOfPolicyFrom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPTermsOfPolicyFrom.Enabled = false;
-            this.PPTermsOfPolicyFrom.Location = new System.Drawing.Point(291, 41);
+            this.PPTermsOfPolicyFrom.Location = new System.Drawing.Point(291, 40);
             this.PPTermsOfPolicyFrom.Name = "PPTermsOfPolicyFrom";
             this.PPTermsOfPolicyFrom.Size = new System.Drawing.Size(14, 23);
             this.PPTermsOfPolicyFrom.TabIndex = 4;
@@ -6743,7 +7162,7 @@ namespace RRFFilesManager
             this.PolicyParticularsDetailsGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PolicyParticularsDetailsGroupBox2.Location = new System.Drawing.Point(564, 13);
             this.PolicyParticularsDetailsGroupBox2.Name = "PolicyParticularsDetailsGroupBox2";
-            this.PolicyParticularsDetailsGroupBox2.Size = new System.Drawing.Size(362, 137);
+            this.PolicyParticularsDetailsGroupBox2.Size = new System.Drawing.Size(362, 135);
             this.PolicyParticularsDetailsGroupBox2.TabIndex = 1;
             this.PolicyParticularsDetailsGroupBox2.TabStop = false;
             // 
@@ -6762,8 +7181,24 @@ namespace RRFFilesManager
             this.PolicyParticularsDetailsLayoutPanel2.RowCount = 2;
             this.PolicyParticularsDetailsLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PolicyParticularsDetailsLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PolicyParticularsDetailsLayoutPanel2.Size = new System.Drawing.Size(356, 115);
+            this.PolicyParticularsDetailsLayoutPanel2.Size = new System.Drawing.Size(356, 113);
             this.PolicyParticularsDetailsLayoutPanel2.TabIndex = 5;
+            // 
+            // PPOPCF44RLiabilityLimitsTextBox
+            // 
+            this.PPOPCF44RLiabilityLimitsTextBox.CurrencySymbol = "$";
+            this.PPOPCF44RLiabilityLimitsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PPOPCF44RLiabilityLimitsTextBox.DollarValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PPOPCF44RLiabilityLimitsTextBox.Enabled = false;
+            this.PPOPCF44RLiabilityLimitsTextBox.Location = new System.Drawing.Point(107, 59);
+            this.PPOPCF44RLiabilityLimitsTextBox.Name = "PPOPCF44RLiabilityLimitsTextBox";
+            this.PPOPCF44RLiabilityLimitsTextBox.Size = new System.Drawing.Size(246, 23);
+            this.PPOPCF44RLiabilityLimitsTextBox.TabIndex = 8;
+            this.PPOPCF44RLiabilityLimitsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PPOPCF44RLabel
             // 
@@ -6771,7 +7206,7 @@ namespace RRFFilesManager
             this.PPOPCF44RLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PPOPCF44RLabel.Location = new System.Drawing.Point(3, 0);
             this.PPOPCF44RLabel.Name = "PPOPCF44RLabel";
-            this.PPOPCF44RLabel.Size = new System.Drawing.Size(98, 57);
+            this.PPOPCF44RLabel.Size = new System.Drawing.Size(98, 56);
             this.PPOPCF44RLabel.TabIndex = 3;
             this.PPOPCF44RLabel.Text = "OPCF 44R:";
             // 
@@ -6793,9 +7228,9 @@ namespace RRFFilesManager
             // 
             this.PPOPCF44RLiabilityLimitsLabel.AutoSize = true;
             this.PPOPCF44RLiabilityLimitsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPOPCF44RLiabilityLimitsLabel.Location = new System.Drawing.Point(3, 57);
+            this.PPOPCF44RLiabilityLimitsLabel.Location = new System.Drawing.Point(3, 56);
             this.PPOPCF44RLiabilityLimitsLabel.Name = "PPOPCF44RLiabilityLimitsLabel";
-            this.PPOPCF44RLiabilityLimitsLabel.Size = new System.Drawing.Size(98, 58);
+            this.PPOPCF44RLiabilityLimitsLabel.Size = new System.Drawing.Size(98, 57);
             this.PPOPCF44RLiabilityLimitsLabel.TabIndex = 8;
             this.PPOPCF44RLiabilityLimitsLabel.Text = "Liability Limits:";
             // 
@@ -6807,7 +7242,7 @@ namespace RRFFilesManager
             this.PolicyParticularsSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PolicyParticularsSaveButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.PolicyParticularsSaveButton.ForeColor = System.Drawing.Color.White;
-            this.PolicyParticularsSaveButton.Location = new System.Drawing.Point(1116, 299);
+            this.PolicyParticularsSaveButton.Location = new System.Drawing.Point(1116, 295);
             this.PolicyParticularsSaveButton.Name = "PolicyParticularsSaveButton";
             this.PolicyParticularsSaveButton.Size = new System.Drawing.Size(179, 34);
             this.PolicyParticularsSaveButton.TabIndex = 169;
@@ -6821,7 +7256,7 @@ namespace RRFFilesManager
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1443, 618);
+            this.btnSave.Location = new System.Drawing.Point(1443, 638);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;
@@ -6874,7 +7309,7 @@ namespace RRFFilesManager
             this.ABDenialsDataGridView.Location = new System.Drawing.Point(3, 66);
             this.ABDenialsDataGridView.Name = "ABDenialsDataGridView";
             this.ABDenialsDataGridView.RowTemplate.Height = 40;
-            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1308, 283);
+            this.ABDenialsDataGridView.Size = new System.Drawing.Size(1308, 279);
             this.ABDenialsDataGridView.TabIndex = 0;
             // 
             // NameofBenefit
@@ -7095,7 +7530,7 @@ namespace RRFFilesManager
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 43);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1308, 306);
+            this.panel5.Size = new System.Drawing.Size(1308, 302);
             this.panel5.TabIndex = 59;
             // 
             // TabControl4
@@ -7110,7 +7545,7 @@ namespace RRFFilesManager
             this.TabControl4.Location = new System.Drawing.Point(0, 0);
             this.TabControl4.Name = "TabControl4";
             this.TabControl4.SelectedIndex = 0;
-            this.TabControl4.Size = new System.Drawing.Size(1308, 306);
+            this.TabControl4.Size = new System.Drawing.Size(1308, 302);
             this.TabControl4.TabIndex = 2;
             // 
             // Summary
@@ -7123,7 +7558,7 @@ namespace RRFFilesManager
             this.Summary.Location = new System.Drawing.Point(4, 26);
             this.Summary.Name = "Summary";
             this.Summary.Padding = new System.Windows.Forms.Padding(3);
-            this.Summary.Size = new System.Drawing.Size(1300, 276);
+            this.Summary.Size = new System.Drawing.Size(1300, 272);
             this.Summary.TabIndex = 4;
             this.Summary.Text = "Summary";
             this.Summary.UseVisualStyleBackColor = true;
@@ -11735,440 +12170,6 @@ namespace RRFFilesManager
             this.LimDateTextBox.Size = new System.Drawing.Size(132, 23);
             this.LimDateTextBox.TabIndex = 7;
             // 
-            // TBoxTrialDate
-            // 
-            this.TBoxTrialDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTrialDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTrialDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTrialDate.CustomFormat = "\' \'";
-            this.TBoxTrialDate.Enabled = false;
-            this.TBoxTrialDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTrialDate.Location = new System.Drawing.Point(1283, 268);
-            this.TBoxTrialDate.Name = "TBoxTrialDate";
-            this.TBoxTrialDate.Size = new System.Drawing.Size(17, 23);
-            this.TBoxTrialDate.TabIndex = 185;
-            this.TBoxTrialDate.Visible = false;
-            this.TBoxTrialDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPreTrialResolutionDate
-            // 
-            this.TBoxPreTrialResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxPreTrialResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreTrialResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreTrialResolutionDate.CustomFormat = "\' \'";
-            this.TBoxPreTrialResolutionDate.Enabled = false;
-            this.TBoxPreTrialResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPreTrialResolutionDate.Location = new System.Drawing.Point(1282, 242);
-            this.TBoxPreTrialResolutionDate.Name = "TBoxPreTrialResolutionDate";
-            this.TBoxPreTrialResolutionDate.Size = new System.Drawing.Size(18, 23);
-            this.TBoxPreTrialResolutionDate.TabIndex = 182;
-            this.TBoxPreTrialResolutionDate.Visible = false;
-            this.TBoxPreTrialResolutionDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxLiabilityMeetingDate
-            // 
-            this.TBoxLiabilityMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxLiabilityMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxLiabilityMeetingDate.CustomFormat = "\' \'";
-            this.TBoxLiabilityMeetingDate.Enabled = false;
-            this.TBoxLiabilityMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxLiabilityMeetingDate.Location = new System.Drawing.Point(621, 8);
-            this.TBoxLiabilityMeetingDate.Name = "TBoxLiabilityMeetingDate";
-            this.TBoxLiabilityMeetingDate.Size = new System.Drawing.Size(18, 23);
-            this.TBoxLiabilityMeetingDate.TabIndex = 151;
-            this.TBoxLiabilityMeetingDate.Visible = false;
-            this.TBoxLiabilityMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPreTrialToBeServedDate
-            // 
-            this.TBoxPreTrialToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxPreTrialToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxPreTrialToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxPreTrialToBeServedDate.CustomFormat = "\' \'";
-            this.TBoxPreTrialToBeServedDate.Enabled = false;
-            this.TBoxPreTrialToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPreTrialToBeServedDate.Location = new System.Drawing.Point(1281, 216);
-            this.TBoxPreTrialToBeServedDate.Name = "TBoxPreTrialToBeServedDate";
-            this.TBoxPreTrialToBeServedDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPreTrialToBeServedDate.TabIndex = 179;
-            this.TBoxPreTrialToBeServedDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxProposedDateIssueSOC
-            // 
-            this.TBoxProposedDateIssueSOC.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateIssueSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateIssueSOC.CustomFormat = "\' \'";
-            this.TBoxProposedDateIssueSOC.Enabled = false;
-            this.TBoxProposedDateIssueSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxProposedDateIssueSOC.Location = new System.Drawing.Point(621, 34);
-            this.TBoxProposedDateIssueSOC.Name = "TBoxProposedDateIssueSOC";
-            this.TBoxProposedDateIssueSOC.Size = new System.Drawing.Size(19, 23);
-            this.TBoxProposedDateIssueSOC.TabIndex = 152;
-            this.TBoxProposedDateIssueSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelinePrePreTrialMeetingDate
-            // 
-            this.TBoxTimelinePrePreTrialMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelinePrePreTrialMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelinePrePreTrialMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelinePrePreTrialMeetingDate.CustomFormat = "\' \'";
-            this.TBoxTimelinePrePreTrialMeetingDate.Enabled = false;
-            this.TBoxTimelinePrePreTrialMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelinePrePreTrialMeetingDate.Location = new System.Drawing.Point(1280, 190);
-            this.TBoxTimelinePrePreTrialMeetingDate.Name = "TBoxTimelinePrePreTrialMeetingDate";
-            this.TBoxTimelinePrePreTrialMeetingDate.Size = new System.Drawing.Size(20, 23);
-            this.TBoxTimelinePrePreTrialMeetingDate.TabIndex = 176;
-            this.TBoxTimelinePrePreTrialMeetingDate.Visible = false;
-            this.TBoxTimelinePrePreTrialMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPrePleadingsMeetingDate
-            // 
-            this.TBoxPrePleadingsMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPrePleadingsMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPrePleadingsMeetingDate.CustomFormat = "\' \'";
-            this.TBoxPrePleadingsMeetingDate.Enabled = false;
-            this.TBoxPrePleadingsMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPrePleadingsMeetingDate.Location = new System.Drawing.Point(621, 60);
-            this.TBoxPrePleadingsMeetingDate.Name = "TBoxPrePleadingsMeetingDate";
-            this.TBoxPrePleadingsMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPrePleadingsMeetingDate.TabIndex = 153;
-            this.TBoxPrePleadingsMeetingDate.Visible = false;
-            this.TBoxPrePleadingsMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateTrialRecordFiled
-            // 
-            this.TBoxDateTrialRecordFiled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateTrialRecordFiled.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateTrialRecordFiled.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateTrialRecordFiled.CustomFormat = "\' \'";
-            this.TBoxDateTrialRecordFiled.Enabled = false;
-            this.TBoxDateTrialRecordFiled.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateTrialRecordFiled.Location = new System.Drawing.Point(1281, 164);
-            this.TBoxDateTrialRecordFiled.Name = "TBoxDateTrialRecordFiled";
-            this.TBoxDateTrialRecordFiled.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateTrialRecordFiled.TabIndex = 164;
-            this.TBoxDateTrialRecordFiled.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateToFileTrialRecordBy
-            // 
-            this.TBoxDateToFileTrialRecordBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateToFileTrialRecordBy.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateToFileTrialRecordBy.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateToFileTrialRecordBy.CustomFormat = "\' \'";
-            this.TBoxDateToFileTrialRecordBy.Enabled = false;
-            this.TBoxDateToFileTrialRecordBy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateToFileTrialRecordBy.Location = new System.Drawing.Point(1281, 138);
-            this.TBoxDateToFileTrialRecordBy.Name = "TBoxDateToFileTrialRecordBy";
-            this.TBoxDateToFileTrialRecordBy.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateToFileTrialRecordBy.TabIndex = 158;
-            this.TBoxDateToFileTrialRecordBy.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxActualDateSOCIssued
-            // 
-            this.TBoxActualDateSOCIssued.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxActualDateSOCIssued.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxActualDateSOCIssued.CustomFormat = "\' \'";
-            this.TBoxActualDateSOCIssued.Enabled = false;
-            this.TBoxActualDateSOCIssued.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxActualDateSOCIssued.Location = new System.Drawing.Point(621, 86);
-            this.TBoxActualDateSOCIssued.Name = "TBoxActualDateSOCIssued";
-            this.TBoxActualDateSOCIssued.Size = new System.Drawing.Size(19, 23);
-            this.TBoxActualDateSOCIssued.TabIndex = 154;
-            this.TBoxActualDateSOCIssued.Visible = false;
-            this.TBoxActualDateSOCIssued.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxProposedDateToServeSOC
-            // 
-            this.TBoxProposedDateToServeSOC.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateToServeSOC.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxProposedDateToServeSOC.CustomFormat = "\' \'";
-            this.TBoxProposedDateToServeSOC.Enabled = false;
-            this.TBoxProposedDateToServeSOC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxProposedDateToServeSOC.Location = new System.Drawing.Point(621, 112);
-            this.TBoxProposedDateToServeSOC.Name = "TBoxProposedDateToServeSOC";
-            this.TBoxProposedDateToServeSOC.Size = new System.Drawing.Size(19, 23);
-            this.TBoxProposedDateToServeSOC.TabIndex = 156;
-            this.TBoxProposedDateToServeSOC.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxActualDateSOCServed
-            // 
-            this.TBoxActualDateSOCServed.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxActualDateSOCServed.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxActualDateSOCServed.CustomFormat = "\' \'";
-            this.TBoxActualDateSOCServed.Enabled = false;
-            this.TBoxActualDateSOCServed.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxActualDateSOCServed.Location = new System.Drawing.Point(621, 138);
-            this.TBoxActualDateSOCServed.Name = "TBoxActualDateSOCServed";
-            this.TBoxActualDateSOCServed.Size = new System.Drawing.Size(19, 23);
-            this.TBoxActualDateSOCServed.TabIndex = 157;
-            this.TBoxActualDateSOCServed.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPlaintiffAODSent
-            // 
-            this.TBoxPlaintiffAODSent.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxPlaintiffAODSent.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxPlaintiffAODSent.CustomFormat = "\' \'";
-            this.TBoxPlaintiffAODSent.Enabled = false;
-            this.TBoxPlaintiffAODSent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPlaintiffAODSent.Location = new System.Drawing.Point(621, 164);
-            this.TBoxPlaintiffAODSent.Name = "TBoxPlaintiffAODSent";
-            this.TBoxPlaintiffAODSent.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPlaintiffAODSent.TabIndex = 162;
-            this.TBoxPlaintiffAODSent.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxMedicalSummariesPreDiscDueDate
-            // 
-            this.TBoxMedicalSummariesPreDiscDueDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxMedicalSummariesPreDiscDueDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxMedicalSummariesPreDiscDueDate.CustomFormat = "\' \'";
-            this.TBoxMedicalSummariesPreDiscDueDate.Enabled = false;
-            this.TBoxMedicalSummariesPreDiscDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxMedicalSummariesPreDiscDueDate.Location = new System.Drawing.Point(621, 190);
-            this.TBoxMedicalSummariesPreDiscDueDate.Name = "TBoxMedicalSummariesPreDiscDueDate";
-            this.TBoxMedicalSummariesPreDiscDueDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxMedicalSummariesPreDiscDueDate.TabIndex = 155;
-            this.TBoxMedicalSummariesPreDiscDueDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateOfPlaintiffDiscovery
-            // 
-            this.TBoxDateOfPlaintiffDiscovery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxDateOfPlaintiffDiscovery.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxDateOfPlaintiffDiscovery.CustomFormat = "\' \'";
-            this.TBoxDateOfPlaintiffDiscovery.Enabled = false;
-            this.TBoxDateOfPlaintiffDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateOfPlaintiffDiscovery.Location = new System.Drawing.Point(621, 268);
-            this.TBoxDateOfPlaintiffDiscovery.Name = "TBoxDateOfPlaintiffDiscovery";
-            this.TBoxDateOfPlaintiffDiscovery.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateOfPlaintiffDiscovery.TabIndex = 161;
-            this.TBoxDateOfPlaintiffDiscovery.Visible = false;
-            this.TBoxDateOfPlaintiffDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxPreDiscoveryMeetingDate
-            // 
-            this.TBoxPreDiscoveryMeetingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreDiscoveryMeetingDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxPreDiscoveryMeetingDate.CustomFormat = "\' \'";
-            this.TBoxPreDiscoveryMeetingDate.Enabled = false;
-            this.TBoxPreDiscoveryMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxPreDiscoveryMeetingDate.Location = new System.Drawing.Point(621, 216);
-            this.TBoxPreDiscoveryMeetingDate.Name = "TBoxPreDiscoveryMeetingDate";
-            this.TBoxPreDiscoveryMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxPreDiscoveryMeetingDate.TabIndex = 159;
-            this.TBoxPreDiscoveryMeetingDate.Visible = false;
-            this.TBoxPreDiscoveryMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDefendantAODRequest
-            // 
-            this.TBoxDefendantAODRequest.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDefendantAODRequest.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDefendantAODRequest.CustomFormat = "\' \'";
-            this.TBoxDefendantAODRequest.Enabled = false;
-            this.TBoxDefendantAODRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDefendantAODRequest.Location = new System.Drawing.Point(621, 242);
-            this.TBoxDefendantAODRequest.Name = "TBoxDefendantAODRequest";
-            this.TBoxDefendantAODRequest.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDefendantAODRequest.TabIndex = 160;
-            this.TBoxDefendantAODRequest.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDateOfDefendantDiscovery
-            // 
-            this.TBoxDateOfDefendantDiscovery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDateOfDefendantDiscovery.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateOfDefendantDiscovery.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDateOfDefendantDiscovery.CustomFormat = "\' \'";
-            this.TBoxDateOfDefendantDiscovery.Enabled = false;
-            this.TBoxDateOfDefendantDiscovery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDateOfDefendantDiscovery.Location = new System.Drawing.Point(621, 294);
-            this.TBoxDateOfDefendantDiscovery.Name = "TBoxDateOfDefendantDiscovery";
-            this.TBoxDateOfDefendantDiscovery.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDateOfDefendantDiscovery.TabIndex = 188;
-            this.TBoxDateOfDefendantDiscovery.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelineMediationResolutionDate
-            // 
-            this.TBoxTimelineMediationResolutionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelineMediationResolutionDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelineMediationResolutionDate.BackDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.TBoxTimelineMediationResolutionDate.CustomFormat = "\' \'";
-            this.TBoxTimelineMediationResolutionDate.Enabled = false;
-            this.TBoxTimelineMediationResolutionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelineMediationResolutionDate.Location = new System.Drawing.Point(1281, 112);
-            this.TBoxTimelineMediationResolutionDate.Name = "TBoxTimelineMediationResolutionDate";
-            this.TBoxTimelineMediationResolutionDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxTimelineMediationResolutionDate.TabIndex = 173;
-            this.TBoxTimelineMediationResolutionDate.Visible = false;
-            this.TBoxTimelineMediationResolutionDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelineMemoToBeServedDate
-            // 
-            this.TBoxTimelineMemoToBeServedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelineMemoToBeServedDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelineMemoToBeServedDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelineMemoToBeServedDate.CustomFormat = "\' \'";
-            this.TBoxTimelineMemoToBeServedDate.Enabled = false;
-            this.TBoxTimelineMemoToBeServedDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelineMemoToBeServedDate.Location = new System.Drawing.Point(1281, 86);
-            this.TBoxTimelineMemoToBeServedDate.Name = "TBoxTimelineMemoToBeServedDate";
-            this.TBoxTimelineMemoToBeServedDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxTimelineMemoToBeServedDate.TabIndex = 170;
-            this.TBoxTimelineMemoToBeServedDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxTimelinePreMedSttleMeetingDate
-            // 
-            this.TBoxTimelinePreMedSttleMeetingDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxTimelinePreMedSttleMeetingDate.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelinePreMedSttleMeetingDate.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxTimelinePreMedSttleMeetingDate.CustomFormat = "\' \'";
-            this.TBoxTimelinePreMedSttleMeetingDate.Enabled = false;
-            this.TBoxTimelinePreMedSttleMeetingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxTimelinePreMedSttleMeetingDate.Location = new System.Drawing.Point(1281, 60);
-            this.TBoxTimelinePreMedSttleMeetingDate.Name = "TBoxTimelinePreMedSttleMeetingDate";
-            this.TBoxTimelinePreMedSttleMeetingDate.Size = new System.Drawing.Size(19, 23);
-            this.TBoxTimelinePreMedSttleMeetingDate.TabIndex = 191;
-            this.TBoxTimelinePreMedSttleMeetingDate.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxAllDefendantUndertakingRecd
-            // 
-            this.TBoxAllDefendantUndertakingRecd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxAllDefendantUndertakingRecd.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxAllDefendantUndertakingRecd.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxAllDefendantUndertakingRecd.CustomFormat = "\' \'";
-            this.TBoxAllDefendantUndertakingRecd.Enabled = false;
-            this.TBoxAllDefendantUndertakingRecd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxAllDefendantUndertakingRecd.Location = new System.Drawing.Point(1281, 34);
-            this.TBoxAllDefendantUndertakingRecd.Name = "TBoxAllDefendantUndertakingRecd";
-            this.TBoxAllDefendantUndertakingRecd.Size = new System.Drawing.Size(19, 23);
-            this.TBoxAllDefendantUndertakingRecd.TabIndex = 166;
-            this.TBoxAllDefendantUndertakingRecd.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // TBoxDatePlaintiffUndertakingComplete
-            // 
-            this.TBoxDatePlaintiffUndertakingComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBoxDatePlaintiffUndertakingComplete.BackColor = System.Drawing.SystemColors.Window;
-            this.TBoxDatePlaintiffUndertakingComplete.BackDisabledColor = System.Drawing.SystemColors.Window;
-            this.TBoxDatePlaintiffUndertakingComplete.CustomFormat = "\' \'";
-            this.TBoxDatePlaintiffUndertakingComplete.Enabled = false;
-            this.TBoxDatePlaintiffUndertakingComplete.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TBoxDatePlaintiffUndertakingComplete.Location = new System.Drawing.Point(1281, 8);
-            this.TBoxDatePlaintiffUndertakingComplete.Name = "TBoxDatePlaintiffUndertakingComplete";
-            this.TBoxDatePlaintiffUndertakingComplete.Size = new System.Drawing.Size(19, 23);
-            this.TBoxDatePlaintiffUndertakingComplete.TabIndex = 165;
-            this.TBoxDatePlaintiffUndertakingComplete.ValueChanged += new System.EventHandler(this.DTP_ValueChanged);
-            // 
-            // ABOIncomeBenefitsWeeklyAmountTextBox
-            // 
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.CurrencySymbol = "$";
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Enabled = false;
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Location = new System.Drawing.Point(488, 3);
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Name = "ABOIncomeBenefitsWeeklyAmountTextBox";
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.Size = new System.Drawing.Size(151, 23);
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.TabIndex = 15;
-            this.ABOIncomeBenefitsWeeklyAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // ABOACBAmountPaidToDateTextBox
-            // 
-            this.ABOAttendantCareBenefitsLayoutPanel.SetColumnSpan(this.ABOACBAmountPaidToDateTextBox, 2);
-            this.ABOACBAmountPaidToDateTextBox.CurrencySymbol = "$";
-            this.ABOACBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOACBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOACBAmountPaidToDateTextBox.Enabled = false;
-            this.ABOACBAmountPaidToDateTextBox.Location = new System.Drawing.Point(468, 61);
-            this.ABOACBAmountPaidToDateTextBox.Name = "ABOACBAmountPaidToDateTextBox";
-            this.ABOACBAmountPaidToDateTextBox.Size = new System.Drawing.Size(171, 23);
-            this.ABOACBAmountPaidToDateTextBox.TabIndex = 21;
-            this.ABOACBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // ABOInitialAmountTextBox
-            // 
-            this.ABOInitialAmountTextBox.CurrencySymbol = "$";
-            this.ABOInitialAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOInitialAmountTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOInitialAmountTextBox.Enabled = false;
-            this.ABOInitialAmountTextBox.Location = new System.Drawing.Point(158, 32);
-            this.ABOInitialAmountTextBox.Name = "ABOInitialAmountTextBox";
-            this.ABOInitialAmountTextBox.Size = new System.Drawing.Size(149, 23);
-            this.ABOInitialAmountTextBox.TabIndex = 13;
-            this.ABOInitialAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // ABOMRBAmountPaidToDateTextBox
-            // 
-            this.AOBMedicalRehabBenefitsLayoutPanel.SetColumnSpan(this.ABOMRBAmountPaidToDateTextBox, 2);
-            this.ABOMRBAmountPaidToDateTextBox.CurrencySymbol = "$";
-            this.ABOMRBAmountPaidToDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOMRBAmountPaidToDateTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.ABOMRBAmountPaidToDateTextBox.Enabled = false;
-            this.ABOMRBAmountPaidToDateTextBox.Location = new System.Drawing.Point(152, 59);
-            this.ABOMRBAmountPaidToDateTextBox.Name = "ABOMRBAmountPaidToDateTextBox";
-            this.ABOMRBAmountPaidToDateTextBox.Size = new System.Drawing.Size(160, 23);
-            this.ABOMRBAmountPaidToDateTextBox.TabIndex = 13;
-            this.ABOMRBAmountPaidToDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // PPUmbrellaLiabilityLimitsTextBox
-            // 
-            this.PPUmbrellaLiabilityLimitsTextBox.CurrencySymbol = "$";
-            this.PPUmbrellaLiabilityLimitsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPUmbrellaLiabilityLimitsTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.PPUmbrellaLiabilityLimitsTextBox.Enabled = false;
-            this.PPUmbrellaLiabilityLimitsTextBox.Location = new System.Drawing.Point(138, 60);
-            this.PPUmbrellaLiabilityLimitsTextBox.Name = "PPUmbrellaLiabilityLimitsTextBox";
-            this.PPUmbrellaLiabilityLimitsTextBox.Size = new System.Drawing.Size(216, 23);
-            this.PPUmbrellaLiabilityLimitsTextBox.TabIndex = 10;
-            this.PPUmbrellaLiabilityLimitsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // PPCoverageAmountTextBox
-            // 
-            this.PPCoverageAmountTextBox.CurrencySymbol = "$";
-            this.PPCoverageAmountTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPCoverageAmountTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.PPCoverageAmountTextBox.Enabled = false;
-            this.PPCoverageAmountTextBox.Location = new System.Drawing.Point(470, 46);
-            this.PPCoverageAmountTextBox.Name = "PPCoverageAmountTextBox";
-            this.PPCoverageAmountTextBox.Size = new System.Drawing.Size(163, 23);
-            this.PPCoverageAmountTextBox.TabIndex = 17;
-            this.PPCoverageAmountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // PPOPCF44RLiabilityLimitsTextBox
-            // 
-            this.PPOPCF44RLiabilityLimitsTextBox.CurrencySymbol = "$";
-            this.PPOPCF44RLiabilityLimitsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PPOPCF44RLiabilityLimitsTextBox.DollarValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.PPOPCF44RLiabilityLimitsTextBox.Enabled = false;
-            this.PPOPCF44RLiabilityLimitsTextBox.Location = new System.Drawing.Point(107, 60);
-            this.PPOPCF44RLiabilityLimitsTextBox.Name = "PPOPCF44RLiabilityLimitsTextBox";
-            this.PPOPCF44RLiabilityLimitsTextBox.Size = new System.Drawing.Size(246, 23);
-            this.PPOPCF44RLiabilityLimitsTextBox.TabIndex = 8;
-            this.PPOPCF44RLiabilityLimitsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // SubTypeCategoryComboBox
             // 
             this.SubTypeCategoryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -12203,7 +12204,7 @@ namespace RRFFilesManager
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "FileManager";
-            this.Text = "File Manager";
+            this.Text = " ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FileManager_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGridView)).EndInit();
             this.GroupBox23.ResumeLayout(false);

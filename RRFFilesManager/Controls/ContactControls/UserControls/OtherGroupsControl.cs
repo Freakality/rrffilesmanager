@@ -51,6 +51,11 @@ namespace RRFFilesManager.Controls.ContactControls
             "December"
         };
 
+        public void FillName(string firstName, string lastName)
+        {
+            FirstName.Text = firstName;
+            LastName.Text = lastName;
+        }
         public void FillContact(Contact client)
         {
             client.Salutation = Salutation.Text;

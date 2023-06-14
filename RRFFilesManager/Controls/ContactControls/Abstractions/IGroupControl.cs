@@ -7,5 +7,6 @@ namespace RRFFilesManager.Controls.ContactControls
         void SetContact(Contact client);
         void FillContact(Contact client);
         void SetGroup(Group group);
+        void FillName(string firstName, string lastName);
     }
 }

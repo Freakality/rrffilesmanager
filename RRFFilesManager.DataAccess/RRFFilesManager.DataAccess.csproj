@@ -200,6 +200,14 @@
     <Compile Include="Migrations\20230409074810_LawyerSelecting.designer.cs">
       <DependentUpon>20230409074810_LawyerSelecting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230610211133_LTDChanges.cs" />
+    <Compile Include="Migrations\20230610211133_LTDChanges.designer.cs">
+      <DependentUpon>20230610211133_LTDChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230610211712_LTDChanges2.cs" />
+    <Compile Include="Migrations\20230610211712_LTDChanges2.designer.cs">
+      <DependentUpon>20230610211712_LTDChanges2.cs</DependentUpon>
+    </Compile>
     <Compile Include="PolicyParticularsRepository.cs" />
     <Compile Include="Abstractions\Extensions.cs" />
     <Compile Include="Abstractions\IPolicyParticularsRepository.cs" />

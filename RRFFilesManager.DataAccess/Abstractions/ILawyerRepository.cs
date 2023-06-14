@@ -17,5 +17,6 @@ namespace RRFFilesManager.DataAccess.Abstractions
         Lawyer GetByUserName(string userName);
         Lawyer GetByName(string searchText);
         Lawyer GetByDescription(string searchText);
+        void Delete(Lawyer lawyer);
     }
 }

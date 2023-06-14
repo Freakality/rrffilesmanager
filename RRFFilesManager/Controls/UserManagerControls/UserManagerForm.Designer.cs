@@ -63,6 +63,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.NewButton = new System.Windows.Forms.Button();
             this.UserManagerTransferButton = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.UserLawyerBox.SuspendLayout();
             this.UserNameChangeBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -465,7 +466,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.SaveButton.Location = new System.Drawing.Point(335, 542);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(246, 30);
+            this.SaveButton.Size = new System.Drawing.Size(211, 30);
             this.SaveButton.TabIndex = 155;
             this.SaveButton.Text = "Save Selected User";
             this.SaveButton.UseVisualStyleBackColor = false;
@@ -477,7 +478,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewButton.ForeColor = System.Drawing.Color.White;
-            this.NewButton.Location = new System.Drawing.Point(817, 542);
+            this.NewButton.Location = new System.Drawing.Point(821, 542);
             this.NewButton.Margin = new System.Windows.Forms.Padding(4);
             this.NewButton.Name = "NewButton";
             this.NewButton.Size = new System.Drawing.Size(230, 30);
@@ -492,10 +493,10 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.UserManagerTransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UserManagerTransferButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserManagerTransferButton.ForeColor = System.Drawing.Color.White;
-            this.UserManagerTransferButton.Location = new System.Drawing.Point(589, 542);
+            this.UserManagerTransferButton.Location = new System.Drawing.Point(555, 542);
             this.UserManagerTransferButton.Margin = new System.Windows.Forms.Padding(4);
             this.UserManagerTransferButton.Name = "UserManagerTransferButton";
-            this.UserManagerTransferButton.Size = new System.Drawing.Size(220, 30);
+            this.UserManagerTransferButton.Size = new System.Drawing.Size(172, 30);
             this.UserManagerTransferButton.TabIndex = 157;
             this.UserManagerTransferButton.Text = "Transfer User Tasks";
             this.UserManagerTransferButton.UseVisualStyleBackColor = false;
@@ -512,12 +513,28 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.PictureBox1.TabIndex = 144;
             this.PictureBox1.TabStop = false;
             // 
+            // DeleteButton
+            // 
+            this.DeleteButton.BackColor = System.Drawing.Color.Red;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteButton.Location = new System.Drawing.Point(740, 542);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(73, 30);
+            this.DeleteButton.TabIndex = 158;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
             // UserManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 588);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.UserManagerTransferButton);
             this.Controls.Add(this.NewButton);
             this.Controls.Add(this.SaveButton);
@@ -581,5 +598,6 @@ namespace RRFFilesManager.Controls.UserManagerControls
         internal System.Windows.Forms.Button UserManagerTransferButton;
         private System.Windows.Forms.CheckBox CBoxResponsibleCheckBox;
         private System.Windows.Forms.CheckBox CBoxFileLawyerCheckBox;
+        internal System.Windows.Forms.Button DeleteButton;
     }
 }

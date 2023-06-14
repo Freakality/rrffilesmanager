@@ -31,6 +31,7 @@ namespace RRFFilesManager.IntakeForm
             InitializeComponent();
             Utils.Utils.SetContent(Content, new ClientGroupControl());
 
+
         }
         public IGroupControl GroupControl => (IGroupControl)Content.Controls?[0];
         public void SetClient(Contact client) {
@@ -67,11 +68,17 @@ namespace RRFFilesManager.IntakeForm
             GroupControl.FillContact(client);
         }
 
+
         public void FillForm(Contact client)
         {
             if (client == null)
                 return;
             GroupControl.SetContact(client);
+        }
+
+        public void FillNames(string firstName, string lastName)
+        {
+            GroupControl.FillName(firstName, lastName);
         }
 
         private void PCISalutation_SelectedIndexChanged(object sender, EventArgs e)
