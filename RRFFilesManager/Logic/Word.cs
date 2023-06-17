@@ -29,8 +29,8 @@ namespace RRFFilesManager.Logic
         public static void FillDocument(Document document, File file)
         {
             ReplaceAll(document, "$$$TodaysDate$$$", DateTime.Now.ToString("MMMM d, yyyy"));
-            ReplaceAll(document, "$$$FirstName$$$", file.Client?.FirstName.ToUpper());
-            ReplaceAll(document, "$$$LastName$$$", file.Client?.LastName.ToUpper());
+            ReplaceAll(document, "$$$FirstName$$$", file.Client?.FirstName);
+            ReplaceAll(document, "$$$LastName$$$", file.Client?.LastName);
             ReplaceAll(document, "$$$Address1$$$", file.Client?.AddressLine1);
             ReplaceAll(document, "$$$Address2$$$", file.Client?.AddressLine2);
             ReplaceAll(document, "$$$City$$$", file.Client?.City);

@@ -45,6 +45,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
                 _fileTaskRepository.SwitchLawyer(SelectedUser, newLawyer);
                 _taskRepository.SwitchLawyer(SelectedUser, newLawyer);
                 MessageBox.Show("Tasks have been transfered successfully.");
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }

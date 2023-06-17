@@ -21,6 +21,7 @@ namespace RRFFilesManager.Abstractions
         public int ClearanceLevel { get; set; }
         public bool? FileLawyer { get; set; }
         public bool? ResponsibleLawyer { get; set; }
+        public bool? Active { get; set; }
         public virtual ICollection<LawyerTask> Tasks { get; set; }
         public override string ToString() => Description;
     }

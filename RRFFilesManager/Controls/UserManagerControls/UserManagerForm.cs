@@ -15,12 +15,12 @@ namespace RRFFilesManager.Controls.UserManagerControls
 {
     public partial class UserManagerForm : Form
     {
-        private readonly ILawyerRepository _lawyerRepository;
+        private readonly ILawyerRepository _lawyerRepository;      
         private Lawyer SelectedLawyer;
         private string passwordhash = "";
         public UserManagerForm()
         {
-            _lawyerRepository = Program.GetService<ILawyerRepository>();
+            _lawyerRepository = Program.GetService<ILawyerRepository>();            
             InitializeComponent();
             UserLawyerListBox.DataSource = _lawyerRepository.List();
             UserLawyerListBox.DisplayMember = "Description";
@@ -105,6 +105,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
                 if (CBoxChangePasswordCheckBox.Checked && TBoxNewPasswordTextBox.Text == TBoxConfirmPasswordTextBox.Text && !String.IsNullOrEmpty(TBoxNewPasswordTextBox.Text))
                     lawyer.Password = Utils.Utils.GetHash(TBoxUserNameTextBox.Text, TBoxNewPasswordTextBox.Text);
             }
+            lawyer.Active = true;
         }
 
         /*private string GetPasswordHash(string username, string password)
@@ -182,17 +183,33 @@ namespace RRFFilesManager.Controls.UserManagerControls
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show($"Are you sure you want to delete this user/lawyer from the database?.", "Confirmation", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+
+            if (MessageBox.Show($"Are you sure you want to delete this user/lawyer from the database?.", "Confirmation", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+
+            if (MessageBox.Show($"Deletion is permanent. Are you really sure you want to delete this user/lawyer from the database?.", "Last Chance", MessageBoxButtons.YesNo)
+                != DialogResult.Yes)
+                return;
+
+            if (SelectedLawyer.Tasks.Count > 0)
             {
-                DialogResult dialogResult2 = MessageBox.Show($"Deletion is permanent. Are you really sure you want to delete this user/lawyer from the database?.", "Last Chance", MessageBoxButtons.YesNo);
-                if (dialogResult2 == DialogResult.Yes)
+                MessageBox.Show("The user has tasks associated with it, they must then be transferred to another user to continue.","Warning",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                using (TransferTasks transferTasks = new TransferTasks(SelectedLawyer))
                 {
-                    _lawyerRepository.SoftDelete(SelectedLawyer.ID);
-                    UserLawyerListBox.DataSource = _lawyerRepository.List();
-                    MessageBox.Show("User has been deleted.");
+                    if (transferTasks.ShowDialog() == DialogResult.OK)
+                    {
+                        _lawyerRepository.SoftDelete(SelectedLawyer.ID);
+                        UserLawyerListBox.DataSource = _lawyerRepository.List();
+                        MessageBox.Show("User has been deleted.");
+                    }
                 }
+                return;
             }
+
+            _lawyerRepository.SoftDelete(SelectedLawyer.ID);
+            UserLawyerListBox.DataSource = _lawyerRepository.List();
+            MessageBox.Show("User has been deleted.");
+                        
         }
     }
 }

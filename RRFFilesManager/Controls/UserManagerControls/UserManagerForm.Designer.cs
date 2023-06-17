@@ -89,6 +89,8 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // UserLawyerBox
             // 
+            this.UserLawyerBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.UserLawyerBox.Controls.Add(this.UserLawyerListBox);
             this.UserLawyerBox.Location = new System.Drawing.Point(16, 113);
             this.UserLawyerBox.Margin = new System.Windows.Forms.Padding(4);
@@ -101,6 +103,8 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // UserNameChangeBox
             // 
+            this.UserNameChangeBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UserNameChangeBox.Controls.Add(this.tableLayoutPanel1);
             this.UserNameChangeBox.Location = new System.Drawing.Point(335, 123);
             this.UserNameChangeBox.Margin = new System.Windows.Forms.Padding(4);
@@ -276,6 +280,9 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Location = new System.Drawing.Point(335, 352);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -444,6 +451,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // HomeButton
             // 
+            this.HomeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.HomeButton.BackColor = System.Drawing.Color.Maroon;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -459,6 +467,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // SaveButton
             // 
+            this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveButton.BackColor = System.Drawing.Color.SteelBlue;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -474,6 +483,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // NewButton
             // 
+            this.NewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.NewButton.BackColor = System.Drawing.Color.SeaGreen;
             this.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -489,6 +499,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // UserManagerTransferButton
             // 
+            this.UserManagerTransferButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.UserManagerTransferButton.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.UserManagerTransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UserManagerTransferButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -515,6 +526,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             // 
             // DeleteButton
             // 
+            this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DeleteButton.BackColor = System.Drawing.Color.Red;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

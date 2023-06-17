@@ -57,15 +57,16 @@ namespace RRFFilesManager.DataAccess
         public  IEnumerable<Lawyer>List(bool? isParalegal = null)
         {
             if(isParalegal != null)
-                return _context.Lawyers.Where(s => s.IsParalegal == isParalegal && s.Description != "DEVTEST_USER").ToList();
-            return _context.Lawyers.Where(s => s.Description != "DEVTEST_USER").ToList();
+                return _context.Lawyers.Where(s => s.IsParalegal == isParalegal && s.Description != "DEVTEST_USER" && s.Active == true).ToList();
+            return _context.Lawyers.Where(s => s.Description != "DEVTEST_USER" && s.Active == true).ToList();
         }
 
 
         public void SoftDelete(int lawyerId)
         {
             var trxLawyer = GetById(lawyerId);
-            _context.Entry(trxLawyer).State = EntityState.Deleted;
+            trxLawyer.Active = false;
+            //_context.Entry(trxLawyer).Active = EntityState.Deleted;
             _context.SaveChanges();
         }
 
