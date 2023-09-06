@@ -6063,7 +6063,7 @@ namespace RRFFilesManager
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnCount = 3;
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.ABOStandardBenefitsStatementLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDate, 2, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateTextBox, 1, 0);
             this.ABOStandardBenefitsStatementLayoutPanel.Controls.Add(this.ABOStatementDateLabel, 0, 0);
@@ -6079,18 +6079,18 @@ namespace RRFFilesManager
             // 
             this.ABOStatementDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ABOStatementDate.Enabled = false;
-            this.ABOStatementDate.Location = new System.Drawing.Point(243, 3);
+            this.ABOStatementDate.Location = new System.Drawing.Point(241, 3);
             this.ABOStatementDate.Name = "ABOStatementDate";
-            this.ABOStatementDate.Size = new System.Drawing.Size(69, 23);
+            this.ABOStatementDate.Size = new System.Drawing.Size(71, 23);
             this.ABOStatementDate.TabIndex = 23;
             // 
             // ABOStatementDateTextBox
             // 
             this.ABOStatementDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(125, 3);
+            this.ABOStatementDateTextBox.Location = new System.Drawing.Point(124, 3);
             this.ABOStatementDateTextBox.Name = "ABOStatementDateTextBox";
             this.ABOStatementDateTextBox.ReadOnly = true;
-            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(112, 23);
+            this.ABOStatementDateTextBox.Size = new System.Drawing.Size(111, 23);
             this.ABOStatementDateTextBox.TabIndex = 22;
             // 
             // ABOStatementDateLabel
@@ -7256,7 +7256,7 @@ namespace RRFFilesManager
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1443, 638);
+            this.btnSave.Location = new System.Drawing.Point(1443, 646);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 38);
             this.btnSave.TabIndex = 4;

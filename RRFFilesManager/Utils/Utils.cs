@@ -152,6 +152,7 @@ namespace RRFFilesManager.Utils
             return savedPasswordHash;
         }
 
+
         public static int UserLog(string username, string password, string passwordHash2)
         {
             int ok = 1;

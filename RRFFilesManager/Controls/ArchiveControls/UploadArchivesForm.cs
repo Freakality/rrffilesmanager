@@ -251,7 +251,7 @@ namespace RRFFilesManager.Controls.ArchiveControls
         {
             var archive = GetArchive();
             CurrentFile.Archives.Add(archive);
-            _fileManager.Update(CurrentFile);
+            _fileManager.UpdateUpload(CurrentFile);
             Archives.Add(new Models.Archive(archive));
             UploadedFiles.Remove(selected);
             DocumentForm.FillAdditionalArchiveInfo(_archiveRepository.GetById(archive.ID));

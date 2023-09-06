@@ -430,10 +430,11 @@ namespace RRFFilesManager.Controls.UserManagerControls
             this.CBoxChangePasswordCheckBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.CBoxChangePasswordCheckBox.Location = new System.Drawing.Point(553, 126);
             this.CBoxChangePasswordCheckBox.Name = "CBoxChangePasswordCheckBox";
-            this.CBoxChangePasswordCheckBox.Size = new System.Drawing.Size(145, 29);
+            this.CBoxChangePasswordCheckBox.Size = new System.Drawing.Size(111, 29);
             this.CBoxChangePasswordCheckBox.TabIndex = 161;
-            this.CBoxChangePasswordCheckBox.Text = "Change Password";
+            this.CBoxChangePasswordCheckBox.Text = "Set Password";
             this.CBoxChangePasswordCheckBox.UseVisualStyleBackColor = true;
+            this.CBoxChangePasswordCheckBox.CheckedChanged += new System.EventHandler(this.CBoxChangePasswordCheckBox_CheckedChanged);
             // 
             // TBarClearanceLevelLabel
             // 

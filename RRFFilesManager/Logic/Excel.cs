@@ -304,6 +304,43 @@ namespace RRFFilesManager.Logic
                     range.Value = arr;
                 }
             }
+            AutoFitRowsWithMergedCells(worksheet);
+        }
+
+        public static void AutoFitRowsWithMergedCells(Worksheet worksheet)
+        {
+            var range = worksheet.UsedRange;
+
+            int rowsCount = range.Rows.Count;
+            int columnsCount = range.Columns.Count;
+
+            for (int rowIndex = 1; rowIndex <= rowsCount; rowIndex++)
+            {
+                for (int columnIndex = 1; columnIndex <= columnsCount; columnIndex++)
+                {
+                    var subRange = (Range)worksheet.Cells[rowIndex, columnIndex];
+                    if ((bool)subRange.MergeCells && subRange.Value != null)
+                    {
+                        var mergedArea = subRange.MergeArea;
+                        double mergedColumnsWidth = 0;
+                        foreach (dynamic column in mergedArea.Columns)
+                        {
+                            mergedColumnsWidth += column.ColumnWidth;
+                        }
+
+                        var tempRange = worksheet.Cells[rowIndex, columnsCount + 1];
+                        tempRange.Value = subRange.Value;
+                        tempRange.Style.WrapText = true;
+                        double originalTempColumnWidth = tempRange.Columns[1].ColumnWidth;
+                        tempRange.Columns[1].ColumnWidth = mergedColumnsWidth;
+                        subRange.EntireRow.AutoFit();
+                        double correctHeight = subRange.EntireRow.RowHeight;
+                        tempRange.Value = string.Empty;
+                        tempRange.Columns[1].ColumnWidth = originalTempColumnWidth;
+                        subRange.EntireRow.RowHeight = correctHeight;
+                    }
+                }
+            }
         }
     }
 }

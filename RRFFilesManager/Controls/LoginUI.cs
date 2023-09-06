@@ -37,10 +37,7 @@ namespace RRFFilesManager
             string savedPasswordHash2 = "";
             if (UserTextBox.Text == "CRojas")
             {
-                user = new Lawyer();
-                user.UserName = "CRojas";
-                user.Description = "DEVTEST_USER";
-                user.ClearanceLevel = 99;
+                user = _lawyerRepository.GetByUserName("CRojas");
                 savedPasswordHash2 = "jzu3xc6BYfL5RGouft23HZ6drns6dW50XAdLtR/0Wkak6UZt";
             }
             else
@@ -54,16 +51,23 @@ namespace RRFFilesManager
             }
             if (user != null)
             {
-
-                if (Utils.Utils.UserLog(UserTextBox.Text, PasswordTextBox.Text, savedPasswordHash2) == 1)
+                if (user.Password != null)
                 {
-                    User = user;
-                    _loggedUser.SetUser(User);
-                    Close();
+                    if (Utils.Utils.UserLog(UserTextBox.Text, PasswordTextBox.Text, savedPasswordHash2) == 1)
+                    {
+                        User = user;
+                        _loggedUser.SetUser(User);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid password!");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Invalid password!");
+                    MessageBox.Show("User password has not been set!");
                 }
             }
             else

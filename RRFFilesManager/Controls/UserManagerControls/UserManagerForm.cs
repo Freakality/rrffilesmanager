@@ -85,7 +85,7 @@ namespace RRFFilesManager.Controls.UserManagerControls
             
         }
 
-        private void FillLawyer(Lawyer lawyer)
+        private bool FillLawyer(Lawyer lawyer)
         {
             lawyer.Description = TBoxDescriptionTextBox.Text;
             if (NUDNumberIDNUpDown.Value > 0)
@@ -101,11 +101,30 @@ namespace RRFFilesManager.Controls.UserManagerControls
             lawyer.ResponsibleLawyer = CBoxResponsibleCheckBox.Checked;
             if (!String.IsNullOrEmpty(TBoxUserNameTextBox.Text))
             {
+                if (lawyer.UserName != null && !CBoxChangePasswordCheckBox.Checked && lawyer.Password != null)
+                {
+                    lawyer.Password = null;
+                    MessageBox.Show("The username has changed. Password has been deleted, please enter a new one for this user.");
+                }
                 lawyer.UserName = TBoxUserNameTextBox.Text;
-                if (CBoxChangePasswordCheckBox.Checked && TBoxNewPasswordTextBox.Text == TBoxConfirmPasswordTextBox.Text && !String.IsNullOrEmpty(TBoxNewPasswordTextBox.Text))
-                    lawyer.Password = Utils.Utils.GetHash(TBoxUserNameTextBox.Text, TBoxNewPasswordTextBox.Text);
+                if (CBoxChangePasswordCheckBox.Checked)
+                {
+                    if (String.IsNullOrEmpty(TBoxNewPasswordTextBox.Text))
+                    {
+                        MessageBox.Show("Password field is empty!");
+                        return false;
+                    }
+                    if(TBoxNewPasswordTextBox.Text == TBoxConfirmPasswordTextBox.Text)
+                        lawyer.Password = Utils.Utils.GetHash(TBoxUserNameTextBox.Text, TBoxNewPasswordTextBox.Text);
+                    else
+                    {
+                        MessageBox.Show("Passwords don't match!");
+                        return false;
+                    }
+                }
             }
             lawyer.Active = true;
+            return true;
         }
 
         /*private string GetPasswordHash(string username, string password)
@@ -145,7 +164,10 @@ namespace RRFFilesManager.Controls.UserManagerControls
                     }
                 }
             }
-            FillLawyer(lawyer);
+            if (!FillLawyer(lawyer))
+            {
+                return;
+            }
 
             if (lawyer.ID == default)
             {
@@ -191,25 +213,34 @@ namespace RRFFilesManager.Controls.UserManagerControls
                 != DialogResult.Yes)
                 return;
 
-            if (SelectedLawyer.Tasks.Count > 0)
+            if (SelectedLawyer.Tasks != null)
             {
-                MessageBox.Show("The user has tasks associated with it, they must then be transferred to another user to continue.","Warning",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                using (TransferTasks transferTasks = new TransferTasks(SelectedLawyer))
+                if (SelectedLawyer.Tasks.Count > 0)
                 {
-                    if (transferTasks.ShowDialog() == DialogResult.OK)
+                    MessageBox.Show("The user has tasks associated with it, they must then be transferred to another user to continue.","Warning",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    using (TransferTasks transferTasks = new TransferTasks(SelectedLawyer))
                     {
-                        _lawyerRepository.SoftDelete(SelectedLawyer.ID);
-                        UserLawyerListBox.DataSource = _lawyerRepository.List();
-                        MessageBox.Show("User has been deleted.");
+                        if (transferTasks.ShowDialog() == DialogResult.OK)
+                        {
+                            _lawyerRepository.SoftDelete(SelectedLawyer.ID);
+                            UserLawyerListBox.DataSource = _lawyerRepository.List();
+                            MessageBox.Show("User has been deleted.");
+                        }
                     }
+                    return;
                 }
-                return;
+
             }
 
             _lawyerRepository.SoftDelete(SelectedLawyer.ID);
             UserLawyerListBox.DataSource = _lawyerRepository.List();
             MessageBox.Show("User has been deleted.");
                         
+        }
+
+        private void CBoxChangePasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

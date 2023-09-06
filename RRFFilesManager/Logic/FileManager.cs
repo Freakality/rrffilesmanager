@@ -42,6 +42,18 @@ namespace RRFFilesManager.Logic
             _fileRepository.Update(file);
         }
 
+        public void UpdateUpload(File file)
+        {
+            if (file.Archives != null)
+            {
+                foreach (var archive in file.Archives)
+                {
+                    archive.CopyToFileFolder();
+                }
+            }
+            _fileRepository.Update(file);
+        }
+
         public void Insert(File file)
         {
             if (file.Archives != null)
